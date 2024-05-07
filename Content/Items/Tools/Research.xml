@@ -58,6 +58,146 @@
         </StatusEffect>
       </Holdable>
     </Item>
+    <Item name="Sleepy Europan (Enable Tiredness)" identifier="he-enablesleep" description="[RMB + E] Enables tiredness affliction for the user, causing them to have to sleep regularly. This is completely optional. Warning: Can't be disabled for your current character once it is enabled." category="Misc" maxstacksize="1" Tags="smallitem" scale="0.5" impactsoundtag="impact_metal_light">
+      <PreferredContainer primary="medcab"/>
+      <Price baseprice="0" sold="true">
+        <Price storeidentifier="merchantoutpost" />
+        <Price storeidentifier="merchantcity" />
+        <Price storeidentifier="merchantresearch" />
+        <Price storeidentifier="merchantmilitary" />
+        <Price storeidentifier="merchantmine" />
+      </Price>
+      <Fabricate suitablefabricators="vendingmachinefood,vendingmachinedrinks,piratestore" requiredtime="0" requiredmoney="0" fabricationlimitmin="16" fabricationlimitmax="16" />
+      <Deconstruct time="3" />
+      <InventoryIcon texture="%ModDir%/Content/Items/Tools/Injector.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
+      <Sprite texture="%ModDir%/Content/Items/Tools/Injector.png" sourcerect="0,0,36,66" depth="0.6" origin="0.5,0.5" />
+      <Body width="35" height="65" density="10.2" />
+      <Holdable slots="Any,RightHand,LeftHand" aimpos="-26,-48" holdpos="30,-15" holdangle="0" aimangle="300" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+        <StatusEffect type="OnUse" target="This,Character" Condition="-100.0" setvalue="true" comparison="Or">
+          <Conditional hasspecifiertag="male"/>
+          <Conditional hasspecifiertag="female"/>
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character" comparison="And">
+          <Conditional ishuman="true" />
+          <Conditional hasspecifiertag="male"/>
+          <Sound file="Content/Characters/Human/male_damage1.ogg" selectionmode="Random" />
+          <Sound file="Content/Characters/Human/male_damage2.ogg" />
+          <Sound file="Content/Characters/Human/male_damage3.ogg" />
+          <Sound file="Content/Characters/Human/male_damage4.ogg" />
+          <Sound file="Content/Characters/Human/male_damage5.ogg" />
+          <Sound file="Content/Characters/Human/male_damage6.ogg" />
+          <Sound file="Content/Characters/Human/male_damage7.ogg" />
+          <Sound file="Content/Characters/Human/male_damage8.ogg" />
+          <Sound file="Content/Characters/Human/male_damage9.ogg" />
+          <Sound file="Content/Characters/Human/male_damage10.ogg" />
+          <Sound file="Content/Characters/Human/male_damage11.ogg" />
+          <GiveTalentInfo giverandom="false" talentidentifiers="he-sleepyeuropan" />
+          <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character" comparison="And">
+          <Conditional ishuman="true" />
+          <Conditional hasspecifiertag="female"/>
+          <Sound file="Content/Characters/Human/female_damage1.ogg" selectionmode="Random" />
+          <Sound file="Content/Characters/Human/female_damage2.ogg" />
+          <Sound file="Content/Characters/Human/female_damage3.ogg" />
+          <Sound file="Content/Characters/Human/female_damage4.ogg" />
+          <Sound file="Content/Characters/Human/female_damage5.ogg" />
+          <Sound file="Content/Characters/Human/female_damage6.ogg" />
+          <Sound file="Content/Characters/Human/female_damage7.ogg" />
+          <Sound file="Content/Characters/Human/female_damage8.ogg" />
+          <Sound file="Content/Characters/Human/female_damage9.ogg" />
+          <Sound file="Content/Characters/Human/female_damage10.ogg" />
+          <GiveTalentInfo giverandom="false" talentidentifiers="he-sleepyeuropan" />
+          <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+        </StatusEffect>
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+        </StatusEffect>
+      </Holdable>
+    </Item>
+    <Item name="Moody Europan (Enable Mood)" identifier="he-enablemood" description="[RMB + E] Enables the mood affliction for the user, causing them to have to manage their mood by eating and drinking tasty things, using drugs or relaxing. This is completely optional. Warning: Can't be disabled for your current character once it is enabled." category="Misc" maxstacksize="1" Tags="smallitem" scale="0.5" impactsoundtag="impact_metal_light">
+      <PreferredContainer primary="medcab"/>
+      <Price baseprice="0" sold="true">
+        <Price storeidentifier="merchantoutpost" />
+        <Price storeidentifier="merchantcity" />
+        <Price storeidentifier="merchantresearch" />
+        <Price storeidentifier="merchantmilitary" />
+        <Price storeidentifier="merchantmine" />
+      </Price>
+      <Fabricate suitablefabricators="vendingmachinefood,vendingmachinedrinks,piratestore" requiredtime="0" requiredmoney="0" fabricationlimitmin="16" fabricationlimitmax="16" />
+      <Deconstruct time="3" />
+      <InventoryIcon texture="%ModDir%/Content/Items/Tools/Injector.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
+      <Sprite texture="%ModDir%/Content/Items/Tools/Injector.png" sourcerect="0,0,36,66" depth="0.6" origin="0.5,0.5" />
+      <Body width="35" height="65" density="10.2" />
+      <Holdable slots="Any,RightHand,LeftHand" aimpos="-26,-48" holdpos="30,-15" holdangle="0" aimangle="300" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+        <StatusEffect type="OnUse" target="This" stackable="false" comparison="And">
+          <Conditional hasspecifiertag="male" targetcontainer="true" />
+          <Conditional mood="lte 0" targetcontainer="true" />
+          <SpawnItem identifier="he-traitselector_food" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" stackable="false" comparison="And">
+          <Conditional hasspecifiertag="female" targetcontainer="true" />
+          <Conditional mood="lte 0" targetcontainer="true" />
+          <SpawnItem identifier="he-traitselector_food" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+        </StatusEffect>
+        <!--
+        <StatusEffect type="OnUse" target="This" SpawnItemRandomly="True" delay="0.1" stackable="false">
+          <SpawnItem identifier="he-like_nuggets" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <SpawnItem identifier="he-like_burgers" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <SpawnItem identifier="he-like_filets" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <SpawnItem identifier="he-like_roasts" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <SpawnItem identifier="he-like_sandwiches" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" SpawnItemRandomly="True" delay="0.2" stackable="false">
+          <SpawnItem identifier="he-like_beer" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <SpawnItem identifier="he-like_whiskey" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <SpawnItem identifier="he-like_rum" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <SpawnItem identifier="he-like_tea" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <SpawnItem identifier="he-like_cola" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+        </StatusEffect>
+        -->
+        <StatusEffect type="OnUse" target="Character" comparison="And">
+          <Conditional ishuman="true" />
+          <Conditional hasspecifiertag="male"/>
+          <Sound file="Content/Characters/Human/male_damage1.ogg" selectionmode="Random" />
+          <Sound file="Content/Characters/Human/male_damage2.ogg" />
+          <Sound file="Content/Characters/Human/male_damage3.ogg" />
+          <Sound file="Content/Characters/Human/male_damage4.ogg" />
+          <Sound file="Content/Characters/Human/male_damage5.ogg" />
+          <Sound file="Content/Characters/Human/male_damage6.ogg" />
+          <Sound file="Content/Characters/Human/male_damage7.ogg" />
+          <Sound file="Content/Characters/Human/male_damage8.ogg" />
+          <Sound file="Content/Characters/Human/male_damage9.ogg" />
+          <Sound file="Content/Characters/Human/male_damage10.ogg" />
+          <Sound file="Content/Characters/Human/male_damage11.ogg" />
+          <GiveTalentInfo giverandom="false" talentidentifiers="he-moodyeuropan" />
+          <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character" comparison="And">
+          <Conditional ishuman="true" />
+          <Conditional hasspecifiertag="female"/>
+          <Sound file="Content/Characters/Human/female_damage1.ogg" selectionmode="Random" />
+          <Sound file="Content/Characters/Human/female_damage2.ogg" />
+          <Sound file="Content/Characters/Human/female_damage3.ogg" />
+          <Sound file="Content/Characters/Human/female_damage4.ogg" />
+          <Sound file="Content/Characters/Human/female_damage5.ogg" />
+          <Sound file="Content/Characters/Human/female_damage6.ogg" />
+          <Sound file="Content/Characters/Human/female_damage7.ogg" />
+          <Sound file="Content/Characters/Human/female_damage8.ogg" />
+          <Sound file="Content/Characters/Human/female_damage9.ogg" />
+          <Sound file="Content/Characters/Human/female_damage10.ogg" />
+          <GiveTalentInfo giverandom="false" talentidentifiers="he-moodyeuropan" />
+          <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This,Character" Condition="-100.0" setvalue="true" stackable="false" comparison="Or">
+          <Conditional hasspecifiertag="male"/>
+          <Conditional hasspecifiertag="female"/>
+        </StatusEffect>
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+        </StatusEffect>
+      </Holdable>
+    </Item>
     <Item name="Filthy Europan (Enable Extra Needs)" identifier="he-enableextraneeds" description="[RMB + E] Enables the bladder and defecate afflictions for the user, causing them to have to pee and poop depending on what or how much they eat and drink. This is completely optional and is NOT required to gain buffs from eating or drinking. Warning: Can't be disabled for your current character once it is enabled." category="Misc" maxstacksize="1" Tags="smallitem" scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="medcab"/>
       <Fabricate suitablefabricators="vendingmachinefood,vendingmachinedrinks,piratestore" requiredtime="0" requiredmoney="0" fabricationlimitmin="16" fabricationlimitmax="16" />
@@ -104,6 +244,290 @@
           <Remove />
         </StatusEffect>
       </Holdable>
+    </Item>
+    <Item hideinmenus="true" noninteractable="true" name="Trait Selector (Food)" identifier="he-traitselector_food" description="" category="Hidden" maxstacksize="1" Tags="smallitem" scale="0.5" impactsoundtag="impact_metal_light">
+      <InventoryIcon texture="%ModDir%/Content/Items/Tools/Injector.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
+      <Sprite texture="%ModDir%/Content/Items/Tools/Injector.png" sourcerect="0,0,36,66" depth="0.6" origin="0.5,0.5" />
+      <Body width="35" height="65" density="10.2" />
+      <Wearable slots="RightHand,LeftHand,Bag,OuterClothes,InnerClothes,Head,Headset,HealthInterface,Any" msg="ItemMsgPickUpSelect" autoequipwhenfull="true" allowswappingwhenpicked="false">
+        <sprite texture="Content/Items/Jobgear/Mechanic/safetyharness.png" limb="RightHand" sourcerect="462,1,25,16" origin="0.5,0.8" depth="0.09" inheritlimbdepth="false" inherittexturescale="true" />
+        <sprite texture="Content/Items/Jobgear/Mechanic/safetyharness.png" limb="LeftHand" sourcerect="487,1,25,16" origin="0.5,0.8" depth="0.09" inheritlimbdepth="true" inherittexturescale="true" />
+        <StatusEffect type="OnWearing" target="Character" lockhands="true" setvalue="true" />
+        <StatusEffect type="OnWearing" target="This" comparison="And">
+          <Conditional hasspecifiertag="neq male" targetcontainer="true" />
+          <Conditional hasspecifiertag="neq female" targetcontainer="true" />
+          <Remove />
+        </StatusEffect>
+      </Wearable>
+      <CustomInterface uilabel="Select your preferred food:" drawhudwhenequipped="true">
+        <GuiFrame relativesize="0.3,0.4" anchor="Center" style="Paper" hidedragicons="true" />
+        <Button text="Nuggets">
+          <StatusEffect type="OnUse" target="This">
+            <SpawnItem identifier="he-traitselector_drinks" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+            <SpawnItem identifier="he-like_nuggets" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+            <Remove />
+          </StatusEffect>
+        </Button>
+        <Button text="Burgers">
+          <StatusEffect type="OnUse" target="This">
+            <SpawnItem identifier="he-traitselector_drinks" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+            <SpawnItem identifier="he-like_burgers" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+            <Remove />
+          </StatusEffect>
+        </Button>
+        <Button text="Filets">
+          <StatusEffect type="OnUse" target="This">
+            <SpawnItem identifier="he-traitselector_drinks" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+            <SpawnItem identifier="he-like_filets" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+            <Remove />
+          </StatusEffect>
+        </Button>
+        <Button text="Roast">
+          <StatusEffect type="OnUse" target="This">
+            <SpawnItem identifier="he-traitselector_drinks" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+            <SpawnItem identifier="he-like_roasts" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+            <Remove />
+          </StatusEffect>
+        </Button>
+        <Button text="Sandwiches">
+          <StatusEffect type="OnUse" target="This">
+            <SpawnItem identifier="he-traitselector_drinks" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+            <SpawnItem identifier="he-like_sandwiches" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+            <Remove />
+          </StatusEffect>
+        </Button>
+        <Button text="Randomize">
+          <StatusEffect type="OnUse" target="This">
+            <SpawnItem identifier="he-traitselector_drinks" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          </StatusEffect>
+          <StatusEffect type="OnUse" target="This" SpawnItemRandomly="True" stackable="false">
+            <SpawnItem identifier="he-like_nuggets" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+            <SpawnItem identifier="he-like_burgers" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+            <SpawnItem identifier="he-like_filets" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+            <SpawnItem identifier="he-like_roasts" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+            <SpawnItem identifier="he-like_sandwiches" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+            <Remove />
+          </StatusEffect>
+        </Button>
+      </CustomInterface>
+    </Item>
+    <Item hideinmenus="true" noninteractable="true" name="Trait Selector (Drinks)" identifier="he-traitselector_drinks" description="" category="Hidden" maxstacksize="1" Tags="smallitem" scale="0.5" impactsoundtag="impact_metal_light">
+      <InventoryIcon texture="%ModDir%/Content/Items/Tools/Injector.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
+      <Sprite texture="%ModDir%/Content/Items/Tools/Injector.png" sourcerect="0,0,36,66" depth="0.6" origin="0.5,0.5" />
+      <Body width="35" height="65" density="10.2" />
+      <Wearable slots="RightHand,LeftHand,Bag,OuterClothes,InnerClothes,Head,Headset,HealthInterface,Any" msg="ItemMsgPickUpSelect" autoequipwhenfull="true" allowswappingwhenpicked="false">
+        <sprite texture="Content/Items/Jobgear/Mechanic/safetyharness.png" limb="RightHand" sourcerect="462,1,25,16" origin="0.5,0.8" depth="0.09" inheritlimbdepth="false" inherittexturescale="true" />
+        <sprite texture="Content/Items/Jobgear/Mechanic/safetyharness.png" limb="LeftHand" sourcerect="487,1,25,16" origin="0.5,0.8" depth="0.09" inheritlimbdepth="true" inherittexturescale="true" />
+        <StatusEffect type="OnWearing" target="Character" lockhands="true" setvalue="true" />
+        <StatusEffect type="OnWearing" target="This" comparison="And">
+          <Conditional hasspecifiertag="neq male" targetcontainer="true" />
+          <Conditional hasspecifiertag="neq female" targetcontainer="true" />
+          <Remove />
+        </StatusEffect>
+      </Wearable>
+      <CustomInterface uilabel="Select your preferred drink:" drawhudwhenequipped="true">
+        <GuiFrame relativesize="0.3,0.4" anchor="Center" style="Paper" hidedragicons="true" />
+        <Button text="Beer">
+          <StatusEffect type="OnUse" target="This">
+            <SpawnItem identifier="he-like_beer" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+            <Remove />
+          </StatusEffect>
+        </Button>
+        <Button text="Rum">
+          <StatusEffect type="OnUse" target="This">
+            <SpawnItem identifier="he-like_rum" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+            <Remove />
+          </StatusEffect>
+        </Button>
+        <Button text="Whiskey">
+          <StatusEffect type="OnUse" target="This">
+            <SpawnItem identifier="he-like_whiskey" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+            <Remove />
+          </StatusEffect>
+        </Button>
+        <Button text="Tea">
+          <StatusEffect type="OnUse" target="This">
+            <SpawnItem identifier="he-like_tea" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+            <Remove />
+          </StatusEffect>
+        </Button>
+        <Button text="Cola">
+          <StatusEffect type="OnUse" target="This">
+            <SpawnItem identifier="he-like_cola" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+            <Remove />
+          </StatusEffect>
+        </Button>
+        <Button text="Randomize">
+          <StatusEffect type="OnUse" target="This" SpawnItemRandomly="True" stackable="false">
+            <SpawnItem identifier="he-like_beer" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+            <SpawnItem identifier="he-like_rum" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+            <SpawnItem identifier="he-like_whiskey" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+            <SpawnItem identifier="he-like_tea" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+            <SpawnItem identifier="he-like_cola" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+            <Remove />
+          </StatusEffect>
+        </Button>
+      </CustomInterface>
+    </Item>
+    <Item hideinmenus="true" name="Trait: Likes Nuggets" identifier="he-like_nuggets" description="" category="Hidden" maxstacksize="1" Tags="smallitem" scale="0.5" impactsoundtag="impact_metal_light">
+      <InventoryIcon texture="%ModDir%/Content/Items/Tools/Injector.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
+      <Sprite texture="%ModDir%/Content/Items/Tools/Injector.png" sourcerect="0,0,36,66" depth="0.6" origin="0.5,0.5" />
+      <Body width="35" height="65" density="10.2" />
+      <Wearable slots="RightHand,LeftHand,Bag,OuterClothes,InnerClothes,Head,Headset,HealthInterface,Any" aimpos="-26,-48" holdpos="30,-15" holdangle="0" aimangle="300" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+        <StatusEffect type="Always" target="Character" comparison="Or" oneshot="true" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+          <Conditional hasspecifiertag="male"/>
+          <Conditional hasspecifiertag="female"/>
+          <Affliction identifier="trait_likes_nuggets" amount="1" />
+          <GiveTalentInfo giverandom="false" talentidentifiers="he-trait_likes_nuggets" />
+        </StatusEffect>
+        <StatusEffect type="Always" target="This" delay="0.1" stackable="false">
+          <Remove />
+        </StatusEffect>
+      </Wearable>
+    </Item>
+    <Item hideinmenus="true" name="Trait: Likes Burgers" identifier="he-like_burgers" description="" category="Hidden" maxstacksize="1" Tags="smallitem" scale="0.5" impactsoundtag="impact_metal_light">
+      <InventoryIcon texture="%ModDir%/Content/Items/Tools/Injector.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
+      <Sprite texture="%ModDir%/Content/Items/Tools/Injector.png" sourcerect="0,0,36,66" depth="0.6" origin="0.5,0.5" />
+      <Body width="35" height="65" density="10.2" />
+      <Wearable slots="RightHand,LeftHand,Bag,OuterClothes,InnerClothes,Head,Headset,HealthInterface,Any" aimpos="-26,-48" holdpos="30,-15" holdangle="0" aimangle="300" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+        <StatusEffect type="Always" target="Character" comparison="Or" oneshot="true" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+          <Conditional hasspecifiertag="male"/>
+          <Conditional hasspecifiertag="female"/>
+          <Affliction identifier="trait_likes_burgers" amount="1" />
+          <GiveTalentInfo giverandom="false" talentidentifiers="he-trait_likes_burgers" />
+        </StatusEffect>
+        <StatusEffect type="Always" target="This" delay="0.1" stackable="false">
+          <Remove />
+        </StatusEffect>
+      </Wearable>
+    </Item>
+    <Item hideinmenus="true" name="Trait: Likes Filets" identifier="he-like_filets" description="" category="Hidden" maxstacksize="1" Tags="smallitem" scale="0.5" impactsoundtag="impact_metal_light">
+      <InventoryIcon texture="%ModDir%/Content/Items/Tools/Injector.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
+      <Sprite texture="%ModDir%/Content/Items/Tools/Injector.png" sourcerect="0,0,36,66" depth="0.6" origin="0.5,0.5" />
+      <Body width="35" height="65" density="10.2" />
+      <Wearable slots="RightHand,LeftHand,Bag,OuterClothes,InnerClothes,Head,Headset,HealthInterface,Any" aimpos="-26,-48" holdpos="30,-15" holdangle="0" aimangle="300" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+        <StatusEffect type="Always" target="Character" comparison="Or" oneshot="true" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+          <Conditional hasspecifiertag="male"/>
+          <Conditional hasspecifiertag="female"/>
+          <Affliction identifier="trait_likes_filets" amount="1" />
+          <GiveTalentInfo giverandom="false" talentidentifiers="he-trait_likes_filets" />
+        </StatusEffect>
+        <StatusEffect type="Always" target="This" delay="0.1" stackable="false">
+          <Remove />
+        </StatusEffect>
+      </Wearable>
+    </Item>
+    <Item hideinmenus="true" name="Trait: Likes Roasts" identifier="he-like_roasts" description="" category="Hidden" maxstacksize="1" Tags="smallitem" scale="0.5" impactsoundtag="impact_metal_light">
+      <InventoryIcon texture="%ModDir%/Content/Items/Tools/Injector.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
+      <Sprite texture="%ModDir%/Content/Items/Tools/Injector.png" sourcerect="0,0,36,66" depth="0.6" origin="0.5,0.5" />
+      <Body width="35" height="65" density="10.2" />
+      <Wearable slots="RightHand,LeftHand,Bag,OuterClothes,InnerClothes,Head,Headset,HealthInterface,Any" aimpos="-26,-48" holdpos="30,-15" holdangle="0" aimangle="300" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+        <StatusEffect type="Always" target="Character" comparison="Or" oneshot="true" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+          <Conditional hasspecifiertag="male"/>
+          <Conditional hasspecifiertag="female"/>
+          <Affliction identifier="trait_likes_roasts" amount="1" />
+          <GiveTalentInfo giverandom="false" talentidentifiers="he-trait_likes_roasts" />
+        </StatusEffect>
+        <StatusEffect type="Always" target="This" delay="0.1" stackable="false">
+          <Remove />
+        </StatusEffect>
+      </Wearable>
+    </Item>
+    <Item hideinmenus="true" name="Trait: Likes Sandwiches" identifier="he-like_sandwiches" description="" category="Hidden" maxstacksize="1" Tags="smallitem" scale="0.5" impactsoundtag="impact_metal_light">
+      <InventoryIcon texture="%ModDir%/Content/Items/Tools/Injector.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
+      <Sprite texture="%ModDir%/Content/Items/Tools/Injector.png" sourcerect="0,0,36,66" depth="0.6" origin="0.5,0.5" />
+      <Body width="35" height="65" density="10.2" />
+      <Wearable slots="RightHand,LeftHand,Bag,OuterClothes,InnerClothes,Head,Headset,HealthInterface,Any" aimpos="-26,-48" holdpos="30,-15" holdangle="0" aimangle="300" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+        <StatusEffect type="Always" target="Character" comparison="Or" oneshot="true" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+          <Conditional hasspecifiertag="male"/>
+          <Conditional hasspecifiertag="female"/>
+          <Affliction identifier="trait_likes_sandwiches" amount="1" />
+          <GiveTalentInfo giverandom="false" talentidentifiers="he-trait_likes_sandwiches" />
+        </StatusEffect>
+        <StatusEffect type="Always" target="This" delay="0.1" stackable="false">
+          <Remove />
+        </StatusEffect>
+      </Wearable>
+    </Item>
+    <Item hideinmenus="true" name="Trait: Likes Beer" identifier="he-like_beer" description="" category="Hidden" maxstacksize="1" Tags="smallitem" scale="0.5" impactsoundtag="impact_metal_light">
+      <InventoryIcon texture="%ModDir%/Content/Items/Tools/Injector.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
+      <Sprite texture="%ModDir%/Content/Items/Tools/Injector.png" sourcerect="0,0,36,66" depth="0.6" origin="0.5,0.5" />
+      <Body width="35" height="65" density="10.2" />
+      <Wearable slots="RightHand,LeftHand,Bag,OuterClothes,InnerClothes,Head,Headset,HealthInterface,Any" aimpos="-26,-48" holdpos="30,-15" holdangle="0" aimangle="300" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+        <StatusEffect type="Always" target="Character" comparison="Or" oneshot="true" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+          <Conditional hasspecifiertag="male"/>
+          <Conditional hasspecifiertag="female"/>
+          <Affliction identifier="trait_likes_beer" amount="1" />
+          <GiveTalentInfo giverandom="false" talentidentifiers="he-trait_likes_beer" />
+        </StatusEffect>
+        <StatusEffect type="Always" target="This" delay="0.1" stackable="false">
+          <Remove />
+        </StatusEffect>
+      </Wearable>
+    </Item>
+    <Item hideinmenus="true" name="Trait: Likes Rum" identifier="he-like_rum" description="" category="Hidden" maxstacksize="1" Tags="smallitem" scale="0.5" impactsoundtag="impact_metal_light">
+      <InventoryIcon texture="%ModDir%/Content/Items/Tools/Injector.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
+      <Sprite texture="%ModDir%/Content/Items/Tools/Injector.png" sourcerect="0,0,36,66" depth="0.6" origin="0.5,0.5" />
+      <Body width="35" height="65" density="10.2" />
+      <Wearable slots="RightHand,LeftHand,Bag,OuterClothes,InnerClothes,Head,Headset,HealthInterface,Any" aimpos="-26,-48" holdpos="30,-15" holdangle="0" aimangle="300" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+        <StatusEffect type="Always" target="Character" comparison="Or" oneshot="true" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+          <Conditional hasspecifiertag="male"/>
+          <Conditional hasspecifiertag="female"/>
+          <Affliction identifier="trait_likes_rum" amount="1" />
+          <GiveTalentInfo giverandom="false" talentidentifiers="he-trait_likes_rum" />
+        </StatusEffect>
+        <StatusEffect type="Always" target="This" delay="0.1" stackable="false">
+          <Remove />
+        </StatusEffect>
+      </Wearable>
+    </Item>
+    <Item hideinmenus="true" name="Trait: Likes Whiskey" identifier="he-like_whiskey" description="" category="Hidden" maxstacksize="1" Tags="smallitem" scale="0.5" impactsoundtag="impact_metal_light">
+      <InventoryIcon texture="%ModDir%/Content/Items/Tools/Injector.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
+      <Sprite texture="%ModDir%/Content/Items/Tools/Injector.png" sourcerect="0,0,36,66" depth="0.6" origin="0.5,0.5" />
+      <Body width="35" height="65" density="10.2" />
+      <Wearable slots="RightHand,LeftHand,Bag,OuterClothes,InnerClothes,Head,Headset,HealthInterface,Any" aimpos="-26,-48" holdpos="30,-15" holdangle="0" aimangle="300" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+        <StatusEffect type="Always" target="Character" comparison="Or" oneshot="true" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+          <Conditional hasspecifiertag="male"/>
+          <Conditional hasspecifiertag="female"/>
+          <Affliction identifier="trait_likes_whiskey" amount="1" />
+          <GiveTalentInfo giverandom="false" talentidentifiers="he-trait_likes_whiskey" />
+        </StatusEffect>
+        <StatusEffect type="Always" target="This" delay="0.1" stackable="false">
+          <Remove />
+        </StatusEffect>
+      </Wearable>
+    </Item>
+    <Item hideinmenus="true" name="Trait: Likes Tea" identifier="he-like_tea" description="" category="Hidden" maxstacksize="1" Tags="smallitem" scale="0.5" impactsoundtag="impact_metal_light">
+      <InventoryIcon texture="%ModDir%/Content/Items/Tools/Injector.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
+      <Sprite texture="%ModDir%/Content/Items/Tools/Injector.png" sourcerect="0,0,36,66" depth="0.6" origin="0.5,0.5" />
+      <Body width="35" height="65" density="10.2" />
+      <Wearable slots="RightHand,LeftHand,Bag,OuterClothes,InnerClothes,Head,Headset,HealthInterface,Any" aimpos="-26,-48" holdpos="30,-15" holdangle="0" aimangle="300" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+        <StatusEffect type="Always" target="Character" comparison="Or" oneshot="true" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+          <Conditional hasspecifiertag="male"/>
+          <Conditional hasspecifiertag="female"/>
+          <Affliction identifier="trait_likes_tea" amount="1" />
+          <GiveTalentInfo giverandom="false" talentidentifiers="he-trait_likes_tea" />
+        </StatusEffect>
+        <StatusEffect type="Always" target="This" delay="0.1" stackable="false">
+          <Remove />
+        </StatusEffect>
+      </Wearable>
+    </Item>
+    <Item hideinmenus="true" name="Trait: Likes Cola" identifier="he-like_cola" description="" category="Hidden" maxstacksize="1" Tags="smallitem" scale="0.5" impactsoundtag="impact_metal_light">
+      <InventoryIcon texture="%ModDir%/Content/Items/Tools/Injector.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
+      <Sprite texture="%ModDir%/Content/Items/Tools/Injector.png" sourcerect="0,0,36,66" depth="0.6" origin="0.5,0.5" />
+      <Body width="35" height="65" density="10.2" />
+      <Wearable slots="RightHand,LeftHand,Bag,OuterClothes,InnerClothes,Head,Headset,HealthInterface,Any" aimpos="-26,-48" holdpos="30,-15" holdangle="0" aimangle="300" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+        <StatusEffect type="Always" target="Character" comparison="Or" oneshot="true" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+          <Conditional hasspecifiertag="male"/>
+          <Conditional hasspecifiertag="female"/>
+          <Affliction identifier="trait_likes_cola" amount="1" />
+          <GiveTalentInfo giverandom="false" talentidentifiers="he-trait_likes_cola" />
+        </StatusEffect>
+        <StatusEffect type="Always" target="This" delay="0.1" stackable="false">
+          <Remove />
+        </StatusEffect>
+      </Wearable>
     </Item>
     <Item name="The Europan Volume 66" identifier="he-skillbooktheeuropan" description="" category="Misc" Tags="smallitem,skillbook" maxstacksize="32" maxstacksizecharacterinventory="8" scale="0.5" impactsoundtag="impact_soft" cargocontaineridentifier="metalcrate">
       <PreferredContainer primary="crewcab"/>
