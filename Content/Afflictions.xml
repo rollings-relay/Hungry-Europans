@@ -2160,11 +2160,17 @@
         </StatusEffect>
         <StatusEffect target="Character" interval="0.5" duration="0.51" LowPassMultiplier="0.1" setvalue="true">
           <Conditional hasspecifiertag="male" />
+          <Conditional clownpower="lte 0" />
           <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/SnoringMale.ogg" volume="3" range="400" loop="true" />
         </StatusEffect>
         <StatusEffect target="Character" interval="0.5" duration="0.51" LowPassMultiplier="0.1" setvalue="true">
           <Conditional hasspecifiertag="female" />
+          <Conditional clownpower="lte 0" />
           <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/SnoringFemale.ogg" volume="8" range="400" loop="true" />
+        </StatusEffect>
+        <StatusEffect target="Character" interval="0.5" duration="0.51" LowPassMultiplier="0.1" setvalue="true">
+          <Conditional clownpower="gt 0" />
+          <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/SnoringClown.ogg" volume="3" range="400" loop="true" />
         </StatusEffect>
       </Effect>
       <!--
