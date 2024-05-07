@@ -36,7 +36,7 @@
   <Item file="%ModDir%/Content/Items/Misc/CafeteriaAssets.xml" />
   <Item file="%ModDir%/Content/Items/Misc/Misc.xml" />
   <Item file="%ModDir%/Content/Items/Misc/Beds.xml" />
-  <Item file="%ModDir%/Content/Items/Tools/Knives.xml" />
+  <Item file="%ModDir%/Content/Items/Tools/KitchenTools.xml" />
   <Item file="%ModDir%/Content/Items/Tools/Research.xml" />
   <Item file="%ModDir%/Content/Items/Tools/Weapons.xml" />
   <Item file="%ModDir%/Content/Items/Jobgear/Chef/chef_gear.xml" />
