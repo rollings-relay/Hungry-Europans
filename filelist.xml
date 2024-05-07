@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <contentpackage name="Hungry Europans" modversion="1.0.116" corepackage="False" steamworkshopid="2954998725" gameversion="1.3.0.1">
   <Afflictions file="%ModDir%/Content/Afflictions.xml" />
+  <Afflictions file="%ModDir%/Content/TraitsAfflictions.xml" />
   <Afflictions file="%ModDir%/Content/Talents/Chef/AfflictionsChef.xml" />
   <Item file="%ModDir%/Content/Items/Containers/Containers.xml" />
   <Item file="%ModDir%/Content/Items/Fabricators/Fabricators.xml" />
