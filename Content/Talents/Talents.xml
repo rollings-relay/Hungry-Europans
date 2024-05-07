@@ -22,8 +22,38 @@
         </Abilities>
       </AbilityGroupInterval>
     </Talent>
-  </Override>
-  <Override>
+    <!-- todo: icon -->
+    <Talent name="Sleepy Europan" identifier="he-sleepyeuropan">
+      <Icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="0,385,119,119" origin="0.5,0.5"/>
+      <Description tag="talentdescription.he-sleepyeuropan" />
+      <AbilityGroupInterval interval="1.0">
+        <Abilities>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+                <Affliction identifier="sleepaffliction" amount="0.015" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupInterval>
+    </Talent>
+    <!-- todo: icon -->
+    <Talent name="Moody Europan" identifier="he-moodyeuropan">
+      <Icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="0,385,119,119" origin="0.5,0.5"/>
+      <Description tag="talentdescription.he-moodyeuropan" />
+      <AbilityGroupInterval interval="1.0">
+        <Abilities>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+                <Affliction identifier="mood" amount="0.03" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupInterval>
+    </Talent>
     <Talent identifier="he-specialeuropan">
       <Icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="119,385,119,119" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-specialeuropan" />
@@ -44,10 +74,8 @@
         </Abilities>
       </AbilityGroupInterval>
     </Talent>
-  </Override>
-  <!--OVERRIDES-->
-  <!--Drunken Sailor to add recipes-->
-  <Override>
+    <!--OVERRIDES-->
+    <!--Drunken Sailor to add recipes-->
     <Talent identifier="drunkensailor">
       <Description tag="talentdescription.drunkensailor">
         <Replace tag="[stunresistance]" value="75" color="gui.green"/>
@@ -74,6 +102,157 @@
         </Abilities>
       </AbilityGroupInterval>
       <AddedRecipe itemidentifier="he-kegrum"/>
+    </Talent>
+    <!-- TRAITS -->
+    <Talent name="Preferred Food: Nuggets" identifier="he-trait_likes_nuggets">
+      <Icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="0,385,119,119" origin="0.5,0.5"/>
+      <Description tag="talentdescription.he-moodyeuropan" />
+      <AbilityGroupEffect abilityeffecttype="OnRoundEnd">
+        <Abilities>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+                <Affliction identifier="trait_likes_nuggets" amount="1" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupEffect>
+    </Talent>
+    <Talent name="Preferred Food: Burgers" identifier="he-trait_likes_burgers">
+      <Icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="0,385,119,119" origin="0.5,0.5"/>
+      <Description tag="talentdescription.he-moodyeuropan" />
+      <AbilityGroupEffect abilityeffecttype="OnRoundEnd">
+        <Abilities>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+                <Affliction identifier="trait_likes_burgers" amount="1" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupEffect>
+    </Talent>
+    <Talent name="Preferred Food: Filets" identifier="he-trait_likes_filets">
+      <Icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="0,385,119,119" origin="0.5,0.5"/>
+      <Description tag="talentdescription.he-moodyeuropan" />
+      <AbilityGroupEffect abilityeffecttype="OnRoundEnd">
+        <Abilities>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+                <Affliction identifier="trait_likes_filets" amount="1" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupEffect>
+    </Talent>
+    <Talent name="Preferred Food: roasts" identifier="he-trait_likes_roasts">
+      <Icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="0,385,119,119" origin="0.5,0.5"/>
+      <Description tag="talentdescription.he-moodyeuropan" />
+      <AbilityGroupEffect abilityeffecttype="OnRoundEnd">
+        <Abilities>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+                <Affliction identifier="trait_likes_roasts" amount="1" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupEffect>
+    </Talent>
+    <Talent name="Preferred Food: Sandwiches" identifier="he-trait_likes_sandwiches">
+      <Icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="0,385,119,119" origin="0.5,0.5"/>
+      <Description tag="talentdescription.he-moodyeuropan" />
+      <AbilityGroupEffect abilityeffecttype="OnRoundEnd">
+        <Abilities>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+                <Affliction identifier="trait_likes_sandwiches" amount="1" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupEffect>
+    </Talent>
+    <Talent name="Preferred Drink: Beer" identifier="he-trait_likes_beer">
+      <Icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="0,385,119,119" origin="0.5,0.5"/>
+      <Description tag="talentdescription.he-moodyeuropan" />
+      <AbilityGroupEffect abilityeffecttype="OnRoundEnd">
+        <Abilities>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+                <Affliction identifier="trait_likes_beer" amount="1" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupEffect>
+    </Talent>
+    <Talent name="Preferred Drink: Rum" identifier="he-trait_likes_rum">
+      <Icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="0,385,119,119" origin="0.5,0.5"/>
+      <Description tag="talentdescription.he-moodyeuropan" />
+      <AbilityGroupEffect abilityeffecttype="OnRoundEnd">
+        <Abilities>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+                <Affliction identifier="trait_likes_rum" amount="1" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupEffect>
+    </Talent>
+    <Talent name="Preferred Drink: Whiskey" identifier="he-trait_likes_whiskey">
+      <Icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="0,385,119,119" origin="0.5,0.5"/>
+      <Description tag="talentdescription.he-moodyeuropan" />
+      <AbilityGroupEffect abilityeffecttype="OnRoundEnd">
+        <Abilities>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+                <Affliction identifier="trait_likes_whiskey" amount="1" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupEffect>
+    </Talent>
+    <Talent name="Preferred Drink: Tea" identifier="he-trait_likes_tea">
+      <Icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="0,385,119,119" origin="0.5,0.5"/>
+      <Description tag="talentdescription.he-moodyeuropan" />
+      <AbilityGroupEffect abilityeffecttype="OnRoundEnd">
+        <Abilities>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+                <Affliction identifier="trait_likes_tea" amount="1" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupEffect>
+    </Talent>
+    <Talent name="Preferred Drink: Cola" identifier="he-trait_likes_cola">
+      <Icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="0,385,119,119" origin="0.5,0.5"/>
+      <Description tag="talentdescription.he-moodyeuropan" />
+      <AbilityGroupEffect abilityeffecttype="OnRoundEnd">
+        <Abilities>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+                <Affliction identifier="trait_likes_cola" amount="1" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupEffect>
     </Talent>
   </Override>
 </Talents>
