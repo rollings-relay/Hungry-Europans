@@ -1,6 +1,124 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Override>
   <Afflictions>
+    <!-- NEEDS INTEGRATION -->
+    <Affliction name="Tiredness"
+      identifier="sleepaffliction"
+      description=""
+      type="sleep"
+      limbspecific="false"
+      indicatorlimb="Head"
+      maxstrength="100"
+      affectmachines="true"
+      showiconthreshold="0"
+      showinhealthscannerthreshold="0.5"
+      healableinmedicalclinic="false"
+      iconcolors="0,100,0,255;100,0,0,255">
+      <Effect minstrength="0" maxstrength="20" strengthchange="0.0">
+        <StatValue stattype="MeleeAttackMultiplier" value="+0.05" />
+        <StatValue stattype="MeleeAttackSpeed" value="+0.05" />
+        <StatValue stattype="SwimmingSpeed" value="+0.05" />
+      </Effect>
+      <Effect minstrength="20.1" maxstrength="50" strengthchange="0.0">
+      </Effect>
+      <Effect minstrength="50" maxstrength="100" strengthchange="0.0" minscreenblur="0.0" maxscreenblur="1.0" minchromaticaberration="0.0" maxchromaticaberration="80.0" minvitalitydecrease="0" maxvitalitydecrease="0.2" multiplybymaxvitality="true">
+      </Effect>
+      <PeriodicEffect mininterval="20" maxinterval="180">
+        <StatusEffect target="Character" comparison="and">
+          <Conditional sleepaffliction="gte 50" />
+          <Conditional hasspecifiertag="male" />
+          <Sound file="%ModDir%/Content/Sounds/Afflictions/Tiredness/Yawnmale1.ogg" range="400" selectionmode="Random" />
+          <Sound file="%ModDir%/Content/Sounds/Afflictions/Tiredness/Yawnmale2.ogg" range="400" />
+          <Sound file="%ModDir%/Content/Sounds/Afflictions/Tiredness/Yawnmale3.ogg" range="400" />
+        </StatusEffect>
+        <StatusEffect target="Character" comparison="and">
+          <Conditional sleepaffliction="gte 50" />
+          <Conditional hasspecifiertag="female" />
+          <Sound file="%ModDir%/Content/Sounds/Afflictions/Tiredness/Yawnfemale1.ogg" range="400" selectionmode="Random" />
+          <Sound file="%ModDir%/Content/Sounds/Afflictions/Tiredness/Yawnfemale2.ogg" range="400" />
+          <Sound file="%ModDir%/Content/Sounds/Afflictions/Tiredness/Yawnfemale3.ogg" range="400" />
+        </StatusEffect>
+      </PeriodicEffect>
+      <icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="0,128,128,128" origin="0,0"/>
+    </Affliction>
+    <Affliction name="Mood"
+      identifier="mood"
+      description=""
+      type="mood"
+      limbspecific="false"
+      indicatorlimb="Head"
+      maxstrength="100"
+      affectmachines="true"
+      showiconthreshold="0"
+      showinhealthscannerthreshold="0.5"
+      healableinmedicalclinic="false"
+      iconcolors="0,100,0,255;100,0,0,255">
+      <Effect minstrength="0" maxstrength="20" />
+      <Effect minstrength="20" maxstrength="50" />
+      <Effect minstrength="50" maxstrength="60">
+        <StatValue stattype="ElectricalSkillBonus" value="-10" />
+        <StatValue stattype="HelmSkillBonus" value="-10" />
+        <StatValue stattype="MechanicalSkillBonus" value="-10" />
+        <StatValue stattype="MedicalSkillBonus" value="-10" />
+        <StatValue stattype="WeaponsSkillBonus" value="-10" />
+        <StatValue stattype="RepairSpeed" value="-0.10" />
+      </Effect>
+      <Effect minstrength="60" maxstrength="70">
+        <StatValue stattype="ElectricalSkillBonus" value="-20" />
+        <StatValue stattype="HelmSkillBonus" value="-20" />
+        <StatValue stattype="MechanicalSkillBonus" value="-20" />
+        <StatValue stattype="MedicalSkillBonus" value="-20" />
+        <StatValue stattype="WeaponsSkillBonus" value="-20" />
+        <StatValue stattype="RepairSpeed" value="-0.20" />
+      </Effect>
+      <Effect minstrength="70" maxstrength="80">
+        <StatValue stattype="ElectricalSkillBonus" value="-30" />
+        <StatValue stattype="HelmSkillBonus" value="-30" />
+        <StatValue stattype="MechanicalSkillBonus" value="-30" />
+        <StatValue stattype="MedicalSkillBonus" value="-30" />
+        <StatValue stattype="WeaponsSkillBonus" value="-30" />
+        <StatValue stattype="RepairSpeed" value="-0.30" />
+      </Effect>
+      <Effect minstrength="80" maxstrength="90">
+        <StatValue stattype="ElectricalSkillBonus" value="-40" />
+        <StatValue stattype="HelmSkillBonus" value="-40" />
+        <StatValue stattype="MechanicalSkillBonus" value="-40" />
+        <StatValue stattype="MedicalSkillBonus" value="-40" />
+        <StatValue stattype="WeaponsSkillBonus" value="-40" />
+        <StatValue stattype="RepairSpeed" value="-0.40" />
+        <StatusEffect target="Character" disabledeltatime="true">
+          <Affliction identifier="crying" amount="1" />
+        </StatusEffect>
+      </Effect>
+      <Effect minstrength="90" maxstrength="100">
+        <StatValue stattype="ElectricalSkillBonus" value="-50" />
+        <StatValue stattype="HelmSkillBonus" value="-50" />
+        <StatValue stattype="MechanicalSkillBonus" value="-50" />
+        <StatValue stattype="MedicalSkillBonus" value="-50" />
+        <StatValue stattype="WeaponsSkillBonus" value="-50" />
+        <StatValue stattype="RepairSpeed" value="-0.50" />
+        <StatusEffect target="Character" disabledeltatime="true">
+          <Affliction identifier="crying" amount="1" />
+        </StatusEffect>
+      </Effect>
+      <PeriodicEffect mininterval="20" maxinterval="40">
+        <StatusEffect target="Character" comparison="and" stackable="false" duration="6">
+          <Conditional mood="gte 80" />
+          <Conditional hasspecifiertag="male" />
+          <Sound file="%ModDir%/Content/Sounds/Afflictions/Mood/CryingMale1.ogg" range="400" loop="true" selectionmode="Random" />
+          <Sound file="%ModDir%/Content/Sounds/Afflictions/Mood/CryingMale2.ogg" range="400" loop="true" />
+          <Sound file="%ModDir%/Content/Sounds/Afflictions/Mood/CryingMale3.ogg" range="400" loop="true" />
+        </StatusEffect>
+        <StatusEffect target="Character" comparison="and" stackable="false" duration="6">
+          <Conditional mood="gte 80" />
+          <Conditional hasspecifiertag="female" />
+          <Sound file="%ModDir%/Content/Sounds/Afflictions/Mood/CryingFemale1.ogg" range="400" loop="true" selectionmode="Random" />
+          <Sound file="%ModDir%/Content/Sounds/Afflictions/Mood/CryingFemale2.ogg" range="400" loop="true" />
+          <Sound file="%ModDir%/Content/Sounds/Afflictions/Mood/CryingFemale3.ogg" range="400" loop="true" />
+        </StatusEffect>
+      </PeriodicEffect>
+      <icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="0,128,128,128" origin="0,0"/>
+    </Affliction>
     <!--OVERRIDES-->
     <!-- HALLUCINATIONS OVERRIDE TO MAKE IT LAST LONGER AND ADD VISUAL EFFECTS -->
     <!-- temporarily disabled due to a game bug causing performance issues in a level with many light sources
@@ -73,6 +191,9 @@
         maxfacetint="255,0,0,150">
         <StatValue stattype="MeleeAttackSpeed" minvalue="0" maxvalue="0.35" />
         <StatValue stattype="SwimmingSpeed" minvalue="0" maxvalue="0.3" />
+        <StatusEffect target="Character">
+          <TriggerAnimation Type="Walk" filename="VigorousWalk" priority="5" ExpectedSpecies="Human" />
+        </StatusEffect>
       </Effect>
       <!-- Greater than 1.48 and the ragdolls start snapping when turning and characters take damage from colliding with doors & walls -->
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="128,896,128,128" color="10,193,114,255" origin="0,0"/>
