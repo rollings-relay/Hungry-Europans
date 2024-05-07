@@ -273,6 +273,10 @@
           <Conditional InWater="false" />
           <Affliction identifier="he-drunkinvertcontrols" strength="100" probability="0.05" />
         </StatusEffect>
+        <StatusEffect target="Character">
+          <TriggerAnimation Type="Walk" filename="DrunkenWalk" priority="6" ExpectedSpecies="Human" />
+          <TriggerAnimation Type="Run" filename="DrunkenRun" priority="6" ExpectedSpecies="Human" />
+        </StatusEffect>
       </Effect>
       <!-- Heavier drunkenness decreases vitality and speed more -->
       <Effect minstrength="40" maxstrength="80"
@@ -306,6 +310,10 @@
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional he-alcoholism="gte 20" />
           <Affliction identifier="nausea" strength="10" probability="0.005" />
+        </StatusEffect>
+        <StatusEffect target="Character">
+          <TriggerAnimation Type="Walk" filename="DrunkenWalk" priority="6" ExpectedSpecies="Human" />
+          <TriggerAnimation Type="Run" filename="DrunkenRun" priority="6" ExpectedSpecies="Human" />
         </StatusEffect>
       </Effect>
       <!-- After drinking enough the effect starts to get lethal -->
@@ -341,6 +349,10 @@
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional he-alcoholism="gte 20" />
           <Affliction identifier="nausea" strength="20" probability="0.05" />
+        </StatusEffect>
+        <StatusEffect target="Character">
+          <TriggerAnimation Type="Walk" filename="DrunkenWalk" priority="6" ExpectedSpecies="Human" />
+          <TriggerAnimation Type="Run" filename="DrunkenRun" priority="6" ExpectedSpecies="Human" />
         </StatusEffect>
       </Effect>
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0"/>
