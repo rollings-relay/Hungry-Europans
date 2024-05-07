@@ -3360,5 +3360,78 @@
       </Effect>
       <icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="128,128,128,128" origin="0,0"/>
     </Affliction>
+    <!-- NEEDS BACKWARDS COMPATIBILITY -->
+    <Affliction name="Well Fed" identifier="wellfed" description="" type="buff" limbspecific="false" indicatorlimb="Torso" maxstrength="1" affectmachines="true" showiconthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false" iconcolors="0,100,100,255;0,100,100,255">
+      <Effect minstrength="0" maxstrength="1" strengthchange="-1000">
+        <StatValue stattype="MeleeAttackMultiplier" value="+0.10" />
+        <StatValue stattype="MeleeAttackSpeed" value="+0.10" />
+        <StatValue stattype="SwimmingSpeed" value="+0.10" />
+      </Effect>
+    </Affliction>
+    <Affliction name="Stomach Hungry" identifier="stomachhungry" description="" type="noise" limbspecific="false" indicatorlimb="Torso" maxstrength="1" affectmachines="true" showiconthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
+      <Effect minstrength="0" maxstrength="1" strengthchange="-1000" />
+      <PeriodicEffect mininterval="12" maxinterval="16">
+        <!--StatusEffect target="Character" comparison="and">
+          <Conditional ishuman="true" />
+          <Conditional hasspecifiertag="male" />
+          <Sound file="%ModDir%/Sounds/Hunger1.ogg" range="400" selectionmode="Random" />
+          <Sound file="%ModDir%/Sounds/Hunger2.ogg" range="400" />
+          <Sound file="%ModDir%/Sounds/Hunger3.ogg" range="400" />
+          <Sound file="%ModDir%/Sounds/Hunger4.ogg" range="400" />
+          <Sound file="%ModDir%/Sounds/Hunger5.ogg" range="400" />
+          <Sound file="%ModDir%/Sounds/Hunger6.ogg" range="400" />
+          <Sound file="%ModDir%/Sounds/Hunger7.ogg" range="400" />
+          <Sound file="%ModDir%/Sounds/Hunger8.ogg" range="400" />
+        </StatusEffect-->
+        <!--StatusEffect target="Character" comparison="and">
+          <Conditional ishuman="true" />
+          <Conditional hasspecifiertag="female" />
+          <Sound file="%ModDir%/Sounds/Hunger1.ogg" range="400" selectionmode="Random" />
+          <Sound file="%ModDir%/Sounds/Hunger2.ogg" range="400" />
+          <Sound file="%ModDir%/Sounds/Hunger3.ogg" range="400" />
+          <Sound file="%ModDir%/Sounds/Hunger4.ogg" range="400" />
+          <Sound file="%ModDir%/Sounds/Hunger5.ogg" range="400" />
+          <Sound file="%ModDir%/Sounds/Hunger6.ogg" range="400" />
+          <Sound file="%ModDir%/Sounds/Hunger7.ogg" range="400" />
+          <Sound file="%ModDir%/Sounds/Hunger8.ogg" range="400" />
+        </StatusEffect-->
+      </PeriodicEffect>
+    </Affliction>
+    <Affliction name="Well Hydrated" identifier="wellhydrated" description="" type="buff" limbspecific="false" indicatorlimb="Torso" maxstrength="1" affectmachines="true" showiconthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false" iconcolors="0,100,100,255;0,100,100,255">
+      <Effect minstrength="0" maxstrength="1" strengthchange="-1000">
+        <StatValue stattype="MeleeAttackMultiplier" value="+0.10" />
+        <StatValue stattype="MeleeAttackSpeed" value="+0.10" />
+        <StatValue stattype="SwimmingSpeed" value="+0.10" />
+      </Effect>
+    </Affliction>
+    <Affliction name="Cough Thirst" identifier="coughthirst" description="" type="noise" limbspecific="false" indicatorlimb="Torso" maxstrength="1" affectmachines="true" showiconthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
+      <Effect minstrength="0" maxstrength="1" strengthchange="-1000" />
+    </Affliction>
+    <Affliction name="Well Rested" identifier="wellrested" description="" type="buff" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="true" showiconthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false" iconcolors="0,100,100,255;0,100,100,255">
+      <Effect minstrength="0" maxstrength="1" strengthchange="-1000">
+        <StatValue stattype="MeleeAttackMultiplier" value="+0.05" />
+        <StatValue stattype="MeleeAttackSpeed" value="+0.05" />
+        <StatValue stattype="SwimmingSpeed" value="+0.05" />
+      </Effect>
+    </Affliction>
+    <Affliction name="Sleep Yawn" identifier="sleepyawn" description="" type="noise" limbspecific="false" indicatorlimb="Torso" maxstrength="1" affectmachines="true" showiconthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
+      <Effect minstrength="0" maxstrength="1" strengthchange="-1000" />
+    </Affliction>
+    <Affliction name="Jovial" identifier="jovial" description="" type="buff" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="true" showiconthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false" iconcolors="0,100,100,255;0,100,100,255">
+      <Effect minstrength="0" maxstrength="1" strengthchange="-1000">
+        <StatValue stattype="ElectricalSkillBonus" value="+5" />
+        <StatValue stattype="HelmSkillBonus" value="+5" />
+        <StatValue stattype="MechanicalSkillBonus" value="+5" />
+        <StatValue stattype="MedicalSkillBonus" value="+5" />
+        <StatValue stattype="WeaponsSkillBonus" value="+5" />
+        <StatValue stattype="RepairSpeed" value="+0.10" />
+      </Effect>
+    </Affliction>
+    <Affliction name="Crying" identifier="crying" description="" type="noise" limbspecific="false" indicatorlimb="Torso" maxstrength="1" affectmachines="true" showiconthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
+      <Effect minstrength="0" maxstrength="1" strengthchange="-1000" />
+    </Affliction>
+    <Affliction name="Sleeping Blindness" identifier="sleepblindnessaffliction" description="You are asleep." type="bedblindness" limbspecific="false" indicatorlimb="Head" maxstrength="100" affectmachines="true" showiconthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false" iconcolors="0,100,0,255;100,0,0,255">
+      <Effect minstrength="0" maxstrength="100" strengthchange="-1000" />
+    </Affliction>
   </Afflictions>
 </Override>
