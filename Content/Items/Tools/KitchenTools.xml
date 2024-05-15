@@ -55,7 +55,7 @@
         </StatusEffect>
       </Holdable>
     </Item>
-    <Item name="Pot" identifier="he-potwithwater" category="Equipment" maxstacksize="1" Tags="smallitem,pot,waterpot" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="Pot" identifier="he-potwithwater" category="Equipment" maxstacksize="1" Tags="smallitem,waterpot" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="kitchen" />
       <PreferredContainer secondary="crewcab" />
       <Deconstruct time="5">
