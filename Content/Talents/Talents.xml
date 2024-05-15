@@ -134,6 +134,21 @@
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
+    <Talent name="Preferred Food: Hotdogs" identifier="he-trait_likes_hotdogs">
+      <Icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="0,385,119,119" origin="0.5,0.5"/>
+      <Description tag="talentdescription.he-moodyeuropan" />
+      <AbilityGroupEffect abilityeffecttype="OnRoundEnd">
+        <Abilities>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+                <Affliction identifier="trait_likes_hotdogs" amount="1" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupEffect>
+    </Talent>
     <Talent name="Preferred Food: Filets" identifier="he-trait_likes_filets">
       <Icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="0,385,119,119" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-moodyeuropan" />

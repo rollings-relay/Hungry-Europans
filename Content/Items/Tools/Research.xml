@@ -275,6 +275,13 @@
             <Remove />
           </StatusEffect>
         </Button>
+        <Button text="Burgers">
+          <StatusEffect type="OnUse" target="This">
+            <SpawnItem identifier="he-traitselector_drinks" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+            <SpawnItem identifier="he-like_hotdogs" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+            <Remove />
+          </StatusEffect>
+        </Button>
         <Button text="Filets">
           <StatusEffect type="OnUse" target="This">
             <SpawnItem identifier="he-traitselector_drinks" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
@@ -303,6 +310,7 @@
           <StatusEffect type="OnUse" target="This" SpawnItemRandomly="True" stackable="false">
             <SpawnItem identifier="he-like_nuggets" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
             <SpawnItem identifier="he-like_burgers" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+            <SpawnItem identifier="he-like_hotdogs" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
             <SpawnItem identifier="he-like_filets" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
             <SpawnItem identifier="he-like_roasts" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
             <SpawnItem identifier="he-like_sandwiches" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
@@ -395,6 +403,22 @@
           <Conditional hasspecifiertag="female"/>
           <Affliction identifier="trait_likes_burgers" amount="1" />
           <GiveTalentInfo giverandom="false" talentidentifiers="he-trait_likes_burgers" />
+        </StatusEffect>
+        <StatusEffect type="Always" target="This" delay="0.1" stackable="false">
+          <Remove />
+        </StatusEffect>
+      </Wearable>
+    </Item>
+    <Item hideinmenus="true" name="Trait: Likes Hotdogs" identifier="he-like_hotdogs" description="" category="Hidden" maxstacksize="1" Tags="smallitem" scale="0.5" impactsoundtag="impact_metal_light">
+      <InventoryIcon texture="%ModDir%/Content/Items/Tools/Injector.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
+      <Sprite texture="%ModDir%/Content/Items/Tools/Injector.png" sourcerect="0,0,36,66" depth="0.6" origin="0.5,0.5" />
+      <Body width="35" height="65" density="10.2" />
+      <Wearable slots="RightHand,LeftHand,Bag,OuterClothes,InnerClothes,Head,Headset,HealthInterface,Any" aimpos="-26,-48" holdpos="30,-15" holdangle="0" aimangle="300" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+        <StatusEffect type="Always" target="Character" comparison="Or" oneshot="true" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+          <Conditional hasspecifiertag="male"/>
+          <Conditional hasspecifiertag="female"/>
+          <Affliction identifier="trait_likes_hotdogs" amount="1" />
+          <GiveTalentInfo giverandom="false" talentidentifiers="he-trait_likes_hotdogs" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" delay="0.1" stackable="false">
           <Remove />
