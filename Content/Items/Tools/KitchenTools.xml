@@ -19,8 +19,8 @@
         <RequiredSkill identifier="mechanical" level="20" />
         <RequiredItem identifier="steel" />
       </Fabricate>
-      <InventoryIcon texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" sourcerect="1752,104,77,12" origin="0.5,0.5" />
-      <Sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" sourcerect="1752,104,77,12" depth="0.55" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1752,104,77,12" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1752,104,77,12" depth="0.55" />
       <Body width="75" height="10" density="13.0" />
       <Holdable canbecombined="false" slots="Any,RightHand,LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect" />
       <ItemContainer capacity="6" hideitems="true">
@@ -45,8 +45,8 @@
         <RequiredSkill identifier="mechanical" level="20" />
         <RequiredItem identifier="steel" />
       </Fabricate>
-      <InventoryIcon texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" sourcerect="1815,121,59,48" origin="0.5,0.5" />
-      <Sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" sourcerect="1815,121,59,48" depth="0.55" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1815,121,59,48" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1815,121,59,48" depth="0.55" />
       <Body width="58" height="46" density="13.0" />
       <Holdable canbecombined="false" slots="Any,RightHand+LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect">
         <StatusEffect type="InWater" target="This">
@@ -60,8 +60,8 @@
       <PreferredContainer secondary="crewcab" />
       <Deconstruct time="5">
       </Deconstruct>
-      <InventoryIcon texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" sourcerect="1815,121,59,48" origin="0.5,0.5" />
-      <Sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" sourcerect="1815,121,59,48" depth="0.55" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1815,121,59,48" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1815,121,59,48" depth="0.55" />
       <Body width="58" height="46" density="13.0" />
       <Holdable canbecombined="false" slots="Any,RightHand+LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect" />
       <CustomInterface canbeselected="false" drawhudwhenequipped="true">
@@ -69,7 +69,7 @@
         <Button text="interaction.emptypot">
           <StatusEffect type="OnUse" target="This">
             <Conditional InWater="false" />
-            <Sound file="%ModDir%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
             <SpawnItem identifier="he-pot" spawnposition="SameInventory" SpawnIfInventoryFull="true" spawnifcantbecontained="true" />
             <Remove />
           </StatusEffect>
@@ -89,8 +89,8 @@
         <RequiredItem identifier="plastic" amount="1" />
         <RequiredItem identifier="steel" amount="1"/>
       </Fabricate>
-      <InventoryIcon texture="%ModDir%/Content/Items/Tools/Tools.png" sourcerect="1,1,75,26" origin="0.5,0.5" />
-      <Sprite texture="%ModDir%/Content/Items/Tools/Tools.png" sourcerect="1,1,75,26" depth="0.55" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="1,1,75,26" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="1,1,75,26" depth="0.55" origin="0.5,0.5" />
       <Body width="65" height="15" density="25" />
       <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="50,0" handle1="-16,5" holdangle="30" reload="0.75" range="50" combatPriority="25" msg="ItemMsgPickUpSelect" HitOnlyCharacters="false">
         <RequiredSkill identifier="butchery" level="100" />
@@ -448,11 +448,11 @@
         <RequiredItem identifier="plastic" amount="1" />
         <RequiredItem identifier="steel" amount="1"/>
       </Fabricate>-->
-      <InventoryIcon texture="%ModDir%/Content/Items/Tools/Tools.png" sourcerect="1,1,75,26" origin="0.5,0.5" />
-      <Sprite texture="%ModDir%/Content/Items/Tools/Tools.png" sourcerect="1,1,75,26" depth="0.55" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="1,1,75,26" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="1,1,75,26" depth="0.55" origin="0.5,0.5" />
       <Body width="65" height="15" density="25" />
       <Wearable slots="Bag" msg="ItemMsgEquipSelect" canbeselected="false" canbepicked="true" pickkey="Select">
-        <sprite name="Butcher's Saw" texture="%ModDir%/Content/Items/Tools/Tools.png" sourcerect="256,102,112,54" limb="Torso" inherittexturescale="true" origin="0.5,-0.2" />
+        <sprite name="Butcher's Saw" texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="256,102,112,54" limb="Torso" inherittexturescale="true" origin="0.5,-0.2" />
       </Wearable>
       <RepairTool slots="RightHand+LeftHand" handle1="-16,5" holdangle="30" reload="0.75" range="50" combatPriority="25" msg="ItemMsgPickUpSelect" HitOnlyCharacters="true">
         <RequiredSkill identifier="butchery" level="100" />

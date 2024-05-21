@@ -7,10 +7,10 @@
        pricemultiplier="1"
        idlebehavior="StayInHull">
     <Jobicon>
-      <sprite texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="0,0,121,121" origin="0.5,0.5"/>
+      <sprite texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,0,121,121" origin="0.5,0.5"/>
     </Jobicon>
     <JobiconSmall>
-      <sprite texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="122,0,25,25" origin="0.5,0.5"/>
+      <sprite texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="122,0,25,25" origin="0.5,0.5"/>
     </JobiconSmall>
     <Skills>
       <Skill identifier="helm" level="5,10"/>

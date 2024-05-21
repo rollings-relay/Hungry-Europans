@@ -11,25 +11,25 @@
         <Price storeidentifier="merchantmilitary" sold="false" />
         <Price storeidentifier="merchantmine" sold="false" />
       </Price>
-      <InventoryIcon texture="%ModDir%/Content/Items/Misc/bagpipes.png" sourcerect="0,0,112,154" origin="0.5,0.5" />
-      <Sprite texture="%ModDir%/Content/Items/Misc/bagpipes.png" sourcerect="0,0,112,154" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Misc/bagpipes.png" sourcerect="0,0,112,154" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Misc/bagpipes.png" sourcerect="0,0,112,154" origin="0.5,0.5" />
       <Body radius="45" height="40" density="9" />
       <RangedWeapon reload="1" />
       <Holdable slots="RightHand+LeftHand" aimable="false" holdpos="15,-20" aimpos="12,1" handle1="23,-67" handle2="46,-18" aimangle="15" swingamount="3,1" swingspeed="0.18" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnUse" target="Character">
           <Conditional HasStatusTag="!equals clown" />
-          <sound file="%ModDir%/Content/Sounds/Items/Misc/bagpipes1.ogg" type="OnUse" selectionmode="CharacterSpecific" range="600" loop="true" />
-          <sound file="%ModDir%/Content/Sounds/Items/Misc/bagpipes2.ogg" type="OnUse" selectionmode="CharacterSpecific" range="600" loop="true" />
-          <sound file="%ModDir%/Content/Sounds/Items/Misc/bagpipes3.ogg" type="OnUse" selectionmode="CharacterSpecific" range="600" loop="true" />
+          <sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/bagpipes1.ogg" type="OnUse" selectionmode="CharacterSpecific" range="600" loop="true" />
+          <sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/bagpipes2.ogg" type="OnUse" selectionmode="CharacterSpecific" range="600" loop="true" />
+          <sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/bagpipes3.ogg" type="OnUse" selectionmode="CharacterSpecific" range="600" loop="true" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character">
           <Conditional HasStatusTag="clown" />
-          <sound file="%ModDir%/Content/Sounds/Items/Misc/clownbagpipes.ogg" type="OnUse" range="600" loop="true" />
+          <sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/clownbagpipes.ogg" type="OnUse" range="600" loop="true" />
         </StatusEffect>
       </Holdable>
     </Item>
     <Item hideinmenus="true" name="Toilet Flood" identifier="toiletflooditem" category="Hidden" Tags="flood" scale="0.5" impactsoundtag="impact_metal_heavy" hideconditionbar="true">
-      <sprite texture="%ModDir%/Content/Items/Misc/Toilet.png" sourcerect="0,0,1,1" depth="0.556" premultiplyalpha="false" origin="0.5,0.5" />
+      <sprite texture="%ModDir:2954998725%/Content/Items/Misc/Toilet.png" sourcerect="0,0,1,1" depth="0.556" premultiplyalpha="false" origin="0.5,0.5" />
       <Body radius="45" density="40" friction="0.95" />
       <Pump maxflow="60" IsOn="true" flowpercentage="100" currpowerconsumption="0" powerconsumption="0">
         <Sound file="Content/Sounds/Water/FlowSmall.ogg" type="OnActive" range="600" loop="true" />
@@ -46,7 +46,7 @@
       </Holdable>
     </Item>
     <Item name="Toilet" identifier="he-toilet" tags="toilet" description="Relief yourself or get rid of something by flushing it down." type="Controller" width="152" height="240" scale="0.5" noninteractable="false" category="Misc" pickdistance="150" isshootable="true" requireaimtosecondaryuse="true" canflipy="false" GrabWhenSelected="false">
-      <Sprite texture="%ModDir%/Content/Items/Misc/Toilet.png" sourcerect="0,0,182,154" depth="0.556" premultiplyalpha="false" origin="0.46,0.6" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Misc/Toilet.png" sourcerect="0,0,182,154" depth="0.556" premultiplyalpha="false" origin="0.46,0.6" />
       <Price baseprice="580" sold="true">
         <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="1" />
         <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="3" />
@@ -78,7 +78,7 @@
         <StatusEffect type="OnActive" target="Character" duration="0.1" stackable="true" comparison="And">
           <Conditional ontoilet="gte 0.8" />
           <Conditional bladder="gte 1" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/Pee.ogg" loop="true" range="300" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/Pee.ogg" loop="true" range="300" />
         </StatusEffect>
         <StatusEffect type="OnActive" target="Character" comparison="And" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
           <Conditional bladder="eq 5" />
@@ -88,18 +88,18 @@
         <StatusEffect type="OnActive" target="Character" delay="3" interval="7" stackable="false" comparison="And" CheckConditionalAlways="true" disabledeltatime="true">
           <Conditional defecate="gte 25" />
           <Conditional ontoilet="gt 0" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/Fart1.ogg" range="300" selectionmode="random" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/Fart2.ogg" range="300" selectionmode="random" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/Fart3.ogg" range="300" selectionmode="random" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/Fart4.ogg" range="300" selectionmode="random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/Fart1.ogg" range="300" selectionmode="random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/Fart2.ogg" range="300" selectionmode="random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/Fart3.ogg" range="300" selectionmode="random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/Fart4.ogg" range="300" selectionmode="random" />
         </StatusEffect>
         <StatusEffect type="OnActive" target="This" interval="1">
           <Conditional HasStatusTag="eq pooping" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/Poop1.ogg" loop="true" range="300" selectionmode="random" volume="2" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/Poop2.ogg" loop="true" range="300" selectionmode="random" volume="2" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/Poop3.ogg" loop="true" range="300" selectionmode="random" volume="2" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/Poop4.ogg" loop="true" range="300" selectionmode="random" volume="2" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/Poop5.ogg" loop="true" range="300" selectionmode="random" volume="2" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/Poop1.ogg" loop="true" range="300" selectionmode="random" volume="2" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/Poop2.ogg" loop="true" range="300" selectionmode="random" volume="2" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/Poop3.ogg" loop="true" range="300" selectionmode="random" volume="2" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/Poop4.ogg" loop="true" range="300" selectionmode="random" volume="2" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/Poop5.ogg" loop="true" range="300" selectionmode="random" volume="2" />
           <Spawnitem identifier="poop" spawnposition="ThisInventory" spawnifinventoryfull="true" />
         </StatusEffect>
         <StatusEffect type="OnActive" target="Character,This" duration="0.1" tags="pooping" disabledeltatime="true" stackable="false" comparison="And" multiplyafflictionsbymaxvitality="true">
@@ -181,7 +181,7 @@
           <StatusEffect type="OnUse" target="This" duration="10" tags="flushing" setvalue="true" stackable="false" comparison="And">
             <Conditional HasStatusTag="neq flushing" />
             <Conditional attached="true" />
-            <Sound file="%ModDir%/Content/Sounds/Items/Misc/ToiletFlush.ogg" loop="true" range="500" />
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/ToiletFlush.ogg" loop="true" range="500" />
           </StatusEffect>
         </Button>
       </CustomInterface>
@@ -197,8 +197,8 @@
       </Repairable>
     </Item>
     <Item name="Toilet" nameidentifier="he-toilet" descriptionidentifier="he-outposttoilet" identifier="he-outposttoilet" tags="toilet" description="Variant of the toilet to be used on outpost modules that can't be picked up and moved by the player." type="Controller" width="152" height="240" scale="0.5" noninteractable="false" category="Misc" pickdistance="150" isshootable="true" requireaimtosecondaryuse="true" canflipy="false" GrabWhenSelected="false">
-      <InventoryIcon texture="%ModDir%/Content/Items/Misc/ToiletOutpost.png" sourcerect="0,0,182,154" origin="0.5,0.5" />
-      <Sprite texture="%ModDir%/Content/Items/Misc/Toilet.png" sourcerect="0,0,182,154" depth="0.556" premultiplyalpha="false" origin="0.46,0.6" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Misc/ToiletOutpost.png" sourcerect="0,0,182,154" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Misc/Toilet.png" sourcerect="0,0,182,154" depth="0.556" premultiplyalpha="false" origin="0.46,0.6" />
       <Controller UserPos="-20,0" direction="Left" hidehud="false" AllowSelectingWhenSelectedByBot="true" AllowSelectingWhenSelectedByOther="false" canbeselected="true" selectkey="Select" drawuserbehind="false">
         <limbposition limb="Head" position="-5,-20" />
         <limbposition limb="Torso" position="50,48" />
@@ -217,7 +217,7 @@
         <StatusEffect type="OnActive" target="Character" duration="0.1" stackable="true" comparison="And">
           <Conditional ontoilet="gte 0.8" />
           <Conditional bladder="gte 1" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/Pee.ogg" loop="true" range="300" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/Pee.ogg" loop="true" range="300" />
         </StatusEffect>
         <StatusEffect type="OnActive" target="Character" comparison="And" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
           <Conditional bladder="eq 5" />
@@ -227,18 +227,18 @@
         <StatusEffect type="OnActive" target="Character" delay="3" interval="7" stackable="false" comparison="And" CheckConditionalAlways="true" disabledeltatime="true">
           <Conditional defecate="gte 25" />
           <Conditional ontoilet="gt 0" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/Fart1.ogg" range="300" selectionmode="random" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/Fart2.ogg" range="300" selectionmode="random" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/Fart3.ogg" range="300" selectionmode="random" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/Fart4.ogg" range="300" selectionmode="random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/Fart1.ogg" range="300" selectionmode="random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/Fart2.ogg" range="300" selectionmode="random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/Fart3.ogg" range="300" selectionmode="random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/Fart4.ogg" range="300" selectionmode="random" />
         </StatusEffect>
         <StatusEffect type="OnActive" target="This" interval="1">
           <Conditional HasStatusTag="eq pooping" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/Poop1.ogg" loop="true" range="300" selectionmode="random" volume="2" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/Poop2.ogg" loop="true" range="300" selectionmode="random" volume="2" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/Poop3.ogg" loop="true" range="300" selectionmode="random" volume="2" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/Poop4.ogg" loop="true" range="300" selectionmode="random" volume="2" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/Poop5.ogg" loop="true" range="300" selectionmode="random" volume="2" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/Poop1.ogg" loop="true" range="300" selectionmode="random" volume="2" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/Poop2.ogg" loop="true" range="300" selectionmode="random" volume="2" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/Poop3.ogg" loop="true" range="300" selectionmode="random" volume="2" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/Poop4.ogg" loop="true" range="300" selectionmode="random" volume="2" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/Poop5.ogg" loop="true" range="300" selectionmode="random" volume="2" />
           <Spawnitem identifier="poop" spawnposition="ThisInventory" spawnifinventoryfull="true" />
         </StatusEffect>
         <StatusEffect type="OnActive" target="Character,This" duration="0.1" tags="pooping" disabledeltatime="true" stackable="false" comparison="And" multiplyafflictionsbymaxvitality="true">
@@ -312,7 +312,7 @@
           <StatusEffect type="OnUse" target="This" duration="10" tags="flushing" setvalue="true" stackable="false" comparison="And">
             <Conditional HasStatusTag="neq flushing" />
             <Conditional attached="true" />
-            <Sound file="%ModDir%/Content/Sounds/Items/Misc/ToiletFlush.ogg" loop="true" range="500" />
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/ToiletFlush.ogg" loop="true" range="500" />
           </StatusEffect>
         </Button>
       </CustomInterface>
@@ -402,7 +402,7 @@
       <Deconstruct time="1">
         <Item identifier="aluminium" amount="1" outcondition="0.5"/>
       </Deconstruct>
-      <Sprite texture="%ModDir%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="432,488,22,23" depth="0.502" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="432,488,22,23" depth="0.502" origin="0.5,0.5" />
       <Body radius="8" height="15" density="13" friction="1.0" restitution="0.15" angulardamping="1.0" />
       <Throwable canbepicked="true" characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="3.5" aimpos="35,-10" msg="ItemMsgPickUpSelect">
       <StatusEffect type="OnSecondaryUse" target="This" delay="0.01">
@@ -429,7 +429,7 @@
       <Deconstruct time="1">
         <Item identifier="aluminium" amount="1" outcondition="0.5"/>
       </Deconstruct>
-      <Sprite texture="%ModDir%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="455,484,19,27" depth="0.502" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="455,484,19,27" depth="0.502" origin="0.5,0.5" />
       <Body radius="8" height="19" density="13" friction="1.0" restitution="0.15" angulardamping="1.0" />
       <Throwable canbepicked="true" characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="3.5" aimpos="35,-10" msg="ItemMsgPickUpSelect">
       <StatusEffect type="OnSecondaryUse" target="This" delay="0.01">
@@ -456,7 +456,7 @@
       <Deconstruct time="1">
         <Item identifier="aluminium" amount="1" outcondition="0.5"/>
       </Deconstruct>
-      <Sprite texture="%ModDir%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="494,480,17,31" depth="0.502" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="494,480,17,31" depth="0.502" origin="0.5,0.5" />
       <Body radius="8" height="23" density="13" friction="1.0" restitution="0.15" angulardamping="1.0" />
       <Throwable canbepicked="true" characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="3.5" aimpos="35,-10" msg="ItemMsgPickUpSelect">
       <StatusEffect type="OnSecondaryUse" target="This" delay="0.01">
@@ -483,7 +483,7 @@
       <Deconstruct time="1">
         <Item identifier="aluminium" amount="1" outcondition="0.5"/>
       </Deconstruct>
-      <Sprite texture="%ModDir%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="475,486,18,25" depth="0.502" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="475,486,18,25" depth="0.502" origin="0.5,0.5" />
       <Body radius="8" height="17" density="13" friction="1.0" restitution="0.15" angulardamping="1.0" />
       <Throwable canbepicked="true" characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="3.5" aimpos="35,-10" msg="ItemMsgPickUpSelect">
       <StatusEffect type="OnSecondaryUse" target="This" delay="0.01">
@@ -505,7 +505,7 @@
     <!-- TOYS -->
     <!-- Punch Gun made by UberPendragon (https://steamcommunity.com/profiles/76561197995266558) -->
     <Item name="Punch-Gun" identifier="punchgun" description="Literally throwing punches!" category="Weapon" cargocontaineridentifier="metalcrate" tags="mediumitem,weapon,gunsmith,mountableweapon" Scale="0.5" impactsoundtag="impact_metal_light">
-      <Sprite texture="%ModDir%/Content/Items/Misc/punchgun.png" sourcerect="8,65,115,82" depth="0.55" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Misc/punchgun.png" sourcerect="8,65,115,82" depth="0.55" origin="0.5,0.5" />
       <PreferredContainer primary="crewcab" secondary="storagecab"/>
       <Body width="110" height="80" density="25" />
       <Holdable slots="Any,RightHand+LeftHand" controlpose="False" aimpos="60,-20" handle1="-45,-15" handle2="-45,-30" msg="ItemMsgPickUpSelect" />
@@ -523,7 +523,7 @@
       </ItemContainer>
     </Item>
     <Item name="punch" identifier="punch" category="Weapon" maxstacksize="6" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="mediumitem,punch" Scale="0.5" impactsoundtag="impact_metal_light" hideinmenus="false" allowasextracargo="true" noninteractable="true">
-      <Sprite texture="%ModDir%/Content/Items/Misc/punchgun.png" sourcerect="371,70,50,53" depth="0.55" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Misc/punchgun.png" sourcerect="371,70,50,53" depth="0.55" origin="0.5,0.5" />
       <Body width="50" height="50" radius="0" friction="10" density="10" />
       <Projectile characterusable="false" launchimpulse="5.0" maxtargetstohit="1" HitOnlyCharacters="true">
         <Attack structuredamage="1" itemdamage="1" targetforce="40" severlimbsprobability="0">
@@ -542,29 +542,29 @@
         </StatusEffect>
       </Projectile>
       <Rope sourcepullforce="1" targetpullforce="1" projectilepullforce="15" maxlength="1000" snaponcollision="false" SnapWhenNotAimed="false" spritewidth="10" tile="true" origin="0.05,0.5" snapanimduration="1">
-        <Sprite texture="%ModDir%/Content/Items/Misc/punchgun.png" sourcerect="132,65,230,51" depth="0.57" origin="0.5,0.5" />
+        <Sprite texture="%ModDir:2954998725%/Content/Items/Misc/punchgun.png" sourcerect="132,65,230,51" depth="0.57" origin="0.5,0.5" />
         <StatusEffect type="OnUse" target="This" delay="0.5" projectilepullforce="30" setvalue="True"/>
       </Rope>
     </Item>
     <Item name="Whoopee Cushion" identifier="he-whoopeecushion" Category="Hidden" Tags="smallitem,toy" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" scale="0.5" spritecolor="255,255,255,255" requireaimtouse="true" noninteractable="false" hideinmenus="false">
-      <Sprite texture="%ModDir%/Content/Items/Misc/WhoopeeCushion.png" sourcerect="0,0,45,13" depth="0.55" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir%/Content/UI/InventoryIcons.png" sourcerect="80,426,85,85" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Misc/WhoopeeCushion.png" sourcerect="0,0,45,13" depth="0.55" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/UI/InventoryIcons.png" sourcerect="80,426,85,85" origin="0.5,0.5" />
       <Body width="38" radius="6" density="9.5" />
       <Deconstruct time="5" />
       <Throwable handle1="0,0" slots="Any,RightHand,LeftHand" throwforce="4.0" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnUse" target="This" condition="-3" disabledeltatime="true" interval="0.5">
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/Fart1.ogg" range="700" selectionmode="random" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/Fart2.ogg" range="700" selectionmode="random" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/Fart3.ogg" range="700" selectionmode="random" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/Fart4.ogg" range="700" selectionmode="random" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/FartLong1.ogg" range="700" selectionmode="random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/Fart1.ogg" range="700" selectionmode="random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/Fart2.ogg" range="700" selectionmode="random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/Fart3.ogg" range="700" selectionmode="random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/Fart4.ogg" range="700" selectionmode="random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/FartLong1.ogg" range="700" selectionmode="random" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/Fart1.ogg" range="700" selectionmode="random" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/Fart2.ogg" range="700" selectionmode="random" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/Fart3.ogg" range="700" selectionmode="random" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/Fart4.ogg" range="700" selectionmode="random" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/FartLong1.ogg" range="700" selectionmode="random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/Fart1.ogg" range="700" selectionmode="random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/Fart2.ogg" range="700" selectionmode="random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/Fart3.ogg" range="700" selectionmode="random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/Fart4.ogg" range="700" selectionmode="random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/FartLong1.ogg" range="700" selectionmode="random" />
           <Remove />
         </StatusEffect>
       </Throwable>
@@ -577,18 +577,18 @@
               <Conditional mass="lt 200"/>
               <Conditional stun="lte 0"/>
               <Affliction identifier="stun" strength="0.25" />
-              <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/Fart1.ogg" range="700" selectionmode="random" />
-              <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/Fart2.ogg" range="700" selectionmode="random" />
-              <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/Fart3.ogg" range="700" selectionmode="random" />
-              <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/Fart4.ogg" range="700" selectionmode="random" />
-              <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/FartLong1.ogg" range="700" selectionmode="random" />
+              <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/Fart1.ogg" range="700" selectionmode="random" />
+              <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/Fart2.ogg" range="700" selectionmode="random" />
+              <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/Fart3.ogg" range="700" selectionmode="random" />
+              <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/Fart4.ogg" range="700" selectionmode="random" />
+              <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/FartLong1.ogg" range="700" selectionmode="random" />
             </StatusEffect>
           </Explosion>
         </StatusEffect>
       </MotionSensor>
     </Item>
     <!--Item name="USCM Generator" identifier="uscm_generator" tags="generator,mediumitem" category="Electrical,Machine" description="" isshootable="true" scale="0.3" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
-      <Sprite texture="%ModDir%/Content/Items/Containers/Containers.png" depth="0.54" sourcerect="878,381,145,83" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.54" sourcerect="878,381,145,83" origin="0.5,0.5" />
       <Price baseprice="1399" sold="true">
         <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="1" />
         <Price storeidentifier="merchantcity" multiplier="1.4" minavailable="0" maxavailable="3" />
@@ -686,7 +686,7 @@
           <Affliction identifier="he-drankredpaint" amount="62.5" />
           <ReduceAffliction type="thirst" amount="12.5" />
           <ReduceAffliction type="he-dieofthirst" amount="200" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="This,UseTarget" delay="10" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
           <Conditional IsBot="true" />
@@ -711,7 +711,7 @@
           <Conditional IsPlayer="true" />
           <ReduceAffliction type="thirst" amount="1.0" />
           <ReduceAffliction type="he-dieofthirst" amount="20" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="This,UseTarget" delay="10" duration="12.5" comparison="And" multiplyafflictionsbymaxvitality="true">
           <Conditional InWater="false" />
@@ -731,11 +731,11 @@
         <!-- Regular drinking -->
         <StatusEffect type="OnUse" target="This" Condition="-8.0">
           <Conditional InWater="false" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Misc/Spray.ogg" loop="true" range="200" volume="3.0" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/Spray.ogg" loop="true" range="200" volume="3.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" delay="10" comparison="And">
           <Conditional InWater="false" />
@@ -797,7 +797,7 @@
           <Affliction identifier="he-drankgreenpaint" amount="62.5" />
           <ReduceAffliction type="thirst" amount="12.5" />
           <ReduceAffliction type="he-dieofthirst" amount="200" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="This,UseTarget" delay="10" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
           <Conditional IsBot="true" />
@@ -822,7 +822,7 @@
           <Conditional IsPlayer="true" />
           <ReduceAffliction type="thirst" amount="1.0" />
           <ReduceAffliction type="he-dieofthirst" amount="20" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="This,UseTarget" delay="10" duration="12.5" comparison="And" multiplyafflictionsbymaxvitality="true">
           <Conditional InWater="false" />
@@ -842,11 +842,11 @@
         <!-- Regular drinking -->
         <StatusEffect type="OnUse" target="This" Condition="-8.0">
           <Conditional InWater="false" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Misc/Spray.ogg" loop="true" range="200" volume="3.0" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/Spray.ogg" loop="true" range="200" volume="3.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" delay="10" comparison="And">
           <Conditional InWater="false" />
@@ -908,7 +908,7 @@
           <Affliction identifier="he-drankbluepaint" amount="62.5" />
           <ReduceAffliction type="thirst" amount="12.5" />
           <ReduceAffliction type="he-dieofthirst" amount="200" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="This,UseTarget" delay="10" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
           <Conditional IsBot="true" />
@@ -933,7 +933,7 @@
           <Conditional IsPlayer="true" />
           <ReduceAffliction type="thirst" amount="1.0" />
           <ReduceAffliction type="he-dieofthirst" amount="20" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="This,UseTarget" delay="10" duration="12.5" comparison="And" multiplyafflictionsbymaxvitality="true">
           <Conditional InWater="false" />
@@ -953,11 +953,11 @@
         <!-- Regular drinking -->
         <StatusEffect type="OnUse" target="This" Condition="-8.0">
           <Conditional InWater="false" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Misc/Spray.ogg" loop="true" range="200" volume="3.0" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/Spray.ogg" loop="true" range="200" volume="3.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" delay="10" comparison="And">
           <Conditional InWater="false" />
@@ -1019,7 +1019,7 @@
           <Affliction identifier="he-drankblackpaint" amount="62.5" />
           <ReduceAffliction type="thirst" amount="12.5" />
           <ReduceAffliction type="he-dieofthirst" amount="200" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="This,UseTarget" delay="10" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
           <Conditional IsBot="true" />
@@ -1044,7 +1044,7 @@
           <Conditional IsPlayer="true" />
           <ReduceAffliction type="thirst" amount="1.0" />
           <ReduceAffliction type="he-dieofthirst" amount="20" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="This,UseTarget" delay="10" duration="12.5" comparison="And" multiplyafflictionsbymaxvitality="true">
           <Conditional InWater="false" />
@@ -1064,11 +1064,11 @@
         <!-- Regular drinking -->
         <StatusEffect type="OnUse" target="This" Condition="-8.0">
           <Conditional InWater="false" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Misc/Spray.ogg" loop="true" range="200" volume="3.0" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/Spray.ogg" loop="true" range="200" volume="3.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" delay="10" comparison="And">
           <Conditional InWater="false" />
@@ -1130,7 +1130,7 @@
           <Affliction identifier="he-drankwhitepaint" amount="62.5" />
           <ReduceAffliction type="thirst" amount="12.5" />
           <ReduceAffliction type="he-dieofthirst" amount="200" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="This,UseTarget" delay="10" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
           <Conditional IsBot="true" />
@@ -1155,7 +1155,7 @@
           <Conditional IsPlayer="true" />
           <ReduceAffliction type="thirst" amount="1.0" />
           <ReduceAffliction type="he-dieofthirst" amount="20" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="This,UseTarget" delay="10" duration="12.5" comparison="And" multiplyafflictionsbymaxvitality="true">
           <Conditional InWater="false" />
@@ -1175,11 +1175,11 @@
         <!-- Regular drinking -->
         <StatusEffect type="OnUse" target="This" Condition="-8.0">
           <Conditional InWater="false" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Misc/Spray.ogg" loop="true" range="200" volume="3.0" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/Spray.ogg" loop="true" range="200" volume="3.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" delay="10" comparison="And">
           <Conditional InWater="false" />

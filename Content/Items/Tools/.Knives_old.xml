@@ -14,8 +14,8 @@
       <RequiredItem identifier="plastic" amount="1" />
       <RequiredItem identifier="steel" amount="1"/>
       </Fabricate>
-      <InventoryIcon texture="%ModDir%/Content/Items/Fabricators/FabricatorsAndContainers.png" sourcerect="0,998,75,26" origin="0.5,0.5" />
-      <Sprite texture="%ModDir%/Content/Items/Fabricators/FabricatorsAndContainers.png" sourcerect="0,998,75,26" depth="0.55" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Fabricators/FabricatorsAndContainers.png" sourcerect="0,998,75,26" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/FabricatorsAndContainers.png" sourcerect="0,998,75,26" depth="0.55" origin="0.5,0.5" />
       <Body width="65" height="15" density="25" />
       <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="50,0" handle1="-16,5" holdangle="30" reload="0.75" range="50" combatPriority="25" msg="ItemMsgPickUpSelect" HitOnlyCharacters="true">
       <RequiredSkill identifier="butchery" level="100" />
@@ -285,11 +285,11 @@
       <RequiredItem identifier="plastic" amount="1" />
       <RequiredItem identifier="steel" amount="1"/>
       </Fabricate>
-      <InventoryIcon texture="%ModDir%/Content/Items/Fabricators/FabricatorsAndContainers.png" sourcerect="0,998,75,26" origin="0.5,0.5" />
-      <Sprite texture="%ModDir%/Content/Items/Fabricators/FabricatorsAndContainers.png" sourcerect="0,998,75,26" depth="0.55" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Fabricators/FabricatorsAndContainers.png" sourcerect="0,998,75,26" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/FabricatorsAndContainers.png" sourcerect="0,998,75,26" depth="0.55" origin="0.5,0.5" />
       <Body width="65" height="15" density="25" />
       <Wearable slots="Bag" msg="ItemMsgEquipSelect" canbeselected="false" canbepicked="true" pickkey="Select">
-      <sprite name="Butcher's Saw" texture="%ModDir%/Content/Items/Fabricators/FabricatorsAndContainers.png" sourcerect="256,102,112,54" limb="Torso" inherittexturescale="true" origin="0.5,-0.2" />
+      <sprite name="Butcher's Saw" texture="%ModDir:2954998725%/Content/Items/Fabricators/FabricatorsAndContainers.png" sourcerect="256,102,112,54" limb="Torso" inherittexturescale="true" origin="0.5,-0.2" />
       </Wearable>
       <RepairTool slots="RightHand+LeftHand" handle1="-16,5" holdangle="30" reload="0.75" range="50" combatPriority="25" msg="ItemMsgPickUpSelect" HitOnlyCharacters="true">
       <RequiredSkill identifier="butchery" level="100" />

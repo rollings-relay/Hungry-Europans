@@ -6,7 +6,7 @@
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
-      <Sprite texture="%ModDir%/Content/Items/Food/FoodAndMeat.png" sourcerect="431,309,81,34" depth="0.6" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="431,309,81,34" depth="0.6" origin="0.5,0.5" />
       <Body width="81" radius="17" density="12" />
       <Price baseprice="179" minavailable="4" maxavailable="16" mincondition="0.9" maxcondition="1.0" usecondition="false" sold="false">
         <Price storeidentifier="merchantoutpost"/>
@@ -36,7 +36,8 @@
           <Affliction identifier="deliriuminepoisoning" probability="0.001" amount="8" />
           <Affliction identifier="nausea" amount="4" />
           <Affliction identifier="he-hungryforhumanmeat" amount="0.01" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="true" range="200" volume="5.0" />
+          <Affliction identifier="spill" amount="1000" probability="0.0005" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character">
           <Conditional hunger="gt 1" />
@@ -52,7 +53,7 @@
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
-      <Sprite texture="%ModDir%/Content/Items/Food/FoodAndMeat.png" sourcerect="354,151,158,82" depth="0.6" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="354,151,158,82" depth="0.6" origin="0.5,0.5" />
       <Body width="158" radius="41" density="12" />
       <Price baseprice="299" minavailable="4" maxavailable="16" mincondition="0.9" maxcondition="1.0" usecondition="false" sold="false">
         <Price storeidentifier="merchantoutpost"/>
@@ -82,7 +83,8 @@
           <Affliction identifier="deliriuminepoisoning" probability="0.001" amount="8" />
           <Affliction identifier="nausea" amount="4" />
           <Affliction identifier="he-hungryforhumanmeat" amount="0.3" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="true" range="200" volume="5.0" />
+          <Affliction identifier="spill" amount="1000" probability="0.0005" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character">
           <Conditional hunger="gt 4" />
@@ -95,7 +97,7 @@
       <AiTarget sightrange="1000" static="True" />
     </Item>
     <Item name="Raw Hammerhead Meat" identifier="he-rawhammerheadmeat" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,rawmeatpiece,ingredient,canspoil,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
-      <Sprite texture="%ModDir%/Content/Items/Food/FoodAndMeat.png" sourcerect="327,354,50,25" depth="0.6" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="327,354,50,25" depth="0.6" origin="0.5,0.5" />
       <Body width="50" radius="12" density="12" />
       <Price baseprice="159" minavailable="4" maxavailable="16" mincondition="0.9" maxcondition="1.0" usecondition="false" sold="false">
         <Price storeidentifier="merchantoutpost"/>
@@ -129,7 +131,8 @@
           <Affliction identifier="deliriuminepoisoning" probability="0.001" amount="8" />
           <Affliction identifier="nausea" amount="4" />
           <Affliction identifier="he-hungryforhumanmeat" amount="0.075" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="true" range="200" volume="5.0" />
+          <Affliction identifier="spill" amount="1000" probability="0.0005" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character">
           <Conditional hunger="gt 1" />
@@ -145,7 +148,7 @@
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
-      <Sprite texture="%ModDir%/Content/Items/Food/FoodAndMeat.png" sourcerect="275,459,35,17" depth="0.6" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="275,459,35,17" depth="0.6" origin="0.5,0.5" />
       <Fabricate suitablefabricators="cuttingboard" requiredtime="25" requiresrecipe="false" amount="2">
         <RequiredSkill identifier="butchery" level="45" />
         <RequiredItem identifier="he-rawhammerheadmeat" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
@@ -180,7 +183,8 @@
           <Affliction identifier="deliriuminepoisoning" probability="0.001" amount="8" />
           <Affliction identifier="nausea" amount="4" />
           <Affliction identifier="he-hungryforhumanmeat" amount="0.037" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="true" range="200" volume="5.0" />
+          <Affliction identifier="spill" amount="1000" probability="0.0005" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character">
           <Conditional hunger="gt 0.5" />
@@ -196,9 +200,9 @@
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
-      <Sprite texture="%ModDir%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,444,67,14" depth="0.6" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,444,67,14" origin="0.5,0.5" />
-      <ContainedSprite allowedcontainertags="table" texture="%ModDir%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,444,67,14" depth="0.525" origin="0.5,0.3"  />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,444,67,14" depth="0.6" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,444,67,14" origin="0.5,0.5" />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,444,67,14" depth="0.525" origin="0.5,0.3"  />
       <Fabricate suitablefabricators="cuttingboard" requiredtime="25" requiresrecipe="false" amount="3">
         <RequiredSkill identifier="butchery" level="45" />
         <RequiredItem identifier="he-rawhammerheadmeat" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
@@ -234,7 +238,8 @@
           <Affliction identifier="hallucinating" amount="6" />
           <Affliction identifier="nausea" amount="3" />
           <Affliction identifier="he-hungryforhumanmeat" amount="0.037" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="true" range="200" volume="5.0" />
+          <Affliction identifier="spill" amount="1000" probability="0.0005" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character">
           <Conditional hunger="gt 0.5" />
@@ -247,7 +252,7 @@
       <AiTarget sightrange="1000" static="True" />
     </Item>
     <Item name="Raw Hammerhead Spareribs" identifier="he-rawhammerheadspareribs" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,canspoil,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
-      <Sprite texture="%ModDir%/Content/Items/Food/FoodAndMeat.png" sourcerect="263,339,61,40" depth="0.6" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="263,339,61,40" depth="0.6" origin="0.5,0.5" />
       <Body width="61" radius="18" density="12" />
       <Price baseprice="159" minavailable="4" maxavailable="16" mincondition="0.9" maxcondition="1.0" usecondition="false" sold="false">
         <Price storeidentifier="merchantoutpost"/>
@@ -281,7 +286,8 @@
           <Affliction identifier="deliriuminepoisoning" probability="0.001" amount="8" />
           <Affliction identifier="nausea" amount="4" />
           <Affliction identifier="he-hungryforhumanmeat" amount="0.2" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="true" range="200" volume="5.0" />
+          <Affliction identifier="spill" amount="1000" probability="0.0005" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character">
           <Conditional hunger="gt 2.5" />
@@ -294,9 +300,9 @@
       <AiTarget sightrange="1000" static="True" />
     </Item>
     <Item name="Raw Hammerhead Roast" identifier="he-rawhammerheadroast" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,canspoil,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
-      <Sprite texture="%ModDir%/Content/Items/Food/FoodAndMeat.png" sourcerect="240,380,93,33" depth="0.6" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir%/Content/Items/Food/FoodAndMeat.png" sourcerect="240,380,93,33" origin="0.5,0.5" />
-      <ContainedSprite allowedcontainertags="table" texture="%ModDir%/Content/Items/Food/FoodAndMeat.png" sourcerect="240,380,93,33" depth="0.525" origin="0.5,0.7"  />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="240,380,93,33" depth="0.6" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="240,380,93,33" origin="0.5,0.5" />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="240,380,93,33" depth="0.525" origin="0.5,0.7"  />
       <Body width="93" radius="16" density="12" />
       <Price baseprice="305" minavailable="4" maxavailable="16" mincondition="0.9" maxcondition="1.0" usecondition="false" sold="false">
         <Price storeidentifier="merchantoutpost"/>
@@ -330,7 +336,8 @@
           <Affliction identifier="deliriuminepoisoning" probability="0.001" amount="8" />
           <Affliction identifier="nausea" amount="4" />
           <Affliction identifier="he-hungryforhumanmeat" amount="0.3" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="true" range="200" volume="5.0" />
+          <Affliction identifier="spill" amount="1000" probability="0.0005" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character">
           <Conditional hunger="gt 3.5" />
@@ -346,8 +353,8 @@
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.0" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.0" />
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
-      <Sprite texture="%ModDir%/Content/Items/Food/FoodAndMeat.png" sourcerect="176,437,48,29" depth="0.6" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir%/Content/UI/InventoryIcons.png" sourcerect="109,0,81,54" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="176,437,48,29" depth="0.6" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/UI/InventoryIcons.png" sourcerect="109,0,81,54" origin="0.5,0.5" />
       <Deconstruct time="1" />
       <Fabricate suitablefabricators="cuttingboard" requiredtime="30" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="butchery" level="40" />
@@ -382,7 +389,8 @@
           <Affliction identifier="deliriuminepoisoning" amount="1.2" probability="0.001" />
           <Affliction identifier="nausea" amount="1.2" />
           <Affliction identifier="he-hungryforhumanmeat" amount="0.037" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="true" range="200" volume="5.0" />
+          <Affliction identifier="spill" amount="1000" probability="0.0005" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character">
           <Conditional hunger="gt 1.5" />

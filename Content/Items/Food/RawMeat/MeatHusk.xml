@@ -6,7 +6,7 @@
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
-      <Sprite texture="%ModDir%/Content/Items/Food/FoodAndMeat.png" sourcerect="178,1,164,49" depth="0.6" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="178,1,164,49" depth="0.6" origin="0.5,0.5" />
       <Body width="140" radius="24" density="15" />
       <Deconstruct time="10" />
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
@@ -24,7 +24,8 @@
         <StatusEffect type="OnUse" target="Character">
           <Affliction identifier="huskinfection" amount="0.75" />
           <Affliction identifier="he-stuffed" amount="4" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="true" range="200" volume="5.0" />
+          <Affliction identifier="spill" amount="1000" probability="0.0005" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character">
           <Conditional hunger="gt 2" />
@@ -40,7 +41,7 @@
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
-      <Sprite texture="%ModDir%/Content/Items/Food/FoodAndMeat.png" sourcerect="244,51,43,31" depth="0.6" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="244,51,43,31" depth="0.6" origin="0.5,0.5" />
       <Fabricate suitablefabricators="cuttingboard" requiredtime="20" requiresrecipe="true" amount="4">
         <RequiredSkill identifier="butchery" level="60" />
         <RequiredItem identifier="he-huskmeatchunk" Amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
@@ -62,7 +63,8 @@
         <StatusEffect type="OnUse" target="Character">
           <Affliction identifier="huskinfection" amount="0.5" />
           <Affliction identifier="he-stuffed" amount="1" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="true" range="200" volume="5.0" />
+          <Affliction identifier="spill" amount="1000" probability="0.0005" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character">
           <Conditional hunger="gt 0.5" />
@@ -78,7 +80,7 @@
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
-      <Sprite texture="%ModDir%/Content/Items/Food/FoodAndMeat.png" sourcerect="275,459,35,17" depth="0.6" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="275,459,35,17" depth="0.6" origin="0.5,0.5" />
       <Fabricate suitablefabricators="cuttingboard" requiredtime="25" requiresrecipe="true" amount="2">
         <RequiredSkill identifier="butchery" level="50" />
         <RequiredItem identifier="he-rawhuskmeat" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
@@ -101,7 +103,8 @@
         <StatusEffect type="OnUse" target="Character">
           <Affliction identifier="huskinfection" amount="0.25" />
           <Affliction identifier="he-stuffed" amount="0.5" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="true" range="200" volume="5.0" />
+          <Affliction identifier="spill" amount="1000" probability="0.0005" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character">
           <Conditional hunger="gt 0.25" />
@@ -117,9 +120,9 @@
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
-      <Sprite texture="%ModDir%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,444,67,14" depth="0.6" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,444,67,14" origin="0.5,0.5" />
-      <ContainedSprite allowedcontainertags="table" texture="%ModDir%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,444,67,14" depth="0.525" origin="0.5,0.3"  />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,444,67,14" depth="0.6" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,444,67,14" origin="0.5,0.5" />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,444,67,14" depth="0.525" origin="0.5,0.3"  />
       <Fabricate suitablefabricators="cuttingboard" requiredtime="25" requiresrecipe="true" amount="3">
         <RequiredSkill identifier="butchery" level="50" />
         <RequiredItem identifier="he-rawhuskmeat" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
@@ -145,7 +148,8 @@
           <Affliction identifier="deliriuminepoisoning" probability="0.001" amount="5" />
           <Affliction identifier="hallucinating" amount="6" />
           <Affliction identifier="nausea" amount="3" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="true" range="200" volume="5.0" />
+          <Affliction identifier="spill" amount="1000" probability="0.0005" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character">
           <Conditional hunger="gt 0.25" />
@@ -161,8 +165,8 @@
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.0" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.0" />
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
-      <Sprite texture="%ModDir%/Content/Items/Food/FoodAndMeat.png" sourcerect="176,437,48,29" depth="0.6" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir%/Content/UI/InventoryIcons.png" sourcerect="109,0,81,54" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="176,437,48,29" depth="0.6" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/UI/InventoryIcons.png" sourcerect="109,0,81,54" origin="0.5,0.5" />
       <Deconstruct time="1" />
       <Fabricate suitablefabricators="cuttingboard" requiredtime="30" requiresrecipe="true" amount="1">
         <RequiredSkill identifier="butchery" level="45" />
@@ -196,7 +200,8 @@
         <StatusEffect type="OnUse" target="Character">
           <Affliction identifier="deliriuminepoisoning" amount="1.2" probability="0.001" />
           <Affliction identifier="nausea" amount="1.2" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="true" range="200" volume="5.0" />
+          <Affliction identifier="spill" amount="1000" probability="0.0005" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character">
           <Conditional hunger="gt 1.5" />

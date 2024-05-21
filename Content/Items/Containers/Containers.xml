@@ -22,26 +22,26 @@
           <Price storeidentifier="merchantmine" multiplier="1.25" minavailable="8" />
           <Price storeidentifier="merchantengineering" minavailable="4" multiplier="0.9" />
         </Price>
-        <InventoryIcon texture="%ModDir%/Content/Items/Containers/Containers.png" sourcerect="915,656,108,79" origin="0.5,0.5" />
-        <Sprite texture="%ModDir%/Content/Items/Containers/Containers.png" sourcerect="915,656,108,79" depth="0.6" />
+        <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="915,656,108,79" origin="0.5,0.5" />
+        <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="915,656,108,79" depth="0.6" />
         <Body width="108" height="79" density="15" />
         <Wearable slots="Bag" msg="ItemMsgEquipSelect" canbeselected="false" canbepicked="true" pickkey="Select">
-          <sprite name="ToolBeltLunchBox" texture="%ModDir%/Content/Items/Containers/Containers.png" sourcerect="915,656,108,79" limb="Torso" inherittexturescale="true" origin="0.6,-0.2" />
+          <sprite name="ToolBeltLunchBox" texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="915,656,108,79" limb="Torso" inherittexturescale="true" origin="0.6,-0.2" />
         </Wearable>
         <Holdable canbepicked="true" slots="RightHand+LeftHand" holdpos="0,-70" handle1="-5,0" handle2="10,-20" holdangle="0" msg="ItemMsgPickUpUse" canbeselected="false" pickkey="Use" allowswappingwhenpicked="false" />
         <ItemContainer capacity="6" depth="0.5" slotsperrow="3">
-          <SlotIcon slotindex="6" texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="152,0,85,85" origin="0.5,0.5" />
-          <SlotIcon slotindex="7" texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="152,0,85,85" origin="0.5,0.5" />
-          <SlotIcon slotindex="8" texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="152,0,85,85" origin="0.5,0.5" />
-          <SlotIcon slotindex="9" texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="152,0,85,85" origin="0.5,0.5" />
-          <SlotIcon slotindex="10" texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="152,0,85,85" origin="0.5,0.5" />
-          <SlotIcon slotindex="11" texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="152,0,85,85" origin="0.5,0.5" />
-          <SlotIcon slotindex="12" texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="152,0,85,85" origin="0.5,0.5" />
-          <SlotIcon slotindex="13" texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="152,0,85,85" origin="0.5,0.5" />
-          <SlotIcon slotindex="14" texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="152,0,85,85" origin="0.5,0.5" />
-          <SlotIcon slotindex="15" texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="152,0,85,85" origin="0.5,0.5" />
-          <SlotIcon slotindex="16" texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="152,0,85,85" origin="0.5,0.5" />
-          <SlotIcon slotindex="17" texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="152,0,85,85" origin="0.5,0.5" />
+          <SlotIcon slotindex="6" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="152,0,85,85" origin="0.5,0.5" />
+          <SlotIcon slotindex="7" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="152,0,85,85" origin="0.5,0.5" />
+          <SlotIcon slotindex="8" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="152,0,85,85" origin="0.5,0.5" />
+          <SlotIcon slotindex="9" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="152,0,85,85" origin="0.5,0.5" />
+          <SlotIcon slotindex="10" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="152,0,85,85" origin="0.5,0.5" />
+          <SlotIcon slotindex="11" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="152,0,85,85" origin="0.5,0.5" />
+          <SlotIcon slotindex="12" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="152,0,85,85" origin="0.5,0.5" />
+          <SlotIcon slotindex="13" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="152,0,85,85" origin="0.5,0.5" />
+          <SlotIcon slotindex="14" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="152,0,85,85" origin="0.5,0.5" />
+          <SlotIcon slotindex="15" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="152,0,85,85" origin="0.5,0.5" />
+          <SlotIcon slotindex="16" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="152,0,85,85" origin="0.5,0.5" />
+          <SlotIcon slotindex="17" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="152,0,85,85" origin="0.5,0.5" />
           <Containable items="smallitem" excludeditems="toolbelt,toolbox,bandolier,he-toolbeltlunch" />
           <SubContainer capacity="12" depth="0.5">
             <Containable items="fooditem,drinkitem,bottle,emptybottle,emptyjar" />
@@ -66,8 +66,8 @@
           <Price storeidentifier="merchantmilitary" multiplier="1.25" minavailable="5" />
           <Price storeidentifier="merchantmine" multiplier="1.25" minavailable="4" />
         </Price>
-        <InventoryIcon texture="%ModDir%/Content/Items/Containers/Containers.png" sourcerect="916,808,81,64" origin="0.5,0.5" />
-        <Sprite texture="%ModDir%/Content/Items/Containers/Containers.png" sourcerect="915,740,84,67" origin="0.5,0.5" depth="0.6" canflipx="false" />
+        <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="916,808,81,64" origin="0.5,0.5" />
+        <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="915,740,84,67" origin="0.5,0.5" depth="0.6" canflipx="false" />
         <Body width="84" height="67" density="12" />
         <MeleeWeapon slots="RightHand,LeftHand" controlpose="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
           <Attack structuredamage="0" itemdamage="1" targetimpulse="2">
@@ -81,7 +81,7 @@
           </Attack>
         </MeleeWeapon>
         <ItemContainer capacity="12" keepopenwhenequipped="true" movableframe="true">
-          <SlotIcon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="152,0,85,85" origin="0.5,0.5" />
+          <SlotIcon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="152,0,85,85" origin="0.5,0.5" />
           <Containable items="fooditem,drinkitem,bottle,emptybottle,emptyjar" />
         </ItemContainer>
         <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
@@ -89,7 +89,7 @@
       </Item>
       <Item name="Cooler Crate" identifier="he-coolercrate" category="Equipment" subcategory="Container" description="Used to prevent meat from spoiling. Needs a battery." tags="crate,kitchen,cooler,refrigeratedcontainer" scale="0.5" linkable="true" pickdistance="150" showcontentsintooltip="true" canflipx="false" impactsoundtag="impact_metal_heavy">
         <Deconstruct time="0.5" />
-        <Sprite texture="%ModDir%/Content/Items/Containers/Containers.png" depth="0.54" sourcerect="878,381,145,83" origin="0.5,0.5" />
+        <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.54" sourcerect="878,381,145,83" origin="0.5,0.5" />
         <Price baseprice="10" buyingpricemodifier="20.5" minleveldifficulty="0" sold="True">
           <Price storeidentifier="merchantoutpost" minavailable="0" maxavailable="2" />
           <Price storeidentifier="merchantcity" minavailable="1" maxavailable="4" />
@@ -104,9 +104,9 @@
         <Body width="145" height="76" density="25" />
         <Holdable canbepicked="true" slots="RightHand,LeftHand" holdpos="0,-80" handle1="0,0" handle2="0,0" aimable="false" msg="ItemMsgPickUpSelect" />
         <LightComponent range="0.0" lightcolor="30,255,0,255" powerconsumption="0.5" IsOn="false" allowingameediting="false" offset="0,0">
-          <sprite texture="%ModDir%/Content/Items/Containers/Containers.png" sourcerect="1004,464,19,23" alpha="1.0" origin="-1.3,0.46" />
+          <sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="1004,464,19,23" alpha="1.0" origin="-1.3,0.46" />
           <LightTexture texture="Content/Lights/pointlight_falloff.png" origin="0.5, 0.5" size="1.0,1.0" />
-          <poweronsound file="%ModDir%/Content/Sounds/Items/Containers/CoolerPowerOn.ogg" range="500" loop="false" volume="8" />
+          <poweronsound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/CoolerPowerOn.ogg" range="500" loop="false" volume="8" />
           <StatusEffect type="OnActive" target="Contained" Condition="-0.05" interval="1" disabledeltatime="true" targetslot="0">
             <RequiredItem items="mobilebattery" targetslot="0" type="Contained" />
           </StatusEffect>
@@ -115,7 +115,7 @@
           </StatusEffect>
           <!-- Tag the container with "activecooling" when powered to allow or prevent StatusEffects checking for "activecooling" on contained items -->
           <StatusEffect type="OnActive" target="This" disabledeltatime="false" comparison="And" tags="activecooling" duration="0.1">
-            <sound file="%ModDir%/Content/Sounds/Items/Containers/Cooler.ogg" type="OnActive" range="300" loop="true" volume="3" />
+            <sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/Cooler.ogg" type="OnActive" range="300" loop="true" volume="3" />
           </StatusEffect>
         </LightComponent>
         <ItemContainer capacity="0" canbeselected="false" hideitems="true" containedstateindicatorstyle="battery" containedstateindicatorslot="0" keepopenwhenequipped="false" movableframe="true">
@@ -143,7 +143,7 @@
       </Item>
     <!-- Attachable Liquor Crate Version
     <Item name="Liquor Crate" identifier="he-liquorcrate" tags="container,kitchen,liquorcrate" linkable="true" pickdistance="150" waterproof="false" scale="0.5" isshootable="true">
-      <Sprite texture="%ModDir%/Content/Items/Containers/Containers.png" depth="0.784" sourcerect="786,381,90,69" canflipx="false" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.784" sourcerect="786,381,90,69" canflipx="false" origin="0.5,0.5" />
       <Body width="90" height="69" density="14" />
       <Deconstruct time="5">
         <Item identifier="plastic" amount="2"/>
@@ -161,8 +161,8 @@
     </Item>
     -->
       <Item name="Jar Crate" category="Equipment" subcategory="Container" description="A crate to store and carry your jars. Bottles don't fit." identifier="he-jarcrate" tags="crate,container,kitchen,jarcrate" linkable="true" pickdistance="150" waterproof="false" impacttolerance="0.1" scale="0.5" canflipx="false" isshootable="true" impactsoundtag="impact_plastic_crate">
-        <Sprite texture="%ModDir%/Content/Items/Containers/Containers.png" depth="0.684" sourcerect="933,602,90,53" canflipx="false" origin="0.5,0.43" />
-        <ContainedSprite allowedcontainertags="refillstation" texture="%ModDir%/Content/Items/Food/FoodAndDrinks.png" sourcerect="0,0,1,1" depth="0.55" origin="0.5,0.5" />
+        <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.684" sourcerect="933,602,90,53" canflipx="false" origin="0.5,0.43" />
+        <ContainedSprite allowedcontainertags="refillstation" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndDrinks.png" sourcerect="0,0,1,1" depth="0.55" origin="0.5,0.5" />
         <PreferredContainer primary="crateshelf" />
         <Body width="90" height="53" density="14" />
         <Deconstruct time="5">
@@ -176,16 +176,16 @@
           <Containable items="jar,emptyjar" />
           <StatusEffect type="OnImpact" target="this">
             <RequiredItem items="jar,emptyjar" type="Contained" />
-            <Sound file="%ModDir%/Content/Sounds/Impact/LiquorCrateImpact1.ogg" volume="1" range="450" loop="false" selectionmode="random" />
-            <Sound file="%ModDir%/Content/Sounds/Impact/LiquorCrateImpact2.ogg" volume="1" range="450" loop="false" selectionmode="random" />
-            <Sound file="%ModDir%/Content/Sounds/Impact/LiquorCrateImpact2.ogg" volume="1" range="450" loop="false" selectionmode="random" />
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Impact/LiquorCrateImpact1.ogg" volume="1" range="450" loop="false" selectionmode="random" />
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Impact/LiquorCrateImpact2.ogg" volume="1" range="450" loop="false" selectionmode="random" />
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Impact/LiquorCrateImpact2.ogg" volume="1" range="450" loop="false" selectionmode="random" />
           </StatusEffect>
         </ItemContainer>
         <Holdable canbepicked="true" slots="RightHand+LeftHand" holdpos="0,-50" handle1="0,14" handle2="-1,3" holdangle="45" aimpos="65,-10" attachable="false" aimable="false"></Holdable>
       </Item>
       <Item name="Liquor Crate" category="Equipment" subcategory="Container" description="A crate to store and carry your bottles. Jars don't fit." identifier="he-liquorcrate" tags="crate,container,kitchen,liquorcrate" linkable="true" pickdistance="150" waterproof="false" impacttolerance="0.1" scale="0.5" canflipx="false" isshootable="true" impactsoundtag="impact_plastic_crate">
-        <Sprite texture="%ModDir%/Content/Items/Containers/Containers.png" depth="0.684" sourcerect="933,548,90,53" canflipx="false" origin="0.5,0.43" />
-        <ContainedSprite allowedcontainertags="refillstation" texture="%ModDir%/Content/Items/Food/FoodAndDrinks.png" sourcerect="0,0,1,1" depth="0.55" origin="0.5,0.5" />
+        <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.684" sourcerect="933,548,90,53" canflipx="false" origin="0.5,0.43" />
+        <ContainedSprite allowedcontainertags="refillstation" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndDrinks.png" sourcerect="0,0,1,1" depth="0.55" origin="0.5,0.5" />
         <PreferredContainer primary="crateshelf" />
         <Body width="90" height="53" density="14" />
         <Deconstruct time="5">
@@ -199,16 +199,16 @@
           <Containable items="bottle,emptybottle" />
           <StatusEffect type="OnImpact" target="this">
             <RequiredItem items="bottle,emptybottle" type="Contained" />
-            <Sound file="%ModDir%/Content/Sounds/Impact/LiquorCrateImpact1.ogg" volume="1" range="450" loop="false" selectionmode="random" />
-            <Sound file="%ModDir%/Content/Sounds/Impact/LiquorCrateImpact2.ogg" volume="1" range="450" loop="false" selectionmode="random" />
-            <Sound file="%ModDir%/Content/Sounds/Impact/LiquorCrateImpact2.ogg" volume="1" range="450" loop="false" selectionmode="random" />
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Impact/LiquorCrateImpact1.ogg" volume="1" range="450" loop="false" selectionmode="random" />
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Impact/LiquorCrateImpact2.ogg" volume="1" range="450" loop="false" selectionmode="random" />
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Impact/LiquorCrateImpact2.ogg" volume="1" range="450" loop="false" selectionmode="random" />
           </StatusEffect>
         </ItemContainer>
         <Holdable canbepicked="true" slots="RightHand+LeftHand" holdpos="0,-50" handle1="0,14" handle2="-1,3" holdangle="45" aimpos="65,-10" attachable="false" aimable="false"></Holdable>
       </Item>
       <Item name="Couwola Cola Crate" category="Equipment" subcategory="Container" description="A crate from Couwola Cola to store and carry your bottles. Jars don't fit." identifier="he-colacrate" tags="crate,container,kitchen,liquorcrate" linkable="true" pickdistance="150" waterproof="false" impacttolerance="0.1" scale="0.5" canflipx="false" isshootable="true" impactsoundtag="impact_plastic_crate">
-        <Sprite texture="%ModDir%/Content/Items/Containers/Containers.png" depth="0.684" sourcerect="933,494,90,53" canflipx="false" origin="0.5,0.43" />
-        <ContainedSprite allowedcontainertags="refillstation" texture="%ModDir%/Content/Items/Food/FoodAndDrinks.png" sourcerect="0,0,1,1" depth="0.55" origin="0.5,0.5" />
+        <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.684" sourcerect="933,494,90,53" canflipx="false" origin="0.5,0.43" />
+        <ContainedSprite allowedcontainertags="refillstation" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndDrinks.png" sourcerect="0,0,1,1" depth="0.55" origin="0.5,0.5" />
         <PreferredContainer primary="crateshelf" />
         <Body width="90" height="53" density="14" />
         <Deconstruct time="5">
@@ -218,15 +218,15 @@
           <Containable items="bottle,emptybottle" />
           <StatusEffect type="OnImpact" target="this">
             <RequiredItem items="bottle,emptybottle" type="Contained" />
-            <Sound file="%ModDir%/Content/Sounds/Impact/LiquorCrateImpact1.ogg" volume="1" range="450" loop="false" selectionmode="random" />
-            <Sound file="%ModDir%/Content/Sounds/Impact/LiquorCrateImpact2.ogg" volume="1" range="450" loop="false" selectionmode="random" />
-            <Sound file="%ModDir%/Content/Sounds/Impact/LiquorCrateImpact2.ogg" volume="1" range="450" loop="false" selectionmode="random" />
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Impact/LiquorCrateImpact1.ogg" volume="1" range="450" loop="false" selectionmode="random" />
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Impact/LiquorCrateImpact2.ogg" volume="1" range="450" loop="false" selectionmode="random" />
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Impact/LiquorCrateImpact2.ogg" volume="1" range="450" loop="false" selectionmode="random" />
           </StatusEffect>
         </ItemContainer>
         <Holdable canbepicked="true" slots="RightHand+LeftHand" holdpos="0,-50" handle1="0,14" handle2="-1,3" holdangle="45" aimpos="65,-10" attachable="false" aimable="false"></Holdable>
       </Item>
       <Item name="Liquor Crate Shelf" category="Misc" subcategory="Container" description="A shelf to store up to 4 of your liquor and jar crates." identifier="he-liquorcrateshelf" tags="container,crateshelf" linkable="true" allowedlinks="kitchen,kitchenfabricator" canflipx="false" pickdistance="150" scale="0.5" isshootable="true" requireaimtouse="true">
-        <Sprite texture="%ModDir%/Content/Items/Containers/Containers.png" depth="0.799" sourcerect="621,1,128,364" origin="0.5,0.47" />
+        <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.799" sourcerect="621,1,128,364" origin="0.5,0.47" />
         <Body width="128" height="364" density="18" />
         <Deconstruct time="5">
           <Item identifier="steel" amount="3" />
@@ -249,7 +249,7 @@
         </ItemContainer>
       </Item>
       <Item name="Liquor Crate Shelf (Small)" category="Misc" subcategory="Container" description="A small shelf to store up to 2 of your liquor and jar crates." identifier="he-liquorcrateshelfsmall" tags="container,crateshelf" linkable="true" allowedlinks="kitchen,kitchenfabricator" canflipx="false" pickdistance="150" scale="0.5" isshootable="true" requireaimtouse="true">
-        <Sprite texture="%ModDir%/Content/Items/Containers/Containers.png" depth="0.799" sourcerect="621,1,128,181" origin="0.5,0.465" />
+        <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.799" sourcerect="621,1,128,181" origin="0.5,0.465" />
         <Body width="128" height="181" density="14" />
         <Deconstruct time="5">
           <Item identifier="steel" amount="1" />
@@ -272,8 +272,8 @@
         </ItemContainer>
       </Item>
       <Item name="Liquor Display Shelf" category="Misc" subcategory="Container" description="A shelf to display and store your bottles. Jars don't fit." identifier="he-liquordisplayshelf" tags="liquorshelf" linkable="true" pickdistance="150" waterproof="false" scale="0.5" canflipx="false" isshootable="true">
-        <Sprite texture="%ModDir%/Content/Items/Containers/Containers.png" depth="0.797" sourcerect="0,506,225,180" canflipx="false" origin="0.5,0.5" />
-        <DecorativeSprite texture="%ModDir%/Content/Items/Containers/Containers.png" depth="0.799" sourcerect="226,506,225,180" canflipx="false" origin="0.5,0.5" />
+        <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.797" sourcerect="0,506,225,180" canflipx="false" origin="0.5,0.5" />
+        <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.799" sourcerect="226,506,225,180" canflipx="false" origin="0.5,0.5" />
         <Body width="225" height="180" density="18" />
         <Deconstruct time="5">
           <Item identifier="he-glassfragments" amount="2" />
@@ -288,8 +288,8 @@
           <Containable items="bottle,emptybottle" />
           <GuiFrame relativesize="0.3,0.2" anchor="BottomCenter" pivot="BottomCenter" relativeoffset="0,0.4" style="ItemUI" />
           <StatusEffect type="OnPicked" target="this">
-            <Sound file="%ModDir%/Content/Sounds/Items/Containers/cabinet_interact1.ogg" volume="2" range="400" selectionmode="random" />
-            <Sound file="%ModDir%/Content/Sounds/Items/Containers/cabinet_interact2.ogg" volume="2" range="400" selectionmode="random" />
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/cabinet_interact1.ogg" volume="2" range="400" selectionmode="random" />
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/cabinet_interact2.ogg" volume="2" range="400" selectionmode="random" />
           </StatusEffect>
         </ItemContainer>
         <!--
@@ -297,8 +297,8 @@
         <Containable items="bottle,emptybottle" />
         <GuiFrame relativesize="0.3,0.2" anchor="BottomCenter" pivot="BottomCenter" relativeoffset="0,0.3" style="ItemUI" />
         <StatusEffect type="OnPicked" target="this">
-          <Sound file="%ModDir%/Content/Sounds/Items/Containers/cabinet_interact1.ogg" volume="2" range="400" selectionmode="random"/>
-          <Sound file="%ModDir%/Content/Sounds/Items/Containers/cabinet_interact2.ogg" volume="2" range="400" selectionmode="random"/>
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/cabinet_interact1.ogg" volume="2" range="400" selectionmode="random"/>
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/cabinet_interact2.ogg" volume="2" range="400" selectionmode="random"/>
         </StatusEffect>
       </ItemContainer>-->
         <Holdable canbepicked="true" slots="RightHand+LeftHand" selectkey="Select" pickkey="Action" msg="ItemMsgDetachWrench" holdpos="0,-50" handle1="0,14" handle2="-1,3" holdangle="45" aimpos="65,-10" attachable="true" attachedbydefault="true" aimable="false">
@@ -311,7 +311,7 @@
       </Item>
     <!--Performance intensive due to type="always" StatusEffects as OnContaining doesn't work-->
       <Item name="Kitchen Sink" identifier="he-kitchencounter" tags="kitchen,locker,container" linkable="true" category="Misc" subcategory="Container" description="Can store up to 18 different small or medium items and refill empty bottles and kegs with sea water." pickdistance="150" waterproof="false" isshootable="true" scale="0.5">
-        <Sprite texture="%ModDir%/Content/Items/Containers/Containers.png" depth="0.798" sourcerect="0,0,507,300" origin="0.5,0.5125" />
+        <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.798" sourcerect="0,0,507,300" origin="0.5,0.5125" />
         <Price baseprice="899" sold="true">
           <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="1" />
           <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="3" />
@@ -400,15 +400,15 @@
           <!--Tag the item to allow for StatusEffect conditionals to check if every requirement is met and play a sound loop to clarify the item is active-->
           <StatusEffect type="OnActive" target="This" disabledeltatime="false" duration="0.1" CheckConditionalAlways="true">
             <RequiredItem items="emptybottle,emptykeg,seawaterkeg" targetslot="0" type="Contained" />
-            <Sound file="%ModDir%/Content/Sounds/Items/Containers/Sink.ogg" volume="1.5" range="450" loop="true" />
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/Sink.ogg" volume="1.5" range="450" loop="true" />
           </StatusEffect>
         </LightComponent>
         <ItemContainer capacity="1" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
           <GuiFrame relativesize="0.25,0.45" anchor="Center" style="ItemUI" />
           <!--Water Icon-->
-          <SlotIcon slotindex="0" texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="577,0,85,85" origin="0.5,0.5" />
+          <SlotIcon slotindex="0" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="577,0,85,85" origin="0.5,0.5" />
           <!--PickUp Icon-->
-          <SlotIcon slotindex="1" texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="662,0,85,85" origin="0.5,0.5" />
+          <SlotIcon slotindex="1" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="662,0,85,85" origin="0.5,0.5" />
           <!--Sink Input Container Slot-->
           <Containable items="emptybottle,emptykeg,seawaterkeg" />
           <!--Sink Output Container Slot-->
@@ -425,15 +425,15 @@
           </SubContainer>
           <!--Interact Sound-->
           <StatusEffect type="OnPicked" target="this">
-            <Sound file="%ModDir%/Content/Sounds/Items/Containers/locker_open1.ogg" volume="2" range="400" selectionmode="random" />
-            <Sound file="%ModDir%/Content/Sounds/Items/Containers/locker_open2.ogg" volume="2" range="400" selectionmode="random" />
-            <Sound file="%ModDir%/Content/Sounds/Items/Containers/locker_open3.ogg" volume="2" range="400" selectionmode="random" />
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_open1.ogg" volume="2" range="400" selectionmode="random" />
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_open2.ogg" volume="2" range="400" selectionmode="random" />
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_open3.ogg" volume="2" range="400" selectionmode="random" />
           </StatusEffect>
           <!-- Disabled due to OnClose only working for doors. No way to check if a player stops interacting to play the sound.
           <StatusEffect type="OnClose" target="this">
-            <Sound file="%ModDir%/Content/Sounds/Items/Containers/locker_close1.ogg" volume="1" range="500" selectionmode="random"/>
-            <Sound file="%ModDir%/Content/Sounds/Items/Containers/locker_close2.ogg" volume="1" range="500" selectionmode="random"/>
-            <Sound file="%ModDir%/Content/Sounds/Items/Containers/locker_close3.ogg" volume="1" range="500" selectionmode="random"/>
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_close1.ogg" volume="1" range="500" selectionmode="random"/>
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_close2.ogg" volume="1" range="500" selectionmode="random"/>
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_close3.ogg" volume="1" range="500" selectionmode="random"/>
           </StatusEffect>-->
         </ItemContainer>
         <Body width="507" height="300" density="30" />
@@ -461,7 +461,7 @@
         </CustomInterface>
       </Item>
       <Item name="Kitchen Counter" identifier="he-kitchencounter2" tags="kitchen,locker,container" linkable="true" category="Misc" subcategory="Container" description="Can store up to 30 different small items." pickdistance="150" waterproof="true" isshootable="true" scale="0.5">
-        <Sprite texture="%ModDir%/Content/Items/Containers/Containers.png" depth="0.798" sourcerect="0,301,405,204" origin="0.5,0.498" />
+        <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.798" sourcerect="0,301,405,204" origin="0.5,0.498" />
         <Price baseprice="1149" sold="true">
           <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="1" />
           <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="3" />
@@ -483,15 +483,15 @@
             <Containable items="mobilecontainer" />
           </SubContainer>
           <StatusEffect type="OnPicked" target="this">
-            <Sound file="%ModDir%/Content/Sounds/Items/Containers/locker_open1.ogg" volume="2" range="400" selectionmode="random" />
-            <Sound file="%ModDir%/Content/Sounds/Items/Containers/locker_open2.ogg" volume="2" range="400" selectionmode="random" />
-            <Sound file="%ModDir%/Content/Sounds/Items/Containers/locker_open3.ogg" volume="2" range="400" selectionmode="random" />
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_open1.ogg" volume="2" range="400" selectionmode="random" />
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_open2.ogg" volume="2" range="400" selectionmode="random" />
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_open3.ogg" volume="2" range="400" selectionmode="random" />
           </StatusEffect>
           <!-- Disabled due to OnClose only working for doors. No way to check if a player stops interacting to play the sound.
         <StatusEffect type="OnClose" target="this">
-          <Sound file="%ModDir%/Content/Sounds/Items/Containers/locker_close1.ogg" volume="1" range="500" selectionmode="random"/>
-          <Sound file="%ModDir%/Content/Sounds/Items/Containers/locker_close2.ogg" volume="1" range="500" selectionmode="random"/>
-          <Sound file="%ModDir%/Content/Sounds/Items/Containers/locker_close3.ogg" volume="1" range="500" selectionmode="random"/>
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_close1.ogg" volume="1" range="500" selectionmode="random"/>
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_close2.ogg" volume="1" range="500" selectionmode="random"/>
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_close3.ogg" volume="1" range="500" selectionmode="random"/>
         </StatusEffect>-->
         </ItemContainer>
         <Body width="405" height="204" density="30" />
@@ -521,25 +521,25 @@
         </Fabricate>
         <ItemContainer capacity="30" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
           <GuiFrame relativesize="0.25,0.55" anchor="Center" style="ItemUI" />
-          <SlotIcon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="152,0,85,85" origin="0.5,0.5" />
+          <SlotIcon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="152,0,85,85" origin="0.5,0.5" />
           <Containable items="fooditem,drinkitem,emptybottle,emptyjar,teacup,teakettle,emptycup" />
           <StatusEffect type="OnPicked" target="this">
-            <Sound file="%ModDir%/Content/Sounds/Items/Containers/locker_open1.ogg" volume="2" range="400" selectionmode="random" />
-            <Sound file="%ModDir%/Content/Sounds/Items/Containers/locker_open2.ogg" volume="2" range="400" selectionmode="random" />
-            <Sound file="%ModDir%/Content/Sounds/Items/Containers/locker_open3.ogg" volume="2" range="400" selectionmode="random" />
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_open1.ogg" volume="2" range="400" selectionmode="random" />
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_open2.ogg" volume="2" range="400" selectionmode="random" />
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_open3.ogg" volume="2" range="400" selectionmode="random" />
           </StatusEffect>
           <!-- Disabled due to OnClose only working for doors. No way to check if a player stops interacting to play the sound.
         <StatusEffect type="OnClose" target="this">
-          <Sound file="%ModDir%/Content/Sounds/Items/Containers/locker_close1.ogg" volume="1" range="500" selectionmode="random"/>
-          <Sound file="%ModDir%/Content/Sounds/Items/Containers/locker_close2.ogg" volume="1" range="500" selectionmode="random"/>
-          <Sound file="%ModDir%/Content/Sounds/Items/Containers/locker_close3.ogg" volume="1" range="500" selectionmode="random"/>
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_close1.ogg" volume="1" range="500" selectionmode="random"/>
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_close2.ogg" volume="1" range="500" selectionmode="random"/>
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_close3.ogg" volume="1" range="500" selectionmode="random"/>
         </StatusEffect>-->
         </ItemContainer>
         <Body width="191" height="329" density="16" />
         <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="70,-58" handle1="-75,50" handle2="-75,70" holdangle="3" msg="ItemMsgDetach" PickingTime="0.5" attachable="true" aimable="true"></Holdable>
       </Item>
       <Item name="Refrigerator" identifier="he-refrigerator" tags="kitchen,locker,container,refrigerator" category="Misc" subcategory="Container" description="Prevents spoilage. Can only store food and drinks. Needs power." linkable="true" pickdistance="150" waterproof="true" fireproof="true" isshootable="true" scale="0.5">
-        <Sprite texture="%ModDir%/Content/Items/Containers/Containers.png" depth="0.799" sourcerect="750,0,273,380" origin="0.5,0.49" />
+        <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.799" sourcerect="750,0,273,380" origin="0.5,0.49" />
         <Price baseprice="1599" sold="true">
           <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="1" />
           <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="3" />
@@ -558,7 +558,7 @@
           <GuiFrame relativesize="0.18,0.15" minsize="350,160" maxsize="420,192" anchor="Center" relativeoffset="0,-0.1" style="ItemUI" msg="ItemMsgInteractSelect" />
           Tag the container with "activecooling" when powered to allow or prevent StatusEffects checking for "activecooling" on contained items 
           <StatusEffect type="OnActive" target="This" disabledeltatime="false" tags="activecooling" duration="0.1">
-            <Sound file="%ModDir%/Content/Sounds/Items/Containers/Refrigerator.ogg" volume="2" range="500" loop="true" />
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/Refrigerator.ogg" volume="2" range="500" loop="true" />
           </StatusEffect>
         </Powered>
         -->
@@ -568,15 +568,15 @@
           <StatusEffect type="OnActive" target="This" charge="-1" />
           <StatusEffect type="OnActive" target="This" disabledeltatime="false" tags="activecooling" duration="0.1">
             <Conditional Charge="gt 0.01" />
-            <Sound file="%ModDir%/Content/Sounds/Items/Containers/Refrigerator.ogg" volume="2" range="500" loop="true" />
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/Refrigerator.ogg" volume="2" range="500" loop="true" />
           </StatusEffect>
         </PowerContainer>
         <ItemContainer capacity="40" slotsperrow="8" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
-          <SlotIcon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="152,0,85,85" origin="0.5,0.5" />
+          <SlotIcon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="152,0,85,85" origin="0.5,0.5" />
           <GuiFrame relativesize="0.35,0.45" anchor="Center" style="ItemUI" />
           <Containable items="fooditem,drinkitem,meat,plantitem,canspoil,canexpire,emptybottle,emptyjar,peanutegg,psilotoadegg,orangeboyegg,balloonegg,mudraptoregg" />
           <StatusEffect type="OnPicked" target="this">
-            <Sound file="%ModDir%/Content/Sounds/Items/Containers/refrigerator_interact.ogg" volume="2" range="400" selectionmode="random" />
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/refrigerator_interact.ogg" volume="2" range="400" selectionmode="random" />
           </StatusEffect>
         </ItemContainer>
         <Body width="273" height="380" density="30" />
@@ -598,7 +598,7 @@
             <Affliction identifier="burn" strength="5" />
           </StatusEffect>
           <StatusEffect type="OnPicked" target="this">
-            <Sound file="%ModDir%/Content/Sounds/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
           </StatusEffect>
           <RequiredItem items="screwdriver" type="Equipped" />
           <input name="power_in" displayname="connection.powerin" />
@@ -606,7 +606,7 @@
       </Item>
     <!-- Refrigerator but without the built-in battery for sub-editor only | Useful when wanting to make custom refrigerator designs using different item and parts in sub-editor as the original refrigerator causes the battery status to be always displayed over the custom build. -->
       <Item name="" nameidentifier="he-refrigerator" identifier="he-refrigeratornobattery" tags="kitchen,locker,container,refrigerator" category="Misc" subcategory="Container" descriptionidentifier="he-refrigeratornobattery" description="Sub-Editor exclusive variant of the refrigerator without the built-in battery. Useful when wanting to make custom refrigerator designs using different items and parts in sub-editor as the original refrigerator would always display the battery status on top of the custom build. Prevents spoilage. Can only store food and drinks. Needs power." linkable="true" pickdistance="150" waterproof="true" fireproof="true" isshootable="true" scale="0.5">
-        <Sprite texture="%ModDir%/Content/Items/Containers/NoBatteryRefrigerator.png" depth="0.799" sourcerect="0,0,273,380" origin="0.5,0.49" />
+        <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/NoBatteryRefrigerator.png" depth="0.799" sourcerect="0,0,273,380" origin="0.5,0.49" />
         <Deconstruct time="10">
           <Item identifier="steel" amount="4" />
           <Item identifier="titaniumaluminiumalloy" amount="4" />
@@ -615,15 +615,15 @@
           <GuiFrame relativesize="0.18,0.15" minsize="350,160" maxsize="420,192" anchor="Center" relativeoffset="0,-0.1" style="ItemUI" msg="ItemMsgInteractSelect" />
           <!-- Tag the container with "activecooling" when powered to allow or prevent StatusEffects checking for "activecooling" on contained items -->
           <StatusEffect type="OnActive" target="This" disabledeltatime="false" tags="activecooling" duration="0.1">
-            <Sound file="%ModDir%/Content/Sounds/Items/Containers/Refrigerator.ogg" volume="2" range="500" loop="true" />
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/Refrigerator.ogg" volume="2" range="500" loop="true" />
           </StatusEffect>
         </Powered>
         <ItemContainer capacity="40" slotsperrow="8" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
-          <SlotIcon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="152,0,85,85" origin="0.5,0.5" />
+          <SlotIcon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="152,0,85,85" origin="0.5,0.5" />
           <GuiFrame relativesize="0.35,0.45" anchor="Center" style="ItemUI" />
           <Containable items="fooditem,drinkitem,meat,plantitem,canspoil,canexpire,emptybottle,emptyjar,peanutegg,psilotoadegg,orangeboyegg,balloonegg,mudraptoregg" />
           <StatusEffect type="OnPicked" target="this">
-            <Sound file="%ModDir%/Content/Sounds/Items/Containers/refrigerator_interact.ogg" volume="2" range="400" selectionmode="random" />
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/refrigerator_interact.ogg" volume="2" range="400" selectionmode="random" />
           </StatusEffect>
         </ItemContainer>
         <Body width="273" height="380" density="30" />
@@ -645,7 +645,7 @@
             <Affliction identifier="burn" strength="5" />
           </StatusEffect>
           <StatusEffect type="OnPicked" target="this">
-            <Sound file="%ModDir%/Content/Sounds/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
           </StatusEffect>
           <RequiredItem items="screwdriver" type="Equipped" />
           <input name="power_in" displayname="connection.powerin" />
@@ -656,7 +656,7 @@
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
-      <Sprite texture="%ModDir%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,426,81,85" depth="0.6" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,426,81,85" depth="0.6" origin="0.5,0.5" />
       <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="false" amount="1" outcondition="0.0">
         <RequiredSkill identifier="mechanical" level="20" />
         <RequiredItem identifier="aluminium" amount="1"/>
@@ -682,7 +682,7 @@
           <Conditional IsActive="true" targetcontainer="true" targetitemcomponent="Fabricator" />
           <Conditional Voltage="gt 0.5" targetcontainer="true" />
           <RequiredItem tag="teamix" type="contained" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Drinks/KettleWhistle.ogg" range="500.0" loop="true" volume="1.0" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/KettleWhistle.ogg" range="500.0" loop="true" volume="1.0" />
         </StatusEffect>
         <!--<StatusEffect type="OnContained" target="This" condition="1" comparison="And" disabledeltatime="true">
           <Conditional condition="eq 99" />
@@ -718,7 +718,7 @@
             <Conditional IsOn="true" targetitemcomponent="LightComponent"/>
             <RequiredItem identifier="he-teamixbubbleberry" targetslot="0" type="Contained" />
             <RequiredItem items="emptycup" targetslot="1" type="Contained" />
-            <Sound file="%ModDir%/Content/Sounds/Items/Drinks/PourTea.ogg" type="OnUse" range="250.0" loop="false" volume="1.0" />
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/PourTea.ogg" type="OnUse" range="250.0" loop="false" volume="1.0" />
             <SpawnItem identifier="he-cupbubbleberrytea" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
           </StatusEffect>
           <!--Refill with popnut tea-->
@@ -726,7 +726,7 @@
             <Conditional IsOn="true" targetitemcomponent="LightComponent"/>
             <RequiredItem identifier="he-teamixpopnut" targetslot="0" type="Contained" />
             <RequiredItem items="emptycup" targetslot="1" type="Contained" />
-            <Sound file="%ModDir%/Content/Sounds/Items/Drinks/PourTea.ogg" type="OnUse" range="250.0" loop="false" volume="1.0" />
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/PourTea.ogg" type="OnUse" range="250.0" loop="false" volume="1.0" />
             <SpawnItem identifier="he-cuppopnuttea" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
           </StatusEffect>
         </Button>

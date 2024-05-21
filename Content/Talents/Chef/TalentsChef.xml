@@ -4,7 +4,7 @@
   <!--Bonus XP on Monster and Nest Missions-->
   <Override>
     <Talent identifier="he-poacher">
-      <Icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="905,905,119,119" origin="0.5,0.5"/>
+      <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="905,905,119,119" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-poacher">
         <Replace tag="[xpbonus]" value="15" color="gui.green"/>
         <Replace tag="[missiontype1]" value="missiontype.monster" color="gui.orange"/>
@@ -23,7 +23,7 @@
   <!--20% Chance to find salt in a container if opened for the first time-->
   <Override>
     <Talent identifier="he-saltybusiness">
-      <Icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="905,905,119,119" origin="0.5,0.5"/>
+      <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="905,905,119,119" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-saltybusiness">
         <Replace tag="[probability]" value="20" color="gui.green"/>
       </Description>
@@ -47,7 +47,7 @@
   <!--Increase Production Speed of Kitchen Fabricators-->
   <Override>
     <Talent identifier="he-fastfood">
-      <Icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="905,905,119,119" origin="0.5,0.5"/>
+      <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="905,905,119,119" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-fastfood">
         <Replace tag="[amount]" value="50" color="gui.green"/>
       </Description>
@@ -73,7 +73,7 @@
   <!--Unlock Master Chef Attire Crafting Recipes-->
   <Override>
     <Talent identifier="he-chefattire">
-      <Icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="905,905,119,119" origin="0.5,0.5"/>
+      <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="905,905,119,119" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-chefattire">
         <Replace tag="[itemname1]" value="entityname.he-chefscapmaster1" color="gui.orange"/>
         <Replace tag="[itemname2]" value="entityname.he-chefsuniformmaster1" color="gui.orange"/>
@@ -85,7 +85,7 @@
   <!--Lazy Gardener | Unlock Sprinkler-->
   <Override>
     <Talent identifier="he-lazygardener">
-      <Icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="905,905,119,119" origin="0.5,0.5"/>
+      <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="905,905,119,119" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-lazygardener" />
       <Description tag="talentdescription.unlockrecipe">
         <Replace tag="[itemname]" value="entityname.he-sprinkler" color="gui.orange"/>
@@ -97,7 +97,7 @@
   <!--Increase Damage with Butcher Knives-->
   <Override>
     <Talent identifier="he-frenzy">
-      <Icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="905,905,119,119" origin="0.5,0.5"/>
+      <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="905,905,119,119" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-frenzy">
         <Replace tag="[powerincrease]" value="50" color="gui.green"/>
       </Description>
@@ -122,7 +122,7 @@
   <!--Increase Sell Prices of Raw Meat by 50%-->
   <Override>
     <Talent identifier="he-butchershop">
-      <Icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="905,905,119,119" origin="0.5,0.5"/>
+      <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="905,905,119,119" origin="0.5,0.5"/>
       <!--<Description tag="talentdescription.blackmarketgenes"/>-->
       <Description tag="talentdescription.he-butchershop">
         <Replace tag="[amount]" value="50" color="gui.green"/>
@@ -139,7 +139,7 @@
   <!--Disable meat rotting in inventory-->
   <Override>
     <Talent identifier="he-coldblood">
-      <Icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="905,905,119,119" origin="0.5,0.5"/>
+      <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="905,905,119,119" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-coldblood">
       </Description>
       <AbilityGroupInterval interval="0.8">
@@ -157,7 +157,7 @@
   <!--40% Chance to not consume an ingredient-->
   <Override>
     <Talent identifier="he-favorite">
-      <Icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="905,905,119,119" origin="0.5,0.5"/>
+      <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="905,905,119,119" origin="0.5,0.5"/>
       <Description tag="talentdescription.family" />
       <Description tag="talentdescription.family2" />
       <Description tag="talentdescription.assistantsdontcount"/>
@@ -174,7 +174,7 @@
   </Override>
   <Override>
     <Talent identifier="he-tastyfood">
-      <Icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="905,905,119,119" origin="0.5,0.5"/>
+      <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="905,905,119,119" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-tastyfood" />
       <Description tag="talentdescription.additionalstattype">
         <Replace tag="[amount]" value="20" color="gui.green"/>
@@ -217,7 +217,7 @@
   </Override>
   <Override>
     <Talent identifier="he-piper">
-      <Icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="905,905,119,119" origin="0.5,0.5"/>
+      <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="905,905,119,119" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-piper">
         <Replace tag="[duration]" value="10" color="gui.green"/>
         <Replace tag="[buffamount]" value="100" color="gui.green"/>
@@ -257,7 +257,7 @@
   <!--CHEF TREE-->
   <Override>
     <Talent identifier="he-lifesaver">
-      <Icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="905,905,119,119" origin="0.5,0.5"/>
+      <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="905,905,119,119" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-lifesaver">
         <Replace tag="[itemname1]" value="entityname.he-antistarve" color="gui.orange"/>
         <Replace tag="[skill]" value="skillname.medical" color="gui.orange"/>
@@ -273,7 +273,7 @@
   </Override>
   <Override>
     <Talent identifier="he-delicacies">
-      <Icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="905,905,119,119" origin="0.5,0.5"/>
+      <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="905,905,119,119" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-delicacies">
         <Replace tag="[itemname1]" value="entityname.he-cookedhammerheadspawnpickled" color="gui.orange"/>
         <Replace tag="[itemname2]" value="entityname.he-molochsushi" color="gui.orange"/>
@@ -286,7 +286,7 @@
   </Override>
   <Override>
     <Talent identifier="he-huskfood">
-      <Icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="905,905,119,119" origin="0.5,0.5"/>
+      <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="905,905,119,119" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-huskfood">
         <Replace tag="[itemname1]" value="character.husk" color="gui.orange"/>
       </Description>
@@ -302,7 +302,7 @@
   </Override>
   <Override>
     <Talent identifier="he-masterbrewer">
-      <Icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="905,905,119,119" origin="0.5,0.5"/>
+      <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="905,905,119,119" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-masterbrewer">
         <Replace tag="[itemname1]" value="entityname.he-kegpiraterum" color="gui.orange"/>
         <Replace tag="[itemname2]" value="entityname.he-kegwhiskey" color="gui.orange"/>

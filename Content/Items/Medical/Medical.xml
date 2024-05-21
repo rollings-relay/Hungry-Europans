@@ -21,8 +21,8 @@
         <RequiredItem identifier="ethanol" Amount="1" UseCondition="True" MinCondition="0.5"/>
       </Fabricate>
       <Deconstruct time="3" />
-      <InventoryIcon texture="%ModDir%/Content/Items/Medical/AntiStarve.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
-      <Sprite texture="%ModDir%/Content/Items/Medical/AntiStarve.png" sourcerect="0,0,36,66" depth="0.6" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Medical/AntiStarve.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Medical/AntiStarve.png" sourcerect="0,0,36,66" depth="0.6" origin="0.5,0.5" />
       <Body width="35" height="65" density="10.2" waterdragcoefficient="1"/>
       <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect" HitOnlyCharacters="true">
         <RequiredSkill identifier="medical" level="50" />
@@ -129,7 +129,7 @@
           <Affliction identifier="he-stomachache" strength="100.0" />
           <Affliction identifier="he-internalburn" amount="50" />
           <Affliction identifier="acidburn" amount="40" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <!-- Allow the item to be applied to a player fully, if the player is not in water and unconcious/stunned -->
         <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
@@ -144,12 +144,12 @@
           <Affliction identifier="he-stomachache" strength="20.0" />
           <Affliction identifier="he-internalburn" amount="10" />
           <Affliction identifier="acidburn" amount="8" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <!-- Regular drinking -->
         <StatusEffect type="OnUse" target="This" Condition="-20.0">
           <Conditional InWater="false" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" targetlimb="Torso" comparison="And" delay="10">
           <Conditional InWater="false" />
@@ -158,12 +158,12 @@
           <Affliction identifier="acidburn" amount="8" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
-          <Sound file="%ModDir%/Content/Sounds/Items/Misc/CanCrush1.ogg" range="350" volume="3" selectionmode="Random" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Misc/CanCrush2.ogg" range="350" volume="3" selectionmode="Random" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Misc/CanCrush3.ogg" range="350" volume="3" selectionmode="Random" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Misc/CanCrush4.ogg" range="350" volume="3" selectionmode="Random" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Misc/CanCrush5.ogg" range="350" volume="3" selectionmode="Random" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Misc/CanCrush6.ogg" range="350" volume="3" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/CanCrush1.ogg" range="350" volume="3" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/CanCrush2.ogg" range="350" volume="3" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/CanCrush3.ogg" range="350" volume="3" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/CanCrush4.ogg" range="350" volume="3" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/CanCrush5.ogg" range="350" volume="3" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/CanCrush6.ogg" range="350" volume="3" selectionmode="Random" />
           <Remove />
         </StatusEffect>
       </Holdable>

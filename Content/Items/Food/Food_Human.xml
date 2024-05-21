@@ -8,7 +8,7 @@
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
-      <Sprite texture="%ModDir%/Content/Items/Food/FoodAndMeat.png" sourcerect="258,495,51,17" depth="0.6" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="258,495,51,17" depth="0.6" origin="0.5,0.5" />
       <Fabricate suitablefabricators="stove" requiredtime="60" requiresrecipe="false" amount="1" displayname="humanfooditem">
         <RequiredSkill identifier="cooking" level="50" />
         <RequiredItem identifier="he-rawhumanmeat" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
@@ -31,7 +31,7 @@
           <ReduceAffliction type="damage" amount="10" />
           <ReduceAffliction type="hunger" amount="12.5" />
           <ReduceAffliction identifier="he-starvation" amount="200" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" comparison="And" multiplyafflictionsbymaxvitality="true">
           <Conditional IsBot="true" />
@@ -56,7 +56,7 @@
           <ReduceAffliction type="damage" amount="0.4" />
           <ReduceAffliction type="hunger" amount="0.5" />
           <ReduceAffliction identifier="he-starvation" amount="20" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" comparison="And" multiplyafflictionsbymaxvitality="true">
           <Conditional InWater="false" />
@@ -241,7 +241,8 @@
           <Affliction identifier="he-cannibalism" amount="0.1" />
           <ReduceAffliction type="he-hungryforhumanmeat" amount="1" />
           <ReduceAffliction type="damage" amount="0.4" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
+          <Affliction identifier="spill" amount="1000" probability="0.0005" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
@@ -339,8 +340,8 @@
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="kitchen" secondary="table,crewcab"/>
-      <Sprite texture="%ModDir%/Content/Items/Food/FoodAndMeat.png" sourcerect="225,455,17,11" depth="0.6" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir%/Content/UI/InventoryIcons.png" sourcerect="191,0,55,38" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="225,455,17,11" depth="0.6" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/UI/InventoryIcons.png" sourcerect="191,0,55,38" origin="0.5,0.5" />
       <!-- 8 nuggets should about equal the values of 1 burger patty -->
       <Fabricate suitablefabricators="fryer" requiredtime="60" requiresrecipe="false" amount="16" displayname="humanfooditem">
         <RequiredSkill identifier="cooking" level="40" />
@@ -363,7 +364,7 @@
           <ReduceAffliction type="hunger" amount="1.25" />
           <ReduceAffliction type="he-hungryforhumanmeat" amount="2.5" />
           <ReduceAffliction identifier="he-starvation" amount="200" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="Character" duration="2.5" comparison="And" multiplyafflictionsbymaxvitality="true">
           <Conditional IsBot="true" />
@@ -388,7 +389,7 @@
           <ReduceAffliction type="hunger" amount="0.5" />
           <ReduceAffliction type="he-hungryforhumanmeat" amount="1" />
           <ReduceAffliction identifier="he-starvation" amount="20" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="Character" duration="2.5" comparison="And" multiplyafflictionsbymaxvitality="true">
           <Conditional InWater="false" />
@@ -573,7 +574,8 @@
           <Affliction identifier="he-cannibalism" amount="0.08" />
           <ReduceAffliction type="damage" amount="0.15" />
           <ReduceAffliction type="he-hungryforhumanmeat" amount="1" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
+          <Affliction identifier="spill" amount="1000" probability="0.0005" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
@@ -671,10 +673,10 @@
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
-      <Sprite texture="%ModDir%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,485,47,27" depth="0.6" origin="0.5,0.5" />
-      <BrokenSprite texture="%ModDir%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,485,47,27" depth="0.6" maxcondition="99" />
-      <BrokenSprite texture="%ModDir%/Content/Items/Food/FoodAndMeat.png" sourcerect="96,486,43,26" depth="0.6" maxcondition="46" />
-      <InventoryIcon texture="%ModDir%/Content/Items/Food/FoodAndMeat.png" sourcerect="96,486,43,26" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,485,47,27" depth="0.6" origin="0.5,0.5" />
+      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,485,47,27" depth="0.6" maxcondition="99" />
+      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="96,486,43,26" depth="0.6" maxcondition="46" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="96,486,43,26" origin="0.5,0.5" />
       <Fabricate suitablefabricators="stove" requiredtime="120" requiresrecipe="false" amount="1" displayname="humanfooditem">
         <RequiredSkill identifier="cooking" level="50" />
         <RequiredItem identifier="he-rawhumanmeatpatty" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
@@ -699,7 +701,7 @@
           <ReduceAffliction type="he-hungryforhumanmeat" amount="25" />
           <ReduceAffliction type="hunger" amount="12.5" />
           <ReduceAffliction identifier="he-starvation" amount="200" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" comparison="And" multiplyafflictionsbymaxvitality="true">
           <Conditional IsBot="true" />
@@ -724,7 +726,7 @@
           <ReduceAffliction type="he-hungryforhumanmeat" amount="1" />
           <ReduceAffliction type="hunger" amount="0.5" />
           <ReduceAffliction identifier="he-starvation" amount="20" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" comparison="And" multiplyafflictionsbymaxvitality="true">
           <Conditional InWater="false" />
@@ -903,12 +905,12 @@
         <StatusEffect type="OnSecondaryUse" target="This" Condition="99" setvalue="True" comparison="And">
           <Conditional InWater="false" />
           <Conditional Condition="equals 100" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnSecondaryUse" target="This" Condition="46" setvalue="True" comparison="And">
           <Conditional InWater="false" />
           <Conditional Condition="equals 47" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This" Condition="-4.0">
           <Conditional InWater="false" />
@@ -919,7 +921,8 @@
           <Affliction identifier="he-cannibalism" amount="0.08" />
           <ReduceAffliction type="damage" amount="0.15" />
           <ReduceAffliction type="he-hungryforhumanmeat" amount="1" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
+          <Affliction identifier="spill" amount="1000" probability="0.0005" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
@@ -1026,7 +1029,7 @@
         <RequiredItem identifier="he-hotdogbun" amount="1"/>
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
-      <Sprite texture="%ModDir%/Content/Items/Food/FoodAndMeat.png" sourcerect="139,489,67,23" depth="0.6" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="139,489,67,23" depth="0.6" origin="0.5,0.5" />
       <Body width="67" radius="11" density="15" />
       <SuitableTreatment type="hunger" suitability="60" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
@@ -1042,7 +1045,7 @@
           <ReduceAffliction type="he-hungryforhumanmeat" amount="16.6" />
           <ReduceAffliction type="hunger" amount="8.3" />
           <ReduceAffliction identifier="he-starvation" amount="200" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="This,UseTarget" duration="16.6" comparison="And" multiplyafflictionsbymaxvitality="true">
           <Conditional IsBot="true" />
@@ -1067,7 +1070,7 @@
           <ReduceAffliction type="he-hungryforhumanmeat" amount="1" />
           <ReduceAffliction type="hunger" amount="0.5" />
           <ReduceAffliction identifier="he-starvation" amount="20" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="This,UseTarget" duration="16.6" comparison="And" multiplyafflictionsbymaxvitality="true">
           <Conditional InWater="false" />
@@ -1252,7 +1255,8 @@
           <Affliction identifier="he-cannibalism" amount="0.04" />
           <ReduceAffliction type="damage" amount="0.2" />
           <ReduceAffliction type="he-hungryforhumanmeat" amount="1" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
+          <Affliction identifier="spill" amount="1000" probability="0.0005" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
