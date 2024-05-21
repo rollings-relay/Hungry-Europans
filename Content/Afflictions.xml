@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Override>
   <Afflictions>
+    <!-- Hungry Europans - Cleanup Duty Compatibility | Does nothing and removes itself without the add-on -->
+    <Affliction
+      name=""
+      identifier="spill"
+      limbspecific="false"
+      indicatorlimb="Head"
+      activationthreshold="0"
+      showiconthreshold="1000"
+      showicontoothersthreshold="1000"
+      showinhealthscannerthreshold="1000"
+      karmachangeonapplied="0"
+      maxstrength="1"
+      affectmachines="false"
+      healableinmedicalclinic="false">
+      <Effect minstrength="0" maxstrength="1" strengthchange="-1" />
+      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,640,128,128" color="150,26,26,255" origin="0,0"/>
+    </Affliction>
     <!-- NEEDS INTEGRATION -->
     <Affliction name="Tiredness"
       identifier="sleepaffliction"
@@ -27,19 +44,19 @@
         <StatusEffect target="Character" comparison="and">
           <Conditional sleepaffliction="gte 50" />
           <Conditional hasspecifiertag="male" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Tiredness/Yawnmale1.ogg" range="400" selectionmode="Random" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Tiredness/Yawnmale2.ogg" range="400" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Tiredness/Yawnmale3.ogg" range="400" />
+          <!-- <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Tiredness/Yawnmale1.ogg" range="400" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Tiredness/Yawnmale2.ogg" range="400" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Tiredness/Yawnmale3.ogg" range="400" /> -->
         </StatusEffect>
         <StatusEffect target="Character" comparison="and">
           <Conditional sleepaffliction="gte 50" />
           <Conditional hasspecifiertag="female" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Tiredness/Yawnfemale1.ogg" range="400" selectionmode="Random" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Tiredness/Yawnfemale2.ogg" range="400" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Tiredness/Yawnfemale3.ogg" range="400" />
+          <!-- <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Tiredness/Yawnfemale1.ogg" range="400" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Tiredness/Yawnfemale2.ogg" range="400" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Tiredness/Yawnfemale3.ogg" range="400" /> -->
         </StatusEffect>
       </PeriodicEffect>
-      <icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="0,128,128,128" origin="0,0"/>
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,128,128,128" origin="0,0"/>
     </Affliction>
     <Affliction name="Mood"
       identifier="mood"
@@ -105,19 +122,19 @@
         <StatusEffect target="Character" comparison="and" stackable="false" duration="6">
           <Conditional mood="gte 80" />
           <Conditional hasspecifiertag="male" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Mood/CryingMale1.ogg" range="400" loop="true" selectionmode="Random" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Mood/CryingMale2.ogg" range="400" loop="true" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Mood/CryingMale3.ogg" range="400" loop="true" />
+          <!-- <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Mood/CryingMale1.ogg" range="400" loop="true" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Mood/CryingMale2.ogg" range="400" loop="true" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Mood/CryingMale3.ogg" range="400" loop="true" /> -->
         </StatusEffect>
         <StatusEffect target="Character" comparison="and" stackable="false" duration="6">
           <Conditional mood="gte 80" />
           <Conditional hasspecifiertag="female" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Mood/CryingFemale1.ogg" range="400" loop="true" selectionmode="Random" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Mood/CryingFemale2.ogg" range="400" loop="true" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Mood/CryingFemale3.ogg" range="400" loop="true" />
+          <!-- <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Mood/CryingFemale1.ogg" range="400" loop="true" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Mood/CryingFemale2.ogg" range="400" loop="true" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Mood/CryingFemale3.ogg" range="400" loop="true" /> -->
         </StatusEffect>
       </PeriodicEffect>
-      <icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="0,128,128,128" origin="0,0"/>
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,128,128,128" origin="0,0"/>
     </Affliction>
     <!--OVERRIDES-->
     <!-- HALLUCINATIONS OVERRIDE TO MAKE IT LAST LONGER AND ADD VISUAL EFFECTS -->
@@ -605,7 +622,7 @@
       textidentifier="afflictiondescription.he-disguisedashusk.others"
       target="OtherCharacter" />
       <Effect minstrength="0" maxstrength="1800" strengthchange="-1" tag="huskinfected"/>
-      <icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5"/>
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5"/>
     </Affliction>
     <!-- Watcher -->
     <Affliction
@@ -624,7 +641,7 @@
       <Effect minstrength="0" maxstrength="1800" strengthchange="-1"
         minskillgainmultiplier="1.5"
         maxskillgainmultiplier="1.5"/>
-      <icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5"/>
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5"/>
     </Affliction>
     <!-- Human (Only for cannibals) -->
     <Affliction
@@ -643,7 +660,7 @@
       <Effect minstrength="0" maxstrength="1800" strengthchange="-1"
         minskillmultiplier="1.2"
         maxskillmultiplier="1.2"/>
-      <icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5"/>
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5"/>
     </Affliction>
     <!-- CRAWLER -->
     <!-- 10% -->
@@ -663,7 +680,7 @@
       <Effect minstrength="0" maxstrength="1800" strengthchange="-1">
         <StatValue stattype="SwimmingSpeed" minvalue="0.1" maxvalue="0.1" />
       </Effect>
-      <icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5"/>
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5"/>
     </Affliction>
     <!-- 25% -->
     <Affliction
@@ -700,7 +717,7 @@
           <ReduceAffliction identifier="he-increasedswimmingspeedcrawler10" strength="2" />
         </StatusEffect>
       </Effect>
-      <icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5"/>
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5"/>
     </Affliction>
     <!-- 50% -->
     <Affliction
@@ -755,7 +772,7 @@
           <ReduceAffliction identifier="he-increasedswimmingspeedcrawler10" strength="3" />
         </StatusEffect>
       </Effect>
-      <icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5"/>
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5"/>
     </Affliction>
     <!-- MUDRAPTOR -->
     <Affliction
@@ -775,7 +792,7 @@
         resistancefor="damage"
         minresistance="0.25"
         maxresistance="0.25"/>
-      <icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5"/>
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5"/>
     </Affliction>
     <Affliction
       name="Increased Walking Speed (Food)"
@@ -793,7 +810,7 @@
       <Effect minstrength="0" maxstrength="1800" strengthchange="-1">
         <StatValue stattype="WalkingSpeed" minvalue="0.2" maxvalue="0.2" />
       </Effect>
-      <icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5"/>
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5"/>
     </Affliction>
     <!-- MOLOCH -->
     <!-- 25% -->
@@ -814,7 +831,7 @@
         resistancefor="damage"
         minresistance="0.25"
         maxresistance="0.25"/>
-      <icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5"/>
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5"/>
     </Affliction>
     <!-- 50% -->
     <Affliction
@@ -853,7 +870,7 @@
           <ReduceAffliction identifier="he-damageresistancemoloch25" strength="2" />
         </StatusEffect>
       </Effect>
-      <icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5"/>
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5"/>
     </Affliction>
     <!-- HAMMERHEAD -->
     <Affliction
@@ -872,7 +889,7 @@
       <Effect minstrength="0" maxstrength="1800" strengthchange="-1">
         <StatValue stattype="MeleeAttackMultiplier" minvalue="0.25" maxvalue="0.25" />
       </Effect>
-      <icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5"/>
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5"/>
     </Affliction>
     <!--THRESHER-->
     <Affliction
@@ -895,7 +912,7 @@
         maxresistance="1.0">
         <StatusEffect target="Character" usehulloxygen="false" setvalue="true"/>
       </Effect>
-      <icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5"/>
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5"/>
     </Affliction>
     <!-- ENDWORM -->
     <Affliction
@@ -915,7 +932,7 @@
         maxresistance="1">
         <AbilityFlag flagtype="ImmuneToPressure" />
       </Effect>
-      <icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5"/>
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5"/>
     </Affliction>
     <!-- CLOWN JUICE -->
     <Affliction
@@ -933,7 +950,7 @@
           <Affliction identifier="clownpower" strength="1" />
         </StatusEffect>
       </Effect>
-      <icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5"/>
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5"/>
     </Affliction>
     <!-- HUNGER AND THIRST -->
     <Affliction
@@ -1026,8 +1043,8 @@
           <Affliction identifier="he-starvation" strength="0.1" />
         </StatusEffect>
       </Effect>
-      <icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="0,128,128,128" origin="0,0"/>
-      <AfflictionOverlay texture="%ModDir%/Content/UI/HungerOverlay.png" />
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,128,128,128" origin="0,0"/>
+      <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/HungerOverlay.png" />
     </Affliction>
     <Affliction
       identifier="thirst"
@@ -1111,7 +1128,7 @@
           <Affliction identifier="he-dieofthirst" strength="0.1" />
         </StatusEffect>
       </Effect>
-      <icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="128,128,128,128" origin="0,0"/>
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="128,128,128,128" origin="0,0"/>
     </Affliction>
     <Affliction
       identifier="quenched"
@@ -1133,7 +1150,7 @@
         minstrength="0"
         maxstrength="100"/>
       <Effect minstrength="0" maxstrength="100" strengthchange="-0.02" />
-      <icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="384,256,128,128" origin="0,0"/>
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="384,256,128,128" origin="0,0"/>
     </Affliction>
     <Affliction
       identifier="he-starvation"
@@ -1171,7 +1188,7 @@
         minradialdistort="0.0"
         maxradialdistort="1.0"
         strengthchange="0" />
-      <icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="256,128,128,128" origin="0,0"/>
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="256,128,128,128" origin="0,0"/>
     </Affliction>
     <Affliction
       identifier="he-dieofthirst"
@@ -1209,7 +1226,7 @@
         minradialdistort="0.0"
         maxradialdistort="1.0"
         strengthchange="0" />
-      <icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="256,128,128,128" origin="0,0"/>
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="256,128,128,128" origin="0,0"/>
     </Affliction>
     <Affliction
       name="Alcoholic"
@@ -1276,7 +1293,7 @@
         </StatusEffect>
       </Effect>
 
-      <icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="768,128,128,128" color="195,180,60,255" origin="0,0"/>
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="768,128,128,128" color="195,180,60,255" origin="0,0"/>
     </Affliction>
     <Affliction
       name="Alcohol withdrawal"
@@ -1373,7 +1390,7 @@
           <ReduceAffliction identifier="he-alcoholism" strength="0.1" probability="1.0" />
         </StatusEffect>
       </Effect>
-      <icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="896,128,128,128" color="209,121,84,255" origin="0,0"/>
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="896,128,128,128" color="209,121,84,255" origin="0,0"/>
     </Affliction>
     <Affliction
       name="Disoriented"
@@ -1403,7 +1420,7 @@
       <Affliction identifier="stun" strength="3" probability="0.05" />
       </StatusEffect>-->
       </Effect>
-      <icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="640,256,128,128" color="255,255,2255,255" origin="0.5,0.5"/>
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="640,256,128,128" color="255,255,2255,255" origin="0.5,0.5"/>
     </Affliction>
     <Affliction
       name="Stuffed"
@@ -1518,7 +1535,7 @@
           <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="vomitsplatter" decalsize="1.25" shockwave="false" underwaterbubble="false" />
         </StatusEffect>
       </PeriodicEffect>
-      <icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="256,128,128,128" origin="0,0"/>
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="256,128,128,128" origin="0,0"/>
     </Affliction>
     <Affliction
       name="Internal Burn"
@@ -1707,31 +1724,31 @@
     </Affliction>
     <Affliction identifier="he-halucinova1" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="true">
       <Effect minstrength="0" maxstrength="100" strengthchange="-100" />
-      <AfflictionOverlay texture="%ModDir%/Content/UI/halucinovaOverlay1.png" />
+      <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/halucinovaOverlay1.png" />
     </Affliction>
     <Affliction identifier="he-halucinova2" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="true">
       <Effect minstrength="0" maxstrength="100" strengthchange="-100" />
-      <AfflictionOverlay texture="%ModDir%/Content/UI/halucinovaOverlay2.png" />
+      <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/halucinovaOverlay2.png" />
     </Affliction>
     <Affliction identifier="he-halucinova3" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="true">
       <Effect minstrength="0" maxstrength="100" strengthchange="-100" />
-      <AfflictionOverlay texture="%ModDir%/Content/UI/halucinovaOverlay3.png" />
+      <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/halucinovaOverlay3.png" />
     </Affliction>
     <Affliction identifier="he-halucinova4" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="true">
       <Effect minstrength="0" maxstrength="100" strengthchange="-100" />
-      <AfflictionOverlay texture="%ModDir%/Content/UI/halucinovaOverlay4.png" />
+      <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/halucinovaOverlay4.png" />
     </Affliction>
     <Affliction identifier="he-halucinova5" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="true">
       <Effect minstrength="0" maxstrength="100" strengthchange="-100" />
-      <AfflictionOverlay texture="%ModDir%/Content/UI/halucinovaOverlayFrameG.png" />
+      <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/halucinovaOverlayFrameG.png" />
     </Affliction>
     <Affliction identifier="he-halucinova6" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="true">
       <Effect minstrength="0" maxstrength="100" strengthchange="-200" />
-      <AfflictionOverlay texture="%ModDir%/Content/UI/halucinovaOverlay5.png" />
+      <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/halucinovaOverlay5.png" />
     </Affliction>
     <Affliction identifier="he-halucinova7" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="true">
       <Effect minstrength="0" maxstrength="100" strengthchange="-200" />
-      <AfflictionOverlay texture="%ModDir%/Content/UI/halucinovaOverlay6.png" />
+      <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/halucinovaOverlay6.png" />
     </Affliction>
     <!-- Affliction made with the help of @Plag | Check out Real Sonar -->
     <Affliction name="Halucinova" 
@@ -1744,7 +1761,7 @@
       showinhealthscannerthreshold="0" 
       healableinmedicalclinic="false"
       MedicalSkillGain="0.0">
-      <icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="384,128,128,128" origin="0,0" />
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="384,128,128,128" origin="0,0" />
       <Description textidentifier="afflictiondescription.he-halucinova.others" target="OtherCharacter" />
       <Description textidentifier="afflictiondescription.he-halucinova.self" target="Self" />
       <Effect minstrength="0" maxstrength="30" 
@@ -1764,7 +1781,7 @@
         </StatusEffect>
         <StatusEffect target="Character" disabledeltatime="true" stackable="false">
             <Conditional IsLocalPlayer="true" />
-            <sound file="%ModDir%/Content/Sounds/Items/Drinks/Halucinova0.ogg" volume="2.0" dontmuffle="true" duckvolume="false" loop="true" />
+            <sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Halucinova0.ogg" volume="2.0" dontmuffle="true" duckvolume="false" loop="true" />
         </StatusEffect>
       </Effect>
       <Effect minstrength="30" maxstrength="80" 
@@ -1784,11 +1801,11 @@
         </StatusEffect>
         <StatusEffect target="Character" disabledeltatime="true" stackable="false">
             <Conditional IsLocalPlayer="true" />
-            <sound file="%ModDir%/Content/Sounds/Items/Drinks/Halucinova0.ogg" volume="3.0" dontmuffle="true" duckvolume="false" loop="true" />
+            <sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Halucinova0.ogg" volume="3.0" dontmuffle="true" duckvolume="false" loop="true" />
         </StatusEffect>
         <StatusEffect target="Character" disabledeltatime="true" stackable="false">
             <Conditional IsLocalPlayer="true" />
-            <sound file="%ModDir%/Content/Sounds/Items/Drinks/Halucinova1.ogg" volume="3.0" dontmuffle="true" duckvolume="false" loop="true" />
+            <sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Halucinova1.ogg" volume="3.0" dontmuffle="true" duckvolume="false" loop="true" />
         </StatusEffect>
       </Effect>
       <Effect minstrength="80" maxstrength="100"
@@ -1808,19 +1825,19 @@
         </StatusEffect>
         <StatusEffect target="Character" disabledeltatime="true" stackable="false">
             <Conditional IsLocalPlayer="true" />
-            <sound file="%ModDir%/Content/Sounds/Items/Drinks/Halucinova0.ogg" volume="3.0" dontmuffle="true" duckvolume="false" loop="true" />
+            <sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Halucinova0.ogg" volume="3.0" dontmuffle="true" duckvolume="false" loop="true" />
         </StatusEffect>
         <StatusEffect target="Character" disabledeltatime="true" stackable="false">
             <Conditional IsLocalPlayer="true" />
-            <sound file="%ModDir%/Content/Sounds/Items/Drinks/Halucinova1.ogg" volume="3.0" dontmuffle="true" duckvolume="false" loop="true" />
+            <sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Halucinova1.ogg" volume="3.0" dontmuffle="true" duckvolume="false" loop="true" />
         </StatusEffect>
         <StatusEffect target="Character" disabledeltatime="true" stackable="false">
             <Conditional IsLocalPlayer="true" />
-            <sound file="%ModDir%/Content/Sounds/Items/Drinks/Halucinova2.ogg" volume="3.0" dontmuffle="true" duckvolume="false" loop="true" />
+            <sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Halucinova2.ogg" volume="3.0" dontmuffle="true" duckvolume="false" loop="true" />
         </StatusEffect>
         <StatusEffect target="Character" disabledeltatime="true" stackable="false">
             <Conditional IsLocalPlayer="true" />
-            <sound file="%ModDir%/Content/Sounds/Items/Drinks/Halucinova3.ogg" volume="3.0" dontmuffle="true" duckvolume="false" loop="true" />
+            <sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Halucinova3.ogg" volume="3.0" dontmuffle="true" duckvolume="false" loop="true" />
         </StatusEffect>
       </Effect>
       <PeriodicEffect mininterval="1" maxinterval="3">
@@ -1865,7 +1882,7 @@
           <Affliction identifier="he-halucinova7" strength="100" />
         </StatusEffect>
       </PeriodicEffect>
-      <AfflictionOverlay texture="%ModDir%/Content/UI/halucinovaOverlayBase.png" />
+      <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/halucinovaOverlayBase.png" />
     </Affliction>
     <Affliction
       name="Cannibalism"
@@ -1897,8 +1914,8 @@
           <Affliction identifier="he-hungryforhumanmeat" strength="0.01" />
         </StatusEffect>
       </Effect>
-      <!--<AfflictionOverlay texture="%ModDir%/Content/UI/CannibalInfoOverlay.png" />-->
-      <icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="640,128,128,128" color="195,180,60,255" origin="0,0"/>
+      <!--<AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/CannibalInfoOverlay.png" />-->
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="640,128,128,128" color="195,180,60,255" origin="0,0"/>
     </Affliction>
     <Affliction
       name="Hungry for Human Meat"
@@ -2101,49 +2118,49 @@
           <Affliction identifier="he-hungryforhumanmeatveins" strength="1000" />
         </StatusEffect>
       </PeriodicEffect>
-      <AfflictionOverlay texture="%ModDir%/Content/UI/HungerForHumanMeatRedOverlay.png" />
-      <icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="512,128,128,128" color="209,121,84,255" origin="0,0"/>
+      <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/HungerForHumanMeatRedOverlay.png" />
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="512,128,128,128" color="209,121,84,255" origin="0,0"/>
     </Affliction>
     <!--<Override>
     <Affliction identifier="he-hungryforhumanmeatinfo" showiconthreshold="2000" showinhealthscannerthreshold="2000" maxstrength="100" afflictionoverlayalphaislinear="false">
       <Effect minstrength="0" maxstrength="100" strengthchange="-200" interval="0.5" MinAfflictionOverlayAlphaMultiplier="1.0" MaxAfflictionOverlayAlphaMultiplier="1.0"/>
-      <AfflictionOverlay texture="%ModDir%/Content/UI/HungerForHumanMeatInfoOverlay.png" />
+      <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/HungerForHumanMeatInfoOverlay.png" />
     </Affliction>-->
     <Affliction identifier="he-hungryforhumanmeatveins" showiconthreshold="2000" showinhealthscannerthreshold="2000" maxstrength="1000" afflictionoverlayalphaislinear="true">
       <Effect minstrength="0" maxstrength="1000" strengthchange="-700">
         <StatusEffect target="Character" disabledeltatime="true" stackable="false">
           <Conditional IsLocalPlayer="true" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Cannibalism/CannibalHeartbeat.ogg" volume="5.0" dontmuffle="true" duckvolume="false" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Cannibalism/CannibalHeartbeat.ogg" volume="5.0" dontmuffle="true" duckvolume="false" />
         </StatusEffect>
       </Effect>
-      <AfflictionOverlay texture="%ModDir%/Content/UI/HungerForHumanMeatVeinsOverlay.png" />
+      <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/HungerForHumanMeatVeinsOverlay.png" />
     </Affliction>
     <Affliction identifier="he-hungryforhumanmeatveins10" showiconthreshold="2000" showinhealthscannerthreshold="2000" maxstrength="1000" afflictionoverlayalphaislinear="true">
       <Effect minstrength="0" maxstrength="1000" strengthchange="-700">
         <StatusEffect target="Character" disabledeltatime="true" stackable="false">
           <Conditional IsLocalPlayer="true" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Cannibalism/CannibalHeartbeat.ogg" volume="3.5" dontmuffle="true" duckvolume="false" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Cannibalism/CannibalHeartbeat.ogg" volume="3.5" dontmuffle="true" duckvolume="false" />
         </StatusEffect>
       </Effect>
-      <AfflictionOverlay texture="%ModDir%/Content/UI/HungerForHumanMeatVeinsOverlay10.png" />
+      <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/HungerForHumanMeatVeinsOverlay10.png" />
     </Affliction>
     <Affliction identifier="he-hungryforhumanmeatveins30" showiconthreshold="2000" showinhealthscannerthreshold="2000" maxstrength="1000" afflictionoverlayalphaislinear="true">
       <Effect minstrength="0" maxstrength="1000" strengthchange="-700">
         <StatusEffect target="Character" disabledeltatime="true" stackable="false">
           <Conditional IsLocalPlayer="true" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Cannibalism/CannibalHeartbeat.ogg" volume="4.0" dontmuffle="true" duckvolume="false" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Cannibalism/CannibalHeartbeat.ogg" volume="4.0" dontmuffle="true" duckvolume="false" />
         </StatusEffect>
       </Effect>
-      <AfflictionOverlay texture="%ModDir%/Content/UI/HungerForHumanMeatVeinsOverlay30.png" />
+      <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/HungerForHumanMeatVeinsOverlay30.png" />
     </Affliction>
     <Affliction identifier="he-hungryforhumanmeatveins60" showiconthreshold="2000" showinhealthscannerthreshold="2000" maxstrength="1000" afflictionoverlayalphaislinear="true">
       <Effect minstrength="0" maxstrength="1000" strengthchange="-700">
         <StatusEffect target="Character" disabledeltatime="true" stackable="false">
           <Conditional IsLocalPlayer="true" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Cannibalism/CannibalHeartbeat.ogg" volume="4.5" dontmuffle="true" duckvolume="false" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Cannibalism/CannibalHeartbeat.ogg" volume="4.5" dontmuffle="true" duckvolume="false" />
         </StatusEffect>
       </Effect>
-      <AfflictionOverlay texture="%ModDir%/Content/UI/HungerForHumanMeatVeinsOverlay60.png" />
+      <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/HungerForHumanMeatVeinsOverlay60.png" />
     </Affliction>
     <Affliction name="Radiant Influence" identifier="he-giveradianttalent" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" healableinmedicalclinic="false" MedicalSkillGain="0.0">
       <Effect minstrength="0" maxstrength="100" strengthchange="0" interval="0.5">
@@ -2165,55 +2182,55 @@
           <Conditional IsLocalPlayer="true" />
           <Conditional he-reaperstribute="gte 10" />
           <Conditional he-reaperstribute="lt 20" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/ReapersTribute/ReapersTribute.ogg" volume="0.2" dontmuffle="true" duckvolume="false" loop="true"/>
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/ReapersTribute/ReapersTribute.ogg" volume="0.2" dontmuffle="true" duckvolume="false" loop="true"/>
         </StatusEffect>
         <StatusEffect type="Always" target="Character" collapseeffectstrength="0.012" LowPassMultiplier="0.2" comparison="And" multiplyafflictionsbymaxvitality="true">
           <Conditional IsLocalPlayer="true" />
           <Conditional he-reaperstribute="gte 20" />
           <Conditional he-reaperstribute="lt 30" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/ReapersTribute/ReapersTribute.ogg" volume="0.4" dontmuffle="true" duckvolume="false" loop="true"/>
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/ReapersTribute/ReapersTribute.ogg" volume="0.4" dontmuffle="true" duckvolume="false" loop="true"/>
         </StatusEffect>
         <StatusEffect type="Always" target="Character" collapseeffectstrength="0.014" LowPassMultiplier="0.3" comparison="And" multiplyafflictionsbymaxvitality="true">
           <Conditional IsLocalPlayer="true" />
           <Conditional he-reaperstribute="gte 30" />
           <Conditional he-reaperstribute="lt 40" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/ReapersTribute/ReapersTribute.ogg" volume="0.6" dontmuffle="true" duckvolume="false" loop="true"/>
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/ReapersTribute/ReapersTribute.ogg" volume="0.6" dontmuffle="true" duckvolume="false" loop="true"/>
         </StatusEffect>
         <StatusEffect type="Always" target="Character" collapseeffectstrength="0.016" LowPassMultiplier="0.4" comparison="And" multiplyafflictionsbymaxvitality="true">
           <Conditional IsLocalPlayer="true" />
           <Conditional he-reaperstribute="gte 40" />
           <Conditional he-reaperstribute="lt 50" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/ReapersTribute/ReapersTribute.ogg" volume="0.8" dontmuffle="true" duckvolume="false" loop="true"/>
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/ReapersTribute/ReapersTribute.ogg" volume="0.8" dontmuffle="true" duckvolume="false" loop="true"/>
         </StatusEffect>
         <StatusEffect type="Always" target="Character" collapseeffectstrength="0.018" LowPassMultiplier="0.5" comparison="And" multiplyafflictionsbymaxvitality="true">
           <Conditional IsLocalPlayer="true" />
           <Conditional he-reaperstribute="gte 50" />
           <Conditional he-reaperstribute="lt 60" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/ReapersTribute/ReapersTribute.ogg" volume="1.0" dontmuffle="true" duckvolume="false" loop="true"/>
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/ReapersTribute/ReapersTribute.ogg" volume="1.0" dontmuffle="true" duckvolume="false" loop="true"/>
         </StatusEffect>
         <StatusEffect type="Always" target="Character" collapseeffectstrength="0.02" LowPassMultiplier="0.6" comparison="And" multiplyafflictionsbymaxvitality="true">
           <Conditional IsLocalPlayer="true" />
           <Conditional he-reaperstribute="gte 60" />
           <Conditional he-reaperstribute="lt 70" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/ReapersTribute/ReapersTribute.ogg" volume="1.4" dontmuffle="true" duckvolume="false" loop="true"/>
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/ReapersTribute/ReapersTribute.ogg" volume="1.4" dontmuffle="true" duckvolume="false" loop="true"/>
         </StatusEffect>
         <StatusEffect type="Always" target="Character" collapseeffectstrength="0.022" LowPassMultiplier="0.7" comparison="And" multiplyafflictionsbymaxvitality="true">
           <Conditional IsLocalPlayer="true" />
           <Conditional he-reaperstribute="gte 70" />
           <Conditional he-reaperstribute="lt 80" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/ReapersTribute/ReapersTribute.ogg" volume="1.8" dontmuffle="true" duckvolume="false" loop="true"/>
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/ReapersTribute/ReapersTribute.ogg" volume="1.8" dontmuffle="true" duckvolume="false" loop="true"/>
         </StatusEffect>
         <StatusEffect type="Always" target="Character" collapseeffectstrength="0.024" LowPassMultiplier="0.8" comparison="And" multiplyafflictionsbymaxvitality="true">
           <Conditional IsLocalPlayer="true" />
           <Conditional he-reaperstribute="gte 80" />
           <Conditional he-reaperstribute="lt 90" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/ReapersTribute/ReapersTribute.ogg" volume="2.2" dontmuffle="true" duckvolume="false" loop="true"/>
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/ReapersTribute/ReapersTribute.ogg" volume="2.2" dontmuffle="true" duckvolume="false" loop="true"/>
         </StatusEffect>
         <StatusEffect type="Always" target="Character" collapseeffectstrength="0.026" LowPassMultiplier="0.9" comparison="And" multiplyafflictionsbymaxvitality="true">
           <Conditional IsLocalPlayer="true" />
           <Conditional he-reaperstribute="gte 90" />
           <Conditional he-reaperstribute="lt 99" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/ReapersTribute/ReapersTribute.ogg" volume="2.6" dontmuffle="true" duckvolume="false" loop="true"/>
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/ReapersTribute/ReapersTribute.ogg" volume="2.6" dontmuffle="true" duckvolume="false" loop="true"/>
         </StatusEffect>
       </Effect>
       <Effect minstrength="99" 
@@ -2225,21 +2242,21 @@
         <StatusEffect type="Always" target="Character" comparison="And">
           <Conditional IsLocalPlayer="true" />
           <Conditional he-reaperstribute="gte 99" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/ReapersTribute/ReapersTribute.ogg" volume="3.0" dontmuffle="true" duckvolume="false" loop="true"/>
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/ReapersTribute/ReapersTribute.ogg" volume="3.0" dontmuffle="true" duckvolume="false" loop="true"/>
         </StatusEffect>
         <StatusEffect type="Always" target="Character" collapseeffectstrength="0.1" LowPassMultiplier="1.0" comparison="And" multiplyafflictionsbymaxvitality="true">
           <Conditional he-reaperstribute="gte 99" />
           <Affliction identifier="he-passoutreaper" strength="1" />
         </StatusEffect>
       </Effect>
-      <AfflictionOverlay texture="%ModDir%/Content/UI/ReapersTributeOverlay.png" />
+      <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/ReapersTributeOverlay.png" />
     </Affliction>
     <Affliction identifier="he-passoutreaper" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="true" healableinmedicalclinic="false" MedicalSkillGain="0.0">
       <Effect minstrength="0" maxstrength="100" strengthchange="0" interval="0.5">
         <StatusEffect type="Always" target="Character" comparison="And" delay="10" disabledeltatime="true" stackable="false">
           <Conditional IsLocalPlayer="true" />
           <Conditional he-passoutreaper="gte 100" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/ReapersTribute/ReaperLeaving.ogg" volume="2.0" dontmuffle="true" duckvolume="false"/>
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/ReapersTribute/ReaperLeaving.ogg" volume="2.0" dontmuffle="true" duckvolume="false"/>
         </StatusEffect>
         <StatusEffect type="Always" target="Character" comparison="And" delay="10" multiplyafflictionsbymaxvitality="true" disabledeltatime="true" stackable="false">
           <Conditional he-passoutreaper="gte 100" />
@@ -2253,7 +2270,7 @@
           <Affliction identifier="stun" strength="3" />
         </StatusEffect>
       </Effect>
-      <AfflictionOverlay texture="%ModDir%/Content/UI/PassOutOverlay.png" />
+      <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/PassOutOverlay.png" />
     </Affliction>
     <Affliction identifier="he-passout" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="true" healableinmedicalclinic="false" MedicalSkillGain="0.0">
       <Effect minstrength="0" maxstrength="100" strengthchange="0" interval="0.5">
@@ -2261,7 +2278,7 @@
         <StatusEffect type="Always" target="Character" CheckConditionalAlways="true" stackable="false">
           <Conditional IsLocalPlayer="true" />
           <Conditional he-passout="eq 100" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Stun/UnconciousMuffle.ogg" volume="20" loop="true" duckvolume="false" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Stun/UnconciousMuffle.ogg" volume="20" loop="true" duckvolume="false" />
         </StatusEffect>
         -->
         <StatusEffect type="Always" target="Character" comparison="And" interval="0.1" multiplyafflictionsbymaxvitality="true" stackable="false">
@@ -2273,7 +2290,7 @@
           <Conditional he-passout="gte 1" />
         </StatusEffect>
       </Effect>
-      <AfflictionOverlay texture="%ModDir%/Content/UI/PassOutOverlay.png" />
+      <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/PassOutOverlay.png" />
     </Affliction>
     <Affliction name="Sleeping" identifier="he-sleep" showiconthreshold="1000" showinhealthscannerthreshold="0" maxstrength="1" causespeechimpediment="true" afflictionoverlayalphaislinear="false" MinAfflictionOverlayAlphaMultiplier="0" MaxAfflictionOverlayAlphaMultiplier="1" healableinmedicalclinic="false" MedicalSkillGain="0.0">
       <Effect minstrength="0" maxstrength="1" strengthchange="-0.9" MinAfflictionOverlayAlphaMultiplier="1" MaxAfflictionOverlayAlphaMultiplier="1">
@@ -2294,35 +2311,35 @@
         <StatusEffect target="Character" interval="0.5" duration="0.51" LowPassMultiplier="0.1" setvalue="true" comparison="And">
           <Conditional hasspecifiertag="male" />
           <Conditional clownpower="lte 0" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/SnoringMale.ogg" volume="3" range="400" loop="true" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/SnoringMale.ogg" volume="3" range="400" loop="true" />
         </StatusEffect>
         <StatusEffect target="Character" interval="0.5" duration="0.51" LowPassMultiplier="0.1" setvalue="true" comparison="And">
           <Conditional hasspecifiertag="female" />
           <Conditional clownpower="lte 0" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/SnoringFemale.ogg" volume="8" range="400" loop="true" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/SnoringFemale.ogg" volume="8" range="400" loop="true" />
         </StatusEffect>
         <StatusEffect target="Character" interval="0.5" duration="0.51" LowPassMultiplier="0.1" setvalue="true" comparison="And">
           <Conditional clownpower="gt 0" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/SnoringClown.ogg" volume="3" range="400" loop="true" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/SnoringClown.ogg" volume="3" range="400" loop="true" />
         </StatusEffect>
       </Effect>
       <!--
       <PeriodicEffect minstrength="0" maxstrength="1" mininterval="3" maxinterval="6">
         <StatusEffect target="Character">
           <Conditional hasspecifiertag="male" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/SnoringMale.ogg" volume="8" range="400" loop="true" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/SnoringMale.ogg" volume="8" range="400" loop="true" />
         </StatusEffect>
         <StatusEffect target="Character">
           <Conditional hasspecifiertag="female" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/SnoringFemale.ogg" volume="8" range="400" loop="true" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/SnoringFemale.ogg" volume="8" range="400" loop="true" />
         </StatusEffect>
       </PeriodicEffect>
       -->
-      <AfflictionOverlay texture="%ModDir%/Content/UI/PassOutOverlay.png" />
+      <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/PassOutOverlay.png" />
     </Affliction>
     <Affliction identifier="he-hitbypoop" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="30" afflictionoverlayalphaislinear="true" healableinmedicalclinic="false" MedicalSkillGain="0.0">
       <Effect minstrength="0" maxstrength="30" strengthchange="-1" />
-      <AfflictionOverlay texture="%ModDir%/Content/UI/PoopOverlay.png" />
+      <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/PoopOverlay.png" />
     </Affliction>
     <!--EXTRA NEEDS-->
     <Affliction
@@ -2394,7 +2411,7 @@
           <Conditional IsPlayer="true" />
           <Conditional bladder="gte 1" />
           <ReduceAffliction identifier="bladder" strength="10" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="500" loop="true" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="500" loop="true" />
         </StatusEffect>
         <StatusEffect type="OnActive" target="Character" tags="peeing" duration="26" setvalue="true" stackable="false">
           <Conditional IsPlayer="true" />
@@ -2408,7 +2425,7 @@
           <ReduceAffliction identifier="bladder" strength="100" />
         </StatusEffect>
       </PeriodicEffect>
-      <icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="0,256,128,128" origin="0,0"/>
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,256,128,128" origin="0,0"/>
     </Affliction>
     <Affliction
       identifier="defecate"
@@ -2471,11 +2488,11 @@
       </Effect>
       <PeriodicEffect mininterval="50" maxinterval="600" minstrength="50" maxstrength="99">
         <StatusEffect type="OnActive" target="Character">
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/Fart1.ogg" range="300" selectionmode="random" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/Fart2.ogg" range="300" selectionmode="random" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/Fart3.ogg" range="300" selectionmode="random" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/Fart4.ogg" range="300" selectionmode="random" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/FartLong1.ogg" range="300" selectionmode="random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/Fart1.ogg" range="300" selectionmode="random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/Fart2.ogg" range="300" selectionmode="random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/Fart3.ogg" range="300" selectionmode="random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/Fart4.ogg" range="300" selectionmode="random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/FartLong1.ogg" range="300" selectionmode="random" />
         </StatusEffect>
       </PeriodicEffect>
       <PeriodicEffect mininterval="30" maxinterval="120" minstrength="99" maxstrength="100">
@@ -2483,8 +2500,8 @@
           <Conditional IsPlayer="true" />
           <Affliction identifier="embarrassment" strength="900" />
           <ReduceAffliction identifier="defecate" strength="100" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/FartWet1.ogg" range="300" selectionmode="random" />
-          <Sound file="%ModDir%/Content/Sounds/Afflictions/Misc/FartWet2.ogg" range="300" selectionmode="random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/FartWet1.ogg" range="300" selectionmode="random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/FartWet2.ogg" range="300" selectionmode="random" />
           <Spawnitem identifier="poop" spawnposition="This"/>
         </StatusEffect>
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
@@ -2492,7 +2509,7 @@
           <ReduceAffliction identifier="defecate" amount="1000" />
         </StatusEffect>
       </PeriodicEffect>
-      <icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="128,256,128,128" origin="0,0"/>
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="128,256,128,128" origin="0,0"/>
     </Affliction>
     <Affliction
       name="Embarrassed"
@@ -2520,7 +2537,7 @@
         minspeedmultiplier="0.8"
         maxspeedmultiplier="0.8">
       </Effect>
-      <icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="256,256,128,128" color="180,180,0,255" origin="0,0"/>
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="256,256,128,128" color="180,180,0,255" origin="0,0"/>
     </Affliction>
     <!--invisible affliction-->
     <Affliction
@@ -2547,38 +2564,38 @@
           <ReduceAffliction identifier="fillbladder" amount="0.05" />
         </StatusEffect>
       </Effect>
-      <icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="256,128,128,128" origin="0,0"/>
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="256,128,128,128" origin="0,0"/>
     </Affliction>
     <!--invisible affliction-->
     <Affliction name="On Toilet" identifier="ontoilet" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="1" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="-0.5" />
-      <icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="0,128,128,128" origin="0,0"/>
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,128,128,128" origin="0,0"/>
     </Affliction>
     <!--invisible affliction-->
     <Affliction name="Defecating" identifier="defecating" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="100" strengthchange="-1" />
-      <icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="0,128,128,128" origin="0,0"/>
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,128,128,128" origin="0,0"/>
     </Affliction>
     <!--invisible affliction-->
     <Affliction name="Tripping (Light)" identifier="he-trippinglight" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="100" strengthchange="-1">
         <StatusEffect target="Character" collapseeffectstrength="0.04" duration="0.1" />
       </Effect>
-      <icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="0,128,128,128" origin="0,0"/>
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,128,128,128" origin="0,0"/>
     </Affliction>
     <!--invisible affliction-->
     <Affliction name="Tripping (Medium)" identifier="he-trippingmedium" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="100" strengthchange="-1">
         <StatusEffect target="Character" collapseeffectstrength="0.08" duration="0.1" />
       </Effect>
-      <icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="0,128,128,128" origin="0,0"/>
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,128,128,128" origin="0,0"/>
     </Affliction>
     <!--invisible affliction-->
     <Affliction name="Tripping (Heavy)" identifier="he-trippingheavy" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="100" strengthchange="-1">
         <StatusEffect target="Character" collapseeffectstrength="0.085" duration="0.1" />
       </Effect>
-      <icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="0,128,128,128" origin="0,0"/>
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,128,128,128" origin="0,0"/>
     </Affliction>
     <!--Red Paint-->
       <Affliction
@@ -3291,8 +3308,8 @@
           <ReduceAffliction identifier="he-hunger" strength="0.1" />
         </StatusEffect>
       </Effect>
-      <icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="0,128,128,128" origin="0,0"/>
-      <AfflictionOverlay texture="%ModDir%/Content/UI/HungerOverlay.png" />
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,128,128,128" origin="0,0"/>
+      <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/HungerOverlay.png" />
     </Affliction>
     <Affliction
       identifier="he-thirst"
@@ -3358,7 +3375,7 @@
           <ReduceAffliction identifier="he-thirst" strength="0.1" />
         </StatusEffect>
       </Effect>
-      <icon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="128,128,128,128" origin="0,0"/>
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="128,128,128,128" origin="0,0"/>
     </Affliction>
     <!-- NEEDS BACKWARDS COMPATIBILITY -->
     <Affliction name="Well Fed" identifier="wellfed" description="" type="buff" limbspecific="false" indicatorlimb="Torso" maxstrength="1" affectmachines="true" showiconthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false" iconcolors="0,100,100,255;0,100,100,255">
@@ -3374,26 +3391,26 @@
         <!--StatusEffect target="Character" comparison="and">
           <Conditional ishuman="true" />
           <Conditional hasspecifiertag="male" />
-          <Sound file="%ModDir%/Sounds/Hunger1.ogg" range="400" selectionmode="Random" />
-          <Sound file="%ModDir%/Sounds/Hunger2.ogg" range="400" />
-          <Sound file="%ModDir%/Sounds/Hunger3.ogg" range="400" />
-          <Sound file="%ModDir%/Sounds/Hunger4.ogg" range="400" />
-          <Sound file="%ModDir%/Sounds/Hunger5.ogg" range="400" />
-          <Sound file="%ModDir%/Sounds/Hunger6.ogg" range="400" />
-          <Sound file="%ModDir%/Sounds/Hunger7.ogg" range="400" />
-          <Sound file="%ModDir%/Sounds/Hunger8.ogg" range="400" />
+          <Sound file="%ModDir:2954998725%/Sounds/Hunger1.ogg" range="400" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Sounds/Hunger2.ogg" range="400" />
+          <Sound file="%ModDir:2954998725%/Sounds/Hunger3.ogg" range="400" />
+          <Sound file="%ModDir:2954998725%/Sounds/Hunger4.ogg" range="400" />
+          <Sound file="%ModDir:2954998725%/Sounds/Hunger5.ogg" range="400" />
+          <Sound file="%ModDir:2954998725%/Sounds/Hunger6.ogg" range="400" />
+          <Sound file="%ModDir:2954998725%/Sounds/Hunger7.ogg" range="400" />
+          <Sound file="%ModDir:2954998725%/Sounds/Hunger8.ogg" range="400" />
         </StatusEffect-->
         <!--StatusEffect target="Character" comparison="and">
           <Conditional ishuman="true" />
           <Conditional hasspecifiertag="female" />
-          <Sound file="%ModDir%/Sounds/Hunger1.ogg" range="400" selectionmode="Random" />
-          <Sound file="%ModDir%/Sounds/Hunger2.ogg" range="400" />
-          <Sound file="%ModDir%/Sounds/Hunger3.ogg" range="400" />
-          <Sound file="%ModDir%/Sounds/Hunger4.ogg" range="400" />
-          <Sound file="%ModDir%/Sounds/Hunger5.ogg" range="400" />
-          <Sound file="%ModDir%/Sounds/Hunger6.ogg" range="400" />
-          <Sound file="%ModDir%/Sounds/Hunger7.ogg" range="400" />
-          <Sound file="%ModDir%/Sounds/Hunger8.ogg" range="400" />
+          <Sound file="%ModDir:2954998725%/Sounds/Hunger1.ogg" range="400" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Sounds/Hunger2.ogg" range="400" />
+          <Sound file="%ModDir:2954998725%/Sounds/Hunger3.ogg" range="400" />
+          <Sound file="%ModDir:2954998725%/Sounds/Hunger4.ogg" range="400" />
+          <Sound file="%ModDir:2954998725%/Sounds/Hunger5.ogg" range="400" />
+          <Sound file="%ModDir:2954998725%/Sounds/Hunger6.ogg" range="400" />
+          <Sound file="%ModDir:2954998725%/Sounds/Hunger7.ogg" range="400" />
+          <Sound file="%ModDir:2954998725%/Sounds/Hunger8.ogg" range="400" />
         </StatusEffect-->
       </PeriodicEffect>
     </Affliction>
