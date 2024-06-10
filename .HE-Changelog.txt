@@ -1,0 +1,259 @@
+Hungry Europans
+
+- Fixed Refrigerators not being fireproof.
+- Added: "Pan" item. Required for cooking some recipes on the stove and can be used as a melee weapon.
+- Added: "Pot" item. Required for cooking some recipes on the stove.
+- Added: New food item "Omelette" of every monster egg type (Crawler, Mudraptor, Thresher).
+- Added: New food item "Pizza".
+- Added: New drinks "Coffee". (TODO) Reduces your tiredness if you have it enabled. Can give you a caffeine rush.
+- Changed: "Bladder", "Need to defecate", "Stomach Ache" and "Alcohol Withdrawal" can now cause your mood to worsen. (Only with "Mood" enabled)
+- Changed: "Drunk" can now improve your mood. (Only with "Mood" enabled)
+- Changed: "Drunk" can now make you tired. (Only with "Tiredness" enabled)
+- Changed: "Coalition Premium" beer will now give a temporary buff that decreases the power usage of the turret you're operating by up to 90%.
+- Changed: "Jovian Force" beer will now give a temporary buff that increases the fire rate of the turret you're operating by up to 100%.
+- (TODO) Changed: All food and drink items now support "Tiredness" and "Mood" values.
+- Fixed: "Internal Burns" had wrong damage values and thus wouldn't actually cause any damage.
+- Fixed: Puking from "Stomach Ache" didn't decrease the duration of some food buffs.
+- Integrated: "Tiredness" and "Mood" from NEEDS. These are optional and can each be toggled via an item at vending machines or forced via a separately available "Enforcer" patch.
+- (TODO) Added "Electric Grill". Used to cook multiple meats simultaneously.
+- (TODO) Rework of almost all meat related recipes. For example burgers and hotdogs will now be put together on the cutting board while the meat is cooked seperately on the stove with either a pan or cooking pot.
+- Rescaled burgers, hotdogs, filets and roasts. They felt a bit oversized previously.
+
+
+Enforced:
+
+- Changes to the lua function. Mainly important for singleplayer or multiplayer with bots:
+Bots will now only get the "Hungry Europan" talent and thus the hunger and thirst afflictions if you actively control them. Hunger and thirst values will be stored and then set to 0 for characters controlled by a bot. Upon taking back control over the character, the previous hunger and thirst values for this specific character will be restored. Switching into the next round will however delete all stored values that are currently not in use so always switch back to your main character or your hunger and thirst will be reset to 0.
+
+
+Also, M, please, make a crafting recipe for the fryer consisting of 5 water bottles. it crafts instantly and spawns a proxy item that causes fryer to explode.
+It should deal serious burn damage
+Like you literally dumped 5 bottles of cold water into a fryer
+This should cause some troubles i believe
+
+Deathwish: Fix controller component showing when interacting with surgical table on stimpy subs
+ToDo - Current Update:
+- algae protein cakes from vending machines as mentioned in bot convos.
+- Make tea kettle storable in cafeteria cart
+- Rework alcoholic to reduce and potentially remove the disoriented from being drunk.
+- Change drunkness to not apply disoriented while in water and instead slow the character down.
+- Check Discord DMs from ED for talent stuff
+
+- Change lunch box recipe to 1x aluminum + 1x plastic and increase price accordingly
+- Make items in lunch boxes non-stackable
+- Change jam to be eatable by itself / make the jar emptyable and increase the required jam amount for sandwiches to 0.124
+- Make jams non-stackable like other jar items
+- Add Poutine
+- Ethanol gives some radiation resistance
+- Rework alcohol to invert controls less on lower to mid drunkness like drunknodebuffs and only really get annoying at high drunkness to compensate for high damage resistance.
+- Clown Juice gives stun resistance.
+- Coalition Premium gives ranged spread reduction or sellmultiplier <StatValue stattype="RangedSpreadReduction" minvalue="0.25" maxvalue="0.5" /> <StatValue stattype="StoreSellMultiplier" minvalue="0.25" maxvalue="0.5" />
+- Jovian Spirit gives ranged attack speed <StatValue stattype="RangedAttackSpeed" minvalue="0.25" maxvalue="0.5" />
+- Pirate Rum gives turret attack speed <StatValue stattype="TurretAttackSpeed" minvalue="0.25" maxvalue="0.5" />
+- Investigate salt shakers dropping shards instead of empty shaker on combined
+- Attachable Auto-Sprinkler to reduce the need of watering plants.
+- Fix meat spoiling in fabricators.
+- Add container to chairs accessible by pressing the "Use" key.
+- Chewing gum. Made from elastin. Reduces effects of hunger and prevents it from increasing.
+- "Constipated" affliction. Caused by eating elastin and prevents you from pooping which will result in constantly increasing organ damage (And/Or custom bowel rupture affliction) until death if not treated.
+- Canned food. Requires can opener, knife or boarding axe to open. Explodes after being in fire for a while.
+	Can Opener: 100% | No injuries
+	Diving Knife: 80% | 10% chance of lacerations
+	Meat Cleaver: 60% | 30% chance of lacerations
+	Boarding Axe: 20% | 50% chance of lacerations
+- Homemade kvass from water, bread, yeast and sugar.
+- Moloch sushi.
+- Grog! It'd be made of sea water and rum.
+- Make Kegs sellable.
+- Soups
+- Endworm and Watcher products giving "concealed" affliction to passivy creatures.
+
+fries by themselves could be made via cutting board, using 2 pomegrenade, 10% salt and 10% pepper, and are afterwards used in the frier with cooking oil (25% is what I advise because its the same amount for nuggets and such). Fries would have similar properties to pomegrenade chips ig.
+
+gravy irl tends to be relatively up to personal preferences and families. But generally speaking, all of them require water, flour, salt and pepper, the last ingredients mostly being dependant to tastes. Non-vegan recipes tends to use broth, vegan recipes can use soy sauce, cornstarch, etc.
+So the recipe I would advise would be 99% water bottle, 20% flour, 10% salt, 10% pepper, and maybe an additional ingredient depending if you feel like it
+the recipes aren't realistic themselves, but they're tuned for in game balance
+a batch of 5 fries and gravy would cost 1 salt, 1 pepper, 1 flour, 1.25 cooking oil (I don't like it but its made to be tuned around other frier recipes), 5 water and 10 pomegrenade 
+maybe the additional ingredient for gravy could be a jar, since from my experience jars are only used for jams and delicacy no one craft because hammerhead meals tends to be better in term of cost and yeald
+as for poutine itself, the idea I had about it if we want to give it a buff could be related to drink afflictions since poutine tends to be combo'd well with beer or sodas, so maybe giving it a buff to drinks buff
+
+
+
+NEEDS:
+- Updated to the latest version of Hungry Europans. See changelogs [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2954998725]HERE[/url]
+
+
+Doc's Whiskey  fiber plant, pomegranate, adrenaline (maybe water ;3) 
+name :  Endeavour's cuppa
+(if possible it acts like rum does, can be applied thru the health ui or drank with lmb)
+minor healing properties, applies slow metabolism(not too much) cures 30% psychosis and hallucinations,  cures 15% husk 
+
+
+LongTermPlans:
+- Kuru sickness
+- Meat Chunks cookable and burnable in open fires.
+- More recipes and unlockable recipes by recipe items found or bought.
+- Moloch meat, Broodmother meat, Spineling meat, Latcher meat, Charybdis meat, Husked meat, meat from pets.
+- Gather Moloch Milk from living molochs (Black Molochs are males) using a special tool.
+- Plant based talents. Craftable item that makes items grow faster? Special fertilizer?
+- Tier 4 talents for butcher (choice): 1. cannibalism buff with butcher saw. Can directly harvest abyssal meat. | 2. Meat tenderizer hammer (two handed blunt weapon). Will allow meat cleaver to harvest abyssal creature meat after hitting their corpse a few times.
+- Assistant "Tasty target" talent for Chef
+- Assistant starter quest talent but you can select for which creature and deal more damage to that creature
+- Make bots say something when hungry/thirsty
+- Unique Couwola location with cola bottle plant and a locked, run down old part of the station and questline to obtain access to it and grab special bottles for the Couwola Cola collector to obtain his Limited Edition Exosuit.
+
+Here's my current list of what I want to add this month before pushing the content to the original Hungry Europans:
+
+BACKUP OF OLD POISON EFFECTS:
+<!-- Poison Effects -->
+      <StatusEffect type="OnUse" target="Character" delay="20">
+        <Conditional InWater="false" />
+        <RequiredItem identifier="morbusine" type="Contained" />
+        <Affliction identifier="morbusinepoisoning" amount="0.5" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" delay="20">
+        <Conditional InWater="false" />
+        <RequiredItem identifier="chloralhydrate" type="Contained" />
+        <Affliction identifier="incrementalstun" amount="50" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" delay="20">
+        <Conditional InWater="false" />
+        <RequiredItem identifier="cyanide" type="Contained" />
+        <Affliction identifier="cyanidepoisoning" amount="0.5" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" delay="20">
+        <Conditional InWater="false" />
+        <RequiredItem identifier="radiotoxin" type="Contained" />
+        <Affliction identifier="radiationsickness" amount="0.5" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" delay="20">
+        <Conditional InWater="false" />
+        <RequiredItem identifier="sufforin" type="Contained" />
+        <Affliction identifier="sufforinpoisoning" amount="0.5" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" delay="20">
+        <Conditional InWater="false" />
+        <RequiredItem identifier="deliriumine" type="Contained" />
+        <Affliction identifier="deliriuminepoisoning" amount="0.5" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" delay="20">
+        <Conditional InWater="false" />
+        <RequiredItem identifier="paralyxis" type="Contained" />
+        <Affliction identifier="slowparalysis" amount="1.5" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" delay="20">
+        <Conditional InWater="false" />
+        <RequiredItem identifier="paralyzant" type="Contained" />
+        <Affliction identifier="paralysis" amount="3" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" delay="20">
+        <Conditional InWater="false" />
+        <RequiredItem identifier="hallucinogenicbufotoxin" type="Contained" />
+        <ReduceAffliction identifier="paralysis" amount="6" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" targetlimb="Torso" delay="20">
+        <Conditional InWater="false" />
+        <RequiredItem identifier="sulphuricacid" type="Contained" />
+        <Affliction identifier="acidburn" amount="3.5" />
+        <Affliction identifier="organdamage" amount="5" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" delay="20">
+        <Conditional InWater="false" />
+        <RequiredItem identifier="ethanol" type="Contained" />
+        <Affliction identifier="drunk" amount="1" />
+        <ReduceAffliction identifier="psychosis" amount="1" />
+        <ReduceAffliction identifier="hallucinating" amount="1" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" interval="1">
+        <Conditional InWater="false" />
+        <RequiredItem identifier="huskeggsbasic" type="Contained" />
+        <Affliction identifier="huskinfection" amount="1" probability="0.01"/>
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" interval="1">
+        <Conditional InWater="false" />
+        <RequiredItem identifier="huskeggs" type="Contained" />
+        <Affliction identifier="huskinfection" amount="1" probability="0.25"/>
+      </StatusEffect>
+    </Holdable>
+    <AiTarget sightrange="1000" static="true" />
+    <!-- Poison Container -->
+    <ItemContainer capacity="11" maxstacksize="1" hideitems="true" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="false" ShowContainedStateIndicator="false" removecontaineditemsondeconstruct="true">
+      <Containable items="poison,ethanol,huskeggsbasic,huskeggs,paralyxis" />
+    </ItemContainer>
+	
+BACKUP OF NEW POISON EFFECTS:
+<!-- Poison Effects -->
+      <StatusEffect type="OnUse" target="Character">
+        <Conditional InWater="false" />
+        <RequiredItem identifier="morbusine" type="Contained" />
+        <Affliction identifier="applymorbusinepoisoning" amount="0.5" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Character">
+        <Conditional InWater="false" />
+        <RequiredItem identifier="chloralhydrate" type="Contained" />
+        <Affliction identifier="applyincrementalstun" amount="50" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Character">
+        <Conditional InWater="false" />
+        <RequiredItem identifier="cyanide" type="Contained" />
+        <Affliction identifier="applycyanidepoisoning" amount="0.5" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Character">
+        <Conditional InWater="false" />
+        <RequiredItem identifier="radiotoxin" type="Contained" />
+        <Affliction identifier="applyradiationsickness" amount="0.5" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Character">
+        <Conditional InWater="false" />
+        <RequiredItem identifier="sufforin" type="Contained" />
+        <Affliction identifier="applysufforinpoisoning" amount="0.5" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Character">
+        <Conditional InWater="false" />
+        <RequiredItem identifier="deliriumine" type="Contained" />
+        <Affliction identifier="applydeliriuminepoisoning" amount="0.5" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Character">
+        <Conditional InWater="false" />
+        <RequiredItem identifier="paralyxis" type="Contained" />
+        <Affliction identifier="applyslowparalysis" amount="1.5" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Character">
+        <Conditional InWater="false" />
+        <RequiredItem identifier="paralyzant" type="Contained" />
+        <Affliction identifier="applyparalysis" amount="3" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Character">
+        <Conditional InWater="false" />
+        <RequiredItem identifier="hallucinogenicbufotoxin" type="Contained" />
+        <ReduceAffliction identifier="applyparalysis" amount="6" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" targetlimb="Torso">
+        <Conditional InWater="false" />
+        <RequiredItem identifier="sulphuricacid" type="Contained" />
+        <Affliction identifier="applyacidburn" amount="3.5" />
+        <Affliction identifier="applyorgandamage" amount="5" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Character">
+        <Conditional InWater="false" />
+        <RequiredItem identifier="ethanol" type="Contained" />
+        <Affliction identifier="applydrunk" amount="1" />
+        <ReduceAffliction identifier="applypsychosis" amount="1" />
+        <ReduceAffliction identifier="applyhallucinating" amount="1" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" interval="1">
+        <Conditional InWater="false" />
+        <RequiredItem identifier="huskeggsbasic" type="Contained" />
+        <Affliction identifier="huskinfection" amount="1" probability="0.01"/>
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" interval="1">
+        <Conditional InWater="false" />
+        <RequiredItem identifier="huskeggs" type="Contained" />
+        <Affliction identifier="huskinfection" amount="1" probability="0.25"/>
+      </StatusEffect>
+    </Holdable>
+    <AiTarget sightrange="1000" static="true" />
+    <!-- Poison Container -->
+    <ItemContainer capacity="11" maxstacksize="1" hideitems="true" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="false" ShowContainedStateIndicator="false" removecontaineditemsondeconstruct="true">
+      <Containable items="poison,ethanol,huskeggsbasic,huskeggs,paralyxis" />
+    </ItemContainer>
