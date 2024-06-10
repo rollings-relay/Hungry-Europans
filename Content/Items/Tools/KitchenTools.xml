@@ -20,12 +20,24 @@
         <RequiredItem identifier="steel" />
       </Fabricate>
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1752,104,77,12" origin="0.5,0.5" />
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1752,104,77,12" depth="0.55" />
-      <Body width="75" height="10" density="13.0" />
-      <Holdable canbecombined="false" slots="Any,RightHand,LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect" />
-      <ItemContainer capacity="6" hideitems="true">
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="123,29,101,12" depth="0.55" />
+      <Body width="98" height="10" density="15.0" />
+      <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-18,0" holdangle="60" reload="1.0" range="50" combatpriority="8" msg="ItemMsgPickUpSelect">
+        <Attack structuredamage="0" itemdamage="2" targetimpulse="5">
+          <Affliction identifier="blunttrauma" strength="8" />
+          <Affliction identifier="blunttrauma" strength="8" probability="0.5" />
+          <Affliction identifier="stun" strength="0.2" />
+          <StatusEffect type="OnUse" target="UseTarget" forceplaysounds="true">
+            <Conditional entitytype="eq Character"/>
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Impact/PanHit1.ogg" selectionmode="random" range="700"/>
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Impact/PanHit2.ogg" selectionmode="random" range="700"/>
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Impact/PanHit3.ogg" selectionmode="random" range="700"/>
+          </StatusEffect>
+        </Attack>
+      </MeleeWeapon>
+      <!-- <ItemContainer capacity="6" hideitems="true">
         <Containable items="allowinpan" />
-      </ItemContainer>
+      </ItemContainer> -->
     </Item>
     <Item name="Pot" identifier="he-pot" category="Equipment" maxstacksize="1" Tags="smallitem,pot" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="kitchen" />
