@@ -147,7 +147,7 @@
       </Holdable>
       <AiTarget sightrange="1000" static="True" />
     </Item>
-    <Item name="Raw Crawler Meat Patty" identifier="he-rawcrawlermeatpatty" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,canspoil,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
+    <Item name="Raw Crawler Meat Patty" identifier="he-rawcrawlermeatpatty" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,allowongrill,canspoil,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
@@ -170,6 +170,19 @@
         <Price storeidentifier="merchantmedical"/>
         <Price storeidentifier="merchantbutcher" multiplier="2.0" minavailable="0" maxavailable="32" sold="true" />
       </Price>
+      <Pump canbeselected="false" canbepicked="false" allowingameediting="false">
+        <ActiveConditional HasStatusTag="eq activegrill" targetcontainer="true" />
+        <StatusEffect type="OnActive" target="This" MaxValueLength="1" interval="1" disabledeltatime="true" />
+        <StatusEffect type="OnActive" target="This" MaxValueLength="0" setvalue="true" disabledeltatime="true">
+          <Conditional HasStatusTag="neq activegrill" targetcontainer="true" />
+        </StatusEffect>
+        <StatusEffect type="OnActive" target="This" interval="1" disabledeltatime="true">
+          <Conditional MaxValueLength="gte 45" />
+          <Remove />
+          <SpawnItem identifier="he-crawlermeatpatty" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+        </StatusEffect>
+      </Pump>
+      <MemoryComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" string="" MaxValueLength="0" />
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
         <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
         <StatusEffect type="Always" target="This" timeframe="0" interval="2" disabledeltatime="true" setvalue="true">
@@ -199,7 +212,7 @@
       </Holdable>
       <AiTarget sightrange="1000" static="True" />
     </Item>
-    <Item name="Raw Crawler Sausage" identifier="he-rawcrawlersausage" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,canspoil,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
+    <Item name="Raw Crawler Sausage" identifier="he-rawcrawlersausage" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,allowongrill,canspoil,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
@@ -224,6 +237,19 @@
         <Price storeidentifier="merchantmedical"/>
         <Price storeidentifier="merchantbutcher" multiplier="2.0" minavailable="0" maxavailable="32" sold="true" />
       </Price>
+      <Pump canbeselected="false" canbepicked="false" allowingameediting="false">
+        <ActiveConditional HasStatusTag="eq activegrill" targetcontainer="true" />
+        <StatusEffect type="OnActive" target="This" MaxValueLength="1" interval="1" disabledeltatime="true" />
+        <StatusEffect type="OnActive" target="This" MaxValueLength="0" setvalue="true" disabledeltatime="true">
+          <Conditional HasStatusTag="neq activegrill" targetcontainer="true" />
+        </StatusEffect>
+        <StatusEffect type="OnActive" target="This" interval="1" disabledeltatime="true">
+          <Conditional MaxValueLength="gte 45" />
+          <Remove />
+          <SpawnItem identifier="he-crawlersausage" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+        </StatusEffect>
+      </Pump>
+      <MemoryComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" string="" MaxValueLength="0" />
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
         <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
         <StatusEffect type="Always" target="This" timeframe="0" interval="2" disabledeltatime="true" setvalue="true">
