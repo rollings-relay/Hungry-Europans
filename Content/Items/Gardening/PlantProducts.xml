@@ -2,7 +2,7 @@
 <Override>
 <Items>
   <!-- REGULAR VARIANTS -->
-  <Item name="Pomegrenade" identifier="creepingorange" category="Material" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,fooditem,sugary,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="5.5" damagedbyexplosions="false" allowasextracargo="True">
+  <Item name="Pomegrenade" identifier="creepingorange" category="Material" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,fooditem,sugary,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="True">
     <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="971,649,43,55" origin="0.5,0.5" />
     <Body radius="30" density="5" />
     <Price baseprice="20" sold="false">
@@ -95,7 +95,7 @@
     </Throwable>
     <PreferredContainer primary="plantcontainer"/>
   </Item>
-  <Item name="Salt Bulb" identifier="saltbulb" category="Material" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,explodesinwater" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="5" damagedbyexplosions="false" allowasextracargo="true">
+  <Item name="Salt Bulb" identifier="saltbulb" category="Material" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,explodesinwater" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true">
     <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="968,712,49,55" origin="0.5,0.5" />
     <Body radius="30" density="9" />
     <Price baseprice="65" sold="false">
@@ -140,7 +140,7 @@
     </Throwable>
     <PreferredContainer primary="plantcontainer"/>
   </Item>
-  <Item name="Raptor Bane" identifier="raptorbane" category="Material" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="5" damagedbyexplosions="false" allowasextracargo="true">
+  <Item name="Raptor Bane" identifier="raptorbane" category="Material" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true">
     <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="971,777,44,50" origin="0.5,0.5" />
     <Body radius="30" density="9" waterdragcoefficient="10"/>
     <Price baseprice="40" sold="false">
@@ -178,7 +178,7 @@
     <PreferredContainer primary="plantcontainer"/>
   </Item>
   <!-- NEW PLANTS -->
-  <Item name="Bubbleberries" identifier="bubbleberries" category="Material" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,fooditem,sugary,petfood1,petfood2,petfood3" description="Very tasty and juicy." cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="5.5" damagedbyexplosions="false" allowasextracargo="True">
+  <Item name="Bubbleberries" identifier="bubbleberries" category="Material" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,fooditem,sugary,petfood1,petfood2,petfood3" description="Very tasty and juicy." cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="True">
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.2" sourcerect="183,0,54,48" origin="0.5,0.5" />
     <Body radius="30" density="5" />
     <Price baseprice="40" sold="false">
@@ -335,7 +335,7 @@
     <PreferredContainer primary="plantcontainer"/>
   </Item>
   <!-- MUTATED VARIANTS -->
-  <Item name="Mutated Pomegrenade" identifier="badcreepingorange" descriptionidentifier="creepingorange" category="Material" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,sugary,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="5.5" damagedbyexplosions="false" allowasextracargo="true">
+  <Item name="Mutated Pomegrenade" identifier="badcreepingorange" descriptionidentifier="creepingorange" category="Material" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,mutatedplant,sugary,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true">
     <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="971,835,43,55" origin="0.5,0.5" />
     <Body radius="30" density="9" />
     <Deconstruct time="7">
@@ -411,7 +411,7 @@
     <AiTarget sightrange="1000" static="true" />
     <PreferredContainer primary="plantcontainer"/>
   </Item>
-  <Item name="Mutated Tobacco Bud" identifier="badtobaccobud" descriptionidentifier="tobaccobud" category="Material" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="5.5" damagedbyexplosions="false" allowasextracargo="true">
+  <Item name="Mutated Tobacco Bud" identifier="badtobaccobud" descriptionidentifier="tobaccobud" category="Material" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,mutatedplant,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true">
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.2" sourcerect="0,51,47,56" origin="0.5,0.5" />
     <Body radius="30" density="9"/>
     <Deconstruct time="7">
@@ -463,7 +463,7 @@
     <AiTarget sightrange="1000" static="true" />
     <PreferredContainer primary="plantcontainer"/>
   </Item>
-  <Item name="Mutated Salt Bulb" identifier="badsaltbulb" descriptionidentifier="saltbulb" category="Material" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,explodesinwater,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="5.5" damagedbyexplosions="false" allowasextracargo="true">
+  <Item name="Mutated Salt Bulb" identifier="badsaltbulb" descriptionidentifier="saltbulb" category="Material" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,mutatedplant,explodesinwater,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true">
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.2" sourcerect="0,107,51,57" origin="0.5,0.5" />
     <Body radius="30" density="9" />
     <Deconstruct time="7">
@@ -480,24 +480,18 @@
       <StatusEffect type="OnBroken" targettype="This" IsOn="false" />
     </LightComponent>
     <Throwable characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="3.5" aimpos="35,-10" msg="ItemMsgPickUpSelect">
-      <StatusEffect type="InWater" target="This" Condition="0.0" setvalue="true">
-        <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" range="4000" />
-        <sound file="Content/Items/Weapons/ExplosionSmall2.ogg" range="4000" />
-        <sound file="Content/Items/Weapons/ExplosionSmall3.ogg" range="4000" />
-        <Explosion range="1000.0" ballastfloradamage="1000" structuredamage="500" itemdamage="1000" force="20" severlimbsprobability="1.0" decal="explosion" decalsize="3.0" penetration="0.5">
-          <Affliction identifier="burn" strength="90" />
-          <Affliction identifier="stun" strength="5" />
-          <Affliction identifier="lacerations" strength="50" />
-        </Explosion>
-      </StatusEffect>
+      <StatusEffect type="InWater" target="This" Scale="0.08" />
       <StatusEffect type="OnNotContained" target="This" Scale="0.01">
+        <Conditional InWater="false" />
         <sound file="Content/Sounds/Damage/Gore1.ogg" selectionmode="Random" range="500" volume="0.5" />
         <sound file="Content/Sounds/Damage/Gore2.ogg" selectionmode="Random" range="500" volume="0.5" />
         <sound file="Content/Sounds/Damage/Gore3.ogg" selectionmode="Random" range="500" volume="0.5" />
         <sound file="Content/Sounds/Damage/Gore4.ogg" selectionmode="Random" range="500" volume="0.5" />
         <ParticleEmitter particle="spark" particleburstamount="5" particlespersecond="5" anglemin="0" anglemax="360" velocitymin="100" velocitymax="500" particleburstinterval="2" scalemin="0.5" scalemax="1" />
       </StatusEffect>
-      <StatusEffect type="OnNotContained" target="This" Condition="0.0" setvalue="true">
+      <StatusEffect type="InWater" target="This" LightColor="200,0,0,255" Flicker="0.2" pulseamount="0.8" pulsefrequency="2" setvalue="true" />
+      <StatusEffect type="OnNotContained" target="This"  LightColor="200,60,0,255" Flicker="0.2" pulseamount="0.0" pulsefrequency="0" setvalue="true" />
+      <StatusEffect type="Always" target="This" Condition="0.0" setvalue="true">
         <Conditional Scale="gte 0.75" />
       </StatusEffect>
       <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true" />
@@ -513,7 +507,10 @@
         <Remove />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
-        <sound file="Content/Sounds/Damage/Limbslash2.ogg" range="1000" />
+        <Conditional InWater="false" />
+        <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" range="4000" selectionmode="Random" />
+        <sound file="Content/Items/Weapons/ExplosionSmall2.ogg" range="4000" selectionmode="Random" />
+        <sound file="Content/Items/Weapons/ExplosionSmall3.ogg" range="4000" selectionmode="Random" />
         <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" />
         <ParticleEmitter particle="fruitchunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" />
         <Explosion range="500.0" ballastfloradamage="500" structuredamage="200" itemdamage="500" force="15" severlimbsprobability="0.5" decal="explosion" decalsize="1.5" penetration="0.5">
@@ -524,11 +521,23 @@
         <Fire size="5.0" />
         <Remove />
       </StatusEffect>
+      <StatusEffect type="OnBroken" target="This" Condition="-100.0">
+        <Conditional InWater="true" />
+        <sound file="Content/Items/Weapons/ExplosionMedium1.ogg" range="4000" selectionmode="Random" />
+        <sound file="Content/Items/Weapons/ExplosionMedium2.ogg" range="4000" selectionmode="Random" />
+        <sound file="Content/Items/Weapons/ExplosionMedium3.ogg" range="4000" selectionmode="Random" />
+        <Explosion range="1000.0" ballastfloradamage="1000" structuredamage="500" itemdamage="1000" force="20" severlimbsprobability="1.0" decal="explosion" decalsize="3.0" penetration="0.5">
+          <Affliction identifier="burn" strength="90" />
+          <Affliction identifier="stun" strength="5" />
+          <Affliction identifier="lacerations" strength="50" />
+        </Explosion>
+        <Remove />
+      </StatusEffect>
     </Throwable>
     <AiTarget sightrange="1000" static="true" />
     <PreferredContainer primary="plantcontainer"/>
   </Item>
-  <Item name="Mutated Raptor Bane" identifier="badraptorbane" descriptionidentifier="raptorbane" category="Material" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="5.5" damagedbyexplosions="false" allowasextracargo="true">
+  <Item name="Mutated Raptor Bane" identifier="badraptorbane" descriptionidentifier="raptorbane" category="Material" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,mutatedplant,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true">
     <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="907,838,44,50" origin="0.5,0.5" />
     <Body radius="30" density="9"/>
     <Deconstruct time="7">
@@ -570,7 +579,7 @@
     <AiTarget sightrange="1000" static="true" />
     <PreferredContainer primary="plantcontainer"/>
   </Item>
-  <Item name="Mutated Bubbleberries" identifier="badbubbleberries" descriptionidentifier="bubbleberries" category="Material" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,fooditem,sugary,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="5.5" damagedbyexplosions="false" allowasextracargo="true">
+  <Item name="Mutated Bubbleberries" identifier="badbubbleberries" descriptionidentifier="bubbleberries" category="Material" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,mutatedplant,fooditem,sugary,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true">
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.2" sourcerect="237,0,54,48" origin="0.5,0.5" />
     <Body radius="30" density="9" />
     <Deconstruct time="7">
@@ -619,7 +628,7 @@
     <AiTarget sightrange="1000" static="true" />
     <PreferredContainer primary="plantcontainer"/>
   </Item>
-  <Item name="Mutated Popnut" identifier="badpopnut" descriptionidentifier="popnut" category="Material" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,fooditem,waterreactivesize,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.25" impactsoundtag="impact_soft" impacttolerance="5.5" damagedbyexplosions="false" allowasextracargo="true">
+  <Item name="Mutated Popnut" identifier="badpopnut" descriptionidentifier="popnut" category="Material" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,mutatedplant,fooditem,waterreactivesize,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.25" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true">
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.2" sourcerect="92,0,45,46" origin="0.5,0.5" />
     <Body radius="30" density="2.8" />
     <Deconstruct time="7">
@@ -659,7 +668,7 @@
     <AiTarget sightrange="1000" static="true" />
     <PreferredContainer primary="plantcontainer"/>
   </Item>
-  <Item name="Popped Mutated Popnut" identifier="badpopnutpopped" descriptionidentifier="popnut" category="Material" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,waterreactivesize,fooditem,sugary,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" damagedbyexplosions="false" allowasextracargo="true">
+  <Item name="Popped Mutated Popnut" identifier="badpopnutpopped" descriptionidentifier="popnut" category="Material" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,mutatedplant,waterreactivesize,fooditem,sugary,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" damagedbyexplosions="false" allowasextracargo="true">
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.2" sourcerect="137,0,46,51" origin="0.5,0.5" />
     <Body radius="30" density="2" />
     <Deconstruct time="7">
