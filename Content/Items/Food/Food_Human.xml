@@ -3,7 +3,7 @@
   <Items>
     <!-- MEAT -->
     <!--Human-->
-    <Item name="Filet" identifier="he-cookedhumanfilet" category="Misc" subcategory="Food" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+    <Item name="Filet" identifier="he-cookedhumanfilet" category="Misc" subcategory="Food" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.4" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
@@ -40,6 +40,11 @@
           <ReduceAffliction identifier="psychosis" amount="1" />
           <ReduceAffliction identifier="nausea" amount="1" />
         </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
+          <Conditional IsBot="true" />
+          <Conditional trait_likes_filets="gt 0" />
+          <ReduceAffliction identifier="mood" amount="0.5" />
+        </StatusEffect>
         <!-- Allow the item to be applied to a player fully, if the player is not in water and unconcious/stunned -->
         <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
           <Conditional InWater="false" />
@@ -66,6 +71,13 @@
           <Affliction identifier="he-cannibalskillincrease" amount="18.0" />
           <ReduceAffliction identifier="psychosis" amount="1" />
           <ReduceAffliction identifier="nausea" amount="1" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" comparison="And" multiplyafflictionsbymaxvitality="true">
+          <Conditional InWater="false" />
+          <Conditional stun="gt 0" />
+          <Conditional IsPlayer="true" />
+          <Conditional trait_likes_filets="gt 0" />
+          <ReduceAffliction identifier="mood" amount="0.5" />
         </StatusEffect>
         <!-- Poison Effects Bot -->
         <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" delay="20" comparison="And">
@@ -256,6 +268,11 @@
           <Conditional hunger="gt 0.5" />
           <ReduceAffliction type="hunger" amount="0.5" />
         </StatusEffect>
+        <StatusEffect type="OnUse" target="Character" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional trait_likes_filets="gt 0" />
+          <ReduceAffliction identifier="mood" amount="0.5" />
+        </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
         </StatusEffect>
@@ -373,6 +390,11 @@
           <ReduceAffliction identifier="psychosis" amount="0.5" />
           <ReduceAffliction identifier="nausea" amount="0.5" />
         </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
+          <Conditional IsBot="true" />
+          <Conditional trait_likes_nuggets="gt 0" />
+          <ReduceAffliction identifier="mood" amount="1.25" />
+        </StatusEffect>
         <!-- Allow the item to be applied to a player fully, if the player is not in water and unconcious/stunned -->
         <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
           <Conditional InWater="false" />
@@ -399,6 +421,13 @@
           <Affliction identifier="he-cannibalskillincrease" amount="16.0" />
           <ReduceAffliction identifier="psychosis" amount="0.5" />
           <ReduceAffliction identifier="nausea" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="2.5" comparison="And" multiplyafflictionsbymaxvitality="true">
+          <Conditional InWater="false" />
+          <Conditional stun="gt 0" />
+          <Conditional IsPlayer="true" />
+          <Conditional trait_likes_nuggets="gt 0" />
+          <ReduceAffliction identifier="mood" amount="0.5" />
         </StatusEffect>
         <!-- Poison Effects Bot -->
         <StatusEffect type="OnSuccess" target="This,UseTarget" duration="2.5" delay="20" comparison="And">
@@ -589,6 +618,11 @@
           <Conditional hunger="gt 0.5" />
           <ReduceAffliction type="hunger" amount="0.5" />
         </StatusEffect>
+        <StatusEffect type="OnUse" target="Character" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional trait_likes_nuggets="gt 0" />
+          <ReduceAffliction identifier="mood" amount="0.5" />
+        </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
         </StatusEffect>
@@ -668,7 +702,7 @@
         <Containable items="poison,ethanol,huskeggsbasic,huskeggs,paralyxis" />
       </ItemContainer>
     </Item>
-    <Item name="Burger" identifier="he-humanburger" category="Misc" subcategory="Food" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+    <Item name="Burger" identifier="he-humanburger" category="Misc" subcategory="Food" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.4" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
@@ -710,6 +744,11 @@
           <ReduceAffliction identifier="psychosis" amount="0.5" />
           <ReduceAffliction identifier="nausea" amount="0.5" />
         </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
+          <Conditional IsBot="true" />
+          <Conditional trait_likes_burgers="gt 0" />
+          <ReduceAffliction identifier="mood" amount="12.5" />
+        </StatusEffect>
         <!-- Allow the item to be applied to a player fully, if the player is not in water and unconcious/stunned -->
         <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
           <Conditional InWater="false" />
@@ -736,6 +775,13 @@
           <Affliction identifier="he-cannibalskillincrease" amount="16.0" />
           <ReduceAffliction identifier="psychosis" amount="0.5" />
           <ReduceAffliction identifier="nausea" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" comparison="And" multiplyafflictionsbymaxvitality="true">
+          <Conditional InWater="false" />
+          <Conditional stun="gt 0" />
+          <Conditional IsPlayer="true" />
+          <Conditional trait_likes_burgers="gt 0" />
+          <ReduceAffliction identifier="mood" amount="0.5" />
         </StatusEffect>
         <!-- Poison Effects Bot -->
         <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" delay="20" comparison="And">
@@ -936,6 +982,11 @@
           <Conditional hunger="gt 0.5" />
           <ReduceAffliction type="hunger" amount="0.5" />
         </StatusEffect>
+        <StatusEffect type="OnUse" target="Character" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional trait_likes_burgers="gt 0" />
+          <ReduceAffliction identifier="mood" amount="0.5" />
+        </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
         </StatusEffect>
@@ -1015,7 +1066,7 @@
         <Containable items="poison,ethanol,huskeggsbasic,huskeggs,paralyxis" />
       </ItemContainer>
     </Item>
-    <Item name="Hotdog" identifier="he-humanhotdog" category="Misc" subcategory="Food" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+    <Item name="Hotdog" identifier="he-humanhotdog" category="Misc" subcategory="Food" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.4" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="True"/>
@@ -1054,6 +1105,11 @@
           <ReduceAffliction identifier="psychosis" amount="0.5" />
           <ReduceAffliction identifier="nausea" amount="0.5" />
         </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
+          <Conditional IsBot="true" />
+          <Conditional trait_likes_hotdogs="gt 0" />
+          <ReduceAffliction identifier="mood" amount="8.3" />
+        </StatusEffect>
         <!-- Allow the item to be applied to a player fully, if the player is not in water and unconcious/stunned -->
         <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
           <Conditional InWater="false" />
@@ -1080,6 +1136,13 @@
           <Affliction identifier="he-cannibalskillincrease" amount="16.0" />
           <ReduceAffliction identifier="psychosis" amount="0.5" />
           <ReduceAffliction identifier="nausea" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="16.6" comparison="And" multiplyafflictionsbymaxvitality="true">
+          <Conditional InWater="false" />
+          <Conditional stun="gt 0" />
+          <Conditional IsPlayer="true" />
+          <Conditional trait_likes_hotdogs="gt 0" />
+          <ReduceAffliction identifier="mood" amount="0.5" />
         </StatusEffect>
         <!-- Poison Effects Bot -->
         <StatusEffect type="OnSuccess" target="This,UseTarget" duration="16.6" delay="20" comparison="And">
@@ -1269,6 +1332,11 @@
           <Conditional InWater="false" />
           <Conditional hunger="gt 0.5" />
           <ReduceAffliction type="hunger" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional trait_likes_hotdogs="gt 0" />
+          <ReduceAffliction identifier="mood" amount="0.5" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
