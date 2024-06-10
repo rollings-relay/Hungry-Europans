@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talents>
   <!--COMMON TALENTS-->
+  <!-- Test comment -->
   <!--Bonus XP on Monster and Nest Missions-->
   <Override>
     <Talent identifier="he-poacher">
