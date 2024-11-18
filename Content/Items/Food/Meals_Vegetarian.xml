@@ -1,42 +1,300 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Override>
   <Items>
-    <!-- MEAT -->
-    <!--Crawler-->
-    <Item name="Nugget" identifier="he-cookedcrawlernugget" category="Misc" subcategory="Food" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+    <!-- VEGETARIAN -->
+    <Item name="Popnut-Bubbleberry Salad" identifier="he-popnutbubblesalad" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.4" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
-      <PreferredContainer primary="kitchen" secondary="table,crewcab"/>
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="225,455,17,11" depth="0.6" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/UI/InventoryIcons.png" sourcerect="191,0,55,38" origin="0.5,0.5" />
-      <!-- 8 nuggets should about equal the values of 1 burger patty -->
-      <Fabricate suitablefabricators="fryer" requiredtime="60" requiresrecipe="false" amount="16" displayname="crawlerfooditem">
-        <RequiredSkill identifier="cooking" level="15" />
-        <RequiredItem identifier="he-rawcrawlernuggets" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
-        <RequiredItem identifier="he-cookingoil" UseCondition="True" MinCondition="0.25"/>
+      <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="720,30,68,29" depth="0.6" origin="0.5,0.9" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="720,30,68,29" origin="0.5,0.5" />
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="90" requiresrecipe="false" amount="1" displayname="watcherfooditem">
+        <RequiredSkill identifier="cooking" level="50" />
+        <RequiredItem identifier="bubbleberries" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
+        <RequiredItem identifier="bubbleberryleaf" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
+        <RequiredItem identifier="popnutpopped" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
+        <RequiredItem identifier="popnutleaf" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
+        <RequiredItem identifier="he-nori" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
-      <Body width="78" radius="5" density="11" />
-      <SuitableTreatment type="hunger" suitability="35" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" handle1="5,-10" aimpos="20,12" holdangle="270" holdpos="25,30" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Body width="61" radius="18" density="12" />
+      <SuitableTreatment type="hunger" suitability="95" />
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="LeftHand,RightHand" holdangle="0" holdpos="36,-20" handle1="0,-4" handle2="0,-4" aimable="false" msg="ItemMsgPickUpSelect">
+        <!--////////// HEALTH MENU USAGE \\\\\\\\\\-->
+        <!-- Allow the item to be applied to a bot, but prevent full usage on a player -->
+        <StatusEffect type="OnSuccess" target="This,UseTarget" condition="-1000" disabledeltatime="true" comparison="And" multiplyafflictionsbymaxvitality="true">
+          <Conditional IsBot="true" />
+          <Affliction identifier="he-stuffed" amount="10" />
+          <ReduceAffliction type="damage" amount="13.75" />
+          <ReduceAffliction type="hunger" amount="12.5" />
+          <ReduceAffliction type="thirst" amount="12.5" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
+          <Conditional IsBot="true" />
+          <Affliction identifier="he-stuffed" amount="0.4" />
+          <ReduceAffliction type="damage" amount="0.55" />
+          <ReduceAffliction type="hunger" amount="0.5" />
+          <ReduceAffliction identifier="he-starvation" amount="20" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
+          <Conditional IsBot="true" />
+          <Conditional trait_likes_salads="gt 0" />
+          <ReduceAffliction identifier="mood" amount="0.5" />
+        </StatusEffect>
+
+        <!--////////// REGULAR EATING \\\\\\\\\\-->
+        <!-- Use the item when it's held and the fork in the other hand is used (indicated by applying a "usingfork" tag on the character which this item checks for -->
+        <StatusEffect type="OnActive" target="This" Condition="-4.0" duration="1" stackable="false" comparison="And">
+          <Conditional HasStatusTag="usingfork" targetcontainer="true" />
+          <Conditional HasStatusTag="neq emptyfork" targetcontainer="true" />
+          <Conditional InWater="false" />
+        </StatusEffect>
+        <StatusEffect type="OnSecondaryUse" target="Character" duration="1" stackable="false" comparison="And">
+          <Conditional HasStatusTag="usingfork" />
+          <Conditional HasStatusTag="neq emptyfork"/>
+          <Conditional InWater="false" />
+          <Affliction identifier="he-stuffed" amount="0.4" />
+          <ReduceAffliction type="damage" amount="0.55" />
+          <Affliction identifier="spill" amount="1000" probability="0.0005" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork1.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork2.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork3.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork4.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork5.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
+        </StatusEffect>
+        <StatusEffect type="OnSecondaryUse" target="Character" comparison="And" duration="1" stackable="false">
+          <Conditional HasStatusTag="usingfork" />
+          <Conditional HasStatusTag="neq emptyfork" />
+          <Conditional InWater="false" />
+          <Conditional hunger="gt 0.5" />
+          <ReduceAffliction type="hunger" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnSecondaryUse" target="Character" comparison="And" duration="1" stackable="false">
+          <Conditional HasStatusTag="usingfork" />
+          <Conditional HasStatusTag="neq emptyfork" />
+          <Conditional InWater="false" />
+          <Conditional thirst="gt 0.5" />
+          <ReduceAffliction type="thirst" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnSecondaryUse" target="Character" comparison="And" duration="1" stackable="false">
+          <Conditional HasStatusTag="usingfork" />
+          <Conditional HasStatusTag="neq emptyfork" />
+          <Conditional InWater="false" />
+          <Conditional trait_likes_salads="gt 0" />
+          <ReduceAffliction identifier="mood" amount="0.5" />
+        </StatusEffect>
+        <!-- Prevent using this item continuously by applying the tag "emptyfork" which prevents the StatusEffect that uses the item from triggering again, effectively only allowing it to trigger once per mouse-click -->
+        <StatusEffect type="OnActive" target="Character" tags="emptyfork" interval="0.1" duration="0.2">
+          <Conditional HasStatusTag="usingfork" />
+        </StatusEffect>
+        <StatusEffect type="OnBroken" target="This" disabledeltatime="true">
+          <Remove />
+          <SpawnItem identifier="he-dirtyplate" spawnposition="SameInventory" spawnifcantbecontained="true" />
+        </StatusEffect>
+
+        <!--////////// POISON EFFECTS FOR REGULAR EATING \\\\\\\\\\-->
+        <StatusEffect type="OnSecondaryUse" target="Character" delay="20" duration="1" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional HasStatusTag="usingfork" />
+          <Conditional HasStatusTag="neq emptyfork" />
+          <RequiredItem identifier="morbusine" type="Contained" />
+          <Affliction identifier="morbusinepoisoning" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnSecondaryUse" target="Character" delay="20" duration="1" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional HasStatusTag="usingfork" />
+          <Conditional HasStatusTag="neq emptyfork" />
+          <RequiredItem identifier="chloralhydrate" type="Contained" />
+          <Affliction identifier="incrementalstun" amount="50" />
+        </StatusEffect>
+        <StatusEffect type="OnSecondaryUse" target="Character" delay="20" duration="1" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional HasStatusTag="usingfork" />
+          <Conditional HasStatusTag="neq emptyfork" />
+          <RequiredItem identifier="cyanide" type="Contained" />
+          <Affliction identifier="cyanidepoisoning" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnSecondaryUse" target="Character" delay="20" duration="1" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional HasStatusTag="usingfork" />
+          <Conditional HasStatusTag="neq emptyfork" />
+          <RequiredItem identifier="radiotoxin" type="Contained" />
+          <Affliction identifier="radiationsickness" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnSecondaryUse" target="Character" delay="20" duration="1" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional HasStatusTag="usingfork" />
+          <Conditional HasStatusTag="neq emptyfork" />
+          <RequiredItem identifier="sufforin" type="Contained" />
+          <Affliction identifier="sufforinpoisoning" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnSecondaryUse" target="Character" delay="20" duration="1" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional HasStatusTag="usingfork" />
+          <Conditional HasStatusTag="neq emptyfork" />
+          <RequiredItem identifier="deliriumine" type="Contained" />
+          <Affliction identifier="deliriuminepoisoning" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnSecondaryUse" target="Character" delay="20" duration="1" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional HasStatusTag="usingfork" />
+          <Conditional HasStatusTag="neq emptyfork" />
+          <RequiredItem identifier="paralyxis" type="Contained" />
+          <Affliction identifier="slowparalysis" amount="1.5" />
+        </StatusEffect>
+        <StatusEffect type="OnSecondaryUse" target="Character" delay="20" duration="1" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional HasStatusTag="usingfork" />
+          <Conditional HasStatusTag="neq emptyfork" />
+          <RequiredItem identifier="paralyzant" type="Contained" />
+          <Affliction identifier="paralysis" amount="3" />
+        </StatusEffect>
+        <StatusEffect type="OnSecondaryUse" target="Character" delay="20" duration="1" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional HasStatusTag="usingfork" />
+          <Conditional HasStatusTag="neq emptyfork" />
+          <RequiredItem identifier="hallucinogenicbufotoxin" type="Contained" />
+          <ReduceAffliction identifier="paralysis" amount="6" />
+        </StatusEffect>
+        <StatusEffect type="OnSecondaryUse" target="Character" targetlimb="Torso" delay="20" duration="1" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional HasStatusTag="usingfork" />
+          <Conditional HasStatusTag="neq emptyfork" />
+          <RequiredItem identifier="sulphuricacid" type="Contained" />
+          <Affliction identifier="acidburn" amount="3.5" />
+          <Affliction identifier="organdamage" amount="5" />
+        </StatusEffect>
+        <StatusEffect type="OnSecondaryUse" target="Character" delay="20" duration="1" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional HasStatusTag="usingfork" />
+          <Conditional HasStatusTag="neq emptyfork" />
+          <RequiredItem identifier="ethanol" type="Contained" />
+          <Affliction identifier="drunk" amount="1" />
+          <ReduceAffliction identifier="psychosis" amount="1" />
+          <ReduceAffliction identifier="hallucinating" amount="1" />
+        </StatusEffect>
+        <StatusEffect type="OnSecondaryUse" target="Character" interval="1" duration="1" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional HasStatusTag="usingfork" />
+          <Conditional HasStatusTag="neq emptyfork" />
+          <RequiredItem identifier="huskeggsbasic" type="Contained" />
+          <Affliction identifier="huskinfection" amount="1" probability="0.01"/>
+        </StatusEffect>
+        <StatusEffect type="OnSecondaryUse" target="Character" interval="1" duration="1" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional HasStatusTag="usingfork" />
+          <Conditional HasStatusTag="neq emptyfork" />
+          <RequiredItem identifier="huskeggs" type="Contained" />
+          <Affliction identifier="huskinfection" amount="1" probability="0.25"/>
+        </StatusEffect>
+
+        <!--////////// POISON EFFECTS FOR HEALTH MENU USAGE \\\\\\\\\\-->
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" delay="20" comparison="And">
+          <Conditional IsBot="true" />
+          <RequiredItem identifier="morbusine" type="Contained" />
+          <Affliction identifier="morbusinepoisoning" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" delay="20" comparison="And">
+          <Conditional IsBot="true" />
+          <RequiredItem identifier="chloralhydrate" type="Contained" />
+          <Affliction identifier="incrementalstun" amount="50" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" delay="20" comparison="And">
+          <Conditional IsBot="true" />
+          <RequiredItem identifier="cyanide" type="Contained" />
+          <Affliction identifier="cyanidepoisoning" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" delay="20" comparison="And">
+          <Conditional IsBot="true" />
+          <RequiredItem identifier="radiotoxin" type="Contained" />
+          <Affliction identifier="radiationsickness" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" delay="20" comparison="And">
+          <Conditional IsBot="true" />
+          <RequiredItem identifier="sufforin" type="Contained" />
+          <Affliction identifier="sufforinpoisoning" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" delay="20" comparison="And">
+          <Conditional IsBot="true" />
+          <RequiredItem identifier="deliriumine" type="Contained" />
+          <Affliction identifier="deliriuminepoisoning" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" delay="20" comparison="And">
+          <Conditional IsBot="true" />
+          <RequiredItem identifier="paralyxis" type="Contained" />
+          <Affliction identifier="slowparalysis" amount="1.5" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" delay="20" comparison="And">
+          <Conditional IsBot="true" />
+          <RequiredItem identifier="paralyzant" type="Contained" />
+          <Affliction identifier="paralysis" amount="3" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" delay="20" comparison="And">
+          <Conditional IsBot="true" />
+          <RequiredItem identifier="hallucinogenicbufotoxin" type="Contained" />
+          <ReduceAffliction identifier="paralysis" amount="6" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" targetlimb="Torso" duration="25" delay="20" comparison="And">
+          <Conditional IsBot="true" />
+          <RequiredItem identifier="sulphuricacid" type="Contained" />
+          <Affliction identifier="acidburn" amount="3.5" />
+          <Affliction identifier="organdamage" amount="5" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" delay="20" comparison="And">
+          <Conditional IsBot="true" />
+          <RequiredItem identifier="ethanol" type="Contained" />
+          <Affliction identifier="drunk" amount="1" />
+          <ReduceAffliction identifier="psychosis" amount="1" />
+          <ReduceAffliction identifier="hallucinating" amount="1" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" comparison="And">
+          <Conditional IsBot="true" />
+          <RequiredItem identifier="huskeggsbasic" type="Contained" />
+          <Affliction identifier="huskinfection" amount="1" probability="0.01"/>
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" comparison="And">
+          <Conditional IsBot="true" />
+          <RequiredItem identifier="huskeggs" type="Contained" />
+          <Affliction identifier="huskinfection" amount="1" probability="0.25"/>
+        </StatusEffect>
+      </Holdable>
+      <AiTarget sightrange="1000" static="true" />
+      <!-- Poison Container -->
+      <ItemContainer capacity="11" maxstacksize="1" hideitems="true" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="false" ShowContainedStateIndicator="false" removecontaineditemsondeconstruct="true">
+        <Containable items="poison,ethanol,huskeggsbasic,huskeggs,paralyxis" />
+      </ItemContainer>
+    </Item>
+    <Item name="Bubble Berry Jam Sandwich" identifier="he-sandwichbbjam" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="A tasty sandwich with bubble berry jam." Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
+      <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
+      <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
+      <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,275,47,11" depth="0.6" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,275,47,11" origin="0.5,0.5" />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,275,47,11" depth="0.525" origin="0.5,0.3"  />
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="10" requiresrecipe="false" amount="1">
+        <RequiredSkill identifier="cooking" level="30" />
+        <RequiredItem identifier="he-breadslices" amount="1"/>
+        <RequiredItem identifier="he-jambubbleberry" UseCondition="True" MinCondition="0.1"/>
+      </Fabricate>
+      <Deconstruct time="1" requireddeconstructor="deconstructor"/>
+      <Body width="47" height="11" density="5" />
+      <SuitableTreatment type="hunger" suitability="40" />
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <!-- Allow the item to be applied to a bot, but prevent full usage on a player -->
         <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
           <Conditional IsBot="true" />
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="This,UseTarget" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
           <Conditional IsBot="true" />
-          <Affliction identifier="he-increasedswimmingspeedcrawler10" amount="40.0" />
-          <Affliction identifier="he-stuffed" amount="2.8125" />
-          <ReduceAffliction type="damage" amount="0.375" />
-          <ReduceAffliction type="hunger" amount="1.25" />
+          <Affliction identifier="he-stuffed" amount="12.5" />
+          <ReduceAffliction type="damage" amount="3.75" />
+          <ReduceAffliction type="hunger" amount="22.5" />
+          <ReduceAffliction type="thirst" amount="10" />
           <ReduceAffliction identifier="he-starvation" amount="200" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
-          <Conditional IsBot="true" />
-          <Conditional trait_likes_nuggets="gt 0" />
-          <ReduceAffliction identifier="mood" amount="1.25" />
         </StatusEffect>
         <!-- Allow the item to be applied to a player fully, if the player is not in water and unconcious/stunned -->
         <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
@@ -44,158 +302,151 @@
           <Conditional stun="gt 0" />
           <Conditional IsPlayer="true" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="2.5" comparison="And" multiplyafflictionsbymaxvitality="true">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" comparison="And" multiplyafflictionsbymaxvitality="true">
           <Conditional InWater="false" />
           <Conditional stun="gt 0" />
           <Conditional IsPlayer="true" />
-          <Affliction identifier="he-increasedswimmingspeedcrawler10" amount="16.0" />
-          <Affliction identifier="he-stuffed" amount="1.125" />
-          <ReduceAffliction type="damage" amount="0.15" />
-          <ReduceAffliction type="hunger" amount="0.5" />
+          <Affliction identifier="he-stuffed" amount="1.0" />
+          <ReduceAffliction type="damage" amount="0.3" />
+          <ReduceAffliction type="hunger" amount="1.8" />
+          <ReduceAffliction type="thirst" amount="0.8" />
           <ReduceAffliction identifier="he-starvation" amount="20" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="2.5" comparison="And" multiplyafflictionsbymaxvitality="true">
-          <Conditional InWater="false" />
-          <Conditional stun="gt 0" />
-          <Conditional IsPlayer="true" />
-          <Conditional trait_likes_nuggets="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
-        </StatusEffect>
         <!-- Poison Effects Bot -->
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="2.5" delay="20" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" delay="20" comparison="And">
           <Conditional IsBot="true" />
           <RequiredItem identifier="morbusine" type="Contained" />
           <Affliction identifier="morbusinepoisoning" amount="0.5" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="2.5" delay="20" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" delay="20" comparison="And">
           <Conditional IsBot="true" />
           <RequiredItem identifier="chloralhydrate" type="Contained" />
           <Affliction identifier="incrementalstun" amount="50" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="2.5" delay="20" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" delay="20" comparison="And">
           <Conditional IsBot="true" />
           <RequiredItem identifier="cyanide" type="Contained" />
           <Affliction identifier="cyanidepoisoning" amount="0.5" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="2.5" delay="20" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" delay="20" comparison="And">
           <Conditional IsBot="true" />
           <RequiredItem identifier="radiotoxin" type="Contained" />
           <Affliction identifier="radiationsickness" amount="0.5" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="2.5" delay="20" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" delay="20" comparison="And">
           <Conditional IsBot="true" />
           <RequiredItem identifier="sufforin" type="Contained" />
           <Affliction identifier="sufforinpoisoning" amount="0.5" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="2.5" delay="20" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" delay="20" comparison="And">
           <Conditional IsBot="true" />
           <RequiredItem identifier="deliriumine" type="Contained" />
           <Affliction identifier="deliriuminepoisoning" amount="0.5" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="2.5" delay="20" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" delay="20" comparison="And">
           <Conditional IsBot="true" />
           <RequiredItem identifier="paralyxis" type="Contained" />
           <Affliction identifier="slowparalysis" amount="1.5" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="2.5" delay="20" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" delay="20" comparison="And">
           <Conditional IsBot="true" />
           <RequiredItem identifier="paralyzant" type="Contained" />
           <Affliction identifier="paralysis" amount="3" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="2.5" delay="20" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" delay="20" comparison="And">
           <Conditional IsBot="true" />
           <RequiredItem identifier="hallucinogenicbufotoxin" type="Contained" />
           <ReduceAffliction identifier="paralysis" amount="6" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" targetlimb="Torso" duration="2.5" delay="20" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" targetlimb="Torso" duration="12.5" delay="20" comparison="And">
           <Conditional IsBot="true" />
           <RequiredItem identifier="sulphuricacid" type="Contained" />
           <Affliction identifier="acidburn" amount="3.5" />
           <Affliction identifier="organdamage" amount="5" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="2.5" delay="20" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" delay="20" comparison="And">
           <Conditional IsBot="true" />
           <RequiredItem identifier="ethanol" type="Contained" />
           <Affliction identifier="drunk" amount="1" />
           <ReduceAffliction identifier="psychosis" amount="1" />
           <ReduceAffliction identifier="hallucinating" amount="1" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="2.5" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" comparison="And">
           <Conditional IsBot="true" />
           <RequiredItem identifier="huskeggsbasic" type="Contained" />
           <Affliction identifier="huskinfection" amount="1" probability="0.01"/>
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="2.5" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" comparison="And">
           <Conditional IsBot="true" />
           <RequiredItem identifier="huskeggs" type="Contained" />
           <Affliction identifier="huskinfection" amount="1" probability="0.25"/>
         </StatusEffect>
         <!-- Poison Effects Player -->
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="2.5" delay="20" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" delay="20" comparison="And">
           <Conditional InWater="false" />
           <Conditional stun="gt 0" />
           <Conditional IsPlayer="true" />
           <RequiredItem identifier="morbusine" type="Contained" />
           <Affliction identifier="morbusinepoisoning" amount="0.5" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="2.5" delay="20" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" delay="20" comparison="And">
           <Conditional InWater="false" />
           <Conditional stun="gt 0" />
           <Conditional IsPlayer="true" />
           <RequiredItem identifier="chloralhydrate" type="Contained" />
           <Affliction identifier="incrementalstun" amount="50" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="2.5" delay="20" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" delay="20" comparison="And">
           <Conditional InWater="false" />
           <Conditional stun="gt 0" />
           <Conditional IsPlayer="true" />
           <RequiredItem identifier="cyanide" type="Contained" />
           <Affliction identifier="cyanidepoisoning" amount="0.5" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="2.5" delay="20" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" delay="20" comparison="And">
           <Conditional InWater="false" />
           <Conditional stun="gt 0" />
           <Conditional IsPlayer="true" />
           <RequiredItem identifier="radiotoxin" type="Contained" />
           <Affliction identifier="radiationsickness" amount="0.5" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="2.5" delay="20" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" delay="20" comparison="And">
           <Conditional InWater="false" />
           <Conditional stun="gt 0" />
           <Conditional IsPlayer="true" />
           <RequiredItem identifier="sufforin" type="Contained" />
           <Affliction identifier="sufforinpoisoning" amount="0.5" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="2.5" delay="20" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" delay="20" comparison="And">
           <Conditional InWater="false" />
           <Conditional stun="gt 0" />
           <Conditional IsPlayer="true" />
           <RequiredItem identifier="deliriumine" type="Contained" />
           <Affliction identifier="deliriuminepoisoning" amount="0.5" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="2.5" delay="20" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" delay="20" comparison="And">
           <Conditional InWater="false" />
           <Conditional stun="gt 0" />
           <Conditional IsPlayer="true" />
           <RequiredItem identifier="paralyxis" type="Contained" />
           <Affliction identifier="slowparalysis" amount="1.5" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="2.5" delay="20" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" delay="20" comparison="And">
           <Conditional InWater="false" />
           <Conditional stun="gt 0" />
           <Conditional IsPlayer="true" />
           <RequiredItem identifier="paralyzant" type="Contained" />
           <Affliction identifier="paralysis" amount="3" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="2.5" delay="20" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" delay="20" comparison="And">
           <Conditional InWater="false" />
           <Conditional stun="gt 0" />
           <Conditional IsPlayer="true" />
           <RequiredItem identifier="hallucinogenicbufotoxin" type="Contained" />
           <ReduceAffliction identifier="paralysis" amount="6" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" targetlimb="Torso" duration="2.5" delay="20" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" targetlimb="Torso" duration="12.5" delay="20" comparison="And">
           <Conditional InWater="false" />
           <Conditional stun="gt 0" />
           <Conditional IsPlayer="true" />
@@ -203,7 +454,7 @@
           <Affliction identifier="acidburn" amount="3.5" />
           <Affliction identifier="organdamage" amount="5" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="2.5" delay="20" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" delay="20" comparison="And">
           <Conditional InWater="false" />
           <Conditional stun="gt 0" />
           <Conditional IsPlayer="true" />
@@ -212,14 +463,14 @@
           <ReduceAffliction identifier="psychosis" amount="1" />
           <ReduceAffliction identifier="hallucinating" amount="1" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="2.5" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" comparison="And">
           <Conditional InWater="false" />
           <Conditional stun="gt 0" />
           <Conditional IsPlayer="true" />
           <RequiredItem identifier="huskeggsbasic" type="Contained" />
           <Affliction identifier="huskinfection" amount="1" probability="0.01"/>
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="2.5" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" comparison="And">
           <Conditional InWater="false" />
           <Conditional stun="gt 0" />
           <Conditional IsPlayer="true" />
@@ -227,26 +478,25 @@
           <Affliction identifier="huskinfection" amount="1" probability="0.25"/>
         </StatusEffect>
         <!-- Regular eating -->
-        <StatusEffect type="OnUse" target="This" Condition="-40.0">
+        <StatusEffect type="OnUse" target="This" Condition="-8.0">
           <Conditional InWater="false" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
-          <Affliction identifier="he-increasedswimmingspeedcrawler10" amount="16.0" />
-          <Affliction identifier="he-stuffed" amount="1.125" />
-          <ReduceAffliction type="damage" amount="0.15" />
+          <Affliction identifier="he-stuffed" amount="1.0" />
+          <ReduceAffliction type="damage" amount="0.3" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
-          <Conditional hunger="gt 0.5" />
-          <ReduceAffliction type="hunger" amount="0.5" />
+          <Conditional hunger="gt 1.8" />
+          <ReduceAffliction type="hunger" amount="1.8" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
-          <Conditional trait_likes_nuggets="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <Conditional thirst="gt 0.8" />
+          <ReduceAffliction type="thirst" amount="0.8" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
@@ -327,27 +577,336 @@
         <Containable items="poison,ethanol,huskeggsbasic,huskeggs,paralyxis" />
       </ItemContainer>
     </Item>
-    <Item name="Burger" identifier="he-crawlerburger" category="Misc" subcategory="Food" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.4" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+    <Item name="Pomegrenade Jam Sandwich" identifier="he-sandwichpgjam" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="A tasty sandwich with pomegrenade jam." Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,485,47,27" depth="0.6" origin="0.5,0.5" />
-      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,485,47,27" depth="0.6" maxcondition="99" />
-      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="96,486,43,26" depth="0.6" maxcondition="46" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="96,486,43,26" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="45" fabricationlimitmin="0" fabricationlimitmax="10" displayname="crawlerfooditem" />
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="15" requiresrecipe="false" amount="1" displayname="crawlerfooditem">
-        <RequiredSkill identifier="cooking" level="20" />
-        <RequiredItem identifier="he-crawlermeatpatty" amount="1" />
-        <RequiredItem identifier="he-burgerbun" amount="1"/>
-        <RequiredItem identifier="he-molochcheeseslice" amount="1"/>
-        <RequiredItem identifier="he-ketchup" UseCondition="True" MinCondition="0.125"/>
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,286,47,11" depth="0.6" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,286,47,11" origin="0.5,0.5" />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,286,47,11" depth="0.525" origin="0.5,0.3"  />
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="10" requiresrecipe="false" amount="1">
+        <RequiredSkill identifier="cooking" level="30" />
+        <RequiredItem identifier="he-breadslices" amount="1"/>
+        <RequiredItem identifier="he-jampomegrenade" UseCondition="True" MinCondition="0.1"/>
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
-      <Body width="47" radius="13" density="9" />
-      <SuitableTreatment type="hunger" suitability="60" />
+      <Body width="47" height="11" density="5" />
+      <SuitableTreatment type="hunger" suitability="40" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+        <!-- Allow the item to be applied to a bot, but prevent full usage on a player -->
+        <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
+          <Conditional IsBot="true" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
+          <Conditional IsBot="true" />
+          <Affliction identifier="he-stuffed" amount="18.75" />
+          <ReduceAffliction type="damage" amount="3.75" />
+          <ReduceAffliction type="hunger" amount="22.5" />
+          <ReduceAffliction type="thirst" amount="3" />
+          <ReduceAffliction identifier="he-starvation" amount="200" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
+        </StatusEffect>
+        <!-- Allow the item to be applied to a player fully, if the player is not in water and unconcious/stunned -->
+        <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional stun="gt 0" />
+          <Conditional IsPlayer="true" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" comparison="And" multiplyafflictionsbymaxvitality="true">
+          <Conditional InWater="false" />
+          <Conditional stun="gt 0" />
+          <Conditional IsPlayer="true" />
+          <Affliction identifier="he-stuffed" amount="1.5" />
+          <ReduceAffliction type="damage" amount="0.3" />
+          <ReduceAffliction type="hunger" amount="1.8" />
+          <ReduceAffliction type="thirst" amount="0.24" />
+          <ReduceAffliction identifier="he-starvation" amount="20" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
+        </StatusEffect>
+        <!-- Poison Effects Bot -->
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" delay="20" comparison="And">
+          <Conditional IsBot="true" />
+          <RequiredItem identifier="morbusine" type="Contained" />
+          <Affliction identifier="morbusinepoisoning" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" delay="20" comparison="And">
+          <Conditional IsBot="true" />
+          <RequiredItem identifier="chloralhydrate" type="Contained" />
+          <Affliction identifier="incrementalstun" amount="50" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" delay="20" comparison="And">
+          <Conditional IsBot="true" />
+          <RequiredItem identifier="cyanide" type="Contained" />
+          <Affliction identifier="cyanidepoisoning" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" delay="20" comparison="And">
+          <Conditional IsBot="true" />
+          <RequiredItem identifier="radiotoxin" type="Contained" />
+          <Affliction identifier="radiationsickness" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" delay="20" comparison="And">
+          <Conditional IsBot="true" />
+          <RequiredItem identifier="sufforin" type="Contained" />
+          <Affliction identifier="sufforinpoisoning" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" delay="20" comparison="And">
+          <Conditional IsBot="true" />
+          <RequiredItem identifier="deliriumine" type="Contained" />
+          <Affliction identifier="deliriuminepoisoning" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" delay="20" comparison="And">
+          <Conditional IsBot="true" />
+          <RequiredItem identifier="paralyxis" type="Contained" />
+          <Affliction identifier="slowparalysis" amount="1.5" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" delay="20" comparison="And">
+          <Conditional IsBot="true" />
+          <RequiredItem identifier="paralyzant" type="Contained" />
+          <Affliction identifier="paralysis" amount="3" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" delay="20" comparison="And">
+          <Conditional IsBot="true" />
+          <RequiredItem identifier="hallucinogenicbufotoxin" type="Contained" />
+          <ReduceAffliction identifier="paralysis" amount="6" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" targetlimb="Torso" duration="12.5" delay="20" comparison="And">
+          <Conditional IsBot="true" />
+          <RequiredItem identifier="sulphuricacid" type="Contained" />
+          <Affliction identifier="acidburn" amount="3.5" />
+          <Affliction identifier="organdamage" amount="5" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" delay="20" comparison="And">
+          <Conditional IsBot="true" />
+          <RequiredItem identifier="ethanol" type="Contained" />
+          <Affliction identifier="drunk" amount="1" />
+          <ReduceAffliction identifier="psychosis" amount="1" />
+          <ReduceAffliction identifier="hallucinating" amount="1" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" comparison="And">
+          <Conditional IsBot="true" />
+          <RequiredItem identifier="huskeggsbasic" type="Contained" />
+          <Affliction identifier="huskinfection" amount="1" probability="0.01"/>
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" comparison="And">
+          <Conditional IsBot="true" />
+          <RequiredItem identifier="huskeggs" type="Contained" />
+          <Affliction identifier="huskinfection" amount="1" probability="0.25"/>
+        </StatusEffect>
+        <!-- Poison Effects Player -->
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" delay="20" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional stun="gt 0" />
+          <Conditional IsPlayer="true" />
+          <RequiredItem identifier="morbusine" type="Contained" />
+          <Affliction identifier="morbusinepoisoning" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" delay="20" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional stun="gt 0" />
+          <Conditional IsPlayer="true" />
+          <RequiredItem identifier="chloralhydrate" type="Contained" />
+          <Affliction identifier="incrementalstun" amount="50" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" delay="20" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional stun="gt 0" />
+          <Conditional IsPlayer="true" />
+          <RequiredItem identifier="cyanide" type="Contained" />
+          <Affliction identifier="cyanidepoisoning" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" delay="20" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional stun="gt 0" />
+          <Conditional IsPlayer="true" />
+          <RequiredItem identifier="radiotoxin" type="Contained" />
+          <Affliction identifier="radiationsickness" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" delay="20" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional stun="gt 0" />
+          <Conditional IsPlayer="true" />
+          <RequiredItem identifier="sufforin" type="Contained" />
+          <Affliction identifier="sufforinpoisoning" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" delay="20" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional stun="gt 0" />
+          <Conditional IsPlayer="true" />
+          <RequiredItem identifier="deliriumine" type="Contained" />
+          <Affliction identifier="deliriuminepoisoning" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" delay="20" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional stun="gt 0" />
+          <Conditional IsPlayer="true" />
+          <RequiredItem identifier="paralyxis" type="Contained" />
+          <Affliction identifier="slowparalysis" amount="1.5" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" delay="20" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional stun="gt 0" />
+          <Conditional IsPlayer="true" />
+          <RequiredItem identifier="paralyzant" type="Contained" />
+          <Affliction identifier="paralysis" amount="3" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" delay="20" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional stun="gt 0" />
+          <Conditional IsPlayer="true" />
+          <RequiredItem identifier="hallucinogenicbufotoxin" type="Contained" />
+          <ReduceAffliction identifier="paralysis" amount="6" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" targetlimb="Torso" duration="12.5" delay="20" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional stun="gt 0" />
+          <Conditional IsPlayer="true" />
+          <RequiredItem identifier="sulphuricacid" type="Contained" />
+          <Affliction identifier="acidburn" amount="3.5" />
+          <Affliction identifier="organdamage" amount="5" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" delay="20" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional stun="gt 0" />
+          <Conditional IsPlayer="true" />
+          <RequiredItem identifier="ethanol" type="Contained" />
+          <Affliction identifier="drunk" amount="1" />
+          <ReduceAffliction identifier="psychosis" amount="1" />
+          <ReduceAffliction identifier="hallucinating" amount="1" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional stun="gt 0" />
+          <Conditional IsPlayer="true" />
+          <RequiredItem identifier="huskeggsbasic" type="Contained" />
+          <Affliction identifier="huskinfection" amount="1" probability="0.01"/>
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional stun="gt 0" />
+          <Conditional IsPlayer="true" />
+          <RequiredItem identifier="huskeggs" type="Contained" />
+          <Affliction identifier="huskinfection" amount="1" probability="0.25"/>
+        </StatusEffect>
+        <!-- Regular eating -->
+        <StatusEffect type="OnUse" target="This" Condition="-8.0">
+          <Conditional InWater="false" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character" comparison="And">
+          <Conditional InWater="false" />
+          <Affliction identifier="he-stuffed" amount="1.5" />
+          <ReduceAffliction type="damage" amount="0.3" />
+          <Affliction identifier="spill" amount="1000" probability="0.0005" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional hunger="gt 1.8" />
+          <ReduceAffliction type="hunger" amount="1.8" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional thirst="gt 0.24" />
+          <ReduceAffliction type="thirst" amount="0.24" />
+        </StatusEffect>
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+        </StatusEffect>
+        <!-- Poison Effects -->
+        <StatusEffect type="OnUse" target="Character" delay="20">
+          <Conditional InWater="false" />
+          <RequiredItem identifier="morbusine" type="Contained" />
+          <Affliction identifier="morbusinepoisoning" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character" delay="20">
+          <Conditional InWater="false" />
+          <RequiredItem identifier="chloralhydrate" type="Contained" />
+          <Affliction identifier="incrementalstun" amount="50" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character" delay="20">
+          <Conditional InWater="false" />
+          <RequiredItem identifier="cyanide" type="Contained" />
+          <Affliction identifier="cyanidepoisoning" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character" delay="20">
+          <Conditional InWater="false" />
+          <RequiredItem identifier="radiotoxin" type="Contained" />
+          <Affliction identifier="radiationsickness" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character" delay="20">
+          <Conditional InWater="false" />
+          <RequiredItem identifier="sufforin" type="Contained" />
+          <Affliction identifier="sufforinpoisoning" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character" delay="20">
+          <Conditional InWater="false" />
+          <RequiredItem identifier="deliriumine" type="Contained" />
+          <Affliction identifier="deliriuminepoisoning" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character" delay="20">
+          <Conditional InWater="false" />
+          <RequiredItem identifier="paralyxis" type="Contained" />
+          <Affliction identifier="slowparalysis" amount="1.5" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character" delay="20">
+          <Conditional InWater="false" />
+          <RequiredItem identifier="paralyzant" type="Contained" />
+          <Affliction identifier="paralysis" amount="3" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character" delay="20">
+          <Conditional InWater="false" />
+          <RequiredItem identifier="hallucinogenicbufotoxin" type="Contained" />
+          <ReduceAffliction identifier="paralysis" amount="6" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character" targetlimb="Torso" delay="20">
+          <Conditional InWater="false" />
+          <RequiredItem identifier="sulphuricacid" type="Contained" />
+          <Affliction identifier="acidburn" amount="3.5" />
+          <Affliction identifier="organdamage" amount="5" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character" delay="20">
+          <Conditional InWater="false" />
+          <RequiredItem identifier="ethanol" type="Contained" />
+          <Affliction identifier="drunk" amount="1" />
+          <ReduceAffliction identifier="psychosis" amount="1" />
+          <ReduceAffliction identifier="hallucinating" amount="1" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character" interval="1">
+          <Conditional InWater="false" />
+          <RequiredItem identifier="huskeggsbasic" type="Contained" />
+          <Affliction identifier="huskinfection" amount="1" probability="0.01"/>
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character" interval="1">
+          <Conditional InWater="false" />
+          <RequiredItem identifier="huskeggs" type="Contained" />
+          <Affliction identifier="huskinfection" amount="1" probability="0.25"/>
+        </StatusEffect>
+      </Holdable>
+      <AiTarget sightrange="1000" static="true" />
+      <!-- Poison Container -->
+      <ItemContainer capacity="11" maxstacksize="1" hideitems="true" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="false" ShowContainedStateIndicator="false" removecontaineditemsondeconstruct="true">
+        <Containable items="poison,ethanol,huskeggsbasic,huskeggs,paralyxis" />
+      </ItemContainer>
+    </Item>
+    <!--OMELETE-->
+    <Item name="Omelette" identifier="he-omelettecrawler" category="Misc" maxstacksize="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.4" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True">
+      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
+      <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
+      <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
+      <PreferredContainer primary="kitchen" secondary="crewcab"/>
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="178,419,61,17" depth="0.6" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/UI/InventoryIcons.png" sourcerect="247,0,66,60" origin="0.5,0.5" />
+      <Fabricate suitablefabricators="stove" requiredtime="20" requiresrecipe="false" amount="1">
+        <RequiredSkill identifier="cooking" level="20" />
+        <RequiredItem tag="pan" UseCondition="True" MinCondition="0.0"/>
+        <RequiredItem identifier="crawleregg" UseCondition="True" MinCondition="0.1"/>
+        <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.01"/>
+        <RequiredItem identifier="he-pepper" UseCondition="True" MinCondition="0.01"/>
+      </Fabricate>
+      <Deconstruct time="1" />
+      <Body width="38" height="3" density="10.2" />
+      <SuitableTreatment type="hunger" suitability="20" />
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,15" holdangle="80" holdpos="-26,-30" handle1="0,0" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <!-- Allow the item to be applied to a bot, but prevent full usage on a player -->
         <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
           <Conditional IsBot="true" />
@@ -361,11 +920,11 @@
           <ReduceAffliction identifier="he-starvation" amount="200" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
+        <!-- <StatusEffect type="OnSuccess" target="This,UseTarget" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
           <Conditional IsBot="true" />
-          <Conditional trait_likes_burgers="gt 0" />
+          <Conditional trait_likes_omelete="gt 0" />
           <ReduceAffliction identifier="mood" amount="12.5" />
-        </StatusEffect>
+        </StatusEffect> -->
         <!-- Allow the item to be applied to a player fully, if the player is not in water and unconcious/stunned -->
         <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
           <Conditional InWater="false" />
@@ -383,13 +942,13 @@
           <ReduceAffliction identifier="he-starvation" amount="20" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" comparison="And" multiplyafflictionsbymaxvitality="true">
+        <!-- <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" comparison="And" multiplyafflictionsbymaxvitality="true">
           <Conditional InWater="false" />
           <Conditional stun="gt 0" />
           <Conditional IsPlayer="true" />
-          <Conditional trait_likes_burgers="gt 0" />
+          <Conditional trait_likes_omelete="gt 0" />
           <ReduceAffliction identifier="mood" amount="0.5" />
-        </StatusEffect>
+        </StatusEffect> -->
         <!-- Poison Effects Bot -->
         <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" delay="20" comparison="And">
           <Conditional IsBot="true" />
@@ -555,16 +1114,6 @@
           <Affliction identifier="huskinfection" amount="1" probability="0.25"/>
         </StatusEffect>
         <!-- Regular eating -->
-        <StatusEffect type="OnSecondaryUse" target="This" Condition="99" setvalue="True" comparison="And">
-          <Conditional InWater="false" />
-          <Conditional Condition="equals 100" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
-        </StatusEffect>
-        <StatusEffect type="OnSecondaryUse" target="This" Condition="46" setvalue="True" comparison="And">
-          <Conditional InWater="false" />
-          <Conditional Condition="equals 47" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
-        </StatusEffect>
         <StatusEffect type="OnUse" target="This" Condition="-4.0">
           <Conditional InWater="false" />
         </StatusEffect>
@@ -581,11 +1130,11 @@
           <Conditional hunger="gt 0.5" />
           <ReduceAffliction type="hunger" amount="0.5" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And">
+        <!-- <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
-          <Conditional trait_likes_burgers="gt 0" />
+          <Conditional trait_likes_omelete="gt 0" />
           <ReduceAffliction identifier="mood" amount="0.5" />
-        </StatusEffect>
+        </StatusEffect> -->
         <StatusEffect type="OnBroken" target="This">
           <Remove />
         </StatusEffect>
@@ -619,11 +1168,6 @@
           <Conditional InWater="false" />
           <RequiredItem identifier="deliriumine" type="Contained" />
           <Affliction identifier="deliriuminepoisoning" amount="0.5" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" delay="20">
-          <Conditional InWater="false" />
-          <RequiredItem identifier="paralyxis" type="Contained" />
-          <Affliction identifier="slowparalysis" amount="1.5" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" delay="20">
           <Conditional InWater="false" />
@@ -662,44 +1206,60 @@
       <AiTarget sightrange="1000" static="true" />
       <!-- Poison Container -->
       <ItemContainer capacity="11" maxstacksize="1" hideitems="true" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="false" ShowContainedStateIndicator="false" removecontaineditemsondeconstruct="true">
-        <Containable items="poison,ethanol,huskeggsbasic,huskeggs,paralyxis" />
+        <Containable items="poison,ethanol,huskeggsbasic,huskeggs" />
       </ItemContainer>
     </Item>
-    <Item name="Filet" identifier="he-cookedcrawlerfilet" category="Misc" subcategory="Food" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.4" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+    <Item name="Omelette" identifier="he-omelettemudraptor" category="Misc" maxstacksize="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.4" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
-      <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="258,495,51,17" depth="0.6" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="stove" requiredtime="60" requiresrecipe="false" amount="1" displayname="crawlerfooditem">
-        <RequiredSkill identifier="cooking" level="25" />
-        <RequiredItem identifier="he-rawcrawlermeat" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
-        <RequiredItem identifier="he-cookingoil" UseCondition="True" MinCondition="0.1"/>
-        <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.05"/>
+      <PreferredContainer primary="kitchen" secondary="crewcab"/>
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="178,419,61,17" depth="0.6" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/UI/InventoryIcons.png" sourcerect="247,0,66,60" origin="0.5,0.5" />
+      <Fabricate suitablefabricators="stove" requiredtime="20" requiresrecipe="false" amount="1">
+        <RequiredSkill identifier="cooking" level="20" />
+        <RequiredItem tag="pan" UseCondition="True" MinCondition="0.0"/>
+        <RequiredItem identifier="largemudraptoregg" UseCondition="True" MinCondition="0.1"/>
+        <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.01"/>
+        <RequiredItem identifier="he-pepper" UseCondition="True" MinCondition="0.01"/>
       </Fabricate>
-      <Deconstruct time="1" requireddeconstructor="deconstructor"/>
-      <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="49" fabricationlimitmin="0" fabricationlimitmax="10" displayname="crawlerfooditem" />
-      <Body width="118" radius="12" density="15" />
-      <SuitableTreatment type="hunger" suitability="80" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Fabricate suitablefabricators="stove" requiredtime="20" requiresrecipe="false" amount="1">
+        <RequiredSkill identifier="cooking" level="20" />
+        <RequiredItem tag="pan" UseCondition="True" MinCondition="0.0"/>
+        <RequiredItem identifier="mediummudraptoregg" UseCondition="True" MinCondition="0.2"/>
+        <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.01"/>
+        <RequiredItem identifier="he-pepper" UseCondition="True" MinCondition="0.01"/>
+      </Fabricate>
+      <Fabricate suitablefabricators="stove" requiredtime="20" requiresrecipe="false" amount="1">
+        <RequiredSkill identifier="cooking" level="20" />
+        <RequiredItem tag="pan" UseCondition="True" MinCondition="0.0"/>
+        <RequiredItem identifier="smallmudraptoregg" UseCondition="True" MinCondition="0.33333333333333333333333333333333"/>
+        <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.01"/>
+        <RequiredItem identifier="he-pepper" UseCondition="True" MinCondition="0.01"/>
+      </Fabricate>
+      <Deconstruct time="1" />
+      <Body width="38" height="3" density="10.2" />
+      <SuitableTreatment type="hunger" suitability="20" />
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,15" holdangle="80" holdpos="-26,-30" handle1="0,0" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <!-- Allow the item to be applied to a bot, but prevent full usage on a player -->
         <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
           <Conditional IsBot="true" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
           <Conditional IsBot="true" />
-          <Affliction identifier="he-increasedswimmingspeedcrawler" amount="18.0" />
-          <Affliction identifier="he-stuffed" amount="1.25" />
-          <ReduceAffliction type="damage" amount="0.4" />
-          <ReduceAffliction type="hunger" amount="0.5" />
-          <ReduceAffliction identifier="he-starvation" amount="20" />
+          <Affliction identifier="he-damageresistancemudraptor" amount="400.0" />
+          <Affliction identifier="he-increasedwalkingspeedmudraptor" amount="400.0" />
+          <Affliction identifier="he-stuffed" amount="28.125" />
+          <ReduceAffliction type="damage" amount="6.25" />
+          <ReduceAffliction type="hunger" amount="12.5" />
+          <ReduceAffliction identifier="he-starvation" amount="200" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
+        <!-- <StatusEffect type="OnSuccess" target="This,UseTarget" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
           <Conditional IsBot="true" />
-          <Conditional trait_likes_filets="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
-        </StatusEffect>
+          <Conditional trait_likes_omelete="gt 0" />
+          <ReduceAffliction identifier="mood" amount="12.5" />
+        </StatusEffect> -->
         <!-- Allow the item to be applied to a player fully, if the player is not in water and unconcious/stunned -->
         <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
           <Conditional InWater="false" />
@@ -710,20 +1270,21 @@
           <Conditional InWater="false" />
           <Conditional stun="gt 0" />
           <Conditional IsPlayer="true" />
-          <Affliction identifier="he-increasedswimmingspeedcrawler" amount="18.0" />
-          <Affliction identifier="he-stuffed" amount="1.25" />
-          <ReduceAffliction type="damage" amount="0.4" />
+          <Affliction identifier="he-damageresistancemudraptor" amount="16.0" />
+          <Affliction identifier="he-increasedwalkingspeedmudraptor" amount="16.0" />
+          <Affliction identifier="he-stuffed" amount="1.125" />
+          <ReduceAffliction type="damage" amount="0.25" />
           <ReduceAffliction type="hunger" amount="0.5" />
           <ReduceAffliction identifier="he-starvation" amount="20" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" comparison="And" multiplyafflictionsbymaxvitality="true">
+        <!-- <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" comparison="And" multiplyafflictionsbymaxvitality="true">
           <Conditional InWater="false" />
           <Conditional stun="gt 0" />
           <Conditional IsPlayer="true" />
-          <Conditional trait_likes_filets="gt 0" />
+          <Conditional trait_likes_omelete="gt 0" />
           <ReduceAffliction identifier="mood" amount="0.5" />
-        </StatusEffect>
+        </StatusEffect> -->
         <!-- Poison Effects Bot -->
         <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" delay="20" comparison="And">
           <Conditional IsBot="true" />
@@ -894,9 +1455,10 @@
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
-          <Affliction identifier="he-increasedswimmingspeedcrawler" amount="18.0" />
-          <Affliction identifier="he-stuffed" amount="1.25" />
-          <ReduceAffliction type="damage" amount="0.4" />
+          <Affliction identifier="he-damageresistancemudraptor" amount="16.0" />
+          <Affliction identifier="he-increasedwalkingspeedmudraptor" amount="16.0" />
+          <Affliction identifier="he-stuffed" amount="1.125" />
+          <ReduceAffliction type="damage" amount="0.25" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
@@ -905,11 +1467,11 @@
           <Conditional hunger="gt 0.5" />
           <ReduceAffliction type="hunger" amount="0.5" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And">
+        <!-- <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
-          <Conditional trait_likes_filets="gt 0" />
+          <Conditional trait_likes_omelete="gt 0" />
           <ReduceAffliction identifier="mood" amount="0.5" />
-        </StatusEffect>
+        </StatusEffect> -->
         <StatusEffect type="OnBroken" target="This">
           <Remove />
         </StatusEffect>
@@ -943,11 +1505,6 @@
           <Conditional InWater="false" />
           <RequiredItem identifier="deliriumine" type="Contained" />
           <Affliction identifier="deliriuminepoisoning" amount="0.5" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" delay="20">
-          <Conditional InWater="false" />
-          <RequiredItem identifier="paralyxis" type="Contained" />
-          <Affliction identifier="slowparalysis" amount="1.5" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" delay="20">
           <Conditional InWater="false" />
@@ -986,203 +1543,203 @@
       <AiTarget sightrange="1000" static="true" />
       <!-- Poison Container -->
       <ItemContainer capacity="11" maxstacksize="1" hideitems="true" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="false" ShowContainedStateIndicator="false" removecontaineditemsondeconstruct="true">
-        <Containable items="poison,ethanol,huskeggsbasic,huskeggs,paralyxis" />
+        <Containable items="poison,ethanol,huskeggsbasic,huskeggs" />
       </ItemContainer>
     </Item>
-    <Item name="Hotdog" identifier="he-crawlerhotdog" category="Misc" subcategory="Food" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.4" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
-      <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
-      <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="True"/>
-      <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="10" requiresrecipe="false" amount="1" displayname="crawlerfooditem">
+    <Item name="Omelette" identifier="he-omelettethresher" category="Misc" maxstacksize="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.4" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True">
+      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
+      <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
+      <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
+      <PreferredContainer primary="kitchen" secondary="crewcab"/>
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="178,419,61,17" depth="0.6" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/UI/InventoryIcons.png" sourcerect="247,0,66,60" origin="0.5,0.5" />
+      <Fabricate suitablefabricators="stove" requiredtime="20" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="cooking" level="20" />
-        <RequiredItem identifier="he-crawlersausage" amount="1" />
-        <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.1"/>
-        <RequiredItem identifier="he-ketchup" UseCondition="True" MinCondition="0.125"/>
-        <RequiredItem identifier="he-hotdogbun" amount="1"/>
+        <RequiredItem tag="pan" UseCondition="True" MinCondition="0.0"/>
+        <RequiredItem identifier="crawleregg" UseCondition="True" MinCondition="0.1"/>
+        <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.01"/>
+        <RequiredItem identifier="he-pepper" UseCondition="True" MinCondition="0.01"/>
       </Fabricate>
-      <Deconstruct time="1" requireddeconstructor="deconstructor"/>
-      <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="41" fabricationlimitmin="0" fabricationlimitmax="10" displayname="crawlerfooditem" />
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="139,489,67,23" depth="0.6" origin="0.5,0.5" />
-      <Body width="67" radius="11" density="15" />
-      <SuitableTreatment type="hunger" suitability="60" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Deconstruct time="1" />
+      <Body width="38" height="3" density="10.2" />
+      <SuitableTreatment type="hunger" suitability="20" />
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,15" holdangle="80" holdpos="-26,-30" handle1="0,0" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <!-- Allow the item to be applied to a bot, but prevent full usage on a player -->
         <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
           <Conditional IsBot="true" />
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="This,UseTarget" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
           <Conditional IsBot="true" />
-          <Affliction identifier="he-increasedswimmingspeedcrawler25" amount="265.6" />
-          <Affliction identifier="he-stuffed" amount="12.45" />
-          <ReduceAffliction type="damage" amount="3.32" />
-          <ReduceAffliction type="hunger" amount="8.3" />
+          <Affliction identifier="he-decreasedoxygenconsumption" amount="400.0" />
+          <Affliction identifier="he-stuffed" amount="28.125" />
+          <ReduceAffliction type="damage" amount="3.75" />
+          <ReduceAffliction type="hunger" amount="12.5" />
           <ReduceAffliction identifier="he-starvation" amount="200" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
+        <!-- <StatusEffect type="OnSuccess" target="This,UseTarget" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
           <Conditional IsBot="true" />
-          <Conditional trait_likes_hotdogs="gt 0" />
-          <ReduceAffliction identifier="mood" amount="8.3" />
-        </StatusEffect>
+          <Conditional trait_likes_omelete="gt 0" />
+          <ReduceAffliction identifier="mood" amount="12.5" />
+        </StatusEffect> -->
         <!-- Allow the item to be applied to a player fully, if the player is not in water and unconcious/stunned -->
         <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
           <Conditional InWater="false" />
           <Conditional stun="gt 0" />
           <Conditional IsPlayer="true" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="16.6" comparison="And" multiplyafflictionsbymaxvitality="true">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" comparison="And" multiplyafflictionsbymaxvitality="true">
           <Conditional InWater="false" />
           <Conditional stun="gt 0" />
           <Conditional IsPlayer="true" />
-          <Affliction identifier="he-increasedswimmingspeedcrawler25" amount="16.0" />
-          <Affliction identifier="he-stuffed" amount="0.75" />
-          <ReduceAffliction type="damage" amount="0.2" />
+          <Affliction identifier="he-decreasedoxygenconsumption" amount="16.0" />
+          <Affliction identifier="he-stuffed" amount="1.125" />
+          <ReduceAffliction type="damage" amount="0.15" />
           <ReduceAffliction type="hunger" amount="0.5" />
           <ReduceAffliction identifier="he-starvation" amount="20" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="16.6" comparison="And" multiplyafflictionsbymaxvitality="true">
+        <!-- <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" comparison="And" multiplyafflictionsbymaxvitality="true">
           <Conditional InWater="false" />
           <Conditional stun="gt 0" />
           <Conditional IsPlayer="true" />
-          <Conditional trait_likes_hotdogs="gt 0" />
+          <Conditional trait_likes_omelete="gt 0" />
           <ReduceAffliction identifier="mood" amount="0.5" />
-        </StatusEffect>
+        </StatusEffect> -->
         <!-- Poison Effects Bot -->
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="16.6" delay="20" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" delay="20" comparison="And">
           <Conditional IsBot="true" />
           <RequiredItem identifier="morbusine" type="Contained" />
           <Affliction identifier="morbusinepoisoning" amount="0.5" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="16.6" delay="20" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" delay="20" comparison="And">
           <Conditional IsBot="true" />
           <RequiredItem identifier="chloralhydrate" type="Contained" />
           <Affliction identifier="incrementalstun" amount="50" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="16.6" delay="20" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" delay="20" comparison="And">
           <Conditional IsBot="true" />
           <RequiredItem identifier="cyanide" type="Contained" />
           <Affliction identifier="cyanidepoisoning" amount="0.5" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="16.6" delay="20" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" delay="20" comparison="And">
           <Conditional IsBot="true" />
           <RequiredItem identifier="radiotoxin" type="Contained" />
           <Affliction identifier="radiationsickness" amount="0.5" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="16.6" delay="20" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" delay="20" comparison="And">
           <Conditional IsBot="true" />
           <RequiredItem identifier="sufforin" type="Contained" />
           <Affliction identifier="sufforinpoisoning" amount="0.5" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="16.6" delay="20" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" delay="20" comparison="And">
           <Conditional IsBot="true" />
           <RequiredItem identifier="deliriumine" type="Contained" />
           <Affliction identifier="deliriuminepoisoning" amount="0.5" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="16.6" delay="20" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" delay="20" comparison="And">
           <Conditional IsBot="true" />
           <RequiredItem identifier="paralyxis" type="Contained" />
           <Affliction identifier="slowparalysis" amount="1.5" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="16.6" delay="20" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" delay="20" comparison="And">
           <Conditional IsBot="true" />
           <RequiredItem identifier="paralyzant" type="Contained" />
           <Affliction identifier="paralysis" amount="3" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="16.6" delay="20" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" delay="20" comparison="And">
           <Conditional IsBot="true" />
           <RequiredItem identifier="hallucinogenicbufotoxin" type="Contained" />
           <ReduceAffliction identifier="paralysis" amount="6" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" targetlimb="Torso" duration="16.6" delay="20" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" targetlimb="Torso" duration="25" delay="20" comparison="And">
           <Conditional IsBot="true" />
           <RequiredItem identifier="sulphuricacid" type="Contained" />
           <Affliction identifier="acidburn" amount="3.5" />
           <Affliction identifier="organdamage" amount="5" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="16.6" delay="20" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" delay="20" comparison="And">
           <Conditional IsBot="true" />
           <RequiredItem identifier="ethanol" type="Contained" />
           <Affliction identifier="drunk" amount="1" />
           <ReduceAffliction identifier="psychosis" amount="1" />
           <ReduceAffliction identifier="hallucinating" amount="1" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="16.6" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" comparison="And">
           <Conditional IsBot="true" />
           <RequiredItem identifier="huskeggsbasic" type="Contained" />
           <Affliction identifier="huskinfection" amount="1" probability="0.01"/>
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="16.6" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" comparison="And">
           <Conditional IsBot="true" />
           <RequiredItem identifier="huskeggs" type="Contained" />
           <Affliction identifier="huskinfection" amount="1" probability="0.25"/>
         </StatusEffect>
         <!-- Poison Effects Player -->
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="16.6" delay="20" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" delay="20" comparison="And">
           <Conditional InWater="false" />
           <Conditional stun="gt 0" />
           <Conditional IsPlayer="true" />
           <RequiredItem identifier="morbusine" type="Contained" />
           <Affliction identifier="morbusinepoisoning" amount="0.5" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="16.6" delay="20" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" delay="20" comparison="And">
           <Conditional InWater="false" />
           <Conditional stun="gt 0" />
           <Conditional IsPlayer="true" />
           <RequiredItem identifier="chloralhydrate" type="Contained" />
           <Affliction identifier="incrementalstun" amount="50" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="16.6" delay="20" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" delay="20" comparison="And">
           <Conditional InWater="false" />
           <Conditional stun="gt 0" />
           <Conditional IsPlayer="true" />
           <RequiredItem identifier="cyanide" type="Contained" />
           <Affliction identifier="cyanidepoisoning" amount="0.5" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="16.6" delay="20" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" delay="20" comparison="And">
           <Conditional InWater="false" />
           <Conditional stun="gt 0" />
           <Conditional IsPlayer="true" />
           <RequiredItem identifier="radiotoxin" type="Contained" />
           <Affliction identifier="radiationsickness" amount="0.5" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="16.6" delay="20" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" delay="20" comparison="And">
           <Conditional InWater="false" />
           <Conditional stun="gt 0" />
           <Conditional IsPlayer="true" />
           <RequiredItem identifier="sufforin" type="Contained" />
           <Affliction identifier="sufforinpoisoning" amount="0.5" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="16.6" delay="20" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" delay="20" comparison="And">
           <Conditional InWater="false" />
           <Conditional stun="gt 0" />
           <Conditional IsPlayer="true" />
           <RequiredItem identifier="deliriumine" type="Contained" />
           <Affliction identifier="deliriuminepoisoning" amount="0.5" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="16.6" delay="20" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" delay="20" comparison="And">
           <Conditional InWater="false" />
           <Conditional stun="gt 0" />
           <Conditional IsPlayer="true" />
           <RequiredItem identifier="paralyxis" type="Contained" />
           <Affliction identifier="slowparalysis" amount="1.5" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="16.6" delay="20" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" delay="20" comparison="And">
           <Conditional InWater="false" />
           <Conditional stun="gt 0" />
           <Conditional IsPlayer="true" />
           <RequiredItem identifier="paralyzant" type="Contained" />
           <Affliction identifier="paralysis" amount="3" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="16.6" delay="20" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" delay="20" comparison="And">
           <Conditional InWater="false" />
           <Conditional stun="gt 0" />
           <Conditional IsPlayer="true" />
           <RequiredItem identifier="hallucinogenicbufotoxin" type="Contained" />
           <ReduceAffliction identifier="paralysis" amount="6" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" targetlimb="Torso" duration="16.6" delay="20" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" targetlimb="Torso" duration="25" delay="20" comparison="And">
           <Conditional InWater="false" />
           <Conditional stun="gt 0" />
           <Conditional IsPlayer="true" />
@@ -1190,7 +1747,7 @@
           <Affliction identifier="acidburn" amount="3.5" />
           <Affliction identifier="organdamage" amount="5" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="16.6" delay="20" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" delay="20" comparison="And">
           <Conditional InWater="false" />
           <Conditional stun="gt 0" />
           <Conditional IsPlayer="true" />
@@ -1199,14 +1756,14 @@
           <ReduceAffliction identifier="psychosis" amount="1" />
           <ReduceAffliction identifier="hallucinating" amount="1" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="16.6" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" comparison="And">
           <Conditional InWater="false" />
           <Conditional stun="gt 0" />
           <Conditional IsPlayer="true" />
           <RequiredItem identifier="huskeggsbasic" type="Contained" />
           <Affliction identifier="huskinfection" amount="1" probability="0.01"/>
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="16.6" comparison="And">
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="25" comparison="And">
           <Conditional InWater="false" />
           <Conditional stun="gt 0" />
           <Conditional IsPlayer="true" />
@@ -1214,14 +1771,14 @@
           <Affliction identifier="huskinfection" amount="1" probability="0.25"/>
         </StatusEffect>
         <!-- Regular eating -->
-        <StatusEffect type="OnUse" target="This" Condition="-6">
+        <StatusEffect type="OnUse" target="This" Condition="-4.0">
           <Conditional InWater="false" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
-          <Affliction identifier="he-increasedswimmingspeedcrawler25" amount="16.0" />
-          <Affliction identifier="he-stuffed" amount="0.75" />
-          <ReduceAffliction type="damage" amount="0.2" />
+          <Affliction identifier="he-decreasedoxygenconsumption" amount="16.0" />
+          <Affliction identifier="he-stuffed" amount="1.125" />
+          <ReduceAffliction type="damage" amount="0.15" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
@@ -1230,11 +1787,11 @@
           <Conditional hunger="gt 0.5" />
           <ReduceAffliction type="hunger" amount="0.5" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And">
+        <!-- <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
-          <Conditional trait_likes_hotdogs="gt 0" />
+          <Conditional trait_likes_omelete="gt 0" />
           <ReduceAffliction identifier="mood" amount="0.5" />
-        </StatusEffect>
+        </StatusEffect> -->
         <StatusEffect type="OnBroken" target="This">
           <Remove />
         </StatusEffect>
@@ -1268,11 +1825,6 @@
           <Conditional InWater="false" />
           <RequiredItem identifier="deliriumine" type="Contained" />
           <Affliction identifier="deliriuminepoisoning" amount="0.5" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" delay="20">
-          <Conditional InWater="false" />
-          <RequiredItem identifier="paralyxis" type="Contained" />
-          <Affliction identifier="slowparalysis" amount="1.5" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" delay="20">
           <Conditional InWater="false" />
@@ -1311,222 +1863,8 @@
       <AiTarget sightrange="1000" static="true" />
       <!-- Poison Container -->
       <ItemContainer capacity="11" maxstacksize="1" hideitems="true" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="false" ShowContainedStateIndicator="false" removecontaineditemsondeconstruct="true">
-        <Containable items="poison,ethanol,huskeggsbasic,huskeggs,paralyxis" />
+        <Containable items="poison,ethanol,huskeggsbasic,huskeggs" />
       </ItemContainer>
-    </Item>
-    <!-- INGREDIENTS -->
-    <Item name="Crawler Meat Patty" identifier="he-crawlermeatpatty" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,allowongrill,canspoil,petfood1,petfood2,petfood3" spritecolor="108,108,108,255" inventoryiconcolor="108,108,108,255" containercolor="108,108,108,255" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
-      <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="275,459,35,17" depth="0.6" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="stove" requiredtime="120" requiresrecipe="false" amount="1">
-        <RequiredSkill identifier="cooking" level="20" />
-        <RequiredItem identifier="he-rawcrawlermeat" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
-        <RequiredItem identifier="he-cookingoil" UseCondition="True" MinCondition="0.1"/>
-        <RequiredItem tag="pan" UseCondition="True" MinCondition="0.0"/>
-      </Fabricate>
-      <Deconstruct time="1" />
-      <Body width="35" radius="7" density="9" />
-      <Price baseprice="29" minavailable="4" maxavailable="16" mincondition="0.9" maxcondition="1.0" usecondition="false" sold="false">
-        <Price storeidentifier="merchantoutpost"/>
-        <Price storeidentifier="merchantcity"/>
-        <Price storeidentifier="merchantresearch"/>
-        <Price storeidentifier="merchantmilitary"/>
-        <Price storeidentifier="merchantmine"/>
-        <Price storeidentifier="merchantmedical"/>
-        <Price storeidentifier="merchantbutcher" multiplier="2.0" minavailable="0" maxavailable="32" sold="true" />
-      </Price>
-      <Pump canbeselected="false" canbepicked="false" allowingameediting="false">
-        <ActiveConditional HasStatusTag="eq activegrill" targetcontainer="true" />
-        <StatusEffect type="OnActive" target="This" MaxValueLength="1" interval="1" disabledeltatime="true" />
-        <StatusEffect type="OnActive" target="This" MaxValueLength="0" setvalue="true" disabledeltatime="true">
-          <Conditional HasStatusTag="neq activegrill" targetcontainer="true" />
-        </StatusEffect>
-        <StatusEffect type="OnActive" target="This" interval="1" disabledeltatime="true">
-          <Conditional MaxValueLength="gte 20" />
-          <Remove />
-          <SpawnItem identifier="he-burnedcrawlermeatpatty" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-        </StatusEffect>
-      </Pump>
-      <MemoryComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" string="" MaxValueLength="0" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
-        <StatusEffect type="OnUse" target="Character">
-          <Affliction identifier="deliriuminepoisoning" probability="0.001" amount="8" />
-          <Affliction identifier="nausea" amount="4" />
-          <Affliction identifier="he-hungryforhumanmeat" amount="0.037" />
-          <Affliction identifier="spill" amount="1000" probability="0.0005" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character">
-          <Conditional hunger="gt 0.25" />
-          <ReduceAffliction type="hunger" amount="0.25" />
-        </StatusEffect>
-        <StatusEffect type="OnBroken" target="This">
-          <Remove />
-        </StatusEffect>
-      </Holdable>
-      <AiTarget sightrange="1000" static="True" />
-    </Item>
-    <Item name="Crawler Sausage" identifier="he-crawlersausage" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,allowongrill,canspoil,petfood1,petfood2,petfood3" spritecolor="108,108,108,255" inventoryiconcolor="108,108,108,255" containercolor="108,108,108,255" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
-      <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,444,67,14" depth="0.6" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,444,67,14" origin="0.5,0.5" />
-      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,444,67,14" depth="0.525" origin="0.5,0.3"  />
-      <Fabricate suitablefabricators="stove" requiredtime="100" requiresrecipe="false" amount="1">
-        <RequiredSkill identifier="cooking" level="20" />
-        <RequiredItem identifier="he-rawcrawlersausage" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
-        <RequiredItem tag="waterpot" UseCondition="True" MinCondition="0.06175"/>
-      </Fabricate>
-      <Deconstruct time="1" />
-      <Body width="67" radius="7" density="9" />
-      <Price baseprice="29" minavailable="4" maxavailable="16" mincondition="0.9" maxcondition="1.0" usecondition="false" sold="false">
-        <Price storeidentifier="merchantoutpost"/>
-        <Price storeidentifier="merchantcity"/>
-        <Price storeidentifier="merchantresearch"/>
-        <Price storeidentifier="merchantmilitary"/>
-        <Price storeidentifier="merchantmine"/>
-        <Price storeidentifier="merchantmedical"/>
-        <Price storeidentifier="merchantbutcher" multiplier="2.0" minavailable="0" maxavailable="32" sold="true" />
-      </Price>
-      <Pump canbeselected="false" canbepicked="false" allowingameediting="false">
-        <ActiveConditional HasStatusTag="eq activegrill" targetcontainer="true" />
-        <StatusEffect type="OnActive" target="This" MaxValueLength="1" interval="1" disabledeltatime="true" />
-        <StatusEffect type="OnActive" target="This" MaxValueLength="0" setvalue="true" disabledeltatime="true">
-          <Conditional HasStatusTag="neq activegrill" targetcontainer="true" />
-        </StatusEffect>
-        <StatusEffect type="OnActive" target="This" interval="1" disabledeltatime="true">
-          <Conditional MaxValueLength="gte 20" />
-          <Remove />
-          <SpawnItem identifier="he-burnedcrawlersausage" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-        </StatusEffect>
-      </Pump>
-      <MemoryComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" string="" MaxValueLength="0" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
-        <StatusEffect type="OnUse" target="Character">
-          <Affliction identifier="deliriuminepoisoning" probability="0.001" amount="5" />
-          <Affliction identifier="hallucinating" amount="6" />
-          <Affliction identifier="nausea" amount="3" />
-          <Affliction identifier="he-hungryforhumanmeat" amount="0.037" />
-          <Affliction identifier="spill" amount="1000" probability="0.0005" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character">
-          <Conditional hunger="gt 0.25" />
-          <ReduceAffliction type="hunger" amount="0.25" />
-        </StatusEffect>
-        <StatusEffect type="OnBroken" target="This">
-          <Remove />
-        </StatusEffect>
-      </Holdable>
-      <AiTarget sightrange="1000" static="True" />
-    </Item>
-
-    <Item name="Burned Crawler Meat Patty" identifier="he-burnedcrawlermeatpatty" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,allowongrill" spritecolor="41,41,41,255" inventoryiconcolor="41,41,41,255" containercolor="41,41,41,255" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
-      <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="275,459,35,17" depth="0.6" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="stove" requiredtime="120" requiresrecipe="false" amount="1">
-        <RequiredSkill identifier="cooking" level="20" />
-        <RequiredItem identifier="he-rawcrawlermeat" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
-        <RequiredItem identifier="he-cookingoil" UseCondition="True" MinCondition="0.1"/>
-        <RequiredItem tag="pan" UseCondition="True" MinCondition="0.0"/>
-      </Fabricate>
-      <Deconstruct time="1" />
-      <Body width="35" radius="7" density="9" />
-      <Price baseprice="29" minavailable="4" maxavailable="16" mincondition="0.9" maxcondition="1.0" usecondition="false" sold="false">
-        <Price storeidentifier="merchantoutpost"/>
-        <Price storeidentifier="merchantcity"/>
-        <Price storeidentifier="merchantresearch"/>
-        <Price storeidentifier="merchantmilitary"/>
-        <Price storeidentifier="merchantmine"/>
-        <Price storeidentifier="merchantmedical"/>
-        <Price storeidentifier="merchantbutcher" multiplier="2.0" minavailable="0" maxavailable="32" sold="true" />
-      </Price>
-      <Pump canbeselected="false" canbepicked="false" allowingameediting="false">
-        <ActiveConditional HasStatusTag="eq activegrill" targetcontainer="true" />
-        <StatusEffect type="OnActive" target="This" MaxValueLength="1" interval="1" disabledeltatime="true" />
-        <StatusEffect type="OnActive" target="This" MaxValueLength="0" setvalue="true" disabledeltatime="true">
-          <Conditional HasStatusTag="neq activegrill" targetcontainer="true" />
-        </StatusEffect>
-        <StatusEffect type="OnActive" target="This" interval="1" disabledeltatime="true">
-          <Conditional MaxValueLength="gte 12" />
-          <Remove />
-          <Fire size="1" />
-        </StatusEffect>
-      </Pump>
-      <MemoryComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" string="" MaxValueLength="0" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
-        <StatusEffect type="OnUse" target="Character">
-          <Affliction identifier="deliriuminepoisoning" probability="0.001" amount="8" />
-          <Affliction identifier="nausea" amount="4" />
-          <Affliction identifier="he-hungryforhumanmeat" amount="0.037" />
-          <Affliction identifier="spill" amount="1000" probability="0.0005" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character">
-          <Conditional hunger="gt 0.25" />
-          <ReduceAffliction type="hunger" amount="0.25" />
-        </StatusEffect>
-        <StatusEffect type="OnBroken" target="This">
-          <Remove />
-        </StatusEffect>
-      </Holdable>
-      <AiTarget sightrange="1000" static="True" />
-    </Item>
-    <Item name="Burned Crawler Sausage" identifier="he-burnedcrawlersausage" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,allowongrill" spritecolor="41,41,41,255" inventoryiconcolor="41,41,41,255" containercolor="41,41,41,255" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
-      <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,444,67,14" depth="0.6" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,444,67,14" origin="0.5,0.5" />
-      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,444,67,14" depth="0.525" origin="0.5,0.3"  />
-      <Fabricate suitablefabricators="stove" requiredtime="100" requiresrecipe="false" amount="1">
-        <RequiredSkill identifier="cooking" level="20" />
-        <RequiredItem identifier="he-rawcrawlersausage" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
-        <RequiredItem tag="waterpot" UseCondition="True" MinCondition="0.06175"/>
-      </Fabricate>
-      <Deconstruct time="1" />
-      <Body width="67" radius="7" density="9" />
-      <Price baseprice="29" minavailable="4" maxavailable="16" mincondition="0.9" maxcondition="1.0" usecondition="false" sold="false">
-        <Price storeidentifier="merchantoutpost"/>
-        <Price storeidentifier="merchantcity"/>
-        <Price storeidentifier="merchantresearch"/>
-        <Price storeidentifier="merchantmilitary"/>
-        <Price storeidentifier="merchantmine"/>
-        <Price storeidentifier="merchantmedical"/>
-        <Price storeidentifier="merchantbutcher" multiplier="2.0" minavailable="0" maxavailable="32" sold="true" />
-      </Price>
-      <Pump canbeselected="false" canbepicked="false" allowingameediting="false">
-        <ActiveConditional HasStatusTag="eq activegrill" targetcontainer="true" />
-        <StatusEffect type="OnActive" target="This" MaxValueLength="1" interval="1" disabledeltatime="true" />
-        <StatusEffect type="OnActive" target="This" MaxValueLength="0" setvalue="true" disabledeltatime="true">
-          <Conditional HasStatusTag="neq activegrill" targetcontainer="true" />
-        </StatusEffect>
-        <StatusEffect type="OnActive" target="This" interval="1" disabledeltatime="true">
-          <Conditional MaxValueLength="gte 12" />
-          <Remove />
-          <Fire size="1" />
-        </StatusEffect>
-      </Pump>
-      <MemoryComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" string="" MaxValueLength="0" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
-        <StatusEffect type="OnUse" target="Character">
-          <Affliction identifier="deliriuminepoisoning" probability="0.001" amount="5" />
-          <Affliction identifier="hallucinating" amount="6" />
-          <Affliction identifier="nausea" amount="3" />
-          <Affliction identifier="he-hungryforhumanmeat" amount="0.037" />
-          <Affliction identifier="spill" amount="1000" probability="0.0005" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character">
-          <Conditional hunger="gt 0.25" />
-          <ReduceAffliction type="hunger" amount="0.25" />
-        </StatusEffect>
-        <StatusEffect type="OnBroken" target="This">
-          <Remove />
-        </StatusEffect>
-      </Holdable>
-      <AiTarget sightrange="1000" static="True" />
     </Item>
   </Items>
 </Override>

@@ -2,7 +2,7 @@
 <Override>
   <Items>
     <!--OVERRIDES-->
-    <Ethanol name="" identifier="ethanol" category="Medical,Material" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,chem,medical,petfood2" useinhealthinterface="true" scale="0.5" requireaimtouse="true" isshootable="true" impactsoundtag="impact_metal_light">
+    <Ethanol name="" identifier="ethanol" category="Medical,Material" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,chem,cleaningagent,medical,petfood2" useinhealthinterface="true" scale="0.5" requireaimtouse="true" isshootable="true" impactsoundtag="impact_metal_light">
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
       <PreferredContainer primary="sprayer" amount="1" spawnprobability="1"/>
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.2" />
@@ -1756,6 +1756,148 @@
         </Button>
       </CustomInterface>
     </Item>
+    <Item name="Fishtail Cocktail" identifier="he-fishtailcocktail" category="Misc" subcategory="Drinks" maxstacksize="1" health="167" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeecup,cup" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_soft" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
+      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
+      <PreferredContainer secondary="abandonedcrewcab" amount="1" spawnprobability="0.01" />
+      <PreferredContainer primary="kitchen" secondary="crewcab"/>
+      <Deconstruct time="2" />
+      <Fabricate suitablefabricators="cafeteria" requiredtime="9" requiredmoney="175" fabricationlimitmin="0" fabricationlimitmax="12" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="452,206,23,58" depth="0.6" origin="0.5,0.5" />
+      <!--<ContainedSprite allowedcontainertags="liquorshelf" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="201,8,21,58" depth="0.55" origin="0.5,0.42" />-->
+      <Body width="20" height="56" density="12" />
+      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" handle1="-5,-10" handle2="-5,-10" aimpos="13,0" holdpos="30,-15" holdangle="0" aimangle="10" aimable="false" swingwhenaiming="false" msg="ItemMsgPickUpSelect">
+        <!-- Allow the item to be applied to a bot, but prevent full usage on a player -->
+        <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
+          <Conditional IsBot="true" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
+          <Conditional IsBot="true" />
+          <Affliction identifier="he-internalburn" amount="24.9" />
+          <Affliction identifier="psychosisresistance" amount="99.6" />
+          <Affliction identifier="drunk" amount="41.5" />
+          <ReduceAffliction identifier="hallucinating" amount="33.2" />
+          <ReduceAffliction identifier="psychosis" amount="33.2" />
+          <ReduceAffliction identifier="nausea" amount="33.2" />
+          <ReduceAffliction identifier="he-halucinova" amount="33.2" />
+          <ReduceAffliction identifier="embarrassment" strength="33.2" />
+          <ReduceAffliction type="thirst" amount="6.64" />
+          <ReduceAffliction type="he-dieofthirst" amount="200" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
+          <Conditional IsBot="true" />
+          <Conditional trait_likes_cocktails="gt 0" />
+          <ReduceAffliction identifier="mood" amount="20" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="16.6" comparison="And" multiplyafflictionsbymaxvitality="true">
+          <Conditional IsBot="true" />
+          <Conditional bladder="gte 0.01" />
+          <Affliction identifier="bladder" amount="0.5" />
+          <Affliction identifier="fillbladder" amount="3.0" />
+        </StatusEffect>
+        <!-- Allow the item to be applied to a player fully, if the player is not in water and unconcious/stunned -->
+        <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional stun="gt 0" />
+          <Conditional IsPlayer="true" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="16.6" comparison="And" multiplyafflictionsbymaxvitality="true">
+          <Conditional InWater="false" />
+          <Conditional stun="gt 0" />
+          <Conditional IsPlayer="true" />
+          <Affliction identifier="he-internalburn" amount="1.5" />
+          <Affliction identifier="psychosisresistance" amount="6" />
+          <Affliction identifier="drunk" amount="2.5" />
+          <ReduceAffliction identifier="hallucinating" amount="2.0" />
+          <ReduceAffliction identifier="psychosis" amount="2.0" />
+          <ReduceAffliction identifier="nausea" amount="2" />
+          <ReduceAffliction identifier="he-halucinova" amount="2.0" />
+          <ReduceAffliction identifier="embarrassment" strength="2" />
+          <ReduceAffliction type="thirst" amount="0.4" />
+          <ReduceAffliction type="he-dieofthirst" amount="20" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="16.6" comparison="And" multiplyafflictionsbymaxvitality="true">
+          <Conditional InWater="false" />
+          <Conditional stun="gt 0" />
+          <Conditional IsPlayer="true" />
+          <Conditional trait_likes_cocktails="gt 0" />
+          <ReduceAffliction identifier="mood" amount="1.205" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="16.6" comparison="And" multiplyafflictionsbymaxvitality="true">
+          <Conditional InWater="false" />
+          <Conditional stun="gt 0" />
+          <Conditional IsPlayer="true" />
+          <Conditional bladder="gte 0.01" />
+          <Affliction identifier="bladder" amount="0.5" />
+          <Affliction identifier="fillbladder" amount="3.0" />
+        </StatusEffect>
+        <!-- Regular drinking -->
+        <StatusEffect type="OnUse" target="This" Condition="-18.0">
+          <Conditional InWater="false" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character">
+          <Conditional InWater="false" />
+          <Affliction identifier="he-internalburn" amount="1.5" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character" comparison="And">
+          <Conditional InWater="false" />
+          <Affliction identifier="psychosisresistance" amount="6" />
+          <Affliction identifier="applydrunk" amount="2.5" />
+          <ReduceAffliction identifier="hallucinating" amount="2.0" />
+          <ReduceAffliction identifier="psychosis" amount="2.0" />
+          <ReduceAffliction identifier="nausea" amount="2" />
+          <ReduceAffliction identifier="he-halucinova" amount="2.0" />
+          <ReduceAffliction identifier="embarrassment" strength="2" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional trait_likes_cocktails="gt 0" />
+          <ReduceAffliction identifier="mood" amount="1.205" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character" comparison="And">
+          <Conditional thirst="gt 0.4" />
+          <Conditional InWater="false" />
+          <ReduceAffliction type="thirst" amount="0.4" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character" comparison="And">
+          <Conditional bladder="gte 0.01" />
+          <Conditional InWater="false" />
+          <Affliction identifier="bladder" amount="0.5" />
+          <Affliction identifier="fillbladder" amount="3.0" />
+        </StatusEffect>
+        <StatusEffect type="OnImpact" target="This">
+          <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="fruitsplatter1" decalsize="1.0" />
+          <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+          <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
+          <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
+          <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
+          <Sound file="Content/Sounds/Damage/GlassImpact4.ogg" selectionmode="Random" range="600" />
+          <Remove />
+          <SpawnItem identifier="he-glassfragments" spawnposition="This" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="1"/>
+        </StatusEffect>
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+          <SpawnItem identifier="he-emptycocktailglass" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+        </StatusEffect>
+      </Holdable>
+      <Powered currpowerconsumption="0" IsOn="false">
+        <StatusEffect type="OnActive" target="This" condition="-40" disabledeltatime="false" offset="0,-15" >
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" loop="true" />
+          <ParticleEmitter particle="waterdrop" velocitymin="0.0" velocitymax="10.0" particlespersecond="50" />
+        </StatusEffect>
+        <StatusEffect type="OnActive" target="This" holdpos="-30,15" holdangle="180" aimpos="0,0" aimangle="180" setvalue="true" disabledeltatime="true" />
+      </Powered>
+      <CustomInterface canbeselected="false" drawhudwhenequipped="true">
+        <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
+        <Button text="interaction.emptycup">
+          <StatusEffect type="OnUse" target="This" IsActive="true" targetitemcomponent="Powered" setvalue="true">
+            <Conditional IsActive="false" targetitemcomponent="Powered" />
+          </StatusEffect>
+        </Button>
+      </CustomInterface>
+    </Item>
     <!-- NON-ALCOHOLIC -->
     <Item name="Water" identifier="he-water" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Fresh water. Helps a bit if you're feeling stuffed or when you're shit-faced." Tags="smallitem,drinkitem,cleanwater,water,bottle" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
@@ -2685,7 +2827,6 @@
           <ReduceAffliction identifier="drunknodebuffs" amount="1.5" />
           <ReduceAffliction identifier="hallucinating" amount="1.5" />
           <Affliction identifier="haste" amount="12.0" />
-          <!--<Affliction identifier="nausea" amount="50" probability="0.001"/>-->
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
@@ -3419,7 +3560,7 @@
       </CustomInterface>
     </Item>
     <!-- DIRTY WATER -->
-    <Item name="Water" identifier="he-seawaterrum" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Tastes salty." Tags="smallitem,drinkitem,dirtywaterrum,seawater,water,bottle" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
+    <Item name="Water" identifier="he-seawaterrum" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Tastes salty." Tags="smallitem,drinkitem,dirtywaterrum,seawater,water,bottle,seawaterrefill_rum" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0" />
       <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0" />
@@ -3432,6 +3573,9 @@
       <Fabricate suitablefabricators="refillstation" requiredtime="5" requiresrecipe="false" amount="1">
         <RequiredItem identifier="he-kegseawater" UseCondition="True" MinCondition="0.049"/>
         <RequiredItem tag="emptybottlerum" amount="1" />
+      </Fabricate>
+      <Fabricate suitablefabricators="sink" requiredtime="10" requiresrecipe="false" amount="1">
+        <RequiredItem tag="seawaterrefill_rum" amount="1" UseCondition="False" MinCondition="0.0" />
       </Fabricate>
       <Deconstruct time="2">
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
@@ -3545,7 +3689,7 @@
         </Button>
       </CustomInterface>
     </Item>
-    <Item name="Water" identifier="he-seawaterwhiskey" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Tastes salty." Tags="smallitem,drinkitem,dirtywaterwhiskey,seawater,water,bottle" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
+    <Item name="Water" identifier="he-seawaterwhiskey" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Tastes salty." Tags="smallitem,drinkitem,dirtywaterwhiskey,seawater,water,bottle,seawaterrefill_whiskey" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0" />
       <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0" />
@@ -3558,6 +3702,9 @@
       <Fabricate suitablefabricators="refillstation" requiredtime="5" requiresrecipe="false" amount="1">
         <RequiredItem identifier="he-kegseawater" UseCondition="True" MinCondition="0.049"/>
         <RequiredItem tag="emptybottlewhiskey" amount="1" />
+      </Fabricate>
+      <Fabricate suitablefabricators="sink" requiredtime="10" requiresrecipe="false" amount="1">
+        <RequiredItem tag="seawaterrefill_whiskey" amount="1" UseCondition="False" MinCondition="0.0" />
       </Fabricate>
       <Deconstruct time="2">
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
@@ -3671,7 +3818,7 @@
         </Button>
       </CustomInterface>
     </Item>
-    <Item name="Water" identifier="he-seawaterhalucinova" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Tastes salty." Tags="smallitem,drinkitem,dirtywaterhalucinova,seawater,water,bottle" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
+    <Item name="Water" identifier="he-seawaterhalucinova" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Tastes salty." Tags="smallitem,drinkitem,dirtywaterhalucinova,seawater,water,bottle,seawaterrefill_halucinova" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0" />
       <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0" />
@@ -3684,6 +3831,9 @@
       <Fabricate suitablefabricators="refillstation" requiredtime="5" requiresrecipe="false" amount="1">
         <RequiredItem identifier="he-kegseawater" UseCondition="True" MinCondition="0.049"/>
         <RequiredItem tag="emptybottlehalucinova" amount="1" />
+      </Fabricate>
+      <Fabricate suitablefabricators="sink" requiredtime="10" requiresrecipe="false" amount="1">
+        <RequiredItem tag="seawaterrefill_halucinova" amount="1" UseCondition="False" MinCondition="0.0" />
       </Fabricate>
       <Deconstruct time="2">
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
@@ -3797,7 +3947,7 @@
         </Button>
       </CustomInterface>
     </Item>
-    <Item name="Water" identifier="he-seawater" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Tastes salty." Tags="smallitem,drinkitem,dirtywaterregular,seawater,water,bottle" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
+    <Item name="Water" identifier="he-seawater" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Tastes salty." Tags="smallitem,drinkitem,dirtywaterregular,seawater,water,bottle,seawaterrefill_common" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0" />
       <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0" />
@@ -3810,6 +3960,9 @@
       <Fabricate suitablefabricators="refillstation" requiredtime="5" requiresrecipe="false" amount="1">
         <RequiredItem identifier="he-kegseawater" UseCondition="True" MinCondition="0.049"/>
         <RequiredItem tag="emptybottlecommon" amount="1" />
+      </Fabricate>
+      <Fabricate suitablefabricators="sink" requiredtime="10" requiresrecipe="false" amount="1">
+        <RequiredItem tag="seawaterrefill_common" amount="1" UseCondition="False" MinCondition="0.0" />
       </Fabricate>
       <Deconstruct time="2">
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
@@ -3923,7 +4076,7 @@
         </Button>
       </CustomInterface>
     </Item>
-    <Item name="Water" identifier="he-seawaterbeer" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Tastes salty." Tags="smallitem,drinkitem,dirtywaterbeer,seawater,water,bottle" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
+    <Item name="Water" identifier="he-seawaterbeer" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Tastes salty." Tags="smallitem,drinkitem,dirtywaterbeer,seawater,water,bottle,seawaterrefill_beer" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0" />
       <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0" />
@@ -3936,6 +4089,9 @@
       <Fabricate suitablefabricators="refillstation" requiredtime="5" requiresrecipe="false" amount="1">
         <RequiredItem identifier="he-kegseawater" UseCondition="True" MinCondition="0.049"/>
         <RequiredItem tag="emptybottlebeer" amount="1" />
+      </Fabricate>
+      <Fabricate suitablefabricators="sink" requiredtime="10" requiresrecipe="false" amount="1">
+        <RequiredItem tag="seawaterrefill_beer" amount="1" UseCondition="False" MinCondition="0.0" />
       </Fabricate>
       <Deconstruct time="2">
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
@@ -5174,7 +5330,7 @@
       </CustomInterface>
     </Item>
     <!-- COFFEE -->
-    <Item name="Cup of Coffee" identifier="he-cupcoffee" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeecup,cup" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
+    <Item name="Cup of Coffee" identifier="he-cupcoffee" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeecup,cupofcoffee,cup" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -5182,13 +5338,17 @@
       <Deconstruct time="2">
         <Item identifier="he-glassfragments" amount="1" outcondition="0.5"/>
       </Deconstruct>
+      <Fabricate suitablefabricators="coffeemachine" requiredtime="25" requiresrecipe="false">
+        <RequiredItem tag="coffeemix" UseCondition="true" mincondition="0.1" />
+        <RequiredItem tag="emptycup" amount="1" />
+      </Fabricate>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="83,425,31,21" depth="0.6" origin="0.5,0.5" />
       <!--<ContainedSprite allowedcontainertags="liquorshelf" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="201,8,21,58" depth="0.55" origin="0.5,0.42" />-->
       <Body width="31" height="21" density="12" />
       <SuitableTreatment type="thirst" suitability="70" />
       <!--GreaterComponent used to measure time passed since the item was created-->
       <GreaterComponent TimeFrame="0" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="23,8" holdpos="30,-15" holdangle="0" handle1="-20,-5" aimangle="30" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="RightHand,LeftHand" aimpos="23,8" holdpos="30,-15" holdangle="0" handle1="-20,-5" aimangle="30" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <!-- Allow the item to be applied to a bot, but prevent full usage on a player -->
         <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
           <Conditional IsBot="true" />
@@ -5402,7 +5562,7 @@
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
-          <SpawnItem identifier="he-emptycup" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <SpawnItem identifier="he-dirtycup" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
         </StatusEffect>
       </Holdable>
       <Powered currpowerconsumption="0" IsOn="false">
@@ -5421,19 +5581,23 @@
         </Button>
       </CustomInterface>
     </Item>
-    <Item name="Cup of Coffee" identifier="he-mugcoffee" category="Misc" subcategory="Drinks" maxstacksize="1" health="167" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeecup,cup" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
+    <Item name="Cup of Coffee" identifier="he-mugcoffee" category="Misc" subcategory="Drinks" maxstacksize="1" health="167" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeemug,coffeecup,mug" useinhealthinterface="true" scale="0.4" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Deconstruct time="2" />
+      <Fabricate suitablefabricators="coffeemachine" requiredtime="30" requiresrecipe="false">
+        <RequiredItem tag="coffeemix" UseCondition="true" mincondition="0.125" />
+        <RequiredItem tag="emptymug" amount="1" />
+      </Fabricate>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="115,474,36,37" depth="0.6" origin="0.5,0.5" />
       <!--<ContainedSprite allowedcontainertags="liquorshelf" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="201,8,21,58" depth="0.55" origin="0.5,0.42" />-->
       <Body width="31" height="34" density="12" />
       <SuitableTreatment type="thirst" suitability="70" />
       <!--GreaterComponent used to measure time passed since the item was created-->
       <GreaterComponent TimeFrame="0" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="23,8" holdpos="30,-15" holdangle="0" handle1="-20,-5" aimangle="30" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="RightHand,LeftHand" aimpos="23,8" holdpos="30,-15" holdangle="0" handle1="-20,-5" aimangle="30" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <!-- Allow the item to be applied to a bot, but prevent full usage on a player -->
         <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
           <Conditional IsBot="true" />
@@ -5647,7 +5811,7 @@
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
-          <SpawnItem identifier="he-emptymug" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <SpawnItem identifier="he-dirtymug" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
         </StatusEffect>
       </Holdable>
       <Powered currpowerconsumption="0" IsOn="false">
@@ -5679,7 +5843,7 @@
       <SuitableTreatment type="thirst" suitability="70" />
       <!--GreaterComponent used to measure time passed since the item was created-->
       <GreaterComponent TimeFrame="0" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="23,8" holdpos="30,-15" holdangle="0" handle1="0,-5" aimangle="30" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="RightHand,LeftHand" aimpos="23,8" holdpos="30,-15" holdangle="0" handle1="0,-5" aimangle="30" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <!-- Allow the item to be applied to a bot, but prevent full usage on a player -->
         <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
           <Conditional IsBot="true" />
