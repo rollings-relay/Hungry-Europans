@@ -10,11 +10,11 @@
           <CharacterAbilityApplyStatusEffects>
             <StatusEffects>
               <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
-                <Conditional he-stuffed="eq 0" />
+                <Conditional IsBot="false" />
                 <Affliction identifier="hunger" strength="0.01"/>
               </StatusEffect>
               <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
-                <Conditional quenched="lte 0" />
+                <Conditional IsBot="false" />
                 <Affliction identifier="thirst" strength="0.02"/>
               </StatusEffect>
             </StatusEffects>
@@ -31,6 +31,7 @@
           <CharacterAbilityApplyStatusEffects>
             <StatusEffects>
               <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+                <Conditional IsBot="false" />
                 <Affliction identifier="sleepaffliction" amount="0.015" />
               </StatusEffect>
             </StatusEffects>
@@ -47,6 +48,7 @@
           <CharacterAbilityApplyStatusEffects>
             <StatusEffects>
               <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+                <Conditional IsBot="false" />
                 <Affliction identifier="mood" amount="0.03" />
               </StatusEffect>
             </StatusEffects>
@@ -62,12 +64,19 @@
           <CharacterAbilityApplyStatusEffects>
             <StatusEffects>
               <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+                <Conditional IsBot="false" />
                 <Conditional bladder="lt 0.1" />
                 <Affliction identifier="bladder" strength="0.01"/>
               </StatusEffect>
               <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+                <Conditional IsBot="false" />
                 <Conditional defecate="lt 0.1" />
                 <Affliction identifier="defecate" strength="0.01"/>
+              </StatusEffect>
+              <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+                <Conditional IsBot="false" />
+                <Conditional hygiene="lt 0.1" />
+                <Affliction identifier="hygiene" strength="0.01"/>
               </StatusEffect>
             </StatusEffects>
           </CharacterAbilityApplyStatusEffects>
