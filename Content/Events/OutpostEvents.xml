@@ -255,5 +255,10 @@
   <EventSet identifier="he-outpostevent.hirechef.hydroponics" leveltype="outpost" locationtype="hydroponics" allowatstart="true" minleveldifficulty="0" maxleveldifficulty="100" chooserandom="false" ignorecooldown="true" additive="true" SelectAlways="true">
     <ScriptedEvent identifier="he-hirechef" commonness="50" probability="1.0"/>
   </EventSet>
-  <!--locationtype="outpost,city,research,military,mine,colony,settlement,construction,camp,base,blockade,survey,excavation,study,lab,clinic,hospital,surgery,hydroponics,biosphere,nourishment,factory,shipyard,fusion"-->
+  <!--All DE Locations:
+      locationtype="outpost,city,research,military,mine,colony,settlement,construction,camp,base,blockade,survey,study,lab,clinic,hospital,hydroponics,factory,shipyard,huskchurch,sinkingcircus,PirateOutpost"
+      
+      Technically outposts, but not permanent or without NPCs:
+      locationtypes="lair,lairmudraptor,lairthresher,huskgroundsde,militaryforces"
+  -->
 </Randomevents>
