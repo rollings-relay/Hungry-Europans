@@ -336,20 +336,9 @@
       </Deconstruct>
       <!-- rectangular body to prevent the poop from rolling -->
       <Body width="53" height="41" density="9" />
-      <Holdable canbepicked="true" characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="3.5" aimpos="35,-10" msg="ItemMsgPickUpSelect">
-        <!-- simulate throwing actions -->
-        <StatusEffect type="OnSecondaryUse" target="This" aimpos="50,10" setvalue="true">
-          <Conditional targetitemcomponent="RangedWeapon" reloadtimer="gt 0.6" />
-        </StatusEffect>
-        <StatusEffect type="OnSecondaryUse" target="This" aimpos="-10,30" setvalue="true">
-          <Conditional targetitemcomponent="RangedWeapon" reloadtimer="lt 0.6" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" aimpos="50,10" setvalue="true" comparison="And">
-          <Conditional targetitemcomponent="RangedWeapon" reloadtimer="lt 0.1" />
-        </StatusEffect>
-        <!-- clone self only once -->
-        <StatusEffect type="OnActive" target="This" oneshot="true">
-          <SpawnItem identifier="poop" spawnposition="ThisInventory" spawnifinventoryfull="true" />
+      <Throwable canbepicked="true" characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="3.5" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+        <StatusEffect type="OnSecondaryUse" target="This" delay="0.01">
+          <Use />
         </StatusEffect>
         <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true">
           <Conditional HasTag="neq smallitem" targetcontainer="true" />
@@ -358,18 +347,11 @@
           <Sound file="Content/Sounds/Damage/Gore6.ogg" range="500" />
           <Remove />
         </StatusEffect>
-      </Holdable>
-      <RangedWeapon barrelpos="0,0" spread="1" unskilledspread="20" reload="0.7" combatpriority="40" drawhudwhenequipped="true" crosshairscale="0.2">
-        <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
-        <StatusEffect type="OnUse" target="This">
-          <Explosion range="50" force="5" showeffects="false" />
-          <Remove />
-        </StatusEffect>
-        <RequiredItems identifier="poop" type="Contained" />
-      </RangedWeapon>
+      </Throwable>
       <Projectile characterusable="false" launchimpulse="15" impulsespread="0.01" sticktocharacters="true" sticktoitems="true" sticktostructures="true" sticktodoors="true">
         <Attack targetimpulse="3" severlimbsprobability="0.1" itemdamage="0" structuredamage="0" structuresoundtype="StructureSlash">
           <Affliction identifier="embarrassment" strength="150" />
+          <Affliction identifier="hygiene" strength="100" />
           <Affliction identifier="he-hitbypoop" strength="30" />
           <Affliction identifier="stun" strength="0.2" />
         </Attack>
@@ -388,10 +370,6 @@
           <Remove />
         </StatusEffect>
       </Projectile>
-      <!-- projectile container -->
-      <ItemContainer characterusable="false" canbeselected="false" capacity="1" maxstacksize="1" hideitems="true" allowaccess="false" drawinventory="false" allowdraganddrop="false" allowswappingcontaineditems="false" autofill="false" ShowConditionInContainedStateIndicator="false" ShowContainedStateIndicator="false" removecontaineditemsondeconstruct="true">
-        <Containable items="poop" />
-      </ItemContainer>
     </Item>
     <!-- EMPTY CANS -->
     <Item name="Empty Can" identifier="he-emptycantonic" description="An empty aluminium can. Can be deconstructed into aluminium or thrown around." category="Misc" Tags="smallitem,emptycan" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_aluminiumcan">
@@ -399,8 +377,10 @@
       <PreferredContainer secondary="abandonedcrewcab,abandonedengcab,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer primary="storagecab" secondary="crewcab"/>
-      <Deconstruct time="1">
-        <Item identifier="aluminium" amount="1" outcondition="0.5"/>
+      <Deconstruct time="1" chooserandom="true">
+        <Item identifier="aluminium" amount="1"/>
+        <Item identifier="aluminium" amount="0"/>
+        <Item identifier="aluminium" amount="0"/>
       </Deconstruct>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="432,488,22,23" depth="0.502" origin="0.5,0.5" />
       <Body radius="8" height="15" density="13" friction="1.0" restitution="0.15" angulardamping="1.0" />
@@ -426,8 +406,10 @@
       <PreferredContainer secondary="abandonedcrewcab,abandonedengcab,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer primary="storagecab" secondary="crewcab"/>
-      <Deconstruct time="1">
-        <Item identifier="aluminium" amount="1" outcondition="0.5"/>
+      <Deconstruct time="1" chooserandom="true">
+        <Item identifier="aluminium" amount="1"/>
+        <Item identifier="aluminium" amount="0"/>
+        <Item identifier="aluminium" amount="0"/>
       </Deconstruct>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="455,484,19,27" depth="0.502" origin="0.5,0.5" />
       <Body radius="8" height="19" density="13" friction="1.0" restitution="0.15" angulardamping="1.0" />
@@ -453,8 +435,10 @@
       <PreferredContainer secondary="abandonedcrewcab,abandonedengcab,abandonedstoragecab" minamount="1" maxamount="3" spawnprobability="0.03" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.03" />
       <PreferredContainer primary="storagecab" secondary="crewcab"/>
-      <Deconstruct time="1">
-        <Item identifier="aluminium" amount="1" outcondition="0.5"/>
+      <Deconstruct time="1" chooserandom="true">
+        <Item identifier="aluminium" amount="1"/>
+        <Item identifier="aluminium" amount="0"/>
+        <Item identifier="aluminium" amount="0"/>
       </Deconstruct>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="494,480,17,31" depth="0.502" origin="0.5,0.5" />
       <Body radius="8" height="23" density="13" friction="1.0" restitution="0.15" angulardamping="1.0" />
@@ -480,8 +464,10 @@
       <PreferredContainer secondary="abandonedcrewcab,abandonedengcab,abandonedstoragecab" minamount="1" maxamount="3" spawnprobability="0.03" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.03" />
       <PreferredContainer primary="storagecab" secondary="crewcab"/>
-      <Deconstruct time="1">
-        <Item identifier="aluminium" amount="1" outcondition="0.5"/>
+      <Deconstruct time="1" chooserandom="true">
+        <Item identifier="aluminium" amount="1"/>
+        <Item identifier="aluminium" amount="0"/>
+        <Item identifier="aluminium" amount="0"/>
       </Deconstruct>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="475,486,18,25" depth="0.502" origin="0.5,0.5" />
       <Body radius="8" height="17" density="13" friction="1.0" restitution="0.15" angulardamping="1.0" />
@@ -511,7 +497,7 @@
       <Holdable slots="Any,RightHand+LeftHand" controlpose="False" aimpos="60,-20" handle1="-45,-15" handle2="-45,-30" msg="ItemMsgPickUpSelect" />
       <RangedWeapon reload="3" launchimpulse="5.0" barrelpos="50,15" spread="0" drawhudwhenequipped="true" crosshairscale="0.2">
         <!-- <Sound file="Content/Items/Weapons/HarpoonGun1.ogg" type="OnUse" range="1000" /> -->
-        <StatusEffect type="OnUse">
+        <StatusEffect type="OnUse" target="This">
           <Explosion range="150.0" force="0" shockwave="false" smoke="false" flames="false" flash="false" sparks="false" underwaterbubble="false" camerashake="3" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This" delay="0.8" checkconditionalalways="true">
