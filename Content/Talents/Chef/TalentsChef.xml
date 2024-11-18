@@ -1129,6 +1129,7 @@
       </Description>
       <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
         <Conditions>
+          <AbilityConditionServerRandom randomChance="0.5"/>
           <AbilityConditionCharacter targettype="Monster">
             <Conditional IsMachine="false" />
             <Conditional IsHusk="true" />
