@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Override>
   <Items>
-    <Item name="Nugget" identifier="he-cookednugget" health="10" category="Misc" subcategory="Food" maxstacksize="20" maxstacksizecharacterinventory="20" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+    <Item hideinmenus="false" name="Nugget" identifier="he-cookednugget" health="10" category="Misc" subcategory="Food" maxstacksize="20" maxstacksizecharacterinventory="20" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
@@ -63,7 +63,7 @@
         </StatusEffect>
       </Holdable>
     </Item>
-    <Item name="Burger" identifier="he-burger" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.4" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+    <Item hideinmenus="false" name="Burger" identifier="he-burger" health="100" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.4" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
@@ -274,7 +274,7 @@
         <Containable items="poison,ethanol,huskeggsbasic,huskeggs,paralyxis" />
       </ItemContainer>
     </Item>
-    <Item name="Hotdog" identifier="he-hotdog" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.4" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+    <Item hideinmenus="false" name="Hotdog" identifier="he-hotdog" health="80" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.4" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="True"/>
