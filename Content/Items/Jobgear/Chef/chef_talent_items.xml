@@ -28,8 +28,7 @@
         </TickBox>
       </CustomInterface>
       <!--PowerContainer charge used to keep track of time to only water every 15min (900s)-->
-      <PowerContainer capacity="900" charge="0" maxrechargespeed="0" rechargespeed="0" allowingameediting="false" canbeselected="false" />
-      <GreaterComponent TimeFrame="0" allowingameediting="false" canbeselected="false" channel="0" />
+      <PowerContainer capacity="900" charge="0" maxrechargespeed="0" rechargespeed="0" allowingameediting="false" canbeselected="false" VulnerableToEMP="false" />
       <LightComponent range="0.0" lightcolor="100,255,50,111" flicker="0.1" flickerspeed="0.5" IsOn="false" castshadows="false" alphablend="false" allowingameediting="false" powerconsumption="50">
         <sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="106,1234,105,251" depth="0.1" origin="0.5,0.5" alpha="1.0" />
         <!--Tag the item to allow for StatusEffect conditionals to check if every requirement is met and play a sound loop to clarify the item is active-->
