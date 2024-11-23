@@ -75,8 +75,8 @@
           </StatusEffect>
         </TickBox>
       </CustomInterface>
-      <!--GreaterComponent used to keep track of time to simulate growth-->
-      <GreaterComponent TimeFrame="0" allowingameediting="false" canbeselected="false" />
+      <!--PowerContainer charge used to keep track of time to only water every 15min (900s)-->
+      <PowerContainer capacity="900" charge="0" maxrechargespeed="0" rechargespeed="0" allowingameediting="false" canbeselected="false" VulnerableToEMP="false" />
       <LightComponent range="0.0" lightcolor="255,255,255,111" IsOn="false" castshadows="false" alphablend="false" allowingameediting="false" powerconsumption="200">
         <sprite texture="Content/Map/Outposts/Art/MedicalItemResearchLights.png" sourcerect="0,6,414,297" depth="0.1" origin="0.5,0.5" alpha="1.0" />
         <!--Tag the item to allow for StatusEffect conditionals to check if every requirement is met and play a sound loop to clarify the item is active-->
@@ -86,18 +86,18 @@
           <RequiredItem items="yeastshroom,slimebacteria,elastinplant,fiberplant,aquaticpoppy,he-seaweed" targetslot="8" type="Contained" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Fabricators/hydroponics_loop.ogg" volume="1.5" range="400" loop="true" />
         </StatusEffect>
-        <!--Increase timeframe by 1 each second to simulate growing if the item has the status tag "cangenerate"-->
-        <StatusEffect type="OnActive" target="This" targetitemcomponent="GreaterComponent" interval="1" timeframe="1" stackable="false" disabledeltatime="true">
+        <!--Increase charge by 1 each second to simulate growing if the item has the status tag "cangenerate"-->
+        <StatusEffect type="OnActive" target="This" targetitemcomponent="PowerContainer" interval="1" charge="1" stackable="false" disabledeltatime="true">
           <Conditional HasStatusTag="eq cangenerate" />
         </StatusEffect>
-        <!--Decrease timeframe by 1 every two seconds to simulate plant withering if the item doesn't have the status tag "cangenerate"-->
-        <StatusEffect type="Always" target="This" targetitemcomponent="GreaterComponent" interval="2" timeframe="-1" stackable="false" disabledeltatime="true">
+        <!--Decrease charge by 1 every two seconds to simulate plant withering if the item doesn't have the status tag "cangenerate"-->
+        <StatusEffect type="Always" target="This" targetitemcomponent="PowerContainer" interval="2" charge="-1" stackable="false" disabledeltatime="true">
           <Conditional HasStatusTag="neq cangenerate" />
         </StatusEffect>
-        <!--"Use" the item if timeframe is equal to or larger than 900 to trigger the "OnUse" StatusEffects, reset the timeframe to 0 and "grow" a plant if the item has the status tag "cangenerate"-->
-        <StatusEffect type="OnActive" target="This" interval="0.5" stackable="false" timeframe="0" setvalue="true" disabledeltatime="true" comparison="And">
+        <!--"Use" the item if charge is equal to or larger than 900 to trigger the "OnUse" StatusEffects, reset the charge to 0 and "grow" a plant if the item has the status tag "cangenerate"-->
+        <StatusEffect type="OnActive" target="This" interval="0.5" stackable="false" charge="0" setvalue="true" disabledeltatime="true" comparison="And">
           <Conditional HasStatusTag="eq cangenerate" />
-          <Conditional TimeFrame="gte 900" />
+          <Conditional charge="gte 900" />
           <Use />
         </StatusEffect>
         <!--Set light color to white when all required items are contained and the item has the active tag "cangenerate"-->
@@ -194,6 +194,7 @@
         <RequiredItem items="screwdriver" type="Equipped" />
         <input name="power_in" displayname="connection.powerin" />
         <output name="condition_out" displayname="connection.conditionout" />
+        <output name="charge" displayname="connection.batterychargestatusout" />
       </ConnectionPanel>
       <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" attachable="true" aimable="true">
         <RequiredItem items="wrench" type="Equipped" />
