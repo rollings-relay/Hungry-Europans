@@ -637,7 +637,7 @@
         </Containable>
       </ItemContainer>
     </Item>
-    <Item name="Stack of Empty Plates" identifier="he-emptyplatestack_3" Tags="smallitem,tableware" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="4 empty plates to put food on. Can be thrown." useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
+    <Item name="Stack of Empty Plates" identifier="he-emptyplatestack_4" Tags="smallitem,tableware" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="4 empty plates to put food on. Can be thrown." useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
       <PreferredContainer secondary="wreckcrewcab,abandonedcrewcab" minamount="1" maxamount="6" spawnprobability="0.01" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="388,13,68,7" depth="0.499" origin="0.5,0.5" />
@@ -841,7 +841,7 @@
           <StatusEffect type="OnUse" target="This" disabledeltatime="true">
             <Remove />
             <SpawnItem identifier="he-emptybowlstack_2" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
-            <SpawnItem identifier="he-emptyplate" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+            <SpawnItem identifier="he-emptybowl" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
           </StatusEffect>
         </Button>
       </CustomInterface>
