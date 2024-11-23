@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Hungry Europans" modversion="1.0.119" corepackage="False" steamworkshopid="2954998725" gameversion="1.6.6.0">
+<contentpackage name="Hungry Europans" modversion="2.0.0" corepackage="False" steamworkshopid="2954998725" gameversion="1.6.6.0">
   <Afflictions file="%ModDir%/Content/Afflictions/BackwardsCompatibility.xml" />
   <Afflictions file="%ModDir%/Content/Afflictions/FoodBuffs.xml" />
   <Afflictions file="%ModDir%/Content/Afflictions/MiscAfflictions.xml" />
@@ -7,6 +7,7 @@
   <Afflictions file="%ModDir%/Content/Afflictions/PoisonAndSlowEffects.xml" />
   <Afflictions file="%ModDir%/Content/Afflictions/TraitsAfflictions.xml" />
   <Afflictions file="%ModDir%/Content/Talents/Chef/AfflictionsChef.xml" />
+  <Item file="%ModDir%/Content/Items/#Presets/#ItemPresets.xml" />
   <Item file="%ModDir%/Content/Items/Containers/Containers.xml" />
   <Item file="%ModDir%/Content/Items/Fabricators/Fabricators.xml" />
   <Item file="%ModDir%/Content/Items/Food/Blueprints.xml" />
