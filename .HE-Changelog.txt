@@ -3,9 +3,14 @@ Hungry Europans
 - Fixed Refrigerators not being fireproof.
 - Added: "Pan" item. Required for cooking some recipes on the stove and can be used as a melee weapon.
 - Added: "Pot" item. Required for cooking some recipes on the stove.
+- Added: New tableware items including: Fork, Spoon, Cups, Plates, Bowls and dirty variants.
+- (TODO) Added: New ingredient "Dough" which is now used to make Bread, Buns and Pizza.
 - Added: New food item "Omelette" of every monster egg type (Crawler, Mudraptor, Thresher).
-- Added: New food item "Pizza".
-- Added: New drinks "Coffee". (TODO) Reduces your tiredness if you have it enabled. Can give you a caffeine rush.
+- (TODO) Added: New food item "Pizza".
+- (WIP) Added: New drinks "Coffee". Reduces your tiredness if you have it enabled and helps to sober up. Can give you a caffeine rush.
+- Added: New output for "Hydroponic Planter" to calculate the seconds until the next produce. Works exactly like the "Gardening Sprinkler".
+- (TODO) Added: New optional affliction "Hygiene" which is enabled with the "Filthy Europan" item.
+- Changed: Regular Food is no longer stackable. Snacks can still be stacked to some extend.
 - Changed: "Bladder", "Need to defecate", "Stomach Ache" and "Alcohol Withdrawal" can now cause your mood to worsen. (Only with "Mood" enabled)
 - Changed: "Drunk" can now improve your mood. (Only with "Mood" enabled)
 - Changed: "Drunk" can now make you tired. (Only with "Tiredness" enabled)
@@ -15,7 +20,7 @@ Hungry Europans
 - Fixed: "Internal Burns" had wrong damage values and thus wouldn't actually cause any damage.
 - Fixed: Puking from "Stomach Ache" didn't decrease the duration of some food buffs.
 - Integrated: "Tiredness" and "Mood" from NEEDS. These are optional and can each be toggled via an item at vending machines or forced via a separately available "Enforcer" patch.
-- (TODO) Added "Electric Grill". Used to cook multiple meats simultaneously.
+- (WIP) Added "Electric Grill". Used to cook multiple meats simultaneously.
 - (TODO) Rework of almost all meat related recipes. For example burgers and hotdogs will now be put together on the cutting board while the meat is cooked seperately on the stove with either a pan or cooking pot.
 - Rescaled burgers, hotdogs, filets and roasts. They felt a bit oversized previously.
 - Reduced amount of alien blood gained from deconstructing meat.
