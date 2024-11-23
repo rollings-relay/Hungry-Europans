@@ -854,6 +854,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="86,430,72,34" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="86,430,72,34" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="86,430,72,34" depth="0.525" origin="0.5,0.7"  />
+      <!-- TODO: Create new "dough" item using this recipe on cutting board and make bread use dough as recipe instead. Same for Burger and Hotdog Buns and Pizza -->
       <Fabricate suitablefabricators="oven" requiredtime="150" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="cooking" level="40" />
         <RequiredItem tag="cleanwater" UseCondition="True" MinCondition="0.99"/>
