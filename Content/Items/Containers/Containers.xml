@@ -328,7 +328,6 @@
         </StatusEffect>
       </Holdable>
     </Item>
-    <!--Performance intensive due to type="always" StatusEffects as OnContaining doesn't work-->
     <Item name="Kitchen Sink" identifier="he-kitchencounter" tags="kitchen,locker,container" linkable="true" category="Misc" subcategory="Container" description="Can store up to 18 different small or medium items and refill empty bottles and kegs with sea water." pickdistance="150" waterproof="false" isshootable="true" scale="0.5">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.798" sourcerect="0,0,507,300" origin="0.5,0.5125" />
       <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="0,868,318,149" depth="0.797" origin="0.049,-0.022">
@@ -372,9 +371,9 @@
       <ItemContainer capacity="20" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.25,0.45" anchor="Center" style="ItemUI" />
         <!--Water Icon-->
-        <SlotIcon slotindex="0" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="577,0,85,85" origin="0.5,0.5" />
+        <!-- <SlotIcon slotindex="0" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="577,0,85,85" origin="0.5,0.5" /> -->
         <!--PickUp Icon-->
-        <SlotIcon slotindex="1" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="662,0,85,85" origin="0.5,0.5" />
+        <!-- <SlotIcon slotindex="1" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="662,0,85,85" origin="0.5,0.5" /> -->
         <!--Regular Slots-->
         <Containable items="smallitem,mediumitem,peanutegg,psilotoadegg,orangeboyegg,balloonegg,mudraptoregg,crawleregg,petraptoregg,tigerthresheregg" excludedidentifiers="mobilecontainer" />
         <!--Toolbelt/Backpack Slots-->
