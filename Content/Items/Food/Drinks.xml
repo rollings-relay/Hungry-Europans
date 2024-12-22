@@ -6075,5 +6075,506 @@
         </Button>
       </CustomInterface>
     </Item>
+    <!-- HOT CHOCOLATE -->
+    <Item name="Cup of Hot Chocolate" identifier="he-cuphotchocolate" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeecup,cupofchocolate,cup" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
+      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
+      <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
+      <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
+      <PreferredContainer primary="kitchen" secondary="crewcab"/>
+      <Deconstruct time="2">
+        <Item identifier="he-glassfragments" amount="1" outcondition="0.5"/>
+      </Deconstruct>
+      <Fabricate suitablefabricators="coffeemachine" requiredtime="25" requiresrecipe="false">
+        <RequiredItem tag="chocolatemix" UseCondition="true" mincondition="0.1" />
+        <RequiredItem tag="emptycup" amount="1" />
+      </Fabricate>
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="83,425,31,21" depth="0.6" origin="0.5,0.5" />
+      <!--<ContainedSprite allowedcontainertags="liquorshelf" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="201,8,21,58" depth="0.55" origin="0.5,0.42" />-->
+      <Body width="31" height="21" density="12" />
+      <SuitableTreatment type="thirst" suitability="70" />
+      <!--GreaterComponent used to measure time passed since the item was created-->
+      <GreaterComponent TimeFrame="0" />
+      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="RightHand,LeftHand" aimpos="23,8" holdpos="30,-15" holdangle="0" handle1="-20,-5" aimangle="30" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+        <!-- Allow the item to be applied to a bot, but prevent full usage on a player -->
+        <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
+          <Conditional IsBot="true" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
+          <Conditional IsBot="true" />
+          <ReduceAffliction type="thirst" amount="10" />
+          <ReduceAffliction type="he-dieofthirst" amount="200" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="8" comparison="And" multiplyafflictionsbymaxvitality="true">
+          <Conditional IsBot="true" />
+          <Conditional bladder="gte 0.01" />
+          <Affliction identifier="fillbladder" amount="1.0" />
+        </StatusEffect>
+        <!--Stronger effects while tea is hot-->
+        <StatusEffect type="OnUse" target="This,UseTarget" targetlimb="head" duration="8" comparison="And" multiplyafflictionsbymaxvitality="true">
+          <Conditional IsBot="true" />
+          <Conditional timeframe="lte 40" />
+          <Affliction identifier="burn" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="8" comparison="And" multiplyafflictionsbymaxvitality="true">
+          <Conditional IsBot="true" />
+          <Conditional timeframe="lt 180" />
+          <ReduceAffliction identifier="drunk" amount="0.5" />
+          <ReduceAffliction identifier="drunknodebuffs" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="8" comparison="And" multiplyafflictionsbymaxvitality="true">
+          <Conditional IsBot="true" />
+          <Conditional timeframe="lt 180" />
+          <Conditional trait_likes_tea="gt 0" />
+          <ReduceAffliction identifier="mood" amount="2.5" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This,UseTarget" duration="8" comparison="And" multiplyafflictionsbymaxvitality="true">
+          <Conditional IsBot="true" />
+          <Conditional timeframe="lt 180" />
+          <Conditional sleepaffliction="gt 0" />
+          <Affliction identifier="caffeinated" amount="2.5" />
+        </StatusEffect>
+        <!--Weaker effects while tea is cold-->
+        <StatusEffect type="OnUse" target="This,Character" comparison="And">
+          <Conditional IsBot="true" />
+          <Conditional timeframe="gte 180" />
+          <ReduceAffliction identifier="drunk" amount="0.1" />
+          <ReduceAffliction identifier="drunknodebuffs" amount="0.1" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This,Character" comparison="And">
+          <Conditional IsBot="true" />
+          <Conditional timeframe="gte 180" />
+          <Conditional trait_likes_tea="gt 0" />
+          <ReduceAffliction identifier="mood" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This,Character" comparison="And">
+          <Conditional IsBot="true" />
+          <Conditional timeframe="gte 180" />
+          <Conditional sleepaffliction="gt 0" />
+          <Affliction identifier="caffeinated" amount="0.5" />
+        </StatusEffect>
+        <!-- Allow the item to be applied to a player fully, if the player is not in water and unconcious/stunned -->
+        <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional stun="gt 0" />
+          <Conditional IsPlayer="true" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="8" comparison="And" multiplyafflictionsbymaxvitality="true">
+          <Conditional InWater="false" />
+          <Conditional stun="gt 0" />
+          <Conditional IsPlayer="true" />
+          <ReduceAffliction type="thirst" amount="1.25" />
+          <ReduceAffliction type="he-dieofthirst" amount="20" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="8" comparison="And" multiplyafflictionsbymaxvitality="true">
+          <Conditional InWater="false" />
+          <Conditional stun="gt 0" />
+          <Conditional IsPlayer="true" />
+          <Conditional bladder="gte 0.01" />
+          <Affliction identifier="fillbladder" amount="1.0" />
+        </StatusEffect>
+        <!--Stronger effects while tea is hot-->
+        <StatusEffect type="OnUse" target="This,UseTarget" targetlimb="head" duration="8" comparison="And" multiplyafflictionsbymaxvitality="true">
+          <Conditional InWater="false" />
+          <Conditional stun="gt 0" />
+          <Conditional IsPlayer="true" />
+          <Conditional timeframe="lte 40" />
+          <Affliction identifier="burn" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="8" comparison="And" multiplyafflictionsbymaxvitality="true">
+          <Conditional InWater="false" />
+          <Conditional stun="gt 0" />
+          <Conditional IsPlayer="true" />
+          <Conditional timeframe="lt 180" />
+          <ReduceAffliction identifier="drunk" amount="0.5" />
+          <ReduceAffliction identifier="drunknodebuffs" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="8" comparison="And" multiplyafflictionsbymaxvitality="true">
+          <Conditional InWater="false" />
+          <Conditional stun="gt 0" />
+          <Conditional IsPlayer="true" />
+          <Conditional timeframe="lt 180" />
+          <Conditional trait_likes_tea="gt 0" />
+          <ReduceAffliction identifier="mood" amount="2.5" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This,UseTarget" duration="8" comparison="And" multiplyafflictionsbymaxvitality="true">
+          <Conditional InWater="false" />
+          <Conditional stun="gt 0" />
+          <Conditional IsPlayer="true" />
+          <Conditional timeframe="lt 180" />
+          <Conditional sleepaffliction="gt 0" />
+          <Affliction identifier="caffeinated" amount="2.5" />
+        </StatusEffect>
+        <!--Weaker effects while tea is cold-->
+        <StatusEffect type="OnUse" target="This,Character" comparison="And">
+          <Conditional IsBot="true" />
+          <Conditional timeframe="gte 180" />
+          <ReduceAffliction identifier="drunk" amount="0.1" />
+          <ReduceAffliction identifier="drunknodebuffs" amount="0.1" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This,Character" comparison="And">
+          <Conditional IsBot="true" />
+          <Conditional timeframe="gte 180" />
+          <Conditional trait_likes_tea="gt 0" />
+          <ReduceAffliction identifier="mood" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This,Character" comparison="And">
+          <Conditional IsBot="true" />
+          <Conditional timeframe="gte 180" />
+          <Conditional sleepaffliction="gt 0" />
+          <Affliction identifier="caffeinated" amount="0.5" />
+        </StatusEffect>
+        <!-- Regular drinking -->
+        <!--Increase time to simulate tea cooling off-->
+        <StatusEffect type="Always" target="This" timeframe="1">
+          <Conditional timeframe="lte 180" />
+        </StatusEffect>
+        <!--Particles while tea is hot-->
+        <StatusEffect type="OnNotContained" target="This" stackable="false">
+          <Conditional timeframe="lt 180" />
+          <ParticleEmitter particle="FleshSmoke" anglemin="90" anglemax="90" distancemin="7" distancemax="7" scalemin="0.1" scalemax="0.2" scalemultiplier="1,1" particlespersecond="1.2" colormultiplier="255,255,255,150" copyentityangle="True" />
+        </StatusEffect>
+        <StatusEffect type="OnActive" target="This" stackable="false">
+          <Conditional timeframe="lt 180" />
+          <ParticleEmitter particle="FleshSmoke" anglemin="90" anglemax="90" distancemin="7" distancemax="7" scalemin="0.1" scalemax="0.2" scalemultiplier="1,1" particlespersecond="1.2" colormultiplier="255,255,255,150" copyentityangle="True" />
+        </StatusEffect>
+        <!--Double the steam particles and apply burn when drinking tea too early-->
+        <StatusEffect type="OnNotContained" target="This" stackable="false">
+          <Conditional timeframe="lte 40" />
+          <ParticleEmitter particle="FleshSmoke" anglemin="90" anglemax="90" distancemin="7" distancemax="7" scalemin="0.1" scalemax="0.2" scalemultiplier="1,1" particlespersecond="2.0" colormultiplier="255,255,255,150" copyentityangle="True" />
+        </StatusEffect>
+        <StatusEffect type="OnActive" target="This" stackable="false">
+          <Conditional timeframe="lte 40" />
+          <ParticleEmitter particle="FleshSmoke" anglemin="90" anglemax="90" distancemin="7" distancemax="7" scalemin="0.1" scalemax="0.2" scalemultiplier="1,1" particlespersecond="2.0" colormultiplier="255,255,255,150" copyentityangle="True" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This,Character" targetlimb="head" comparison="And">
+          <Conditional timeframe="lte 40" />
+          <Affliction identifier="burn" amount="0.5" />
+        </StatusEffect>
+        <!--Stronger effects while tea is hot-->
+        <StatusEffect type="OnUse" target="This,Character" comparison="And">
+          <Conditional timeframe="lt 180" />
+          <ReduceAffliction identifier="drunk" amount="0.5" />
+          <ReduceAffliction identifier="drunknodebuffs" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This,Character" comparison="And">
+          <Conditional timeframe="lt 180" />
+          <Conditional trait_likes_tea="gt 0" />
+          <ReduceAffliction identifier="mood" amount="2.5" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This,Character" comparison="And">
+          <Conditional timeframe="lt 180" />
+          <Conditional sleepaffliction="gt 0" />
+          <Affliction identifier="caffeinated" amount="2.5" />
+        </StatusEffect>
+        <!--Weaker effects while tea is cold-->
+        <StatusEffect type="OnUse" target="This,Character" comparison="And">
+          <Conditional timeframe="gte 180" />
+          <ReduceAffliction identifier="drunk" amount="0.1" />
+          <ReduceAffliction identifier="drunknodebuffs" amount="0.1" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This,Character" comparison="And">
+          <Conditional timeframe="gte 180" />
+          <Conditional trait_likes_tea="gt 0" />
+          <ReduceAffliction identifier="mood" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This,Character" comparison="And">
+          <Conditional timeframe="gte 180" />
+          <Conditional sleepaffliction="gt 0" />
+          <Affliction identifier="caffeinated" amount="0.5" />
+        </StatusEffect>
+        <!--General effects-->
+        <StatusEffect type="InWater" target="This" Condition="0" setvalue="true" />
+        <StatusEffect type="OnUse" target="This" Condition="-12.5">
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurping.ogg" loop="true" range="200" volume="2.0" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character" comparison="And">
+          <Conditional thirst="gt 1.25" />
+          <ReduceAffliction type="thirst" amount="1.25" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character" comparison="And">
+          <Conditional bladder="gte 0.01" />
+          <Affliction identifier="fillbladder" amount="1.0" />
+        </StatusEffect>
+        <StatusEffect type="OnImpact" target="This">
+          <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+          <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
+          <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
+          <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
+          <Sound file="Content/Sounds/Damage/GlassImpact4.ogg" selectionmode="Random" range="600" />
+          <Remove />
+          <SpawnItem identifier="he-glassfragments" spawnposition="This" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.5"/>
+        </StatusEffect>
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+          <SpawnItem identifier="he-dirtycup" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+        </StatusEffect>
+      </Holdable>
+      <Powered currpowerconsumption="0" IsOn="false">
+        <StatusEffect type="OnActive" target="This" condition="-40" disabledeltatime="false" offset="0,-15" >
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" loop="true" />
+          <ParticleEmitter particle="waterdrop" velocitymin="0.0" velocitymax="10.0" particlespersecond="50" />
+        </StatusEffect>
+        <StatusEffect type="OnActive" target="This" holdpos="-30,15" holdangle="180" aimpos="0,0" aimangle="180" setvalue="true" disabledeltatime="true" />
+      </Powered>
+      <CustomInterface canbeselected="false" drawhudwhenequipped="true">
+        <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
+        <Button text="interaction.emptycup">
+          <StatusEffect type="OnUse" target="This" IsActive="true" targetitemcomponent="Powered" setvalue="true">
+            <Conditional IsActive="false" targetitemcomponent="Powered" />
+          </StatusEffect>
+        </Button>
+      </CustomInterface>
+    </Item>
+    <Item name="Cup of Hot Chocolate" identifier="he-mughotchocolate" category="Misc" subcategory="Drinks" maxstacksize="1" health="167" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeemug,coffeecup,mug" useinhealthinterface="true" scale="0.4" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
+      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
+      <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
+      <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
+      <PreferredContainer primary="kitchen" secondary="crewcab"/>
+      <Deconstruct time="2" />
+      <Fabricate suitablefabricators="coffeemachine" requiredtime="30" requiresrecipe="false">
+        <RequiredItem tag="chocolatemix" UseCondition="true" mincondition="0.125" />
+        <RequiredItem tag="emptymug" amount="1" />
+      </Fabricate>
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="115,474,36,37" depth="0.6" origin="0.5,0.5" />
+      <!--<ContainedSprite allowedcontainertags="liquorshelf" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="201,8,21,58" depth="0.55" origin="0.5,0.42" />-->
+      <Body width="31" height="34" density="12" />
+      <SuitableTreatment type="thirst" suitability="70" />
+      <!--GreaterComponent used to measure time passed since the item was created-->
+      <GreaterComponent TimeFrame="0" />
+      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="RightHand,LeftHand" aimpos="23,8" holdpos="30,-15" holdangle="0" handle1="-20,-5" aimangle="30" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+        <!-- Allow the item to be applied to a bot, but prevent full usage on a player -->
+        <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
+          <Conditional IsBot="true" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
+          <Conditional IsBot="true" />
+          <ReduceAffliction type="thirst" amount="10" />
+          <ReduceAffliction type="he-dieofthirst" amount="200" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12" comparison="And" multiplyafflictionsbymaxvitality="true">
+          <Conditional IsBot="true" />
+          <Conditional bladder="gte 0.01" />
+          <Affliction identifier="fillbladder" amount="1.0" />
+        </StatusEffect>
+        <!--Stronger effects while tea is hot-->
+        <StatusEffect type="OnUse" target="This,UseTarget" targetlimb="head" duration="12" comparison="And" multiplyafflictionsbymaxvitality="true">
+          <Conditional IsBot="true" />
+          <Conditional timeframe="lte 40" />
+          <Affliction identifier="burn" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12" comparison="And" multiplyafflictionsbymaxvitality="true">
+          <Conditional IsBot="true" />
+          <Conditional timeframe="lt 180" />
+          <ReduceAffliction identifier="drunk" amount="0.5" />
+          <ReduceAffliction identifier="drunknodebuffs" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12" comparison="And" multiplyafflictionsbymaxvitality="true">
+          <Conditional IsBot="true" />
+          <Conditional timeframe="lt 180" />
+          <Conditional trait_likes_tea="gt 0" />
+          <ReduceAffliction identifier="mood" amount="2.5" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This,UseTarget" duration="12" comparison="And" multiplyafflictionsbymaxvitality="true">
+          <Conditional IsBot="true" />
+          <Conditional timeframe="lt 180" />
+          <Conditional sleepaffliction="gt 0" />
+          <Affliction identifier="caffeinated" amount="2.5" />
+        </StatusEffect>
+        <!--Weaker effects while tea is cold-->
+        <StatusEffect type="OnUse" target="This,Character" comparison="And">
+          <Conditional IsBot="true" />
+          <Conditional timeframe="gte 180" />
+          <ReduceAffliction identifier="drunk" amount="0.1" />
+          <ReduceAffliction identifier="drunknodebuffs" amount="0.1" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This,Character" comparison="And">
+          <Conditional IsBot="true" />
+          <Conditional timeframe="gte 180" />
+          <Conditional trait_likes_tea="gt 0" />
+          <ReduceAffliction identifier="mood" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This,Character" comparison="And">
+          <Conditional IsBot="true" />
+          <Conditional timeframe="gte 180" />
+          <Conditional sleepaffliction="gt 0" />
+          <Affliction identifier="caffeinated" amount="0.5" />
+        </StatusEffect>
+        <!-- Allow the item to be applied to a player fully, if the player is not in water and unconcious/stunned -->
+        <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional stun="gt 0" />
+          <Conditional IsPlayer="true" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12" comparison="And" multiplyafflictionsbymaxvitality="true">
+          <Conditional InWater="false" />
+          <Conditional stun="gt 0" />
+          <Conditional IsPlayer="true" />
+          <ReduceAffliction type="thirst" amount="1.25" />
+          <ReduceAffliction type="he-dieofthirst" amount="20" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12" comparison="And" multiplyafflictionsbymaxvitality="true">
+          <Conditional InWater="false" />
+          <Conditional stun="gt 0" />
+          <Conditional IsPlayer="true" />
+          <Conditional bladder="gte 0.01" />
+          <Affliction identifier="fillbladder" amount="1.0" />
+        </StatusEffect>
+        <!--Stronger effects while tea is hot-->
+        <StatusEffect type="OnUse" target="This,UseTarget" targetlimb="head" duration="12" comparison="And" multiplyafflictionsbymaxvitality="true">
+          <Conditional InWater="false" />
+          <Conditional stun="gt 0" />
+          <Conditional IsPlayer="true" />
+          <Conditional timeframe="lte 40" />
+          <Affliction identifier="burn" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12" comparison="And" multiplyafflictionsbymaxvitality="true">
+          <Conditional InWater="false" />
+          <Conditional stun="gt 0" />
+          <Conditional IsPlayer="true" />
+          <Conditional timeframe="lt 180" />
+          <ReduceAffliction identifier="drunk" amount="0.5" />
+          <ReduceAffliction identifier="drunknodebuffs" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12" comparison="And" multiplyafflictionsbymaxvitality="true">
+          <Conditional InWater="false" />
+          <Conditional stun="gt 0" />
+          <Conditional IsPlayer="true" />
+          <Conditional timeframe="lt 180" />
+          <Conditional trait_likes_tea="gt 0" />
+          <ReduceAffliction identifier="mood" amount="2.5" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This,UseTarget" duration="12" comparison="And" multiplyafflictionsbymaxvitality="true">
+          <Conditional InWater="false" />
+          <Conditional stun="gt 0" />
+          <Conditional IsPlayer="true" />
+          <Conditional timeframe="lt 180" />
+          <Conditional sleepaffliction="gt 0" />
+          <Affliction identifier="caffeinated" amount="2.5" />
+        </StatusEffect>
+        <!--Weaker effects while tea is cold-->
+        <StatusEffect type="OnUse" target="This,Character" comparison="And">
+          <Conditional IsBot="true" />
+          <Conditional timeframe="gte 180" />
+          <ReduceAffliction identifier="drunk" amount="0.1" />
+          <ReduceAffliction identifier="drunknodebuffs" amount="0.1" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This,Character" comparison="And">
+          <Conditional IsBot="true" />
+          <Conditional timeframe="gte 180" />
+          <Conditional trait_likes_tea="gt 0" />
+          <ReduceAffliction identifier="mood" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This,Character" comparison="And">
+          <Conditional IsBot="true" />
+          <Conditional timeframe="gte 180" />
+          <Conditional sleepaffliction="gt 0" />
+          <Affliction identifier="caffeinated" amount="0.5" />
+        </StatusEffect>
+        <!-- Regular drinking -->
+        <!--Increase time to simulate tea cooling off-->
+        <StatusEffect type="Always" target="This" timeframe="1">
+          <Conditional timeframe="lte 180" />
+        </StatusEffect>
+        <!--Particles while tea is hot-->
+        <StatusEffect type="OnNotContained" target="This" stackable="false">
+          <Conditional timeframe="lt 180" />
+          <ParticleEmitter particle="FleshSmoke" anglemin="90" anglemax="90" distancemin="7" distancemax="7" scalemin="0.1" scalemax="0.2" scalemultiplier="1,1" particlespersecond="1.2" colormultiplier="255,255,255,150" copyentityangle="True" />
+        </StatusEffect>
+        <StatusEffect type="OnActive" target="This" stackable="false">
+          <Conditional timeframe="lt 180" />
+          <ParticleEmitter particle="FleshSmoke" anglemin="90" anglemax="90" distancemin="7" distancemax="7" scalemin="0.1" scalemax="0.2" scalemultiplier="1,1" particlespersecond="1.2" colormultiplier="255,255,255,150" copyentityangle="True" />
+        </StatusEffect>
+        <!--Double the steam particles and apply burn when drinking tea too early-->
+        <StatusEffect type="OnNotContained" target="This" stackable="false">
+          <Conditional timeframe="lte 40" />
+          <ParticleEmitter particle="FleshSmoke" anglemin="90" anglemax="90" distancemin="7" distancemax="7" scalemin="0.1" scalemax="0.2" scalemultiplier="1,1" particlespersecond="2.0" colormultiplier="255,255,255,150" copyentityangle="True" />
+        </StatusEffect>
+        <StatusEffect type="OnActive" target="This" stackable="false">
+          <Conditional timeframe="lte 40" />
+          <ParticleEmitter particle="FleshSmoke" anglemin="90" anglemax="90" distancemin="7" distancemax="7" scalemin="0.1" scalemax="0.2" scalemultiplier="1,1" particlespersecond="2.0" colormultiplier="255,255,255,150" copyentityangle="True" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This,Character" targetlimb="head" comparison="And">
+          <Conditional timeframe="lte 40" />
+          <Affliction identifier="burn" amount="0.5" />
+        </StatusEffect>
+        <!--Stronger effects while tea is hot-->
+        <StatusEffect type="OnUse" target="This,Character" comparison="And">
+          <Conditional timeframe="lt 180" />
+          <ReduceAffliction identifier="drunk" amount="0.5" />
+          <ReduceAffliction identifier="drunknodebuffs" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This,Character" comparison="And">
+          <Conditional timeframe="lt 180" />
+          <Conditional trait_likes_tea="gt 0" />
+          <ReduceAffliction identifier="mood" amount="2.5" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This,Character" comparison="And">
+          <Conditional timeframe="lt 180" />
+          <Conditional sleepaffliction="gt 0" />
+          <Affliction identifier="caffeinated" amount="2.5" />
+        </StatusEffect>
+        <!--Weaker effects while tea is cold-->
+        <StatusEffect type="OnUse" target="This,Character" comparison="And">
+          <Conditional timeframe="gte 180" />
+          <ReduceAffliction identifier="drunk" amount="0.1" />
+          <ReduceAffliction identifier="drunknodebuffs" amount="0.1" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This,Character" comparison="And">
+          <Conditional timeframe="gte 180" />
+          <Conditional trait_likes_tea="gt 0" />
+          <ReduceAffliction identifier="mood" amount="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This,Character" comparison="And">
+          <Conditional timeframe="gte 180" />
+          <Conditional sleepaffliction="gt 0" />
+          <Affliction identifier="caffeinated" amount="0.5" />
+        </StatusEffect>
+        <!--General effects-->
+        <StatusEffect type="InWater" target="This" Condition="0" setvalue="true" />
+        <StatusEffect type="OnUse" target="This" Condition="-12.5">
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurping.ogg" loop="true" range="200" volume="2.0" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character" comparison="And">
+          <Conditional thirst="gt 1.25" />
+          <ReduceAffliction type="thirst" amount="1.25" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character" comparison="And">
+          <Conditional bladder="gte 0.01" />
+          <Affliction identifier="fillbladder" amount="1.0" />
+        </StatusEffect>
+        <StatusEffect type="OnImpact" target="This">
+          <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+          <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
+          <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
+          <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
+          <Sound file="Content/Sounds/Damage/GlassImpact4.ogg" selectionmode="Random" range="600" />
+          <Remove />
+          <SpawnItem identifier="he-glassfragments" spawnposition="This" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.5"/>
+        </StatusEffect>
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+          <SpawnItem identifier="he-dirtymug" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+        </StatusEffect>
+      </Holdable>
+      <Powered currpowerconsumption="0" IsOn="false">
+        <StatusEffect type="OnActive" target="This" condition="-40" disabledeltatime="false" offset="0,-15" >
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" loop="true" />
+          <ParticleEmitter particle="waterdrop" velocitymin="0.0" velocitymax="10.0" particlespersecond="50" />
+        </StatusEffect>
+        <StatusEffect type="OnActive" target="This" holdpos="-30,15" holdangle="180" aimpos="0,0" aimangle="180" setvalue="true" disabledeltatime="true" />
+      </Powered>
+      <CustomInterface canbeselected="false" drawhudwhenequipped="true">
+        <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
+        <Button text="interaction.emptycup">
+          <StatusEffect type="OnUse" target="This" IsActive="true" targetitemcomponent="Powered" setvalue="true">
+            <Conditional IsActive="false" targetitemcomponent="Powered" />
+          </StatusEffect>
+        </Button>
+      </CustomInterface>
+    </Item>
   </Items>
 </Override>
