@@ -275,14 +275,14 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.797" sourcerect="0,506,225,180" canflipx="false" origin="0.5,0.5" />
       <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.799" sourcerect="226,506,225,180" canflipx="false" origin="0.5,0.5" />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="0,687,389,180" depth="0.797" origin="0.5,0.5" maxcondition="99" fadein="false" />
-      <!-- Pump component is set to not have any water flow nor powerconsumption and is only used as a workaround to play a sound if someone stopped interacting with the container since that can't really be done otherwise other than with "Always" StatusEffects which drain performance nonstop instead of only when interaction is happening. -->
-      <Pump canbeselected="false" canbepicked="false" allowingameediting="false" maxflow="0" powerconsumption="0" IsOn="false">
-        <!-- play a closing sound and disable the pump, stopping to execute the check for the "opened" tag which gets applied while someone is interacting with the container -->
-        <StatusEffect type="OnActive" target="This" targetitemcomponent="Pump" IsOn="false" condition="100" setvalue="true" forceplaysounds="true">
+      <!-- ItemComponent component is used as a workaround to play a sound if someone stopped interacting with the container since that can't really be done otherwise other than with "Always" StatusEffects which drain performance nonstop instead of only when interaction is happening. -->
+      <ItemComponent canbeselected="false" canbepicked="false" allowingameediting="false" maxflow="0" powerconsumption="0" isActive="false">
+        <!-- play a closing sound and disable the ItemComponent, stopping to execute the check for the "opened" tag which gets applied while someone is interacting with the container -->
+        <StatusEffect type="OnActive" target="This" targetitemcomponent="ItemComponent" isActive="false" condition="100" setvalue="true" forceplaysounds="true">
           <Conditional HasStatusTag="neq opened" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/cabinet_interact2.ogg" volume="2" range="400" selectionmode="random" />
         </StatusEffect>
-      </Pump>
+      </ItemComponent>
       <!-- Controller to check if someone is interacting with the container -->
       <Controller canbeselected="true" selectkey="Select" hidehud="false" drawuserbehind="false" noninteractablewhenflippedy="false" allowingameediting="false" drawhudwhenequipped="false" comparison="And">
         <!-- play an opening sound when starting to interact with the container -->
@@ -292,8 +292,8 @@
         </StatusEffect>
         <!-- tag the container with "opened" if the controller is active, meaning someone is interacting with it -->
         <StatusEffect type="OnActive" target="This" tags="opened" duration="0.1" />
-        <!-- turn the pump component on so we can play a sound when the user stops interacting with the container. Would otherwise require an "Always" check which would always run and thus impact performance. -->
-        <StatusEffect type="OnActive" target="This" targetitemcomponent="Pump" isOn="true" condition="99" setvalue="true" />
+        <!-- turn the ItemComponent on so we can play a sound when the user stops interacting with the container. Would otherwise require an "Always" check which would always run and thus impact performance. -->
+        <StatusEffect type="OnActive" target="This" targetitemcomponent="ItemComponent" isActive="true" condition="99" setvalue="true" />
         <!-- prevent allowing to configure an output for the controller to hide the controller UI. This StatusEffect only executes once per round -->
         <StatusEffect type="OnActive" target="This" targetitemcomponent="Controller" allowingameediting="false" setvalue="true" oneshot="true" />
       </Controller>
@@ -330,17 +330,17 @@
     </Item>
     <Item name="Kitchen Sink" identifier="he-kitchencounter" tags="kitchen,locker,container" linkable="true" category="Misc" subcategory="Container" description="Can store up to 18 different small or medium items and refill empty bottles and kegs with sea water." pickdistance="150" waterproof="false" isshootable="true" scale="0.5">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.798" sourcerect="0,0,507,300" origin="0.5,0.5125" />
-      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="0,868,318,149" depth="0.797" origin="0.049,-0.022">
+      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="0,868,318,149" depth="0.796" origin="0.049,-0.022">
         <Conditional HasStatusTag="opened" />
       </DecorativeSprite>
-      <!-- Pump component is set to not have any water flow nor powerconsumption and is only used as a workaround to play a sound if someone stopped interacting with the container since that can't really be done otherwise other than with "Always" StatusEffects which drain performance nonstop instead of only when interaction is happening. -->
-      <Pump canbeselected="false" canbepicked="false" allowingameediting="false" maxflow="0" powerconsumption="0" IsOn="false">
-        <!-- play a closing sound and disable the pump, stopping to execute the check for the "opened" tag which gets applied while someone is interacting with the container -->
-        <StatusEffect type="OnActive" target="This" targetitemcomponent="Pump" IsOn="false" setvalue="true" forceplaysounds="true">
+      <!-- ItemComponent is used as a workaround to play a sound if someone stopped interacting with the container since that can't really be done otherwise other than with "Always" StatusEffects which drain performance nonstop instead of only when interaction is happening. -->
+      <ItemComponent canbeselected="false" canbepicked="false" allowingameediting="false" maxflow="0" powerconsumption="0" isActive="false">
+        <!-- play a closing sound and disable the ItemComponent, stopping to execute the check for the "opened" tag which gets applied while someone is interacting with the container -->
+        <StatusEffect type="OnActive" target="This" targetitemcomponent="ItemComponent" isActive="false" setvalue="true" forceplaysounds="true">
           <Conditional HasStatusTag="neq opened" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_close2.ogg" volume="2" range="250" frequencymultiplier="1.5" selectionmode="Random" />
         </StatusEffect>
-      </Pump>
+      </ItemComponent>
       <!-- Controller to check if someone is interacting with the container -->
       <Controller canbeselected="true" selectkey="Select" hidehud="false" drawuserbehind="false" noninteractablewhenflippedy="false" allowingameediting="false" drawhudwhenequipped="false" comparison="And">
         <!-- play an opening sound when starting to interact with the container -->
@@ -350,8 +350,8 @@
         </StatusEffect>
         <!-- tag the container with "opened" if the controller is active, meaning someone is interacting with it -->
         <StatusEffect type="OnActive" target="This" tags="opened" duration="0.1" />
-        <!-- turn the pump component on so we can play a sound when the user stops interacting with the container. Would otherwise require an "Always" check which would always run and thus impact performance. -->
-        <StatusEffect type="OnActive" target="This" targetitemcomponent="Pump" isOn="true" setvalue="true" />
+        <!-- turn the ItemComponent component on so we can play a sound when the user stops interacting with the container. Would otherwise require an "Always" check which would always run and thus impact performance. -->
+        <StatusEffect type="OnActive" target="This" targetitemcomponent="ItemComponent" isActive="true" setvalue="true" />
         <!-- prevent allowing to configure an output for the controller to hide the controller UI. This StatusEffect only executes once per round -->
         <StatusEffect type="OnActive" target="This" targetitemcomponent="Controller" allowingameediting="false" setvalue="true" oneshot="true" />
       </Controller>
@@ -411,20 +411,20 @@
     </Item>
     <Item name="Kitchen Counter" identifier="he-kitchencounter2" tags="kitchen,locker,container" linkable="true" category="Misc" subcategory="Container" description="Can store up to 30 different small items." pickdistance="150" waterproof="true" isshootable="true" scale="0.5">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.798" sourcerect="0,301,405,204" origin="0.5,0.505" />
-      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="0,868,318,149" depth="0.796" origin="0.21,0.275">
+      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="0,868,318,149" depth="0.795" origin="0.21,0.275">
         <Conditional HasStatusTag="opened" />
       </DecorativeSprite>
-      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="0,868,157,149" depth="0.797" origin="1.595,0.275">
+      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="0,868,157,149" depth="0.796" origin="1.595,0.275">
         <Conditional HasStatusTag="opened" />
       </DecorativeSprite>
-      <!-- Pump component is set to not have any water flow nor powerconsumption and is only used as a workaround to play a sound if someone stopped interacting with the container since that can't really be done otherwise other than with "Always" StatusEffects which drain performance nonstop instead of only when interaction is happening. -->
-      <Pump canbeselected="false" canbepicked="false" allowingameediting="false" maxflow="0" powerconsumption="0" IsOn="false">
-        <!-- play a closing sound and disable the pump, stopping to execute the check for the "opened" tag which gets applied while someone is interacting with the container -->
-        <StatusEffect type="OnActive" target="This" targetitemcomponent="Pump" IsOn="false" setvalue="true" forceplaysounds="true">
+      <!-- ItemComponent used as a workaround to play a sound if someone stopped interacting with the container since that can't really be done otherwise other than with "Always" StatusEffects which drain performance nonstop instead of only when interaction is happening. -->
+      <ItemComponent canbeselected="false" canbepicked="false" allowingameediting="false" IsActive="false">
+        <!-- play a closing sound and disable the ItemComponent, stopping to execute the check for the "opened" tag which gets applied while someone is interacting with the container -->
+        <StatusEffect type="OnActive" target="This" targetitemcomponent="ItemComponent" IsActive="false" setvalue="true" forceplaysounds="true">
           <Conditional HasStatusTag="neq opened" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_close2.ogg" volume="2" range="250" frequencymultiplier="1.5" selectionmode="Random" />
         </StatusEffect>
-      </Pump>
+      </ItemComponent>
       <!-- Controller to check if someone is interacting with the container -->
       <Controller canbeselected="true" selectkey="Select" hidehud="false" drawuserbehind="false" noninteractablewhenflippedy="false" allowingameediting="false" drawhudwhenequipped="false" comparison="And">
         <!-- play an opening sound when starting to interact with the container -->
@@ -434,8 +434,8 @@
         </StatusEffect>
         <!-- tag the container with "opened" if the controller is active, meaning someone is interacting with it -->
         <StatusEffect type="OnActive" target="This" tags="opened" duration="0.1" />
-        <!-- turn the pump component on so we can play a sound when the user stops interacting with the container. Would otherwise require an "Always" check which would always run and thus impact performance. -->
-        <StatusEffect type="OnActive" target="This" targetitemcomponent="Pump" isOn="true" setvalue="true" />
+        <!-- turn the ItemComponent on so we can play a sound when the user stops interacting with the container. Would otherwise require an "Always" check which would always run and thus impact performance. -->
+        <StatusEffect type="OnActive" target="This" targetitemcomponent="ItemComponent" IsActive="true" setvalue="true" />
         <!-- prevent allowing to configure an output for the controller to hide the controller UI. This StatusEffect only executes once per round -->
         <StatusEffect type="OnActive" target="This" targetitemcomponent="Controller" allowingameediting="false" setvalue="true" oneshot="true" />
       </Controller>
@@ -512,6 +512,40 @@
     </Item>
     <Item name="Refrigerator" identifier="he-refrigerator" tags="kitchen,locker,container,refrigerator" category="Misc" subcategory="Container" description="Prevents spoilage. Can only store food and drinks. Needs power." linkable="true" pickdistance="150" waterproof="true" fireproof="true" isshootable="true" scale="0.5">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.799" sourcerect="750,0,273,380" origin="0.5,0.49" />
+      <!-- Closed Doors Sprite -->
+      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="1262,342,273,273" depth="0.797" origin="0.5,0.5">
+        <Conditional HasStatusTag="neq opened" />
+      </DecorativeSprite>
+      <!-- Open Doors Sprite -->
+      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="1024,0,449,341" depth="0.795" origin="0.5,0.5">
+        <Conditional HasStatusTag="opened" />
+      </DecorativeSprite>
+      <!-- Decorative Contents Sprite -->
+      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="1254,618,268,300" depth="0.798" origin="0.5,0.5">
+        <Conditional HasTag="smallitem" targetcontaineditem="true" />
+      </DecorativeSprite>
+      <!-- ItemComponent used as a workaround to play a sound if someone stopped interacting with the container since that can't really be done otherwise other than with "Always" StatusEffects which drain performance nonstop instead of only when interaction is happening. -->
+      <ItemComponent canbeselected="false" canbepicked="false" allowingameediting="false" IsActive="false">
+        <!-- play a closing sound and disable the ItemComponent, stopping to execute the check for the "opened" tag which gets applied while someone is interacting with the container -->
+        <StatusEffect type="OnActive" target="This" targetitemcomponent="ItemComponent" IsActive="false" setvalue="true" forceplaysounds="true">
+          <Conditional HasStatusTag="neq opened" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_close2.ogg" volume="2" range="250" frequencymultiplier="1.5" selectionmode="Random" />
+        </StatusEffect>
+      </ItemComponent>
+      <!-- Controller to check if someone is interacting with the container -->
+      <Controller canbeselected="true" selectkey="Select" hidehud="false" drawuserbehind="false" noninteractablewhenflippedy="false" allowingameediting="false" drawhudwhenequipped="false" comparison="And">
+        <!-- play an opening sound when starting to interact with the container -->
+        <StatusEffect type="OnActive" target="this" forceplaysounds="true">
+          <Conditional HasStatusTag="neq opened" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/refrigerator_interact.ogg" volume="2" range="400" selectionmode="random" />
+        </StatusEffect>
+        <!-- tag the container with "opened" if the controller is active, meaning someone is interacting with it -->
+        <StatusEffect type="OnActive" target="This" tags="opened" duration="0.1" />
+        <!-- turn the ItemComponent on so we can play a sound when the user stops interacting with the container. Would otherwise require an "Always" check which would always run and thus impact performance. -->
+        <StatusEffect type="OnActive" target="This" targetitemcomponent="ItemComponent" IsActive="true" setvalue="true" />
+        <!-- prevent allowing to configure an output for the controller to hide the controller UI. This StatusEffect only executes once per round -->
+        <StatusEffect type="OnActive" target="This" targetitemcomponent="Controller" allowingameediting="false" setvalue="true" oneshot="true" />
+      </Controller>
       <Price baseprice="1599" sold="true">
         <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="1" />
         <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="3" />
@@ -547,9 +581,6 @@
         <SlotIcon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="152,0,85,85" origin="0.5,0.5" />
         <GuiFrame relativesize="0.35,0.45" anchor="Center" style="ItemUI" />
         <Containable items="fooditem,drinkitem,meat,plantitem,canspoil,canexpire,emptybottle,emptyjar,peanutegg,psilotoadegg,orangeboyegg,balloonegg,mudraptoregg,crawleregg,petraptoregg,tigerthresheregg" />
-        <StatusEffect type="OnPicked" target="this">
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/refrigerator_interact.ogg" volume="2" range="400" selectionmode="random" />
-        </StatusEffect>
       </ItemContainer>
       <Body width="273" height="380" density="30" />
       <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="85,-35" handle1="-100,30" handle2="10,-20" holdangle="0" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="85,-10" attachable="true" aimable="true">
@@ -579,6 +610,40 @@
     <!-- Refrigerator but without the built-in battery for sub-editor only | Useful when wanting to make custom refrigerator designs using different item and parts in sub-editor as the original refrigerator causes the battery status to be always displayed over the custom build. -->
     <Item name="" nameidentifier="he-refrigerator" identifier="he-refrigeratornobattery" tags="kitchen,locker,container,refrigerator" category="Misc" subcategory="Container" descriptionidentifier="he-refrigeratornobattery" description="Sub-Editor exclusive variant of the refrigerator without the built-in battery. Useful when wanting to make custom refrigerator designs using different items and parts in sub-editor as the original refrigerator would always display the battery status on top of the custom build. Prevents spoilage. Can only store food and drinks. Needs power." linkable="true" pickdistance="150" waterproof="true" fireproof="true" isshootable="true" scale="0.5">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/NoBatteryRefrigerator.png" depth="0.799" sourcerect="0,0,273,380" origin="0.5,0.49" />
+      <!-- Closed Doors Sprite -->
+      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="1262,342,273,273" depth="0.797" origin="0.5,0.5">
+        <Conditional HasStatusTag="neq opened" />
+      </DecorativeSprite>
+      <!-- Open Doors Sprite -->
+      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="1024,0,449,341" depth="0.795" origin="0.5,0.5">
+        <Conditional HasStatusTag="opened" />
+      </DecorativeSprite>
+      <!-- Decorative Contents Sprite -->
+      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="1254,618,268,300" depth="0.798" origin="0.5,0.5">
+        <Conditional HasTag="smallitem" targetcontaineditem="true" />
+      </DecorativeSprite>
+      <!-- ItemComponent used as a workaround to play a sound if someone stopped interacting with the container since that can't really be done otherwise other than with "Always" StatusEffects which drain performance nonstop instead of only when interaction is happening. -->
+      <ItemComponent canbeselected="false" canbepicked="false" allowingameediting="false" IsActive="false">
+        <!-- play a closing sound and disable the ItemComponent, stopping to execute the check for the "opened" tag which gets applied while someone is interacting with the container -->
+        <StatusEffect type="OnActive" target="This" targetitemcomponent="ItemComponent" IsActive="false" setvalue="true" forceplaysounds="true">
+          <Conditional HasStatusTag="neq opened" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_close2.ogg" volume="2" range="250" frequencymultiplier="1.5" selectionmode="Random" />
+        </StatusEffect>
+      </ItemComponent>
+      <!-- Controller to check if someone is interacting with the container -->
+      <Controller canbeselected="true" selectkey="Select" hidehud="false" drawuserbehind="false" noninteractablewhenflippedy="false" allowingameediting="false" drawhudwhenequipped="false" comparison="And">
+        <!-- play an opening sound when starting to interact with the container -->
+        <StatusEffect type="OnActive" target="this" forceplaysounds="true">
+          <Conditional HasStatusTag="neq opened" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/refrigerator_interact.ogg" volume="2" range="400" selectionmode="random" />
+        </StatusEffect>
+        <!-- tag the container with "opened" if the controller is active, meaning someone is interacting with it -->
+        <StatusEffect type="OnActive" target="This" tags="opened" duration="0.1" />
+        <!-- turn the ItemComponent on so we can play a sound when the user stops interacting with the container. Would otherwise require an "Always" check which would always run and thus impact performance. -->
+        <StatusEffect type="OnActive" target="This" targetitemcomponent="ItemComponent" IsActive="true" setvalue="true" />
+        <!-- prevent allowing to configure an output for the controller to hide the controller UI. This StatusEffect only executes once per round -->
+        <StatusEffect type="OnActive" target="This" targetitemcomponent="Controller" allowingameediting="false" setvalue="true" oneshot="true" />
+      </Controller>
       <Deconstruct time="10">
         <Item identifier="steel" amount="4" />
         <Item identifier="titaniumaluminiumalloy" amount="4" />
