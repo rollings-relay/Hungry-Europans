@@ -2,7 +2,7 @@
 <Override>
 <Items>
   <!-- REGULAR VARIANTS -->
-  <Item name="Pomegrenade" identifier="creepingorange" category="Material" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,fooditem,sugary,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="True">
+  <Item name="Pomegrenade" identifier="creepingorange" category="Material" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,fooditem,sugary,petfood1,petfood2,petfood3,distillable" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="True">
     <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="971,649,43,55" origin="0.5,0.5" />
     <Body radius="30" density="5" />
     <Price baseprice="20" sold="false">
@@ -140,7 +140,7 @@
     </Throwable>
     <PreferredContainer primary="plantcontainer"/>
   </Item>
-  <Item name="Raptor Bane" identifier="raptorbane" category="Material" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true">
+  <Item name="Raptor Bane" identifier="raptorbane" category="Material" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,petfood1,petfood2,petfood3,distillable" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true">
     <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="971,777,44,50" origin="0.5,0.5" />
     <Body radius="30" density="9" waterdragcoefficient="10"/>
     <Price baseprice="40" sold="false">
