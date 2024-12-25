@@ -102,7 +102,7 @@
       <Body width="58" height="46" density="13.0" />
       <Holdable canbecombined="false" slots="Any,RightHand+LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect" />
     </Item>
-    <Item name="Meat Cleaver" identifier="he-cleaver" category="Weapon" Tags="smallitem,weapon,gunsmith,mountableweapon,sharptool,butcheritem" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
+    <Item name="Meat Cleaver" identifier="he-cleaver" category="Weapon" Tags="smallitem,weapon,gunsmith,mountableweapon,sharptool,butcheritem,cleaver" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
       <PreferredContainer secondary="wreckarmcab,abandonedarmcab" amount="1" spawnprobability="0.25"/>
       <PreferredContainer secondary="abandonedstoragecab" amount="1" spawnprobability="0.05"/>
       <PreferredContainer secondary="beaconsupplycab" amount="1" spawnprobability="0.05"/>
@@ -455,6 +455,46 @@
           <DropContainedItems />
           <RemoveCharacter />
         </StatusEffect>
+      </MeleeWeapon>
+      <aitarget sightrange="500" soundrange="250" fadeouttime="1" />
+      <Quality>
+        <QualityStat stattype="StrikingPowerMultiplier" value="0.1"/>
+      </Quality>
+      <Upgrade gameversion="0.10.0.0" scale="0.5" />
+      <SkillRequirementHint identifier="butchery" level="100"/>
+    </Item>
+    <Item name="Can Opener" identifier="he-canopener" category="Equipment" Tags="smallitem,mountableweapon,sharptool,canopener" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
+      <PreferredContainer secondary="wreckarmcab,abandonedarmcab" amount="1" spawnprobability="0.25"/>
+      <PreferredContainer secondary="abandonedstoragecab" amount="1" spawnprobability="0.05"/>
+      <PreferredContainer secondary="beaconsupplycab" amount="1" spawnprobability="0.05"/>
+      <PreferredContainer primary="secarmcab" secondary="armcab"/>
+      <Deconstruct time="10">
+        <Item identifier="plastic" />
+      </Deconstruct>
+      <Fabricate suitablefabricators="fabricator" requiredtime="10">
+        <RequiredSkill identifier="weapons" level="30" />
+        <RequiredItem identifier="plastic" amount="1" />
+        <RequiredItem identifier="steel" amount="1"/>
+      </Fabricate>
+      <!-- TODO: Can Opener Sprites -->
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="1,1,75,26" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="1,1,75,26" depth="0.55" origin="0.5,0.5" />
+      <Body width="65" height="15" density="25" />
+      <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="50,0" handle1="-16,5" holdangle="30" reload="0.75" range="50" combatPriority="25" msg="ItemMsgPickUpSelect" HitOnlyCharacters="false">
+        <Attack targetimpulse="2" severlimbsprobability="0.0" itemdamage="1" structuredamage="0" structuresoundtype="StructureSlash">
+          <Affliction identifier="lacerations" strength="2" />
+          <Affliction identifier="bleeding" strength="4" />
+          <Affliction identifier="stun" strength="0.1" />
+          <StatusEffect type="OnUse" target="UseTarget">
+            <Conditional entitytype="eq Character"/>
+            <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="200" />
+            <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="200" />
+            <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="200" />
+            <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="200" />
+            <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="200" />
+            <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="200" />
+          </StatusEffect>
+        </Attack>
       </MeleeWeapon>
       <aitarget sightrange="500" soundrange="250" fadeouttime="1" />
       <Quality>
