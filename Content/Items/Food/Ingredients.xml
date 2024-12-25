@@ -742,52 +742,6 @@
         <Item identifier="aluminium" amount="1" />
         <Item identifier="carbon" amount="1" mincondition="50" />
       </Deconstruct>
-      <CustomInterface canbeselected="true" selectkey="select" drawhudwhenequipped="true">
-        <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
-        <Button text="Open">
-          <StatusEffect type="OnUse" target="This,Character">
-            <RequiredItems items="sharptool,boardingaxe" type="Equipped" msg="ItemMsgCanOpenerRequired" />
-          </StatusEffect>
-          <!-- <StatusEffect type="OnUse" target="This,Character" tags="hascanopener" duration="0.1">
-            <RequiredItems identifier="he-canopener" type="Equipped" />
-          </StatusEffect> -->
-          <StatusEffect type="OnUse" target="This,Character" tags="hasdivingknife" duration="0.1">
-            <RequiredItems identifier="divingknifeunique" type="Equipped" />
-          </StatusEffect>
-          <StatusEffect type="OnUse" target="This,Character" tags="hasdivingknife" duration="0.1">
-            <RequiredItems identifier="divingknife" type="Equipped" />
-          </StatusEffect>
-          <StatusEffect type="OnUse" target="This,Character" tags="hascleaver" duration="0.1">
-            <RequiredItems identifier="he-cleaver" type="Equipped" />
-          </StatusEffect>
-          <StatusEffect type="OnUse" target="This,Character" tags="hasboardingaxe" duration="0.1">
-            <RequiredItems identifier="boardingaxe" type="Equipped" />
-          </StatusEffect>
-          <!-- <StatusEffect type="OnUse" target="This" targetlimbs="LeftHand,RightHand" disabledeltatime="true">
-            <Conditional HasTag="hascanopener" targetcontainer="true" />
-            <Remove />
-            <SpawnItem identifier="he-cannedtomatoesopen" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
-          </StatusEffect> -->
-          <StatusEffect type="OnUse" target="This,Limb" targetlimbs="LeftHand,RightHand" disabledeltatime="true">
-            <Conditional HasTag="hasdivingknife" targetcontainer="true" />
-            <Affliction identifier="lacerations" amount="5" probability="0.1" />
-            <Remove />
-            <SpawnItem identifier="he-cannedtomatoesopen" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" outcondition="0.8" />
-          </StatusEffect>
-          <StatusEffect type="OnUse" target="This,Limb" targetlimbs="LeftHand,RightHand" disabledeltatime="true">
-            <Conditional HasTag="hascleaver" targetcontainer="true" />
-            <Affliction identifier="lacerations" amount="8" probability="0.3" />
-            <Remove />
-            <SpawnItem identifier="he-cannedtomatoesopen" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" outcondition="0.6" />
-          </StatusEffect>
-          <StatusEffect type="OnUse" target="This,Limb" targetlimbs="LeftHand,RightHand" disabledeltatime="true">
-            <Conditional HasTag="hasboardingaxe" targetcontainer="true" />
-            <Affliction identifier="lacerations" amount="8" probability="0.3" />
-            <Remove />
-            <SpawnItem identifier="he-cannedtomatoesopen" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" outcondition="0.2" />
-          </StatusEffect>
-        </Button>
-      </CustomInterface>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,15,32,40" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,15,32,40" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="68,104,15,30" depth="0.525" origin="0.5,0.7"  />
@@ -815,19 +769,67 @@
           <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="1000" />
           <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="1000" />
         </StatusEffect>
-        <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true">
-          <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
-          <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
-          <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
-          <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
-          <Sound file="Content/Sounds/Damage/GlassImpact4.ogg" selectionmode="Random" range="600" />
-        </StatusEffect>
         <!-- remove the bottle if broken and spawn glass fragments, but prevent contained projectile bottle from breaking as well if the bottle drops and shatters instead of being thrown -->
         <StatusEffect type="OnBroken" target="This">
           <Remove />
-          <SpawnItem identifier="he-glassfragments" spawnposition="This" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.5"/>
         </StatusEffect>
       </Projectile>
+      <ItemContainer Capacity="1" MaxStackSize="1" HideItems="true" AllowDragAndDrop="true" DrawInventory="false">
+        <Containable items="divingknifeunique,divingknife,cleaver,boardingaxe">
+          <!-- TODO: Add sound effects for opening the can and also for hurting the hands -->
+          <!-- open the can with a can opener (No damage, no condition loss) -->
+          <StatusEffect type="OnInserted" target="This" disabledeltatime="true">
+            <RequiredItem identifier="he-canopener" type="contained" />
+            <Remove />
+            <SpawnItem identifier="he-cannedtomatoesopen" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" condition="1.0" />
+            <SpawnItem identifier="he-canopener" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+          </StatusEffect>
+          <!-- open the can with a unique diving knife (Lowest damage, highest amount of condition left) -->
+          <StatusEffect type="OnInserted" target="This,Character" targetlimbs="LeftHand,RightHand" disabledeltatime="true">
+            <RequiredItem identifier="divingknifeunique" type="contained" />
+            <Affliction identifier="lacerations" amount="16" probability="0.1" />
+          </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" disabledeltatime="true">
+            <RequiredItem identifier="divingknifeunique" type="contained" />
+            <Remove />
+            <SpawnItem identifier="he-cannedtomatoesopen" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" condition="0.8" />
+            <SpawnItem identifier="divingknifeunique" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+          </StatusEffect>
+          <!-- open the can with a regular diving knife (Lowest damage, highest amount of condition left) -->
+          <StatusEffect type="OnInserted" target="This,Character" targetlimbs="LeftHand,RightHand" disabledeltatime="true">
+            <RequiredItem identifier="divingknife" type="contained" />
+            <Affliction identifier="lacerations" amount="16" probability="0.1" />
+          </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" disabledeltatime="true">
+            <RequiredItem identifier="divingknife" type="contained" />
+            <Remove />
+            <SpawnItem identifier="he-cannedtomatoesopen" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" condition="0.8" />
+            <SpawnItem identifier="divingknife" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+          </StatusEffect>
+          <!-- open the can with a cleaver (Medium damage, medium amount of condition left) -->
+          <StatusEffect type="OnInserted" target="This,Character" targetlimbs="LeftHand,RightHand" disabledeltatime="true">
+            <RequiredItem tag="cleaver" type="contained" />
+            <Affliction identifier="lacerations" amount="32" probability="0.3" />
+          </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" disabledeltatime="true">
+            <RequiredItem tags="cleaver" type="contained" />
+            <Remove />
+            <SpawnItem identifier="he-cannedtomatoesopen" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" condition="0.6" />
+            <SpawnItem identifier="he-cleaver" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+          </StatusEffect>
+          <!-- open the can with a boarding axe (Highest damage, least amount of condition left) -->
+          <StatusEffect type="OnInserted" target="This,Character" targetlimbs="LeftHand,RightHand" disabledeltatime="true">
+            <RequiredItem identifier="boardingaxe" type="contained" />
+            <Affliction identifier="lacerations" amount="64" probability="0.3" />
+          </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" disabledeltatime="true">
+            <RequiredItem identifier="boardingaxe" type="contained" />
+            <Remove />
+            <SpawnItem identifier="he-cannedtomatoesopen" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" condition="0.2" />
+            <SpawnItem identifier="boardingaxe" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+          </StatusEffect>
+        </Containable>
+      </ItemContainer>
     </Item>
     <Item name="Open Can of Tomatoes" identifier="he-cannedtomatoesopen" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A rare can of tomatoes back from when supplies were still delivered from earth! High in value, these ingredients are used exclusively for delicacies these days." Tags="smallitem,ingredient,rareingredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_shaker" impacttolerance="5.5">
       <PreferredContainer secondary="wreckstoragecab" minamount="1" maxamount="4" spawnprobability="0.1" />
@@ -871,17 +873,9 @@
           <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="1000" />
           <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="1000" />
         </StatusEffect>
-        <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true">
-          <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
-          <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
-          <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
-          <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
-          <Sound file="Content/Sounds/Damage/GlassImpact4.ogg" selectionmode="Random" range="600" />
-        </StatusEffect>
         <!-- remove the bottle if broken and spawn glass fragments, but prevent contained projectile bottle from breaking as well if the bottle drops and shatters instead of being thrown -->
         <StatusEffect type="OnBroken" target="This">
           <Remove />
-          <SpawnItem identifier="he-glassfragments" spawnposition="This" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.5"/>
         </StatusEffect>
       </Projectile>
     </Item>
