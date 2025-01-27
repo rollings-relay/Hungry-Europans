@@ -118,10 +118,6 @@
         </StatusEffect>
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
-      <!--////////// Poison Container \\\\\\\\\\-->
-      <ItemContainer capacity="11" maxstacksize="1" hideitems="true" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="false" ShowContainedStateIndicator="false" removecontaineditemsondeconstruct="true">
-        <Containable items="poison,ethanol,huskeggsbasic,huskeggs,paralyxis" />
-      </ItemContainer>
     </Item>
     <!-- SOUPS & STEWS -->
     <Item name="Craw Yum!" identifier="he-crawyumsoup" variantof="he-poisoneffectpreset_spoon" health="100" category="Misc" subcategory="Food" Tags="smallitem,fooditem" description="A soup." maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="false" requireaimtouse="false">
@@ -201,23 +197,27 @@
           <Conditional HasStatusTag="neq emptyspoon" targetcontainer="true" />
           <Conditional InWater="false" />
         </StatusEffect>
-        <StatusEffect type="OnActive" target="Character" duration="1" stackable="false" comparison="And">
+        <StatusEffect type="OnSecondaryUse" target="Character" duration="1" stackable="false" comparison="And">
           <Conditional HasStatusTag="usingspoon" />
           <Conditional HasStatusTag="neq emptyspoon"/>
           <Conditional InWater="false" />
           <Affliction identifier="he-increasedswimmingspeedcrawler" amount="24.0" />
           <Affliction identifier="he-stuffed" amount="0.75" />
           <ReduceAffliction type="nausea" amount="0.5" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork1.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork2.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork3.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork4.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork5.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
         </StatusEffect>
-        <StatusEffect type="OnActive" target="Character" comparison="And" duration="1" stackable="false">
+        <StatusEffect type="OnSecondaryUse" target="Character" comparison="And" duration="1" stackable="false">
           <Conditional HasStatusTag="usingspoon" />
           <Conditional HasStatusTag="neq emptyspoon" />
           <Conditional InWater="false" />
           <Conditional hunger="gt 0.25" />
           <ReduceAffliction type="hunger" amount="0.25" />
         </StatusEffect>
-        <StatusEffect type="OnActive" target="Character" comparison="And" duration="1" stackable="false">
+        <StatusEffect type="OnSecondaryUse" target="Character" comparison="And" duration="1" stackable="false">
           <Conditional HasStatusTag="usingspoon" />
           <Conditional HasStatusTag="neq emptyspoon" />
           <Conditional InWater="false" />
