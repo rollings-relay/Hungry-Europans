@@ -727,7 +727,7 @@
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect" />
     </Item>
     <!-- EARTH INGREDIENTS | High value ingredients for delicacies only found in wrecks -->
-    <Item name="Canned Tomatoes" identifier="he-cannedtomatoes" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A rare can of tomatoes back from when supplies were still delivered from earth! High in value, these ingredients are used exclusively for delicacies these days." Tags="smallitem,ingredient,rareingredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_shaker" impacttolerance="5.5">
+    <Item name="Canned Tomatoes" identifier="he-cannedtomatoes" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A rare can of tomatoes back from when supplies were still delivered from earth! High in value, these ingredients are used exclusively for delicacies these days." Tags="smallitem,ingredient,rareingredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_metal_light" impacttolerance="5.5">
       <PreferredContainer secondary="wreckstoragecab" minamount="1" maxamount="4" spawnprobability="0.1" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Price baseprice="1500" sold="false" canbespecial="true">
@@ -775,7 +775,7 @@
         </StatusEffect>
       </Projectile>
       <ItemContainer Capacity="1" MaxStackSize="1" HideItems="true" AllowDragAndDrop="true" DrawInventory="false">
-        <Containable items="divingknifeunique,divingknife,cleaver,boardingaxe">
+        <Containable items="divingknifeunique,divingknife,cleaver,boardingaxe,canopener">
           <!-- TODO: Add sound effects for opening the can and also for hurting the hands -->
           <!-- open the can with a can opener (No damage, no condition loss) -->
           <StatusEffect type="OnInserted" target="This" disabledeltatime="true">
@@ -831,7 +831,7 @@
         </Containable>
       </ItemContainer>
     </Item>
-    <Item name="Open Can of Tomatoes" identifier="he-cannedtomatoesopen" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A rare can of tomatoes back from when supplies were still delivered from earth! High in value, these ingredients are used exclusively for delicacies these days." Tags="smallitem,ingredient,rareingredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_shaker" impacttolerance="5.5">
+    <Item name="Open Can of Tomatoes" identifier="he-cannedtomatoesopen" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A rare can of tomatoes back from when supplies were still delivered from earth! High in value, these ingredients are used exclusively for delicacies these days." Tags="smallitem,ingredient,rareingredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_metal_light" impacttolerance="5.5">
       <PreferredContainer secondary="wreckstoragecab" minamount="1" maxamount="4" spawnprobability="0.1" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Price baseprice="750" sold="false" canbespecial="false" mincondition="50">
@@ -879,6 +879,466 @@
         </StatusEffect>
       </Projectile>
     </Item>
+
+    <Item name="Canned Mushrooms" identifier="he-cannedmushrooms" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A rare can of tomatoes back from when supplies were still delivered from earth! High in value, these ingredients are used exclusively for delicacies these days." Tags="smallitem,ingredient,rareingredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_metal_light" impacttolerance="5.5">
+      <PreferredContainer secondary="wreckstoragecab" minamount="1" maxamount="4" spawnprobability="0.1" />
+      <PreferredContainer primary="kitchen" secondary="crewcab"/>
+      <Price baseprice="1500" sold="false" canbespecial="true">
+        <Price storeidentifier="merchantoutpost" minavailable="3" maxavailable="10" />
+        <Price storeidentifier="merchantcity" multiplier="1.3" minavailable="6" maxavailable="16" />
+        <Price storeidentifier="merchantresearch" />
+        <Price storeidentifier="merchantmilitary" />
+        <Price storeidentifier="merchantmine" />
+        <Price storeidentifier="merchantmedical" />
+      </Price>
+      <Deconstruct time="5" requireddeconstructor="deconstructor">
+        <Item identifier="aluminium" amount="1" />
+        <Item identifier="carbon" amount="1" mincondition="50" />
+      </Deconstruct>
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="33,15,32,40" depth="0.6" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="33,15,32,40" origin="0.5,0.5" />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="68,104,15,30" depth="0.525" origin="0.5,0.7"  />
+      <Body width="27" height="35" density="11.5" />
+      <Throwable canbepicked="true" characterusable="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+        <StatusEffect type="OnSecondaryUse" target="This" delay="0.01">
+          <Use />
+        </StatusEffect>
+      </Throwable>
+      <Projectile characterusable="false" launchimpulse="0" impulsespread="0.0" sticktocharacters="false" sticktoitems="false" sticktostructures="false" sticktodoors="false">
+        <Attack targetimpulse="3" severlimbsprobability="0.1" itemdamage="1" structuredamage="0" structuresoundtype="StructureSlash">
+          <Affliction identifier="lacerations" strength="1" />
+          <Affliction identifier="blunttrauma" strength="1" />
+          <Affliction identifier="lacerations" strength="1" probability="0.25" />
+          <Affliction identifier="bleeding" strength="1" />
+          <Affliction identifier="bleeding" strength="1" probability="0.5" />
+          <Affliction identifier="stun" strength="0.2" />
+        </Attack>
+        <StatusEffect type="OnImpact" target="UseTarget">
+          <Conditional entitytype="Character" />
+          <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="1000" />
+          <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="1000" />
+          <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="1000" />
+          <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="1000" />
+          <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="1000" />
+          <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="1000" />
+        </StatusEffect>
+        <!-- remove the bottle if broken and spawn glass fragments, but prevent contained projectile bottle from breaking as well if the bottle drops and shatters instead of being thrown -->
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+        </StatusEffect>
+      </Projectile>
+      <ItemContainer Capacity="1" MaxStackSize="1" HideItems="true" AllowDragAndDrop="true" DrawInventory="false">
+        <Containable items="divingknifeunique,divingknife,cleaver,boardingaxe,canopener">
+          <!-- TODO: Add sound effects for opening the can and also for hurting the hands -->
+          <!-- open the can with a can opener (No damage, no condition loss) -->
+          <StatusEffect type="OnInserted" target="This" disabledeltatime="true">
+            <RequiredItem identifier="he-canopener" type="contained" />
+            <Remove />
+            <SpawnItem identifier="he-cannedmushroomssopen" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" condition="1.0" />
+            <SpawnItem identifier="he-canopener" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+          </StatusEffect>
+          <!-- open the can with a unique diving knife (Lowest damage, highest amount of condition left) -->
+          <StatusEffect type="OnInserted" target="This,Character" targetlimbs="LeftHand,RightHand" disabledeltatime="true">
+            <RequiredItem identifier="divingknifeunique" type="contained" />
+            <Affliction identifier="lacerations" amount="16" probability="0.1" />
+          </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" disabledeltatime="true">
+            <RequiredItem identifier="divingknifeunique" type="contained" />
+            <Remove />
+            <SpawnItem identifier="he-cannedmushroomssopen" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" condition="0.8" />
+            <SpawnItem identifier="divingknifeunique" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+          </StatusEffect>
+          <!-- open the can with a regular diving knife (Lowest damage, highest amount of condition left) -->
+          <StatusEffect type="OnInserted" target="This,Character" targetlimbs="LeftHand,RightHand" disabledeltatime="true">
+            <RequiredItem identifier="divingknife" type="contained" />
+            <Affliction identifier="lacerations" amount="16" probability="0.1" />
+          </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" disabledeltatime="true">
+            <RequiredItem identifier="divingknife" type="contained" />
+            <Remove />
+            <SpawnItem identifier="he-cannedmushroomssopen" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" condition="0.8" />
+            <SpawnItem identifier="divingknife" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+          </StatusEffect>
+          <!-- open the can with a cleaver (Medium damage, medium amount of condition left) -->
+          <StatusEffect type="OnInserted" target="This,Character" targetlimbs="LeftHand,RightHand" disabledeltatime="true">
+            <RequiredItem tag="cleaver" type="contained" />
+            <Affliction identifier="lacerations" amount="32" probability="0.3" />
+          </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" disabledeltatime="true">
+            <RequiredItem tags="cleaver" type="contained" />
+            <Remove />
+            <SpawnItem identifier="he-cannedmushroomssopen" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" condition="0.6" />
+            <SpawnItem identifier="he-cleaver" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+          </StatusEffect>
+          <!-- open the can with a boarding axe (Highest damage, least amount of condition left) -->
+          <StatusEffect type="OnInserted" target="This,Character" targetlimbs="LeftHand,RightHand" disabledeltatime="true">
+            <RequiredItem identifier="boardingaxe" type="contained" />
+            <Affliction identifier="lacerations" amount="64" probability="0.3" />
+          </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" disabledeltatime="true">
+            <RequiredItem identifier="boardingaxe" type="contained" />
+            <Remove />
+            <SpawnItem identifier="he-cannedmushroomssopen" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" condition="0.2" />
+            <SpawnItem identifier="boardingaxe" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+          </StatusEffect>
+        </Containable>
+      </ItemContainer>
+    </Item>
+    <Item name="Open Can of Mushrooms" identifier="he-cannedmushroomssopen" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A rare can of tomatoes back from when supplies were still delivered from earth! High in value, these ingredients are used exclusively for delicacies these days." Tags="smallitem,ingredient,rareingredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_metal_light" impacttolerance="5.5">
+      <PreferredContainer secondary="wreckstoragecab" minamount="1" maxamount="4" spawnprobability="0.1" />
+      <PreferredContainer primary="kitchen" secondary="crewcab"/>
+      <Price baseprice="750" sold="false" canbespecial="false" mincondition="50">
+        <Price storeidentifier="merchantoutpost" minavailable="3" maxavailable="10" />
+        <Price storeidentifier="merchantcity" multiplier="1.3" minavailable="6" maxavailable="16" />
+        <Price storeidentifier="merchantresearch" />
+        <Price storeidentifier="merchantmilitary" />
+        <Price storeidentifier="merchantmine" />
+        <Price storeidentifier="merchantmedical" />
+      </Price>
+      <Deconstruct time="5" requireddeconstructor="deconstructor">
+        <Item identifier="aluminium" amount="1" />
+        <Item identifier="carbon" amount="1" mincondition="50" />
+      </Deconstruct>
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="33,0,32,55" depth="0.6" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="33,0,32,55" origin="0.5,0.5" />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,0,32,55" depth="0.525" origin="0.5,0.7"  />
+      <Body width="27" height="50" density="11.5" />
+      <Throwable canbepicked="true" characterusable="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+        <StatusEffect type="OnSecondaryUse" target="This" delay="0.01">
+          <Use />
+        </StatusEffect>
+      </Throwable>
+      <Projectile characterusable="false" launchimpulse="0" impulsespread="0.0" sticktocharacters="false" sticktoitems="false" sticktostructures="false" sticktodoors="false">
+        <Attack targetimpulse="3" severlimbsprobability="0.1" itemdamage="1" structuredamage="0" structuresoundtype="StructureSlash">
+          <Affliction identifier="lacerations" strength="1" />
+          <Affliction identifier="blunttrauma" strength="1" />
+          <Affliction identifier="lacerations" strength="1" probability="0.25" />
+          <Affliction identifier="bleeding" strength="1" />
+          <Affliction identifier="bleeding" strength="1" probability="0.5" />
+          <Affliction identifier="stun" strength="0.2" />
+        </Attack>
+        <StatusEffect type="OnImpact" target="UseTarget">
+          <Conditional entitytype="Character" />
+          <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="1000" />
+          <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="1000" />
+          <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="1000" />
+          <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="1000" />
+          <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="1000" />
+          <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="1000" />
+        </StatusEffect>
+        <!-- remove the bottle if broken and spawn glass fragments, but prevent contained projectile bottle from breaking as well if the bottle drops and shatters instead of being thrown -->
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+        </StatusEffect>
+      </Projectile>
+    </Item>
+    
+    <Item name="Canned Potatoes" identifier="he-cannedpotatoes" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A rare can of tomatoes back from when supplies were still delivered from earth! High in value, these ingredients are used exclusively for delicacies these days." Tags="smallitem,ingredient,rareingredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_metal_light" impacttolerance="5.5">
+      <PreferredContainer secondary="wreckstoragecab" minamount="1" maxamount="4" spawnprobability="0.1" />
+      <PreferredContainer primary="kitchen" secondary="crewcab"/>
+      <Price baseprice="1500" sold="false" canbespecial="true">
+        <Price storeidentifier="merchantoutpost" minavailable="3" maxavailable="10" />
+        <Price storeidentifier="merchantcity" multiplier="1.3" minavailable="6" maxavailable="16" />
+        <Price storeidentifier="merchantresearch" />
+        <Price storeidentifier="merchantmilitary" />
+        <Price storeidentifier="merchantmine" />
+        <Price storeidentifier="merchantmedical" />
+      </Price>
+      <Deconstruct time="5" requireddeconstructor="deconstructor">
+        <Item identifier="aluminium" amount="1" />
+        <Item identifier="carbon" amount="1" mincondition="50" />
+      </Deconstruct>
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="66,15,32,40" depth="0.6" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="66,15,32,40" origin="0.5,0.5" />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="68,104,15,30" depth="0.525" origin="0.5,0.7"  />
+      <Body width="27" height="35" density="11.5" />
+      <Throwable canbepicked="true" characterusable="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+        <StatusEffect type="OnSecondaryUse" target="This" delay="0.01">
+          <Use />
+        </StatusEffect>
+      </Throwable>
+      <Projectile characterusable="false" launchimpulse="0" impulsespread="0.0" sticktocharacters="false" sticktoitems="false" sticktostructures="false" sticktodoors="false">
+        <Attack targetimpulse="3" severlimbsprobability="0.1" itemdamage="1" structuredamage="0" structuresoundtype="StructureSlash">
+          <Affliction identifier="lacerations" strength="1" />
+          <Affliction identifier="blunttrauma" strength="1" />
+          <Affliction identifier="lacerations" strength="1" probability="0.25" />
+          <Affliction identifier="bleeding" strength="1" />
+          <Affliction identifier="bleeding" strength="1" probability="0.5" />
+          <Affliction identifier="stun" strength="0.2" />
+        </Attack>
+        <StatusEffect type="OnImpact" target="UseTarget">
+          <Conditional entitytype="Character" />
+          <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="1000" />
+          <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="1000" />
+          <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="1000" />
+          <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="1000" />
+          <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="1000" />
+          <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="1000" />
+        </StatusEffect>
+        <!-- remove the bottle if broken and spawn glass fragments, but prevent contained projectile bottle from breaking as well if the bottle drops and shatters instead of being thrown -->
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+        </StatusEffect>
+      </Projectile>
+      <ItemContainer Capacity="1" MaxStackSize="1" HideItems="true" AllowDragAndDrop="true" DrawInventory="false">
+        <Containable items="divingknifeunique,divingknife,cleaver,boardingaxe,canopener">
+          <!-- TODO: Add sound effects for opening the can and also for hurting the hands -->
+          <!-- open the can with a can opener (No damage, no condition loss) -->
+          <StatusEffect type="OnInserted" target="This" disabledeltatime="true">
+            <RequiredItem identifier="he-canopener" type="contained" />
+            <Remove />
+            <SpawnItem identifier="he-cannedpotatoesopen" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" condition="1.0" />
+            <SpawnItem identifier="he-canopener" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+          </StatusEffect>
+          <!-- open the can with a unique diving knife (Lowest damage, highest amount of condition left) -->
+          <StatusEffect type="OnInserted" target="This,Character" targetlimbs="LeftHand,RightHand" disabledeltatime="true">
+            <RequiredItem identifier="divingknifeunique" type="contained" />
+            <Affliction identifier="lacerations" amount="16" probability="0.1" />
+          </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" disabledeltatime="true">
+            <RequiredItem identifier="divingknifeunique" type="contained" />
+            <Remove />
+            <SpawnItem identifier="he-cannedpotatoesopen" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" condition="0.8" />
+            <SpawnItem identifier="divingknifeunique" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+          </StatusEffect>
+          <!-- open the can with a regular diving knife (Lowest damage, highest amount of condition left) -->
+          <StatusEffect type="OnInserted" target="This,Character" targetlimbs="LeftHand,RightHand" disabledeltatime="true">
+            <RequiredItem identifier="divingknife" type="contained" />
+            <Affliction identifier="lacerations" amount="16" probability="0.1" />
+          </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" disabledeltatime="true">
+            <RequiredItem identifier="divingknife" type="contained" />
+            <Remove />
+            <SpawnItem identifier="he-cannedpotatoesopen" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" condition="0.8" />
+            <SpawnItem identifier="divingknife" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+          </StatusEffect>
+          <!-- open the can with a cleaver (Medium damage, medium amount of condition left) -->
+          <StatusEffect type="OnInserted" target="This,Character" targetlimbs="LeftHand,RightHand" disabledeltatime="true">
+            <RequiredItem tag="cleaver" type="contained" />
+            <Affliction identifier="lacerations" amount="32" probability="0.3" />
+          </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" disabledeltatime="true">
+            <RequiredItem tags="cleaver" type="contained" />
+            <Remove />
+            <SpawnItem identifier="he-cannedpotatoesopen" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" condition="0.6" />
+            <SpawnItem identifier="he-cleaver" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+          </StatusEffect>
+          <!-- open the can with a boarding axe (Highest damage, least amount of condition left) -->
+          <StatusEffect type="OnInserted" target="This,Character" targetlimbs="LeftHand,RightHand" disabledeltatime="true">
+            <RequiredItem identifier="boardingaxe" type="contained" />
+            <Affliction identifier="lacerations" amount="64" probability="0.3" />
+          </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" disabledeltatime="true">
+            <RequiredItem identifier="boardingaxe" type="contained" />
+            <Remove />
+            <SpawnItem identifier="he-cannedpotatoesopen" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" condition="0.2" />
+            <SpawnItem identifier="boardingaxe" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+          </StatusEffect>
+        </Containable>
+      </ItemContainer>
+    </Item>
+    <Item name="Open Can of Potatoes" identifier="he-cannedpotatoesopen" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A rare can of tomatoes back from when supplies were still delivered from earth! High in value, these ingredients are used exclusively for delicacies these days." Tags="smallitem,ingredient,rareingredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_metal_light" impacttolerance="5.5">
+      <PreferredContainer secondary="wreckstoragecab" minamount="1" maxamount="4" spawnprobability="0.1" />
+      <PreferredContainer primary="kitchen" secondary="crewcab"/>
+      <Price baseprice="750" sold="false" canbespecial="false" mincondition="50">
+        <Price storeidentifier="merchantoutpost" minavailable="3" maxavailable="10" />
+        <Price storeidentifier="merchantcity" multiplier="1.3" minavailable="6" maxavailable="16" />
+        <Price storeidentifier="merchantresearch" />
+        <Price storeidentifier="merchantmilitary" />
+        <Price storeidentifier="merchantmine" />
+        <Price storeidentifier="merchantmedical" />
+      </Price>
+      <Deconstruct time="5" requireddeconstructor="deconstructor">
+        <Item identifier="aluminium" amount="1" />
+        <Item identifier="carbon" amount="1" mincondition="50" />
+      </Deconstruct>
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="66,0,32,55" depth="0.6" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="66,0,32,55" origin="0.5,0.5" />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,0,32,55" depth="0.525" origin="0.5,0.7"  />
+      <Body width="27" height="50" density="11.5" />
+      <Throwable canbepicked="true" characterusable="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+        <StatusEffect type="OnSecondaryUse" target="This" delay="0.01">
+          <Use />
+        </StatusEffect>
+      </Throwable>
+      <Projectile characterusable="false" launchimpulse="0" impulsespread="0.0" sticktocharacters="false" sticktoitems="false" sticktostructures="false" sticktodoors="false">
+        <Attack targetimpulse="3" severlimbsprobability="0.1" itemdamage="1" structuredamage="0" structuresoundtype="StructureSlash">
+          <Affliction identifier="lacerations" strength="1" />
+          <Affliction identifier="blunttrauma" strength="1" />
+          <Affliction identifier="lacerations" strength="1" probability="0.25" />
+          <Affliction identifier="bleeding" strength="1" />
+          <Affliction identifier="bleeding" strength="1" probability="0.5" />
+          <Affliction identifier="stun" strength="0.2" />
+        </Attack>
+        <StatusEffect type="OnImpact" target="UseTarget">
+          <Conditional entitytype="Character" />
+          <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="1000" />
+          <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="1000" />
+          <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="1000" />
+          <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="1000" />
+          <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="1000" />
+          <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="1000" />
+        </StatusEffect>
+        <!-- remove the bottle if broken and spawn glass fragments, but prevent contained projectile bottle from breaking as well if the bottle drops and shatters instead of being thrown -->
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+        </StatusEffect>
+      </Projectile>
+    </Item>
+    
+    <Item name="Canned Corn" identifier="he-cannedcorn" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A rare can of tomatoes back from when supplies were still delivered from earth! High in value, these ingredients are used exclusively for delicacies these days." Tags="smallitem,ingredient,rareingredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_metal_light" impacttolerance="5.5">
+      <PreferredContainer secondary="wreckstoragecab" minamount="1" maxamount="4" spawnprobability="0.1" />
+      <PreferredContainer primary="kitchen" secondary="crewcab"/>
+      <Price baseprice="1500" sold="false" canbespecial="true">
+        <Price storeidentifier="merchantoutpost" minavailable="3" maxavailable="10" />
+        <Price storeidentifier="merchantcity" multiplier="1.3" minavailable="6" maxavailable="16" />
+        <Price storeidentifier="merchantresearch" />
+        <Price storeidentifier="merchantmilitary" />
+        <Price storeidentifier="merchantmine" />
+        <Price storeidentifier="merchantmedical" />
+      </Price>
+      <Deconstruct time="5" requireddeconstructor="deconstructor">
+        <Item identifier="aluminium" amount="1" />
+        <Item identifier="carbon" amount="1" mincondition="50" />
+      </Deconstruct>
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="99,15,32,40" depth="0.6" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="99,15,32,40" origin="0.5,0.5" />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="68,104,15,30" depth="0.525" origin="0.5,0.7"  />
+      <Body width="27" height="35" density="11.5" />
+      <Throwable canbepicked="true" characterusable="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+        <StatusEffect type="OnSecondaryUse" target="This" delay="0.01">
+          <Use />
+        </StatusEffect>
+      </Throwable>
+      <Projectile characterusable="false" launchimpulse="0" impulsespread="0.0" sticktocharacters="false" sticktoitems="false" sticktostructures="false" sticktodoors="false">
+        <Attack targetimpulse="3" severlimbsprobability="0.1" itemdamage="1" structuredamage="0" structuresoundtype="StructureSlash">
+          <Affliction identifier="lacerations" strength="1" />
+          <Affliction identifier="blunttrauma" strength="1" />
+          <Affliction identifier="lacerations" strength="1" probability="0.25" />
+          <Affliction identifier="bleeding" strength="1" />
+          <Affliction identifier="bleeding" strength="1" probability="0.5" />
+          <Affliction identifier="stun" strength="0.2" />
+        </Attack>
+        <StatusEffect type="OnImpact" target="UseTarget">
+          <Conditional entitytype="Character" />
+          <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="1000" />
+          <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="1000" />
+          <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="1000" />
+          <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="1000" />
+          <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="1000" />
+          <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="1000" />
+        </StatusEffect>
+        <!-- remove the bottle if broken and spawn glass fragments, but prevent contained projectile bottle from breaking as well if the bottle drops and shatters instead of being thrown -->
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+        </StatusEffect>
+      </Projectile>
+      <ItemContainer Capacity="1" MaxStackSize="1" HideItems="true" AllowDragAndDrop="true" DrawInventory="false">
+        <Containable items="divingknifeunique,divingknife,cleaver,boardingaxe,canopener">
+          <!-- TODO: Add sound effects for opening the can and also for hurting the hands -->
+          <!-- open the can with a can opener (No damage, no condition loss) -->
+          <StatusEffect type="OnInserted" target="This" disabledeltatime="true">
+            <RequiredItem identifier="he-canopener" type="contained" />
+            <Remove />
+            <SpawnItem identifier="he-cannedcornopen" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" condition="1.0" />
+            <SpawnItem identifier="he-canopener" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+          </StatusEffect>
+          <!-- open the can with a unique diving knife (Lowest damage, highest amount of condition left) -->
+          <StatusEffect type="OnInserted" target="This,Character" targetlimbs="LeftHand,RightHand" disabledeltatime="true">
+            <RequiredItem identifier="divingknifeunique" type="contained" />
+            <Affliction identifier="lacerations" amount="16" probability="0.1" />
+          </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" disabledeltatime="true">
+            <RequiredItem identifier="divingknifeunique" type="contained" />
+            <Remove />
+            <SpawnItem identifier="he-cannedcornopen" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" condition="0.8" />
+            <SpawnItem identifier="divingknifeunique" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+          </StatusEffect>
+          <!-- open the can with a regular diving knife (Lowest damage, highest amount of condition left) -->
+          <StatusEffect type="OnInserted" target="This,Character" targetlimbs="LeftHand,RightHand" disabledeltatime="true">
+            <RequiredItem identifier="divingknife" type="contained" />
+            <Affliction identifier="lacerations" amount="16" probability="0.1" />
+          </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" disabledeltatime="true">
+            <RequiredItem identifier="divingknife" type="contained" />
+            <Remove />
+            <SpawnItem identifier="he-cannedcornopen" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" condition="0.8" />
+            <SpawnItem identifier="divingknife" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+          </StatusEffect>
+          <!-- open the can with a cleaver (Medium damage, medium amount of condition left) -->
+          <StatusEffect type="OnInserted" target="This,Character" targetlimbs="LeftHand,RightHand" disabledeltatime="true">
+            <RequiredItem tag="cleaver" type="contained" />
+            <Affliction identifier="lacerations" amount="32" probability="0.3" />
+          </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" disabledeltatime="true">
+            <RequiredItem tags="cleaver" type="contained" />
+            <Remove />
+            <SpawnItem identifier="he-cannedcornopen" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" condition="0.6" />
+            <SpawnItem identifier="he-cleaver" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+          </StatusEffect>
+          <!-- open the can with a boarding axe (Highest damage, least amount of condition left) -->
+          <StatusEffect type="OnInserted" target="This,Character" targetlimbs="LeftHand,RightHand" disabledeltatime="true">
+            <RequiredItem identifier="boardingaxe" type="contained" />
+            <Affliction identifier="lacerations" amount="64" probability="0.3" />
+          </StatusEffect>
+          <StatusEffect type="OnInserted" target="This" disabledeltatime="true">
+            <RequiredItem identifier="boardingaxe" type="contained" />
+            <Remove />
+            <SpawnItem identifier="he-cannedcornopen" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" condition="0.2" />
+            <SpawnItem identifier="boardingaxe" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+          </StatusEffect>
+        </Containable>
+      </ItemContainer>
+    </Item>
+    <Item name="Open Can of Corn" identifier="he-cannedcornopen" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A rare can of tomatoes back from when supplies were still delivered from earth! High in value, these ingredients are used exclusively for delicacies these days." Tags="smallitem,ingredient,rareingredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_metal_light" impacttolerance="5.5">
+      <PreferredContainer secondary="wreckstoragecab" minamount="1" maxamount="4" spawnprobability="0.1" />
+      <PreferredContainer primary="kitchen" secondary="crewcab"/>
+      <Price baseprice="750" sold="false" canbespecial="false" mincondition="50">
+        <Price storeidentifier="merchantoutpost" minavailable="3" maxavailable="10" />
+        <Price storeidentifier="merchantcity" multiplier="1.3" minavailable="6" maxavailable="16" />
+        <Price storeidentifier="merchantresearch" />
+        <Price storeidentifier="merchantmilitary" />
+        <Price storeidentifier="merchantmine" />
+        <Price storeidentifier="merchantmedical" />
+      </Price>
+      <Deconstruct time="5" requireddeconstructor="deconstructor">
+        <Item identifier="aluminium" amount="1" />
+        <Item identifier="carbon" amount="1" mincondition="50" />
+      </Deconstruct>
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="99,0,32,55" depth="0.6" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="99,0,32,55" origin="0.5,0.5" />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,0,32,55" depth="0.525" origin="0.5,0.7"  />
+      <Body width="27" height="50" density="11.5" />
+      <Throwable canbepicked="true" characterusable="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+        <StatusEffect type="OnSecondaryUse" target="This" delay="0.01">
+          <Use />
+        </StatusEffect>
+      </Throwable>
+      <Projectile characterusable="false" launchimpulse="0" impulsespread="0.0" sticktocharacters="false" sticktoitems="false" sticktostructures="false" sticktodoors="false">
+        <Attack targetimpulse="3" severlimbsprobability="0.1" itemdamage="1" structuredamage="0" structuresoundtype="StructureSlash">
+          <Affliction identifier="lacerations" strength="1" />
+          <Affliction identifier="blunttrauma" strength="1" />
+          <Affliction identifier="lacerations" strength="1" probability="0.25" />
+          <Affliction identifier="bleeding" strength="1" />
+          <Affliction identifier="bleeding" strength="1" probability="0.5" />
+          <Affliction identifier="stun" strength="0.2" />
+        </Attack>
+        <StatusEffect type="OnImpact" target="UseTarget">
+          <Conditional entitytype="Character" />
+          <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="1000" />
+          <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="1000" />
+          <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="1000" />
+          <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="1000" />
+          <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="1000" />
+          <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="1000" />
+        </StatusEffect>
+        <!-- remove the bottle if broken and spawn glass fragments, but prevent contained projectile bottle from breaking as well if the bottle drops and shatters instead of being thrown -->
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+        </StatusEffect>
+      </Projectile>
+    </Item>
+
     <!--PSEUDO ITEM THAT REMOVES ITSELF IF SPAWNED IN | Only used to power the stove for the tea kettle to brew-->
     <Item name="Brew" identifier="he-brewteaitem" category="Hidden" hideinmenus="true" maxstacksize="1" tags="" description="Start brewing whatever is in your kettle. Turn the stove off when you hear the kettle whistle.">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,426,81,85" depth="0.6" origin="0.5,0.5" />
