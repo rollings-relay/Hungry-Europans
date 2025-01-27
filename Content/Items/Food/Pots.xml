@@ -23,6 +23,9 @@
             <RequiredItem items="emptybowl" type="contained" />
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
             <SpawnItem identifier="he-crawyumsoup" spawnposition="SameInventory" SpawnIfInventoryFull="true" spawnifcantbecontained="true" />
+          </StatusEffect>
+          <StatusEffect type="OnUse" target="Contained" disabledeltatime="true">
+            <Conditional InWater="false" targetcontainer="true" />
             <Remove />
           </StatusEffect>
         </Button>
@@ -35,7 +38,7 @@
           </StatusEffect>
         </Button>
       </CustomInterface>
-      <ItemContainer canbeselected="true" maxstacksize="1" hideitems="true">
+      <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true">
         <Containable items="emptybowl" />
       </ItemContainer>
     </Item>
