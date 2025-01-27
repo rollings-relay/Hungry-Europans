@@ -197,7 +197,6 @@
       <Fabricate suitablefabricators="cuttingboard" requiredtime="10" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="cooking" level="20" />
         <RequiredItem identifier="he-sausage" amount="1" />
-        <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.1"/>
         <RequiredItem identifier="he-ketchup" UseCondition="True" MinCondition="0.125"/>
         <RequiredItem identifier="he-hotdogbun" amount="1"/>
       </Fabricate>
