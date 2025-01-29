@@ -98,8 +98,8 @@
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,485,47,27" depth="0.6" origin="0.5,0.5" />
-      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,485,47,27" depth="0.6" maxcondition="99" />
-      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="96,486,43,26" depth="0.6" maxcondition="46" />
+      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,485,47,27" depth="0.6" maxcondition="99.99" />
+      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="96,486,43,26" depth="0.6" maxcondition="50" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="96,486,43,26" origin="0.5,0.5" />
       <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="45" fabricationlimitmin="0" fabricationlimitmax="10" displayname="crawlerfooditem" />
       <Fabricate suitablefabricators="cuttingboard" requiredtime="15" requiresrecipe="false" amount="1">
@@ -112,7 +112,7 @@
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="47" radius="13" density="9" />
       <SuitableTreatment type="hunger" suitability="60" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="22,15" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <!-- EVERYTHING RELATED TO POISONING FOOD IS HANDLED VIA THE POISON EFFECT PRESET ITEMS DEFINED IN - variantof="" AND THEIR CODE IS LOCATED IN - "/Content/Items/#Presets/#ItemPresets.xml" -->
 
         <!--////////// HEALTH MENU USAGE [BOT] \\\\\\\\\\-->
@@ -163,6 +163,16 @@
         </StatusEffect>
 
         <!--////////// REGULAR EATING \\\\\\\\\\-->
+        <StatusEffect type="OnUse" target="This" comparison="And" oneshot="true">
+          <Conditional InWater="false" />
+          <Conditional Condition="equals 100" />
+          <Sound file="%ModDir%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
+        </StatusEffect>
+        <StatusEffect type="OnSecondaryUse" target="This" comparison="And" oneshot="true">
+          <Conditional InWater="false" />
+          <Conditional Condition="equals 50" />
+          <Sound file="%ModDir%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
+        </StatusEffect>
         <StatusEffect type="OnUse" target="This" Condition="-4.0">
           <Conditional InWater="false" />
         </StatusEffect>
@@ -205,7 +215,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="139,489,67,23" depth="0.6" origin="0.5,0.5" />
       <Body width="67" radius="11" density="15" />
       <SuitableTreatment type="hunger" suitability="60" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="25,16" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <!-- EVERYTHING RELATED TO POISONING FOOD IS HANDLED VIA THE POISON EFFECT PRESET ITEMS DEFINED IN - variantof="" AND THEIR CODE IS LOCATED IN - "/Content/Items/#Presets/#ItemPresets.xml" -->
 
         <!--////////// HEALTH MENU USAGE [BOT] \\\\\\\\\\-->
