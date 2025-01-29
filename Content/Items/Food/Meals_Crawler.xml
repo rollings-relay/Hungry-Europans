@@ -3,7 +3,7 @@
   <Items>
     <!-- MEAT -->
     <!--Crawler-->
-    <Item hideinmenus="false" name="Crawler Filet with Sea Weed" identifier="he-cookedcrawlerfilet" variantof="he-poisoneffectpreset_fork" health="100" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,foodplate,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="false" requireaimtouse="false">
+    <Item hideinmenus="false" name="Crawler Filet with Sea Weed" identifier="he-cookedcrawlerfilet" variantof="he-poisoneffectpreset_fork" health="100" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,forkfood,foodplate,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="false" requireaimtouse="false">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
@@ -120,7 +120,7 @@
       <AiTarget sightrange="1000" static="true" />
     </Item>
     <!-- SOUPS & STEWS -->
-    <Item hideinmenus="false" name="Craw Yum!" identifier="he-crawyumsoup" variantof="he-poisoneffectpreset_spoon" health="100" category="Misc" subcategory="Food" Tags="smallitem,fooditem" description="A soup." maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="false" requireaimtouse="false">
+    <Item hideinmenus="false" name="Craw Yum!" identifier="he-crawyumsoup" variantof="he-poisoneffectpreset_spoon" health="100" category="Misc" subcategory="Food" Tags="smallitem,fooditem,spoonfood" description="A soup." maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="false" requireaimtouse="false">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
