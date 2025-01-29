@@ -9,7 +9,7 @@
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="720,30,68,29" depth="0.6" origin="0.5,0.9" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="720,30,68,29" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="90" requiresrecipe="false" amount="1" displayname="watcherfooditem">
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="90" requiresrecipe="false" amount="1" displayname="vegetarian">
         <RequiredSkill identifier="cooking" level="50" />
         <RequiredItem identifier="bubbleberries" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
         <RequiredItem identifier="bubbleberryleaf" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
@@ -274,7 +274,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,275,47,11" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,275,47,11" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,275,47,11" depth="0.525" origin="0.5,0.3"  />
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="10" requiresrecipe="false" amount="1">
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="10" requiresrecipe="false" amount="1" displayname="vegetarian">
         <RequiredSkill identifier="cooking" level="30" />
         <RequiredItem identifier="he-breadslices" amount="1"/>
         <RequiredItem identifier="he-jambubbleberry" UseCondition="True" MinCondition="0.1"/>
@@ -585,7 +585,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,286,47,11" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,286,47,11" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,286,47,11" depth="0.525" origin="0.5,0.3"  />
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="10" requiresrecipe="false" amount="1">
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="10" requiresrecipe="false" amount="1" displayname="vegetarian">
         <RequiredSkill identifier="cooking" level="30" />
         <RequiredItem identifier="he-breadslices" amount="1"/>
         <RequiredItem identifier="he-jampomegrenade" UseCondition="True" MinCondition="0.1"/>
@@ -896,7 +896,7 @@
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="178,419,61,17" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/UI/InventoryIcons.png" sourcerect="247,0,66,60" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="stove" requiredtime="20" requiresrecipe="false" amount="1">
+      <Fabricate suitablefabricators="stove" requiredtime="20" requiresrecipe="false" amount="1" displayname="vegetarian">
         <RequiredSkill identifier="cooking" level="20" />
         <RequiredItem tag="pan" UseCondition="True" MinCondition="0.0"/>
         <RequiredItem identifier="crawleregg" UseCondition="True" MinCondition="0.1"/>
@@ -1216,7 +1216,7 @@
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="178,419,61,17" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/UI/InventoryIcons.png" sourcerect="247,0,66,60" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="stove" requiredtime="20" requiresrecipe="false" amount="1">
+      <Fabricate suitablefabricators="stove" requiredtime="20" requiresrecipe="false" amount="1" displayname="vegetarian">
         <RequiredSkill identifier="cooking" level="20" />
         <RequiredItem tag="pan" UseCondition="True" MinCondition="0.0"/>
         <RequiredItem identifier="largemudraptoregg" UseCondition="True" MinCondition="0.1"/>
@@ -1553,7 +1553,7 @@
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="178,419,61,17" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/UI/InventoryIcons.png" sourcerect="247,0,66,60" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="stove" requiredtime="20" requiresrecipe="false" amount="1">
+      <Fabricate suitablefabricators="stove" requiredtime="20" requiresrecipe="false" amount="1" displayname="vegetarian">
         <RequiredSkill identifier="cooking" level="20" />
         <RequiredItem tag="pan" UseCondition="True" MinCondition="0.0"/>
         <RequiredItem identifier="crawleregg" UseCondition="True" MinCondition="0.1"/>
