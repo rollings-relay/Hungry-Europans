@@ -491,7 +491,7 @@
         <RequiredItem identifier="steel" amount="5" />
         <RequiredItem identifier="titaniumaluminiumalloy" amount="2" />
       </Fabricate>
-      <ItemContainer capacity="30" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
+      <ItemContainer capacity="30" canbeselected="true" selectkey="Action" hideitems="true" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.25,0.55" anchor="Center" style="ItemUI" />
         <SlotIcon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="152,0,85,85" origin="0.5,0.5" />
         <Containable items="fooditem,drinkitem,emptybottle,emptyjar,kettle,tableware" />
@@ -507,8 +507,8 @@
         <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_close3.ogg" volume="1" range="500" selectionmode="random"/>
       </StatusEffect>-->
       </ItemContainer>
-      <Body width="191" height="329" density="16" />
-      <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="70,-58" handle1="-75,50" handle2="-75,70" holdangle="3" msg="ItemMsgDetach" PickingTime="0.5" attachable="true" aimable="true"></Holdable>
+      <Body width="191" height="322" density="16" />
+      <Holdable canbepicked="true" selectkey="Select" pickkey="Select" slots="RightHand+LeftHand" holdpos="70,-58" handle1="-75,50" handle2="-75,70" holdangle="3" msg="ItemMsgDetach" PickingTime="0.5" attachable="false" aimable="true" />
     </Item>
     <Item name="Refrigerator" identifier="he-refrigerator" tags="kitchen,locker,container,refrigerator" category="Misc" subcategory="Container" description="Prevents spoilage. Can only store food and drinks. Needs power." linkable="true" pickdistance="150" waterproof="true" fireproof="true" isshootable="true" scale="0.5">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.799" sourcerect="750,0,273,380" origin="0.5,0.49" />
