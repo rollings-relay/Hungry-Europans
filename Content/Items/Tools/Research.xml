@@ -261,10 +261,10 @@
       </Wearable>
       <CustomInterface uilabel="Select your preferred food:" drawhudwhenequipped="true">
         <GuiFrame relativesize="0.3,0.4" anchor="Center" style="Paper" hidedragicons="true" />
-        <Button text="Nuggets">
+        <Button text="Fried Food">
           <StatusEffect type="OnUse" target="This">
             <SpawnItem identifier="he-traitselector_drinks" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
-            <SpawnItem identifier="he-like_nuggets" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+            <SpawnItem identifier="he-like_friedfood" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
             <Remove />
           </StatusEffect>
         </Button>
@@ -308,7 +308,7 @@
             <SpawnItem identifier="he-traitselector_drinks" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
           </StatusEffect>
           <StatusEffect type="OnUse" target="This" SpawnItemRandomly="True" stackable="false">
-            <SpawnItem identifier="he-like_nuggets" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+            <SpawnItem identifier="he-like_friedfood" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
             <SpawnItem identifier="he-like_burgers" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
             <SpawnItem identifier="he-like_hotdogs" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
             <SpawnItem identifier="he-like_filets" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
@@ -377,7 +377,7 @@
         </Button>
       </CustomInterface>
     </Item>
-    <Item hideinmenus="true" name="Trait: Likes Nuggets" identifier="he-like_nuggets" description="" category="Hidden" maxstacksize="1" Tags="smallitem" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item hideinmenus="true" name="Trait: Likes Fried Food" identifier="he-like_friedfood" description="" category="Hidden" maxstacksize="1" Tags="smallitem" scale="0.5" impactsoundtag="impact_metal_light">
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,0,36,66" depth="0.6" origin="0.5,0.5" />
       <Body width="35" height="65" density="10.2" />
@@ -385,8 +385,8 @@
         <StatusEffect type="Always" target="Character" comparison="Or" oneshot="true" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
           <Conditional hasspecifiertag="male"/>
           <Conditional hasspecifiertag="female"/>
-          <Affliction identifier="trait_likes_nuggets" amount="1" />
-          <GiveTalentInfo giverandom="false" talentidentifiers="he-trait_likes_nuggets" />
+          <Affliction identifier="trait_likes_friedfood" amount="1" />
+          <GiveTalentInfo giverandom="false" talentidentifiers="he-trait_likes_friedfood" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" delay="0.1" stackable="false">
           <Remove />

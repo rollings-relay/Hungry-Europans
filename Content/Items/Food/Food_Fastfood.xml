@@ -37,7 +37,7 @@
         <StatusEffect type="OnSuccess" target="This,UseTarget" duration="2.5" comparison="And">
           <Conditional InWater="false" />
           <Conditional IsPlayer="false" />
-          <Conditional trait_likes_nuggets="gt 0" />
+          <Conditional trait_likes_friedfood="gt 0" />
           <ReduceAffliction identifier="mood" amount="0.5" />
         </StatusEffect>
         
@@ -62,7 +62,7 @@
           <Conditional InWater="false" />
           <Conditional IsPlayer="true" />
           <Conditional stun="gt 0" />
-          <Conditional trait_likes_nuggets="gt 0" />
+          <Conditional trait_likes_friedfood="gt 0" />
           <ReduceAffliction identifier="mood" amount="0.5" />
         </StatusEffect>
 
@@ -84,7 +84,7 @@
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
-          <Conditional trait_likes_nuggets="gt 0" />
+          <Conditional trait_likes_friedfood="gt 0" />
           <ReduceAffliction identifier="mood" amount="0.5" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
