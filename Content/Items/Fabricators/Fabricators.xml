@@ -900,7 +900,7 @@
         </StatusEffect>
       </Holdable>
       <ItemContainer selectkey="Select" capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="" allowuioverlap="true" />
-      <ItemContainer selectkey="Select" capacity="2" canbeselected="true" hideitems="true" slotsperrow="2" uilabel="" allowuioverlap="true" />
+      <ItemContainer selectkey="Select" capacity="4" canbeselected="true" hideitems="true" slotsperrow="2" uilabel="" allowuioverlap="true" />
     </Item>
     <Item name="Electric Grill" identifier="he-electricgrill" tags="grill,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="Used for cooking. Needs power." isshootable="true" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
       <Deconstruct time="10">
