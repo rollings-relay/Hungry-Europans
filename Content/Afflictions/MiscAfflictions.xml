@@ -448,7 +448,7 @@
       type="stun"
       limbspecific="false"
       indicatorlimb="Head"
-      activationthreshold="1.0"
+      activationthreshold="0.0"
       showiconthreshold="15"
       maxstrength="120">
       <Description
