@@ -19,7 +19,7 @@
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="345" fabricationlimitmin="0" fabricationlimitmax="10" displayname="hammerheadfooditem" />
-      <Body width="118" radius="12" density="15" />
+      <Body width="60" radius="1" density="11" />
       <SuitableTreatment type="hunger" suitability="90" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="LeftHand,RightHand" holdangle="0" holdpos="36,-20" handle1="0,-4" handle2="0,-4" aimable="false" msg="ItemMsgPickUpSelect">
         <!-- EVERYTHING RELATED TO POISONING FOOD IS HANDLED VIA THE POISON EFFECT PRESET ITEMS DEFINED IN - variantof="" AND THEIR CODE IS LOCATED IN - "/Content/Items/#Presets/#ItemPresets.xml" -->
