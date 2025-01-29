@@ -8,7 +8,8 @@
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="258,495,51,17" depth="0.6" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="582,0,68,29" depth="0.6" origin="0.5,0.9" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="582,0,68,29" origin="0.5,0.5" />
       <Fabricate suitablefabricators="oven" requiredtime="90" requiresrecipe="false" amount="3" displayname="hammerheadfooditem">
         <RequiredSkill identifier="cooking" level="50" />
         <RequiredItem identifier="he-rawhammerheadroast" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
