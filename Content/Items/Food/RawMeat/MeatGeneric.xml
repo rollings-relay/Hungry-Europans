@@ -6,14 +6,15 @@
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="275,459,35,17" depth="0.6" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,458,35,8" depth="0.6" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="279,459,31,17" origin="0.5,0.5" />
       <Fabricate suitablefabricators="cuttingboard" requiredtime="25" requiresrecipe="false" amount="2">
         <RequiredSkill identifier="butchery" level="20" />
         <RequiredItem tag="rawmeatpiece" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
         <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.05"/>
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor" />
-      <Body width="35" radius="7" density="9" />
+      <Body width="31" height="5" density="9" />
       <Price baseprice="29" minavailable="4" maxavailable="16" mincondition="0.9" maxcondition="1.0" usecondition="false" sold="false">
         <Price storeidentifier="merchantoutpost"/>
         <Price storeidentifier="merchantcity"/>
@@ -67,7 +68,8 @@
     </Item>
     <Item name="Meat Patty" identifier="he-meatpatty" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,allowongrill,canspoil,petfood1,petfood2,petfood3" spritecolor="108,108,108,255" inventoryiconcolor="108,108,108,255" containercolor="108,108,108,255" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="275,459,35,17" depth="0.6" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,458,35,8" depth="0.6" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="279,459,31,17" origin="0.5,0.5" />
       <Fabricate suitablefabricators="stove" requiredtime="120" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="cooking" level="20" />
         <RequiredItem identifier="he-rawmeatpatty" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
@@ -75,7 +77,7 @@
         <RequiredItem tag="pan" UseCondition="True" MinCondition="0.0"/>
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor" />
-      <Body width="35" radius="7" density="9" />
+      <Body width="31" height="5" density="9" />
       <Price baseprice="29" minavailable="4" maxavailable="16" mincondition="0.9" maxcondition="1.0" usecondition="false" sold="false">
         <Price storeidentifier="merchantoutpost"/>
         <Price storeidentifier="merchantcity"/>
@@ -116,9 +118,10 @@
     </Item>
     <Item name="Burned Meat Patty" identifier="he-burnedmeatpatty" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,allowongrill" spritecolor="41,41,41,255" inventoryiconcolor="41,41,41,255" containercolor="41,41,41,255" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="275,459,35,17" depth="0.6" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,458,35,8" depth="0.6" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="279,459,31,17" origin="0.5,0.5" />
       <Deconstruct time="1" requireddeconstructor="deconstructor" />
-      <Body width="35" radius="7" density="9" />
+      <Body width="31" height="5" density="9" />
       <Price baseprice="29" minavailable="4" maxavailable="16" mincondition="0.9" maxcondition="1.0" usecondition="false" sold="false">
         <Price storeidentifier="merchantoutpost"/>
         <Price storeidentifier="merchantcity"/>
