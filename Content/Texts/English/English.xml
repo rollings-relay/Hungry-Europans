@@ -9,6 +9,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <!-- LATEST PATCH: 16 -->
 <infotexts language="English" nowhitespace="false" translatedname="English">
 <!-- Display names -->
+<displayname.clean>[itemname] (Clean)</displayname.clean>
 <displayname.humanfooditem>[itemname] (Human)</displayname.humanfooditem>
 <displayname.crawlerfooditem>[itemname] (Crawler)</displayname.crawlerfooditem>
 <displayname.mudraptorfooditem>[itemname] (Mudraptor)</displayname.mudraptorfooditem>
