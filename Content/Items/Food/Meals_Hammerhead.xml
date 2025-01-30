@@ -10,14 +10,16 @@
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="582,0,68,29" depth="0.6" origin="0.5,0.9" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="582,0,68,29" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="oven" requiredtime="90" requiresrecipe="false" amount="3" displayname="hammerheadfooditem">
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="90" requiresrecipe="false" amount="1" displayname="hammerheadfooditem">
         <RequiredSkill identifier="cooking" level="50" />
-        <RequiredItem identifier="he-rawhammerheadroast" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
-        <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.1"/>
-        <RequiredItem identifier="he-pepper" UseCondition="True" MinCondition="0.1"/>
-        <RequiredItem identifier="he-cookingoil" UseCondition="True" MinCondition="0.1"/>
+        <RequiredItem identifier="he-preparredhammerheadroast" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
+        <RequiredItem tag="omelette" UseCondition="True" mincondition="0.25" />
+        <RequiredItem identifier="he-seaweedstrip" amount="1" />
+        <RequiredItem identifier="he-emptyplate" amount="1" />
       </Fabricate>
-      <Deconstruct time="1" requireddeconstructor="deconstructor"/>
+      <Deconstruct time="4" requireddeconstructor="deconstructor">
+        <Item identifier="he-dirtyplate" amount="1" />
+      </Deconstruct>
       <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="345" fabricationlimitmin="0" fabricationlimitmax="10" displayname="hammerheadfooditem" />
       <Body width="60" radius="1" density="11" />
       <SuitableTreatment type="hunger" suitability="90" />
