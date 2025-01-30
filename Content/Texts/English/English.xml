@@ -9,6 +9,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <!-- LATEST PATCH: 16 -->
 <infotexts language="English" nowhitespace="false" translatedname="English">
 <!-- Display names -->
+<displayname.returnitem>[itemname] (Return Item)</displayname.returnitem>
 <displayname.clean>[itemname] (Clean)</displayname.clean>
 <displayname.vegetarian>[itemname] (Vegetarian)</displayname.vegetarian>
 <displayname.humanfooditem>[itemname] (Human)</displayname.humanfooditem>
