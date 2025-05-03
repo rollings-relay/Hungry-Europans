@@ -4,13 +4,11 @@
   <EventPrefabs>
     <ScriptedEvent identifier="enablecafeteria">
       <TagAction criteria="player" tag="player" />
-      <TagAction criteria="itemidentifier:op_cafeteriawindow" tag="cafeteria" sub="Outpost" />
+      <TagAction criteria="itemidentifier:op_cafeteriawindow" tag="cafeteria" SubmarineType="Outpost" />
       <!--<TagAction criteria="itemidentifier:op_cafeteriachair" tag="cafeteria" sub="Outpost" />-->
       <TriggerAction target1tag="player" target2tag="cafeteria" radius="1000" disableincombat="false" disableiftargetincapacitated="false" waitforinteraction="false" allowmultipletargets="true" />
       <StatusEffectAction targettag="cafeteria">
-        <StatusEffect target="This" noninteractable="false" setvalue="true">
-          <Conditional nonplayerteaminteractable="true" />
-        </StatusEffect>
+        <StatusEffect target="This" noninteractable="false" setvalue="true" />
       </StatusEffectAction>
     </ScriptedEvent>
     <ScriptedEvent identifier="he-hirechef">
