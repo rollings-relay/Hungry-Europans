@@ -32,7 +32,7 @@ impact_softitem
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 SUGGESTED FOOD CONDITION VALUES:
 ////////////////////////////////
-Filets/Roasts:
+Filets/Roasts/Steaks:
   Max Item Health: 120
   Condition Reduction - Regular Eating: -4.0
   Condition Reduction - Health Menu: -20 | DisableDeltaTime="true"
