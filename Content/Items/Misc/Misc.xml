@@ -1201,10 +1201,10 @@
         <RequiredItem tag="forkspoonreturn" amount="1" mincondition="0.0" maxcondition="1.0" UseCondition="false" />
       </Fabricate>
       <Holdable handle1="0,0" slots="RightHand,LeftHand,Any" msg="ItemMsgPickUpSelect">
-        <!-- instantly cause a fire and remove the item when spawned -->
-        <StatusEffect type="OnContained" target="Character" evententitytag="moneyrecipient" disabledeltatime="true" setvalue="true" oneshot="true">
+        <StatusEffect type="OnContained" target="Character" eventtargettag="moneyrecipient" disabledeltatime="true" setvalue="true" oneshot="true">
           <Conditional IsPlayer="true" />
           <TriggerEvent identifier="give5mk" />
+          <EventTarget eventidentifier="give5mk" tag="moneyrecipient"/>
         </StatusEffect>
         <StatusEffect type="OnContained" target="This">
           <Conditional IsPlayer="true" targetcontainer="true" />
@@ -1219,10 +1219,10 @@
         <RequiredItem tag="platebowlreturn1" amount="1" mincondition="0.0" maxcondition="1.0" UseCondition="false" />
       </Fabricate>
       <Holdable handle1="0,0" slots="RightHand,LeftHand,Any" msg="ItemMsgPickUpSelect">
-        <!-- instantly cause a fire and remove the item when spawned -->
-        <StatusEffect type="OnContained" target="Character" evententitytag="moneyrecipient" disabledeltatime="true" setvalue="true" oneshot="true">
+        <StatusEffect type="OnContained" target="Character" eventtargettag="moneyrecipient" disabledeltatime="true" setvalue="true" oneshot="true">
           <Conditional IsPlayer="true" />
           <TriggerEvent identifier="give25mk" />
+          <EventTarget eventidentifier="give25mk" tag="moneyrecipient"/>
         </StatusEffect>
         <StatusEffect type="OnContained" target="This">
           <Conditional IsPlayer="true" targetcontainer="true" />
@@ -1237,10 +1237,10 @@
         <RequiredItem tag="platebowlreturn2" amount="1" mincondition="0.0" maxcondition="1.0" UseCondition="false" />
       </Fabricate>
       <Holdable handle1="0,0" slots="RightHand,LeftHand,Any" msg="ItemMsgPickUpSelect">
-        <!-- instantly cause a fire and remove the item when spawned -->
-        <StatusEffect type="OnContained" target="Character" evententitytag="moneyrecipient" disabledeltatime="true" setvalue="true" oneshot="true">
+        <StatusEffect type="OnContained" target="Character" eventtargettag="moneyrecipient" disabledeltatime="true" setvalue="true" oneshot="true">
           <Conditional IsPlayer="true" />
           <TriggerEvent identifier="give50mk" />
+          <EventTarget eventidentifier="give50mk" tag="moneyrecipient"/>
         </StatusEffect>
         <StatusEffect type="OnContained" target="This">
           <Conditional IsPlayer="true" targetcontainer="true" />
@@ -1255,10 +1255,10 @@
         <RequiredItem tag="platebowlreturn3" amount="1" mincondition="0.0" maxcondition="1.0" UseCondition="false" />
       </Fabricate>
       <Holdable handle1="0,0" slots="RightHand,LeftHand,Any" msg="ItemMsgPickUpSelect">
-        <!-- instantly cause a fire and remove the item when spawned -->
-        <StatusEffect type="OnContained" target="Character" evententitytag="moneyrecipient" disabledeltatime="true" setvalue="true" oneshot="true">
+        <StatusEffect type="OnContained" target="Character" eventtargettag="moneyrecipient" disabledeltatime="true" setvalue="true" oneshot="true">
           <Conditional IsPlayer="true" />
           <TriggerEvent identifier="give75mk" />
+          <EventTarget eventidentifier="give75mk" tag="moneyrecipient"/>
         </StatusEffect>
         <StatusEffect type="OnContained" target="This">
           <Conditional IsPlayer="true" targetcontainer="true" />
@@ -1273,10 +1273,10 @@
         <RequiredItem tag="platebowlreturn4" amount="1" mincondition="0.0" maxcondition="1.0" UseCondition="false" />
       </Fabricate>
       <Holdable handle1="0,0" slots="RightHand,LeftHand,Any" msg="ItemMsgPickUpSelect">
-        <!-- instantly cause a fire and remove the item when spawned -->
-        <StatusEffect type="OnContained" target="Character" evententitytag="moneyrecipient" disabledeltatime="true" setvalue="true" oneshot="true">
+        <StatusEffect type="OnContained" target="Character" eventtargettag="moneyrecipient" disabledeltatime="true" setvalue="true" oneshot="true">
           <Conditional IsPlayer="true" />
           <TriggerEvent identifier="give100mk" />
+          <EventTarget eventidentifier="give100mk" tag="moneyrecipient"/>
         </StatusEffect>
         <StatusEffect type="OnContained" target="This">
           <Conditional IsPlayer="true" targetcontainer="true" />
