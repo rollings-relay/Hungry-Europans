@@ -16,6 +16,7 @@ Hungry Europans
 - Changed: "Drunk" can now make you tired. (Only with "Tiredness" enabled)
 - Changed: "Coalition Premium" beer will now give a temporary buff that decreases the power usage of the turret you're operating by up to 90%.
 - Changed: "Jovian Force" beer will now give a temporary buff that increases the fire rate of the turret you're operating by up to 100%.
+- Changed: "Cafeteria Cart" is no longer attachable. Its inventory is accessed by using the "Action" keybind (Default "E") to bring it more in line with other modded items.
 - (TODO) Changed: All food and drink items now support "Tiredness" and "Mood" values.
 - Fixed: "Internal Burns" had wrong damage values and thus wouldn't actually cause any damage.
 - Fixed: Puking from "Stomach Ache" didn't decrease the duration of some food buffs.
