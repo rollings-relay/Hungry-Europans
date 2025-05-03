@@ -3,7 +3,7 @@
   <Items>
     <!-- MEAT -->
     <!--Crawler-->
-    <Item hideinmenus="false" name="Crawler Filet with Sea Weed" identifier="he-cookedcrawlerfilet" variantof="he-poisoneffectpreset_fork" health="100" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,forkfood,foodplate,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="false" requireaimtouse="false">
+    <Item hideinmenus="false" name="Crawler Filet with Sea Weed" identifier="he-cookedcrawlerfilet" variantof="he-poisoneffectpreset_fork" health="120" category="Misc" subcategory="Food - Crawler" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,forkfood,foodplate,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="false" requireaimtouse="false">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
@@ -75,12 +75,12 @@
 
         <!--////////// REGULAR EATING \\\\\\\\\\-->
         <!-- Use the item when it's held and the fork in the other hand is used (indicated by applying a "usingfork" tag on the character which this item checks for) -->
-        <StatusEffect type="OnActive" target="This" Condition="-4.0" duration="1" stackable="false" comparison="And">
+        <StatusEffect type="OnActive" target="This" Condition="-4.0" disabledeltatime="true" stackable="false" comparison="And">
           <Conditional HasStatusTag="usingfork" targetcontainer="true" />
           <Conditional HasStatusTag="neq emptyfork" targetcontainer="true" />
           <Conditional InWater="false" />
         </StatusEffect>
-        <StatusEffect type="OnSecondaryUse" target="Character" duration="1" stackable="false" comparison="And">
+        <StatusEffect type="OnSecondaryUse" target="Character" disabledeltatime="true" stackable="false" comparison="And">
           <Conditional HasStatusTag="usingfork" />
           <Conditional HasStatusTag="neq emptyfork"/>
           <Conditional InWater="false" />
@@ -94,14 +94,14 @@
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork4.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork5.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
         </StatusEffect>
-        <StatusEffect type="OnSecondaryUse" target="Character" comparison="And" duration="1" stackable="false">
+        <StatusEffect type="OnSecondaryUse" target="Character" comparison="And" disabledeltatime="true" stackable="false">
           <Conditional HasStatusTag="usingfork" />
           <Conditional HasStatusTag="neq emptyfork" />
           <Conditional InWater="false" />
           <Conditional hunger="gt 0.5" />
           <ReduceAffliction type="hunger" amount="0.5" />
         </StatusEffect>
-        <StatusEffect type="OnSecondaryUse" target="Character" comparison="And" duration="1" stackable="false">
+        <StatusEffect type="OnSecondaryUse" target="Character" comparison="And" disabledeltatime="true" stackable="false">
           <Conditional HasStatusTag="usingfork" />
           <Conditional HasStatusTag="neq emptyfork" />
           <Conditional InWater="false" />
@@ -120,7 +120,7 @@
       <AiTarget sightrange="1000" static="true" />
     </Item>
     <!-- SOUPS & STEWS -->
-    <Item hideinmenus="false" name="Craw Yum!" identifier="he-crawyumsoup" variantof="he-poisoneffectpreset_spoon" health="100" category="Misc" subcategory="Food" Tags="smallitem,fooditem,spoonfood" description="A soup." maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="false" requireaimtouse="false">
+    <Item hideinmenus="false" name="Craw Yum!" identifier="he-crawyumsoup" variantof="he-poisoneffectpreset_spoon" health="100" category="Misc" subcategory="Food - Crawler" Tags="smallitem,fooditem,spoonfood" description="A soup." maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="false" requireaimtouse="false">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
@@ -192,12 +192,12 @@
 
         <!--////////// REGULAR EATING \\\\\\\\\\-->
         <!-- Use the item when it's held and the spoon in the other hand is used (indicated by applying a "usingspoon" tag on the character which this item checks for -->
-        <StatusEffect type="OnActive" target="This" Condition="-4.0" duration="1" stackable="false" comparison="And">
+        <StatusEffect type="OnActive" target="This" Condition="-4.0" disabledeltatime="true" stackable="false" comparison="And">
           <Conditional HasStatusTag="usingspoon" targetcontainer="true" />
           <Conditional HasStatusTag="neq emptyspoon" targetcontainer="true" />
           <Conditional InWater="false" />
         </StatusEffect>
-        <StatusEffect type="OnSecondaryUse" target="Character" duration="1" stackable="false" comparison="And">
+        <StatusEffect type="OnSecondaryUse" target="Character" disabledeltatime="true" stackable="false" comparison="And">
           <Conditional HasStatusTag="usingspoon" />
           <Conditional HasStatusTag="neq emptyspoon"/>
           <Conditional InWater="false" />
@@ -210,14 +210,14 @@
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork4.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork5.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
         </StatusEffect>
-        <StatusEffect type="OnSecondaryUse" target="Character" comparison="And" duration="1" stackable="false">
+        <StatusEffect type="OnSecondaryUse" target="Character" comparison="And" disabledeltatime="true" stackable="false">
           <Conditional HasStatusTag="usingspoon" />
           <Conditional HasStatusTag="neq emptyspoon" />
           <Conditional InWater="false" />
           <Conditional hunger="gt 0.25" />
           <ReduceAffliction type="hunger" amount="0.25" />
         </StatusEffect>
-        <StatusEffect type="OnSecondaryUse" target="Character" comparison="And" duration="1" stackable="false">
+        <StatusEffect type="OnSecondaryUse" target="Character" comparison="And" disabledeltatime="true" stackable="false">
           <Conditional HasStatusTag="usingspoon" />
           <Conditional HasStatusTag="neq emptyspoon" />
           <Conditional InWater="false" />
