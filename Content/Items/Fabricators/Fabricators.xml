@@ -1128,7 +1128,7 @@
       </Fabricate>
       <Fabricator selectkey="Select" canbeselected="true" powerconsumption="0.0" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
-        <StatusEffect type="OnActive" target="This" IsOn="true" targetitemcomponent="Pump" setvalue="true">
+        <StatusEffect type="OnActive" target="This" targetitemcomponent="ItemComponent" IsActive="true" setvalue="true">
           <Conditional IsOn="false" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/coffee_start.ogg" loop="false" range="500" volume="2" />
         </StatusEffect>
@@ -1138,19 +1138,19 @@
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/SinkScrub.ogg" loop="true" range="500" volume="1" />
         </StatusEffect>
       </Fabricator>
-      <Pump IsOn="false" powerconsumption="0" maxflow="0" allowingameediting="false" canbeselected="false" comparison="And">
+      <ItemComponent IsActive="false" allowingameediting="false" canbeselected="false" comparison="And">
         <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/Sink.ogg" type="OnActive" volume="1.5" range="450" loop="true" />
         <!-- while the pump is on, check if the fabricator is off or receiving too little voltage to apply the "stop" status tag -->
         <StatusEffect type="OnActive" target="This" targetitemcomponent="Fabricator" tags="stop" duration="0.1" comparison="OR">
           <Conditional IsActive="false" />
         </StatusEffect>
         <!-- while the pump is on, check for the "stop" status tag to play the end sound effect and turn the pump off -->
-        <StatusEffect type="OnActive" target="This" targetitemcomponent="Pump" IsOn="false" setvalue="true">
+        <StatusEffect type="OnActive" target="This" targetitemcomponent="ItemComponent" IsActive="false" setvalue="true">
           <Conditional HasStatusTag="eq stop" />
           <!-- <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/SinkStopping.ogg" loop="false" range="500" volume="2" selectionmode="All" /> -->
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/SinkDrain.ogg" loop="false" range="500" volume="2" selectionmode="All" />
         </StatusEffect>
-      </Pump>
+      </ItemComponent>
       <Holdable slots="RightHand+LeftHand" canbeselected="true" selectkey="Select" canbepicked="true" pickkey="Action" PickingTime="5" attachable="true" holdpos="70,-40" handle1="-60,30" handle2="-20,50">
         <RequiredItem items="wrench" type="Equipped" />
         <!-- slow down the character carrying the device -->
