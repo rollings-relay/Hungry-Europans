@@ -1,6 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Override>
   <Items>
+    <!-- Water Filter -->
+    <Item name="Water Filter" identifier="he-waterfilter" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,waterfilter" spritecolor="255,255,255,255" InventoryIconColor="255,255,255,255" scale="0.5" impactsoundtag="impact_metal_light">
+      <PreferredContainer secondary="storagecab" spawnprobability="0.0" />
+      <Price baseprice="140" minleveldifficulty="5">
+        <Price storeidentifier="merchantoutpost" multiplier="1.1" />
+        <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="2" />
+        <Price storeidentifier="merchantresearch" multiplier="1.2" />
+        <Price storeidentifier="merchantmilitary" multiplier="1.2" />
+        <Price storeidentifier="merchantmine" multiplier="1.2" />
+      </Price>
+      <InventoryIcon texture="Content/Items/InventoryIconAtlas2.png" sourcerect="256,320,64,64" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/Tools/tools.png" sourcerect="379,78,27,58" depth="0.6" origin="0.5,0.5" />
+      <Body width="25" height="55" density="12" />
+      <Fabricate suitablefabricators="fabricator" requiredtime="30">
+        <RequiredSkill identifier="mechanical" level="40" />
+        <RequiredItem identifier="organicfiber" />
+        <RequiredItem identifier="plastic" amount="2" />
+      </Fabricate>
+      <Deconstruct time="5">
+        <Item identifier="plastic" />
+      </Deconstruct>
+      <Holdable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="3.5" aimpos="26,24" holdpos="30,-15" holdangle="0" aimangle="120" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      </Holdable>
+    </Item>
     <!-- Bagpipe item - created by Draconis13 for Hungry Europans -->
     <Item name="Bagpipes" identifier="bagpipes" category="Misc" Tags="mediumitem,instrument" scale="0.5" description="An ancient instrument from earth consisting of an inflatable bladder, a mouthpiece and several metal pipes that produce haunting melodies." price="300" isshootable="true">
       <Upgrade gameversion="0.9.2.0" scale="0.5"/>
