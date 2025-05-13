@@ -1899,7 +1899,7 @@
       </CustomInterface>
     </Item>
     <!-- NON-ALCOHOLIC -->
-    <Item name="Water" identifier="he-water" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Fresh water. Helps a bit if you're feeling stuffed or when you're shit-faced." Tags="smallitem,drinkitem,cleanwater,water,bottle" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
+    <Item name="Water" identifier="he-water" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Fresh water. Helps a bit if you're feeling stuffed or when you're shit-faced." Tags="smallitem,drinkitem,cleanwater,cleanwaterrefill_common,water,bottle" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" minamount="1" maxamount="3" spawnprobability="0.05" />
@@ -1920,6 +1920,10 @@
       <Fabricate suitablefabricators="refillstation" requiredtime="5" requiresrecipe="false" amount="1">
         <RequiredItem identifier="he-kegwater" UseCondition="True" MinCondition="0.049"/>
         <RequiredItem tag="emptybottlecommon" Amount="1"/>
+      </Fabricate>
+      <Fabricate suitablefabricators="sink" requiredtime="10" requiresrecipe="false" amount="1">
+        <RequiredItem tag="cleanwaterrefill_common" amount="1" UseCondition="False" MinCondition="0.0" />
+        <RequiredItem tag="waterfilter" UseCondition="True" MinCondition="0.01" />
       </Fabricate>
       <Deconstruct time="2">
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
@@ -2048,7 +2052,7 @@
         </Button>
       </CustomInterface>
     </Item>
-    <Item name="Water" identifier="he-waterrum" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Fresh water. Helps a bit if you're feeling stuffed or when you're shit-faced." Tags="smallitem,drinkitem,cleanwater,water,bottle" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
+    <Item name="Water" identifier="he-waterrum" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Fresh water. Helps a bit if you're feeling stuffed or when you're shit-faced." Tags="smallitem,drinkitem,cleanwater,cleanwaterrefill_rum,water,bottle" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0" />
@@ -2068,6 +2072,10 @@
       <Fabricate suitablefabricators="refillstation" requiredtime="5" requiresrecipe="false" amount="1">
         <RequiredItem identifier="he-kegwater" UseCondition="True" MinCondition="0.049"/>
         <RequiredItem tag="emptybottlerum" Amount="1"/>
+      </Fabricate>
+      <Fabricate suitablefabricators="sink" requiredtime="10" requiresrecipe="false" amount="1">
+        <RequiredItem tag="cleanwaterrefill_rum" amount="1" UseCondition="False" MinCondition="0.0" />
+        <RequiredItem tag="waterfilter" UseCondition="True" MinCondition="0.01" />
       </Fabricate>
       <Deconstruct time="2">
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
@@ -2189,7 +2197,7 @@
         </Button>
       </CustomInterface>
     </Item>
-    <Item name="Water" identifier="he-waterwhiskey" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Fresh water. Helps a bit if you're feeling stuffed or when you're shit-faced." Tags="smallitem,drinkitem,cleanwater,water,bottle" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
+    <Item name="Water" identifier="he-waterwhiskey" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Fresh water. Helps a bit if you're feeling stuffed or when you're shit-faced." Tags="smallitem,drinkitem,cleanwater,cleanwaterrefill_whiskey,water,bottle" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0" />
@@ -2209,6 +2217,10 @@
       <Fabricate suitablefabricators="refillstation" requiredtime="5" requiresrecipe="false" amount="1">
         <RequiredItem identifier="he-kegwater" UseCondition="True" MinCondition="0.049"/>
         <RequiredItem tag="emptybottlewhiskey" Amount="1"/>
+      </Fabricate>
+      <Fabricate suitablefabricators="sink" requiredtime="10" requiresrecipe="false" amount="1">
+        <RequiredItem tag="cleanwaterrefill_whiskey" amount="1" UseCondition="False" MinCondition="0.0" />
+        <RequiredItem tag="waterfilter" UseCondition="True" MinCondition="0.01" />
       </Fabricate>
       <Deconstruct time="2">
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
@@ -2330,7 +2342,7 @@
         </Button>
       </CustomInterface>
     </Item>
-    <Item name="Water" identifier="he-waterhalucinova" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Fresh water. Helps a bit if you're feeling stuffed or when you're shit-faced." Tags="smallitem,drinkitem,cleanwater,water,bottle" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
+    <Item name="Water" identifier="he-waterhalucinova" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Fresh water. Helps a bit if you're feeling stuffed or when you're shit-faced." Tags="smallitem,drinkitem,cleanwater,cleanwaterrefill_halucinova,water,bottle" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0" />
@@ -2350,6 +2362,10 @@
       <Fabricate suitablefabricators="refillstation" requiredtime="5" requiresrecipe="false" amount="1">
         <RequiredItem identifier="he-kegwater" UseCondition="True" MinCondition="0.049"/>
         <RequiredItem tag="emptybottlehalucinova" Amount="1"/>
+      </Fabricate>
+      <Fabricate suitablefabricators="sink" requiredtime="10" requiresrecipe="false" amount="1">
+        <RequiredItem tag="cleanwaterrefill_halucinova" amount="1" UseCondition="False" MinCondition="0.0" />
+        <RequiredItem tag="waterfilter" UseCondition="True" MinCondition="0.01" />
       </Fabricate>
       <Deconstruct time="2">
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
@@ -2471,7 +2487,7 @@
         </Button>
       </CustomInterface>
     </Item>
-    <Item name="Water" identifier="he-waterbeer" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Fresh water. Helps a bit if you're feeling stuffed or when you're shit-faced." Tags="smallitem,drinkitem,cleanwater,water,bottle" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
+    <Item name="Water" identifier="he-waterbeer" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Fresh water. Helps a bit if you're feeling stuffed or when you're shit-faced." Tags="smallitem,drinkitem,cleanwater,cleanwaterrefill_beer,water,bottle" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0" />
@@ -2491,6 +2507,10 @@
       <Fabricate suitablefabricators="refillstation" requiredtime="5" requiresrecipe="false" amount="1">
         <RequiredItem identifier="he-kegwater" UseCondition="True" MinCondition="0.049"/>
         <RequiredItem tag="emptybottlebeer" Amount="1"/>
+      </Fabricate>
+      <Fabricate suitablefabricators="sink" requiredtime="10" requiresrecipe="false" amount="1">
+        <RequiredItem tag="cleanwaterrefill_beer" amount="1" UseCondition="False" MinCondition="0.0" />
+        <RequiredItem tag="waterfilter" UseCondition="True" MinCondition="0.01" />
       </Fabricate>
       <Deconstruct time="2">
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
