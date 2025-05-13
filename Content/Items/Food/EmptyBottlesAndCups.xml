@@ -41,7 +41,7 @@
       </Holdable>
     </Item>
     <!--////////// EMPTY BOTTLES AND CUPS - CLEAN \\\\\\\\\\-->
-    <Item name="Empty Rum Bottle" identifier="he-emptybottlerum" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="An empty rum bottle used for some recipes. Can be thrown or used in water to collect dirty water." Tags="smallitem,ingredient,emptybottle,emptybottlerum,seawaterrefill_rum" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
+    <Item name="Empty Rum Bottle" identifier="he-emptybottlerum" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="An empty rum bottle used for some recipes. Can be thrown or used in water to collect dirty water." Tags="smallitem,ingredient,emptybottle,emptybottlerum,seawaterrefill_rum,cleanwaterrefill_rum" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -134,7 +134,7 @@
         </Button>
       </CustomInterface>
     </Item>
-    <Item name="Empty Whiskey Bottle" identifier="he-emptybottlewhiskey" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="An empty Whiskey bottle used for some recipes. Can be thrown or used in water to collect dirty water." Tags="smallitem,ingredient,emptybottle,emptybottlewhiskey,seawaterrefill_whiskey" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
+    <Item name="Empty Whiskey Bottle" identifier="he-emptybottlewhiskey" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="An empty Whiskey bottle used for some recipes. Can be thrown or used in water to collect dirty water." Tags="smallitem,ingredient,emptybottle,emptybottlewhiskey,seawaterrefill_whiskey,cleanwaterrefill_whiskey" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -226,7 +226,7 @@
         </Button>
       </CustomInterface>
     </Item>
-    <Item name="Empty Halucinova Bottle" identifier="he-emptybottlehalucinova" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="An empty Halucinova bottle used for some recipes. Can be thrown or used in water to collect dirty water." Tags="smallitem,ingredient,emptybottle,emptybottlehalucinova,seawaterrefill_halucinova" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
+    <Item name="Empty Halucinova Bottle" identifier="he-emptybottlehalucinova" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="An empty Halucinova bottle used for some recipes. Can be thrown or used in water to collect dirty water." Tags="smallitem,ingredient,emptybottle,emptybottlehalucinova,seawaterrefill_halucinova,cleanwaterrefill_halucinova" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -318,7 +318,7 @@
         </Button>
       </CustomInterface>
     </Item>
-    <Item name="Empty Beer Bottle" identifier="he-emptybottlebeer" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="An empty beer bottle used for some recipes. Can be thrown or used in water to collect dirty water." Tags="smallitem,ingredient,emptybottle,emptybottlebeer,seawaterrefill_beer" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
+    <Item name="Empty Beer Bottle" identifier="he-emptybottlebeer" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="An empty beer bottle used for some recipes. Can be thrown or used in water to collect dirty water." Tags="smallitem,ingredient,emptybottle,emptybottlebeer,seawaterrefill_beer,cleanwaterrefill_beer" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -410,7 +410,7 @@
         </Button>
       </CustomInterface>
     </Item>
-    <Item name="Empty Bottle" identifier="he-emptybottle" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="An empty bottle used for some recipes. Can be thrown or used in water to collect dirty water." Tags="smallitem,ingredient,emptybottle,emptybottlecommon,seawaterrefill_common" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
+    <Item name="Empty Bottle" identifier="he-emptybottle" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="An empty bottle used for some recipes. Can be thrown or used in water to collect dirty water." Tags="smallitem,ingredient,emptybottle,emptybottlecommon,seawaterrefill_common,cleanwaterrefill_common" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
