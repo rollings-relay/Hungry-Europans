@@ -8,7 +8,8 @@
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="301,166,50,13" depth="0.6" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="858,0,68,29" depth="0.6" origin="0.5,0.9" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="858,0,68,29" origin="0.5,0.5" />
       <Fabricate suitablefabricators="stove" requiredtime="90" requiresrecipe="false" amount="1" displayname="watcherfooditem">
         <RequiredSkill identifier="cooking" level="50" />
         <RequiredItem identifier="he-rawwatchersteak" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
@@ -17,9 +18,9 @@
         <RequiredItem identifier="he-cookingoil" UseCondition="True" MinCondition="0.1"/>
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
-      <Body width="61" radius="18" density="12" />
+      <Body width="60" radius="1" density="11" />
       <SuitableTreatment type="hunger" suitability="95" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="LeftHand,RightHand" holdangle="0" holdpos="36,-20" handle1="0,-4" handle2="0,-4" aimable="false" msg="ItemMsgPickUpSelect">
         <!-- EVERYTHING RELATED TO POISONING FOOD IS HANDLED VIA THE POISON EFFECT PRESET ITEMS DEFINED IN - variantof="" AND THEIR CODE IS LOCATED IN - "/Content/Items/#Presets/#ItemPresets.xml" -->
         
         <!--////////// HEALTH MENU USAGE [BOT] \\\\\\\\\\-->
