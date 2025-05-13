@@ -1129,7 +1129,7 @@
       <Fabricator selectkey="Select" canbeselected="true" powerconsumption="0.0" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
         <StatusEffect type="OnActive" target="This" targetitemcomponent="ItemComponent" IsActive="true" setvalue="true">
-          <Conditional IsOn="false" />
+          <Conditional IsActive="false" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/coffee_start.ogg" loop="false" range="500" volume="2" />
         </StatusEffect>
         <StatusEffect type="OnActive" target="This" comparison="And">
