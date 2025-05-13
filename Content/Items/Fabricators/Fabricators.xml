@@ -1162,6 +1162,9 @@
       </Holdable>
       <ItemContainer canbeselected="true" selectkey="Select" capacity="2" maxstacksize="1" hideitems="true" allowuioverlap="true">
         <Containable items="pot,emptybottle,bottle,tableware,cleaningagent" />
+        <SubContainer capacity="1">
+          <Containable items="waterfilter" />
+        </SubContainer>
       </ItemContainer>
       <ItemContainer selectkey="Select" capacity="1" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="" allowuioverlap="true">
         <Containable items="pot,emptybottle,bottle,tableware"/>
