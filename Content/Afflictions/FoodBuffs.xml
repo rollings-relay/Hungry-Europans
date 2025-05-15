@@ -525,9 +525,9 @@
         maxstrength="100" />
       <Effect minstrength="0" maxstrength="1800" minresistance="1.0" maxresistance="1.0" resistancefor="sleepaffliction" strengthchange="-1">
         <StatValue stattype="WalkingSpeed" minvalue="0.1" maxvalue="0.1" />
-        <StatusEffect type="OnActive" target="Character" interval="1" disabledeltatime="true">
+        <!-- <StatusEffect type="OnActive" target="Character" interval="1" disabledeltatime="true">
           <ReduceAffliction type="sleep" amount="0.05" />
-        </StatusEffect>
+        </StatusEffect> -->
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="384,256,128,128" origin="0,0" />
     </Affliction>
