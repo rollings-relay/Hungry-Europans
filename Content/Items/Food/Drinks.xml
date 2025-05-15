@@ -5568,6 +5568,9 @@
           <ReduceAffliction type="thirst" amount="1.25" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
+          <ReduceAffliction type="sleep" amount="1.25" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional bladder="gte 0.01" />
           <Affliction identifier="fillbladder" amount="1.5" />
         </StatusEffect>
@@ -5817,6 +5820,9 @@
           <ReduceAffliction type="thirst" amount="1.25" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
+          <ReduceAffliction type="sleep" amount="1.25" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional bladder="gte 0.01" />
           <Affliction identifier="fillbladder" amount="1.5" />
         </StatusEffect>
@@ -6063,8 +6069,7 @@
           <ReduceAffliction type="thirst" amount="1.25" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
-          <Conditional bladder="gte 0.01" />
-          <Affliction identifier="fillbladder" amount="1.5" />
+          <ReduceAffliction type="sleep" amount="1.25" />
         </StatusEffect>
         <StatusEffect type="OnImpact" target="This">
           <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
