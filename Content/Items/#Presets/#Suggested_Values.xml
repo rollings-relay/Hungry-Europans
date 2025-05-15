@@ -52,10 +52,15 @@ Nuggets:
   Condition Reduction - Regular Eating: -4.0
   Condition Reduction - Health Menu: -20 | DisableDeltaTime="true"
 
+Salads:
+  Max Item Health: 100
+  Condition Reduction - Regular Eating: -4.0
+  Condition Reduction - Health Menu: -20 | DisableDeltaTime="true"
 
-
-
-
+Sandwiches:
+  Max Item Health: 80
+  Condition Reduction - Regular Eating: -4.0
+  Condition Reduction - Health Menu: -20 | DisableDeltaTime="true"
 
 
 
