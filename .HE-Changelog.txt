@@ -1,6 +1,7 @@
 Hungry Europans
 
 - Fixed Refrigerators not being fireproof.
+- Added: "Sink" item. Now separated from the kitchen counter, it will allow you to refill bottles and clean dishes. 
 - Added: "Pan" item. Required for cooking some recipes on the stove and can be used as a melee weapon.
 - Added: "Pot" item. Required for cooking some recipes on the stove.
 - Added: New tableware items including: Fork, Spoon, Cups, Plates, Bowls and dirty variants.
