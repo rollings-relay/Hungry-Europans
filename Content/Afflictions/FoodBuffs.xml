@@ -379,9 +379,9 @@
       showiconthreshold="35"
       showinhealthscannerthreshold="0"
       limbspecific="false"
-      maxstrength="200"
+      maxstrength="1800"
       affectmachines="false"
-      treatmentthreshold="1000"
+      treatmentthreshold="10000"
       karmachangeonapplied="0"
       damageoverlayalpha="0"
       healcostmultiplier="2.25"
@@ -390,34 +390,34 @@
       <Description
         textidentifier="advancedafflictiondescription.self.he-stuffed"
         target="Self"
-        minstrength="40"
-        maxstrength="60" />
+        minstrength="268"
+        maxstrength="402" />
       <Description
         textidentifier="advancedafflictiondescription.self.he-stuffed.2"
         target="Self"
-        minstrength="60"
-        maxstrength="80" />
+        minstrength="402"
+        maxstrength="536" />
       <Description
         textidentifier="advancedafflictiondescription.self.he-stuffed.3"
         target="Self"
-        minstrength="80"
-        maxstrength="200" />
+        minstrength="536"
+        maxstrength="1800" />
       <Description
         textidentifier="advancedafflictiondescription.others.he-stuffed"
         target="OtherCharacter"
-        minstrength="60"
-        maxstrength="80" />
+        minstrength="402"
+        maxstrength="536" />
       <Description
         textidentifier="advancedafflictiondescription.others.he-stuffed.2"
         target="OtherCharacter"
-        minstrength="60"
-        maxstrength="80" />
+        minstrength="402"
+        maxstrength="536" />
       <Description
         textidentifier="advancedafflictiondescription.others.he-stuffed.3"
         target="OtherCharacter"
-        minstrength="80"
-        maxstrength="200" />
-      <Effect minstrength="0" maxstrength="80" minresistance="1.0" maxresistance="1.0" resistancefor="hunger" strengthchange="-0.15">
+        minstrength="536"
+        maxstrength="1800" />
+      <Effect minstrength="0" maxstrength="536" minresistance="1.0" maxresistance="1.0" resistancefor="hunger" strengthchange="-1">
         <StatusEffect target="Character" disabledeltatime="true" interval="1">
           <Conditional hunger="gt 0.13" />
           <ReduceAffliction identifier="hunger" strength="0.13" />
@@ -427,7 +427,7 @@
           <Affliction identifier="defecate" strength="0.1" />
         </StatusEffect>
       </Effect>
-      <Effect minstrength="80" maxstrength="200" minresistance="1.0" maxresistance="1.0" resistancefor="hunger" strengthchange="-0.15"
+      <Effect minstrength="536" maxstrength="1800" minresistance="1.0" maxresistance="1.0" resistancefor="hunger" strengthchange="-1"
         minfacetint="230,255,230,0"
         maxfacetint="230,255,230,100"
         minbodytint="230,255,230,0"
@@ -502,7 +502,7 @@
         target="OtherCharacter"
         minstrength="0"
         maxstrength="100" />
-      <Effect minstrength="0" maxstrength="100" minresistance="1.0" maxresistance="1.0" resistancefor="thirst" strengthchange="-0.02" />
+      <Effect minstrength="0" maxstrength="1800" minresistance="1.0" maxresistance="1.0" resistancefor="thirst" strengthchange="-1" />
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="384,256,128,128" origin="0,0" />
     </Affliction>
     <Affliction name="Caffeine Rush"
@@ -523,7 +523,7 @@
         target="OtherCharacter"
         minstrength="0"
         maxstrength="100" />
-      <Effect minstrength="0" maxstrength="100" minresistance="1.0" maxresistance="1.0" resistancefor="sleepaffliction" strengthchange="-0.02">
+      <Effect minstrength="0" maxstrength="1800" minresistance="1.0" maxresistance="1.0" resistancefor="sleepaffliction" strengthchange="-1">
         <StatValue stattype="WalkingSpeed" minvalue="0.1" maxvalue="0.1" />
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="384,256,128,128" origin="0,0" />
