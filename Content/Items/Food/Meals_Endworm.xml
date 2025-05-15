@@ -33,7 +33,7 @@
           <Affliction identifier="he-pressureresistance" amount="64.0" />
           <Affliction identifier="psychosis" amount="12" />
           <Affliction identifier="hallucinating" amount="12" />
-          <Affliction identifier="he-stuffed" amount="6" />
+          <Affliction identifier="he-stuffed" amount="45.0" />
           <ReduceAffliction type="damage" amount="12" />
           <ReduceAffliction type="burn" amount="4.0" />
           <ReduceAffliction type="hunger" amount="2" />
@@ -61,7 +61,7 @@
           <Affliction identifier="he-pressureresistance" amount="64.0" />
           <Affliction identifier="psychosis" amount="12" />
           <Affliction identifier="hallucinating" amount="12" />
-          <Affliction identifier="he-stuffed" amount="6" />
+          <Affliction identifier="he-stuffed" amount="45.0" />
           <ReduceAffliction type="damage" amount="12" />
           <ReduceAffliction type="burn" amount="4.0" />
           <ReduceAffliction type="hunger" amount="2" />
@@ -85,7 +85,7 @@
           <Affliction identifier="he-pressureresistance" amount="64.0" />
           <Affliction identifier="psychosis" amount="12" />
           <Affliction identifier="hallucinating" amount="12" />
-          <Affliction identifier="he-stuffed" amount="6" />
+          <Affliction identifier="he-stuffed" amount="45.0" />
           <ReduceAffliction type="damage" amount="12" />
           <ReduceAffliction type="burn" amount="4.0" />
           <ReduceAffliction type="hunger" amount="2" />

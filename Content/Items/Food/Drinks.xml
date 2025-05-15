@@ -4892,7 +4892,7 @@
           <Conditional IsBot="true" />
           <Conditional timeframe="lt 180" />
           <Conditional thirst="gt 0" />
-          <Affliction identifier="quenched" amount="1" />
+          <Affliction identifier="quenched" amount="50" />
         </StatusEffect>
         <!--Weaker effects while tea is cold-->
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
@@ -4970,7 +4970,7 @@
           <Conditional IsPlayer="true" />
           <Conditional timeframe="lt 180" />
           <Conditional thirst="gt 0" />
-          <Affliction identifier="quenched" amount="1" />
+          <Affliction identifier="quenched" amount="50" />
         </StatusEffect>
         <!--Weaker effects while tea is cold-->
         <StatusEffect type="OnUse" target="This,Character" comparison="And" duration="8" multiplyafflictionsbymaxvitality="true">
@@ -5038,7 +5038,7 @@
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
           <Conditional timeframe="lt 180" />
           <Conditional thirst="gt 0" />
-          <Affliction identifier="quenched" amount="1" />
+          <Affliction identifier="quenched" amount="50" />
         </StatusEffect>
         <!--Weaker effects while tea is cold-->
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
@@ -5154,7 +5154,7 @@
           <Conditional IsBot="true" />
           <Conditional timeframe="lt 180" />
           <Conditional thirst="gt 0" />
-          <Affliction identifier="quenched" amount="2.5" />
+          <Affliction identifier="quenched" amount="125" />
         </StatusEffect>
         <!--Weaker effects while tea is cold-->
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
@@ -5173,7 +5173,7 @@
           <Conditional IsBot="true" />
           <Conditional timeframe="gte 180" />
           <Conditional thirst="gt 0" />
-          <Affliction identifier="quenched" amount="0.5" />
+          <Affliction identifier="quenched" amount="25" />
         </StatusEffect>
         <!-- Allow the item to be applied to a player fully, if the player is not in water and unconcious/stunned -->
         <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
@@ -5226,7 +5226,7 @@
           <Conditional IsPlayer="true" />
           <Conditional timeframe="lt 180" />
           <Conditional thirst="gt 0" />
-          <Affliction identifier="quenched" amount="2.5" />
+          <Affliction identifier="quenched" amount="125" />
         </StatusEffect>
         <!--Weaker effects while tea is cold-->
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
@@ -5245,7 +5245,7 @@
           <Conditional IsBot="true" />
           <Conditional timeframe="gte 180" />
           <Conditional thirst="gt 0" />
-          <Affliction identifier="quenched" amount="0.5" />
+          <Affliction identifier="quenched" amount="25" />
         </StatusEffect>
         <!-- Regular drinking -->
         <!--Increase time to simulate tea cooling off-->
@@ -5288,7 +5288,7 @@
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
           <Conditional timeframe="lt 180" />
           <Conditional thirst="gt 0" />
-          <Affliction identifier="quenched" amount="2.5" />
+          <Affliction identifier="quenched" amount="125" />
         </StatusEffect>
         <!--Weaker effects while tea is cold-->
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
@@ -5304,7 +5304,7 @@
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
           <Conditional timeframe="gte 180" />
           <Conditional thirst="gt 0" />
-          <Affliction identifier="quenched" amount="0.5" />
+          <Affliction identifier="quenched" amount="25" />
         </StatusEffect>
         <!--General effects-->
         <StatusEffect type="InWater" target="This" Condition="0" setvalue="true" />
@@ -5382,9 +5382,9 @@
         <StatusEffect type="OnSuccess" target="This,UseTarget" duration="8" comparison="And" multiplyafflictionsbymaxvitality="true">
           <Conditional IsBot="true" />
           <Conditional bladder="gte 0.01" />
-          <Affliction identifier="fillbladder" amount="1.0" />
+          <Affliction identifier="fillbladder" amount="1.5" />
         </StatusEffect>
-        <!--Stronger effects while tea is hot-->
+        <!--Stronger effects while coffee is hot-->
         <StatusEffect type="OnUse" target="This,UseTarget" targetlimb="head" duration="8" comparison="And" multiplyafflictionsbymaxvitality="true">
           <Conditional IsBot="true" />
           <Conditional timeframe="lte 40" />
@@ -5406,9 +5406,9 @@
           <Conditional IsBot="true" />
           <Conditional timeframe="lt 180" />
           <Conditional sleepaffliction="gt 0" />
-          <Affliction identifier="caffeinated" amount="2.5" />
+          <Affliction identifier="caffeinated" amount="125" />
         </StatusEffect>
-        <!--Weaker effects while tea is cold-->
+        <!--Weaker effects while coffee is cold-->
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
           <Conditional IsBot="true" />
           <Conditional timeframe="gte 180" />
@@ -5425,7 +5425,7 @@
           <Conditional IsBot="true" />
           <Conditional timeframe="gte 180" />
           <Conditional sleepaffliction="gt 0" />
-          <Affliction identifier="caffeinated" amount="0.5" />
+          <Affliction identifier="caffeinated" amount="25" />
         </StatusEffect>
         <!-- Allow the item to be applied to a player fully, if the player is not in water and unconcious/stunned -->
         <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
@@ -5446,9 +5446,9 @@
           <Conditional stun="gt 0" />
           <Conditional IsPlayer="true" />
           <Conditional bladder="gte 0.01" />
-          <Affliction identifier="fillbladder" amount="1.0" />
+          <Affliction identifier="fillbladder" amount="1.5" />
         </StatusEffect>
-        <!--Stronger effects while tea is hot-->
+        <!--Stronger effects while coffee is hot-->
         <StatusEffect type="OnUse" target="This,UseTarget" targetlimb="head" duration="8" comparison="And" multiplyafflictionsbymaxvitality="true">
           <Conditional InWater="false" />
           <Conditional stun="gt 0" />
@@ -5478,9 +5478,9 @@
           <Conditional IsPlayer="true" />
           <Conditional timeframe="lt 180" />
           <Conditional sleepaffliction="gt 0" />
-          <Affliction identifier="caffeinated" amount="2.5" />
+          <Affliction identifier="caffeinated" amount="125" />
         </StatusEffect>
-        <!--Weaker effects while tea is cold-->
+        <!--Weaker effects while coffee is cold-->
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
           <Conditional IsBot="true" />
           <Conditional timeframe="gte 180" />
@@ -5497,14 +5497,14 @@
           <Conditional IsBot="true" />
           <Conditional timeframe="gte 180" />
           <Conditional sleepaffliction="gt 0" />
-          <Affliction identifier="caffeinated" amount="0.5" />
+          <Affliction identifier="caffeinated" amount="25" />
         </StatusEffect>
         <!-- Regular drinking -->
-        <!--Increase time to simulate tea cooling off-->
+        <!--Increase time to simulate coffee cooling off-->
         <StatusEffect type="Always" target="This" timeframe="1">
           <Conditional timeframe="lte 180" />
         </StatusEffect>
-        <!--Particles while tea is hot-->
+        <!--Particles while coffee is hot-->
         <StatusEffect type="OnNotContained" target="This" stackable="false">
           <Conditional timeframe="lt 180" />
           <ParticleEmitter particle="FleshSmoke" anglemin="90" anglemax="90" distancemin="7" distancemax="7" scalemin="0.1" scalemax="0.2" scalemultiplier="1,1" particlespersecond="1.2" colormultiplier="255,255,255,150" copyentityangle="True" />
@@ -5513,7 +5513,7 @@
           <Conditional timeframe="lt 180" />
           <ParticleEmitter particle="FleshSmoke" anglemin="90" anglemax="90" distancemin="7" distancemax="7" scalemin="0.1" scalemax="0.2" scalemultiplier="1,1" particlespersecond="1.2" colormultiplier="255,255,255,150" copyentityangle="True" />
         </StatusEffect>
-        <!--Double the steam particles and apply burn when drinking tea too early-->
+        <!--Double the steam particles and apply burn when drinking coffee too early-->
         <StatusEffect type="OnNotContained" target="This" stackable="false">
           <Conditional timeframe="lte 40" />
           <ParticleEmitter particle="FleshSmoke" anglemin="90" anglemax="90" distancemin="7" distancemax="7" scalemin="0.1" scalemax="0.2" scalemultiplier="1,1" particlespersecond="2.0" colormultiplier="255,255,255,150" copyentityangle="True" />
@@ -5526,7 +5526,7 @@
           <Conditional timeframe="lte 40" />
           <Affliction identifier="burn" amount="0.5" />
         </StatusEffect>
-        <!--Stronger effects while tea is hot-->
+        <!--Stronger effects while coffee is hot-->
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
           <Conditional timeframe="lt 180" />
           <ReduceAffliction identifier="drunk" amount="0.5" />
@@ -5540,9 +5540,9 @@
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
           <Conditional timeframe="lt 180" />
           <Conditional sleepaffliction="gt 0" />
-          <Affliction identifier="caffeinated" amount="2.5" />
+          <Affliction identifier="caffeinated" amount="125" />
         </StatusEffect>
-        <!--Weaker effects while tea is cold-->
+        <!--Weaker effects while coffee is cold-->
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
           <Conditional timeframe="gte 180" />
           <ReduceAffliction identifier="drunk" amount="0.1" />
@@ -5556,7 +5556,7 @@
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
           <Conditional timeframe="gte 180" />
           <Conditional sleepaffliction="gt 0" />
-          <Affliction identifier="caffeinated" amount="0.5" />
+          <Affliction identifier="caffeinated" amount="25" />
         </StatusEffect>
         <!--General effects-->
         <StatusEffect type="InWater" target="This" Condition="0" setvalue="true" />
@@ -5569,7 +5569,7 @@
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional bladder="gte 0.01" />
-          <Affliction identifier="fillbladder" amount="1.0" />
+          <Affliction identifier="fillbladder" amount="1.5" />
         </StatusEffect>
         <StatusEffect type="OnImpact" target="This">
           <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
@@ -5631,9 +5631,9 @@
         <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12" comparison="And" multiplyafflictionsbymaxvitality="true">
           <Conditional IsBot="true" />
           <Conditional bladder="gte 0.01" />
-          <Affliction identifier="fillbladder" amount="1.0" />
+          <Affliction identifier="fillbladder" amount="1.5" />
         </StatusEffect>
-        <!--Stronger effects while tea is hot-->
+        <!--Stronger effects while coffee is hot-->
         <StatusEffect type="OnUse" target="This,UseTarget" targetlimb="head" duration="12" comparison="And" multiplyafflictionsbymaxvitality="true">
           <Conditional IsBot="true" />
           <Conditional timeframe="lte 40" />
@@ -5655,9 +5655,9 @@
           <Conditional IsBot="true" />
           <Conditional timeframe="lt 180" />
           <Conditional sleepaffliction="gt 0" />
-          <Affliction identifier="caffeinated" amount="2.5" />
+          <Affliction identifier="caffeinated" amount="125" />
         </StatusEffect>
-        <!--Weaker effects while tea is cold-->
+        <!--Weaker effects while coffee is cold-->
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
           <Conditional IsBot="true" />
           <Conditional timeframe="gte 180" />
@@ -5674,7 +5674,7 @@
           <Conditional IsBot="true" />
           <Conditional timeframe="gte 180" />
           <Conditional sleepaffliction="gt 0" />
-          <Affliction identifier="caffeinated" amount="0.5" />
+          <Affliction identifier="caffeinated" amount="25" />
         </StatusEffect>
         <!-- Allow the item to be applied to a player fully, if the player is not in water and unconcious/stunned -->
         <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
@@ -5695,9 +5695,9 @@
           <Conditional stun="gt 0" />
           <Conditional IsPlayer="true" />
           <Conditional bladder="gte 0.01" />
-          <Affliction identifier="fillbladder" amount="1.0" />
+          <Affliction identifier="fillbladder" amount="1.5" />
         </StatusEffect>
-        <!--Stronger effects while tea is hot-->
+        <!--Stronger effects while coffee is hot-->
         <StatusEffect type="OnUse" target="This,UseTarget" targetlimb="head" duration="12" comparison="And" multiplyafflictionsbymaxvitality="true">
           <Conditional InWater="false" />
           <Conditional stun="gt 0" />
@@ -5727,9 +5727,9 @@
           <Conditional IsPlayer="true" />
           <Conditional timeframe="lt 180" />
           <Conditional sleepaffliction="gt 0" />
-          <Affliction identifier="caffeinated" amount="2.5" />
+          <Affliction identifier="caffeinated" amount="125" />
         </StatusEffect>
-        <!--Weaker effects while tea is cold-->
+        <!--Weaker effects while coffee is cold-->
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
           <Conditional IsBot="true" />
           <Conditional timeframe="gte 180" />
@@ -5746,14 +5746,14 @@
           <Conditional IsBot="true" />
           <Conditional timeframe="gte 180" />
           <Conditional sleepaffliction="gt 0" />
-          <Affliction identifier="caffeinated" amount="0.5" />
+          <Affliction identifier="caffeinated" amount="25" />
         </StatusEffect>
         <!-- Regular drinking -->
-        <!--Increase time to simulate tea cooling off-->
+        <!--Increase time to simulate coffee cooling off-->
         <StatusEffect type="Always" target="This" timeframe="1">
           <Conditional timeframe="lte 180" />
         </StatusEffect>
-        <!--Particles while tea is hot-->
+        <!--Particles while coffee is hot-->
         <StatusEffect type="OnNotContained" target="This" stackable="false">
           <Conditional timeframe="lt 180" />
           <ParticleEmitter particle="FleshSmoke" anglemin="90" anglemax="90" distancemin="7" distancemax="7" scalemin="0.1" scalemax="0.2" scalemultiplier="1,1" particlespersecond="1.2" colormultiplier="255,255,255,150" copyentityangle="True" />
@@ -5762,7 +5762,7 @@
           <Conditional timeframe="lt 180" />
           <ParticleEmitter particle="FleshSmoke" anglemin="90" anglemax="90" distancemin="7" distancemax="7" scalemin="0.1" scalemax="0.2" scalemultiplier="1,1" particlespersecond="1.2" colormultiplier="255,255,255,150" copyentityangle="True" />
         </StatusEffect>
-        <!--Double the steam particles and apply burn when drinking tea too early-->
+        <!--Double the steam particles and apply burn when drinking coffee too early-->
         <StatusEffect type="OnNotContained" target="This" stackable="false">
           <Conditional timeframe="lte 40" />
           <ParticleEmitter particle="FleshSmoke" anglemin="90" anglemax="90" distancemin="7" distancemax="7" scalemin="0.1" scalemax="0.2" scalemultiplier="1,1" particlespersecond="2.0" colormultiplier="255,255,255,150" copyentityangle="True" />
@@ -5775,7 +5775,7 @@
           <Conditional timeframe="lte 40" />
           <Affliction identifier="burn" amount="0.5" />
         </StatusEffect>
-        <!--Stronger effects while tea is hot-->
+        <!--Stronger effects while coffee is hot-->
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
           <Conditional timeframe="lt 180" />
           <ReduceAffliction identifier="drunk" amount="0.5" />
@@ -5789,9 +5789,9 @@
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
           <Conditional timeframe="lt 180" />
           <Conditional sleepaffliction="gt 0" />
-          <Affliction identifier="caffeinated" amount="2.5" />
+          <Affliction identifier="caffeinated" amount="125" />
         </StatusEffect>
-        <!--Weaker effects while tea is cold-->
+        <!--Weaker effects while coffee is cold-->
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
           <Conditional timeframe="gte 180" />
           <ReduceAffliction identifier="drunk" amount="0.1" />
@@ -5805,7 +5805,7 @@
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
           <Conditional timeframe="gte 180" />
           <Conditional sleepaffliction="gt 0" />
-          <Affliction identifier="caffeinated" amount="0.5" />
+          <Affliction identifier="caffeinated" amount="25" />
         </StatusEffect>
         <!--General effects-->
         <StatusEffect type="InWater" target="This" Condition="0" setvalue="true" />
@@ -5818,7 +5818,7 @@
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional bladder="gte 0.01" />
-          <Affliction identifier="fillbladder" amount="1.0" />
+          <Affliction identifier="fillbladder" amount="1.5" />
         </StatusEffect>
         <StatusEffect type="OnImpact" target="This">
           <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
@@ -5877,9 +5877,9 @@
         <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12" comparison="And" multiplyafflictionsbymaxvitality="true">
           <Conditional IsBot="true" />
           <Conditional bladder="gte 0.01" />
-          <Affliction identifier="fillbladder" amount="1.0" />
+          <Affliction identifier="fillbladder" amount="1.5" />
         </StatusEffect>
-        <!--Stronger effects while tea is hot-->
+        <!--Stronger effects while coffee is hot-->
         <StatusEffect type="OnUse" target="This,UseTarget" targetlimb="head" duration="12" comparison="And" multiplyafflictionsbymaxvitality="true">
           <Conditional IsBot="true" />
           <Conditional timeframe="lte 40" />
@@ -5901,9 +5901,9 @@
           <Conditional IsBot="true" />
           <Conditional timeframe="lt 180" />
           <Conditional sleepaffliction="gt 0" />
-          <Affliction identifier="caffeinated" amount="2.5" />
+          <Affliction identifier="caffeinated" amount="125" />
         </StatusEffect>
-        <!--Weaker effects while tea is cold-->
+        <!--Weaker effects while coffee is cold-->
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
           <Conditional IsBot="true" />
           <Conditional timeframe="gte 180" />
@@ -5920,7 +5920,7 @@
           <Conditional IsBot="true" />
           <Conditional timeframe="gte 180" />
           <Conditional sleepaffliction="gt 0" />
-          <Affliction identifier="caffeinated" amount="0.5" />
+          <Affliction identifier="caffeinated" amount="25" />
         </StatusEffect>
         <!-- Allow the item to be applied to a player fully, if the player is not in water and unconcious/stunned -->
         <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
@@ -5941,9 +5941,9 @@
           <Conditional stun="gt 0" />
           <Conditional IsPlayer="true" />
           <Conditional bladder="gte 0.01" />
-          <Affliction identifier="fillbladder" amount="1.0" />
+          <Affliction identifier="fillbladder" amount="1.5" />
         </StatusEffect>
-        <!--Stronger effects while tea is hot-->
+        <!--Stronger effects while coffee is hot-->
         <StatusEffect type="OnUse" target="This,UseTarget" targetlimb="head" duration="12" comparison="And" multiplyafflictionsbymaxvitality="true">
           <Conditional InWater="false" />
           <Conditional stun="gt 0" />
@@ -5973,9 +5973,9 @@
           <Conditional IsPlayer="true" />
           <Conditional timeframe="lt 180" />
           <Conditional sleepaffliction="gt 0" />
-          <Affliction identifier="caffeinated" amount="2.5" />
+          <Affliction identifier="caffeinated" amount="125" />
         </StatusEffect>
-        <!--Weaker effects while tea is cold-->
+        <!--Weaker effects while coffee is cold-->
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
           <Conditional IsBot="true" />
           <Conditional timeframe="gte 180" />
@@ -5992,14 +5992,14 @@
           <Conditional IsBot="true" />
           <Conditional timeframe="gte 180" />
           <Conditional sleepaffliction="gt 0" />
-          <Affliction identifier="caffeinated" amount="0.5" />
+          <Affliction identifier="caffeinated" amount="25" />
         </StatusEffect>
         <!-- Regular drinking -->
-        <!--Increase time to simulate tea cooling off-->
+        <!--Increase time to simulate coffee cooling off-->
         <StatusEffect type="Always" target="This" timeframe="1">
           <Conditional timeframe="lte 180" />
         </StatusEffect>
-        <!--Particles while tea is hot-->
+        <!--Particles while coffee is hot-->
         <StatusEffect type="OnNotContained" target="This" stackable="false">
           <Conditional timeframe="lt 180" />
           <ParticleEmitter particle="FleshSmoke" anglemin="90" anglemax="90" distancemin="7" distancemax="7" scalemin="0.1" scalemax="0.2" scalemultiplier="1,1" particlespersecond="1.2" colormultiplier="255,255,255,150" copyentityangle="True" />
@@ -6008,7 +6008,7 @@
           <Conditional timeframe="lt 180" />
           <ParticleEmitter particle="FleshSmoke" anglemin="90" anglemax="90" distancemin="7" distancemax="7" scalemin="0.1" scalemax="0.2" scalemultiplier="1,1" particlespersecond="1.2" colormultiplier="255,255,255,150" copyentityangle="True" />
         </StatusEffect>
-        <!--Double the steam particles and apply burn when drinking tea too early-->
+        <!--Double the steam particles and apply burn when drinking coffee too early-->
         <StatusEffect type="OnNotContained" target="This" stackable="false">
           <Conditional timeframe="lte 40" />
           <ParticleEmitter particle="FleshSmoke" anglemin="90" anglemax="90" distancemin="7" distancemax="7" scalemin="0.1" scalemax="0.2" scalemultiplier="1,1" particlespersecond="2.0" colormultiplier="255,255,255,150" copyentityangle="True" />
@@ -6021,7 +6021,7 @@
           <Conditional timeframe="lte 40" />
           <Affliction identifier="burn" amount="0.5" />
         </StatusEffect>
-        <!--Stronger effects while tea is hot-->
+        <!--Stronger effects while coffee is hot-->
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
           <Conditional timeframe="lt 180" />
           <ReduceAffliction identifier="drunk" amount="0.5" />
@@ -6035,9 +6035,9 @@
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
           <Conditional timeframe="lt 180" />
           <Conditional sleepaffliction="gt 0" />
-          <Affliction identifier="caffeinated" amount="2.5" />
+          <Affliction identifier="caffeinated" amount="125" />
         </StatusEffect>
-        <!--Weaker effects while tea is cold-->
+        <!--Weaker effects while coffee is cold-->
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
           <Conditional timeframe="gte 180" />
           <ReduceAffliction identifier="drunk" amount="0.1" />
@@ -6051,7 +6051,7 @@
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
           <Conditional timeframe="gte 180" />
           <Conditional sleepaffliction="gt 0" />
-          <Affliction identifier="caffeinated" amount="0.5" />
+          <Affliction identifier="caffeinated" amount="25" />
         </StatusEffect>
         <!--General effects-->
         <StatusEffect type="InWater" target="This" Condition="0" setvalue="true" />
@@ -6064,7 +6064,7 @@
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional bladder="gte 0.01" />
-          <Affliction identifier="fillbladder" amount="1.0" />
+          <Affliction identifier="fillbladder" amount="1.5" />
         </StatusEffect>
         <StatusEffect type="OnImpact" target="This">
           <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
@@ -6152,7 +6152,7 @@
           <Conditional IsBot="true" />
           <Conditional timeframe="lt 180" />
           <Conditional sleepaffliction="gt 0" />
-          <Affliction identifier="caffeinated" amount="2.5" />
+          <Affliction identifier="caffeinated" amount="125" />
         </StatusEffect>
         <!--Weaker effects while tea is cold-->
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
@@ -6171,7 +6171,7 @@
           <Conditional IsBot="true" />
           <Conditional timeframe="gte 180" />
           <Conditional sleepaffliction="gt 0" />
-          <Affliction identifier="caffeinated" amount="0.5" />
+          <Affliction identifier="caffeinated" amount="25" />
         </StatusEffect>
         <!-- Allow the item to be applied to a player fully, if the player is not in water and unconcious/stunned -->
         <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
@@ -6224,7 +6224,7 @@
           <Conditional IsPlayer="true" />
           <Conditional timeframe="lt 180" />
           <Conditional sleepaffliction="gt 0" />
-          <Affliction identifier="caffeinated" amount="2.5" />
+          <Affliction identifier="caffeinated" amount="125" />
         </StatusEffect>
         <!--Weaker effects while tea is cold-->
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
@@ -6243,7 +6243,7 @@
           <Conditional IsBot="true" />
           <Conditional timeframe="gte 180" />
           <Conditional sleepaffliction="gt 0" />
-          <Affliction identifier="caffeinated" amount="0.5" />
+          <Affliction identifier="caffeinated" amount="25" />
         </StatusEffect>
         <!-- Regular drinking -->
         <!--Increase time to simulate tea cooling off-->
@@ -6286,7 +6286,7 @@
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
           <Conditional timeframe="lt 180" />
           <Conditional sleepaffliction="gt 0" />
-          <Affliction identifier="caffeinated" amount="2.5" />
+          <Affliction identifier="caffeinated" amount="125" />
         </StatusEffect>
         <!--Weaker effects while tea is cold-->
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
@@ -6302,7 +6302,7 @@
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
           <Conditional timeframe="gte 180" />
           <Conditional sleepaffliction="gt 0" />
-          <Affliction identifier="caffeinated" amount="0.5" />
+          <Affliction identifier="caffeinated" amount="25" />
         </StatusEffect>
         <!--General effects-->
         <StatusEffect type="InWater" target="This" Condition="0" setvalue="true" />
@@ -6401,7 +6401,7 @@
           <Conditional IsBot="true" />
           <Conditional timeframe="lt 180" />
           <Conditional sleepaffliction="gt 0" />
-          <Affliction identifier="caffeinated" amount="2.5" />
+          <Affliction identifier="caffeinated" amount="125" />
         </StatusEffect>
         <!--Weaker effects while tea is cold-->
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
@@ -6420,7 +6420,7 @@
           <Conditional IsBot="true" />
           <Conditional timeframe="gte 180" />
           <Conditional sleepaffliction="gt 0" />
-          <Affliction identifier="caffeinated" amount="0.5" />
+          <Affliction identifier="caffeinated" amount="25" />
         </StatusEffect>
         <!-- Allow the item to be applied to a player fully, if the player is not in water and unconcious/stunned -->
         <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
@@ -6473,7 +6473,7 @@
           <Conditional IsPlayer="true" />
           <Conditional timeframe="lt 180" />
           <Conditional sleepaffliction="gt 0" />
-          <Affliction identifier="caffeinated" amount="2.5" />
+          <Affliction identifier="caffeinated" amount="125" />
         </StatusEffect>
         <!--Weaker effects while tea is cold-->
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
@@ -6492,7 +6492,7 @@
           <Conditional IsBot="true" />
           <Conditional timeframe="gte 180" />
           <Conditional sleepaffliction="gt 0" />
-          <Affliction identifier="caffeinated" amount="0.5" />
+          <Affliction identifier="caffeinated" amount="25" />
         </StatusEffect>
         <!-- Regular drinking -->
         <!--Increase time to simulate tea cooling off-->
@@ -6535,7 +6535,7 @@
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
           <Conditional timeframe="lt 180" />
           <Conditional sleepaffliction="gt 0" />
-          <Affliction identifier="caffeinated" amount="2.5" />
+          <Affliction identifier="caffeinated" amount="125" />
         </StatusEffect>
         <!--Weaker effects while tea is cold-->
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
@@ -6551,7 +6551,7 @@
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
           <Conditional timeframe="gte 180" />
           <Conditional sleepaffliction="gt 0" />
-          <Affliction identifier="caffeinated" amount="0.5" />
+          <Affliction identifier="caffeinated" amount="25" />
         </StatusEffect>
         <!--General effects-->
         <StatusEffect type="InWater" target="This" Condition="0" setvalue="true" />

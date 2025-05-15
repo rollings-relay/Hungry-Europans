@@ -33,7 +33,7 @@
           <Conditional InWater="false" />
           <Conditional IsPlayer="false" />
           <Affliction identifier="he-decreasedoxygenconsumption" amount="18.0" />
-          <Affliction identifier="he-stuffed" amount="1.25" />
+          <Affliction identifier="he-stuffed" amount="8.25" />
           <ReduceAffliction type="damage" amount="0.40" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <ReduceAffliction identifier="he-starvation" amount="10" />
@@ -58,7 +58,7 @@
           <Conditional IsPlayer="true" />
           <Conditional stun="gt 0" />
           <Affliction identifier="he-decreasedoxygenconsumption" amount="18.0" />
-          <Affliction identifier="he-stuffed" amount="1.25" />
+          <Affliction identifier="he-stuffed" amount="8.25" />
           <ReduceAffliction type="damage" amount="0.40" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <ReduceAffliction identifier="he-starvation" amount="10" />
@@ -84,7 +84,7 @@
           <Conditional HasStatusTag="neq emptyfork"/>
           <Conditional InWater="false" />
           <Affliction identifier="he-decreasedoxygenconsumption" amount="18.0" />
-          <Affliction identifier="he-stuffed" amount="1.25" />
+          <Affliction identifier="he-stuffed" amount="8.25" />
           <ReduceAffliction type="damage" amount="0.40" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork1.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />

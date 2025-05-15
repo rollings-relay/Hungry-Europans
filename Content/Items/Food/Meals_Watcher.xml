@@ -33,7 +33,7 @@
           <Conditional InWater="false" />
           <Conditional IsPlayer="false" />
           <Affliction identifier="he-watcherskillgainincrease" amount="18.0" />
-          <Affliction identifier="he-stuffed" amount="1.9" />
+          <Affliction identifier="he-stuffed" amount="12.75" />
           <ReduceAffliction type="damage" amount="1.0" />
           <ReduceAffliction type="burn" amount="0.5" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
@@ -59,7 +59,7 @@
           <Conditional IsPlayer="true" />
           <Conditional stun="gt 0" />
           <Affliction identifier="he-watcherskillgainincrease" amount="18.0" />
-          <Affliction identifier="he-stuffed" amount="1.9" />
+          <Affliction identifier="he-stuffed" amount="12.75" />
           <ReduceAffliction type="damage" amount="1.0" />
           <ReduceAffliction type="burn" amount="0.5" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
@@ -86,7 +86,7 @@
           <Conditional HasStatusTag="neq emptyfork"/>
           <Conditional InWater="false" />
           <Affliction identifier="he-watcherskillgainincrease" amount="18.0" />
-          <Affliction identifier="he-stuffed" amount="1.9" />
+          <Affliction identifier="he-stuffed" amount="12.75" />
           <ReduceAffliction type="damage" amount="1.0" />
           <ReduceAffliction type="burn" amount="0.5" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
