@@ -2,6 +2,41 @@
 <Override>
   <Afflictions>
     <!-- FOOD AFFLICTIONS -->
+    <!-- Psilotoad -->
+    <Affliction name="Heightened Adrenalin (Food)"
+      identifier="he-alwaysconcious"
+      description="Your adrenaline levels are heightened, preventing your from falling unconcious when severely wounded."
+      type="foodbuff"
+      isbuff="true"
+      limbspecific="false"
+      indicatorlimb="Torso"
+      maxstrength="1800"
+      MedicalSkillGain="0.0">
+      <Effect minstrength="0" maxstrength="1800"
+        strengthchange="-1">
+        <AbilityFlag flagtype="AlwaysStayConscious" />
+      </Effect>
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
+    </Affliction>
+    <!-- Orangeboy -->
+    <Affliction name="Professional Hitman (Food)"
+      identifier="he-maxweaponskill"
+      description="Your senses are temporarily heightened, allowing you to operate every weapon to its full potential."
+      type="foodbuff"
+      isbuff="true"
+      limbspecific="false"
+      indicatorlimb="Torso"
+      maxstrength="1800"
+      MedicalSkillGain="0.0">
+      <Effect minstrength="0" maxstrength="1800"
+        strengthchange="-1"
+        resistancefor="pressure"
+        minresistance="1"
+        maxresistance="1">
+        <StatValue stattype="WeaponsSkillOverride" value="100" />
+      </Effect>
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
+    </Affliction>
     <!-- Husk -->
     <Affliction name="Husk Stench (Food)"
       identifier="he-disguisedashusk"
@@ -347,8 +382,11 @@
       indicatorlimb="Torso"
       maxstrength="1800"
       MedicalSkillGain="0.0">
-      <Effect minstrength="0" maxstrength="1800" strengthchange="-1" resistancefor="jovianforce" minresistance="1.0" maxresistance="1.0">
-        <StatValue stattype="TurretPowerCostReduction" minvalue="0.3" maxvalue="0.3" />
+      <Effect minstrength="0" maxstrength="250" strengthchange="-1" resistancefor="jovianforce" minresistance="1.0" maxresistance="1.0">
+        <StatValue stattype="TurretPowerCostReduction" minvalue="0.0" maxvalue="0.5" />
+      </Effect>
+      <Effect minstrength="250" maxstrength="1800" strengthchange="-1" resistancefor="jovianforce" minresistance="1.0" maxresistance="1.0">
+        <StatValue stattype="TurretPowerCostReduction" minvalue="0.5" maxvalue="0.5" />
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
     </Affliction>
@@ -362,9 +400,13 @@
       indicatorlimb="Torso"
       maxstrength="1800"
       MedicalSkillGain="0.0">
-      <Effect minstrength="0" maxstrength="1800" strengthchange="-1" resistancefor="coalitionpremium" minresistance="1.0" maxresistance="1.0">
-        <StatValue stattype="TurretAttackSpeed" minvalue="0.3" maxvalue="0.3" />
-        <StatValue stattype="TurretChargeSpeed" minvalue="0.3" maxvalue="0.3" />
+      <Effect minstrength="0" maxstrength="250" strengthchange="-1" resistancefor="coalitionpremium" minresistance="1.0" maxresistance="1.0">
+        <StatValue stattype="TurretAttackSpeed" minvalue="0.0" maxvalue="0.5" />
+        <StatValue stattype="TurretChargeSpeed" minvalue="0.0" maxvalue="0.5" />
+      </Effect>
+      <Effect minstrength="250" maxstrength="1800" strengthchange="-1" resistancefor="coalitionpremium" minresistance="1.0" maxresistance="1.0">
+        <StatValue stattype="TurretAttackSpeed" minvalue="0.5" maxvalue="0.5" />
+        <StatValue stattype="TurretChargeSpeed" minvalue="0.5" maxvalue="0.5" />
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
     </Affliction>
