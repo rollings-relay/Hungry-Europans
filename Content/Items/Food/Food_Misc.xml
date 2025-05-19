@@ -2687,7 +2687,7 @@
           <StatusEffect type="OnUse" target="This">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
             <SpawnItem identifier="he-burger" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-            <SpawnItem identifier="he-fastfoodfries" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+            <SpawnItem identifier="he-fries" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
             <SpawnItem identifier="he-nuggetpack" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
             <SpawnItem identifier="he-colacan" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
           </StatusEffect>

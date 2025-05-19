@@ -604,19 +604,13 @@
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
     </Item>
-    <Item hideinmenus="false" name="Fried Hammerhead Spawn" identifier="he-cookedhammerheadspawnfried" variantof="he-poisoneffectpreset_regular" category="Misc" subcategory="Food - Hammerhead" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+    <Item hideinmenus="false" name="Fried Hammerhead Spawn" identifier="he-cookedhammerheadspawnfried" variantof="he-poisoneffectpreset_regular" category="Misc" subcategory="Food - Hammerhead" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,allowinfryer,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,454,78,30" depth="0.6" origin="0.5,0.5" />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,454,78,30" depth="0.6" maxcondition="99" />
-      <Fabricate suitablefabricators="fryer" requiredtime="60" requiresrecipe="false" amount="1">
-        <RequiredSkill identifier="cooking" level="60" />
-        <RequiredItem identifier="he-hammerheadspawnmeatchunk" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
-        <RequiredItem identifier="he-flour" UseCondition="True" MinCondition="0.2"/>
-        <RequiredItem identifier="he-cookingoil" UseCondition="True" MinCondition="0.25"/>
-      </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="78" radius="15" density="11" />
       <SuitableTreatment type="hunger" suitability="20" />

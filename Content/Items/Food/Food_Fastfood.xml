@@ -2,7 +2,7 @@
 <Override>
   <Items>
     <!-- Nuggets can't be poisoned -->
-    <Item hideinmenus="false" name="Nugget" identifier="he-cookednugget" health="10" category="Misc" subcategory="Food" maxstacksize="20" maxstacksizecharacterinventory="20" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+    <Item hideinmenus="false" name="Nugget" identifier="he-cookednugget" health="10" category="Misc" subcategory="Food" maxstacksize="20" maxstacksizecharacterinventory="20" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,allowinfryer,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
@@ -13,7 +13,7 @@
       <Fabricate suitablefabricators="fryer" requiredtime="60" requiresrecipe="false" amount="16">
         <RequiredSkill identifier="cooking" level="15" />
         <RequiredItem identifier="he-rawnuggets" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
-        <RequiredItem identifier="he-cookingoil" UseCondition="True" MinCondition="0.25"/>
+        <RequiredItem identifier="he-cookingoil" UseCondition="True" MinCondition="0.1"/>
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="78" radius="5" density="11" />
@@ -92,7 +92,7 @@
         </StatusEffect>
       </Holdable>
     </Item>
-    <Item hideinmenus="false" name="Burger" identifier="he-burger" variantof="he-poisoneffectpreset_regular" health="100" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.4" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+    <Item hideinmenus="false" name="Burger" identifier="he-burger" variantof="he-poisoneffectpreset_regular" health="100" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.4" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
@@ -199,7 +199,7 @@
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
     </Item>
-    <Item hideinmenus="false" name="Hotdog" identifier="he-hotdog" variantof="he-poisoneffectpreset_regular" health="80" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.4" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+    <Item hideinmenus="false" name="Hotdog" identifier="he-hotdog" variantof="he-poisoneffectpreset_regular" health="80" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.4" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="True"/>
@@ -292,7 +292,42 @@
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
     </Item>
-    <Item name="Fries" identifier="he-fastfoodfries" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="Two slices of bread. Great for making sandwiches!" Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+    <Item name="Raw Fries" identifier="he-rawfries" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="Two slices of bread. Great for making sandwiches!" Tags="smallitem,fooditem,fingerfood,allowinfryer,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
+      <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
+      <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
+      <PreferredContainer primary="kitchen" secondary="table,crewcab"/>
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="123,92,41,16" depth="0.6" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="173,96,27,41" origin="0.5,0.5" />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="123,92,41,16" depth="0.525" origin="0.5,0.05"  />
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="15" requiresrecipe="false" amount="1">
+        <RequiredSkill identifier="cooking" level="15" />
+        <RequiredItem identifier="creepingorange" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
+        <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.05"/>
+      </Fabricate>
+      <Deconstruct time="1" requireddeconstructor="deconstructor"/>
+      <Body width="38" height="13" density="5" />
+      <!-- ItemComponent hosts the effects for frying the item -->
+      <ItemComponent canbeselected="false" canbepicked="false" allowingameediting="false">
+        <ActiveConditional HasStatusTag="eq activefryer" targetcontainer="true" />
+        <!-- MaxValueLength is used to track the time spent in the fryer. It is increased by 1 every second the item is in a container with the "activefryer" status tag -->
+        <StatusEffect type="OnActive" target="This" MaxValueLength="1" interval="1" disabledeltatime="true" />
+        <!-- Reset the MaxValueLength when the item is no longer contained in a container with the "activefryer" status tag -->
+        <StatusEffect type="OnActive" target="This" MaxValueLength="0" setvalue="true" disabledeltatime="true">
+          <Conditional HasStatusTag="neq activefryer" targetcontainer="true" />
+        </StatusEffect>
+        <!-- Check every second if the MaxValueLength reached or exceeded a value of 45, then remove the item and spawn the fried version in its place -->
+        <StatusEffect type="OnActive" target="This" interval="1" disabledeltatime="true">
+          <Conditional MaxValueLength="gte 45" />
+          <Remove />
+          <SpawnItem identifier="he-fries" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" count="1" />
+        </StatusEffect>
+      </ItemComponent>
+      <!-- MemoryComponent hosts the MaxValueLength attribute which we use to track the time by adjusting its value via StatusEffects each second -->
+      <MemoryComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" string="" MaxValueLength="0" />
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand,Any" holdangle="90" holdpos="-13,-30" handle1="-10,5" handle2="0,0" aimable="false" msg="ItemMsgPickUpSelect" />
+    </Item>
+    <Item name="Fries" identifier="he-fries" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="Two slices of bread. Great for making sandwiches!" Tags="smallitem,fooditem,fingerfood,allowinfryer,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
