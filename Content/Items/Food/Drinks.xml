@@ -1899,7 +1899,7 @@
       </CustomInterface>
     </Item>
     <!-- NON-ALCOHOLIC -->
-    <Item name="Water" identifier="he-water" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Fresh water. Helps a bit if you're feeling stuffed or when you're shit-faced." Tags="smallitem,drinkitem,cleanwater,cleanwaterrefill_common,water,bottle" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
+    <Item name="Water" identifier="he-water" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Fresh water. Helps a bit if you're feeling stuffed or when you're shit-faced." Tags="smallitem,drinkitem,cleanwater,cleanwaterrefill_common,water,bottle,allowinfryer" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" minamount="1" maxamount="3" spawnprobability="0.05" />
@@ -2052,7 +2052,7 @@
         </Button>
       </CustomInterface>
     </Item>
-    <Item name="Water" identifier="he-waterrum" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Fresh water. Helps a bit if you're feeling stuffed or when you're shit-faced." Tags="smallitem,drinkitem,cleanwater,cleanwaterrefill_rum,water,bottle" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
+    <Item name="Water" identifier="he-waterrum" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Fresh water. Helps a bit if you're feeling stuffed or when you're shit-faced." Tags="smallitem,drinkitem,cleanwater,cleanwaterrefill_rum,water,bottle,allowinfryer" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0" />
@@ -2197,7 +2197,7 @@
         </Button>
       </CustomInterface>
     </Item>
-    <Item name="Water" identifier="he-waterwhiskey" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Fresh water. Helps a bit if you're feeling stuffed or when you're shit-faced." Tags="smallitem,drinkitem,cleanwater,cleanwaterrefill_whiskey,water,bottle" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
+    <Item name="Water" identifier="he-waterwhiskey" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Fresh water. Helps a bit if you're feeling stuffed or when you're shit-faced." Tags="smallitem,drinkitem,cleanwater,cleanwaterrefill_whiskey,water,bottle,allowinfryer" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0" />
@@ -2342,7 +2342,7 @@
         </Button>
       </CustomInterface>
     </Item>
-    <Item name="Water" identifier="he-waterhalucinova" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Fresh water. Helps a bit if you're feeling stuffed or when you're shit-faced." Tags="smallitem,drinkitem,cleanwater,cleanwaterrefill_halucinova,water,bottle" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
+    <Item name="Water" identifier="he-waterhalucinova" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Fresh water. Helps a bit if you're feeling stuffed or when you're shit-faced." Tags="smallitem,drinkitem,cleanwater,cleanwaterrefill_halucinova,water,bottle,allowinfryer" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0" />
@@ -2487,7 +2487,7 @@
         </Button>
       </CustomInterface>
     </Item>
-    <Item name="Water" identifier="he-waterbeer" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Fresh water. Helps a bit if you're feeling stuffed or when you're shit-faced." Tags="smallitem,drinkitem,cleanwater,cleanwaterrefill_beer,water,bottle" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
+    <Item name="Water" identifier="he-waterbeer" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Fresh water. Helps a bit if you're feeling stuffed or when you're shit-faced." Tags="smallitem,drinkitem,cleanwater,cleanwaterrefill_beer,water,bottle,allowinfryer" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0" />
@@ -3580,7 +3580,7 @@
       </CustomInterface>
     </Item>
     <!-- DIRTY WATER -->
-    <Item name="Water" identifier="he-seawaterrum" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Tastes salty." Tags="smallitem,drinkitem,dirtywaterrum,seawater,water,bottle,seawaterrefill_rum" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
+    <Item name="Water" identifier="he-seawaterrum" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Tastes salty." Tags="smallitem,drinkitem,dirtywaterrum,seawater,water,bottle,seawaterrefill_rum,allowinfryer" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0" />
       <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0" />
@@ -3709,7 +3709,7 @@
         </Button>
       </CustomInterface>
     </Item>
-    <Item name="Water" identifier="he-seawaterwhiskey" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Tastes salty." Tags="smallitem,drinkitem,dirtywaterwhiskey,seawater,water,bottle,seawaterrefill_whiskey" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
+    <Item name="Water" identifier="he-seawaterwhiskey" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Tastes salty." Tags="smallitem,drinkitem,dirtywaterwhiskey,seawater,water,bottle,seawaterrefill_whiskey,allowinfryer" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0" />
       <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0" />
@@ -3838,7 +3838,7 @@
         </Button>
       </CustomInterface>
     </Item>
-    <Item name="Water" identifier="he-seawaterhalucinova" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Tastes salty." Tags="smallitem,drinkitem,dirtywaterhalucinova,seawater,water,bottle,seawaterrefill_halucinova" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
+    <Item name="Water" identifier="he-seawaterhalucinova" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Tastes salty." Tags="smallitem,drinkitem,dirtywaterhalucinova,seawater,water,bottle,seawaterrefill_halucinova,allowinfryer" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0" />
       <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0" />
@@ -3967,7 +3967,7 @@
         </Button>
       </CustomInterface>
     </Item>
-    <Item name="Water" identifier="he-seawater" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Tastes salty." Tags="smallitem,drinkitem,dirtywaterregular,seawater,water,bottle,seawaterrefill_common" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
+    <Item name="Water" identifier="he-seawater" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Tastes salty." Tags="smallitem,drinkitem,dirtywaterregular,seawater,water,bottle,seawaterrefill_common,allowinfryer" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0" />
       <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0" />
@@ -4096,7 +4096,7 @@
         </Button>
       </CustomInterface>
     </Item>
-    <Item name="Water" identifier="he-seawaterbeer" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Tastes salty." Tags="smallitem,drinkitem,dirtywaterbeer,seawater,water,bottle,seawaterrefill_beer" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
+    <Item name="Water" identifier="he-seawaterbeer" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Tastes salty." Tags="smallitem,drinkitem,dirtywaterbeer,seawater,water,bottle,seawaterrefill_beer,allowinfryer" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0" />
       <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0" />
@@ -4226,7 +4226,7 @@
       </CustomInterface>
     </Item>
     <!-- TOILET WATER -->
-    <Item name="Water" identifier="he-toiletwaterrum" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Tastes funny." Tags="smallitem,drinkitem,dirtywaterrum,toiletwater,seawater,water,bottle" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
+    <Item name="Water" identifier="he-toiletwaterrum" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Tastes funny." Tags="smallitem,drinkitem,dirtywaterrum,toiletwater,seawater,water,bottle,allowinfryer" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0" />
       <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0" />
@@ -4348,7 +4348,7 @@
         </Button>
       </CustomInterface>
     </Item>
-    <Item name="Water" identifier="he-toiletwaterwhiskey" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Tastes funny." Tags="smallitem,drinkitem,dirtywaterwhiskey,toiletwater,seawater,water,bottle" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
+    <Item name="Water" identifier="he-toiletwaterwhiskey" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Tastes funny." Tags="smallitem,drinkitem,dirtywaterwhiskey,toiletwater,seawater,water,bottle,allowinfryer" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0" />
       <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0" />
@@ -4470,7 +4470,7 @@
         </Button>
       </CustomInterface>
     </Item>
-    <Item name="Water" identifier="he-toiletwaterhalucinova" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Tastes funny." Tags="smallitem,drinkitem,dirtywaterhalucinova,toiletwater,seawater,water,bottle" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
+    <Item name="Water" identifier="he-toiletwaterhalucinova" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Tastes funny." Tags="smallitem,drinkitem,dirtywaterhalucinova,toiletwater,seawater,water,bottle,allowinfryer" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0" />
       <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0" />
@@ -4592,7 +4592,7 @@
         </Button>
       </CustomInterface>
     </Item>
-    <Item name="Water" identifier="he-toiletwater" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Tastes funny." Tags="smallitem,drinkitem,dirtywaterregular,toiletwater,seawater,water,bottle" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
+    <Item name="Water" identifier="he-toiletwater" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Tastes funny." Tags="smallitem,drinkitem,dirtywaterregular,toiletwater,seawater,water,bottle,allowinfryer" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0" />
       <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0" />
@@ -4714,7 +4714,7 @@
         </Button>
       </CustomInterface>
     </Item>
-    <Item name="Water" identifier="he-toiletwaterbeer" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Tastes funny." Tags="smallitem,drinkitem,dirtywaterbeer,toiletwater,seawater,water,bottle" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
+    <Item name="Water" identifier="he-toiletwaterbeer" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Tastes funny." Tags="smallitem,drinkitem,dirtywaterbeer,toiletwater,seawater,water,bottle,allowinfryer" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0" />
       <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0" />
