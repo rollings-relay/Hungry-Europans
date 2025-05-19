@@ -1,4 +1,10 @@
-Hungry Europans
+#TODO:
+- Cake
+- Cake slice (requires fork to eat) | either: can be thrown if no fork is equipped | or: when equipped, show GUI to take cake off the plate to be able to throw it
+- Pizza
+- Pizza slices
+
+Changelog:
 
 - Fixed Refrigerators not being fireproof.
 - Added: "Sink" item. Now separated from the kitchen counter, it will allow you to refill bottles and clean dishes. 
@@ -9,14 +15,15 @@ Hungry Europans
 - Added: New food item "Omelette" of every monster egg type (Crawler, Mudraptor, Thresher).
 - (TODO) Added: New food item "Pizza".
 - (WIP) Added: New drinks "Coffee". Reduces your tiredness if you have it enabled and helps to sober up. Can give you a caffeine rush.
+- (WIP) Added: New drinks "Hot Chocolate". Increases your tiredness if you have it enabled, but also increases your mood and helps to sober up.
 - Added: New output for "Hydroponic Planter" to calculate the seconds until the next produce. Works exactly like the "Gardening Sprinkler".
 - (TODO) Added: New optional affliction "Hygiene" which is enabled with the "Filthy Europan" item.
 - Changed: Regular Food is no longer stackable. Snacks can still be stacked to some extend.
 - Changed: "Bladder", "Need to defecate", "Stomach Ache" and "Alcohol Withdrawal" can now cause your mood to worsen. (Only with "Mood" enabled)
 - Changed: "Drunk" can now improve your mood. (Only with "Mood" enabled)
 - Changed: "Drunk" can now make you tired. (Only with "Tiredness" enabled)
-- Changed: "Coalition Premium" beer will now give a temporary buff that decreases the power usage of the turret you're operating by up to 90%.
-- Changed: "Jovian Force" beer will now give a temporary buff that increases the fire rate of the turret you're operating by up to 100%.
+- Changed: "Coalition Premium" beer will now give a temporary buff that decreases the power usage of the turret you're operating by up to 50%.
+- Changed: "Jovian Force" beer will now give a temporary buff that increases the fire rate of the turret you're operating by up to 50%.
 - Changed: "Cafeteria Cart" is no longer attachable. Its inventory is accessed by using the "Action" keybind (Default "E") to bring it more in line with other modded items.
 - (TODO) Changed: All food and drink items now support "Tiredness" and "Mood" values.
 - Fixed: "Internal Burns" had wrong damage values and thus wouldn't actually cause any damage.
@@ -56,7 +63,7 @@ ToDo - Current Update:
 - Rework alcohol to invert controls less on lower to mid drunkness like drunknodebuffs and only really get annoying at high drunkness to compensate for high damage resistance.
 - Clown Juice gives stun resistance.
 - Coalition Premium gives ranged spread reduction or sellmultiplier <StatValue stattype="RangedSpreadReduction" minvalue="0.25" maxvalue="0.5" /> <StatValue stattype="StoreSellMultiplier" minvalue="0.25" maxvalue="0.5" />
-- Jovian Spirit gives ranged attack speed <StatValue stattype="RangedAttackSpeed" minvalue="0.25" maxvalue="0.5" />
+- Jovian Force gives ranged attack speed <StatValue stattype="RangedAttackSpeed" minvalue="0.25" maxvalue="0.5" />
 - Pirate Rum gives turret attack speed <StatValue stattype="TurretAttackSpeed" minvalue="0.25" maxvalue="0.5" />
 - Investigate salt shakers dropping shards instead of empty shaker on combined
 - Attachable Auto-Sprinkler to reduce the need of watering plants.
@@ -70,7 +77,7 @@ ToDo - Current Update:
 	Meat Cleaver: 60% | 30% chance of lacerations
 	Boarding Axe: 20% | 50% chance of lacerations
 - Homemade kvass from water, bread, yeast and sugar.
-- Moloch sushi.
+# Moloch sushi.
 - Grog! It'd be made of sea water and rum.
 - Make Kegs sellable.
 - Soups
