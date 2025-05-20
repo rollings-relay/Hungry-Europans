@@ -6,6 +6,7 @@
 
 Changelog:
 
+- Fixed "Pomegrenade Jam" recipe having a wrong identifier for pomegrenades, causing performance issues when trying to craft it.
 - Fixed Refrigerators not being fireproof.
 - Added: "Sink" item. Now separated from the kitchen counter, it will allow you to refill bottles and clean dishes. 
 - Added: "Pan" item. Required for cooking some recipes on the stove and can be used as a melee weapon.
@@ -33,7 +34,7 @@ Changelog:
 - (TODO) Rework of almost all meat related recipes. For example burgers and hotdogs will now be put together on the cutting board while the meat is cooked seperately on the stove with either a pan or cooking pot.
 - Rescaled burgers, hotdogs, filets and roasts. They felt a bit oversized previously.
 - Reduced amount of alien blood gained from deconstructing meat.
-
+- Removed the override for "Adrenaline" since the vanilla game now cures stun with it by default.
 
 Enforced:
 
