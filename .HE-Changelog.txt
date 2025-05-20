@@ -35,6 +35,7 @@ Changelog:
 - Rescaled burgers, hotdogs, filets and roasts. They felt a bit oversized previously.
 - Reduced amount of alien blood gained from deconstructing meat.
 - Removed the override for "Adrenaline" since the vanilla game now cures stun with it by default.
+- Disabled "Starvation Conciousness Regainer from spawning purchasing and crafting since you can just feed someone unconcious with regular food and drinks to help them out.
 
 Enforced:
 
