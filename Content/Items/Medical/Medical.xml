@@ -2,8 +2,7 @@
 <Override>
   <Items>
     <Item name="Starvation Conciousness Regainer" identifier="he-antistarve" category="Medical" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,syringe" description="Used to wake up a patient that lost conciousness due to starvation or thirst." useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
-      <Upgrade gameversion="0.10.0.0" scale="0.5" />
-      <PreferredContainer primary="medcab" secondary="medcontainer" />
+      <!--<PreferredContainer primary="medcab" secondary="medcontainer" />
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="1" maxamount="2" spawnprobability="0.05" />
       <PreferredContainer secondary="outpostmedcab" minamount="1" maxamount="3" spawnprobability="0.01" />
       <PreferredContainer secondary="outpostmedcompartment" amount="1" spawnprobability="0.01" />
@@ -19,7 +18,7 @@
         <RequiredItem identifier="yeastshroom" Amount="1" />
         <RequiredItem identifier="he-milk" Amount="1" UseCondition="True" MinCondition="0.5" />
         <RequiredItem identifier="ethanol" Amount="1" UseCondition="True" MinCondition="0.5"/>
-      </Fabricate>
+      </Fabricate>-->
       <Deconstruct time="3" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Medical/AntiStarve.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Medical/AntiStarve.png" sourcerect="0,0,36,66" depth="0.6" origin="0.5,0.5" />
@@ -63,47 +62,6 @@
       <Projectile characterusable="false" launchimpulse="18.0" sticktocharacters="true" launchrotation="-90" inheritstatuseffectsfrom="MeleeWeapon" inheritrequiredskillsfrom="MeleeWeapon" />
       <SkillRequirementHint identifier="medical" level="50" />
     </Item>
-    <Adrenaline name="" identifier="adrenaline" category="Medical,Material" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,syringe" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
-      <Upgrade gameversion="0.10.0.0" scale="0.5" />
-      <PreferredContainer primary="medfabcab" secondary="medcontainer"/>
-      <PreferredContainer secondary="abandonedmedcab,wreckmedcab" minamount="1" maxamount="2" spawnprobability="0.5" />
-      <Price baseprice="60">
-        <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.25" />
-        <Price storeidentifier="merchantcity" sold="false" multiplier="1.25" />
-        <Price storeidentifier="merchantresearch" multiplier="0.9" minavailable="4" />
-        <Price storeidentifier="merchantmilitary" multiplier="0.9" minavailable="2" />
-        <Price storeidentifier="merchantmine" sold="false" multiplier="1.1" />
-        <Price storeidentifier="merchantmedical" multiplier="0.9" minavailable="4" />
-      </Price>
-      <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="384,768,64,64" origin="0.5,0.5" />
-      <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="379,452,27,58" depth="0.6" origin="0.5,0.5" />
-      <Body width="25" height="55" density="10.2" waterdragcoefficient="1"/>
-      <SuitableTreatment identifier="stun" suitability="100" />
-      <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect" HitOnlyCharacters="true">
-        <RequiredSkill identifier="medical" level="55" />
-        <StatusEffect type="OnSuccess" target="This" Condition="-100.0" setvalue="true"/>
-        <StatusEffect tags="medical" type="OnSuccess" target="UseTarget">
-          <Conditional entitytype="eq Character"/>
-          <ReduceAffliction type="stun" amount="60" />
-          <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
-        </StatusEffect>
-        <StatusEffect tags="medical" type="OnFailure" target="UseTarget">
-          <Conditional entitytype="eq Character"/>
-          <ReduceAffliction type="stun" amount="15" />
-          <Affliction identifier="nausea" amount="30" probability="0.5" />
-          <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
-        </StatusEffect>
-        <StatusEffect type="OnImpact" target="UseTarget" multiplyafflictionsbymaxvitality="true" AllowWhenBroken="true">
-          <Affliction identifier="stun" amount="0.1" />
-        </StatusEffect>
-        <!-- Remove the item when fully used -->
-        <StatusEffect type="OnBroken" target="This">
-          <Remove />
-        </StatusEffect>
-      </MeleeWeapon>
-      <Projectile characterusable="false" launchimpulse="18.0" sticktocharacters="true" launchrotation="-90" inheritstatuseffectsfrom="MeleeWeapon" inheritrequiredskillsfrom="MeleeWeapon" />
-      <SkillRequirementHint identifier="medical" level="55" />
-    </Adrenaline>
     <SulphuricAcid name="" identifier="sulphuricacid" category="Material" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="mediccrate" description="" Tags="smallitem,chem,poison" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light" isshootable="true" RequireAimToUse="True">
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
       <PreferredContainer secondary="wrecktoxcab,abandonedtoxcab" spawnprobability="0.5" />
