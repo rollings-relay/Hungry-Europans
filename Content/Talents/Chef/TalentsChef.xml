@@ -21,6 +21,8 @@
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="1,0" sheetelementsize="128,128"/>
       <Description tag="talentdescription.he-fastfood">
         <Replace tag="[amount]" value="50" color="gui.green"/>
+        <Replace tag="[itemname1]" value="entityname.he-electricgrill" color="gui.orange"/>
+        <Replace tag="[itemname2]" value="entityname.he-fryer" color="gui.orange"/>
       </Description>
       <Description tag="talentdescription.doesnotstack" />
       <AbilityGroupInterval interval="60">
@@ -1229,7 +1231,7 @@
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="2,1" sheetelementsize="128,128"/>
       <Description tag="talentdescription.he-dietarypreferencebase"/>
       <Description tag="talentdescription.he-lifesaver">
-        <Replace tag="[itemname1]" value="entityname.he-antistarve" color="gui.orange"/>
+        <!--<Replace tag="[itemname1]" value="entityname.he-antistarve" color="gui.orange"/>-->
         <Replace tag="[skill]" value="skillname.medical" color="gui.orange"/>
         <Replace tag="[amount]" value="20" color="gui.green"/>
       </Description>
@@ -1238,7 +1240,7 @@
           <CharacterAbilityGiveStat stattype="MedicalSkillBonus" value="20"/>
         </Abilities>
       </AbilityGroupEffect>
-      <AddedRecipe itemidentifier="he-antistarve"/>	   
+      <!--<AddedRecipe itemidentifier="he-antistarve"/>	-->   
     </Talent>
   </Override>	
   <!--Damage against Mudraptors talent-->
@@ -1337,7 +1339,7 @@
     </Talent>  
   </Override>     
   <!--Adds Anti-Starve - currently unused/obsolete-->
-  <Override>
+  <!--<Override>
     <Talent identifier="he-lifesaver">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="905,905,119,119" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-lifesaver">
@@ -1352,6 +1354,6 @@
       </AbilityGroupEffect>
       <AddedRecipe itemidentifier="he-antistarve"/>
     </Talent>
-  </Override>  
+  </Override>  -->
   
 </Talents>
