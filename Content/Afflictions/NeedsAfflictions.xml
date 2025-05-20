@@ -560,7 +560,7 @@
       <!--<AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/CannibalInfoOverlay.png" />-->
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="640,128,128,128" color="195,180,60,255" origin="0,0" />
     </Affliction>
-    <Affliction name="Hungry for Human Meat"
+    <Affliction name="Craving Human Meat"
       identifier="he-hungryforhumanmeat"
       description="Agitation and a tremor are obvious, the eyes stare empty."
       type="spaceherpes"
@@ -622,7 +622,7 @@
         minresistance="0.2"
         maxresistance="0.4"
         MinAfflictionOverlayAlphaMultiplier="0.0"
-        MaxAfflictionOverlayAlphaMultiplier="0.4">
+        MaxAfflictionOverlayAlphaMultiplier="0.1">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <ReduceAffliction identifier="he-cannibalism" strength="0.005" probability="1.0" />
         </StatusEffect>
@@ -646,8 +646,8 @@
         resistancefor="damage"
         minresistance="0.4"
         maxresistance="0.75"
-        MinAfflictionOverlayAlphaMultiplier="0.4"
-        MaxAfflictionOverlayAlphaMultiplier="1.0">
+        MinAfflictionOverlayAlphaMultiplier="0.1"
+        MaxAfflictionOverlayAlphaMultiplier="0.1">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <ReduceAffliction identifier="he-cannibalism" strength="0.005" probability="1.0" />
           <ReduceAffliction identifier="bleeding" strength="2" />
@@ -995,10 +995,11 @@
         minstrength="80"
         maxstrength="100" />
       <Effect minstrength="0" maxstrength="50" strengthchange="0">
-        <!-- Reduce the hygiene each second by 1 if the character is in water -->
-        <StatusEffect target="Character" interval="1" disabledeltatime="true">
+        <!-- Slowly reduce the hygiene each second by 0.05 (20s = 1%) if the character is in water -->
+        <StatusEffect target="Character" interval="1" disabledeltatime="true" comparison="And">
+          <Conditional HasTag="neq deepdiving" targetcontaineditem="true" />
           <Conditional InWater="true" />
-          <ReduceAffliction identifier="hygiene" amount="1" />
+          <ReduceAffliction identifier="hygiene" amount="0.05" />
         </StatusEffect>
       </Effect>
       <Effect minstrength="50" maxstrength="80"
@@ -1011,10 +1012,11 @@
           <Conditional mood="gt 0" />
           <Affliction identifier="mood" amount="1.0" />
         </StatusEffect>
-        <!-- Reduce the hygiene each second by 1 if the character is in water -->
-        <StatusEffect target="Character" interval="1" disabledeltatime="true">
+        <!-- Slowly reduce the hygiene each second by 0.05 (20s = 1%) if the character is in water -->
+        <StatusEffect target="Character" interval="1" disabledeltatime="true" comparison="And">
+          <Conditional HasTag="neq deepdiving" targetcontaineditem="true" />
           <Conditional InWater="true" />
-          <ReduceAffliction identifier="hygiene" amount="1" />
+          <ReduceAffliction identifier="hygiene" amount="0.05" />
         </StatusEffect>
       </Effect>
       <Effect minstrength="80" maxstrength="100"
@@ -1027,13 +1029,13 @@
           <Conditional mood="gt 0" />
           <Affliction identifier="mood" amount="2.0" />
         </StatusEffect>
-        <!-- Reduce the hygiene each second by 1 if the character is in water -->
-        <StatusEffect target="Character" interval="1" disabledeltatime="true">
+        <!-- Slowly reduce the hygiene each second by 0.05 (20s = 1%) if the character is in water -->
+        <StatusEffect target="Character" interval="1" disabledeltatime="true" comparison="And">
+          <Conditional HasTag="neq deepdiving" targetcontaineditem="true" />
           <Conditional InWater="true" />
-          <ReduceAffliction identifier="hygiene" amount="1" />
+          <ReduceAffliction identifier="hygiene" amount="0.05" />
         </StatusEffect>
       </Effect>
-      <!-- TODO: Icon -->
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="896,384,128,128" origin="0,0" />
     </Affliction>
   </Afflictions>
