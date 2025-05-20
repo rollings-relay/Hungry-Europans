@@ -375,7 +375,7 @@
       <Projectile characterusable="false" launchimpulse="15" impulsespread="0.01" sticktocharacters="true" sticktoitems="true" sticktostructures="true" sticktodoors="true">
         <Attack targetimpulse="3" severlimbsprobability="0.1" itemdamage="0" structuredamage="0" structuresoundtype="StructureSlash">
           <Affliction identifier="embarrassment" strength="150" />
-          <Affliction identifier="hygiene" strength="100" />
+          <!--<Affliction identifier="hygiene" strength="100" />-->
           <Affliction identifier="he-hitbypoop" strength="30" />
           <Affliction identifier="stun" strength="0.2" />
         </Attack>
