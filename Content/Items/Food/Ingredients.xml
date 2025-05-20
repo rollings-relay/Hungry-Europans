@@ -301,7 +301,7 @@
       </Deconstruct>
       <Fabricate suitablefabricators="stove" requiredtime="25" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="cooking" level="25" />
-        <RequiredItem identifier="pomegrenade" amount="3" />
+        <RequiredItem identifier="creepingorange" amount="3" />
         <RequiredItem identifier="he-sugar" UseCondition="True" MinCondition="0.25" />
         <RequiredItem tag="emptyjar" amount="1" />
       </Fabricate>
