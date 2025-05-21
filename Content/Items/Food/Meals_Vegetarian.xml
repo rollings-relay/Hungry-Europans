@@ -44,7 +44,7 @@
           <Conditional InWater="false" />
           <Conditional IsPlayer="false" />
           <Conditional trait_likes_salads="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
 
         <!--////////// HEALTH MENU USAGE [PLAYER] \\\\\\\\\\-->
@@ -71,7 +71,7 @@
           <Conditional IsPlayer="true" />
           <Conditional stun="gt 0" />
           <Conditional trait_likes_salads="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
 
         <!--////////// REGULAR EATING \\\\\\\\\\-->
@@ -113,7 +113,7 @@
           <Conditional HasStatusTag="neq emptyfork" />
           <Conditional InWater="false" />
           <Conditional trait_likes_salads="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
         <!-- Prevent using this item continuously by applying the tag "emptyfork" which prevents the StatusEffect that uses the item from triggering again, effectively only allowing it to trigger once per mouse-click -->
         <StatusEffect type="OnActive" target="Character" tags="emptyfork" interval="0.1" duration="0.2">
@@ -166,7 +166,7 @@
           <Conditional InWater="false" />
           <Conditional IsPlayer="false" />
           <Conditional trait_likes_sandwiches="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
 
         <!--////////// HEALTH MENU USAGE [PLAYER] \\\\\\\\\\-->
@@ -193,7 +193,7 @@
           <Conditional IsPlayer="true" />
           <Conditional stun="gt 0" />
           <Conditional trait_likes_sandwiches="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
 
         <!--////////// REGULAR EATING \\\\\\\\\\-->
@@ -225,7 +225,7 @@
         <StatusEffect type="OnSecondaryUse" target="Character" comparison="And" disabledeltatime="true" stackable="false">
           <Conditional InWater="false" />
           <Conditional trait_likes_sandwiches="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
@@ -270,7 +270,7 @@
           <Conditional InWater="false" />
           <Conditional IsPlayer="false" />
           <Conditional trait_likes_sandwiches="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
 
         <!--////////// HEALTH MENU USAGE [PLAYER] \\\\\\\\\\-->
@@ -297,7 +297,7 @@
           <Conditional IsPlayer="true" />
           <Conditional stun="gt 0" />
           <Conditional trait_likes_sandwiches="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
 
         <!--////////// REGULAR EATING \\\\\\\\\\-->
@@ -329,7 +329,7 @@
         <StatusEffect type="OnSecondaryUse" target="Character" comparison="And" disabledeltatime="true" stackable="false">
           <Conditional InWater="false" />
           <Conditional trait_likes_sandwiches="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
@@ -375,7 +375,7 @@
           <Conditional InWater="false" />
           <Conditional IsPlayer="false" />
           <Conditional trait_likes_omelete="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
 
         <!--////////// HEALTH MENU USAGE [PLAYER] \\\\\\\\\\-->
@@ -401,7 +401,7 @@
           <Conditional IsPlayer="true" />
           <Conditional stun="gt 0" />
           <Conditional trait_likes_omelete="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
 
         <!--////////// REGULAR EATING \\\\\\\\\\-->
@@ -429,7 +429,7 @@
         <StatusEffect type="OnSecondaryUse" target="Character" comparison="And" disabledeltatime="true" stackable="false">
           <Conditional InWater="false" />
           <Conditional trait_likes_omelete="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
@@ -489,7 +489,7 @@
           <Conditional InWater="false" />
           <Conditional IsPlayer="false" />
           <Conditional trait_likes_omelete="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
 
         <!--////////// HEALTH MENU USAGE [PLAYER] \\\\\\\\\\-->
@@ -516,7 +516,7 @@
           <Conditional IsPlayer="true" />
           <Conditional stun="gt 0" />
           <Conditional trait_likes_omelete="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
 
         <!--////////// REGULAR EATING \\\\\\\\\\-->
@@ -545,7 +545,7 @@
         <StatusEffect type="OnSecondaryUse" target="Character" comparison="And" disabledeltatime="true" stackable="false">
           <Conditional InWater="false" />
           <Conditional trait_likes_omelete="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
@@ -590,7 +590,7 @@
           <Conditional InWater="false" />
           <Conditional IsPlayer="false" />
           <Conditional trait_likes_omelete="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
 
         <!--////////// HEALTH MENU USAGE [PLAYER] \\\\\\\\\\-->
@@ -616,7 +616,7 @@
           <Conditional IsPlayer="true" />
           <Conditional stun="gt 0" />
           <Conditional trait_likes_omelete="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
 
         <!--////////// REGULAR EATING \\\\\\\\\\-->
@@ -644,7 +644,7 @@
         <StatusEffect type="OnSecondaryUse" target="Character" comparison="And" disabledeltatime="true" stackable="false">
           <Conditional InWater="false" />
           <Conditional trait_likes_omelete="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
       </Holdable>
       <AiTarget sightrange="1000" static="true" />

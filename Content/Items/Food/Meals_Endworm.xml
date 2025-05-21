@@ -44,7 +44,7 @@
           <Conditional InWater="false" />
           <Conditional IsPlayer="false" />
           <Conditional trait_likes_hotdogs="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
 
         <!--////////// HEALTH MENU USAGE [PLAYER] \\\\\\\\\\-->
@@ -73,7 +73,7 @@
           <Conditional IsPlayer="true" />
           <Conditional stun="gt 0" />
           <Conditional trait_likes_hotdogs="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
 
         <!--////////// REGULAR EATING \\\\\\\\\\-->
@@ -101,7 +101,7 @@
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <Conditional trait_likes_hotdogs="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />

@@ -47,7 +47,7 @@
           <Conditional InWater="false" />
           <Conditional IsPlayer="false" />
           <Conditional trait_likes_roasts="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
 
         <!--////////// HEALTH MENU USAGE [PLAYER] \\\\\\\\\\-->
@@ -74,7 +74,7 @@
           <Conditional IsPlayer="true" />
           <Conditional stun="gt 0" />
           <Conditional trait_likes_roasts="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
 
         <!--////////// REGULAR EATING \\\\\\\\\\-->
@@ -113,7 +113,7 @@
           <Conditional HasStatusTag="neq emptyfork" />
           <Conditional InWater="false" />
           <Conditional trait_likes_roasts="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
         <!-- Prevent using this item continuously by applying the tag "emptyfork" which prevents the StatusEffect that uses the item from triggering again, effectively only allowing it to trigger once per mouse-click -->
         <StatusEffect type="OnActive" target="Character" tags="emptyfork" interval="0.1" duration="0.2">
@@ -167,7 +167,7 @@
           <Conditional InWater="false" />
           <Conditional IsPlayer="false" />
           <Conditional trait_likes_roasts="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
         
         <!--////////// HEALTH MENU USAGE [PLAYER] \\\\\\\\\\-->
@@ -194,7 +194,7 @@
           <Conditional IsPlayer="true" />
           <Conditional stun="gt 0" />
           <Conditional trait_likes_roasts="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
 
         <!--////////// REGULAR EATING \\\\\\\\\\-->
@@ -218,7 +218,7 @@
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <Conditional trait_likes_roasts="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
@@ -555,7 +555,7 @@
           <Affliction identifier="he-stuffed" amount="5.4" />
           <ReduceAffliction type="damage" amount="2.0" />
           <ReduceAffliction type="hunger" amount="0.5" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.0" />
           <ReduceAffliction identifier="he-starvation" amount="10" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
@@ -575,7 +575,7 @@
           <Affliction identifier="he-stuffed" amount="5.4" />
           <ReduceAffliction type="damage" amount="2.0" />
           <ReduceAffliction type="hunger" amount="0.5" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.0" />
           <ReduceAffliction identifier="he-starvation" amount="10" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
@@ -589,7 +589,7 @@
           <Affliction identifier="he-increasedmeleedamagehammerhead" amount="36.0" />
           <Affliction identifier="he-stuffed" amount="5.4" />
           <ReduceAffliction type="damage" amount="2.0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.0" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
@@ -637,7 +637,7 @@
           <Conditional InWater="false" />
           <Conditional IsPlayer="false" />
           <Conditional trait_likes_friedfood="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
         
         <!--////////// HEALTH MENU USAGE [PLAYER] \\\\\\\\\\-->
@@ -663,7 +663,7 @@
           <Conditional IsPlayer="true" />
           <Conditional stun="gt 0" />
           <Conditional trait_likes_friedfood="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
 
         <!--////////// REGULAR EATING \\\\\\\\\\-->
@@ -686,7 +686,7 @@
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <Conditional trait_likes_friedfood="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
