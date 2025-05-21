@@ -549,11 +549,11 @@
       <SkillRequirementHint identifier="butchery" level="100"/>
     </Item>
     <!--////////// CLEAN TABLEWARE \\\\\\\\\\-->
-    <Item name="Empty Plate" identifier="he-emptyplate" Tags="smallitem,tableware,emptyplate,platebowlreturn1" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="An empty plate to put food on. Can be thrown." useinhealthinterface="false" scale="0.4" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
+    <Item name="Empty Plate" identifier="he-emptyplate" Tags="smallitem,tableware,emptyplate,platebowlreturn1" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="An empty plate to put food on. Can be thrown." useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
       <PreferredContainer secondary="wreckcrewcab,abandonedcrewcab" minamount="1" maxamount="6" spawnprobability="0.01" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="388,13,68,7" depth="0.499" origin="0.5,0.5" />
-      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="115,474,36,37" depth="0.525" origin="0.5,0.5"  />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="388,13,68,7" depth="0.525" origin="0.5,0.5"  />
       <!--<ContainedSprite allowedcontainertags="liquorshelf" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="180,8,21,58" depth="0.55" origin="0.5,0.42" />-->
       <Body width="64" height="4" density="11" />
       <Deconstruct time="2">
@@ -612,7 +612,7 @@
         </Containable>
       </ItemContainer>
     </Item>
-    <Item name="Stack of Empty Plates" identifier="he-emptyplatestack_2" Tags="smallitem,tableware,platebowlreturn2" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="2 empty plates to put food on. Can be thrown." useinhealthinterface="false" scale="0.4" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
+    <Item name="Stack of Empty Plates" identifier="he-emptyplatestack_2" Tags="smallitem,tableware,platebowlreturn2" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="2 empty plates to put food on. Can be thrown." useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
       <PreferredContainer secondary="wreckcrewcab,abandonedcrewcab" minamount="1" maxamount="6" spawnprobability="0.01" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="388,13,68,7" depth="0.499" origin="0.5,0.5" />
@@ -670,7 +670,7 @@
         </Containable>
       </ItemContainer>
     </Item>
-    <Item name="Stack of Empty Plates" identifier="he-emptyplatestack_3" Tags="smallitem,tableware,platebowlreturn3" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="3 empty plates to put food on. Can be thrown." useinhealthinterface="false" scale="0.4" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
+    <Item name="Stack of Empty Plates" identifier="he-emptyplatestack_3" Tags="smallitem,tableware,platebowlreturn3" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="3 empty plates to put food on. Can be thrown." useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
       <PreferredContainer secondary="wreckcrewcab,abandonedcrewcab" minamount="1" maxamount="6" spawnprobability="0.01" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="388,13,68,7" depth="0.499" origin="0.5,0.5" />
@@ -722,7 +722,7 @@
         </Containable>
       </ItemContainer>
     </Item>
-    <Item name="Stack of Empty Plates" identifier="he-emptyplatestack_4" Tags="smallitem,tableware,platebowlreturn4" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="4 empty plates to put food on. Can be thrown." useinhealthinterface="false" scale="0.4" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
+    <Item name="Stack of Empty Plates" identifier="he-emptyplatestack_4" Tags="smallitem,tableware,platebowlreturn4" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="4 empty plates to put food on. Can be thrown." useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
       <PreferredContainer secondary="wreckcrewcab,abandonedcrewcab" minamount="1" maxamount="6" spawnprobability="0.01" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="388,13,68,7" depth="0.499" origin="0.5,0.5" />
@@ -1039,7 +1039,7 @@
     </Item>
 
     <!--////////// DIRTY TABLEWARE \\\\\\\\\\-->
-    <Item name="Dirty Plate" identifier="he-dirtyplate" Tags="smallitem,dirtytableware,tableware,dirtyplate,platebowlreturn1" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="A dirty plate that needs some cleaning either by hand or in a dishwasher. Can be thrown." useinhealthinterface="false" scale="0.4" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
+    <Item name="Dirty Plate" identifier="he-dirtyplate" Tags="smallitem,dirtytableware,tableware,dirtyplate,platebowlreturn1" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="A dirty plate that needs some cleaning either by hand or in a dishwasher. Can be thrown." useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
       <PreferredContainer secondary="wreckcrewcab,abandonedcrewcab" minamount="1" maxamount="6" spawnprobability="0.01" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="388,21,68,7" depth="0.499" origin="0.5,0.5" />
@@ -1093,7 +1093,7 @@
         </Containable>
       </ItemContainer>
     </Item>
-    <Item name="Stack of Dirty Plates" identifier="he-dirtyplatestack_2" Tags="smallitem,dirtytableware,tableware,platebowlreturn2" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="2 dirty plates that need some cleaning either by hand or in a dishwasher. Can be thrown." useinhealthinterface="false" scale="0.4" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
+    <Item name="Stack of Dirty Plates" identifier="he-dirtyplatestack_2" Tags="smallitem,dirtytableware,tableware,platebowlreturn2" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="2 dirty plates that need some cleaning either by hand or in a dishwasher. Can be thrown." useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
       <PreferredContainer secondary="wreckcrewcab,abandonedcrewcab" minamount="1" maxamount="6" spawnprobability="0.01" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="390,62,70,12" depth="0.499" origin="0.5,0.5" />
@@ -1151,7 +1151,7 @@
         </Containable>
       </ItemContainer>
     </Item>
-    <Item name="Stack of Dirty Plates" identifier="he-dirtyplatestack_3" Tags="smallitem,dirtytableware,tableware,platebowlreturn3" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="3 dirty plates that need some cleaning either by hand or in a dishwasher. Can be thrown." useinhealthinterface="false" scale="0.4" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
+    <Item name="Stack of Dirty Plates" identifier="he-dirtyplatestack_3" Tags="smallitem,dirtytableware,tableware,platebowlreturn3" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="3 dirty plates that need some cleaning either by hand or in a dishwasher. Can be thrown." useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
       <PreferredContainer secondary="wreckcrewcab,abandonedcrewcab" minamount="1" maxamount="6" spawnprobability="0.01" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="390,57,70,17" depth="0.499" origin="0.5,0.5" />
@@ -1203,7 +1203,7 @@
         </Containable>
       </ItemContainer>
     </Item>
-    <Item name="Stack of Dirty Plates" identifier="he-dirtyplatestack_4" Tags="smallitem,dirtytableware,tableware,platebowlreturn4" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="4 dirty plates that need some cleaning either by hand or in a dishwasher. Can be thrown." useinhealthinterface="false" scale="0.4" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
+    <Item name="Stack of Dirty Plates" identifier="he-dirtyplatestack_4" Tags="smallitem,dirtytableware,tableware,platebowlreturn4" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="4 dirty plates that need some cleaning either by hand or in a dishwasher. Can be thrown." useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
       <PreferredContainer secondary="wreckcrewcab,abandonedcrewcab" minamount="1" maxamount="6" spawnprobability="0.01" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="388,52,72,22" depth="0.499" origin="0.5,0.5" />
