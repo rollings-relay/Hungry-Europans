@@ -4908,7 +4908,7 @@
           <Conditional IsBot="true" />
           <Conditional timeframe="gte 180" />
           <Conditional trait_likes_tea="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
           <Conditional IsBot="true" />
@@ -4986,7 +4986,7 @@
           <Conditional IsBot="true" />
           <Conditional timeframe="gte 180" />
           <Conditional trait_likes_tea="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This,Character" comparison="And" duration="8" multiplyafflictionsbymaxvitality="true">
           <Conditional IsBot="true" />
@@ -5052,7 +5052,7 @@
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
           <Conditional timeframe="gte 180" />
           <Conditional trait_likes_tea="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
           <Conditional timeframe="gte 180" />
@@ -5167,7 +5167,7 @@
           <Conditional IsBot="true" />
           <Conditional timeframe="gte 180" />
           <Conditional trait_likes_tea="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
           <Conditional IsBot="true" />
@@ -5239,7 +5239,7 @@
           <Conditional IsBot="true" />
           <Conditional timeframe="gte 180" />
           <Conditional trait_likes_tea="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
           <Conditional IsBot="true" />
@@ -5299,7 +5299,7 @@
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
           <Conditional timeframe="gte 180" />
           <Conditional trait_likes_tea="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
           <Conditional timeframe="gte 180" />
@@ -5419,7 +5419,7 @@
           <Conditional IsBot="true" />
           <Conditional timeframe="gte 180" />
           <Conditional trait_likes_tea="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
           <Conditional IsBot="true" />
@@ -5491,7 +5491,7 @@
           <Conditional IsBot="true" />
           <Conditional timeframe="gte 180" />
           <Conditional trait_likes_tea="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
           <Conditional IsBot="true" />
@@ -5551,7 +5551,7 @@
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
           <Conditional timeframe="gte 180" />
           <Conditional trait_likes_tea="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
           <Conditional timeframe="gte 180" />
@@ -5671,7 +5671,7 @@
           <Conditional IsBot="true" />
           <Conditional timeframe="gte 180" />
           <Conditional trait_likes_tea="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
           <Conditional IsBot="true" />
@@ -5743,7 +5743,7 @@
           <Conditional IsBot="true" />
           <Conditional timeframe="gte 180" />
           <Conditional trait_likes_tea="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
           <Conditional IsBot="true" />
@@ -5803,7 +5803,7 @@
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
           <Conditional timeframe="gte 180" />
           <Conditional trait_likes_tea="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
           <Conditional timeframe="gte 180" />
@@ -5920,7 +5920,7 @@
           <Conditional IsBot="true" />
           <Conditional timeframe="gte 180" />
           <Conditional trait_likes_tea="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
           <Conditional IsBot="true" />
@@ -5992,7 +5992,7 @@
           <Conditional IsBot="true" />
           <Conditional timeframe="gte 180" />
           <Conditional trait_likes_tea="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
           <Conditional IsBot="true" />
@@ -6052,7 +6052,7 @@
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
           <Conditional timeframe="gte 180" />
           <Conditional trait_likes_tea="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
           <Conditional timeframe="gte 180" />
@@ -6146,18 +6146,7 @@
           <Conditional timeframe="lt 180" />
           <ReduceAffliction identifier="drunk" amount="0.5" />
           <ReduceAffliction identifier="drunknodebuffs" amount="0.5" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="8" comparison="And" multiplyafflictionsbymaxvitality="true">
-          <Conditional IsBot="true" />
-          <Conditional timeframe="lt 180" />
-          <Conditional trait_likes_tea="gt 0" />
           <ReduceAffliction identifier="mood" amount="2.5" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This,UseTarget" duration="8" comparison="And" multiplyafflictionsbymaxvitality="true">
-          <Conditional IsBot="true" />
-          <Conditional timeframe="lt 180" />
-          <Conditional sleepaffliction="gt 0" />
-          <Affliction identifier="caffeinated" amount="25" />
         </StatusEffect>
         <!--Weaker effects while tea is cold-->
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
@@ -6165,19 +6154,9 @@
           <Conditional timeframe="gte 180" />
           <ReduceAffliction identifier="drunk" amount="0.1" />
           <ReduceAffliction identifier="drunknodebuffs" amount="0.1" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This,Character" comparison="And">
-          <Conditional IsBot="true" />
-          <Conditional timeframe="gte 180" />
-          <Conditional trait_likes_tea="gt 0" />
           <ReduceAffliction identifier="mood" amount="0.5" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="This,Character" comparison="And">
-          <Conditional IsBot="true" />
-          <Conditional timeframe="gte 180" />
-          <Conditional sleepaffliction="gt 0" />
-          <Affliction identifier="caffeinated" amount="10" />
-        </StatusEffect>
+
         <!-- Allow the item to be applied to a player fully, if the player is not in water and unconcious/stunned -->
         <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
           <Conditional InWater="false" />
@@ -6214,22 +6193,7 @@
           <Conditional timeframe="lt 180" />
           <ReduceAffliction identifier="drunk" amount="0.5" />
           <ReduceAffliction identifier="drunknodebuffs" amount="0.5" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="8" comparison="And" multiplyafflictionsbymaxvitality="true">
-          <Conditional InWater="false" />
-          <Conditional stun="gt 0" />
-          <Conditional IsPlayer="true" />
-          <Conditional timeframe="lt 180" />
-          <Conditional trait_likes_tea="gt 0" />
           <ReduceAffliction identifier="mood" amount="2.5" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This,UseTarget" duration="8" comparison="And" multiplyafflictionsbymaxvitality="true">
-          <Conditional InWater="false" />
-          <Conditional stun="gt 0" />
-          <Conditional IsPlayer="true" />
-          <Conditional timeframe="lt 180" />
-          <Conditional sleepaffliction="gt 0" />
-          <Affliction identifier="caffeinated" amount="25" />
         </StatusEffect>
         <!--Weaker effects while tea is cold-->
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
@@ -6237,20 +6201,39 @@
           <Conditional timeframe="gte 180" />
           <ReduceAffliction identifier="drunk" amount="0.1" />
           <ReduceAffliction identifier="drunknodebuffs" amount="0.1" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This,Character" comparison="And">
-          <Conditional IsBot="true" />
-          <Conditional timeframe="gte 180" />
-          <Conditional trait_likes_tea="gt 0" />
           <ReduceAffliction identifier="mood" amount="0.5" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
           <Conditional IsBot="true" />
           <Conditional timeframe="gte 180" />
-          <Conditional sleepaffliction="gt 0" />
-          <Affliction identifier="caffeinated" amount="10" />
+          <Conditional trait_likes_tea="gt 0" />
         </StatusEffect>
+
         <!-- Regular drinking -->
+        <StatusEffect type="OnUse" target="This,Character" targetlimb="head" comparison="And">
+          <Conditional timeframe="lte 40" />
+          <Affliction identifier="burn" amount="0.5" />
+        </StatusEffect>
+        <!--Stronger effects while tea is hot-->
+        <StatusEffect type="OnUse" target="This,Character" comparison="And">
+          <Conditional timeframe="lt 180" />
+          <ReduceAffliction identifier="drunk" amount="0.5" />
+          <ReduceAffliction identifier="drunknodebuffs" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.5" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This,Character" comparison="And">
+          <Conditional timeframe="lt 180" />
+          <Conditional trait_likes_tea="gt 0" />
+        </StatusEffect>
+        <!--Weaker effects while tea is cold-->
+        <StatusEffect type="OnUse" target="This,Character" comparison="And">
+          <Conditional timeframe="gte 180" />
+          <ReduceAffliction identifier="drunk" amount="0.1" />
+          <ReduceAffliction identifier="drunknodebuffs" amount="0.1" />
+          <ReduceAffliction identifier="mood" amount="0.5" />
+        </StatusEffect>
+
+        <!--General effects-->
         <!--Increase time to simulate tea cooling off-->
         <StatusEffect type="Always" target="This" timeframe="1">
           <Conditional timeframe="lte 180" />
@@ -6273,43 +6256,6 @@
           <Conditional timeframe="lte 40" />
           <ParticleEmitter particle="FleshSmoke" anglemin="90" anglemax="90" distancemin="7" distancemax="7" scalemin="0.1" scalemax="0.2" scalemultiplier="1,1" particlespersecond="2.0" colormultiplier="255,255,255,150" copyentityangle="True" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="This,Character" targetlimb="head" comparison="And">
-          <Conditional timeframe="lte 40" />
-          <Affliction identifier="burn" amount="0.5" />
-        </StatusEffect>
-        <!--Stronger effects while tea is hot-->
-        <StatusEffect type="OnUse" target="This,Character" comparison="And">
-          <Conditional timeframe="lt 180" />
-          <ReduceAffliction identifier="drunk" amount="0.5" />
-          <ReduceAffliction identifier="drunknodebuffs" amount="0.5" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This,Character" comparison="And">
-          <Conditional timeframe="lt 180" />
-          <Conditional trait_likes_tea="gt 0" />
-          <ReduceAffliction identifier="mood" amount="2.5" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This,Character" comparison="And">
-          <Conditional timeframe="lt 180" />
-          <Conditional sleepaffliction="gt 0" />
-          <Affliction identifier="caffeinated" amount="25" />
-        </StatusEffect>
-        <!--Weaker effects while tea is cold-->
-        <StatusEffect type="OnUse" target="This,Character" comparison="And">
-          <Conditional timeframe="gte 180" />
-          <ReduceAffliction identifier="drunk" amount="0.1" />
-          <ReduceAffliction identifier="drunknodebuffs" amount="0.1" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This,Character" comparison="And">
-          <Conditional timeframe="gte 180" />
-          <Conditional trait_likes_tea="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This,Character" comparison="And">
-          <Conditional timeframe="gte 180" />
-          <Conditional sleepaffliction="gt 0" />
-          <Affliction identifier="caffeinated" amount="10" />
-        </StatusEffect>
-        <!--General effects-->
         <StatusEffect type="InWater" target="This" Condition="0" setvalue="true" />
         <StatusEffect type="OnUse" target="This" Condition="-12.5">
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurping.ogg" loop="true" range="200" volume="2.0" />
@@ -6395,18 +6341,7 @@
           <Conditional timeframe="lt 180" />
           <ReduceAffliction identifier="drunk" amount="0.5" />
           <ReduceAffliction identifier="drunknodebuffs" amount="0.5" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12" comparison="And" multiplyafflictionsbymaxvitality="true">
-          <Conditional IsBot="true" />
-          <Conditional timeframe="lt 180" />
-          <Conditional trait_likes_tea="gt 0" />
           <ReduceAffliction identifier="mood" amount="2.5" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This,UseTarget" duration="12" comparison="And" multiplyafflictionsbymaxvitality="true">
-          <Conditional IsBot="true" />
-          <Conditional timeframe="lt 180" />
-          <Conditional sleepaffliction="gt 0" />
-          <Affliction identifier="caffeinated" amount="25" />
         </StatusEffect>
         <!--Weaker effects while tea is cold-->
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
@@ -6414,19 +6349,9 @@
           <Conditional timeframe="gte 180" />
           <ReduceAffliction identifier="drunk" amount="0.1" />
           <ReduceAffliction identifier="drunknodebuffs" amount="0.1" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This,Character" comparison="And">
-          <Conditional IsBot="true" />
-          <Conditional timeframe="gte 180" />
-          <Conditional trait_likes_tea="gt 0" />
           <ReduceAffliction identifier="mood" amount="0.5" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="This,Character" comparison="And">
-          <Conditional IsBot="true" />
-          <Conditional timeframe="gte 180" />
-          <Conditional sleepaffliction="gt 0" />
-          <Affliction identifier="caffeinated" amount="10" />
-        </StatusEffect>
+        
         <!-- Allow the item to be applied to a player fully, if the player is not in water and unconcious/stunned -->
         <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
           <Conditional InWater="false" />
@@ -6463,22 +6388,7 @@
           <Conditional timeframe="lt 180" />
           <ReduceAffliction identifier="drunk" amount="0.5" />
           <ReduceAffliction identifier="drunknodebuffs" amount="0.5" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12" comparison="And" multiplyafflictionsbymaxvitality="true">
-          <Conditional InWater="false" />
-          <Conditional stun="gt 0" />
-          <Conditional IsPlayer="true" />
-          <Conditional timeframe="lt 180" />
-          <Conditional trait_likes_tea="gt 0" />
           <ReduceAffliction identifier="mood" amount="2.5" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This,UseTarget" duration="12" comparison="And" multiplyafflictionsbymaxvitality="true">
-          <Conditional InWater="false" />
-          <Conditional stun="gt 0" />
-          <Conditional IsPlayer="true" />
-          <Conditional timeframe="lt 180" />
-          <Conditional sleepaffliction="gt 0" />
-          <Affliction identifier="caffeinated" amount="25" />
         </StatusEffect>
         <!--Weaker effects while tea is cold-->
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
@@ -6486,20 +6396,35 @@
           <Conditional timeframe="gte 180" />
           <ReduceAffliction identifier="drunk" amount="0.1" />
           <ReduceAffliction identifier="drunknodebuffs" amount="0.1" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This,Character" comparison="And">
-          <Conditional IsBot="true" />
-          <Conditional timeframe="gte 180" />
-          <Conditional trait_likes_tea="gt 0" />
           <ReduceAffliction identifier="mood" amount="0.5" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This,Character" comparison="And">
           <Conditional IsBot="true" />
           <Conditional timeframe="gte 180" />
-          <Conditional sleepaffliction="gt 0" />
-          <Affliction identifier="caffeinated" amount="10" />
+          <Conditional trait_likes_tea="gt 0" />
         </StatusEffect>
+
         <!-- Regular drinking -->
+        <StatusEffect type="OnUse" target="This,Character" targetlimb="head" comparison="And">
+          <Conditional timeframe="lte 40" />
+          <Affliction identifier="burn" amount="0.5" />
+        </StatusEffect>
+        <!--Stronger effects while tea is hot-->
+        <StatusEffect type="OnUse" target="This,Character" comparison="And">
+          <Conditional timeframe="lt 180" />
+          <ReduceAffliction identifier="drunk" amount="0.5" />
+          <ReduceAffliction identifier="drunknodebuffs" amount="0.5" />
+          <ReduceAffliction identifier="mood" amount="2.5" />
+        </StatusEffect>
+        <!--Weaker effects while tea is cold-->
+        <StatusEffect type="OnUse" target="This,Character" comparison="And">
+          <Conditional timeframe="gte 180" />
+          <ReduceAffliction identifier="drunk" amount="0.1" />
+          <ReduceAffliction identifier="drunknodebuffs" amount="0.1" />
+          <ReduceAffliction identifier="mood" amount="0.5" />
+        </StatusEffect>
+
+        <!--General effects-->
         <!--Increase time to simulate tea cooling off-->
         <StatusEffect type="Always" target="This" timeframe="1">
           <Conditional timeframe="lte 180" />
@@ -6522,43 +6447,6 @@
           <Conditional timeframe="lte 40" />
           <ParticleEmitter particle="FleshSmoke" anglemin="90" anglemax="90" distancemin="7" distancemax="7" scalemin="0.1" scalemax="0.2" scalemultiplier="1,1" particlespersecond="2.0" colormultiplier="255,255,255,150" copyentityangle="True" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="This,Character" targetlimb="head" comparison="And">
-          <Conditional timeframe="lte 40" />
-          <Affliction identifier="burn" amount="0.5" />
-        </StatusEffect>
-        <!--Stronger effects while tea is hot-->
-        <StatusEffect type="OnUse" target="This,Character" comparison="And">
-          <Conditional timeframe="lt 180" />
-          <ReduceAffliction identifier="drunk" amount="0.5" />
-          <ReduceAffliction identifier="drunknodebuffs" amount="0.5" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This,Character" comparison="And">
-          <Conditional timeframe="lt 180" />
-          <Conditional trait_likes_tea="gt 0" />
-          <ReduceAffliction identifier="mood" amount="2.5" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This,Character" comparison="And">
-          <Conditional timeframe="lt 180" />
-          <Conditional sleepaffliction="gt 0" />
-          <Affliction identifier="caffeinated" amount="25" />
-        </StatusEffect>
-        <!--Weaker effects while tea is cold-->
-        <StatusEffect type="OnUse" target="This,Character" comparison="And">
-          <Conditional timeframe="gte 180" />
-          <ReduceAffliction identifier="drunk" amount="0.1" />
-          <ReduceAffliction identifier="drunknodebuffs" amount="0.1" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This,Character" comparison="And">
-          <Conditional timeframe="gte 180" />
-          <Conditional trait_likes_tea="gt 0" />
-          <ReduceAffliction identifier="mood" amount="0.5" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This,Character" comparison="And">
-          <Conditional timeframe="gte 180" />
-          <Conditional sleepaffliction="gt 0" />
-          <Affliction identifier="caffeinated" amount="10" />
-        </StatusEffect>
-        <!--General effects-->
         <StatusEffect type="InWater" target="This" Condition="0" setvalue="true" />
         <StatusEffect type="OnUse" target="This" Condition="-12.5">
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurping.ogg" loop="true" range="200" volume="2.0" />
