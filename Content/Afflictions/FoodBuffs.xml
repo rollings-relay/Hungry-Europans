@@ -485,14 +485,14 @@
           <Affliction identifier="defecate" strength="0.1" />
         </StatusEffect>
       </Effect>
-      <PeriodicEffect mininterval="12" maxinterval="90" minstrength="80" maxstrength="200">
+      <PeriodicEffect mininterval="12" maxinterval="90" minstrength="536" maxstrength="1800">
         <StatusEffect target="Character" SpeedMultiplier="0.0" setvalue="true" duration="1.7" >
-          <Conditional he-stuffed="gte 80" />
+          <Conditional he-stuffed="gte 536" />
         </StatusEffect>
         <StatusEffect target="Character" comparison="And">
           <Conditional ishuman="true" />
           <Conditional hasspecifiertag="male" />
-          <Conditional he-stuffed="gte 80" />
+          <Conditional he-stuffed="gte 536" />
           <Sound file="Content/Sounds/HUMAN_chokeMale1.ogg" selectionmode="Random" />
           <Sound file="Content/Sounds/HUMAN_chokeMale2.ogg" />
           <Sound file="Content/Sounds/HUMAN_chokeMale3.ogg" />
@@ -500,25 +500,25 @@
         <StatusEffect target="Character" comparison="And">
           <Conditional ishuman="true" />
           <Conditional hasspecifiertag="female" />
-          <Conditional he-stuffed="gte 80" />
+          <Conditional he-stuffed="gte 536" />
           <Sound file="Content/Sounds/HUMAN_chokeFemale1.ogg" selectionmode="Random" />
           <Sound file="Content/Sounds/HUMAN_chokeFemale2.ogg" />
           <Sound file="Content/Sounds/HUMAN_chokeFemale3.ogg" />
         </StatusEffect>
         <StatusEffect target="Character">
-          <Conditional he-stuffed="gte 80" />
+          <Conditional he-stuffed="gte 536" />
           <Affliction identifier="organdamage" strength="0.5" />
-          <ReduceAffliction identifier="he-stuffed" strength="10" />
+          <ReduceAffliction identifier="he-stuffed" strength="67" />
           <ReduceAffliction identifier="he-increasedswimmingspeedcrawler" strength="300" />
           <ReduceAffliction identifier="he-damageresistancemoloch" strength="300" />
           <ReduceAffliction identifier="he-damageresistancemudraptor" strength="300" />
           <ReduceAffliction identifier="he-increasedwalkingspeedmudraptor" strength="300" />
           <ReduceAffliction identifier="he-increasedmeleedamagehammerhead" strength="300" />
           <ReduceAffliction identifier="he-pressureresistance" strength="300" />
-          <!--<ReduceAffliction identifier="AnyFoodAffliction" strength="100" />-->
+          <!--<ReduceAffliction identifier="AnyFoodAffliction" strength="300" />-->
         </StatusEffect>
         <StatusEffect target="Character" targetlimbs="Head" duration="1" comparison="And">
-          <Conditional he-stuffed="gte 80" />
+          <Conditional he-stuffed="gte 536" />
           <Conditional HideFace="eq False" />
           <ParticleEmitter particle="vomitsplash" copyentityangle="true" anglemin="-10" anglemax="10" particlespersecond="50" velocitymin="50" velocitymax="200" scalemin="0.1" scalemax="0.2" />
           <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="vomitsplatter" decalsize="1.25" shockwave="false" underwaterbubble="false" />
