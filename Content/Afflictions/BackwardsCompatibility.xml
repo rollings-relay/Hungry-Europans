@@ -208,5 +208,39 @@
     <Affliction name="Sleeping Blindness" identifier="sleepblindnessaffliction" description="You are asleep." type="bedblindness" limbspecific="false" indicatorlimb="Head" maxstrength="100" affectmachines="true" showiconthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false" iconcolors="0,100,0,255;100,0,0,255">
       <Effect minstrength="0" maxstrength="100" strengthchange="-1000" />
     </Affliction>
+    <Affliction name="Fatigue"
+      identifier="sleepaffliction"
+      description=""
+      type="sleep"
+      limbspecific="false"
+      indicatorlimb="Head"
+      maxstrength="100"
+      affectmachines="false"
+      showiconthreshold="0"
+      showinhealthscannerthreshold="0.5"
+      hideiconafterdelay="true"
+      healableinmedicalclinic="false"
+      iconcolors="0,100,0,255;100,0,0,255">
+      <Effect minstrength="0" maxstrength="100" strengthchange="0.0">
+        <StatusEffect target="Character" >
+          <Conditional sleepaffliction="gte 10" />
+          <Affliction identifier="fatigue" strength="10" />
+          <ReduceAffliction identifier="sleepaffliction" strength="10" />
+        </StatusEffect>
+        <StatusEffect target="Character" >
+          <Conditional sleepaffliction="gte 1" />
+          <Conditional sleepaffliction="lt 10" />
+          <Affliction identifier="fatigue" strength="1" />
+          <ReduceAffliction identifier="sleepaffliction" strength="1" />
+        </StatusEffect>
+        <StatusEffect target="Character" >
+          <Conditional sleepaffliction="gt 0.0" />
+          <Conditional sleepaffliction="lt 1" />
+          <Affliction identifier="fatigue" strength="0.1" />
+          <ReduceAffliction identifier="sleepaffliction" strength="0.1" />
+        </StatusEffect>
+      </Effect>
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="768,256,128,128" origin="0,0" />
+    </Affliction>
   </Afflictions>
 </Override>
