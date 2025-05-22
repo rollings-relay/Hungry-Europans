@@ -315,7 +315,6 @@
           <ReduceAffliction identifier="drunk" strength="100" />
         </StatusEffect>
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
-          <Affliction identifier="he-alcoholism" strength="0.005" probability="1.0" />
           <ReduceAffliction identifier="he-alcoholwithdrawal" strength="1" probability="0.25" />
           <ReduceAffliction identifier="embarrassment" strength="0.5" />
         </StatusEffect>
@@ -323,11 +322,11 @@
           <Conditional mood="gt 1" />
           <ReduceAffliction identifier="mood" strength="0.2" />
         </StatusEffect>
-        <StatusEffect target="Character" interval="1" disabledeltatime="true" comparison="And">
+        <!--<StatusEffect target="Character" interval="1" disabledeltatime="true" comparison="And">
           <Conditional he-alcoholism="lt 25" />
           <Conditional InWater="false" />
           <Affliction identifier="he-drunkinvertcontrols" strength="100" probability="0.025" />
-        </StatusEffect>
+        </StatusEffect>-->
       </Effect>
       <Effect minstrength="40" maxstrength="80"
         minscreenblur="0.0"
@@ -346,7 +345,6 @@
           <ReduceAffliction identifier="drunk" strength="100" />
         </StatusEffect>
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
-          <Affliction identifier="he-alcoholism" strength="0.01" probability="1.0" />
           <ReduceAffliction identifier="he-alcoholwithdrawal" strength="2" probability="0.5" />
           <ReduceAffliction identifier="embarrassment" strength="1" />
         </StatusEffect>
@@ -354,11 +352,11 @@
           <Conditional mood="gt 1" />
           <ReduceAffliction identifier="mood" strength="0.5" />
         </StatusEffect>
-        <StatusEffect target="Character" interval="1" disabledeltatime="true" comparison="And">
+        <!--<StatusEffect target="Character" interval="1" disabledeltatime="true" comparison="And">
           <Conditional he-alcoholism="lt 50" />
           <Conditional InWater="false" />
           <Affliction identifier="he-drunkinvertcontrols" strength="100" probability="0.05" />
-        </StatusEffect>
+        </StatusEffect>-->
       </Effect>
       <Effect minstrength="80" maxstrength="100"
         minscreenblur="0.25"
@@ -377,7 +375,6 @@
           <ReduceAffliction identifier="drunk" strength="100" />
         </StatusEffect>
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
-          <Affliction identifier="he-alcoholism" strength="0.04" probability="1" />
           <ReduceAffliction identifier="he-alcoholwithdrawal" strength="2" probability="1" />
           <ReduceAffliction identifier="embarrassment" strength="2" />
         </StatusEffect>
@@ -385,11 +382,11 @@
           <Conditional mood="gt 1" />
           <ReduceAffliction identifier="mood" strength="1" />
         </StatusEffect>
-        <StatusEffect target="Character" interval="1" disabledeltatime="true" comparison="And">
+        <!--<StatusEffect target="Character" interval="1" disabledeltatime="true" comparison="And">
           <Conditional he-alcoholism="lt 75" />
           <Conditional InWater="false" />
           <Affliction identifier="he-drunkinvertcontrols" strength="100" probability="0.05" />
-        </StatusEffect>
+        </StatusEffect>-->
       </Effect>
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
