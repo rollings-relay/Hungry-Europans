@@ -634,6 +634,40 @@
         </StatusEffect>
       </Projectile>
     </Item>
+    <Item name="Dough" identifier="he-dough" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Baking Bad." Tags="smallitem,ingredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" canflipx="false">
+      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.1" />
+      <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="2" spawnprobability="0.1" />
+      <PreferredContainer primary="kitchen" secondary="crewcab"/>
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="30" requiresrecipe="false" amount="1">
+        <RequiredSkill identifier="cooking" level="25" />
+        <RequiredItem tag="cleanwater" mincondition="0.98" UseCondition="true" />
+        <RequiredItem identifier="he-flour" amount="1" />
+        <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.1"/>
+        <RequiredItem identifier="he-sugar" UseCondition="True" MinCondition="0.25"/>
+        <RequiredItem identifier="yeastshroom" amount="1"/>
+      </Fabricate>
+      <Deconstruct time="1" requireddeconstructor="deconstructor" />
+      <!-- TODO: All sprites -->
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="127,67,45,67" depth="0.6" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="127,67,45,67" origin="0.5,0.5" />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="127,67,45,67" depth="0.525" origin="0.5,0.87"  />
+      <Body width="45" height="67" density="15" />
+      <Throwable canbepicked="true" characterusable="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+        <StatusEffect type="OnSecondaryUse" target="This" delay="0.01">
+          <Use />
+        </StatusEffect>
+      </Throwable>
+      <Projectile characterusable="false" launchimpulse="0.0" impulsespread="0.0" sticktocharacters="false" sticktoitems="false" sticktostructures="false" sticktodoors="false">
+        <Attack targetimpulse="3" severlimbsprobability="0.1" itemdamage="1" structuredamage="0" structuresoundtype="StructureSlash">
+          <Affliction identifier="stun" strength="0.2" />
+        </Attack>
+        <StatusEffect type="OnImpact" target="UseTarget">
+          <Conditional entitytype="Character" />
+          <Sound file="Content/Items/Weapons/Smack1.ogg" selectionmode="random" range="1000" />
+          <Sound file="Content/Items/Weapons/Smack2.ogg" range="1000" />
+        </StatusEffect>
+      </Projectile>
+    </Item>
     <Item name="Bubbleberry Tea Mix" identifier="he-teamixbubbleberry" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" tags="smallitem,mix" description="" scale="0.5" impactsoundtag="impact_soft" canflipx="false">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,367,45,57" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,367,45,57" origin="0.5,0.5" />
