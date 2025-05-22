@@ -12,6 +12,7 @@
       affectmachines="false"
       showiconthreshold="0"
       showinhealthscannerthreshold="0.5"
+      hideiconafterdelay="true"
       healableinmedicalclinic="false"
       iconcolors="0,100,0,255;100,0,0,255">
       <Effect minstrength="0" maxstrength="20" strengthchange="0.0">
@@ -50,6 +51,7 @@
       affectmachines="true"
       showiconthreshold="0"
       showinhealthscannerthreshold="0.5"
+      hideiconafterdelay="true"
       healableinmedicalclinic="false"
       iconcolors="0,100,0,255;100,0,0,255">
       <Effect minstrength="0" maxstrength="20" />
