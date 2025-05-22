@@ -223,6 +223,9 @@
           <Conditional trait_likes_sandwiches="gt 0" />
           <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+        </StatusEffect>
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
     </Item>
@@ -322,6 +325,9 @@
           <Conditional trait_likes_sandwiches="gt 0" />
           <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+        </StatusEffect>
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
     </Item>
@@ -416,6 +422,9 @@
           <Conditional InWater="false" />
           <Conditional trait_likes_omelete="gt 0" />
           <ReduceAffliction identifier="mood" amount="2.0" />
+        </StatusEffect>
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
         </StatusEffect>
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
@@ -529,6 +538,9 @@
           <Conditional trait_likes_omelete="gt 0" />
           <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+        </StatusEffect>
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
     </Item>
@@ -623,6 +635,9 @@
           <Conditional InWater="false" />
           <Conditional trait_likes_omelete="gt 0" />
           <ReduceAffliction identifier="mood" amount="2.0" />
+        </StatusEffect>
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
         </StatusEffect>
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
