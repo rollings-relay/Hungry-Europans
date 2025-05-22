@@ -198,31 +198,27 @@
 
         <!--////////// REGULAR EATING \\\\\\\\\\-->
         <!-- Use the item when it's held and the fork in the other hand is used (indicated by applying a "usingfork" tag on the character which this item checks for) -->
-        <StatusEffect type="OnActive" target="This" Condition="-4.0" disabledeltatime="true" stackable="false" comparison="And">
+        <StatusEffect type="OnUse" target="This" Condition="-4.0" stackable="false" comparison="And">
           <Conditional InWater="false" />
         </StatusEffect>
-        <StatusEffect type="OnSecondaryUse" target="Character" disabledeltatime="true" stackable="false" comparison="And">
+        <StatusEffect type="OnUse" target="Character" stackable="false" comparison="And">
           <Conditional InWater="false" />
           <Affliction identifier="he-stuffed" amount="6.25" />
           <ReduceAffliction type="damage" amount="0.3" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork1.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork2.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork3.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork4.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork5.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
-        <StatusEffect type="OnSecondaryUse" target="Character" comparison="And" disabledeltatime="true" stackable="false">
+        <StatusEffect type="OnUse" target="Character" comparison="And" stackable="false">
           <Conditional InWater="false" />
           <Conditional hunger="gt 0.5" />
           <ReduceAffliction type="hunger" amount="0.5" />
         </StatusEffect>
-        <StatusEffect type="OnSecondaryUse" target="Character" comparison="And" disabledeltatime="true" stackable="false">
+        <StatusEffect type="OnUse" target="Character" comparison="And" stackable="false">
           <Conditional InWater="false" />
           <Conditional thirst="gt 0.2" />
           <ReduceAffliction type="thirst" amount="0.2" />
         </StatusEffect>
-        <StatusEffect type="OnSecondaryUse" target="Character" comparison="And" disabledeltatime="true" stackable="false">
+        <StatusEffect type="OnUse" target="Character" comparison="And" stackable="false">
           <Conditional InWater="false" />
           <Conditional trait_likes_sandwiches="gt 0" />
           <ReduceAffliction identifier="mood" amount="2.0" />
@@ -301,32 +297,27 @@
         </StatusEffect>
 
         <!--////////// REGULAR EATING \\\\\\\\\\-->
-        <!-- Use the item when it's held and the fork in the other hand is used (indicated by applying a "usingfork" tag on the character which this item checks for) -->
-        <StatusEffect type="OnActive" target="This" Condition="-4.0" disabledeltatime="true" stackable="false" comparison="And">
+        <StatusEffect type="OnUse" target="This" Condition="-4.0" stackable="false" comparison="And">
           <Conditional InWater="false" />
         </StatusEffect>
-        <StatusEffect type="OnSecondaryUse" target="Character" disabledeltatime="true" stackable="false" comparison="And">
+        <StatusEffect type="OnUse" target="Character" stackable="false" comparison="And">
           <Conditional InWater="false" />
           <Affliction identifier="he-stuffed" amount="10.0" />
           <ReduceAffliction type="damage" amount="0.3" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork1.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork2.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork3.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork4.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork5.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
-        <StatusEffect type="OnSecondaryUse" target="Character" comparison="And" disabledeltatime="true" stackable="false">
+        <StatusEffect type="OnUse" target="Character" comparison="And" stackable="false">
           <Conditional InWater="false" />
           <Conditional hunger="gt 0.5" />
           <ReduceAffliction type="hunger" amount="0.5" />
         </StatusEffect>
-        <StatusEffect type="OnSecondaryUse" target="Character" comparison="And" disabledeltatime="true" stackable="false">
+        <StatusEffect type="OnUse" target="Character" comparison="And" stackable="false">
           <Conditional InWater="false" />
           <Conditional thirst="gt 0.075" />
           <ReduceAffliction type="thirst" amount="0.075" />
         </StatusEffect>
-        <StatusEffect type="OnSecondaryUse" target="Character" comparison="And" disabledeltatime="true" stackable="false">
+        <StatusEffect type="OnUse" target="Character" comparison="And" stackable="false">
           <Conditional InWater="false" />
           <Conditional trait_likes_sandwiches="gt 0" />
           <ReduceAffliction identifier="mood" amount="2.0" />
@@ -405,28 +396,23 @@
         </StatusEffect>
 
         <!--////////// REGULAR EATING \\\\\\\\\\-->
-        <!-- Use the item when it's held and the fork in the other hand is used (indicated by applying a "usingfork" tag on the character which this item checks for) -->
-        <StatusEffect type="OnActive" target="This" Condition="-4.0" disabledeltatime="true" stackable="false" comparison="And">
+        <StatusEffect type="OnUse" target="This" Condition="-4.0" stackable="false" comparison="And">
           <Conditional InWater="false" />
         </StatusEffect>
-        <StatusEffect type="OnSecondaryUse" target="Character" disabledeltatime="true" stackable="false" comparison="And">
+        <StatusEffect type="OnUse" target="Character" stackable="false" comparison="And">
           <Conditional InWater="false" />
           <Affliction identifier="he-increasedswimmingspeedcrawler" amount="16.0" />
           <Affliction identifier="he-stuffed" amount="7.5" />
           <ReduceAffliction type="damage" amount="0.25" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork1.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork2.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork3.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork4.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork5.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
-        <StatusEffect type="OnSecondaryUse" target="Character" comparison="And" disabledeltatime="true" stackable="false">
+        <StatusEffect type="OnUse" target="Character" comparison="And" stackable="false">
           <Conditional InWater="false" />
           <Conditional hunger="gt 0.5" />
           <ReduceAffliction type="hunger" amount="0.5" />
         </StatusEffect>
-        <StatusEffect type="OnSecondaryUse" target="Character" comparison="And" disabledeltatime="true" stackable="false">
+        <StatusEffect type="OnUse" target="Character" comparison="And" stackable="false">
           <Conditional InWater="false" />
           <Conditional trait_likes_omelete="gt 0" />
           <ReduceAffliction identifier="mood" amount="2.0" />
@@ -521,28 +507,24 @@
 
         <!--////////// REGULAR EATING \\\\\\\\\\-->
         <!-- Use the item when it's held and the fork in the other hand is used (indicated by applying a "usingfork" tag on the character which this item checks for) -->
-        <StatusEffect type="OnActive" target="This" Condition="-4.0" disabledeltatime="true" stackable="false" comparison="And">
+        <StatusEffect type="OnUse" target="This" Condition="-4.0" stackable="false" comparison="And">
           <Conditional InWater="false" />
         </StatusEffect>
-        <StatusEffect type="OnSecondaryUse" target="Character" disabledeltatime="true" stackable="false" comparison="And">
+        <StatusEffect type="OnUse" target="Character" stackable="false" comparison="And">
           <Conditional InWater="false" />
           <Affliction identifier="he-damageresistancemudraptor" amount="16.0" />
           <Affliction identifier="he-increasedwalkingspeedmudraptor" amount="16.0" />
           <Affliction identifier="he-stuffed" amount="7.5" />
           <ReduceAffliction type="damage" amount="0.25" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork1.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork2.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork3.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork4.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork5.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
-        <StatusEffect type="OnSecondaryUse" target="Character" comparison="And" disabledeltatime="true" stackable="false">
+        <StatusEffect type="OnUse" target="Character" comparison="And" stackable="false">
           <Conditional InWater="false" />
           <Conditional hunger="gt 0.5" />
           <ReduceAffliction type="hunger" amount="0.5" />
         </StatusEffect>
-        <StatusEffect type="OnSecondaryUse" target="Character" comparison="And" disabledeltatime="true" stackable="false">
+        <StatusEffect type="OnUse" target="Character" comparison="And" stackable="false">
           <Conditional InWater="false" />
           <Conditional trait_likes_omelete="gt 0" />
           <ReduceAffliction identifier="mood" amount="2.0" />
@@ -621,27 +603,23 @@
 
         <!--////////// REGULAR EATING \\\\\\\\\\-->
         <!-- Use the item when it's held and the fork in the other hand is used (indicated by applying a "usingfork" tag on the character which this item checks for) -->
-        <StatusEffect type="OnActive" target="This" Condition="-4.0" disabledeltatime="true" stackable="false" comparison="And">
+        <StatusEffect type="OnUse" target="This" Condition="-4.0" stackable="false" comparison="And">
           <Conditional InWater="false" />
         </StatusEffect>
-        <StatusEffect type="OnSecondaryUse" target="Character" disabledeltatime="true" stackable="false" comparison="And">
+        <StatusEffect type="OnUse" target="Character" stackable="false" comparison="And">
           <Conditional InWater="false" />
           <Affliction identifier="he-decreasedoxygenconsumption" amount="16.0" />
           <Affliction identifier="he-stuffed" amount="7.5" />
           <ReduceAffliction type="damage" amount="0.25" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork1.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork2.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork3.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork4.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork5.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
-        <StatusEffect type="OnSecondaryUse" target="Character" comparison="And" disabledeltatime="true" stackable="false">
+        <StatusEffect type="OnUse" target="Character" comparison="And" stackable="false">
           <Conditional InWater="false" />
           <Conditional hunger="gt 0.5" />
           <ReduceAffliction type="hunger" amount="0.5" />
         </StatusEffect>
-        <StatusEffect type="OnSecondaryUse" target="Character" comparison="And" disabledeltatime="true" stackable="false">
+        <StatusEffect type="OnUse" target="Character" comparison="And" stackable="false">
           <Conditional InWater="false" />
           <Conditional trait_likes_omelete="gt 0" />
           <ReduceAffliction identifier="mood" amount="2.0" />
