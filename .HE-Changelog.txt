@@ -35,10 +35,10 @@ Changelog:
 - Integrated: "Tiredness" and "Mood" from NEEDS. These are optional and can each be toggled via an item at vending machines or forced via a separately available "Enforcer" patch
 - (WIP) Added "Electric Grill". Used to cook multiple meats simultaneously
 - (TODO) Rework of almost all meat related recipes. For example burgers and hotdogs will now be put together on the cutting board while the meat is cooked seperately on the stove with either a pan or cooking pot
-- Rescaled burgers, hotdogs, filets and roasts. They felt a bit oversized previously
-- Reduced amount of alien blood gained from deconstructing meat
+- Rescaled burgers and hotdogs. They felt a bit oversized previously
+- Severely reduced amount of alien blood gained from deconstructing meat
 - Removed the override for "Adrenaline" since the vanilla game now cures stun with it by default
-- Disabled "Starvation Conciousness Regainer from spawning purchasing and crafting since you can just feed someone unconcious with regular food and drinks to help them out
+- Disabled "Starvation Conciousness Regainer" from spawning purchasing and crafting since you can just feed someone unconcious with regular food and drinks to help them out
 
 Enforced:
 
