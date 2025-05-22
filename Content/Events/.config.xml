@@ -33,7 +33,7 @@
         <Success>
           <StatusEffectAction targettag="player">
             <StatusEffect target="This">
-              <Conditional sleepaffliction="lte 0" />
+              <Conditional fatigue="lte 0" />
               <GiveTalentInfo talentidentifiers="he-sleepyeuropan" />
             </StatusEffect>
           </StatusEffectAction>

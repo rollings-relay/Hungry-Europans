@@ -2,8 +2,8 @@
 <Override>
   <Afflictions>
     <!-- NEEDS INTEGRATION -->
-    <Affliction name="Tiredness"
-      identifier="sleepaffliction"
+    <Affliction name="Fatigue"
+      identifier="fatigue"
       description=""
       type="sleep"
       limbspecific="false"
@@ -20,11 +20,15 @@
         <StatValue stattype="MeleeAttackSpeed" value="+0.05" />
         <StatValue stattype="SwimmingSpeed" value="+0.05" />-->
       </Effect>
-      <Effect minstrength="20.1" maxstrength="50" strengthchange="0.0" />
-      <Effect minstrength="50" maxstrength="100" strengthchange="0.0" minscreenblur="0.0" maxscreenblur="1.0" minchromaticaberration="0.0" maxchromaticaberration="80.0" />
+      <Effect minstrength="20" maxstrength="50" strengthchange="0.0" />
+      <Effect minstrength="50" maxstrength="100" strengthchange="0.0" minscreenblur="0.0" maxscreenblur="1.0" minchromaticaberration="0.0" maxchromaticaberration="80.0">
+        <StatusEffect type="OnActive" target="Character" interval="1">
+          <Affliction identifier="mood" amount="0.05" />
+        </StatusEffect>
+      </Effect>
       <PeriodicEffect mininterval="30" maxinterval="120">
         <StatusEffect type="OnActive" target="Character" comparison="and" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
-          <Conditional sleepaffliction="gte 80" />
+          <Conditional fatigue="gte 80" />
           <Affliction identifier="he-exhaustedsleep" amount="8" probability="0.2" />
           <Affliction identifier="he-exhaustedsleep" amount="6" probability="0.2" />
           <Affliction identifier="he-exhaustedsleep" amount="4" probability="0.2" />
@@ -32,7 +36,7 @@
           <Affliction identifier="he-exhaustedsleep" amount="1" probability="0.2" />
         </StatusEffect>
         <StatusEffect type="OnActive" target="Character" comparison="and" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
-          <Conditional sleepaffliction="gte 100" />
+          <Conditional fatigue="gte 100" />
           <Affliction identifier="he-exhaustedsleep" amount="20" probability="0.5" />
           <Affliction identifier="he-exhaustedsleep" amount="15" probability="0.75" />
           <Affliction identifier="he-exhaustedsleep" amount="10" probability="0.75" />

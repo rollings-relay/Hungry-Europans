@@ -20,7 +20,7 @@
     </Affliction>
     <!-- NEEDS INTEGRATION -->
     <Affliction name="Tiredness"
-      identifier="sleepaffliction"
+      identifier="fatigue"
       description=""
       type="sleep"
       limbspecific="false"
@@ -42,14 +42,14 @@
       </Effect>
       <PeriodicEffect mininterval="20" maxinterval="180">
         <StatusEffect target="Character" comparison="and">
-          <Conditional sleepaffliction="gte 50" />
+          <Conditional fatigue="gte 50" />
           <Conditional hasspecifiertag="male" />
           <!-- <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Tiredness/Yawnmale1.ogg" range="400" selectionmode="Random" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Tiredness/Yawnmale2.ogg" range="400" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Tiredness/Yawnmale3.ogg" range="400" /> -->
         </StatusEffect>
         <StatusEffect target="Character" comparison="and">
-          <Conditional sleepaffliction="gte 50" />
+          <Conditional fatigue="gte 50" />
           <Conditional hasspecifiertag="female" />
           <!-- <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Tiredness/Yawnfemale1.ogg" range="400" selectionmode="Random" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Tiredness/Yawnfemale2.ogg" range="400" />
@@ -293,8 +293,8 @@
         </StatusEffect>
         <!-- only increase tiredness if it's enabled -->
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
-          <Conditional sleepaffliction="gt 0" />
-          <Affliction identifier="sleepaffliction" strength="0.2" probability="0.1" />
+          <Conditional fatigue="gt 0" />
+          <Affliction identifier="fatigue" strength="0.2" probability="0.1" />
         </StatusEffect>
         <StatusEffect target="Character">
           <TriggerAnimation Type="Walk" filename="DrunkenWalk" priority="6" ExpectedSpecies="Human" />
@@ -333,8 +333,8 @@
         </StatusEffect>
         <!-- only increase tiredness if it's enabled -->
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
-          <Conditional sleepaffliction="gt 0" />
-          <Affliction identifier="sleepaffliction" strength="0.4" probability="0.2" />
+          <Conditional fatigue="gt 0" />
+          <Affliction identifier="fatigue" strength="0.4" probability="0.2" />
         </StatusEffect>
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional he-alcoholism="gte 20" />
@@ -378,8 +378,8 @@
         </StatusEffect>
         <!-- only increase tiredness if it's enabled -->
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
-          <Conditional sleepaffliction="gt 0" />
-          <Affliction identifier="sleepaffliction" strength="0.6" probability="0.5" />
+          <Conditional fatigue="gt 0" />
+          <Affliction identifier="fatigue" strength="0.6" probability="0.5" />
         </StatusEffect>
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional he-alcoholism="gte 20" />
