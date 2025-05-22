@@ -288,14 +288,14 @@
         </StatusEffect>
       </Repairable>
       <ItemContainer selectkey="Select" capacity="1" canbeselected="true" hideitems="true" slotsperrow="2" uilabel="" allowuioverlap="true">
-        <SlotIcon slotindex="1" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="492,0,85,85" origin="0.5,0.5" />
-        <Containable items="he-sugar" />
+        <!--<SlotIcon slotindex="1" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="492,0,85,85" origin="0.5,0.5" />-->
+        <Containable items="distilleringredient" />
         <SubContainer capacity="1" maxstacksize="1">
-          <Containable items="yeastshroom" />
+          <Containable items="distilleradditive,yeastshroom" />
         </SubContainer>
       </ItemContainer>
       <ItemContainer selectkey="Select" capacity="3" canbeselected="true" hideitems="true" slotsperrow="3" uilabel="" allowuioverlap="true">
-        <Containable items="ethanol" />
+        <Containable items="smallitem" />
       </ItemContainer>
     </Item>
     <Item name="Brewing Kettle" identifier="he-brewkettle" tags="brewkettle,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Brewery" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="Used to brew kegs of almost any kind of beverage. Needs power." isshootable="true" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2" canflipx="true">
