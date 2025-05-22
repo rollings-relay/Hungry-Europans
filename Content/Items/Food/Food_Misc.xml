@@ -859,11 +859,7 @@
       <!-- TODO: Create new "dough" item using this recipe on cutting board and make bread use dough as recipe instead. Same for Burger and Hotdog Buns and Pizza -->
       <Fabricate suitablefabricators="oven" requiredtime="150" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="cooking" level="40" />
-        <RequiredItem tag="cleanwater" UseCondition="True" MinCondition="0.99"/>
-        <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.1"/>
-        <RequiredItem identifier="he-sugar" UseCondition="True" MinCondition="0.25"/>
-        <RequiredItem identifier="he-flour" UseCondition="True" MinCondition="0.5"/>
-        <RequiredItem identifier="yeastshroom" amount="1"/>
+        <RequiredItem identifier="he-dough" amount="1" />
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="72" height="34" density="9" />
@@ -1163,9 +1159,9 @@
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="kitchen" secondary="table,crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="86,465,42,20" depth="0.6" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="20" requiresrecipe="false" amount="6">
+      <Fabricate suitablefabricators="oven" requiredtime="10" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="cooking" level="30" />
-        <RequiredItem identifier="he-bread" amount="1"/>
+        <RequiredItem identifier="he-dough" mincondition="0.25" />
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="42" radius="10" density="6" />
@@ -1464,9 +1460,9 @@
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="kitchen" secondary="table,crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="147,467,53,18" depth="0.6" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="20" requiresrecipe="false" amount="10">
+      <Fabricate suitablefabricators="oven" requiredtime="10" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="cooking" level="30" />
-        <RequiredItem identifier="he-bread" amount="1"/>
+        <RequiredItem identifier="he-dough" mincondition="0.25" />
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="53" radius="18" density="6" />
@@ -1759,7 +1755,7 @@
         <Containable items="poison,ethanol,huskeggsbasic,huskeggs,paralyxis" />
       </ItemContainer>
     </Item>
-    <Item name="Bread Slices" identifier="he-breadslices" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="Two slices of bread. Great for making sandwiches!" Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+    <Item name="Bread Slices" identifier="he-breadslices" category="Misc" subcategory="Food" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="Two slices of bread. Great for making sandwiches!" Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
