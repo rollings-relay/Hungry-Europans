@@ -461,6 +461,10 @@
       <Deconstruct time="2" requireddeconstructor="deconstructor">
         <Item identifier="aluminium" amount="3" outcondition="1.0"/>
       </Deconstruct>
+      <Fabricate suitablefabricators="sink" requiredtime="900" requiresrecipe="false" amount="1">
+        <RequiredSkill identifier="cooking" level="30" />
+        <RequiredItem tag="hose" amount="1" />
+      </Fabricate>
       <Holdable canBeCombined="true" removeOnCombined="false" selectkey="Select" canbepicked="true" pickkey="Select" slots="RightHand+LeftHand" holdpos="40,-40" handle1="0,53" handle2="0,53" holdangle="3" msg="ItemMsgPickUpSelect" PickingTime="0" aimpos="65,-10" attachable="true" aimable="true">
         <StatusEffect type="OnSecondaryUse" target="This" interval="0.1" comparison="And">
           <Conditional Condition="lt 100" />
@@ -502,6 +506,11 @@
       <Fabricate suitablefabricators="brewkettle" requiredtime="300" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="cooking" level="20" />
         <RequiredItem identifier="he-kegseawater" amount="1" />
+      </Fabricate>
+      <Fabricate suitablefabricators="sink" requiredtime="900" requiresrecipe="false" amount="1">
+        <RequiredSkill identifier="cooking" level="30" />
+        <RequiredItem tag="hose" amount="1" />
+        <RequiredItem tag="waterfilter" UseCondition="True" MinCondition="0.2" />
       </Fabricate>
       <Fabricate suitablefabricators="stove" requiredtime="600" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="cooking" level="10" />
