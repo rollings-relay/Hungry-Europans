@@ -179,8 +179,8 @@
         </StatusEffect>
         <!-- only increase tiredness if it's enabled -->
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
-          <Conditional sleepaffliction="gt 0" />
-          <Affliction identifier="sleepaffliction" strength="0.2" probability="0.1" />
+          <Conditional fatigue="gt 0" />
+          <Affliction identifier="fatigue" strength="0.2" probability="0.1" />
         </StatusEffect>
         <!--<StatusEffect target="Character">
           <TriggerAnimation Type="Walk" filename="DrunkenWalk" priority="6" ExpectedSpecies="Human" />
@@ -220,8 +220,8 @@
         </StatusEffect>
         <!-- only increase tiredness if it's enabled -->
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
-          <Conditional sleepaffliction="gt 0" />
-          <Affliction identifier="sleepaffliction" strength="0.4" probability="0.2" />
+          <Conditional fatigue="gt 0" />
+          <Affliction identifier="fatigue" strength="0.4" probability="0.2" />
         </StatusEffect>
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional he-alcoholism="gte 20" />
@@ -268,8 +268,8 @@
         </StatusEffect>
         <!-- only increase tiredness if it's enabled -->
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
-          <Conditional sleepaffliction="gt 0" />
-          <Affliction identifier="sleepaffliction" strength="0.6" probability="0.5" />
+          <Conditional fatigue="gt 0" />
+          <Affliction identifier="fatigue" strength="0.6" probability="0.5" />
         </StatusEffect>
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional he-alcoholism="gte 20" />
@@ -1077,7 +1077,7 @@
       <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/PassOutOverlay.png" />
     </Affliction>
     <Affliction name="Sleeping" identifier="he-sleep" showiconthreshold="1000" showinhealthscannerthreshold="0" maxstrength="1" causespeechimpediment="true" afflictionoverlayalphaislinear="false" MinAfflictionOverlayAlphaMultiplier="0" MaxAfflictionOverlayAlphaMultiplier="1" healableinmedicalclinic="false" MedicalSkillGain="0.0">
-      <Effect minstrength="0" maxstrength="1" strengthchange="-0.9" MinAfflictionOverlayAlphaMultiplier="1" MaxAfflictionOverlayAlphaMultiplier="1">
+      <Effect minstrength="0" maxstrength="1" strengthchange="-0.9" resistancefor="he-exhaustedsleep" minresistance="1.0" maxresistance="1.0" MinAfflictionOverlayAlphaMultiplier="1" MaxAfflictionOverlayAlphaMultiplier="1">
         <StatusEffect target="Character" interval="1" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
           <ReduceAffliction type="hunger" strength="0.005" />
           <ReduceAffliction type="thirst" strength="0.01" />
@@ -1091,7 +1091,7 @@
           <ReduceAffliction identifier="opiateaddiction" strength="0.05" />
           <ReduceAffliction identifier="drunk" strength="0.05" />
           <reduceaffliction identifier="concussion" strength="0.02" />
-          <ReduceAffliction identifier="sleepaffliction" strength="0.5" />
+          <ReduceAffliction identifier="fatigue" strength="0.5" />
         </StatusEffect>
         <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
           <Conditional adrenalinerush="gt 0" />
@@ -1130,7 +1130,7 @@
       <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/PassOutOverlay.png" />
     </Affliction>
     <Affliction name="Sleeping" nameidentifier="he-sleep" identifier="he-exhaustedsleep" showiconthreshold="1000" showinhealthscannerthreshold="0" maxstrength="60" causespeechimpediment="true" afflictionoverlayalphaislinear="false" MinAfflictionOverlayAlphaMultiplier="0" MaxAfflictionOverlayAlphaMultiplier="1" healableinmedicalclinic="false" MedicalSkillGain="0.0">
-      <Effect minstrength="0" maxstrength="60" resistancefor="sleepaffliction" minresistance="1.0" maxresistance="1.0" strengthchange="-1" MinAfflictionOverlayAlphaMultiplier="1" MaxAfflictionOverlayAlphaMultiplier="1">
+      <Effect minstrength="0" maxstrength="60" resistancefor="fatigue" minresistance="1.0" maxresistance="1.0" strengthchange="-1" MinAfflictionOverlayAlphaMultiplier="1" MaxAfflictionOverlayAlphaMultiplier="1">
         <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
           <ReduceAffliction type="hunger" strength="0.005" />
           <ReduceAffliction type="thirst" strength="0.01" />
@@ -1144,7 +1144,7 @@
           <ReduceAffliction identifier="opiateaddiction" strength="0.05" />
           <ReduceAffliction identifier="drunk" strength="0.05" />
           <ReduceAffliction identifier="concussion" strength="0.02" />
-          <ReduceAffliction identifier="sleepaffliction" strength="0.5" />
+          <ReduceAffliction identifier="fatigue" strength="0.5" />
         </StatusEffect>
         <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
           <Conditional adrenalinerush="gt 0" />
