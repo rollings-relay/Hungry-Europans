@@ -62,7 +62,8 @@
       <Projectile characterusable="false" launchimpulse="18.0" sticktocharacters="true" launchrotation="-90" inheritstatuseffectsfrom="MeleeWeapon" inheritrequiredskillsfrom="MeleeWeapon" />
       <SkillRequirementHint identifier="medical" level="50" />
     </Item>
-    <SulphuricAcid name="" identifier="sulphuricacid" category="Material" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="mediccrate" description="" Tags="smallitem,chem,poison" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light" isshootable="true" RequireAimToUse="True">
+    <!-- Sulphuric Acid override to make it drinkable and add distiller tag -->
+    <SulphuricAcid name="" identifier="sulphuricacid" category="Material" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="mediccrate" description="" Tags="smallitem,chem,poison,distilleradditive" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light" isshootable="true" RequireAimToUse="True">
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
       <PreferredContainer secondary="wrecktoxcab,abandonedtoxcab" spawnprobability="0.5" />
       <PreferredContainer primary="toxcab" secondary="toxcontainer"/>
