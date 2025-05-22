@@ -1201,6 +1201,9 @@
         <SubContainer capacity="1">
           <Containable items="waterfilter" />
         </SubContainer>
+        <SubContainer capacity="1">
+          <Containable items="hose" />
+        </SubContainer>
       </ItemContainer>
       <ItemContainer selectkey="Select" capacity="1" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="" allowuioverlap="true">
         <Containable items="pot,emptybottle,bottle,tableware"/>
