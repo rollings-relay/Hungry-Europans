@@ -375,38 +375,38 @@
     <!-- COALITION PREMIUM -->
     <Affliction name="Coalition Premium"
       identifier="he-coalitionpremium"
-      description="Your turret operating skills are temporarily increased. Turrets you operate use 30% less power."
+      description="Your turret operating skills are temporarily increased. Turrets you operate use up to 50% less power depending on the strength of the effect."
       type="drinkbuff"
       isbuff="true"
       limbspecific="false"
       indicatorlimb="Torso"
       maxstrength="1800"
       MedicalSkillGain="0.0">
-      <Effect minstrength="0" maxstrength="250" strengthchange="-1" resistancefor="jovianforce" minresistance="1.0" maxresistance="1.0">
-        <StatValue stattype="TurretPowerCostReduction" minvalue="0.0" maxvalue="0.5" />
+      <Effect minstrength="0" maxstrength="250" strengthchange="-1">
+        <StatValue stattype="TurretPowerCostReduction" minvalue="0.0" maxvalue="0.25" />
       </Effect>
-      <Effect minstrength="250" maxstrength="1800" strengthchange="-1" resistancefor="jovianforce" minresistance="1.0" maxresistance="1.0">
-        <StatValue stattype="TurretPowerCostReduction" minvalue="0.5" maxvalue="0.5" />
+      <Effect minstrength="250" maxstrength="1800" strengthchange="-1">
+        <StatValue stattype="TurretPowerCostReduction" minvalue="0.25" maxvalue="0.5" />
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
     </Affliction>
     <!-- JOVIAN FORCE -->
     <Affliction name="Jovian Force"
       identifier="he-jovianforce"
-      description="Your turret operating skills are temporarily increased. Turrets you operate shoot 30% faster."
+      description="Your turret operating skills are temporarily increased. Turrets you operate shoot up to 50% faster depending on the strength of the effect."
       type="drinkbuff"
       isbuff="true"
       limbspecific="false"
       indicatorlimb="Torso"
       maxstrength="1800"
       MedicalSkillGain="0.0">
-      <Effect minstrength="0" maxstrength="250" strengthchange="-1" resistancefor="coalitionpremium" minresistance="1.0" maxresistance="1.0">
-        <StatValue stattype="TurretAttackSpeed" minvalue="0.0" maxvalue="0.5" />
-        <StatValue stattype="TurretChargeSpeed" minvalue="0.0" maxvalue="0.5" />
+      <Effect minstrength="0" maxstrength="250" strengthchange="-1">
+        <StatValue stattype="TurretAttackSpeed" minvalue="0.0" maxvalue="0.25" />
+        <StatValue stattype="TurretChargeSpeed" minvalue="0.0" maxvalue="0.25" />
       </Effect>
-      <Effect minstrength="250" maxstrength="1800" strengthchange="-1" resistancefor="coalitionpremium" minresistance="1.0" maxresistance="1.0">
-        <StatValue stattype="TurretAttackSpeed" minvalue="0.5" maxvalue="0.5" />
-        <StatValue stattype="TurretChargeSpeed" minvalue="0.5" maxvalue="0.5" />
+      <Effect minstrength="250" maxstrength="1800" strengthchange="-1">
+        <StatValue stattype="TurretAttackSpeed" minvalue="0.25" maxvalue="0.5" />
+        <StatValue stattype="TurretChargeSpeed" minvalue="0.25" maxvalue="0.5" />
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
     </Affliction>
