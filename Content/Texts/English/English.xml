@@ -922,8 +922,10 @@ SEARCH FOR THE FOLLOWING:                                                       
 
 <distiller.distill>DISTILL</distiller.distill><!--Patch 10-->
 <distiller.ethanol>READY TO DISTILL ETHANOL</distiller.ethanol><!--Patch 10-->
-<distiller.empty>DISTILLER READY\nPLEASE INSERT THE FOLLOWING:\nA PACK OF SUGAR -INTO- INPUT\nA YEAST SHROOM -INTO- INPUT</distiller.empty><!--Patch 10-->
-<distiller.missingitem.yeastshroom>SUGAR INSERTED\nERROR: NO YEAST SHROOM FOUND! PLEASE INSERT A YEASTSHROOM.</distiller.missingitem.yeastshroom><!--Patch 10-->
+<distiller.flourmixture>READY TO DISTILL SYNTHETIC FLOUR MIXTURE</distiller.flourmixture><!--Patch 17-->
+<distiller.empty>DISTILLER READY\nPLEASE INSERT ONE OF THE FOLLOWING:\n-PACK OF SUGAR \n-PULVERIZED SEEDS PACK</distiller.empty><!--Patch 17-->
+<distiller.missingitem.yeastshroom>SUGAR INSERTED\nERROR: NO YEAST SHROOM FOUND! PLEASE INSERT 1X YEASTSHROOM.</distiller.missingitem.yeastshroom><!--Patch 17-->
+<distiller.missingitem.sulphuricacid>PULVERIZED SEEDS PACK INSERTED\nERROR: NO ACID FOUND! PLEASE INSERT 1X SULPHURIC ACID.</distiller.missingitem.sulphuricacid><!--Patch 17-->
 <he-distiller.output>Output:</he-distiller.output><!--Patch 10-->
 
 <interaction.emptybottle>Empty the Bottle</interaction.emptybottle><!--Patch 11-->
