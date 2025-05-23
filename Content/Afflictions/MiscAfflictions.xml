@@ -338,7 +338,7 @@
         maxfacetint="255,0,0,100"
         resistancefor="damage"
         minresistance="0.1"
-        maxresistance="0.5">
+        maxresistance="0.25">
         <!-- remove "normal" drunkenness -->
         <StatusEffect target="Character" setvalue="true">
           <ReduceAffliction identifier="drunk" strength="100" />
@@ -367,8 +367,8 @@
         minfacetint="255,0,0,150"
         maxfacetint="255,0,0,150"
         resistancefor="damage"
-        minresistance="0.5"
-        maxresistance="0.8">
+        minresistance="0.25"
+        maxresistance="0.5">
         <!-- remove "normal" drunkenness -->
         <StatusEffect target="Character" setvalue="true">
           <ReduceAffliction identifier="drunk" strength="100" />
