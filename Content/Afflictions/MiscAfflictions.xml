@@ -2,8 +2,7 @@
 <Override>
   <Afflictions>
     <!-- Hungry Europans - Cleanup Duty Compatibility | Does nothing and removes itself without the add-on -->
-    <Affliction
-      name=""
+    <Affliction name="Spill"
       identifier="spill"
       limbspecific="false"
       indicatorlimb="Head"
@@ -97,7 +96,7 @@
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="128,896,128,128" color="10,193,114,255" origin="0,0" />
     </Affliction>
     <!-- DRUNKNESS OVERRIDE -->
-    <Affliction
+    <Affliction name="Drunk"
       identifier="drunk"
       description="The smell of alcohol rises from them like a vapor, their speech slurs a little, and their eyes fail to focus."
       type="debuff"
@@ -235,7 +234,7 @@
       <!-- After drinking enough the effect starts to get lethal -->
       <Effect minstrength="80" maxstrength="100"
         minvitalitydecrease="0"
-        maxvitalitydecrease="99"
+        maxvitalitydecrease="110"
         minscreendistort="1.0"
         maxscreendistort="3.0"
         minscreenblur="1.0"
@@ -282,7 +281,7 @@
       </Effect>
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
-    <Affliction
+    <Affliction name="Drunk (No Debuffs)"
       identifier="drunknodebuffs"
       type="debuff"
       translationoverride="drunk"
@@ -391,8 +390,7 @@
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
     <!--NAUSEA OVERRIDE TO REMOVE STUN TO ENABLE STAYING IN BED WHILE PUKING-->
-    <Affliction
-      name="Nausea"
+    <Affliction name="Nausea"
       identifier="nausea"
       description="The skin is clammy and the patient is vomiting periodically."
       type="nausea"
@@ -461,8 +459,7 @@
       </PeriodicEffect>
       <icon texture="Content/UI/CommandUIAtlas.png" sourcerect="896,896,128,128" origin="0,0" />
     </Affliction>
-    <Stun
-      name="Stun"
+    <Stun name="Stun"
       identifier="stun"
       description="The patient is dazed and unresponsive."
       type="stun"
@@ -500,10 +497,10 @@
       limbspecific="false"
       indicatorlimb="Torso"
       activationthreshold="0"
-      showiconthreshold="1000"
+      showiconthreshold="0"
       showicontoothersthreshold="1000"
       hideiconafterdelay="true"
-      showinhealthscannerthreshold="1000"
+      showinhealthscannerthreshold="0"
       treatmentthreshold="1000"
       maxstrength="100"
       affectmachines="false"
@@ -571,10 +568,8 @@
         textidentifier="afflictiondescription.he-internalburn.high"
         minstrength="60"
         maxstrength="100" />
-      <Effect minstrength="0" maxstrength="20" strengthchange="-0.1" multiplybymaxvitality="true" />
-      <Effect minstrength="20" maxstrength="100" strengthchange="-0.1" multiplybymaxvitality="true"
-        minvitalitydecrease="0"
-        maxvitalitydecrease="110" />
+      <Effect minstrength="0" maxstrength="20" strengthchange="-0.1" />
+      <Effect minstrength="20" maxstrength="100" strengthchange="-0.1" minvitalitydecrease="0" maxvitalitydecrease="110" />
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="768,640,128,128" color="195,104,60,255" origin="0,0" />
     </Affliction>
     <Affliction name="Stomach Ache"
@@ -1129,7 +1124,7 @@
       -->
       <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/PassOutOverlay.png" />
     </Affliction>
-    <Affliction name="Sleeping" nameidentifier="he-sleep" identifier="he-exhaustedsleep" showiconthreshold="1000" showinhealthscannerthreshold="0" maxstrength="60" causespeechimpediment="true" afflictionoverlayalphaislinear="false" MinAfflictionOverlayAlphaMultiplier="0" MaxAfflictionOverlayAlphaMultiplier="1" healableinmedicalclinic="false" MedicalSkillGain="0.0">
+    <Affliction name="" nameidentifier="he-sleep" identifier="he-exhaustedsleep" showiconthreshold="1000" showinhealthscannerthreshold="0" maxstrength="60" causespeechimpediment="true" afflictionoverlayalphaislinear="false" MinAfflictionOverlayAlphaMultiplier="0" MaxAfflictionOverlayAlphaMultiplier="1" healableinmedicalclinic="false" MedicalSkillGain="0.0">
       <Effect minstrength="0" maxstrength="60" resistancefor="fatigue" minresistance="1.0" maxresistance="1.0" strengthchange="-1" MinAfflictionOverlayAlphaMultiplier="1" MaxAfflictionOverlayAlphaMultiplier="1">
         <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
           <ReduceAffliction type="hunger" strength="0.005" />
