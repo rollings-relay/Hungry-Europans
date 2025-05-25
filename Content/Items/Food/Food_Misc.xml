@@ -1153,7 +1153,7 @@
         <Containable items="poison,ethanol,huskeggsbasic,huskeggs,paralyxis" />
       </ItemContainer>
     </Item>
-    <Item name="Burger Buns" identifier="he-burgerbun" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+    <Item name="Burger Buns" identifier="he-burgerbun" category="Misc" subcategory="Food" maxstacksize="5" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
@@ -1161,7 +1161,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="86,465,42,20" depth="0.6" origin="0.5,0.5" />
       <Fabricate suitablefabricators="oven" requiredtime="10" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="cooking" level="30" />
-        <RequiredItem identifier="he-dough" mincondition="0.25" />
+        <RequiredItem identifier="he-dough" mincondition="0.2" />
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="42" radius="10" density="6" />
@@ -1454,7 +1454,7 @@
         <Containable items="poison,ethanol,huskeggsbasic,huskeggs,paralyxis" />
       </ItemContainer>
     </Item>
-    <Item name="Hotdog Bun" identifier="he-hotdogbun" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+    <Item name="Hotdog Bun" identifier="he-hotdogbun" category="Misc" subcategory="Food" maxstacksize="5" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
@@ -1462,7 +1462,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="147,467,53,18" depth="0.6" origin="0.5,0.5" />
       <Fabricate suitablefabricators="oven" requiredtime="10" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="cooking" level="30" />
-        <RequiredItem identifier="he-dough" mincondition="0.25" />
+        <RequiredItem identifier="he-dough" mincondition="0.2" />
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="53" radius="18" density="6" />
