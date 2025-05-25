@@ -1,6 +1,97 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Override>
   <Afflictions>
+    <Affliction
+      name="Worm Infection"
+      identifier="worminfection"
+      description="You are infected with parasitic worms"
+      type="debuff"
+      limbspecific="false"
+      indicatorlimb="Torso"
+      activationthreshold="0"
+      showiconthreshold="0"
+      showicontoothersthreshold="1000"
+      hideiconafterdelay="true"
+      showinhealthscannerthreshold="75"
+      treatmentthreshold="1000"
+      maxstrength="100"
+      affectmachines="false"
+      MedicalSkillGain="0.0"
+      healableinmedicalclinic="false">
+      <Effect minstrength="0" maxstrength="100" strengthchange="0.01" />
+      <PeriodicEffect mininterval="180" maxinterval="420">
+        <StatusEffect type="OnActive" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true" comparison="And">
+          <Conditional worminfection="gte 25" />
+          <Conditional worminfection="lt 50" />
+          <Affliction identifier="he-stomachache" strength="20" />
+          <Affliction identifier="he-stomachache" strength="10" probability="0.3" />
+          <Affliction identifier="he-stomachache" strength="8" probability="0.5" />
+          <Affliction identifier="he-stomachache" strength="6" probability="0.5" />
+          <Affliction identifier="he-stomachache" strength="4" probability="0.5" />
+          <Affliction identifier="he-stomachache" strength="2" probability="0.75" />
+        </StatusEffect>
+        <StatusEffect type="OnActive" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true" comparison="And">
+          <Conditional worminfection="gte 50" />
+          <Conditional worminfection="lt 75" />
+          <Affliction identifier="he-stomachache" strength="40" />
+          <Affliction identifier="he-stomachache" strength="20" probability="0.3" />
+          <Affliction identifier="he-stomachache" strength="16" probability="0.5" />
+          <Affliction identifier="he-stomachache" strength="12" probability="0.5" />
+          <Affliction identifier="he-stomachache" strength="8" probability="0.5" />
+          <Affliction identifier="he-stomachache" strength="4" probability="0.75" />
+        </StatusEffect>
+        <StatusEffect type="OnActive" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true" comparison="And">
+          <Conditional worminfection="gte 75" />
+          <Conditional worminfection="lt 100" />
+          <Affliction identifier="he-stomachache" strength="60" />
+          <Affliction identifier="he-stomachache" strength="30" probability="0.3" />
+          <Affliction identifier="he-stomachache" strength="24" probability="0.5" />
+          <Affliction identifier="he-stomachache" strength="18" probability="0.5" />
+          <Affliction identifier="he-stomachache" strength="12" probability="0.5" />
+          <Affliction identifier="he-stomachache" strength="6" probability="0.75" />
+        </StatusEffect>
+      </PeriodicEffect>
+      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
+    </Affliction>
+    <Affliction
+      name="Tapeworm Infection"
+      identifier="tapeworminfection"
+      description="You are infected with a tapeworm"
+      type="debuff"
+      limbspecific="false"
+      indicatorlimb="Torso"
+      activationthreshold="0"
+      showiconthreshold="0"
+      showicontoothersthreshold="1000"
+      hideiconafterdelay="true"
+      showinhealthscannerthreshold="75"
+      treatmentthreshold="1000"
+      maxstrength="100"
+      affectmachines="false"
+      MedicalSkillGain="0.0"
+      healableinmedicalclinic="false">
+      <Effect minstrength="0" maxstrength="25" strengthchange="0.01">
+        <StatusEffect type="OnActive" target="Character">
+          <Affliction identifier="hunger" strength="0.01" />
+        </StatusEffect>
+      </Effect>
+      <Effect minstrength="25" maxstrength="50" strengthchange="0.01">
+        <StatusEffect type="OnActive" target="Character">
+          <Affliction identifier="hunger" strength="0.02" />
+        </StatusEffect>
+      </Effect>
+      <Effect minstrength="50" maxstrength="75" strengthchange="0.01">
+        <StatusEffect type="OnActive" target="Character">
+          <Affliction identifier="hunger" strength="0.04" />
+        </StatusEffect>
+      </Effect>
+      <Effect minstrength="75" maxstrength="100" strengthchange="0.01">
+        <StatusEffect type="OnActive" target="Character">
+          <Affliction identifier="hunger" strength="0.08" />
+        </StatusEffect>
+      </Effect>
+      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
+    </Affliction>
     <!-- POISON EFFECTS -->
     <!-- APPLY MORBUSINE POISONING OVER TIME -->
     <Affliction
