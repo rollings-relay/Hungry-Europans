@@ -424,7 +424,117 @@
       </Projectile>
     </Item>
     <!-- EMPTY CANS -->
-    <Item name="Empty Can" identifier="he-emptycantonic" description="An empty aluminium can. Can be deconstructed into aluminium or thrown around." category="Misc" Tags="smallitem,emptycan" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_aluminiumcan">
+    <Item hideinmenus="true" DontCleanUp="true" name="Empty Can" identifier="trashcan_emptycanspawner" description="An empty aluminium can. Can be deconstructed into aluminium or thrown around." category="Hidden" Tags="smallitem" scale="0.5" impactsoundtag="impact_aluminiumcan">
+      <PreferredContainer primary="outposttrashcan" amount="1" spawnprobability="0.75" />
+      <Deconstruct time="1" chooserandom="true">
+        <Item identifier="aluminium" amount="1"/>
+        <Item identifier="aluminium" amount="0"/>
+        <Item identifier="aluminium" amount="0"/>
+      </Deconstruct>
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="432,488,22,23" depth="0.502" origin="0.5,0.5" />
+      <Body radius="8" height="15" density="13" friction="1.0" restitution="0.15" angulardamping="1.0" />
+      <ItemComponent canbeselected="false" canbepicked="false" allowingameediting="false">
+        <StatusEffect type="OnContained" target="This" oneshot="true" comparison="And" spawnitemrandomly="true">
+          <Conditional HasTag="outposttrashcan" targetcontainer="true" />
+          <Conditional noninteractable="false" targetcontainer="true" />
+          <Conditional nonplayerteaminteractable="false" targetcontainer="true" />
+          <Conditional HiddenInGame="false" targetcontainer="true" />
+          <SpawnItem identifier="effect_none" spawnposition="This" spawnifinventoryfull="false" />
+          <SpawnItem identifier="effect_none" spawnposition="This" spawnifinventoryfull="false" />
+          <SpawnItem identifier="effect_none" spawnposition="This" spawnifinventoryfull="false" />
+          <SpawnItem identifier="effect_none" spawnposition="This" spawnifinventoryfull="false" />
+          <SpawnItem identifier="effect_none" spawnposition="This" spawnifinventoryfull="false" />
+          <SpawnItem identifier="effect_none" spawnposition="This" spawnifinventoryfull="false" />
+          <SpawnItem identifier="he-emptycantonic" spawnposition="This" impulse="5" mincount="1" maxcount="2" aimspread="360" rotation="180" offset="200,0" />
+          <SpawnItem identifier="he-emptycanenergy1" spawnposition="This" impulse="5" mincount="1" maxcount="2" aimspread="360" rotation="180" offset="150,0" />
+          <SpawnItem identifier="he-emptycancola" spawnposition="This" impulse="5" mincount="1" maxcount="2" aimspread="360" rotation="180" offset="225,0" />
+          <SpawnItem identifier="he-emptycancolazero" spawnposition="This" impulse="5" mincount="1" maxcount="2" aimspread="360" rotation="180" offset="110,0" />
+        </StatusEffect>
+        <StatusEffect type="OnContained" target="This" oneshot="true" comparison="And" spawnitemrandomly="true">
+          <Conditional HasTag="outposttrashcan" targetcontainer="true" />
+          <Conditional noninteractable="false" targetcontainer="true" />
+          <Conditional nonplayerteaminteractable="false" targetcontainer="true" />
+          <Conditional HiddenInGame="false" targetcontainer="true" />
+          <SpawnItem identifier="effect_none" spawnposition="This" spawnifinventoryfull="false" />
+          <SpawnItem identifier="effect_none" spawnposition="This" spawnifinventoryfull="false" />
+          <SpawnItem identifier="effect_none" spawnposition="This" spawnifinventoryfull="false" />
+          <SpawnItem identifier="effect_none" spawnposition="This" spawnifinventoryfull="false" />
+          <SpawnItem identifier="effect_none" spawnposition="This" spawnifinventoryfull="false" />
+          <SpawnItem identifier="effect_none" spawnposition="This" spawnifinventoryfull="false" />
+          <SpawnItem identifier="he-emptycantonic" spawnposition="This" impulse="5" mincount="1" maxcount="2" aimspread="360" rotation="180" />
+          <SpawnItem identifier="he-emptycanenergy1" spawnposition="This" impulse="5" mincount="1" maxcount="2" aimspread="360" rotation="180" />
+          <SpawnItem identifier="he-emptycancola" spawnposition="This" impulse="5" mincount="1" maxcount="2" aimspread="360" rotation="180" />
+          <SpawnItem identifier="he-emptycancolazero" spawnposition="This" impulse="5" mincount="1" maxcount="2" aimspread="360" rotation="180" />
+        </StatusEffect>
+        <StatusEffect type="OnContained" target="This" oneshot="true" comparison="And" spawnitemrandomly="true">
+          <Conditional HasTag="outposttrashcan" targetcontainer="true" />
+          <Conditional noninteractable="false" targetcontainer="true" />
+          <Conditional nonplayerteaminteractable="false" targetcontainer="true" />
+          <Conditional HiddenInGame="false" targetcontainer="true" />
+          <SpawnItem identifier="effect_none" spawnposition="This" spawnifinventoryfull="false" />
+          <SpawnItem identifier="effect_none" spawnposition="This" spawnifinventoryfull="false" />
+          <SpawnItem identifier="effect_none" spawnposition="This" spawnifinventoryfull="false" />
+          <SpawnItem identifier="effect_none" spawnposition="This" spawnifinventoryfull="false" />
+          <SpawnItem identifier="effect_none" spawnposition="This" spawnifinventoryfull="false" />
+          <SpawnItem identifier="effect_none" spawnposition="This" spawnifinventoryfull="false" />
+          <SpawnItem identifier="he-emptycantonic" spawnposition="This" impulse="5" mincount="1" maxcount="2" aimspread="360" rotation="180" offset="-150,0" />
+          <SpawnItem identifier="he-emptycanenergy1" spawnposition="This" impulse="5" mincount="1" maxcount="2" aimspread="360" rotation="180" offset="-200,0" />
+          <SpawnItem identifier="he-emptycancola" spawnposition="This" impulse="5" mincount="1" maxcount="2" aimspread="360" rotation="180" offset="-225,0" />
+          <SpawnItem identifier="he-emptycancolazero" spawnposition="This" impulse="5" mincount="1" maxcount="2" aimspread="360" rotation="180" offset="-110,0" />
+        </StatusEffect>
+
+        <StatusEffect type="OnContained" target="This" oneshot="true" comparison="And" spawnitemrandomly="true">
+          <Conditional HasTag="outposttrashcan" targetcontainer="true" />
+          <Conditional noninteractable="false" targetcontainer="true" />
+          <Conditional nonplayerteaminteractable="false" targetcontainer="true" />
+          <Conditional HiddenInGame="false" targetcontainer="true" />
+          <SpawnItem identifier="effect_none" spawnposition="SameInventory" spawnifinventoryfull="false" />
+          <SpawnItem identifier="effect_none" spawnposition="SameInventory" spawnifinventoryfull="false" />
+          <SpawnItem identifier="effect_none" spawnposition="SameInventory" spawnifinventoryfull="false" />
+          <SpawnItem identifier="effect_none" spawnposition="SameInventory" spawnifinventoryfull="false" />
+          <SpawnItem identifier="effect_none" spawnposition="SameInventory" spawnifinventoryfull="false" />
+          <SpawnItem identifier="effect_none" spawnposition="SameInventory" spawnifinventoryfull="false" />
+          <SpawnItem identifier="he-emptycantonic" spawnposition="SameInventory" spawnifinventoryfull="false" />
+          <SpawnItem identifier="he-emptycanenergy1" spawnposition="SameInventory" spawnifinventoryfull="false" />
+          <SpawnItem identifier="he-emptycancola" spawnposition="SameInventory" spawnifinventoryfull="false" />
+          <SpawnItem identifier="he-emptycancolazero" spawnposition="SameInventory" spawnifinventoryfull="false" />
+        </StatusEffect>
+        <StatusEffect type="OnContained" target="This" oneshot="true" comparison="And" spawnitemrandomly="true">
+          <Conditional HasTag="outposttrashcan" targetcontainer="true" />
+          <Conditional noninteractable="false" targetcontainer="true" />
+          <Conditional nonplayerteaminteractable="false" targetcontainer="true" />
+          <Conditional HiddenInGame="false" targetcontainer="true" />
+          <SpawnItem identifier="effect_none" spawnposition="SameInventory" spawnifinventoryfull="false" />
+          <SpawnItem identifier="effect_none" spawnposition="SameInventory" spawnifinventoryfull="false" />
+          <SpawnItem identifier="effect_none" spawnposition="SameInventory" spawnifinventoryfull="false" />
+          <SpawnItem identifier="effect_none" spawnposition="SameInventory" spawnifinventoryfull="false" />
+          <SpawnItem identifier="effect_none" spawnposition="SameInventory" spawnifinventoryfull="false" />
+          <SpawnItem identifier="effect_none" spawnposition="SameInventory" spawnifinventoryfull="false" />
+          <SpawnItem identifier="he-emptycantonic" spawnposition="SameInventory" spawnifinventoryfull="false" />
+          <SpawnItem identifier="he-emptycanenergy1" spawnposition="SameInventory" spawnifinventoryfull="false" />
+          <SpawnItem identifier="he-emptycancola" spawnposition="SameInventory" spawnifinventoryfull="false" />
+          <SpawnItem identifier="he-emptycancolazero" spawnposition="SameInventory" spawnifinventoryfull="false" />
+        </StatusEffect>
+        <StatusEffect type="OnContained" target="This" oneshot="true" comparison="And" spawnitemrandomly="true">
+          <Conditional HasTag="outposttrashcan" targetcontainer="true" />
+          <Conditional noninteractable="false" targetcontainer="true" />
+          <Conditional nonplayerteaminteractable="false" targetcontainer="true" />
+          <Conditional HiddenInGame="false" targetcontainer="true" />
+          <Remove />
+          <SpawnItem identifier="effect_none" spawnposition="SameInventory" spawnifinventoryfull="false" />
+          <SpawnItem identifier="effect_none" spawnposition="SameInventory" spawnifinventoryfull="false" />
+          <SpawnItem identifier="effect_none" spawnposition="SameInventory" spawnifinventoryfull="false" />
+          <SpawnItem identifier="effect_none" spawnposition="SameInventory" spawnifinventoryfull="false" />
+          <SpawnItem identifier="effect_none" spawnposition="SameInventory" spawnifinventoryfull="false" />
+          <SpawnItem identifier="effect_none" spawnposition="SameInventory" spawnifinventoryfull="false" />
+          <SpawnItem identifier="he-emptycantonic" spawnposition="SameInventory" spawnifinventoryfull="false" />
+          <SpawnItem identifier="he-emptycanenergy1" spawnposition="SameInventory" spawnifinventoryfull="false" />
+          <SpawnItem identifier="he-emptycancola" spawnposition="SameInventory" spawnifinventoryfull="false" />
+          <SpawnItem identifier="he-emptycancolazero" spawnposition="SameInventory" spawnifinventoryfull="false" />
+        </StatusEffect>
+      </ItemComponent>
+    </Item>
+    <Item DontCleanUp="true" name="Empty Can" identifier="he-emptycantonic" description="An empty aluminium can. Can be deconstructed into aluminium or thrown around." category="Misc" Tags="smallitem,emptycan" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_aluminiumcan">
       <PreferredContainer secondary="wreckcrewcab,wreckstoragecab,wreckstorage,wreckengcab" minamount="1" maxamount="2" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab,abandonedengcab,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.01" />
@@ -453,7 +563,7 @@
         </StatusEffect>
       </Projectile>
     </Item>
-    <Item name="Empty Can" identifier="he-emptycanenergy1" description="An empty aluminium can. Can be deconstructed into aluminium or thrown around." category="Misc" Tags="smallitem,emptycan" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_aluminiumcan">
+    <Item DontCleanUp="true" name="Empty Can" identifier="he-emptycanenergy1" description="An empty aluminium can. Can be deconstructed into aluminium or thrown around." category="Misc" Tags="smallitem,emptycan" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_aluminiumcan">
       <PreferredContainer secondary="wreckcrewcab,wreckstoragecab,wreckstorage,wreckengcab" minamount="1" maxamount="2" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab,abandonedengcab,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.01" />
@@ -482,7 +592,7 @@
         </StatusEffect>
       </Projectile>
     </Item>
-    <Item name="Empty Can" identifier="he-emptycancola" description="An empty aluminium can. Can be deconstructed into aluminium or thrown around." category="Misc" Tags="smallitem,emptycan" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_aluminiumcan">
+    <Item DontCleanUp="true" name="Empty Can" identifier="he-emptycancola" description="An empty aluminium can. Can be deconstructed into aluminium or thrown around." category="Misc" Tags="smallitem,emptycan" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_aluminiumcan">
       <PreferredContainer secondary="wreckcrewcab,wreckstoragecab,wreckstorage,wreckengcab" minamount="1" maxamount="3" spawnprobability="0.03" />
       <PreferredContainer secondary="abandonedcrewcab,abandonedengcab,abandonedstoragecab" minamount="1" maxamount="3" spawnprobability="0.03" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.03" />
@@ -511,7 +621,7 @@
         </StatusEffect>
       </Projectile>
     </Item>
-    <Item name="Empty Can" identifier="he-emptycancolazero" description="An empty aluminium can. Can be deconstructed into aluminium or thrown around." category="Misc" Tags="smallitem,emptycan" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_aluminiumcan">
+    <Item DontCleanUp="true" name="Empty Can" identifier="he-emptycancolazero" description="An empty aluminium can. Can be deconstructed into aluminium or thrown around." category="Misc" Tags="smallitem,emptycan" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_aluminiumcan">
       <PreferredContainer secondary="wreckcrewcab,wreckstoragecab,wreckstorage,wreckengcab" minamount="1" maxamount="3" spawnprobability="0.03" />
       <PreferredContainer secondary="abandonedcrewcab,abandonedengcab,abandonedstoragecab" minamount="1" maxamount="3" spawnprobability="0.03" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.03" />
@@ -625,70 +735,6 @@
         </StatusEffect>
       </MotionSensor>
     </Item>
-    <!--Item name="USCM Generator" identifier="uscm_generator" tags="generator,mediumitem" category="Electrical,Machine" description="" isshootable="true" scale="0.3" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.54" sourcerect="878,381,145,83" origin="0.5,0.5" />
-      <Price baseprice="1399" sold="true">
-        <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="1" />
-        <Price storeidentifier="merchantcity" multiplier="1.4" minavailable="0" maxavailable="3" />
-        <Price storeidentifier="merchantresearch" multiplier="1.0" minavailable="2" maxavailable="5" />
-      </Price>
-      <Deconstruct time="15">
-        <Item identifier="steel" amount="1"/>
-        <Item identifier="titaniumaluminiumalloy" amount="4"/>
-        <Item identifier="plastic" amount="2"/>
-      </Deconstruct>
-      <Fabricate suitablefabricators="fabricator" requiredtime="45" requiresrecipe="false" amount="1">
-        <RequiredSkill identifier="mechanical" level="75" />
-        <RequiredItem identifier="steel" amount="4"/>
-        <RequiredItem identifier="titaniumaluminiumalloy" amount="2"/>
-        <RequiredItem identifier="plastic" amount="2"/>
-        <RequiredItem identifier="fpgacircuit" amount="3"/>
-      </Fabricate>
-      <Body width="414" height="250" density="20"/>
-      <GreaterComponent canbeselected="false" drawhudwhenequipped="false" allowingameediting="false" timeframe="0" />
-      <Holdable canbepicked="true" PickingTime="15.0" slots="RightHand,LeftHand" holdpos="0,-80" handle1="0,0" handle2="0,0" attachable="true" aimable="true" msg="ItemMsgPickUpSelect" />
-      <LightComponent range="0.0" lightcolor="30,255,0,255" powerconsumption="0.0" IsOn="false" allowingameediting="false" offset="0,0">
-        <LightTexture texture="Content/Lights/pointlight_falloff.png" origin="0.5, 0.5" size="1.0,1.0" />
-        <Sprite texture="Content/Map/Outposts/Art/MedicalItemResearchLights.png" sourcerect="0,6,414,297" depth="0.1" origin="0.5,0.5" alpha="1.0" />
-      </LightComponent>
-      <ItemContainer capacity="0" canbeselected="true" hideitems="true" containedstateindicatorstyle="battery" containedstateindicatorslot="0" keepopenwhenequipped="false" movableframe="true">
-        <GuiFrame relativesize="0.25,0.23" minsize="350,200" anchor="Center" style="ItemUI" />
-        <SlotIcon slotindex="0" texture="Content/UI/ContainerIndicators.png" sourcerect="2,184,120,32" origin="0.5,0.5" />
-        <SubContainer capacity="1" maxstacksize="1">
-          <Containable items="weldingtoolfuel" />
-        </SubContainer>
-        <StatusEffect type="OnNotContained" target="Contained" Condition="-0.5" interval="1" disabledeltatime="true">
-          <Conditional timeframe="eq 1" targetcontainer="true" />
-          <RequiredItem items="weldingtoolfuel" type="Contained" />
-        </StatusEffect>
-        <StatusEffect type="OnNotContained" target="This" disabledeltatime="false" comparison="And" charge="100" duration="0.1">
-          <Conditional timeframe="eq 1" />
-          <RequiredItem items="weldingtoolfuel" type="Contained" />
-        </StatusEffect>
-      </ItemContainer>
-      <PowerContainer capacity="1.0" maxrechargespeed="0.0" maxoutput="1000.0" canbeselected="true">
-        <GuiFrame relativesize="0.25,0.23" minsize="350,200" anchor="Center" style="ItemUI" />
-      </PowerContainer>
-      <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
-        <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
-        <RequiredSkill identifier="electrical" level="55" />
-        <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand" AllowWhenBroken="true">
-          <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
-          <Explosion range="100.0" stun="0" force="1.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
-          <Affliction identifier="stun" strength="4" />
-          <Affliction identifier="burn" strength="5" />
-        </StatusEffect>
-        <requireditem items="Screwdriver" type="Equipped" />
-        <output name="power_out" displayname="connection.powerout" />
-      </ConnectionPanel>
-      <CustomInterface canbeselected="true" drawhudwhenequipped="false">
-        <GuiFrame style="ItemUI" absoluteoffset="0,-100" anchor="Center" relativesize="0.07,0.08"/>
-        <TickBox text="Power">
-          <StatusEffect type="OnUse" target="This" timeframe="1" targetitemcomponent="GreaterComponent" setvalue="true" />
-          <StatusEffect type="OnSecondaryUse" target="This" timeframe="0" targetitemcomponent="GreaterComponent" setvalue="true" />
-        </TickBox>
-      </CustomInterface>
-    </Item-->
     <!-- Paint -->
     <redpaint name="" identifier="redpaint" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,paint" spritecolor="128,0,0,255" InventoryIconColor="255,0,0,255" scale="0.5" impactsoundtag="impact_metal_light" impacttolerance="6" isshootable="true" requireaimtouse="true" useinhealthinterface="true">
       <PreferredContainer secondary="storagecab" minamount="1" maxamount="2" spawnprobability="0.25" notcampaign="true"/>
