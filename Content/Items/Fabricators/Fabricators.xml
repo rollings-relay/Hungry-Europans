@@ -576,10 +576,6 @@
         <StatusEffect type="OnActive" targettype="This" condition="-0.05">
           <Conditional Voltage="gt 0.5" />
         </StatusEffect>
-        <!-- trigger fire event | INCOMPLETE
-        <StatusEffect target="This" type="OnSpawn" evententitytag="stove">
-          <TriggerEvent identifier="potentialfirestove"/>
-        </StatusEffect>-->
         <!-- spawn a random effect item every ~12 seconds if the item's health is below 65% and is currently active and has voltage -->
         <StatusEffect type="OnActive" target="This" interval="12.1" SpawnItemRandomly="True" comparison="And">
           <Conditional InWater="false" />
