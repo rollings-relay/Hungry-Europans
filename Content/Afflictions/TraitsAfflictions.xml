@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<!-- These are hidden afflictions that do not heal over time and are randomly put onto a character when enabling mood. They're checked while eating or drinking to increase/decrease mood -->
+<!-- These are hidden afflictions that do not heal over time and are obtained by enabling mood on a character. They're checked while eating or drinking to increase/decrease mood -->
 <Override>
   <Afflictions>
     <!-- FOOD -->
