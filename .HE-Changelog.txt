@@ -4,6 +4,8 @@
 - Pizza
 - Pizza slices
 - Check liver damage not working from drunkness in NT comp patch
+- Worm infection | causes random stomache pains and will eventually kill the character | can be treated with antibiotics or strong alcohol
+- Tapeworm infection | causes the character to get hungry faster and will eventually kill them | can be treated with antibiotics
 
 Changelog:
 
@@ -40,6 +42,7 @@ Changelog:
 - Severely reduced amount of alien blood gained from deconstructing meat
 - Removed the override for "Adrenaline" since the vanilla game now cures stun with it by default
 - Disabled "Starvation Conciousness Regainer" from spawning purchasing and crafting since you can just feed someone unconcious with regular food and drinks to help them out
+- Made empty cans spawn in or nearby outpost trash cans
 
 Enforced:
 
