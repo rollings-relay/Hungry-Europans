@@ -31,11 +31,11 @@
       <PowerContainer capacity="900" charge="0" maxrechargespeed="0" rechargespeed="0" allowingameediting="false" canbeselected="false" VulnerableToEMP="false" />
       <LightComponent range="0.0" lightcolor="100,255,50,111" flicker="0.1" flickerspeed="0.5" IsOn="false" castshadows="false" alphablend="false" allowingameediting="false" powerconsumption="50">
         <sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="106,1234,105,251" depth="0.1" origin="0.5,0.5" alpha="1.0" />
-        <!--Tag the item to allow for StatusEffect conditionals to check if every requirement is met and play a sound loop to clarify the item is active-->
+        <!--Tag the item to allow for StatusEffect conditionals to check if every requirement is met -->
         <StatusEffect type="OnActive" target="This" disabledeltatime="false" comparison="And" tags="canwater" duration="0.1">
           <RequiredItem items="he-kegwater" targetslot="0" type="Contained" />
         </StatusEffect>
-        <!--Increase charge by 1 each second to simulate growing if the item has the status tag "canwater"-->
+        <!--Increase charge by 1 each second to keep track of time spent active if the item has the status tag "canwater"-->
         <StatusEffect type="OnActive" target="This" targetitemcomponent="PowerContainer" interval="1" Charge="1" stackable="false" disabledeltatime="true">
           <Conditional HasStatusTag="eq canwater" />
         </StatusEffect>
