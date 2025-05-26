@@ -3,6 +3,7 @@
 - Cake slice (requires fork to eat) | either: can be thrown if no fork is equipped | or: when equipped, show GUI to take cake off the plate to be able to throw it
 - Pizza
 - Pizza slices
+- Recipes that make use of the canned ingredients
 - Check liver damage not working from drunkness in NT comp patch
 - Worm infection | causes random stomache pains and will eventually kill the character | can be treated with antibiotics or strong alcohol
 - Tapeworm infection | causes the character to get hungry faster and will eventually kill them | can be treated with antibiotics
