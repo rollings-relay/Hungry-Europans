@@ -18,12 +18,12 @@
         <StatusEffect type="OnUse" target="Character" interval="1" disabledeltatime="true" comparison="And">
           <RequiredItem identifier="parasiticworms" type="Contained" />
           <Conditional InWater="false" />
+          <Conditional huskinfection="lt 50" />
           <Affliction identifier="worminfection" amount="1" probability="0.005" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" interval="1" disabledeltatime="true" comparison="And">
           <RequiredItem identifier="tapeworm" type="Contained" />
           <Conditional InWater="false" />
-          <Conditional hunger="gt 0" />
           <Conditional huskinfection="lt 50" />
           <Affliction identifier="tapeworminfection" amount="1" probability="0.005" />
         </StatusEffect>
@@ -300,12 +300,12 @@
         <StatusEffect type="OnUse" target="Character" interval="1" disabledeltatime="true" comparison="And">
           <RequiredItem identifier="parasiticworms" type="Contained" />
           <Conditional InWater="false" />
+          <Conditional huskinfection="lt 50" />
           <Affliction identifier="worminfection" amount="1" probability="0.005" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" interval="1" disabledeltatime="true" comparison="And">
           <RequiredItem identifier="tapeworm" type="Contained" />
           <Conditional InWater="false" />
-          <Conditional hunger="gt 0" />
           <Conditional huskinfection="lt 50" />
           <Affliction identifier="tapeworminfection" amount="1" probability="0.005" />
         </StatusEffect>
@@ -608,12 +608,12 @@
         <StatusEffect type="OnUse" target="Character" interval="1" disabledeltatime="true" comparison="And">
           <RequiredItem identifier="parasiticworms" type="Contained" />
           <Conditional InWater="false" />
+          <Conditional huskinfection="lt 50" />
           <Affliction identifier="worminfection" amount="1" probability="0.005" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" interval="1" disabledeltatime="true" comparison="And">
           <RequiredItem identifier="tapeworm" type="Contained" />
           <Conditional InWater="false" />
-          <Conditional hunger="gt 0" />
           <Conditional huskinfection="lt 50" />
           <Affliction identifier="tapeworminfection" amount="1" probability="0.005" />
         </StatusEffect>
