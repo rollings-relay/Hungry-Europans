@@ -42,6 +42,8 @@
           <Affliction identifier="deliriuminepoisoning" probability="0.001" amount="8" />
           <Affliction identifier="nausea" amount="4" />
           <Affliction identifier="he-hungryforhumanmeat" amount="2.4" />
+          <Affliction identifier="worminfection" amount="1" probability="0.1" />
+          <Affliction identifier="tapeworminfection" amount="1" probability="0.1" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
@@ -92,6 +94,8 @@
           <Affliction identifier="hallucinating" amount="12" />
           <Affliction identifier="nausea" amount="4" />
           <Affliction identifier="he-hungryforhumanmeat" amount="0.6" />
+          <Affliction identifier="worminfection" amount="1" probability="0.1" />
+          <Affliction identifier="tapeworminfection" amount="1" probability="0.1" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
@@ -158,6 +162,8 @@
           <Affliction identifier="hallucinating" amount="6" />
           <Affliction identifier="nausea" amount="3" />
           <Affliction identifier="he-hungryforhumanmeat" amount="0.3" />
+          <Affliction identifier="worminfection" amount="1" probability="0.1" />
+          <Affliction identifier="tapeworminfection" amount="1" probability="0.1" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
