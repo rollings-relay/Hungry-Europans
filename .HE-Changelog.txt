@@ -3,6 +3,8 @@
 - Cake slice (requires fork to eat) | either: can be thrown if no fork is equipped | or: when equipped, show GUI to take cake off the plate to be able to throw it
 - Pizza
 - Pizza slices
+- Make more fryable food
+- Make more meat compatible with electric grill cooking and give all of them contained sprites for the grill
 - Recipes that make use of the canned ingredients
 - Adjust recipes to use what's visible in the sprites
 - Adjust food values depending on ingredients
