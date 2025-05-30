@@ -3,7 +3,7 @@
   <Items>
     <!-- MEAT -->
     <!--Human-->
-    <Item hideinmenus="false" name="Filet" identifier="he-cookedhumanfilet" variantof="he-poisoneffectpreset_fork" health="120" category="Misc" subcategory="Food - Human" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,forkfood,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.4" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+    <Item hideinmenus="false" name="Filet" identifier="he-cookedhumanfilet" variantof="he-poisoneffectpreset_fork" health="120" category="Misc" subcategory="Food - Human" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,forkfood,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
@@ -126,13 +126,13 @@
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
     </Item>
-    <Item hideinmenus="false" name="Plate of Human Limbs" identifier="he-cookedhumanlimbs" variantof="he-poisoneffectpreset_fork" health="140" category="Misc" subcategory="Food - Human" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,forkfood,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.4" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+    <Item hideinmenus="false" name="Plate of Human Limbs" identifier="he-cookedhumanlimbs" variantof="he-poisoneffectpreset_fork" health="140" category="Misc" subcategory="Food - Human" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,forkfood,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="789,0,69,29" depth="0.6" origin="0.5,0.9" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="789,0,69,29" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="789,0,68,29" depth="0.6" origin="0.5,0.9" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="789,0,68,29" origin="0.5,0.5" />
       <Fabricate suitablefabricators="stove" requiredtime="60" requiresrecipe="false" amount="1" displayname="humanfooditem">
         <RequiredSkill identifier="cooking" level="50" />
         <RequiredItem identifier="he-humanmeatchunk" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
