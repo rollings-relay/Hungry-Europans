@@ -123,12 +123,10 @@
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="858,0,68,29" depth="0.6" origin="0.5,0.9" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="858,0,68,29" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="stove" requiredtime="90" requiresrecipe="false" amount="1" displayname="molochfooditem">
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="15" requiresrecipe="false" amount="1" displayname="molochfooditem">
         <RequiredSkill identifier="cooking" level="50" />
-        <RequiredItem identifier="he-rawmolochsteak" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
-        <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.1"/>
-        <RequiredItem identifier="he-pepper" UseCondition="True" MinCondition="0.1"/>
-        <RequiredItem identifier="he-cookingoil" UseCondition="True" MinCondition="0.1"/>
+        <RequiredItem identifier="he-preparredcrawlerfilets" amount="1" MinCondition="0.25" UseCondition="true" />
+        <RequiredItem identifier="bubbleberryleaf" amount="1" />
         <RequiredItem identifier="he-emptyplate" amount="1" />
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
