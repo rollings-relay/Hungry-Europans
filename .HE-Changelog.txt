@@ -4,6 +4,8 @@
 - Pizza
 - Pizza slices
 - Recipes that make use of the canned ingredients
+- Adjust recipes to use what's visible in the sprites
+- Adjust food values depending on ingredients
 - Check liver damage not working from drunkness in NT comp patch
 - Worm infection | causes random stomache pains and will eventually kill the character | can be treated with antibiotics or strong alcohol
 - Tapeworm infection | causes the character to get hungry faster and will eventually kill them | can be treated with antibiotics
