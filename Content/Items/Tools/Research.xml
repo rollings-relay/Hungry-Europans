@@ -260,60 +260,77 @@
         </StatusEffect>
       </Wearable>
       <CustomInterface uilabel="Select your preferred food:" drawhudwhenequipped="true">
-        <GuiFrame relativesize="0.3,0.4" anchor="Center" style="Paper" hidedragicons="true" />
-        <Button text="Fried Food">
-          <StatusEffect type="OnUse" target="This">
-            <SpawnItem identifier="he-traitselector_drinks" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
-            <SpawnItem identifier="he-like_friedfood" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-            <Remove />
-          </StatusEffect>
+        <GuiFrame relativesize="0.2,0.4" anchor="Center" style="DialogBox" hidedragicons="true" />
+        <Button text="Select your preferred food:">
+          <StatusEffect type="OnUse" target="This" tags="" />
         </Button>
-        <Button text="Burgers">
-          <StatusEffect type="OnUse" target="This">
-            <SpawnItem identifier="he-traitselector_drinks" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
-            <SpawnItem identifier="he-like_burgers" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-            <Remove />
-          </StatusEffect>
-        </Button>
-        <Button text="Hotdogs">
-          <StatusEffect type="OnUse" target="This">
-            <SpawnItem identifier="he-traitselector_drinks" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
-            <SpawnItem identifier="he-like_hotdogs" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-            <Remove />
-          </StatusEffect>
-        </Button>
-        <Button text="Filets">
-          <StatusEffect type="OnUse" target="This">
-            <SpawnItem identifier="he-traitselector_drinks" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
-            <SpawnItem identifier="he-like_filets" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-            <Remove />
-          </StatusEffect>
-        </Button>
-        <Button text="Roast">
-          <StatusEffect type="OnUse" target="This">
-            <SpawnItem identifier="he-traitselector_drinks" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
-            <SpawnItem identifier="he-like_roasts" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-            <Remove />
-          </StatusEffect>
-        </Button>
-        <Button text="Sandwiches">
-          <StatusEffect type="OnUse" target="This">
-            <SpawnItem identifier="he-traitselector_drinks" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
-            <SpawnItem identifier="he-like_sandwiches" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-            <Remove />
-          </StatusEffect>
-        </Button>
-        <Button text="Randomize">
+        <TickBox text="Fried Food">
+          <StatusEffect type="OnUse" target="This" tags="likefriedfood" duration="0.1" />
+        </TickBox>
+        <TickBox text="Burgers">
+          <StatusEffect type="OnUse" target="This" tags="likeburgers" duration="0.1" />
+        </TickBox>
+        <TickBox text="Hotdogs">
+          <StatusEffect type="OnUse" target="This" tags="likehotdogs" duration="0.1" />
+        </TickBox>
+        <TickBox text="Filets">
+          <StatusEffect type="OnUse" target="This" tags="likefilets" duration="0.1" />
+        </TickBox>
+        <TickBox text="Roast">
+          <StatusEffect type="OnUse" target="This" tags="likeroast" duration="0.1" />
+        </TickBox>
+        <TickBox text="Sandwiches">
+          <StatusEffect type="OnUse" target="This" tags="likesandwiches" duration="0.1" />
+        </TickBox>
+        <TickBox text="Randomize (Will pick up to 2 random types)">
+          <StatusEffect type="OnUse" target="This" tags="randomizelikedfood" duration="0.1" />
+        </TickBox>
+        <Button text="Confirm">
           <StatusEffect type="OnUse" target="This">
             <SpawnItem identifier="he-traitselector_drinks" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
           </StatusEffect>
-          <StatusEffect type="OnUse" target="This" SpawnItemRandomly="True" stackable="false">
-            <SpawnItem identifier="he-like_friedfood" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-            <SpawnItem identifier="he-like_burgers" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-            <SpawnItem identifier="he-like_hotdogs" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-            <SpawnItem identifier="he-like_filets" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-            <SpawnItem identifier="he-like_roasts" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-            <SpawnItem identifier="he-like_sandwiches" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <!-- Applying the traits via another item that gets spawned in is done for compatibility with non-human character mods as this item here checks the selection and the next item checks the character -->
+          <StatusEffect type="OnUse" target="This" comparison="And">
+            <Conditional HasStatusTag="likefriedfood"/>
+            <SpawnItem identifier="he-like_friedfood" spawnposition="SameInventory" />
+          </StatusEffect>
+
+          <StatusEffect type="OnUse" target="This" comparison="And">
+            <Conditional HasStatusTag="likeburgers"/>
+            <SpawnItem identifier="he-like_burgers" spawnposition="SameInventory" />
+          </StatusEffect>
+          
+          <StatusEffect type="OnUse" target="This" comparison="And">
+            <Conditional HasStatusTag="likehotdogs"/>
+            <SpawnItem identifier="he-like_hotdogs" spawnposition="SameInventory" />
+          </StatusEffect>
+          
+          <StatusEffect type="OnUse" target="This" comparison="And">
+            <Conditional HasStatusTag="likefilets"/>
+            <SpawnItem identifier="he-like_filets" spawnposition="SameInventory" />
+          </StatusEffect>
+          
+          <StatusEffect type="OnUse" target="This" comparison="And">
+            <Conditional HasStatusTag="likeroast"/>
+            <SpawnItem identifier="he-like_roasts" spawnposition="SameInventory" />
+          </StatusEffect>
+          
+          <StatusEffect type="OnUse" target="This" comparison="And">
+            <Conditional HasStatusTag="likesandwiches"/>
+            <SpawnItem identifier="he-like_sandwiches" spawnposition="SameInventory" />
+          </StatusEffect>
+          
+          <StatusEffect type="OnUse" target="This" comparison="And" spawnitemrandomly="true">
+            <Conditional HasStatusTag="randomizelikedfood"/>
+            <SpawnItem identifier="he-like_friedfood" spawnposition="SameInventory" />
+            <SpawnItem identifier="he-like_burgers" spawnposition="SameInventory" />
+            <SpawnItem identifier="he-like_hotdogs" spawnposition="SameInventory" />
+            <SpawnItem identifier="he-like_filets" spawnposition="SameInventory" />
+            <SpawnItem identifier="he-like_roasts" spawnposition="SameInventory" />
+            <SpawnItem identifier="he-like_sandwiches" spawnposition="SameInventory" />
+          </StatusEffect>
+          
+          <StatusEffect type="OnUse" target="This" delay="0.1" stackable="false">
             <Remove />
           </StatusEffect>
         </Button>
@@ -334,44 +351,62 @@
         </StatusEffect>
       </Wearable>
       <CustomInterface uilabel="Select your preferred drink:" drawhudwhenequipped="true">
-        <GuiFrame relativesize="0.3,0.4" anchor="Center" style="Paper" hidedragicons="true" />
-        <Button text="Beer">
-          <StatusEffect type="OnUse" target="This">
-            <SpawnItem identifier="he-like_beer" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-            <Remove />
+        <GuiFrame relativesize="0.2,0.4" anchor="Center" style="DialogBox" hidedragicons="true" />
+        <TickBox text="Beer">
+          <StatusEffect type="OnUse" target="This" tags="likebeer" duration="0.1" />
+        </TickBox>
+        <TickBox text="Rum">
+          <StatusEffect type="OnUse" target="This" tags="likerum" duration="0.1" />
+        </TickBox>
+        <TickBox text="Whiskey">
+          <StatusEffect type="OnUse" target="This" tags="likewhiskey" duration="0.1" />
+        </TickBox>
+        <TickBox text="Tea">
+          <StatusEffect type="OnUse" target="This" tags="liketea" duration="0.1" />
+        </TickBox>
+        <TickBox text="Cola">
+          <StatusEffect type="OnUse" target="This" tags="likecola" duration="0.1" />
+        </TickBox>
+        <TickBox text="Randomize (Will pick 1 random type)">
+          <StatusEffect type="OnUse" target="This" tags="randomizelikeddrinks" duration="0.1" />
+        </TickBox>
+        <Button text="Confirm">
+          <!-- Applying the traits via another item that gets spawned in is done for compatibility with non-human character mods as this item here checks the selection and the next item checks the character -->
+          <StatusEffect type="OnUse" target="This" comparison="And">
+            <Conditional HasStatusTag="likebeer"/>
+            <SpawnItem identifier="he-like_beer" spawnposition="SameInventory" />
           </StatusEffect>
-        </Button>
-        <Button text="Rum">
-          <StatusEffect type="OnUse" target="This">
-            <SpawnItem identifier="he-like_rum" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-            <Remove />
+
+          <StatusEffect type="OnUse" target="This" comparison="And">
+            <Conditional HasStatusTag="likerum"/>
+            <SpawnItem identifier="he-like_rum" spawnposition="SameInventory" />
           </StatusEffect>
-        </Button>
-        <Button text="Whiskey">
-          <StatusEffect type="OnUse" target="This">
-            <SpawnItem identifier="he-like_whiskey" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-            <Remove />
+          
+          <StatusEffect type="OnUse" target="This" comparison="And">
+            <Conditional HasStatusTag="likewhiskey"/>
+            <SpawnItem identifier="he-like_whiskey" spawnposition="SameInventory" />
           </StatusEffect>
-        </Button>
-        <Button text="Tea">
-          <StatusEffect type="OnUse" target="This">
-            <SpawnItem identifier="he-like_tea" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-            <Remove />
+          
+          <StatusEffect type="OnUse" target="This" comparison="And">
+            <Conditional HasStatusTag="liketea"/>
+            <SpawnItem identifier="he-like_tea" spawnposition="SameInventory" />
           </StatusEffect>
-        </Button>
-        <Button text="Cola">
-          <StatusEffect type="OnUse" target="This">
-            <SpawnItem identifier="he-like_cola" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-            <Remove />
+          
+          <StatusEffect type="OnUse" target="This" comparison="And">
+            <Conditional HasStatusTag="likecola"/>
+            <SpawnItem identifier="he-like_cola" spawnposition="SameInventory" />
           </StatusEffect>
-        </Button>
-        <Button text="Randomize">
-          <StatusEffect type="OnUse" target="This" SpawnItemRandomly="True" stackable="false">
-            <SpawnItem identifier="he-like_beer" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-            <SpawnItem identifier="he-like_rum" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-            <SpawnItem identifier="he-like_whiskey" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-            <SpawnItem identifier="he-like_tea" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-            <SpawnItem identifier="he-like_cola" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          
+          <StatusEffect type="OnUse" target="This" comparison="And" spawnitemrandomly="true">
+            <Conditional HasStatusTag="randomizelikeddrinks"/>
+            <SpawnItem identifier="he-like_beer" spawnposition="SameInventory" />
+            <SpawnItem identifier="he-like_rum" spawnposition="SameInventory" />
+            <SpawnItem identifier="he-like_whiskey" spawnposition="SameInventory" />
+            <SpawnItem identifier="he-like_tea" spawnposition="SameInventory" />
+            <SpawnItem identifier="he-like_cola" spawnposition="SameInventory" />
+          </StatusEffect>
+          
+          <StatusEffect type="OnUse" target="This" delay="0.1" stackable="false">
             <Remove />
           </StatusEffect>
         </Button>
@@ -381,7 +416,7 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,0,36,66" depth="0.6" origin="0.5,0.5" />
       <Body width="35" height="65" density="10.2" />
-      <Wearable slots="RightHand,LeftHand,Bag,OuterClothes,InnerClothes,Head,Headset,HealthInterface" aimpos="-26,-48" holdpos="30,-15" holdangle="0" aimangle="300" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+      <Wearable slots="Any,RightHand,LeftHand,Bag,OuterClothes,InnerClothes,Head,Headset,HealthInterface" aimpos="-26,-48" holdpos="30,-15" holdangle="0" aimangle="300" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="Always" target="Character" comparison="Or" oneshot="true" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
           <Conditional hasspecifiertag="male"/>
           <Conditional hasspecifiertag="female"/>
@@ -397,7 +432,7 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,0,36,66" depth="0.6" origin="0.5,0.5" />
       <Body width="35" height="65" density="10.2" />
-      <Wearable slots="RightHand,LeftHand,Bag,OuterClothes,InnerClothes,Head,Headset,HealthInterface" aimpos="-26,-48" holdpos="30,-15" holdangle="0" aimangle="300" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+      <Wearable slots="Any,RightHand,LeftHand,Bag,OuterClothes,InnerClothes,Head,Headset,HealthInterface" aimpos="-26,-48" holdpos="30,-15" holdangle="0" aimangle="300" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="Always" target="Character" comparison="Or" oneshot="true" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
           <Conditional hasspecifiertag="male"/>
           <Conditional hasspecifiertag="female"/>
@@ -413,7 +448,7 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,0,36,66" depth="0.6" origin="0.5,0.5" />
       <Body width="35" height="65" density="10.2" />
-      <Wearable slots="RightHand,LeftHand,Bag,OuterClothes,InnerClothes,Head,Headset,HealthInterface" aimpos="-26,-48" holdpos="30,-15" holdangle="0" aimangle="300" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+      <Wearable slots="Any,RightHand,LeftHand,Bag,OuterClothes,InnerClothes,Head,Headset,HealthInterface" aimpos="-26,-48" holdpos="30,-15" holdangle="0" aimangle="300" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="Always" target="Character" comparison="Or" oneshot="true" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
           <Conditional hasspecifiertag="male"/>
           <Conditional hasspecifiertag="female"/>
@@ -429,7 +464,7 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,0,36,66" depth="0.6" origin="0.5,0.5" />
       <Body width="35" height="65" density="10.2" />
-      <Wearable slots="RightHand,LeftHand,Bag,OuterClothes,InnerClothes,Head,Headset,HealthInterface" aimpos="-26,-48" holdpos="30,-15" holdangle="0" aimangle="300" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+      <Wearable slots="Any,RightHand,LeftHand,Bag,OuterClothes,InnerClothes,Head,Headset,HealthInterface" aimpos="-26,-48" holdpos="30,-15" holdangle="0" aimangle="300" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="Always" target="Character" comparison="Or" oneshot="true" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
           <Conditional hasspecifiertag="male"/>
           <Conditional hasspecifiertag="female"/>
@@ -445,7 +480,7 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,0,36,66" depth="0.6" origin="0.5,0.5" />
       <Body width="35" height="65" density="10.2" />
-      <Wearable slots="RightHand,LeftHand,Bag,OuterClothes,InnerClothes,Head,Headset,HealthInterface" aimpos="-26,-48" holdpos="30,-15" holdangle="0" aimangle="300" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+      <Wearable slots="Any,RightHand,LeftHand,Bag,OuterClothes,InnerClothes,Head,Headset,HealthInterface" aimpos="-26,-48" holdpos="30,-15" holdangle="0" aimangle="300" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="Always" target="Character" comparison="Or" oneshot="true" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
           <Conditional hasspecifiertag="male"/>
           <Conditional hasspecifiertag="female"/>
@@ -461,7 +496,7 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,0,36,66" depth="0.6" origin="0.5,0.5" />
       <Body width="35" height="65" density="10.2" />
-      <Wearable slots="RightHand,LeftHand,Bag,OuterClothes,InnerClothes,Head,Headset,HealthInterface" aimpos="-26,-48" holdpos="30,-15" holdangle="0" aimangle="300" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+      <Wearable slots="Any,RightHand,LeftHand,Bag,OuterClothes,InnerClothes,Head,Headset,HealthInterface" aimpos="-26,-48" holdpos="30,-15" holdangle="0" aimangle="300" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="Always" target="Character" comparison="Or" oneshot="true" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
           <Conditional hasspecifiertag="male"/>
           <Conditional hasspecifiertag="female"/>
@@ -477,7 +512,7 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,0,36,66" depth="0.6" origin="0.5,0.5" />
       <Body width="35" height="65" density="10.2" />
-      <Wearable slots="RightHand,LeftHand,Bag,OuterClothes,InnerClothes,Head,Headset,HealthInterface" aimpos="-26,-48" holdpos="30,-15" holdangle="0" aimangle="300" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+      <Wearable slots="Any,RightHand,LeftHand,Bag,OuterClothes,InnerClothes,Head,Headset,HealthInterface" aimpos="-26,-48" holdpos="30,-15" holdangle="0" aimangle="300" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="Always" target="Character" comparison="Or" oneshot="true" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
           <Conditional hasspecifiertag="male"/>
           <Conditional hasspecifiertag="female"/>
@@ -493,7 +528,7 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,0,36,66" depth="0.6" origin="0.5,0.5" />
       <Body width="35" height="65" density="10.2" />
-      <Wearable slots="RightHand,LeftHand,Bag,OuterClothes,InnerClothes,Head,Headset,HealthInterface" aimpos="-26,-48" holdpos="30,-15" holdangle="0" aimangle="300" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+      <Wearable slots="Any,RightHand,LeftHand,Bag,OuterClothes,InnerClothes,Head,Headset,HealthInterface" aimpos="-26,-48" holdpos="30,-15" holdangle="0" aimangle="300" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="Always" target="Character" comparison="Or" oneshot="true" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
           <Conditional hasspecifiertag="male"/>
           <Conditional hasspecifiertag="female"/>
@@ -509,7 +544,7 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,0,36,66" depth="0.6" origin="0.5,0.5" />
       <Body width="35" height="65" density="10.2" />
-      <Wearable slots="RightHand,LeftHand,Bag,OuterClothes,InnerClothes,Head,Headset,HealthInterface" aimpos="-26,-48" holdpos="30,-15" holdangle="0" aimangle="300" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+      <Wearable slots="Any,RightHand,LeftHand,Bag,OuterClothes,InnerClothes,Head,Headset,HealthInterface" aimpos="-26,-48" holdpos="30,-15" holdangle="0" aimangle="300" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="Always" target="Character" comparison="Or" oneshot="true" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
           <Conditional hasspecifiertag="male"/>
           <Conditional hasspecifiertag="female"/>
@@ -525,7 +560,7 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,0,36,66" depth="0.6" origin="0.5,0.5" />
       <Body width="35" height="65" density="10.2" />
-      <Wearable slots="RightHand,LeftHand,Bag,OuterClothes,InnerClothes,Head,Headset,HealthInterface" aimpos="-26,-48" holdpos="30,-15" holdangle="0" aimangle="300" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+      <Wearable slots="Any,RightHand,LeftHand,Bag,OuterClothes,InnerClothes,Head,Headset,HealthInterface" aimpos="-26,-48" holdpos="30,-15" holdangle="0" aimangle="300" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="Always" target="Character" comparison="Or" oneshot="true" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
           <Conditional hasspecifiertag="male"/>
           <Conditional hasspecifiertag="female"/>
@@ -541,7 +576,7 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,0,36,66" depth="0.6" origin="0.5,0.5" />
       <Body width="35" height="65" density="10.2" />
-      <Wearable slots="RightHand,LeftHand,Bag,OuterClothes,InnerClothes,Head,Headset,HealthInterface" aimpos="-26,-48" holdpos="30,-15" holdangle="0" aimangle="300" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+      <Wearable slots="Any,RightHand,LeftHand,Bag,OuterClothes,InnerClothes,Head,Headset,HealthInterface" aimpos="-26,-48" holdpos="30,-15" holdangle="0" aimangle="300" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="Always" target="Character" comparison="Or" oneshot="true" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
           <Conditional hasspecifiertag="male"/>
           <Conditional hasspecifiertag="female"/>
