@@ -4,7 +4,7 @@
     <!-- FOOD AFFLICTIONS -->
     <!-- Psilotoad -->
     <Affliction name="Heightened Adrenalin (Food)"
-      identifier="he-alwaysconcious"
+      identifier="he-alwaysconscious"
       description="Your adrenaline levels are heightened, preventing your from falling unconcious when severely wounded."
       type="foodbuff"
       isbuff="true"
@@ -19,7 +19,7 @@
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
     </Affliction>
     <!-- Orangeboy -->
-    <Affliction name="Professional Hitman (Food)"
+    <Affliction name="Heightened Senses (Food)"
       identifier="he-maxweaponskill"
       description="Your senses are temporarily heightened, allowing you to operate every weapon to its full potential."
       type="foodbuff"
