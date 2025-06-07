@@ -390,13 +390,13 @@
       <SkillRequirementHint identifier="butchery" level="100"/>
     </Item>
     <!--////////// CLEAN TABLEWARE \\\\\\\\\\-->
-    <Item name="Empty Plate" identifier="he-emptyplate" Tags="smallitem,tableware,emptyplate,plateitem,platebowlreturn1" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="An empty plate to put food on. Can be thrown." useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
+    <Item name="Empty Plate" identifier="he-emptyplate" Tags="smallitem,tableware,emptyplate,plateitem,platebowlreturn1" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="An empty plate to put food on. Can be thrown." useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" hideconditionbar="true" >
       <PreferredContainer secondary="wreckcrewcab,abandonedcrewcab" minamount="1" maxamount="6" spawnprobability="0.01" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="388,13,68,7" depth="0.499" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="388,13,68,7" depth="0.525" origin="0.5,0.5"  />
       <!--<ContainedSprite allowedcontainertags="liquorshelf" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="180,8,21,58" depth="0.55" origin="0.5,0.42" />-->
-      <Body width="64" height="4" density="11" />
+      <Body width="62" height="2" radius="2" density="11" />
       <Deconstruct time="2">
         <!-- <Item identifier="he-glassfragments" amount="1" outcondition="0.5"/> -->
       </Deconstruct>
@@ -434,13 +434,13 @@
       </Projectile>
       <ItemContainer capacity="3" maxstacksize="6" hideitems="false" itempos="0,5" iteminterval="0,5" itemrotation="0" itemsperrow="1" containedspritedepths="0.500,0.501,0.502,0.503,0.504,0.505" removecontaineditemsondeconstruct="true" allowdraganddrop="false" QuickUseMovesItemsInside="false">
         <SlotIcon texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="388,13,68,7" origin="0.5,0.5" />
-        <Containable items="emptybowl">
+        <Containable items="emptyplate">
         </Containable>
         <StatusEffect type="OnContained" target="Contained" interval="1" >
           <RequiredItem tag="plateitem" type="Contained" />
           <DropContainedItems />
         </StatusEffect>
-        <StatusEffect type="OnImpact" target="This,Contained" condition="-15" disabledeltatime="true">
+        <StatusEffect type="OnImpact" target="This,Contained" condition="-25" disabledeltatime="true">
           <Dropitem />
           <DropContainedItems />
         </StatusEffect>  
