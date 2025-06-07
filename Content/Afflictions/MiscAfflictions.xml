@@ -723,6 +723,16 @@
       <Effect minstrength="0" maxstrength="100" strengthchange="0" />
       <icon texture="Content/UI/CommandUIAtlas.png" sourcerect="896,896,128,128" origin="0,0" />
     </Affliction>
+    
+<!--     
+    BUTCHERED NOW SCALES WITH HEALTH
+    Scaling is based on Humans aka 100 health. 
+    If you apply 60 butchered to a human (100 health), they will take 60
+    If you apply 60 butchered to a Veteran mudraptor (300 health), they will take 20 (3x the health means 1/3rd the affliction applied)
+    For enemies with HUGE amounts of health who take tiny amounts of butchered as a result, it might take too long to reach 100.
+    You want to add multiplyafflictionsbymaxvitality="true" to the statuseffect applying it
+    Fine tune the amount of affliction applied by a succesful cleaver meat harvest for each species group
+    -->
     <Affliction name="Butchered"
       identifier="he-butchered"
       description="The corpse is being butchered for meat."
@@ -730,10 +740,11 @@
       limbspecific="false"
       minstrength="0"
       maxstrength="100"
-      MedicalSkillGain="0.0">
+      MedicalSkillGain="0.0"    >
       <Effect minstrength="0" maxstrength="100" strengthchange="0" />
       <icon texture="Content/UI/CommandUIAtlas.png" sourcerect="896,896,128,128" origin="0,0" />
     </Affliction>
+    
     <!-- Affliction made with the help of @Plag | Check out Real Sonar -->
     <Affliction name="Halucinova" 
       identifier="he-halucinova" 

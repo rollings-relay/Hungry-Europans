@@ -943,4 +943,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <roomname.cafeteria>Cafeteria</roomname.cafeteria><!--Patch 10-->
 <roomname.brewery>Brewery</roomname.brewery><!--Patch 10-->
 <roomname.restroom>Restroom</roomname.restroom><!--Patch 13-->
+
+<itemmsgnomeatleft>No meat left on this corpse...</itemmsgnomeatleft> <!-- TODO: what patch is this? should this be here? -->
+
 </infotexts>
