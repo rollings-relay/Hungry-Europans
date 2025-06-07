@@ -173,94 +173,13 @@
         <!-- GET MEAT -->
         <!--offal-->
         <StatusEffect type="OnSuccess" target="UseTarget" comparison="And" spawnitemrandomly="true">
-          <Conditional group="eq crawler" />
+          <Conditional IsMachine="false" />
+          <Conditional mass="gt 10" />
+          <Conditional mass="lt 100" />
+          <Conditional group="neq husk" />
           <Conditional isdead="true"/>
           <Conditional he-butchered="lt 100"/>
-          <SpawnItem identifier="he-rawoffal" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
-          <SpawnItem identifier="effect_none" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
-          <SpawnItem identifier="effect_none" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
-          <SpawnItem identifier="effect_none" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
-          <SpawnItem identifier="effect_none" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="UseTarget" comparison="And" spawnitemrandomly="true">
-          <Conditional group="eq mudraptor" />
-          <Conditional isdead="true"/>
-          <Conditional he-butchered="lt 100"/>
-          <SpawnItem identifier="he-rawoffal" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
-          <SpawnItem identifier="effect_none" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
-          <SpawnItem identifier="effect_none" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
-          <SpawnItem identifier="effect_none" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
-          <SpawnItem identifier="effect_none" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="UseTarget" comparison="And" spawnitemrandomly="true">
-          <Conditional group="eq moloch" />
-          <Conditional isdead="true"/>
-          <Conditional he-butchered="lt 100"/>
-          <SpawnItem identifier="he-rawoffal" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
-          <SpawnItem identifier="effect_none" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
-          <SpawnItem identifier="effect_none" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
-          <SpawnItem identifier="effect_none" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
-          <SpawnItem identifier="effect_none" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="UseTarget" comparison="And" spawnitemrandomly="true">
-          <Conditional group="eq thresher" />
-          <Conditional isdead="true"/>
-          <Conditional he-butchered="lt 100"/>
-          <SpawnItem identifier="he-rawoffal" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
-          <SpawnItem identifier="effect_none" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
-          <SpawnItem identifier="effect_none" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
-          <SpawnItem identifier="effect_none" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
-          <SpawnItem identifier="effect_none" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="UseTarget" comparison="And" spawnitemrandomly="true">
-          <Conditional group="eq spineling" />
-          <Conditional isdead="true"/>
-          <Conditional he-butchered="lt 100"/>
-          <SpawnItem identifier="he-rawoffal" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
-          <SpawnItem identifier="effect_none" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
-          <SpawnItem identifier="effect_none" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
-          <SpawnItem identifier="effect_none" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
-          <SpawnItem identifier="effect_none" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="UseTarget" comparison="And" spawnitemrandomly="true">
-          <Conditional group="eq human" />
-          <Conditional isdead="true"/>
-          <Conditional he-butchered="lt 100"/>
-          <SpawnItem identifier="he-rawoffal" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
-          <SpawnItem identifier="effect_none" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
-          <SpawnItem identifier="effect_none" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
-          <SpawnItem identifier="effect_none" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
-          <SpawnItem identifier="effect_none" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="UseTarget" comparison="And" spawnitemrandomly="true">
-          <Conditional group="eq husk" />
-          <Conditional isdead="true"/>
-          <Conditional he-butchered="lt 100"/>
-          <SpawnItem identifier="he-rawoffal" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
-          <SpawnItem identifier="effect_none" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
-          <SpawnItem identifier="effect_none" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
-          <SpawnItem identifier="effect_none" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
-          <SpawnItem identifier="effect_none" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="UseTarget" comparison="And" spawnitemrandomly="true">
-          <Conditional group="eq hammerhead" />
-          <Conditional isdead="true"/>
-          <Conditional he-butchered="lt 100"/>
-          <SpawnItem identifier="he-rawoffal" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
-          <SpawnItem identifier="effect_none" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
-          <SpawnItem identifier="effect_none" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
-          <SpawnItem identifier="effect_none" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
-          <SpawnItem identifier="effect_none" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="UseTarget" comparison="And" spawnitemrandomly="true">
-          <Conditional group="eq abyss" />
-          <Conditional isdead="true"/>
-          <Conditional he-butchered="lt 100"/>
-          <SpawnItem identifier="he-rawoffal" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
-          <SpawnItem identifier="effect_none" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
-          <SpawnItem identifier="effect_none" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
-          <SpawnItem identifier="effect_none" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
-          <SpawnItem identifier="effect_none" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
+          <SpawnItem identifier="he-rawoffal" spawnposition="SameInventory" SpawnIfInventoryFull="true" probability="0.2" />
         </StatusEffect>
         <!--crawler-->
         <StatusEffect type="OnSuccess" target="UseTarget" comparison="And" multiplyafflictionsbymaxvitality="true">
