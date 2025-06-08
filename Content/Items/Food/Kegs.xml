@@ -189,7 +189,7 @@
       <Holdable canBeCombined="true" removeOnCombined="false" selectkey="Select" canbepicked="true" pickkey="Select" slots="RightHand+LeftHand" holdpos="40,-40" handle1="0,53" handle2="0,53" holdangle="3" msg="ItemMsgPickUpSelect" PickingTime="0" aimpos="65,-10" attachable="true" aimable="true">
         <StatusEffect type="OnBroken" target="This">
           <Remove />
-          <SpawnItem identifier="he-kegempty" SpawnPositionType="ThisInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Count="1" Equip="true" />
+          <SpawnItem identifier="he-kegempty" SpawnPositionType="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Count="1" Equip="true" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" condition="-5" disabledeltatime="false" offset="0,-36" >
           <Conditional IsActive="true" targetitemcomponent="Powered" />
@@ -238,7 +238,7 @@
       <Holdable canBeCombined="true" removeOnCombined="false" selectkey="Select" canbepicked="true" pickkey="Select" slots="RightHand+LeftHand" holdpos="40,-40" handle1="0,53" handle2="0,53" holdangle="3" msg="ItemMsgPickUpSelect" PickingTime="0" aimpos="65,-10" attachable="true" aimable="true">
         <StatusEffect type="OnBroken" target="This">
           <Remove />
-          <SpawnItem identifier="he-kegempty" SpawnPositionType="ThisInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Count="1" Equip="true" />
+          <SpawnItem identifier="he-kegempty" SpawnPositionType="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Count="1" Equip="true" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" condition="-5" disabledeltatime="false" offset="0,-36" >
           <Conditional IsActive="true" targetitemcomponent="Powered" />
@@ -286,7 +286,7 @@
       <Holdable canBeCombined="true" removeOnCombined="false" selectkey="Select" canbepicked="true" pickkey="Select" slots="RightHand+LeftHand" holdpos="40,-40" handle1="0,53" handle2="0,53" holdangle="3" msg="ItemMsgPickUpSelect" PickingTime="0" aimpos="65,-10" attachable="true" aimable="true">
         <StatusEffect type="OnBroken" target="This">
           <Remove />
-          <SpawnItem identifier="he-kegempty" SpawnPositionType="ThisInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Count="1" Equip="true" />
+          <SpawnItem identifier="he-kegempty" SpawnPositionType="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Count="1" Equip="true" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" condition="-5" disabledeltatime="false" offset="0,-36" >
           <Conditional IsActive="true" targetitemcomponent="Powered" />
@@ -335,7 +335,7 @@
       <Holdable canBeCombined="true" removeOnCombined="false" selectkey="Select" canbepicked="true" pickkey="Select" slots="RightHand+LeftHand" holdpos="40,-40" handle1="0,53" handle2="0,53" holdangle="3" msg="ItemMsgPickUpSelect" PickingTime="0" aimpos="65,-10" attachable="true" aimable="true">
         <StatusEffect type="OnBroken" target="This">
           <Remove />
-          <SpawnItem identifier="he-kegempty" SpawnPositionType="ThisInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Count="1" Equip="true" />
+          <SpawnItem identifier="he-kegempty" SpawnPositionType="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Count="1" Equip="true" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" condition="-5" disabledeltatime="false" offset="0,-36" >
           <Conditional IsActive="true" targetitemcomponent="Powered" />
@@ -384,7 +384,7 @@
       <Holdable canBeCombined="true" removeOnCombined="false" selectkey="Select" canbepicked="true" pickkey="Select" slots="RightHand+LeftHand" holdpos="40,-40" handle1="0,53" handle2="0,53" holdangle="3" msg="ItemMsgPickUpSelect" PickingTime="0" aimpos="65,-10" attachable="true" aimable="true">
         <StatusEffect type="OnBroken" target="This">
           <Remove />
-          <SpawnItem identifier="he-kegempty" SpawnPositionType="ThisInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Count="1" Equip="true" />
+          <SpawnItem identifier="he-kegempty" SpawnPositionType="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Count="1" Equip="true" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" condition="-5" disabledeltatime="false" offset="0,-36" >
           <Conditional IsActive="true" targetitemcomponent="Powered" />
@@ -433,7 +433,7 @@
       <Holdable canBeCombined="true" removeOnCombined="false" selectkey="Select" canbepicked="true" pickkey="Select" slots="RightHand+LeftHand" holdpos="40,-40" handle1="0,53" handle2="0,53" holdangle="3" msg="ItemMsgPickUpSelect" PickingTime="0" aimpos="65,-10" attachable="true" aimable="true">
         <StatusEffect type="OnBroken" target="This">
           <Remove />
-          <SpawnItem identifier="he-kegempty" SpawnPositionType="ThisInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Count="1" Equip="true" />
+          <SpawnItem identifier="he-kegempty" SpawnPositionType="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Count="1" Equip="true" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" condition="-5" disabledeltatime="false" offset="0,-36" >
           <Conditional IsActive="true" targetitemcomponent="Powered" />
@@ -475,7 +475,7 @@
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
-          <SpawnItem identifier="he-kegempty" SpawnPositionType="ThisInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Count="1" Equip="true" />
+          <SpawnItem identifier="he-kegempty" SpawnPositionType="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Count="1" Equip="true" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" condition="-5" disabledeltatime="false" offset="0,-36" >
           <Conditional IsActive="true" targetitemcomponent="Powered" />
@@ -519,7 +519,7 @@
       <Holdable canBeCombined="true" removeOnCombined="false" selectkey="Select" canbepicked="true" pickkey="Select" slots="RightHand+LeftHand" holdpos="40,-40" handle1="0,53" handle2="0,53" holdangle="3" msg="ItemMsgPickUpSelect" PickingTime="0" aimpos="65,-10" attachable="true" aimable="true">
         <StatusEffect type="OnBroken" target="This">
           <Remove />
-          <SpawnItem identifier="he-kegempty" SpawnPositionType="ThisInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Count="1" Equip="true" />
+          <SpawnItem identifier="he-kegempty" SpawnPositionType="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Count="1" Equip="true" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" condition="-5" disabledeltatime="false" offset="0,-36" >
           <Conditional IsActive="true" targetitemcomponent="Powered" />
