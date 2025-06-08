@@ -378,7 +378,7 @@
   <!-- SEPARATED FROM BANANA 
   banana used to also be a seed -->
   <Item name="bananaseed" identifier="bananaseed" category="Misc" Tags="smallitem,seed,plantitem" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="240,220,140,255" isshootable="true" requireaimtouse="true">
-    <sprite texture="%Moddir%/GrowablePlants_crossed1.png" depth="0.2" sourcerect="866,706,28,29" origin="0.5,0.5" />
+    <sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.2" sourcerect="866,706,28,29" origin="0.5,0.5" />
     <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.03" />
     <Price baseprice="30" canbespecial="false">
       <Price storeidentifier="merchantoutpost" sold="false" />
@@ -440,7 +440,7 @@
   
   <!-- pomacco -->
   <Item name="pomaccoseed" identifier="pomaccoseed" category="Misc" Tags="smallitem,seed,plantitem" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="170,130,70,255">
-    <sprite texture="%Moddir%/GrowablePlants_crossed1.png" depth="0.2" sourcerect="830,636,31,30" origin="0.5,0.5" />
+    <sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.2" sourcerect="830,636,31,30" origin="0.5,0.5" />
     <PreferredContainer primary="wreckstoragecab,abandonedstoragecab,piratestoragecab" amount="1" spawnprobability="0.0" />
     <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.0" />
     <Price baseprice="30" sold="false" >
@@ -451,13 +451,13 @@
       <ProducedItem identifier="pomacco" probability="0.98" />
       <ProducedItem identifier="badcreepingorange" probability="0.02"/>
       <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
-        <LeafSprite texture="%Moddir%/GrowablePlants_crossed1.png" sourcerect="0,0,256,256" />
-        <LeafSprite texture="%Moddir%/GrowablePlants_crossed1.png" sourcerect="256,0,256,256" />
+        <LeafSprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" sourcerect="0,0,256,256" />
+        <LeafSprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" sourcerect="256,0,256,256" />
         <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,768,128,128" />
         <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="128,768,128,128" />
         <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,768,128,128" />
-        <LeafSprite texture="%Moddir%/GrowablePlants_crossed1.png" sourcerect="0,256,256,256" />
-        <LeafSprite texture="%Moddir%/GrowablePlants_crossed1.png" sourcerect="256,256,256,256" />
+        <LeafSprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" sourcerect="0,256,256,256" />
+        <LeafSprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" sourcerect="256,256,256,256" />
         <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="384,896,128,128" />
         <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="512,896,128,128" />
         <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="640,896,128,128" />
@@ -492,7 +492,7 @@
   </Item>
   
   <Item name="saltgrenadeseed" identifier="saltgrenadeseed" category="Misc" Tags="smallitem,seed,plantitem" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="255,150,75,255">
-    <sprite texture="%Moddir%/GrowablePlants_crossed1.png" depth="0.2" sourcerect="829,666,33,35" origin="0.5,0.5" />
+    <sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.2" sourcerect="829,666,33,35" origin="0.5,0.5" />
     <PreferredContainer primary="wreckstoragecab,abandonedstoragecab,piratestoragecab" amount="1" spawnprobability="0.0" />
     <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.0" />
     <Price baseprice="30" sold="false" >
@@ -544,7 +544,7 @@
   </Item>
   
   <Item name="raptorberryseed" identifier="raptorberryseed" category="Misc" Tags="smallitem,seed,plantitem" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="240,220,20,255">
-    <sprite texture="%Moddir%/GrowablePlants_crossed1.png" depth="0.2" sourcerect="830,636,31,30" origin="0.5,0.5" />
+    <sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.2" sourcerect="830,636,31,30" origin="0.5,0.5" />
     <PreferredContainer primary="wreckstoragecab,abandonedstoragecab,piratestoragecab" amount="1" spawnprobability="0.0" />
     <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.0" />
     <Price baseprice="30" sold="false" >
@@ -596,7 +596,7 @@
   </Item>
     
   <Item name="raptorbaccoseed" identifier="raptorbaccoseed" category="Misc" Tags="smallitem,seed,plantitem" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="130,140,100,255">
-    <sprite texture="%Moddir%/GrowablePlants_crossed1.png" depth="0.2" sourcerect="830,636,31,30" origin="0.5,0.5" />
+    <sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.2" sourcerect="830,636,31,30" origin="0.5,0.5" />
     <PreferredContainer primary="wreckstoragecab,abandonedstoragecab,piratestoragecab" amount="1" spawnprobability="0.0" />
     <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.0" />
     <Price baseprice="30" sold="false" >
@@ -648,7 +648,7 @@
   </Item>
   
   <Item name="bananacigarseed" identifier="bananacigarseed" category="Misc" Tags="smallitem,seed,plantitem" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="220,200,240,255" isshootable="true" requireaimtouse="true">
-    <sprite texture="%Moddir%/GrowablePlants_crossed1.png" depth="0.2" sourcerect="866,706,28,29" origin="0.5,0.5" />
+    <sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.2" sourcerect="866,706,28,29" origin="0.5,0.5" />
     <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.03" />
     <Price baseprice="30" canbespecial="false" sold="false">
     </Price>
@@ -699,7 +699,7 @@
   </Item>
   
   <Item name="bananagunseed" identifier="bananagunseed" category="Misc" Tags="smallitem,seed,plantitem" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="220,200,100,255" isshootable="true" requireaimtouse="true">
-    <sprite texture="%Moddir%/GrowablePlants_crossed1.png" depth="0.2" sourcerect="866,706,28,29" origin="0.5,0.5" />
+    <sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.2" sourcerect="866,706,28,29" origin="0.5,0.5" />
     <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.03" />
     <Price baseprice="30" sold="false">
     </Price>
