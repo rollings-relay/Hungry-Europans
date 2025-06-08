@@ -793,7 +793,7 @@
         <StatusEffect type="OnUse" targettype="This,Usetarget" disabledeltatime="true">
           <Conditional target="UseTarget" milkextraction="gte 100" />
           <ReduceAffliction identifier="milkextraction" strength="999" />
-          <Sound file="Content/Items/Medical/Syringe.ogg" range="800" frequencymultiplier="0.5" volume="3" />
+          <Sound file="Content/Items/Medical/Syringe.ogg" range="500" frequencymultiplier="0.5" volume="3" dontmuffle="true"/>
           <SpawnItem identifier="he-milk" spawnposition="ThisInventory" />
         </StatusEffect>
       </RepairTool>    
