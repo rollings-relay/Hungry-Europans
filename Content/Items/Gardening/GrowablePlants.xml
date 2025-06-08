@@ -448,9 +448,10 @@
 
   <!-- ///// CROSSBREEDS ///// -->
   <!-- ///// CROSSBREEDS ///// -->
-  <!-- ///// CROSSBREEDS ///// -->    
+  <!-- ///// CROSSBREEDS ///// -->
+  <!-- Crossbreed seeds can only be acquired by merging fruits in research station -->
     
-    <!-- pomacco -->
+    <!-- POMACCO SEED (pom x tobacco)-->
     <Item name="pomaccoseed" identifier="pomaccoseed" category="Misc" Tags="smallitem,seed,plantitem" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="170,130,70,255">
       <sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.2" sourcerect="830,636,31,30" origin="0.5,0.5" />
       <PreferredContainer primary="wreckstoragecab,abandonedstoragecab,piratestoragecab" amount="1" spawnprobability="0.0" />
@@ -503,6 +504,7 @@
       <Holdable canBeCombined="false" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
     </Item>
     
+    <!-- SALTGRENADE SEED (saltvine x pom) -->
     <Item name="saltgrenadeseed" identifier="saltgrenadeseed" category="Misc" Tags="smallitem,seed,plantitem" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="255,150,75,255">
       <sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.2" sourcerect="829,666,33,35" origin="0.5,0.5" />
       <PreferredContainer primary="wreckstoragecab,abandonedstoragecab,piratestoragecab" amount="1" spawnprobability="0.0" />
@@ -555,6 +557,7 @@
       <Holdable canBeCombined="false" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
     </Item>
     
+    <!-- RAPTOR BERRY SEED (pom x raptorbane) -->
     <Item name="raptorberryseed" identifier="raptorberryseed" category="Misc" Tags="smallitem,seed,plantitem" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="240,220,20,255">
       <sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.2" sourcerect="830,636,31,30" origin="0.5,0.5" />
       <PreferredContainer primary="wreckstoragecab,abandonedstoragecab,piratestoragecab" amount="1" spawnprobability="0.0" />
@@ -607,6 +610,7 @@
       <Holdable canBeCombined="false" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
     </Item>
       
+    <!-- RAPTOR'S NIP SEED (tobacco x raptorbane) -->
     <Item name="raptorbaccoseed" identifier="raptorbaccoseed" category="Misc" Tags="smallitem,seed,plantitem" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="130,140,100,255">
       <sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.2" sourcerect="830,636,31,30" origin="0.5,0.5" />
       <PreferredContainer primary="wreckstoragecab,abandonedstoragecab,piratestoragecab" amount="1" spawnprobability="0.0" />
@@ -659,13 +663,13 @@
       <Holdable canBeCombined="false" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
     </Item>
     
+    <!-- BANANACIGAR SEED (banana x tobacco) -->
     <Item name="bananacigarseed" identifier="bananacigarseed" category="Misc" Tags="smallitem,seed,plantitem" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="220,200,240,255" isshootable="true" requireaimtouse="true">
       <sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.2" sourcerect="866,706,28,29" origin="0.5,0.5" />
       <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.03" />
       <Price baseprice="30" canbespecial="false" sold="false">
       </Price>
-      <Deconstruct time="2">
-      </Deconstruct>      
+      <Deconstruct time="2" requireddeconstructor="deconstructor"/>   
       <Growable growthspeed="7770.72" pickingtime="3" maxhealth="500" hardiness="10" floodtolerance="0.4" seedrate="0" productrate="100" maximumvines="12" flowerquantity="8" leafprobability="0.50" flowertint="148,85,180,255" leaftint="240,180,180,255" vinetint="65,152,45,255" baseflowerscale="0.40" vinescale="0.25" GrowthWeights="0.2,1,0.1,1" >    
         <ProducedItem identifier="banana" probability="0.7"/>
         <ProducedItem identifier="bananacigar" probability="0.3"/>
@@ -717,13 +721,13 @@
       </Holdable>
     </Item>
     
+    <!-- BANANAGUN SEED (banana x saltvine) -->
     <Item name="bananagunseed" identifier="bananagunseed" category="Misc" Tags="smallitem,seed,plantitem" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="220,200,100,255" isshootable="true" requireaimtouse="true">
       <sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.2" sourcerect="866,706,28,29" origin="0.5,0.5" />
       <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.03" />
       <Price baseprice="30" sold="false">
       </Price>
-      <Deconstruct time="2">
-      </Deconstruct>      
+      <Deconstruct time="2" requireddeconstructor="deconstructor"/> 
       <Growable growthspeed="777.071" pickingtime="3" maxhealth="500" hardiness="10" floodtolerance="0.4" seedrate="0" productrate="100" maximumvines="12" flowerquantity="8" leafprobability="0.50" flowertint="170,100,120,255" leaftint="240,180,180,255" vinetint="90,152,50,255" baseflowerscale="0.40" vinescale="0.25" GrowthWeights="0.2,1,0.1,1" >      
         <ProducedItem identifier="banana" probability="0.7"/>
         <ProducedItem identifier="bananagun" probability="0.3"/>

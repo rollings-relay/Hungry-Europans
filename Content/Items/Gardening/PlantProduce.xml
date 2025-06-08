@@ -993,7 +993,7 @@
     <AiTarget sightrange="1000" static="true" />
   </Item>
 
-  <!-- RAPTOR BERRY (pom x raptorbane)
+  <!-- RAPTOR'S NIP (tobacco x raptorbane)
   acts as cheap distracting item, makes monsters sick (especially raptors) -->
   <Item name="raptorbacco" identifier="raptorbacco" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,petfood1,petfood2,petfood3,distillable" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" allowasextracargo="true" isshootable="True" >
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.2" sourcerect="960,512,64,64" origin="0.5,0.5" />
