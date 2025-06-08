@@ -434,7 +434,7 @@
       </Projectile>
       <ItemContainer capacity="3" maxstacksize="6" hideitems="false" itempos="0,5" iteminterval="0,5" itemrotation="0" itemsperrow="1" containedspritedepths="0.500,0.501,0.502,0.503,0.504,0.505" removecontaineditemsondeconstruct="true" allowdraganddrop="false" QuickUseMovesItemsInside="false">
         <SlotIcon texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="388,13,68,7" origin="0.5,0.5" />
-        <Containable items="emptyplate">
+        <Containable items="emptyplate,dirtyplate">
         </Containable>
         <StatusEffect type="OnContained" target="Contained" interval="1" >
           <RequiredItem tag="plateitem" type="Contained" />
@@ -501,7 +501,7 @@
       </Projectile>
       <ItemContainer capacity="3" maxstacksize="6" hideitems="false" itempos="0,5" iteminterval="0,5" itemrotation="0" itemsperrow="1" containedspritedepths="0.500,0.501,0.502,0.503,0.504,0.505" removecontaineditemsondeconstruct="true" allowdraganddrop="false" QuickUseMovesItemsInside="false">
         <SlotIcon texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="342,0,45,20"  origin="0.5,0.5" />
-        <Containable items="emptybowl">
+        <Containable items="emptybowl,dirtybowl">
         </Containable>
         <StatusEffect type="OnContained" target="Contained" interval="1" >
           <RequiredItem tag="bowlitem" type="Contained" />
@@ -580,7 +580,7 @@
     </Item>
 
     <!--////////// DIRTY TABLEWARE \\\\\\\\\\-->
-    <Item name="Dirty Plate" identifier="he-dirtyplate" Tags="smallitem,dirtytableware,tableware,dirtyplate,platebowlreturn1" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="A dirty plate that needs some cleaning either by hand or in a dishwasher. Can be thrown." useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
+    <Item name="Dirty Plate" identifier="he-dirtyplate" Tags="smallitem,dirtytableware,tableware,dirtyplate,plateitem,platebowlreturn1" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="A dirty plate that needs some cleaning either by hand or in a dishwasher. Can be thrown." useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
       <PreferredContainer secondary="wreckcrewcab,abandonedcrewcab" minamount="1" maxamount="6" spawnprobability="0.01" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="388,21,68,7" depth="0.499" origin="0.5,0.5" />
@@ -613,182 +613,32 @@
           <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="1000" />
         </StatusEffect>
       </Projectile>
-      <ItemContainer capacity="1" maxstacksize="6" hideitems="false" itempos="0,5" iteminterval="0,5" itemrotation="0" itemsperrow="1" containedspritedepths="0.500,0.501,0.502,0.503,0.504,0.505" removecontaineditemsondeconstruct="true">
-        <Containable items="he-dirtyplate">
-          <StatusEffect type="OnInserted" target="This">
-            <Remove />
-            <SpawnItem identifier="he-dirtyplatestack_2" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
-          </StatusEffect>
+      <ItemContainer capacity="3" maxstacksize="6" hideitems="false" itempos="0,5" iteminterval="0,5" itemrotation="0" itemsperrow="1" containedspritedepths="0.500,0.501,0.502,0.503,0.504,0.505" removecontaineditemsondeconstruct="true" allowdraganddrop="false" QuickUseMovesItemsInside="false">
+        <SlotIcon texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="388,13,68,7" origin="0.5,0.5" />
+        <Containable items="emptyplate,dirtyplate">
         </Containable>
-        <Containable items="he-dirtyplatestack_2">
-          <StatusEffect type="OnInserted" target="This">
+        <StatusEffect type="OnContained" target="Contained" interval="1" >
+          <RequiredItem tag="plateitem" type="Contained" />
+          <DropContainedItems />
+        </StatusEffect>
+        <StatusEffect type="OnImpact" target="This,Contained" condition="-25" disabledeltatime="true">
+          <Dropitem />
+          <DropContainedItems />
+        </StatusEffect>  
+        <StatusEffect type="OnBroken" target="This" >
+          <DropContainedItems />
+            <ParticleEmitter particle="whiteshards" anglemin="0" anglemax="360" particleamount="3" velocitymin="15" velocitymax="30" scalemin="0.5" scalemax="1" colormultiplier="255,255,255,255"/>
+            <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" frequencymultiplier="0.5"/>
+            <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" frequencymultiplier="0.5"/>
+            <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" frequencymultiplier="0.5"/>
+            <Sound file="Content/Sounds/Damage/GlassImpact4.ogg" selectionmode="Random" range="600" frequencymultiplier="0.5"/>
             <Remove />
-            <SpawnItem identifier="he-dirtyplatestack_3" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
-          </StatusEffect>
-        </Containable>
-        <Containable items="he-dirtyplatestack_3">
-          <StatusEffect type="OnInserted" target="This">
-            <Remove />
-            <SpawnItem identifier="he-dirtyplatestack_4" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
-          </StatusEffect>
-        </Containable>
+          <Removeitem />
+        </StatusEffect>      
       </ItemContainer>
     </Item>
-    <Item name="Stack of Dirty Plates" identifier="he-dirtyplatestack_2" Tags="smallitem,dirtytableware,tableware,platebowlreturn2" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="2 dirty plates that need some cleaning either by hand or in a dishwasher. Can be thrown." useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
-      <PreferredContainer secondary="wreckcrewcab,abandonedcrewcab" minamount="1" maxamount="6" spawnprobability="0.01" />
-      <PreferredContainer primary="kitchen" secondary="crewcab"/>
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="390,62,70,12" depth="0.499" origin="0.5,0.5" />
-      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="388,21,68,7" depth="0.525" origin="0.5,0.5"  />
-      <!--<ContainedSprite allowedcontainertags="liquorshelf" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="180,8,21,58" depth="0.55" origin="0.5,0.42" />-->
-      <Body width="64" height="8" density="11" />
-      <Deconstruct time="2">
-        <!-- <Item identifier="he-glassfragments" amount="1" outcondition="0.5"/> -->
-      </Deconstruct>
-      <Throwable canbepicked="true" characterusable="true" canBeCombined="false" slots="LeftHand,RightHand" holdpos="30,-15" holdangle="0" handle1="0,-3" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnSecondaryUse" target="This" delay="0.01">
-          <Use />
-        </StatusEffect>
-      </Throwable>
-      <Projectile characterusable="false" launchimpulse="0" impulsespread="0.0" sticktocharacters="false" sticktoitems="false" sticktostructures="false" sticktodoors="false">
-        <Attack targetimpulse="3" severlimbsprobability="0.1" itemdamage="1" structuredamage="0" structuresoundtype="StructureSlash">
-          <Affliction identifier="lacerations" strength="1" />
-          <Affliction identifier="lacerations" strength="1" probability="0.25" />
-          <Affliction identifier="bleeding" strength="1" />
-          <Affliction identifier="bleeding" strength="1" probability="0.5" />
-          <Affliction identifier="stun" strength="0.2" />
-        </Attack>
-        <StatusEffect type="OnImpact" target="UseTarget">
-          <Conditional entitytype="Character" />
-          <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="1000" />
-          <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="1000" />
-          <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="1000" />
-          <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="1000" />
-          <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="1000" />
-          <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="1000" />
-        </StatusEffect>
-      </Projectile>
-      <CustomInterface canbeselected="false" drawhudwhenequipped="true">
-        <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
-        <Button text="interaction.takeplate">
-          <StatusEffect type="OnUse" target="This" disabledeltatime="true">
-            <Remove />
-            <SpawnItem identifier="he-dirtyplate" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
-            <SpawnItem identifier="he-dirtyplate" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
-          </StatusEffect>
-        </Button>
-      </CustomInterface>
-      <ItemContainer capacity="1" maxstacksize="6" hideitems="false" itempos="0,5" iteminterval="0,5" itemrotation="0" itemsperrow="1" containedspritedepths="0.500,0.501,0.502,0.503,0.504,0.505" removecontaineditemsondeconstruct="true">
-        <Containable items="he-dirtyplate">
-          <StatusEffect type="OnInserted" target="This">
-            <Remove />
-            <SpawnItem identifier="he-dirtyplatestack_3" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
-          </StatusEffect>
-        </Containable>
-        <Containable items="he-dirtyplatestack_2">
-          <StatusEffect type="OnInserted" target="This">
-            <Remove />
-            <SpawnItem identifier="he-dirtyplatestack_4" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
-          </StatusEffect>
-        </Containable>
-      </ItemContainer>
-    </Item>
-    <Item name="Stack of Dirty Plates" identifier="he-dirtyplatestack_3" Tags="smallitem,dirtytableware,tableware,platebowlreturn3" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="3 dirty plates that need some cleaning either by hand or in a dishwasher. Can be thrown." useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
-      <PreferredContainer secondary="wreckcrewcab,abandonedcrewcab" minamount="1" maxamount="6" spawnprobability="0.01" />
-      <PreferredContainer primary="kitchen" secondary="crewcab"/>
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="390,57,70,17" depth="0.499" origin="0.5,0.5" />
-      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="388,21,68,7" depth="0.525" origin="0.5,0.5"  />
-      <!--<ContainedSprite allowedcontainertags="liquorshelf" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="180,8,21,58" depth="0.55" origin="0.5,0.42" />-->
-      <Body width="64" height="14" density="11" />
-      <Deconstruct time="2">
-        <!-- <Item identifier="he-glassfragments" amount="1" outcondition="0.5"/> -->
-      </Deconstruct>
-      <Throwable canbepicked="true" characterusable="true" canBeCombined="false" slots="LeftHand,RightHand" holdpos="30,-15" holdangle="0" handle1="0,-3" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnSecondaryUse" target="This" delay="0.01">
-          <Use />
-        </StatusEffect>
-      </Throwable>
-      <Projectile characterusable="false" launchimpulse="0" impulsespread="0.0" sticktocharacters="false" sticktoitems="false" sticktostructures="false" sticktodoors="false">
-        <Attack targetimpulse="3" severlimbsprobability="0.1" itemdamage="1" structuredamage="0" structuresoundtype="StructureSlash">
-          <Affliction identifier="lacerations" strength="1" />
-          <Affliction identifier="lacerations" strength="1" probability="0.25" />
-          <Affliction identifier="bleeding" strength="1" />
-          <Affliction identifier="bleeding" strength="1" probability="0.5" />
-          <Affliction identifier="stun" strength="0.2" />
-        </Attack>
-        <StatusEffect type="OnImpact" target="UseTarget">
-          <Conditional entitytype="Character" />
-          <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="1000" />
-          <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="1000" />
-          <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="1000" />
-          <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="1000" />
-          <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="1000" />
-          <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="1000" />
-        </StatusEffect>
-      </Projectile>
-      <CustomInterface canbeselected="false" drawhudwhenequipped="true">
-        <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
-        <Button text="interaction.takeplate">
-          <StatusEffect type="OnUse" target="This" disabledeltatime="true">
-            <Remove />
-            <SpawnItem identifier="he-dirtyplatestack_2" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
-            <SpawnItem identifier="he-dirtyplate" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
-          </StatusEffect>
-        </Button>
-      </CustomInterface>
-      <ItemContainer capacity="1" maxstacksize="6" hideitems="false" itempos="0,5" iteminterval="0,5" itemrotation="0" itemsperrow="1" containedspritedepths="0.500,0.501,0.502,0.503,0.504,0.505" removecontaineditemsondeconstruct="true">
-        <Containable items="he-dirtyplate">
-          <StatusEffect type="OnInserted" target="This">
-            <Remove />
-            <SpawnItem identifier="he-dirtyplatestack_4" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
-          </StatusEffect>
-        </Containable>
-      </ItemContainer>
-    </Item>
-    <Item name="Stack of Dirty Plates" identifier="he-dirtyplatestack_4" Tags="smallitem,dirtytableware,tableware,platebowlreturn4" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="4 dirty plates that need some cleaning either by hand or in a dishwasher. Can be thrown." useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
-      <PreferredContainer secondary="wreckcrewcab,abandonedcrewcab" minamount="1" maxamount="6" spawnprobability="0.01" />
-      <PreferredContainer primary="kitchen" secondary="crewcab"/>
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="388,52,72,22" depth="0.499" origin="0.5,0.5" />
-      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="388,21,68,7" depth="0.525" origin="0.5,0.5"  />
-      <!--<ContainedSprite allowedcontainertags="liquorshelf" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="180,8,21,58" depth="0.55" origin="0.5,0.42" />-->
-      <Body width="64" height="18" density="11" />
-      <Deconstruct time="2">
-        <!-- <Item identifier="he-glassfragments" amount="1" outcondition="0.5"/> -->
-      </Deconstruct>
-      <Throwable canbepicked="true" characterusable="true" canBeCombined="false" slots="LeftHand,RightHand" holdpos="30,-15" holdangle="0" handle1="0,-3" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnSecondaryUse" target="This" delay="0.01">
-          <Use />
-        </StatusEffect>
-      </Throwable>
-      <Projectile characterusable="false" launchimpulse="0" impulsespread="0.0" sticktocharacters="false" sticktoitems="false" sticktostructures="false" sticktodoors="false">
-        <Attack targetimpulse="3" severlimbsprobability="0.1" itemdamage="1" structuredamage="0" structuresoundtype="StructureSlash">
-          <Affliction identifier="lacerations" strength="1" />
-          <Affliction identifier="lacerations" strength="1" probability="0.25" />
-          <Affliction identifier="bleeding" strength="1" />
-          <Affliction identifier="bleeding" strength="1" probability="0.5" />
-          <Affliction identifier="stun" strength="0.2" />
-        </Attack>
-        <StatusEffect type="OnImpact" target="UseTarget">
-          <Conditional entitytype="Character" />
-          <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="1000" />
-          <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="1000" />
-          <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="1000" />
-          <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="1000" />
-          <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="1000" />
-          <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="1000" />
-        </StatusEffect>
-      </Projectile>
-      <CustomInterface canbeselected="false" drawhudwhenequipped="true">
-        <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
-        <Button text="interaction.takeplate">
-          <StatusEffect type="OnUse" target="This" disabledeltatime="true">
-            <Remove />
-            <SpawnItem identifier="he-dirtyplatestack_3" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
-            <SpawnItem identifier="he-dirtyplate" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
-          </StatusEffect>
-        </Button>
-      </CustomInterface>
-    </Item>
-    <Item name="Dirty Bowl" identifier="he-dirtybowl" Tags="smallitem,dirtytableware,tableware,dirtybowl,platebowlreturn1" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="A dirty bowl that needs some cleaning either by hand or in a dishwasher. Can be thrown." useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
+    
+    <Item name="Dirty Bowl" identifier="he-dirtybowl" Tags="smallitem,dirtytableware,tableware,dirtybowl,bowlitem,platebowlreturn1" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="A dirty bowl that needs some cleaning either by hand or in a dishwasher. Can be thrown." useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
       <PreferredContainer secondary="wreckcrewcab,abandonedcrewcab" minamount="1" maxamount="6" spawnprobability="0.01" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="342,21,45,20" depth="0.499" origin="0.5,0.5" />
@@ -821,181 +671,31 @@
           <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="1000" />
         </StatusEffect>
       </Projectile>
-      <ItemContainer capacity="1" maxstacksize="6" hideitems="false" itempos="0,5" iteminterval="0,5" itemrotation="0" itemsperrow="1" containedspritedepths="0.500,0.501,0.502,0.503,0.504,0.505" removecontaineditemsondeconstruct="true">
-        <Containable items="he-dirtybowl">
-          <StatusEffect type="OnInserted" target="This">
-            <Remove />
-            <SpawnItem identifier="he-dirtybowlstack_2" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
-          </StatusEffect>
+      <ItemContainer capacity="3" maxstacksize="6" hideitems="false" itempos="0,5" iteminterval="0,5" itemrotation="0" itemsperrow="1" containedspritedepths="0.500,0.501,0.502,0.503,0.504,0.505" removecontaineditemsondeconstruct="true" allowdraganddrop="false" QuickUseMovesItemsInside="false">
+        <SlotIcon texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="342,0,45,20"  origin="0.5,0.5" />
+        <Containable items="emptybowl,dirtybowl">
         </Containable>
-        <Containable items="he-dirtybowlstack_2">
-          <StatusEffect type="OnInserted" target="This">
+        <StatusEffect type="OnContained" target="Contained" interval="1" >
+          <RequiredItem tag="bowlitem" type="Contained" />
+          <DropContainedItems />
+        </StatusEffect>
+        <StatusEffect type="OnImpact" target="This,Contained" condition="-15" disabledeltatime="true">
+          <Dropitem />
+          <DropContainedItems />
+        </StatusEffect>  
+        <StatusEffect type="OnBroken" target="This" >
+          <DropContainedItems />
+            <ParticleEmitter particle="whiteshards" anglemin="0" anglemax="360" particleamount="3" velocitymin="15" velocitymax="30" scalemin="0.5" scalemax="1" colormultiplier="255,255,255,255"/>
+            <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" frequencymultiplier="0.5"/>
+            <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" frequencymultiplier="0.5"/>
+            <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" frequencymultiplier="0.5"/>
+            <Sound file="Content/Sounds/Damage/GlassImpact4.ogg" selectionmode="Random" range="600" frequencymultiplier="0.5"/>
             <Remove />
-            <SpawnItem identifier="he-dirtybowlstack_3" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
-          </StatusEffect>
-        </Containable>
-        <Containable items="he-dirtybowlstack_3">
-          <StatusEffect type="OnInserted" target="This">
-            <Remove />
-            <SpawnItem identifier="he-dirtybowlstack_4" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
-          </StatusEffect>
-        </Containable>
+          <Removeitem />
+        </StatusEffect>      
       </ItemContainer>
-    </Item>
-    <Item name="Stack of Dirty Bowls" identifier="he-dirtybowlstack_2" Tags="smallitem,dirtytableware,tableware,platebowlreturn2" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="2 dirty bowls that need some cleaning either by hand or in a dishwasher. Can be thrown." useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
-      <PreferredContainer secondary="wreckcrewcab,abandonedcrewcab" minamount="1" maxamount="6" spawnprobability="0.01" />
-      <PreferredContainer primary="kitchen" secondary="crewcab"/>
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="342,21,45,20" depth="0.499" origin="0.5,0.5" />
-      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="342,21,45,20" depth="0.525" origin="0.5,0.5"  />
-      <!--<ContainedSprite allowedcontainertags="liquorshelf" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="180,8,21,58" depth="0.55" origin="0.5,0.42" />-->
-      <Body width="42" height="14" density="11.5" />
-      <Deconstruct time="2">
-        <!-- <Item identifier="he-glassfragments" amount="1" outcondition="0.5"/> -->
-      </Deconstruct>
-      <Throwable canbepicked="true" characterusable="true" canBeCombined="false" slots="LeftHand,RightHand" holdpos="30,-15" holdangle="0" handle1="0,-3" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnSecondaryUse" target="This" delay="0.01">
-          <Use />
-        </StatusEffect>
-      </Throwable>
-      <Projectile characterusable="false" launchimpulse="0" impulsespread="0.0" sticktocharacters="false" sticktoitems="false" sticktostructures="false" sticktodoors="false">
-        <Attack targetimpulse="3" severlimbsprobability="0.1" itemdamage="1" structuredamage="0" structuresoundtype="StructureSlash">
-          <Affliction identifier="lacerations" strength="1" />
-          <Affliction identifier="lacerations" strength="1" probability="0.25" />
-          <Affliction identifier="bleeding" strength="1" />
-          <Affliction identifier="bleeding" strength="1" probability="0.5" />
-          <Affliction identifier="stun" strength="0.2" />
-        </Attack>
-        <StatusEffect type="OnImpact" target="UseTarget">
-          <Conditional entitytype="Character" />
-          <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="1000" />
-          <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="1000" />
-          <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="1000" />
-          <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="1000" />
-          <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="1000" />
-          <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="1000" />
-        </StatusEffect>
-      </Projectile>
-      <CustomInterface canbeselected="false" drawhudwhenequipped="true">
-        <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
-        <Button text="interaction.takebowl">
-          <StatusEffect type="OnUse" target="This" disabledeltatime="true">
-            <Remove />
-            <SpawnItem identifier="he-dirtybowl" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
-            <SpawnItem identifier="he-dirtybowl" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
-          </StatusEffect>
-        </Button>
-      </CustomInterface>
-      <ItemContainer capacity="1" maxstacksize="6" hideitems="false" itempos="0,5" iteminterval="0,5" itemrotation="0" itemsperrow="1" containedspritedepths="0.500,0.501,0.502,0.503,0.504,0.505" removecontaineditemsondeconstruct="true">
-        <Containable items="he-dirtybowl">
-          <StatusEffect type="OnInserted" target="This">
-            <Remove />
-            <SpawnItem identifier="he-dirtybowlstack_3" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
-          </StatusEffect>
-        </Containable>
-        <Containable items="he-dirtybowlstack_2">
-          <StatusEffect type="OnInserted" target="This">
-            <Remove />
-            <SpawnItem identifier="he-dirtybowlstack_4" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
-          </StatusEffect>
-        </Containable>
-      </ItemContainer>
-    </Item>
-    <Item name="Stack of Dirty Bowls" identifier="he-dirtybowlstack_3" Tags="smallitem,dirtytableware,tableware,platebowlreturn3" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="3 dirty bowls that need some cleaning either by hand or in a dishwasher. Can be thrown." useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
-      <PreferredContainer secondary="wreckcrewcab,abandonedcrewcab" minamount="1" maxamount="6" spawnprobability="0.01" />
-      <PreferredContainer primary="kitchen" secondary="crewcab"/>
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="342,21,45,20" depth="0.499" origin="0.5,0.5" />
-      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="342,21,45,20" depth="0.525" origin="0.5,0.5"  />
-      <!--<ContainedSprite allowedcontainertags="liquorshelf" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="180,8,21,58" depth="0.55" origin="0.5,0.42" />-->
-      <Body width="42" height="14" density="11.5" />
-      <Deconstruct time="2">
-        <!-- <Item identifier="he-glassfragments" amount="1" outcondition="0.5"/> -->
-      </Deconstruct>
-      <Throwable canbepicked="true" characterusable="true" canBeCombined="false" slots="LeftHand,RightHand" holdpos="30,-15" holdangle="0" handle1="0,-3" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnSecondaryUse" target="This" delay="0.01">
-          <Use />
-        </StatusEffect>
-      </Throwable>
-      <Projectile characterusable="false" launchimpulse="0" impulsespread="0.0" sticktocharacters="false" sticktoitems="false" sticktostructures="false" sticktodoors="false">
-        <Attack targetimpulse="3" severlimbsprobability="0.1" itemdamage="1" structuredamage="0" structuresoundtype="StructureSlash">
-          <Affliction identifier="lacerations" strength="1" />
-          <Affliction identifier="lacerations" strength="1" probability="0.25" />
-          <Affliction identifier="bleeding" strength="1" />
-          <Affliction identifier="bleeding" strength="1" probability="0.5" />
-          <Affliction identifier="stun" strength="0.2" />
-        </Attack>
-        <StatusEffect type="OnImpact" target="UseTarget">
-          <Conditional entitytype="Character" />
-          <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="1000" />
-          <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="1000" />
-          <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="1000" />
-          <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="1000" />
-          <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="1000" />
-          <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="1000" />
-        </StatusEffect>
-      </Projectile>
-      <CustomInterface canbeselected="false" drawhudwhenequipped="true">
-        <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
-        <Button text="interaction.takebowl">
-          <StatusEffect type="OnUse" target="This" disabledeltatime="true">
-            <Remove />
-            <SpawnItem identifier="he-dirtybowlstack_2" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
-            <SpawnItem identifier="he-dirtybowl" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
-          </StatusEffect>
-        </Button>
-      </CustomInterface>
-      <ItemContainer capacity="1" maxstacksize="6" hideitems="false" itempos="0,5" iteminterval="0,5" itemrotation="0" itemsperrow="1" containedspritedepths="0.500,0.501,0.502,0.503,0.504,0.505" removecontaineditemsondeconstruct="true">
-        <Containable items="he-dirtybowl">
-          <StatusEffect type="OnInserted" target="This">
-            <Remove />
-            <SpawnItem identifier="he-dirtybowlstack_4" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
-          </StatusEffect>
-        </Containable>
-      </ItemContainer>
-    </Item>
-    <Item name="Stack of Dirty Bowls" identifier="he-dirtybowlstack_4" Tags="smallitem,dirtytableware,tableware,platebowlreturn4" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="4 dirty bowls that need some cleaning either by hand or in a dishwasher. Can be thrown." useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
-      <PreferredContainer secondary="wreckcrewcab,abandonedcrewcab" minamount="1" maxamount="6" spawnprobability="0.01" />
-      <PreferredContainer primary="kitchen" secondary="crewcab"/>
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="342,21,45,20" depth="0.499" origin="0.5,0.5" />
-      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="342,21,45,20" depth="0.525" origin="0.5,0.5"  />
-      <!--<ContainedSprite allowedcontainertags="liquorshelf" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="180,8,21,58" depth="0.55" origin="0.5,0.42" />-->
-      <Body width="42" height="14" density="11.5" />
-      <Deconstruct time="2">
-        <!-- <Item identifier="he-glassfragments" amount="1" outcondition="0.5"/> -->
-      </Deconstruct>
-      <Throwable canbepicked="true" characterusable="true" canBeCombined="false" slots="LeftHand,RightHand" holdpos="30,-15" holdangle="0" handle1="0,-3" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnSecondaryUse" target="This" delay="0.01">
-          <Use />
-        </StatusEffect>
-      </Throwable>
-      <Projectile characterusable="false" launchimpulse="0" impulsespread="0.0" sticktocharacters="false" sticktoitems="false" sticktostructures="false" sticktodoors="false">
-        <Attack targetimpulse="3" severlimbsprobability="0.1" itemdamage="1" structuredamage="0" structuresoundtype="StructureSlash">
-          <Affliction identifier="lacerations" strength="1" />
-          <Affliction identifier="lacerations" strength="1" probability="0.25" />
-          <Affliction identifier="bleeding" strength="1" />
-          <Affliction identifier="bleeding" strength="1" probability="0.5" />
-          <Affliction identifier="stun" strength="0.2" />
-        </Attack>
-        <StatusEffect type="OnImpact" target="UseTarget">
-          <Conditional entitytype="Character" />
-          <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="1000" />
-          <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="1000" />
-          <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="1000" />
-          <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="1000" />
-          <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="1000" />
-          <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="1000" />
-        </StatusEffect>
-      </Projectile>
-      <CustomInterface canbeselected="false" drawhudwhenequipped="true">
-        <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
-        <Button text="interaction.takebowl">
-          <StatusEffect type="OnUse" target="This" disabledeltatime="true">
-            <Remove />
-            <SpawnItem identifier="he-dirtybowlstack_3" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
-            <SpawnItem identifier="he-dirtybowl" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
-          </StatusEffect>
-        </Button>
-      </CustomInterface>
-    </Item>
+    </Item>    
+    
     <Item name="Dirty Fork" identifier="he-dirtyfork" Tags="smallitem,dirtytableware,tableware,fork,forkspoonreturn" category="Misc" cargocontaineridentifier="metalcrate" description="A dirty fork that needs some cleaning either by hand or in a dishwasher. Eating with it may make you sick." scale="0.5" impactsoundtag="impact_metal_light" isshootable="true" RequireAimToUse="True">
       <Deconstruct time="3" requireddeconstructor="deconstructor" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="447,0,56,5" origin="0.5,0.5" />
@@ -1010,6 +710,7 @@
         <StatusEffect type="OnSecondaryUse" target="Character" tags="usingfork" interval="0.1" duration="0.2" AllowWhenBroken="true" />
       </Holdable>
     </Item>
+    
     <Item name="Dirty Spoon" identifier="he-dirtyspoon" Tags="smallitem,dirtytableware,tableware,spoon,forkspoonreturn" category="Misc" cargocontaineridentifier="metalcrate" description="A dirty spoon that needs some cleaning either by hand or in a dishwasher. Eating with it may make you sick." scale="0.5" impactsoundtag="impact_metal_light" isshootable="true" RequireAimToUse="True">
       <Deconstruct time="3" requireddeconstructor="deconstructor" />
       <Fabricate suitablefabricators="fabricator" requiredtime="10" amount="10">
