@@ -230,7 +230,6 @@
     </Price>
     <Deconstruct time="5">
       <Item identifier="potassium" mincondition="0.5" />
-      <Item identifier="bananaseed" mincondition="0.5" />
     </Deconstruct>
     <Deconstruct time="5" chooserandom="true" amount="1" requireddeconstructor="geneticresearchstation">
       <!-- Cross-breeding -->
