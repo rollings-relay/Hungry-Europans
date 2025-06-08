@@ -17,7 +17,7 @@
       <Price storeidentifier="merchantmine" multiplier="0.75" />
     </Price>
     <Fabricate suitablefabricators="vendingmachine" requiredtime="1" requiredmoney="30" fabricationlimitmin="3" fabricationlimitmax="5"/>
-    <Deconstruct time="5">
+    <Deconstruct time="5" chooserandom="true" >
       <Item identifier="carbon" mincondition="0.5" />
       <Item identifier="creepingorangevineseed" mincondition="0.5" />
     </Deconstruct>
@@ -80,7 +80,7 @@
       <Price storeidentifier="merchantmilitary" multiplier="0.8" />
       <Price storeidentifier="merchantmine" multiplier="0.75" />
     </Price>
-    <Deconstruct time="5">
+    <Deconstruct time="5" chooserandom="true" >
       <Item identifier="carbon" mincondition="0.5" />
       <Item identifier="tobaccovineseed" mincondition="0.5" />
     </Deconstruct>
@@ -123,9 +123,9 @@
       <Price storeidentifier="merchantmilitary" multiplier="0.8" />
       <Price storeidentifier="merchantmine" multiplier="0.75" />
     </Price>
-    <Deconstruct time="5">
-      <Item identifier="sodium" />
-      <Item identifier="saltvineseed" />
+    <Deconstruct time="5" chooserandom="true" >
+      <Item identifier="sodium" mincondition="0.5" />
+      <Item identifier="saltvineseed" mincondition="0.5" />
     </Deconstruct>
     <Deconstruct time="5" chooserandom="true" amount="1" requireddeconstructor="geneticresearchstation">
       <!-- Cross-breeding -->
@@ -174,7 +174,7 @@
       <Price storeidentifier="merchantmilitary" multiplier="0.8" />
       <Price storeidentifier="merchantmine" multiplier="0.75" />
     </Price>
-    <Deconstruct time="5">
+    <Deconstruct time="5" chooserandom="true" >
       <Item identifier="carbon" mincondition="0.5" />
       <Item identifier="raptorbaneseed" mincondition="0.5" />
     </Deconstruct>
@@ -228,7 +228,7 @@
         <Reputation faction="clowns" min="50"/>
       </Price>
     </Price>
-    <Deconstruct time="5">
+    <Deconstruct time="5" chooserandom="true" >
       <Item identifier="potassium" mincondition="0.5" />
     </Deconstruct>
     <Deconstruct time="5" chooserandom="true" amount="1" requireddeconstructor="geneticresearchstation">
@@ -317,7 +317,7 @@
       <Price storeidentifier="merchantmilitary" multiplier="0.8" />
       <Price storeidentifier="merchantmine" multiplier="0.75" />
     </Price>
-    <Deconstruct time="5">
+    <Deconstruct time="5" chooserandom="true" >
       <Item identifier="carbon" mincondition="0.5" />
       <Item identifier="bubbleberryvineseed" />
     </Deconstruct>
@@ -373,7 +373,7 @@
       <Price storeidentifier="merchantmilitary" multiplier="0.8" />
       <Price storeidentifier="merchantmine" multiplier="0.75" />
     </Price>
-    <Deconstruct time="5">
+    <Deconstruct time="5" chooserandom="true" >
       <Item identifier="carbon" mincondition="0.5" />
       <Item identifier="popnutvineseed" />
     </Deconstruct>
@@ -421,7 +421,7 @@
       <Price storeidentifier="merchantmilitary" multiplier="0.8" />
       <Price storeidentifier="merchantmine" multiplier="0.75" />
     </Price>
-    <Deconstruct time="5">
+    <Deconstruct time="5" chooserandom="true" >
       <Item identifier="carbon" mincondition="0.5" />
     </Deconstruct>
     <Throwable characterusable="True" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="20,-20" holdangle="0" holdpos="20,-30" aimangle="0" aimable="false" msg="ItemMsgPickUpSelect">
@@ -546,6 +546,7 @@
     <AiTarget sightrange="1000" static="true" />
     <PreferredContainer primary="plantcontainer"/>
   </Item>
+  
   <Item name="Mutated Tobacco Bud" identifier="badtobaccobud" category="Material" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,mutatedplant,petfood1,petfood2,petfood3" description="A mutated variant of the tobacco bud. Fragile, but strong in flavour and smell." cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true">
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.2" sourcerect="0,51,47,56" origin="0.5,0.5" />
     <Body radius="30" density="9"/>
@@ -598,6 +599,7 @@
     <AiTarget sightrange="1000" static="true" />
     <PreferredContainer primary="plantcontainer"/>
   </Item>
+  
   <Item name="Mutated Salt Bulb" identifier="badsaltbulb" descriptionidentifier="saltbulb" category="Material" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,mutatedplant,explodesinwater,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true">
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.2" sourcerect="0,107,51,57" origin="0.5,0.5" />
     <Body radius="30" density="9" />
@@ -672,6 +674,7 @@
     <AiTarget sightrange="1000" static="true" />
     <PreferredContainer primary="plantcontainer"/>
   </Item>
+  
   <Item name="Mutated Raptor Bane" identifier="badraptorbane" descriptionidentifier="raptorbane" category="Material" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,mutatedplant,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true">
     <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="907,838,44,50" origin="0.5,0.5" />
     <Body radius="30" density="9"/>
@@ -714,6 +717,7 @@
     <AiTarget sightrange="1000" static="true" />
     <PreferredContainer primary="plantcontainer"/>
   </Item>
+  
   <Item name="Mutated Bubbleberries" identifier="badbubbleberries" descriptionidentifier="bubbleberries" category="Material" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,mutatedplant,fooditem,sugary,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true">
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.2" sourcerect="237,0,54,48" origin="0.5,0.5" />
     <Body radius="30" density="9" />
@@ -803,6 +807,7 @@
     <AiTarget sightrange="1000" static="true" />
     <PreferredContainer primary="plantcontainer"/>
   </Item>
+  
   <Item name="Popped Mutated Popnut" identifier="badpopnutpopped" descriptionidentifier="popnut" category="Material" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,mutatedplant,waterreactivesize,fooditem,sugary,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" damagedbyexplosions="false" allowasextracargo="true">
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.2" sourcerect="137,0,46,51" origin="0.5,0.5" />
     <Body radius="30" density="2" />
@@ -875,7 +880,7 @@
     <PreferredContainer secondary="nucleargun" minamount="1" maxamount="1" spawnprobability="1"/>
     <Price baseprice="150" displaynonempty="true">
     </Price>
-    <Deconstruct time="30" chooserandom="true">
+    <Deconstruct time="15" chooserandom="true">
       <Item identifier="uranium" mincondition="0.95" />
       <Item identifier="potassium" mincondition="0.95" />
       <Item identifier="potassium" mincondition="0.95" />
@@ -926,7 +931,7 @@
     <PreferredContainer primary="kitchen" secondary="crewcab" />
     <Price baseprice="20" sold="false">
     </Price>
-    <Deconstruct time="5">
+    <Deconstruct time="5" >
       <Item identifier="carbon" mincondition="0.5" />
     </Deconstruct>
     <Holdable canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="24,18" holdpos="25,-25" holdangle="0" aimangle="25" aimable="false" swingwhenusing="True" swingamount="7,7" swingspeed="0.5" msg="ItemMsgPickUpSelect">
@@ -934,7 +939,7 @@
         <ParticleEmitter particle="fruitchunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="180,255,255,255" />
       </StatusEffect>
       <StatusEffect type="OnUse" target="Character" interval="1" disabledeltatime="true">
-        <Affliction identifier="tobaccoaddiction" amount="1" />
+        <Affliction identifier="he-tobaccoaddiction" amount="1" />
         <Affliction identifier="nausea" amount="3" probabiity="0.1" />
         <ReduceAffliction type="psychosis" amount="0.5" />
         <ReduceAffliction type="organdamage" amount="0.15" />
@@ -1015,7 +1020,7 @@
         <Affliction identifier="haste" amount="8" />
         <Affliction identifier="hallucinating" amount="5" />
         <Affliction identifier="chemaddiction" amount="0.4" />
-        <Affliction identifier="tobaccoaddiction" amount="1" />
+        <Affliction identifier="he-tobaccoaddiction" amount="1" />
         <Sound file="Content/Items/Medical/ITEM_eatingBiteQuick.ogg" range="250" loop="false" selectionmode="random" volume="2" />
         <Sound file="Content/Items/Medical/ITEM_eatingLoop.ogg" range="250" loop="false" selectionmode="random" volume="2"/>
       </StatusEffect>
@@ -1039,6 +1044,7 @@
     <Price baseprice="20" sold="false">
     </Price>
     <Deconstruct time="5" chooserandom="true">
+      <Item identifier="carbon" mincondition="0.5" />
     </Deconstruct>
     <Throwable characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="2.5" aimpos="35,-10" msg="ItemMsgPickUpSelect">
       <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true" />
@@ -1077,7 +1083,7 @@
     <PreferredContainer primary="kitchen" secondary="crewcab" />
     <Price baseprice="150" displaynonempty="true">
     </Price>
-    <Deconstruct time="30" chooserandom="true">
+    <Deconstruct time="5" chooserandom="true">
       <Item identifier="potassium" mincondition="0.95" />
     </Deconstruct>
     <LightComponent LightColor="220,150,30,150" range="15" IsOn="false" lightoffset="18,0" vulnerabletoemp="false" pulseamount="0.6" pulsefrequency="1" flicker="0.5" flickerspeed="0.5">
@@ -1096,7 +1102,7 @@
         <!-- <Sound file="Content/Items/Medical/ITEM_cigaretteExtended.ogg" range="250" loop="true" selectionmode="Random" /> -->
       </StatusEffect>
       <StatusEffect tags="medical" type="OnUse" target="Character">
-        <Affliction identifier="tobaccoaddiction" amount="2" />
+        <Affliction identifier="he-tobaccoaddiction" amount="2" />
         <Affliction identifier="psychosisresistance" amount="15" />
         <ReduceAffliction identifier="psychosis" amount="3" />
         <ReduceAffliction identifier="hallucinating" amount="5" />
@@ -1121,8 +1127,9 @@
     <PreferredContainer primary="kitchen" secondary="crewcab" />
     <Price baseprice="150" displaynonempty="true">
     </Price>
-    <Deconstruct time="30" chooserandom="true">
+    <Deconstruct time="5" chooserandom="true">
       <Item identifier="potassium" mincondition="0.95" />
+      <Item identifier="sodium" mincondition="0.95" />
     </Deconstruct>
     <LightComponent LightColor="220,150,30,150" range="15" IsOn="false" lightoffset="18,0" vulnerabletoemp="false" pulseamount="0.6" pulsefrequency="1" flicker="0.5" flickerspeed="0.5">
       <IsActiveConditional IsAiming="true" />
@@ -1208,6 +1215,7 @@
     </Holdable>
     <PreferredContainer primary="plantcontainer"/>
   </Item>
+  
   <Item name="Popnut Leaf" identifier="popnutleaf" category="Material" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" damagedbyexplosions="false" allowasextracargo="True">
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.2" sourcerect="451,0,61,52" origin="0.5,0.5" />
     <Body radius="30" density="5" />
@@ -1275,5 +1283,6 @@
       </StatusEffect>
     </Holdable>
   </Item>
+  
 </Items>
 </Override>
