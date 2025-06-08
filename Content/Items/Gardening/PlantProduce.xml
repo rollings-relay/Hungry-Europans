@@ -70,7 +70,7 @@
     <PreferredContainer primary="plantcontainer"/>
   </Item>
   
-  <Item name="Tobacco Bud" identifier="tobaccobud" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true">
+  <Item name="Tobacco Bud" identifier="tobaccobud" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,tobaccoingredient" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true">
     <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="904,646,56,61" origin="0.5,0.5" />
     <Body radius="30" density="9" waterdragcoefficient="20"/>
     <Price baseprice="40" sold="false">
@@ -1000,7 +1000,7 @@
 
   <!-- RAPTOR'S NIP (tobacco x raptorbane)
   acts as cheap distracting item, makes monsters sick (especially raptors) -->
-  <Item name="raptorbacco" identifier="raptorbacco" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,petfood1,petfood2,petfood3,distillable" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" allowasextracargo="true" isshootable="True" >
+  <Item name="raptorbacco" identifier="raptorbacco" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,petfood1,petfood2,petfood3,distillable,tobaccoingredient" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" allowasextracargo="true" isshootable="True" >
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.2" sourcerect="960,512,64,64" origin="0.5,0.5" />
     <Body radius="28" density="9" />
     <PreferredContainer primary="plantcontainer"/>
@@ -1076,7 +1076,7 @@
   
   <!--BANANACIGAR (banana x tobacco)
   a smokeable banana that reduces psychosis and hallucination -->
-  <Item name="bananacigar" identifier="bananacigar" Category="Misc" Tags="smallitem,reactorfuel,divingsuitfuel,plant,plantitem" health="35" maxstacksize="1" cargocontaineridentifier="metalcrate" scale="0.5" impacttolerance="8"  spritecolor="255,255,255,255" isshootable="true" requireaimtouse="true">
+  <Item name="bananacigar" identifier="bananacigar" Category="Misc" Tags="smallitem,reactorfuel,divingsuitfuel,plant,plantitem,tobaccoingredient" health="35" maxstacksize="1" cargocontaineridentifier="metalcrate" scale="0.5" impacttolerance="8"  spritecolor="255,255,255,255" isshootable="true" requireaimtouse="true">
     <sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" sourcerect="960,448,64,64" depth="0.2" origin="0.5,0.5" />
     <Body radius="28" density="15" />
     <PreferredContainer primary="plantcontainer"/>
