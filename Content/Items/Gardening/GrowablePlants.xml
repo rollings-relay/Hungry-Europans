@@ -1,6 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Override>
   <Items>
+
+  <!-- ///// VANILLA ///// -->
+  <!-- ///// VANILLA ///// -->
+  <!-- ///// VANILLA ///// -->
+  
     <Item name="" identifier="creepingorangevineseed" category="Misc" Tags="smallitem,seed,plantitem,pomegrenadeseed" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="255,54,0,255">
       <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="830,636,31,30" origin="0.5,0.5" />
       <PreferredContainer primary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.1" />
@@ -56,6 +61,7 @@
         <Growable growthspeed="0.070" hardiness="0.15" floodtolerance="0.4" productrate="0.022"/>
       </Upgrade>
     </Item>
+
     <Item name="" identifier="tobaccovineseed" category="Misc" Tags="smallitem,seed,plantitem,tobaccoseed" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="48,122,245,255">
       <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="863,636,30,31" origin="0.5,0.5" />
       <PreferredContainer primary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.1" />
@@ -111,6 +117,7 @@
         <Growable growthspeed="0.065" hardiness="0.071" floodtolerance="0.5" productrate="0.0056"/>
       </Upgrade>
     </Item>
+
     <Item name="" identifier="saltvineseed" category="Misc" Tags="smallitem,seed,plantitem,saltbulbseed" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="215,245,77,255">
       <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="829,666,33,35" origin="0.5,0.5" />
       <PreferredContainer primary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.1" />
@@ -166,6 +173,7 @@
         <Growable growthspeed="0.076" hardiness="0.162" floodtolerance="0.2" productrate="0.0056"/>
       </Upgrade>
     </Item>
+
     <Item name="" identifier="raptorbaneseed" category="Misc" Tags="smallitem,seed,plantitem,raptorbaneseed" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="238,36,98,255">
       <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="863,668,30,33" origin="0.5,0.5" />
       <PreferredContainer primary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.1" />
@@ -221,6 +229,7 @@
         <Growable growthspeed="0.065" hardiness="0.062" floodtolerance="0.4" productrate="0.022"/>
       </Upgrade>
     </Item>
+
     <Item name="Bubble Berry Vine Seed" identifier="bubbleberryvineseed" category="Misc" Tags="smallitem,seed,plantitem,bubbleberryseed" description="Plant it in a planter to grow bubble berries." maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.2" sourcerect="0,164,25,29" origin="0.5,0.5" />
       <PreferredContainer primary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.05" />
@@ -274,6 +283,7 @@
       <Body radius="15" density="10.1" />
       <Holdable canbepicked="true" canBeCombined="false" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
     </Item>
+
     <Item name="Pop Nut Vine Seed" identifier="popnutvineseed" category="Misc" Tags="smallitem,seed,plantitem,popnutseed" description="Plant it in a planter to grow pop nuts." maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.2" sourcerect="25,164,19,18" origin="0.5,0.5" />
       <PreferredContainer primary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.05" />
@@ -327,5 +337,15 @@
       <Body radius="15" density="10.1" />
       <Holdable canbepicked="true" canBeCombined="false" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
     </Item>
+
+
+
+  <!-- ///// CROSSBREEDS ///// -->
+  <!-- ///// CROSSBREEDS ///// -->
+  <!-- ///// CROSSBREEDS ///// -->
+  
+  
+
+
   </Items>
 </Override>
