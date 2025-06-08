@@ -363,6 +363,7 @@
     <AiTarget sightrange="1000" static="True" />
     <PreferredContainer primary="plantcontainer"/>
   </Item>
+  
   <Item name="Popnut" identifier="popnut" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,waterreactivesize,fooditem,petfood1,petfood2,petfood3" description="Kids love to play with them. Needs to be put in water to pop it open and be able to consume it." cargocontaineridentifier="metalcrate" scale="0.25" impactsoundtag="impact_soft" damagedbyexplosions="false" allowasextracargo="True">
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.2" sourcerect="0,0,46,46" origin="0.5,0.5" />
     <Body radius="30" density="2.8" />
@@ -411,6 +412,7 @@
     <AiTarget sightrange="1000" static="True" />
     <PreferredContainer primary="plantcontainer"/>
   </Item>
+  
   <Item name="Popped Popnut" identifier="popnutpopped" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,fooditem,sugary,petfood1,petfood2,petfood3" description="It's popped open, ready to be consumed. Used in some recipes." cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" damagedbyexplosions="false" allowasextracargo="True">
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.2" sourcerect="46,0,46,51" origin="0.5,0.5" />
     <Body radius="30" density="2" />
