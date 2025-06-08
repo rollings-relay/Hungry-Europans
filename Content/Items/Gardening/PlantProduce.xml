@@ -207,6 +207,101 @@
     <PreferredContainer primary="plantcontainer"/>
   </Item>
 
+  <!-- SEPARATED BANANA AND SEED INTO TWO ITEMS
+  bananas used to be both a fruit AND a seed
+  Added "bananaseed" as a seed, needed for crossbreeding -->
+  <Item name="Banana" identifier="banana" category="Misc" subcategory="Food" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,seed,plantitem,bananaseed,fooditem,ingredient,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True">
+    <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.04" />
+    <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.04" />
+    <PreferredContainer primary="seedbag" amount="1" spawnposition="0.03" />
+    <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,330,52,55" depth="0.2" origin="0.5,0.5" />
+    <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,330,52,55" origin="0.5,0.5" />
+    <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,330,52,55" depth="0.525" origin="0.5,0.7"  />
+    <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="53,313,47,72" depth="0.2" maxcondition="99" />
+    <Price baseprice="50" canbespecial="false">
+      <Price storeidentifier="merchantoutpost" sold="false" />
+      <Price storeidentifier="merchantcity" sold="false"/>
+      <Price storeidentifier="merchantresearch" sold="false" />
+      <Price storeidentifier="merchantmilitary" sold="false" />
+      <Price storeidentifier="merchantmine" sold="false" />
+      <Price storeidentifier="merchantclown" minavailable="3" maxavailable="5" sold="true">
+        <Reputation faction="clowns" min="50"/>
+      </Price>
+    </Price>
+    <Deconstruct time="5">
+      <Item identifier="potassium" mincondition="0.5" />
+      <Item identifier="bananaseed" mincondition="0.5" />
+    </Deconstruct>
+    <Deconstruct time="5" chooserandom="true" amount="1" requireddeconstructor="geneticresearchstation">
+      <!-- Cross-breeding -->
+      <Item identifier="bananacigarseed" commonness="3" requiredotheritem="tobaccobud" outconditionmin="1" outconditionmax="1" activatebuttontext="researchstation.crossbreed" infotext="researchstation.crossbreed.infotext" infotextonotheritemmissing="researchstation.crossbreed.missingitem" />
+      <Item identifier="bananagunseed" commonness="3" requiredotheritem="saltbulb" outconditionmin="1" outconditionmax="1" activatebuttontext="researchstation.crossbreed" infotext="researchstation.crossbreed.infotext" infotextonotheritemmissing="researchstation.crossbreed.missingitem" />
+    </Deconstruct>
+    <Body radius="15" density="12" />
+    <SuitableTreatment type="hunger" suitability="20" />
+    <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" handle1="-15,-15" aimpos="32,28" holdpos="30,-15" holdangle="0" aimangle="90" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <!-- Allow the item to be applied to a bot, but prevent full usage on a player -->
+      <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
+        <Conditional IsBot="true" />
+      </StatusEffect>
+      <StatusEffect type="OnSuccess" target="This,UseTarget" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
+        <Conditional IsBot="true" />
+        <Affliction identifier="he-stuffed" amount="1.66" />
+        <Affliction identifier="strengthen" amount="3.32" />
+        <ReduceAffliction type="nausea" amount="4.15" />
+        <ReduceAffliction type="opiatewithdrawal" amount="4.15" />
+        <ReduceAffliction identifier="hunger" amount="11.62" />
+        <ReduceAffliction identifier="he-starvation" amount="200" />
+        <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
+      </StatusEffect>
+      <!-- Allow the item to be applied to a player fully, if the player is not in water and unconcious/stunned -->
+      <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
+        <Conditional InWater="false" />
+        <Conditional stun="gt 0" />
+        <Conditional IsPlayer="true" />
+      </StatusEffect>
+      <StatusEffect type="OnSuccess" target="This,UseTarget" duration="8.3" comparison="And" multiplyafflictionsbymaxvitality="true">
+        <Conditional InWater="false" />
+        <Conditional stun="gt 0" />
+        <Conditional IsPlayer="true" />
+        <Affliction identifier="he-stuffed" amount="0.2" />
+        <Affliction identifier="strengthen" amount="0.4" />
+        <ReduceAffliction type="nausea" amount="0.5" />
+        <ReduceAffliction type="opiatewithdrawal" amount="0.5" />
+        <ReduceAffliction identifier="hunger" amount="1.4" />
+        <ReduceAffliction identifier="he-starvation" amount="20" />
+        <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
+      </StatusEffect>
+      <!-- Regular eating -->
+      <StatusEffect type="OnSecondaryUse" target="This" Condition="99" setvalue="True" comparison="And">
+        <Conditional Condition="equals 100" />
+        <Conditional InWater="false" />
+        <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" Condition="-12.0">
+        <Conditional InWater="false" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" comparison="And">
+        <Conditional InWater="false" />
+        <Affliction identifier="he-stuffed" amount="0.2" />
+        <Affliction identifier="strengthen" amount="0.4" />
+        <ReduceAffliction type="nausea" amount="0.5" />
+        <ReduceAffliction type="opiatewithdrawal" amount="0.5" />
+        <Affliction identifier="spill" amount="1000" probability="0.0005" />
+        <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" comparison="And">
+        <Conditional InWater="false" />
+        <Conditional hunger="gt 1.4" />
+        <ReduceAffliction type="hunger" amount="1.4" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <SpawnItem identifier="bananapeel" spawnposition="SameInventory"/>
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+    <AiTarget sightrange="1000" static="true" />
+  </Item>  
 
   <!-- NEW PLANTS -->
   <!-- NEW PLANTS -->
