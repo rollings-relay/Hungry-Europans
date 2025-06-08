@@ -19,7 +19,7 @@
     <Fabricate suitablefabricators="vendingmachine" requiredtime="1" requiredmoney="30" fabricationlimitmin="3" fabricationlimitmax="5"/>
     <Deconstruct time="5">
       <Item identifier="carbon" mincondition="0.5" />
-      <Item identifier="creepingorangevineseed" />
+      <Item identifier="creepingorangevineseed" mincondition="0.5" />
     </Deconstruct>
     <Deconstruct time="5" chooserandom="true" amount="1" requireddeconstructor="geneticresearchstation">
       <!-- Cross-breeding -->
@@ -82,7 +82,7 @@
     </Price>
     <Deconstruct time="5">
       <Item identifier="carbon" mincondition="0.5" />
-      <Item identifier="tobaccovineseed" />
+      <Item identifier="tobaccovineseed" mincondition="0.5" />
     </Deconstruct>
     <Deconstruct time="5" chooserandom="true" amount="1" requireddeconstructor="geneticresearchstation">
       <!-- Cross-breeding -->
@@ -176,7 +176,7 @@
     </Price>
     <Deconstruct time="5">
       <Item identifier="carbon" mincondition="0.5" />
-      <Item identifier="raptorbaneseed" />
+      <Item identifier="raptorbaneseed" mincondition="0.5" />
     </Deconstruct>
     <Deconstruct time="5" chooserandom="true" amount="1" requireddeconstructor="geneticresearchstation">
       <!-- Cross-breeding -->
