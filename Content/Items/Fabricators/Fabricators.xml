@@ -665,20 +665,20 @@
       </Price>
       <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.45" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.797" sourcerect="1882,429,165,188" origin="0.5,0.5" />
-      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.796" sourcerect="1882,996,165,188" alpha="1.0" origin="0.45,0.404" >
+      <!-- <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.796" sourcerect="1882,996,165,188" alpha="0.5" origin="0.5,0.5" >
         <IsActiveConditional Condition="gt 0.0" />
         <Conditional Voltage="gt 0.5" isActive="true" targetcontainer="true" targetitemcomponent="Fabricator" />
-      </DecorativeSprite>
-      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.795" sourcerect="1882,618,165,188" origin="0.45,0.404" maxcondition="80" fadein="true" />
-      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.794" sourcerect="1882,807,165,188" origin="0.45,0.404" maxcondition="0" />
+      </DecorativeSprite> -->
+      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.795" sourcerect="1882,618,165,188" origin="0.5,0.5" maxcondition="80" fadein="true" />
+      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.794" sourcerect="1882,807,165,188" origin="0.5,0.5" maxcondition="0" />
       <Fabricator canbeselected="true" selectkey="Select" powerconsumption="250.0" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
         <StatusEffect type="OnPicked" target="this">
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Fabricators/OvenInteract.ogg" volume="1" range="450" />
         </StatusEffect>
         <poweronsound file="Content/Items/PowerOnLight2.ogg" range="600" loop="false" />
-        <LightComponent range="10.0" lightcolor="255,255,255,0" powerconsumption="1" IsOn="true" castshadows="false" allowingameediting="false">
-          <sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.025" sourcerect="1882,996,165,188" alpha="1.0" origin="0.45,0.404" />
+        <LightComponent range="60.0" lightcolor="190,120,35,180" powerconsumption="1" Flicker="0.4" FlickerSpeed="0.1" IsOn="true" castshadows="false" allowingameediting="false">
+          <sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.025" sourcerect="1882,996,165,188" alpha="0.5" origin="0.5,0.5" />
         </LightComponent>
         <StatusEffect type="OnActive" targettype="This">
           <sound file="%ModDir:2954998725%/Content/Sounds/Items/Fabricators/Oven.ogg" type="OnActive" range="500.0" loop="true" volume="5.0" />
@@ -758,6 +758,7 @@
       <ItemContainer selectkey="Select" capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="" allowuioverlap="true" />
       <ItemContainer selectkey="Select" capacity="1" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="" allowuioverlap="true" />
     </Item>
+    
     <Item name="Fryer" identifier="he-fryer" tags="fryer,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" isshootable="true" scale="0.5" description="Used for frying stuff. Needs power." damagedbyexplosions="true" explosiondamagemultiplier="0.2">
       <Upgrade gameversion="0.10.4.0">
         <Repairable Msg="ItemMsgRepairWrench" />
@@ -907,6 +908,7 @@
         </SubContainer>
       </ItemContainer>
     </Item>
+    
     <Item name="Cutting Board" identifier="he-cuttingboard" tags="cuttingboard,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="" isshootable="true" scale="0.5" damagedbyexplosions="false">
       <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.45" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1924,1,123,66" depth="0.797" origin="0.45,0.44" />
@@ -933,6 +935,7 @@
       <ItemContainer selectkey="Select" capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="" allowuioverlap="true" />
       <ItemContainer selectkey="Select" capacity="4" canbeselected="true" hideitems="true" slotsperrow="2" uilabel="" allowuioverlap="true" />
     </Item>
+    
     <Item name="Electric Grill" identifier="he-electricgrill" tags="grill,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="Used for cooking. Needs power." isshootable="true" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
       <Deconstruct time="10">
         <Item identifier="steel" amount="2"/>
@@ -1041,6 +1044,7 @@
         <Containable items="allowongrill" />
       </ItemContainer>
     </Item>
+    
     <Item name="Coffee Machine" identifier="coffeemachine" tags="container,coffeemachine" category="Machines" description="Brews a nice cup of coffee." scale="0.5" isshootable="true" requireaimtouse="false" impactsoundtag="impact_metal_heavy">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.786" sourcerect="406,301,85,168" origin="0.5,0.5" />
       <!-- DecorativeSprite to display the empty cup when it is contained -->
@@ -1144,6 +1148,7 @@
         <Containable items="coffeecup" />
       </ItemContainer>
     </Item>
+    
     <Item name="Sink" identifier="sink" tags="kitchen,sink" category="Machines" description="Clean tableware or fill pots and bottles with water. Water not save for consumption." scale="0.5" isshootable="true" requireaimtouse="false" impactsoundtag="impact_metal_heavy">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.786" sourcerect="612,366,135,95" origin="0.5,0.5" />
       <!-- DecorativeSprite to display the lower half of the sink behind objects -->
