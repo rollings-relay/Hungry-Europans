@@ -13,12 +13,15 @@
   Deconstructing FRUITS (and aquatic plants) gives SEEDS (random% chance?)
   FRUITS (only natural ones) can be be cross-bred to make SEEDS at the research station
   
+  Researchstation capacity increased, can take every item - OVERRIDE
+  
+  IF BIG PLANTERS ARE ADDED AND SMALL PLANTERS REMOVED:  
+    Small Planter "removed" (not sold, not found, deletes itself) - OVERRIDE
+    ULD is swappable into big planter - OVERRIDE
   TODO: increase produce rate by 3-4x, there are way less planters now
   TODO: increase grow rate by 2x, you will be planting more
   TODO: decrease plant health in general, watering is more active
-  TODO: PLANT TEXTURES: recolor leaves, flowers to match new fruits, mix and match for hybrids, make new leaves/flowers.
-
-
+  
   TODO: add onfire to all fruits?
   TODO: normalize deconstruct times
   TODO: adjust sprites rect (currently using 32/64 grids)
@@ -28,16 +31,15 @@
   
   TODO: adjust items to incorporate fruit variants in recipes (pom hybrids in pom extract)
   
-  OTHER CHANGES:
-  Small Planter "removed" (not sold, not found, deletes itself) - OVERRIDE
-  ULD is swappable into big planter - OVERRIDE
-  Researchstation capacity increased, can take every item - OVERRIDE
+  TODO: PLANT TEXTURES: recolor leaves, flowers to match new fruits, mix and match for hybrids, make new leaves/flowers.
 
   GrowthWeights can be used in growable to determine the preferred direction of branches (plants use a square grid)
-  GrowthWeights="up,left,down,right" 
+  GrowthWeights="up,left,down,right"   
+  
  -->
 
-  <!-- TODO: REDUCE TESTING GROWTH SPEED; find and replace 777 with 0 -->
+  <!-- TODO: REDUCE TESTING GROWTH SPEED; find and replace 777 with 0
+              readjust growth parameters completely-->
 
   <!-- ///// VANILLA ///// -->
   <!-- ///// VANILLA ///// -->
