@@ -1,0 +1,1366 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 
+  BIG LIST OF EXPLAINING, OVERRIDES AND TODOs:
+  
+  RULES FOR AQUATIC PLANTS:
+  
+  There are FRUITS and there are SEEDS. Make sure every fruit (product) has a seed (separate banana from seed)
+  There are RAW aquatic plants, and there are aquatic plant FRUITS (product version with less yield)
+  Deconstructing FRUITS (and aquatic plants) gives SEEDS (random% chance?)
+  FRUITS (only natural ones) can be be cross-bred to make SEEDS at the research station
+  
+  TODO: increase produce rate by 3-4x, there are way less planters now
+  TODO: increase grow rate by 2x, you will be planting more
+  TODO: decrease plant health in general, watering is more active
+  TODO: PLANT TEXTURES: recolor leaves, flowers to match new fruits, mix and match for hybrids, make new leaves/flowers.
+
+
+  TODO: add onfire to all fruits?
+  TODO: normalize deconstruct times
+  TODO: adjust sprites rect (currently using 32/64 grids)
+  TODO: adjust body size to match sprite
+  TODO: adjust particle/explosion color for eating to match fruit color
+  TODO: adjust aimpos for eating
+  
+  TODO: adjust items to incorporate fruit variants in recipes (pom hybrids in pom extract)
+  
+  OTHER CHANGES:
+  Small Planter "removed" (not sold, not found, deletes itself) - OVERRIDE
+  ULD is swappable into big planter - OVERRIDE
+  Researchstation capacity increased, can take every item - OVERRIDE
+
+ -->
+
+
+<Override>
+<Items>
+  <!-- -->
+  <Item name="" identifier="creepingorangevineseed" category="Misc" Tags="smallitem,seed,plantitem" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="255,54,0,255">
+    <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="830,636,31,30" origin="0.5,0.5" />
+    <PreferredContainer primary="wreckstoragecab,abandonedstoragecab,piratestoragecab" amount="1" spawnprobability="0.1" />
+    <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.3" />
+    <Price baseprice="30">
+      <Price storeidentifier="merchantoutpost" sold="false" />
+      <Price storeidentifier="merchantcity" multiplier="1.2" minavailable="1" />
+      <Price storeidentifier="merchantresearch" multiplier="0.9" minavailable="2" />
+      <Price storeidentifier="merchantmilitary" sold="false" multiplier="1.2" />
+      <Price storeidentifier="merchantmine" sold="false" multiplier="0.75" />
+    </Price>
+    <Deconstruct time="2" requireddeconstructor="deconstructor"/>
+    <Growable growthspeed="777" pickingtime="3" maximumvines="12" maxhealth="500" hardiness="10" floodtolerance="0.4" seedrate="0" productrate="100" flowertint="255,54,0,255" flowerquantity="5" baseflowerscale="0.35" vinescale="0.25" vinetint="244,172,132,255">
+      <ProducedItem identifier="creepingorange" probability="0.95" />
+      <ProducedItem identifier="badcreepingorange" probability="0.05"/>
+      <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,0,256,256" />
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,0,256,256" />
+        <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,768,128,128" />
+        <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="128,768,128,128" />
+        <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,768,128,128" />
+        <VineSprite type="Stem" sourcerect="640,128,128,128" />
+        <VineSprite type="CrossJunction" sourcerect="512,128,128,128" />
+        <VineSprite type="HorizontalLine" sourcerect="512,0,128,128" />
+        <VineSprite type="VerticalLine" sourcerect="640,0,128,128" />
+        <VineSprite type="TurnTopRight" sourcerect="0,0,128,128" />
+        <VineSprite type="TurnTopLeft" sourcerect="384,0,128,128" />
+        <VineSprite type="TurnBottomLeft" sourcerect="256,0,128,128" />
+        <VineSprite type="TurnBottomRight" sourcerect="128,0,128,128" />
+        <VineSprite type="TSectionTop" sourcerect="128,128,128,128" />
+        <VineSprite type="TSectionLeft" sourcerect="256,128,128,128" />
+        <VineSprite type="TSectionBottom" sourcerect="384,128,128,128" />
+        <VineSprite type="TSectionRight" sourcerect="0,128,128,128" />
+        <VineSprite type="StumpTop" sourcerect="768,0,128,128" />
+        <VineSprite type="StumpLeft" sourcerect="896,0,128,128" />
+        <VineSprite type="StumpBottom" sourcerect="768,128,128,128" />
+        <VineSprite type="StumpRight" sourcerect="896,128,128,128" />
+      </VineSprites>
+      <StatusEffect target="this" type="always" condition="-1" >
+       <Conditional targetcontainer="true" fertilizer="lte 0" />
+       <!-- <Sound file="Content/Items/Weapons/honk.ogg" loop="true" range="1000" /> -->
+      </StatusEffect>
+      <StatusEffect target="this" type="OnBroken" decayed="true" setvalue="true" >
+        <!-- <Remove /> -->
+      </StatusEffect>
+    </Growable>
+    <Body radius="15" density="10.1" />
+    <Holdable canBeCombined="false" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+    <!-- <Upgrade gameversion="0.15.22.0">
+      <Growable growthspeed="100" hardiness="999999" floodtolerance="0.4" productrate="0.022"/>
+    </Upgrade> -->
+  </Item>
+  
+  <Item name="" identifier="tobaccovineseed" category="Misc" Tags="smallitem,seed,plantitem" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="48,122,245,255">
+    <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="863,636,30,31" origin="0.5,0.5" />
+    <PreferredContainer primary="wreckstoragecab,abandonedstoragecab,piratestoragecab" amount="1" spawnprobability="0.1" />
+    <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.3" />
+    <Price baseprice="30">
+      <Price storeidentifier="merchantoutpost" sold="false" />
+      <Price storeidentifier="merchantcity" multiplier="1.2" minavailable="1" />
+      <Price storeidentifier="merchantresearch" multiplier="0.9" minavailable="2" />
+      <Price storeidentifier="merchantmilitary" sold="false" multiplier="1.2" />
+      <Price storeidentifier="merchantmine" sold="false" multiplier="0.75" />
+    </Price>
+    <Deconstruct time="2" requireddeconstructor="deconstructor"/>
+    <Growable growthspeed="777.065" pickingtime="3" maximumvines="12" maxhealth="500" hardiness="0.071" floodtolerance="0.5" seedrate="0" productrate="0.0056" flowerquantity="5" baseflowerscale="0.25" leaftint="226,95,85,255" vinescale="0.25" vinetint="226,95,85,255" flowertint="48,122,245,255">
+      <ProducedItem identifier="tobaccobud" probability="1.0" />
+      <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,256,256,256" />
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,256,256,256" />
+        <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="384,896,128,128" />
+        <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="512,896,128,128" />
+        <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="640,896,128,128" />
+        <VineSprite type="Stem" sourcerect="640,384,128,128" />
+        <VineSprite type="CrossJunction" sourcerect="512,384,128,128" />
+        <VineSprite type="HorizontalLine" sourcerect="512,256,128,128" />
+        <VineSprite type="VerticalLine" sourcerect="640,256,128,128" />
+        <VineSprite type="TurnTopRight" sourcerect="0,256,128,128" />
+        <VineSprite type="TurnTopLeft" sourcerect="384,256,128,128" />
+        <VineSprite type="TurnBottomLeft" sourcerect="256,256,128,128" />
+        <VineSprite type="TurnBottomRight" sourcerect="128,256,128,128" />
+        <VineSprite type="TSectionTop" sourcerect="128,384,128,128" />
+        <VineSprite type="TSectionLeft" sourcerect="256,384,128,128" />
+        <VineSprite type="TSectionBottom" sourcerect="384,384,128,128" />
+        <VineSprite type="TSectionRight" sourcerect="0,384,128,128" />
+        <VineSprite type="StumpTop" sourcerect="768,256,128,128" />
+        <VineSprite type="StumpLeft" sourcerect="896,256,128,128" />
+        <VineSprite type="StumpBottom" sourcerect="768,384,128,128" />
+        <VineSprite type="StumpRight" sourcerect="896,384,128,128" />
+      </VineSprites>
+    </Growable>
+    <Body radius="15" density="10.1" />
+    <Holdable canBeCombined="false" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+    <Upgrade gameversion="0.15.22.0">
+      <Growable growthspeed="0.065" hardiness="0.071" floodtolerance="0.5" productrate="0.0056"/>
+    </Upgrade>
+  </Item>
+  
+  <Item name="" identifier="saltvineseed" category="Misc" Tags="smallitem,seed,plantitem" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="215,245,77,255">
+    <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="829,666,33,35" origin="0.5,0.5" />
+    <PreferredContainer primary="wreckstoragecab,abandonedstoragecab,piratestoragecab" amount="1" spawnprobability="0.1" />
+    <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.3" />
+    <Price baseprice="30">
+      <Price storeidentifier="merchantoutpost" sold="false" />
+      <Price storeidentifier="merchantcity" multiplier="1.2" minavailable="1" />
+      <Price storeidentifier="merchantresearch" multiplier="0.9" minavailable="2" />
+      <Price storeidentifier="merchantmilitary" sold="false" multiplier="1.2" />
+      <Price storeidentifier="merchantmine" sold="false" multiplier="0.75" />
+    </Price>
+    <Deconstruct time="2" requireddeconstructor="deconstructor"/>
+    <Growable growthspeed="777.076" pickingtime="3" maximumvines="12" maxhealth="375" hardiness="0.162" floodtolerance="0.2" seedrate="0" productrate="0.0056" flowerquantity="5" baseflowerscale="0.40" vinescale="0.25" vinetint="135,187,61,255" flowertint="240,180,17,255">
+      <ProducedItem identifier="saltbulb" probability="1.0"/>
+      <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,512,256,256" />
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,512,256,256" />
+        <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="384,768,128,128" />
+        <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="512,768,128,128" />
+        <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="640,768,128,128" />
+        <VineSprite type="Stem" sourcerect="640,640,128,128" />
+        <VineSprite type="CrossJunction" sourcerect="512,640,128,128" />
+        <VineSprite type="HorizontalLine" sourcerect="512,512,128,128" />
+        <VineSprite type="VerticalLine" sourcerect="640,512,128,128" />
+        <VineSprite type="TurnTopRight" sourcerect="0,512,128,128" />
+        <VineSprite type="TurnTopLeft" sourcerect="384,512,128,128" />
+        <VineSprite type="TurnBottomLeft" sourcerect="256,512,128,128" />
+        <VineSprite type="TurnBottomRight" sourcerect="128,512,128,128" />
+        <VineSprite type="TSectionTop" sourcerect="128,640,128,128" />
+        <VineSprite type="TSectionLeft" sourcerect="256,640,128,128" />
+        <VineSprite type="TSectionBottom" sourcerect="384,640,128,128" />
+        <VineSprite type="TSectionRight" sourcerect="0,640,128,128" />
+        <VineSprite type="StumpTop" sourcerect="768,512,128,128" />
+        <VineSprite type="StumpLeft" sourcerect="896,512,128,128" />
+        <VineSprite type="StumpBottom" sourcerect="768,640,128,128" />
+        <VineSprite type="StumpRight" sourcerect="896,640,128,128" />
+      </VineSprites>
+    </Growable>
+    <Body radius="15" density="10.1" />
+    <Holdable canBeCombined="false" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+    <Upgrade gameversion="0.15.22.0">
+      <Growable growthspeed="0.076" hardiness="0.162" floodtolerance="0.2" productrate="0.0056"/>
+    </Upgrade>
+  </Item>
+  
+  <Item name="" identifier="raptorbaneseed" category="Misc" Tags="smallitem,seed,plantitem" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="238,36,98,255">
+    <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="863,668,30,33" origin="0.5,0.5" />
+    <PreferredContainer primary="wreckstoragecab,abandonedstoragecab,piratestoragecab" amount="1" spawnprobability="0.1" />
+    <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.3" />
+    <Price baseprice="30">
+      <Price storeidentifier="merchantoutpost" sold="false" />
+      <Price storeidentifier="merchantcity" multiplier="1.2" minavailable="1" />
+      <Price storeidentifier="merchantresearch" multiplier="0.9" minavailable="2" />
+      <Price storeidentifier="merchantmilitary" sold="false" multiplier="1.2" />
+      <Price storeidentifier="merchantmine" sold="false" multiplier="0.75" />
+    </Price>
+    <Deconstruct time="2" requireddeconstructor="deconstructor"/>
+    <Growable growthspeed="777.065" pickingtime="3" maximumvines="12" maxhealth="325" hardiness="0.062" floodtolerance="0.4" seedrate="0" productrate="0.022" flowerquantity="5" baseflowerscale="0.35" vinescale="0.25" leaftint="140,146,56,255" vinetint="140,146,56,255" flowertint="238,36,98,255">
+      <ProducedItem identifier="raptorbane" probability="0.4" />
+      <ProducedItem identifier="badraptorbane" probability="0.6"></ProducedItem>
+      <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,256,256,256" />
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,256,256,256" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,896,128,128" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="128,896,128,128" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,896,128,128" />
+        <VineSprite type="Stem" sourcerect="640,896,128,128" />
+        <VineSprite type="CrossJunction" sourcerect="512,896,128,128" />
+        <VineSprite type="HorizontalLine" sourcerect="512,768,128,128" />
+        <VineSprite type="VerticalLine" sourcerect="640,768,128,128" />
+        <VineSprite type="TurnTopRight" sourcerect="0,768,128,128" />
+        <VineSprite type="TurnTopLeft" sourcerect="384,768,128,128" />
+        <VineSprite type="TurnBottomLeft" sourcerect="256,768,128,128" />
+        <VineSprite type="TurnBottomRight" sourcerect="128,768,128,128" />
+        <VineSprite type="TSectionTop" sourcerect="128,896,128,128" />
+        <VineSprite type="TSectionLeft" sourcerect="256,896,128,128" />
+        <VineSprite type="TSectionBottom" sourcerect="384,896,128,128" />
+        <VineSprite type="TSectionRight" sourcerect="0,896,128,128" />
+        <VineSprite type="StumpTop" sourcerect="768,768,128,128" />
+        <VineSprite type="StumpLeft" sourcerect="896,768,128,128" />
+        <VineSprite type="StumpBottom" sourcerect="768,896,128,128" />
+        <VineSprite type="StumpRight" sourcerect="896,896,128,128" />
+      </VineSprites>
+    </Growable>
+    <Body radius="15" density="10.1" />
+    <Holdable canBeCombined="false" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+    <Upgrade gameversion="0.15.22.0">
+      <Growable growthspeed="0.065" hardiness="0.062" floodtolerance="0.4" productrate="0.022"/>
+    </Upgrade>
+  </Item>
+
+  <Item name="bananaseed" identifier="bananaseed" category="Misc" Tags="smallitem,seed,plantitem" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="240,220,140,255" isshootable="true" requireaimtouse="true">
+    <sprite texture="%Moddir%/GrowablePlants_crossed1.png" depth="0.2" sourcerect="866,706,28,29" origin="0.5,0.5" />
+    <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.03" />
+    <Price baseprice="30" canbespecial="false">
+      <Price storeidentifier="merchantoutpost" sold="false" />
+      <Price storeidentifier="merchantcity" sold="false"/>
+      <Price storeidentifier="merchantresearch" sold="false" />
+      <Price storeidentifier="merchantmilitary" sold="false" />
+      <Price storeidentifier="merchantmine" sold="false" />
+      <Price storeidentifier="merchantclown" minavailable="1" maxavailable="2" sold="true">
+        <Reputation faction="clowns" min="50"/>
+      </Price>
+    </Price>
+    <Deconstruct time="2">
+    </Deconstruct>
+    <Growable growthspeed="777.076" pickingtime="3" maximumvines="12" maxhealth="375" hardiness="0.15" floodtolerance="0.2" seedrate="0" productrate="0.0056" flowerquantity="4" baseflowerscale="0.60" vinescale="0.25" vinetint="55,152,27,255" flowertint="139,56,87,255">
+      <ProducedItem identifier="banana" probability="0.9"/>
+      <ProducedItem identifier="bananafuelrod" probability="0.1"/>
+      <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,256,256,256" />
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,256,256,256" />
+        <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,768,128,128" />
+        <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="128,768,128,128" />
+        <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,768,128,128" />
+        <VineSprite type="Stem" sourcerect="640,896,128,128" />
+        <VineSprite type="CrossJunction" sourcerect="512,896,128,128" />
+        <VineSprite type="HorizontalLine" sourcerect="512,768,128,128" />
+        <VineSprite type="VerticalLine" sourcerect="640,768,128,128" />
+        <VineSprite type="TurnTopRight" sourcerect="0,768,128,128" />
+        <VineSprite type="TurnTopLeft" sourcerect="384,768,128,128" />
+        <VineSprite type="TurnBottomLeft" sourcerect="256,768,128,128" />
+        <VineSprite type="TurnBottomRight" sourcerect="128,768,128,128" />
+        <VineSprite type="TSectionTop" sourcerect="128,896,128,128" />
+        <VineSprite type="TSectionLeft" sourcerect="256,896,128,128" />
+        <VineSprite type="TSectionBottom" sourcerect="384,896,128,128" />
+        <VineSprite type="TSectionRight" sourcerect="0,896,128,128" />
+        <VineSprite type="StumpTop" sourcerect="768,768,128,128" />
+        <VineSprite type="StumpLeft" sourcerect="896,768,128,128" />
+        <VineSprite type="StumpBottom" sourcerect="768,896,128,128" />
+        <VineSprite type="StumpRight" sourcerect="896,896,128,128" />
+      </VineSprites>
+    </Growable>
+    <Body radius="15" density="12" />
+    <Holdable canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="24,18" holdpos="25,-25" holdangle="0" aimangle="25" aimable="false" swingwhenusing="True" swingamount="7,7" swingspeed="0.5" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnUse" target="This" Condition="-100.0" >
+        <ParticleEmitter particle="fruitchunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="100,255,100,255" />
+        <Sound file="Content/Items/Medical/ITEM_eatingBiteQuick.ogg" range="250" loop="false" volume="2" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+  </Item>
+
+  <!-- WATERBASED -->
+  <!-- WATERBASED -->
+  <!-- WATERBASED -->  
+
+      <!-- Fertilizer stuff, put inside growable -->
+      <!-- <StatusEffect type="OnContained" target="This" accelerateDeath="true" setvalue="true" comparison="and">
+        <Conditional hastag="planter" targetcontainer="true" />
+        <Conditional targetcontainer="true" fertilizer="lte 0" />
+        <Sound file="Content/Items/Weapons/honk.ogg" loop="true" range="1000" frequencymultiplier="2" />
+      </StatusEffect>
+      <StatusEffect type="OnContained" target="This" accelerateDeath="false" setvalue="true" >
+       <Conditional targetcontainer="true" fertilizer="gt 0" />
+      </StatusEffect> -->
+  
+  <!-- Growable fiberplant - Needs a lot of watering. -->
+  <Item name="fiberplantseed" identifier="fiberplantseed" category="Misc" Tags="smallitem,plant,seed,plantitem" maxstacksize="32" maxstacksizecharacterinventory="8" canbepicked="true" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="medfabcab" secondary="medcontainer" />
+    <Price baseprice="150">
+    </Price>
+    <Deconstruct time="2" requireddeconstructor="deconstructor"/>
+    <Deconstruct time="5" chooserandom="true" amount="1" requireddeconstructor="geneticresearchstation">
+      <Item identifier="fibrouspoppyseed" commonness="3" requiredotheritem="stabilozine" outconditionmin="1" outconditionmax="1" activatebuttontext="researchstation.crossbreed" infotext="researchstation.crossbreed.infotext" infotextonotheritemmissing="researchstation.crossbreed.missingitem" />
+    </Deconstruct>
+    <Sprite texture="Content/Items/Materials/Minerals.png" depth="0.2" sourcerect="545,386,54,78" origin="0.5,0.5" />
+    <Holdable canBeCombined="false" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+    <Body radius="20" density="11" />
+    <Growable growthspeed="99" pickingtime="3" maximumvines="12" maxhealth="180" hardiness="1" floodtolerance="0.2" FireVulnerability="3" increasedDeathSpeed="11" seedrate="0" productrate="60" flowerquantity="5" baseflowerscale="0.35" vinescale="0.25" leaftint="140,146,56,255" vinetint="140,146,56,255" flowertint="238,36,98,255" GrowthWeights="1,1,1,1">
+      <StatusEffect type="OnBroken" target="This" >
+        <Remove />
+      </StatusEffect>
+      <ProducedItem identifier="fiberplantproduct" probability="1" />
+      <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,256,256,256" />
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,256,256,256" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,896,128,128" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="128,896,128,128" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,896,128,128" />
+        <VineSprite type="Stem" sourcerect="640,128,128,128" />
+        <VineSprite type="CrossJunction" sourcerect="512,896,128,128" />
+        <VineSprite type="HorizontalLine" sourcerect="512,768,128,128" />
+        <VineSprite type="VerticalLine" sourcerect="640,768,128,128" />
+        <VineSprite type="TurnTopRight" sourcerect="0,768,128,128" />
+        <VineSprite type="TurnTopLeft" sourcerect="384,768,128,128" />
+        <VineSprite type="TurnBottomLeft" sourcerect="256,768,128,128" />
+        <VineSprite type="TurnBottomRight" sourcerect="128,768,128,128" />
+        <VineSprite type="TSectionTop" sourcerect="128,896,128,128" />
+        <VineSprite type="TSectionLeft" sourcerect="256,896,128,128" />
+        <VineSprite type="TSectionBottom" sourcerect="384,896,128,128" />
+        <VineSprite type="TSectionRight" sourcerect="0,896,128,128" />
+        <VineSprite type="StumpTop" sourcerect="768,768,128,128" />
+        <VineSprite type="StumpLeft" sourcerect="896,768,128,128" />
+        <VineSprite type="StumpBottom" sourcerect="768,896,128,128" />
+        <VineSprite type="StumpRight" sourcerect="896,896,128,128" />
+      </VineSprites>
+    </Growable>
+  </Item>  
+  
+  <Item name="fiberplantproduct" identifier="aquaticfiberplantproduct" category="Misc" Tags="smallitem,plant,plantitem,researchmaterial" maxstacksize="32" maxstacksizecharacterinventory="8" canbepicked="true" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="medfabcab" secondary="medcontainer" />
+    <Price baseprice="20">
+    </Price>
+    <Deconstruct time="5" chooserandom="true" requireddeconstructor="deconstructor">
+      <Item identifier="organicfiber" amount="1" />
+      <Item identifier="organicfiber" amount="1" />
+      <Item identifier="organicfiber" amount="2" />
+    </Deconstruct>
+    <Deconstruct time="5" chooserandom="true" amount="1" requireddeconstructor="geneticresearchstation">
+      <Item identifier="fiberplantseed" commonness="3" amount="1" activatebuttontext="researchstation.crossbreed" infotext="researchstation.crossbreed.infotext" />
+      <Item identifier="compost" commonness="3" amount="1" activatebuttontext="researchstation.crossbreed" infotext="researchstation.crossbreed.infotext" />
+    </Deconstruct>
+    <Sprite texture="Content/Items/Materials/Minerals.png" depth="0.2" sourcerect="545,386,54,78" origin="0.5,0.5" />
+    <Holdable canBeCombined="false" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+    <Body radius="20" density="11" />
+  </Item>
+  
+    
+  <!-- Growable elastinplant - Needs a lot of watering. -->
+  <Item name="elastinplantseed" identifier="elastinplantseed" category="Misc" Tags="smallitem,plant,seed,plantitem" maxstacksize="32" maxstacksizecharacterinventory="8" canbepicked="true" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="medfabcab" secondary="medcontainer" />
+    <Price baseprice="150">
+    </Price>
+    <Deconstruct time="2" requireddeconstructor="deconstructor"/>
+    <Deconstruct time="5" chooserandom="true" amount="1" requireddeconstructor="geneticresearchstation">
+      <!-- TODO: special seed -->
+      <Item identifier="fibrouspoppyseed" commonness="3" requiredotheritem="stabilozine" outconditionmin="1" outconditionmax="1" activatebuttontext="researchstation.crossbreed" infotext="researchstation.crossbreed.infotext" infotextonotheritemmissing="researchstation.crossbreed.missingitem" />
+    </Deconstruct>
+    <Sprite texture="Content/Items/Materials/Minerals.png" depth="0.2" sourcerect="604,260,28,54" origin="0.5,0.5" />
+    <Holdable canBeCombined="false" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+    <Body radius="20" density="11" />
+    <Growable growthspeed="99" pickingtime="3" maximumvines="12" maxhealth="180" hardiness="1" floodtolerance="0.2" FireVulnerability="3" increasedDeathSpeed="11" seedrate="0" productrate="60" flowerquantity="5" baseflowerscale="0.35" vinescale="0.25" leaftint="140,146,56,255" vinetint="140,146,56,255" flowertint="238,36,98,255" GrowthWeights="1,1,1,1">
+      <StatusEffect type="OnBroken" target="This" >
+        <Remove />
+      </StatusEffect>
+      <ProducedItem identifier="elastinplantproduct" probability="1" />
+      <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,256,256,256" />
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,256,256,256" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,896,128,128" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="128,896,128,128" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,896,128,128" />
+        <VineSprite type="Stem" sourcerect="640,128,128,128" />
+        <VineSprite type="CrossJunction" sourcerect="512,896,128,128" />
+        <VineSprite type="HorizontalLine" sourcerect="512,768,128,128" />
+        <VineSprite type="VerticalLine" sourcerect="640,768,128,128" />
+        <VineSprite type="TurnTopRight" sourcerect="0,768,128,128" />
+        <VineSprite type="TurnTopLeft" sourcerect="384,768,128,128" />
+        <VineSprite type="TurnBottomLeft" sourcerect="256,768,128,128" />
+        <VineSprite type="TurnBottomRight" sourcerect="128,768,128,128" />
+        <VineSprite type="TSectionTop" sourcerect="128,896,128,128" />
+        <VineSprite type="TSectionLeft" sourcerect="256,896,128,128" />
+        <VineSprite type="TSectionBottom" sourcerect="384,896,128,128" />
+        <VineSprite type="TSectionRight" sourcerect="0,896,128,128" />
+        <VineSprite type="StumpTop" sourcerect="768,768,128,128" />
+        <VineSprite type="StumpLeft" sourcerect="896,768,128,128" />
+        <VineSprite type="StumpBottom" sourcerect="768,896,128,128" />
+        <VineSprite type="StumpRight" sourcerect="896,896,128,128" />
+      </VineSprites>
+    </Growable>
+  </Item>  
+  
+  <Item name="elastinplantproduct" identifier="aquaticelastinplantproduct" category="Misc" Tags="smallitem,plant,plantitem,researchmaterial" maxstacksize="32" maxstacksizecharacterinventory="8" canbepicked="true" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="medfabcab" secondary="medcontainer" />
+    <Price baseprice="20">
+    </Price>
+    <Deconstruct time="5" chooserandom="true" requireddeconstructor="deconstructor">
+      <Item identifier="elastin" amount="1" />
+      <Item identifier="elastin" amount="1" />
+      <Item identifier="elastin" amount="2" />
+    </Deconstruct>
+    <Deconstruct time="5" chooserandom="true" amount="1" requireddeconstructor="geneticresearchstation">
+      <Item identifier="elastinplantseed" commonness="3" amount="1" activatebuttontext="researchstation.crossbreed" infotext="researchstation.crossbreed.infotext" />
+      <Item identifier="compost" commonness="3" amount="1" activatebuttontext="researchstation.crossbreed" infotext="researchstation.crossbreed.infotext" />
+    </Deconstruct>
+    <Sprite texture="Content/Items/Materials/Minerals.png" depth="0.2" sourcerect="604,260,28,54" origin="0.5,0.5" />
+    <Holdable canBeCombined="false" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+    <Body radius="20" density="11" />
+  </Item>
+
+  <!-- Growable poppy - Needs a lot of watering. -->
+  <Item name="aquaticpoppyseed" identifier="aquaticpoppyseed" category="Misc" Tags="smallitem,plant,seed,plantitem" maxstacksize="32" maxstacksizecharacterinventory="8" canbepicked="true" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="medfabcab" secondary="medcontainer" />
+    <Price baseprice="150">
+    </Price>
+    <Deconstruct time="2" requireddeconstructor="deconstructor"/>
+    <Deconstruct time="5" chooserandom="true" amount="1" requireddeconstructor="geneticresearchstation">
+      <Item identifier="fibrouspoppyseed" commonness="3" requiredotheritem="fiberplantseed" outconditionmin="1" outconditionmax="1" activatebuttontext="researchstation.crossbreed" infotext="researchstation.crossbreed.infotext" infotextonotheritemmissing="researchstation.crossbreed.missingitem" />
+      <Item identifier="shroomypoppyseed" commonness="3" requiredotheritem="yeastshroomseed" outconditionmin="1" outconditionmax="1" activatebuttontext="researchstation.crossbreed" infotext="researchstation.crossbreed.infotext" infotextonotheritemmissing="researchstation.crossbreed.missingitem" />
+    </Deconstruct>
+    <Sprite texture="Content/Items/Materials/Minerals.png" depth="0.2" sourcerect="541,332,53,53" origin="0.5,0.5" />
+    <Holdable canBeCombined="false" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+    <Body radius="20" density="11" />
+    <Growable growthspeed="99" pickingtime="3" maximumvines="12" maxhealth="180" hardiness="1" floodtolerance="0.2" FireVulnerability="3" increasedDeathSpeed="11" seedrate="0" productrate="60" flowerquantity="5" baseflowerscale="0.35" vinescale="0.25" leaftint="140,146,56,255" vinetint="140,146,56,255" flowertint="238,36,98,255" GrowthWeights="1,1,1,1">
+      <StatusEffect type="OnBroken" target="This" >
+        <Remove />
+      </StatusEffect>
+      <ProducedItem identifier="aquaticpoppyproduct" probability="1" />
+      <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,256,256,256" />
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,256,256,256" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,896,128,128" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="128,896,128,128" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,896,128,128" />
+        <VineSprite type="Stem" sourcerect="640,128,128,128" />
+        <VineSprite type="CrossJunction" sourcerect="512,896,128,128" />
+        <VineSprite type="HorizontalLine" sourcerect="512,768,128,128" />
+        <VineSprite type="VerticalLine" sourcerect="640,768,128,128" />
+        <VineSprite type="TurnTopRight" sourcerect="0,768,128,128" />
+        <VineSprite type="TurnTopLeft" sourcerect="384,768,128,128" />
+        <VineSprite type="TurnBottomLeft" sourcerect="256,768,128,128" />
+        <VineSprite type="TurnBottomRight" sourcerect="128,768,128,128" />
+        <VineSprite type="TSectionTop" sourcerect="128,896,128,128" />
+        <VineSprite type="TSectionLeft" sourcerect="256,896,128,128" />
+        <VineSprite type="TSectionBottom" sourcerect="384,896,128,128" />
+        <VineSprite type="TSectionRight" sourcerect="0,896,128,128" />
+        <VineSprite type="StumpTop" sourcerect="768,768,128,128" />
+        <VineSprite type="StumpLeft" sourcerect="896,768,128,128" />
+        <VineSprite type="StumpBottom" sourcerect="768,896,128,128" />
+        <VineSprite type="StumpRight" sourcerect="896,896,128,128" />
+      </VineSprites>
+    </Growable>
+  </Item>  
+  
+  <Item name="aquaticpoppyproduct" identifier="aquaticpoppyproduct" category="Misc" Tags="smallitem,plant,plantitem,researchmaterial" maxstacksize="32" maxstacksizecharacterinventory="8" canbepicked="true" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="medfabcab" secondary="medcontainer" />
+    <Price baseprice="20">
+    </Price>
+    <Deconstruct time="5" chooserandom="true" requireddeconstructor="deconstructor">
+      <Item identifier="opium" amount="1" />
+      <Item identifier="opium" amount="1" />
+      <Item identifier="opium" amount="2" />
+    </Deconstruct>
+    <Deconstruct time="5" chooserandom="true" amount="1" requireddeconstructor="geneticresearchstation">
+      <Item identifier="aquaticpoppyseed" commonness="3" amount="1" activatebuttontext="researchstation.crossbreed" infotext="researchstation.crossbreed.infotext" />
+      <Item identifier="compost" commonness="3" amount="1" activatebuttontext="researchstation.crossbreed" infotext="researchstation.crossbreed.infotext" />
+    </Deconstruct>
+    <Sprite texture="Content/Items/Materials/Minerals.png" depth="0.2" sourcerect="541,332,53,53" origin="0.5,0.5" />
+    <Holdable canBeCombined="false" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+    <Body radius="20" density="11" />
+  </Item>  
+    
+    
+  <!-- Growable yeastshroom - Needs a lot of watering. -->
+  <Item name="yeastshroomseed" identifier="yeastshroomseed" category="Misc" Tags="smallitem,plant,seed,plantitem" maxstacksize="32" maxstacksizecharacterinventory="8" canbepicked="true" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="medfabcab" secondary="medcontainer" />
+    <Price baseprice="150">
+    </Price>
+    <Deconstruct time="2" requireddeconstructor="deconstructor"/>
+    <Deconstruct time="5" chooserandom="true" amount="1" requireddeconstructor="geneticresearchstation">
+      <!-- TODO: special seed -->
+      <Item identifier="shroomypoppyseed" commonness="3" requiredotheritem="aquaticpoppyseed" outconditionmin="1" outconditionmax="1" activatebuttontext="researchstation.crossbreed" infotext="researchstation.crossbreed.infotext" infotextonotheritemmissing="researchstation.crossbreed.missingitem" />
+    </Deconstruct>
+    <Sprite texture="Content/Items/Materials/Minerals.png" depth="0.2" sourcerect="603,321,42,63" origin="0.5,0.5" />
+    <Holdable canBeCombined="false" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+    <Body radius="20" density="11" />
+    <Growable growthspeed="99" pickingtime="3" maximumvines="12" maxhealth="180" hardiness="1" floodtolerance="0.2" FireVulnerability="3" increasedDeathSpeed="11" seedrate="0" productrate="60" flowerquantity="5" baseflowerscale="0.35" vinescale="0.25" leaftint="140,146,56,255" vinetint="140,146,56,255" flowertint="238,36,98,255" GrowthWeights="1,1,1,1">
+      <StatusEffect type="OnBroken" target="This" >
+        <Remove />
+      </StatusEffect>
+      <ProducedItem identifier="yeastshroomproduct" probability="1" />
+      <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,256,256,256" />
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,256,256,256" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,896,128,128" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="128,896,128,128" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,896,128,128" />
+        <VineSprite type="Stem" sourcerect="640,128,128,128" />
+        <VineSprite type="CrossJunction" sourcerect="512,896,128,128" />
+        <VineSprite type="HorizontalLine" sourcerect="512,768,128,128" />
+        <VineSprite type="VerticalLine" sourcerect="640,768,128,128" />
+        <VineSprite type="TurnTopRight" sourcerect="0,768,128,128" />
+        <VineSprite type="TurnTopLeft" sourcerect="384,768,128,128" />
+        <VineSprite type="TurnBottomLeft" sourcerect="256,768,128,128" />
+        <VineSprite type="TurnBottomRight" sourcerect="128,768,128,128" />
+        <VineSprite type="TSectionTop" sourcerect="128,896,128,128" />
+        <VineSprite type="TSectionLeft" sourcerect="256,896,128,128" />
+        <VineSprite type="TSectionBottom" sourcerect="384,896,128,128" />
+        <VineSprite type="TSectionRight" sourcerect="0,896,128,128" />
+        <VineSprite type="StumpTop" sourcerect="768,768,128,128" />
+        <VineSprite type="StumpLeft" sourcerect="896,768,128,128" />
+        <VineSprite type="StumpBottom" sourcerect="768,896,128,128" />
+        <VineSprite type="StumpRight" sourcerect="896,896,128,128" />
+      </VineSprites>
+    </Growable>
+  </Item>  
+  
+  <Item name="yeastshroomproduct" identifier="aquaticyeastshroomproduct" category="Misc" Tags="smallitem,plant,plantitem,researchmaterial" maxstacksize="32" maxstacksizecharacterinventory="8" canbepicked="true" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="medfabcab" secondary="medcontainer" />
+    <Price baseprice="20">
+    </Price>
+    <Deconstruct time="5" chooserandom="true" requireddeconstructor="deconstructor">
+      <Item identifier="ethanol" amount="1" />
+      <Item identifier="ethanol" amount="1" />
+      <Item identifier="ethanol" amount="2" />
+    </Deconstruct>
+    <Deconstruct time="5" chooserandom="true" amount="1" requireddeconstructor="geneticresearchstation">
+      <Item identifier="yeastshroomseed" commonness="3" amount="1" activatebuttontext="researchstation.crossbreed" infotext="researchstation.crossbreed.infotext" />
+      <Item identifier="compost" commonness="3" amount="1" activatebuttontext="researchstation.crossbreed" infotext="researchstation.crossbreed.infotext" />
+    </Deconstruct>
+    <Sprite texture="Content/Items/Materials/Minerals.png" depth="0.2" sourcerect="603,321,42,63" origin="0.5,0.5" />
+    <Holdable canBeCombined="false" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+    <Body radius="20" density="11" />
+  </Item>
+
+
+  <!-- Growable slimebacteria - Needs a lot of watering. -->
+  <Item name="slimebacteriaseed" identifier="slimebacteriaseed" category="Misc" Tags="smallitem,plant,seed,plantitem" maxstacksize="32" maxstacksizecharacterinventory="8" canbepicked="true" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="medfabcab" secondary="medcontainer" />
+    <Price baseprice="150">
+    </Price>
+    <Deconstruct time="2" requireddeconstructor="deconstructor"/>
+    <Deconstruct time="5" chooserandom="true" amount="1" requireddeconstructor="geneticresearchstation">
+      <!-- TODO: special seed -->
+      <Item identifier="fibrouspoppyseed" commonness="3" requiredotheritem="stabilozine" outconditionmin="1" outconditionmax="1" activatebuttontext="researchstation.crossbreed" infotext="researchstation.crossbreed.infotext" infotextonotheritemmissing="researchstation.crossbreed.missingitem" />
+    </Deconstruct>
+    <Sprite texture="Content/Items/Materials/Minerals.png" depth="0.2" sourcerect="601,393,61,47" origin="0.5,0.5" />
+    <Holdable canBeCombined="false" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+    <Body radius="20" density="11" />
+    <Growable growthspeed="99" pickingtime="3" maximumvines="12" maxhealth="180" hardiness="1" floodtolerance="0.2" FireVulnerability="3" increasedDeathSpeed="11" seedrate="0" productrate="60" flowerquantity="5" baseflowerscale="0.35" vinescale="0.25" leaftint="140,146,56,255" vinetint="140,146,56,255" flowertint="238,36,98,255" GrowthWeights="1,1,1,1">
+      <StatusEffect type="OnBroken" target="This" >
+        <Remove />
+      </StatusEffect>
+      <ProducedItem identifier="slimebacteriaproduct" probability="1" />
+      <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,256,256,256" />
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,256,256,256" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,896,128,128" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="128,896,128,128" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,896,128,128" />
+        <VineSprite type="Stem" sourcerect="640,128,128,128" />
+        <VineSprite type="CrossJunction" sourcerect="512,896,128,128" />
+        <VineSprite type="HorizontalLine" sourcerect="512,768,128,128" />
+        <VineSprite type="VerticalLine" sourcerect="640,768,128,128" />
+        <VineSprite type="TurnTopRight" sourcerect="0,768,128,128" />
+        <VineSprite type="TurnTopLeft" sourcerect="384,768,128,128" />
+        <VineSprite type="TurnBottomLeft" sourcerect="256,768,128,128" />
+        <VineSprite type="TurnBottomRight" sourcerect="128,768,128,128" />
+        <VineSprite type="TSectionTop" sourcerect="128,896,128,128" />
+        <VineSprite type="TSectionLeft" sourcerect="256,896,128,128" />
+        <VineSprite type="TSectionBottom" sourcerect="384,896,128,128" />
+        <VineSprite type="TSectionRight" sourcerect="0,896,128,128" />
+        <VineSprite type="StumpTop" sourcerect="768,768,128,128" />
+        <VineSprite type="StumpLeft" sourcerect="896,768,128,128" />
+        <VineSprite type="StumpBottom" sourcerect="768,896,128,128" />
+        <VineSprite type="StumpRight" sourcerect="896,896,128,128" />
+      </VineSprites>
+    </Growable>
+  </Item>  
+  
+  <Item name="slimebacteriaproduct" identifier="aquaticslimebacteriaproduct" category="Misc" Tags="smallitem,plant,plantitem,researchmaterial" maxstacksize="32" maxstacksizecharacterinventory="8" canbepicked="true" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="medfabcab" secondary="medcontainer" />
+    <Price baseprice="20">
+    </Price>
+    <Deconstruct time="5" chooserandom="true" requireddeconstructor="deconstructor">
+      <Item identifier="antibiotics" amount="1" />
+      <Item identifier="antibiotics" amount="1" />
+      <Item identifier="antibiotics" amount="2" />
+    </Deconstruct>
+    <Deconstruct time="5" chooserandom="true" amount="1" requireddeconstructor="geneticresearchstation">
+      <Item identifier="slimebacteriaseed" commonness="3" amount="1" activatebuttontext="researchstation.crossbreed" infotext="researchstation.crossbreed.infotext" />
+      <Item identifier="compost" commonness="3" amount="1" activatebuttontext="researchstation.crossbreed" infotext="researchstation.crossbreed.infotext" />
+    </Deconstruct>
+    <Sprite texture="Content/Items/Materials/Minerals.png" depth="0.2" sourcerect="603,321,42,63" origin="0.5,0.5" />
+    <Holdable canBeCombined="false" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+    <Body radius="20" density="11" />
+  </Item>
+
+
+  <!-- COMBINED PLANT SEEDS -->
+  <!-- COMBINED PLANT SEEDS -->
+  <!-- COMBINED PLANT SEEDS -->
+
+  <!-- fibrous seed - 50% More health more resistance to fire/flood, but 25% slower growth -->
+  <Item name="fibrouspoppyseed" identifier="fibrouspoppyseed" category="Misc" Tags="smallitem,plant,seed,plantitem,combinedplant" maxstacksize="32" maxstacksizecharacterinventory="8" canbepicked="true" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="255,150,255,255">
+    <PreferredContainer primary="medfabcab" secondary="medcontainer" />
+    <Price baseprice="150">
+    </Price>
+    <Deconstruct time="2" requireddeconstructor="deconstructor"/>
+    <Sprite texture="Content/Items/Materials/Minerals.png" depth="0.2" sourcerect="545,386,54,78" origin="0.5,0.5" />
+    <Holdable canBeCombined="false" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" >
+      <StatusEffect type="OnBroken" target="This" >
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+    <Body radius="20" density="11" />
+    <Growable growthspeed="99" pickingtime="3" maximumvines="12" maxhealth="270" hardiness="1" floodtolerance="0.2" FireVulnerability="2" increasedDeathSpeed="11" seedrate="0" productrate="45" flowerquantity="5" baseflowerscale="0.35" vinescale="0.25" leaftint="140,146,56,255" vinetint="140,146,56,255" flowertint="238,36,98,255" GrowthWeights="1,1,1,1">
+      <ProducedItem identifier="aquaticpoppyproduct" probability="1" />
+      <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,256,256,256" />
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,256,256,256" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,896,128,128" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="128,896,128,128" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,896,128,128" />
+        <VineSprite type="Stem" sourcerect="640,128,128,128" />
+        <VineSprite type="CrossJunction" sourcerect="512,896,128,128" />
+        <VineSprite type="HorizontalLine" sourcerect="512,768,128,128" />
+        <VineSprite type="VerticalLine" sourcerect="640,768,128,128" />
+        <VineSprite type="TurnTopRight" sourcerect="0,768,128,128" />
+        <VineSprite type="TurnTopLeft" sourcerect="384,768,128,128" />
+        <VineSprite type="TurnBottomLeft" sourcerect="256,768,128,128" />
+        <VineSprite type="TurnBottomRight" sourcerect="128,768,128,128" />
+        <VineSprite type="TSectionTop" sourcerect="128,896,128,128" />
+        <VineSprite type="TSectionLeft" sourcerect="256,896,128,128" />
+        <VineSprite type="TSectionBottom" sourcerect="384,896,128,128" />
+        <VineSprite type="TSectionRight" sourcerect="0,896,128,128" />
+        <VineSprite type="StumpTop" sourcerect="768,768,128,128" />
+        <VineSprite type="StumpLeft" sourcerect="896,768,128,128" />
+        <VineSprite type="StumpBottom" sourcerect="768,896,128,128" />
+        <VineSprite type="StumpRight" sourcerect="896,896,128,128" />
+      </VineSprites>
+    </Growable>
+  </Item>
+  
+  <!-- Shroomy seeds - 50% faster growth, 20% less health, demands fertilizer or will enter fast decay 
+  don't forget needsfertilizer tag-->
+  <Item name="shroomypoppyseed" identifier="shroomypoppyseed" category="Misc" Tags="smallitem,plant,seed,plantitem,combinedplant,needsfertilizer" maxstacksize="32" maxstacksizecharacterinventory="8" canbepicked="true" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="180,180,255,255">
+    <PreferredContainer primary="medfabcab" secondary="medcontainer" />
+    <Price baseprice="150">
+    </Price>
+    <Deconstruct time="2" requireddeconstructor="deconstructor"/>
+    <Sprite texture="Content/Items/Materials/Minerals.png" depth="0.2" sourcerect="603,321,42,63" origin="0.5,0.5" />
+    <Holdable canBeCombined="false" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" >
+      <StatusEffect type="OnBroken" target="This" >
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+    <Body radius="20" density="11" />
+    <Growable growthspeed="99" pickingtime="3" maximumvines="12" maxhealth="160" hardiness="1" floodtolerance="0.2" FireVulnerability="2" accelerateDeath="false" increasedDeathSpeed="2" seedrate="0" productrate="60" flowerquantity="5" baseflowerscale="0.35" vinescale="0.25" leaftint="140,146,56,255" vinetint="140,146,56,255" flowertint="238,36,98,255" GrowthWeights="1,1,1,1">
+      <!-- needs fertilizer or will decay fast -->
+      <StatusEffect type="OnContained" target="This,Parent" targetitemcomponent="Planter" fertilizer="-10" interval="1" disabledeltatime="true">
+      </StatusEffect>
+      <!-- Change hardiness if no fertilizer. I would've much prefered using accelerateDeath="true", but it's hardcoded somehow TODO: particles when out of fertilizer?  -->
+      <StatusEffect type="OnContained" target="This" hardiness="3" interval="1" setvalue="true" comparison="and">
+        <Conditional hastag="planter" targetcontainer="true" />
+        <Conditional targetcontainer="true" fertilizer="lte 0" />
+      </StatusEffect>
+      <StatusEffect type="OnContained" target="This" hardiness="1" interval="1" setvalue="true" >
+       <Conditional targetcontainer="true" fertilizer="gt 0" />
+      </StatusEffect>
+      <ProducedItem identifier="aquaticpoppyproduct" probability="1" />
+      <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,256,256,256" />
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,256,256,256" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,896,128,128" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="128,896,128,128" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,896,128,128" />
+        <VineSprite type="Stem" sourcerect="640,128,128,128" />
+        <VineSprite type="CrossJunction" sourcerect="512,896,128,128" />
+        <VineSprite type="HorizontalLine" sourcerect="512,768,128,128" />
+        <VineSprite type="VerticalLine" sourcerect="640,768,128,128" />
+        <VineSprite type="TurnTopRight" sourcerect="0,768,128,128" />
+        <VineSprite type="TurnTopLeft" sourcerect="384,768,128,128" />
+        <VineSprite type="TurnBottomLeft" sourcerect="256,768,128,128" />
+        <VineSprite type="TurnBottomRight" sourcerect="128,768,128,128" />
+        <VineSprite type="TSectionTop" sourcerect="128,896,128,128" />
+        <VineSprite type="TSectionLeft" sourcerect="256,896,128,128" />
+        <VineSprite type="TSectionBottom" sourcerect="384,896,128,128" />
+        <VineSprite type="TSectionRight" sourcerect="0,896,128,128" />
+        <VineSprite type="StumpTop" sourcerect="768,768,128,128" />
+        <VineSprite type="StumpLeft" sourcerect="896,768,128,128" />
+        <VineSprite type="StumpBottom" sourcerect="768,896,128,128" />
+        <VineSprite type="StumpRight" sourcerect="896,896,128,128" />
+      </VineSprites>
+    </Growable>
+  </Item>
+  
+  
+
+  <!-- fibrous seed - 50% More health more resistance to fire/flood, but 25% slower growth -->
+  <Item name="fibrouscreepingorangevineseed" identifier="fibrouscreepingorangevineseed" variantof="fibrouspoppyseed" spritecolor="255,150,255,255">
+    <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="830,636,31,30" origin="0.5,0.5" />
+    <Growable growthspeed="99" pickingtime="3" maximumvines="12" maxhealth="270" hardiness="1" floodtolerance="0.2" FireVulnerability="2" increasedDeathSpeed="11" seedrate="0" productrate="45" flowerquantity="5" baseflowerscale="0.35" vinescale="0.25" leaftint="140,146,56,255" vinetint="140,146,56,255" flowertint="238,36,98,255" GrowthWeights="1,1,1,1">
+      <ProducedItem identifier="creepingorange" probability="0.95" />
+      <ProducedItem identifier="badcreepingorange" probability="0.05"/>
+      <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,256,256,256" />
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,256,256,256" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,896,128,128" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="128,896,128,128" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,896,128,128" />
+        <VineSprite type="Stem" sourcerect="640,128,128,128" />
+        <VineSprite type="CrossJunction" sourcerect="512,896,128,128" />
+        <VineSprite type="HorizontalLine" sourcerect="512,768,128,128" />
+        <VineSprite type="VerticalLine" sourcerect="640,768,128,128" />
+        <VineSprite type="TurnTopRight" sourcerect="0,768,128,128" />
+        <VineSprite type="TurnTopLeft" sourcerect="384,768,128,128" />
+        <VineSprite type="TurnBottomLeft" sourcerect="256,768,128,128" />
+        <VineSprite type="TurnBottomRight" sourcerect="128,768,128,128" />
+        <VineSprite type="TSectionTop" sourcerect="128,896,128,128" />
+        <VineSprite type="TSectionLeft" sourcerect="256,896,128,128" />
+        <VineSprite type="TSectionBottom" sourcerect="384,896,128,128" />
+        <VineSprite type="TSectionRight" sourcerect="0,896,128,128" />
+        <VineSprite type="StumpTop" sourcerect="768,768,128,128" />
+        <VineSprite type="StumpLeft" sourcerect="896,768,128,128" />
+        <VineSprite type="StumpBottom" sourcerect="768,896,128,128" />
+        <VineSprite type="StumpRight" sourcerect="896,896,128,128" />
+      </VineSprites>
+    </Growable>
+  </Item>
+  
+  <!-- Shroomy seeds - 50% faster growth, 20% less health, demands fertilizer or will enter fast decay 
+  don't forget needsfertilizer tag-->
+  <Item name="shroomycreepingorangevineseed" identifier="shroomycreepingorangevineseed" variantof="shroomypoppyseed" spritecolor="180,180,255,255">
+    <Growable growthspeed="99" pickingtime="3" maximumvines="12" maxhealth="160" hardiness="1" floodtolerance="0.2" FireVulnerability="2" accelerateDeath="false" increasedDeathSpeed="2" seedrate="0" productrate="60" flowerquantity="5" baseflowerscale="0.35" vinescale="0.25" leaftint="140,146,56,255" vinetint="140,146,56,255" flowertint="238,36,98,255" GrowthWeights="1,1,1,1">
+      <!-- needs fertilizer or will decay fast -->
+      <StatusEffect type="OnContained" target="This,Parent" targetitemcomponent="Planter" fertilizer="-10" interval="1" disabledeltatime="true">
+      </StatusEffect>
+      <!-- Change hardiness if no fertilizer. I would've much prefered using accelerateDeath="true", but it's hardcoded somehow TODO: particles when out of fertilizer?  -->
+      <StatusEffect type="OnContained" target="This" hardiness="3" interval="1" setvalue="true" comparison="and">
+        <Conditional hastag="planter" targetcontainer="true" />
+        <Conditional targetcontainer="true" fertilizer="lte 0" />
+      </StatusEffect>
+      <StatusEffect type="OnContained" target="This" hardiness="1" interval="1" setvalue="true" >
+       <Conditional targetcontainer="true" fertilizer="gt 0" />
+      </StatusEffect>
+      <ProducedItem identifier="creepingorange" probability="0.95" />
+      <ProducedItem identifier="badcreepingorange" probability="0.05"/>
+      <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,256,256,256" />
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,256,256,256" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,896,128,128" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="128,896,128,128" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,896,128,128" />
+        <VineSprite type="Stem" sourcerect="640,128,128,128" />
+        <VineSprite type="CrossJunction" sourcerect="512,896,128,128" />
+        <VineSprite type="HorizontalLine" sourcerect="512,768,128,128" />
+        <VineSprite type="VerticalLine" sourcerect="640,768,128,128" />
+        <VineSprite type="TurnTopRight" sourcerect="0,768,128,128" />
+        <VineSprite type="TurnTopLeft" sourcerect="384,768,128,128" />
+        <VineSprite type="TurnBottomLeft" sourcerect="256,768,128,128" />
+        <VineSprite type="TurnBottomRight" sourcerect="128,768,128,128" />
+        <VineSprite type="TSectionTop" sourcerect="128,896,128,128" />
+        <VineSprite type="TSectionLeft" sourcerect="256,896,128,128" />
+        <VineSprite type="TSectionBottom" sourcerect="384,896,128,128" />
+        <VineSprite type="TSectionRight" sourcerect="0,896,128,128" />
+        <VineSprite type="StumpTop" sourcerect="768,768,128,128" />
+        <VineSprite type="StumpLeft" sourcerect="896,768,128,128" />
+        <VineSprite type="StumpBottom" sourcerect="768,896,128,128" />
+        <VineSprite type="StumpRight" sourcerect="896,896,128,128" />
+      </VineSprites>
+    </Growable>
+  </Item>
+  
+  <!-- fibrous seed - 50% More health more resistance to fire/flood, but 25% slower growth -->
+  <Item name="fibroustobaccoseed" identifier="fibroustobaccoseed" variantof="fibrouspoppyseed" spritecolor="255,150,255,255">
+    <Growable growthspeed="99" pickingtime="3" maximumvines="12" maxhealth="270" hardiness="1" floodtolerance="0.2" FireVulnerability="2" increasedDeathSpeed="11" seedrate="0" productrate="45" flowerquantity="5" baseflowerscale="0.35" vinescale="0.25" leaftint="140,146,56,255" vinetint="140,146,56,255" flowertint="238,36,98,255" GrowthWeights="1,1,1,1">
+      <StatusEffect type="OnBroken" target="This" >
+        <Remove />
+      </StatusEffect>
+      <ProducedItem identifier="tobaccobud" probability="1" />
+      <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,256,256,256" />
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,256,256,256" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,896,128,128" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="128,896,128,128" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,896,128,128" />
+        <VineSprite type="Stem" sourcerect="640,128,128,128" />
+        <VineSprite type="CrossJunction" sourcerect="512,896,128,128" />
+        <VineSprite type="HorizontalLine" sourcerect="512,768,128,128" />
+        <VineSprite type="VerticalLine" sourcerect="640,768,128,128" />
+        <VineSprite type="TurnTopRight" sourcerect="0,768,128,128" />
+        <VineSprite type="TurnTopLeft" sourcerect="384,768,128,128" />
+        <VineSprite type="TurnBottomLeft" sourcerect="256,768,128,128" />
+        <VineSprite type="TurnBottomRight" sourcerect="128,768,128,128" />
+        <VineSprite type="TSectionTop" sourcerect="128,896,128,128" />
+        <VineSprite type="TSectionLeft" sourcerect="256,896,128,128" />
+        <VineSprite type="TSectionBottom" sourcerect="384,896,128,128" />
+        <VineSprite type="TSectionRight" sourcerect="0,896,128,128" />
+        <VineSprite type="StumpTop" sourcerect="768,768,128,128" />
+        <VineSprite type="StumpLeft" sourcerect="896,768,128,128" />
+        <VineSprite type="StumpBottom" sourcerect="768,896,128,128" />
+        <VineSprite type="StumpRight" sourcerect="896,896,128,128" />
+      </VineSprites>
+    </Growable>
+  </Item>
+  
+  <!-- Shroomy seeds - 50% faster growth, 20% less health, demands fertilizer or will enter fast decay 
+  don't forget needsfertilizer tag-->
+  <Item name="shroomytobaccoseed" identifier="shroomytobaccoseed" category="Misc" variantof="shroomypoppyseed" spritecolor="180,180,255,255">
+    <Growable growthspeed="99" pickingtime="3" maximumvines="12" maxhealth="160" hardiness="1" floodtolerance="0.2" FireVulnerability="2" accelerateDeath="false" increasedDeathSpeed="2" seedrate="0" productrate="60" flowerquantity="5" baseflowerscale="0.35" vinescale="0.25" leaftint="140,146,56,255" vinetint="140,146,56,255" flowertint="238,36,98,255" GrowthWeights="1,1,1,1">
+      <StatusEffect type="OnBroken" target="This" >
+        <Remove />
+      </StatusEffect>
+      <!-- needs fertilizer or will decay fast -->
+      <StatusEffect type="OnContained" target="This,Parent" targetitemcomponent="Planter" fertilizer="-10" interval="1" disabledeltatime="true">
+      </StatusEffect>
+      <!-- Change hardiness if no fertilizer. I would've much prefered using accelerateDeath="true", but it's hardcoded somehow TODO: particles when out of fertilizer?  -->
+      <StatusEffect type="OnContained" target="This" hardiness="3" interval="1" setvalue="true" comparison="and">
+        <Conditional hastag="planter" targetcontainer="true" />
+        <Conditional targetcontainer="true" fertilizer="lte 0" />
+      </StatusEffect>
+      <StatusEffect type="OnContained" target="This" hardiness="1" interval="1" setvalue="true" >
+       <Conditional targetcontainer="true" fertilizer="gt 0" />
+      </StatusEffect>
+      <ProducedItem identifier="tobaccobud" probability="1" />
+      <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,256,256,256" />
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,256,256,256" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,896,128,128" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="128,896,128,128" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,896,128,128" />
+        <VineSprite type="Stem" sourcerect="640,128,128,128" />
+        <VineSprite type="CrossJunction" sourcerect="512,896,128,128" />
+        <VineSprite type="HorizontalLine" sourcerect="512,768,128,128" />
+        <VineSprite type="VerticalLine" sourcerect="640,768,128,128" />
+        <VineSprite type="TurnTopRight" sourcerect="0,768,128,128" />
+        <VineSprite type="TurnTopLeft" sourcerect="384,768,128,128" />
+        <VineSprite type="TurnBottomLeft" sourcerect="256,768,128,128" />
+        <VineSprite type="TurnBottomRight" sourcerect="128,768,128,128" />
+        <VineSprite type="TSectionTop" sourcerect="128,896,128,128" />
+        <VineSprite type="TSectionLeft" sourcerect="256,896,128,128" />
+        <VineSprite type="TSectionBottom" sourcerect="384,896,128,128" />
+        <VineSprite type="TSectionRight" sourcerect="0,896,128,128" />
+        <VineSprite type="StumpTop" sourcerect="768,768,128,128" />
+        <VineSprite type="StumpLeft" sourcerect="896,768,128,128" />
+        <VineSprite type="StumpBottom" sourcerect="768,896,128,128" />
+        <VineSprite type="StumpRight" sourcerect="896,896,128,128" />
+      </VineSprites>
+    </Growable>
+  </Item>  
+  
+  
+  <!-- fibrous seed - 50% More health more resistance to fire/flood, but 25% slower growth -->
+  <Item name="fibroussaltvineseed" identifier="fibroussaltvineseed" variantof="fibrouspoppyseed" spritecolor="255,150,255,255">
+    <PreferredContainer primary="medfabcab" secondary="medcontainer" />
+    <Price baseprice="150">
+    </Price>
+    <Deconstruct time="2" requireddeconstructor="deconstructor"/>
+    <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="829,666,33,35" origin="0.5,0.5" />
+    <Holdable canBeCombined="false" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+    <Body radius="20" density="11" />
+    <Growable growthspeed="99" pickingtime="3" maximumvines="12" maxhealth="270" hardiness="1" floodtolerance="0.2" FireVulnerability="2" increasedDeathSpeed="11" seedrate="0" productrate="45" flowerquantity="5" baseflowerscale="0.35" vinescale="0.25" leaftint="140,146,56,255" vinetint="140,146,56,255" flowertint="238,36,98,255" GrowthWeights="1,1,1,1">
+      <StatusEffect type="OnBroken" target="This" >
+        <Remove />
+      </StatusEffect>
+      <ProducedItem identifier="saltbulb" probability="1.0"/>
+      <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,256,256,256" />
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,256,256,256" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,896,128,128" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="128,896,128,128" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,896,128,128" />
+        <VineSprite type="Stem" sourcerect="640,128,128,128" />
+        <VineSprite type="CrossJunction" sourcerect="512,896,128,128" />
+        <VineSprite type="HorizontalLine" sourcerect="512,768,128,128" />
+        <VineSprite type="VerticalLine" sourcerect="640,768,128,128" />
+        <VineSprite type="TurnTopRight" sourcerect="0,768,128,128" />
+        <VineSprite type="TurnTopLeft" sourcerect="384,768,128,128" />
+        <VineSprite type="TurnBottomLeft" sourcerect="256,768,128,128" />
+        <VineSprite type="TurnBottomRight" sourcerect="128,768,128,128" />
+        <VineSprite type="TSectionTop" sourcerect="128,896,128,128" />
+        <VineSprite type="TSectionLeft" sourcerect="256,896,128,128" />
+        <VineSprite type="TSectionBottom" sourcerect="384,896,128,128" />
+        <VineSprite type="TSectionRight" sourcerect="0,896,128,128" />
+        <VineSprite type="StumpTop" sourcerect="768,768,128,128" />
+        <VineSprite type="StumpLeft" sourcerect="896,768,128,128" />
+        <VineSprite type="StumpBottom" sourcerect="768,896,128,128" />
+        <VineSprite type="StumpRight" sourcerect="896,896,128,128" />
+      </VineSprites>
+    </Growable>
+  </Item>
+  
+  <!-- Shroomy seeds - 50% faster growth, 20% less health, demands fertilizer or will enter fast decay 
+  don't forget needsfertilizer tag-->
+  <Item name="shroomysaltvineseed" identifier="shroomysaltvineseed" variantof="shroomypoppyseed" spritecolor="180,180,255,255">
+    <Growable growthspeed="99" pickingtime="3" maximumvines="12" maxhealth="160" hardiness="1" floodtolerance="0.2" FireVulnerability="2" accelerateDeath="false" increasedDeathSpeed="2" seedrate="0" productrate="60" flowerquantity="5" baseflowerscale="0.35" vinescale="0.25" leaftint="140,146,56,255" vinetint="140,146,56,255" flowertint="238,36,98,255" GrowthWeights="1,1,1,1">
+      <StatusEffect type="OnBroken" target="This" >
+        <Remove />
+      </StatusEffect>
+      <!-- needs fertilizer or will decay fast -->
+      <StatusEffect type="OnContained" target="This,Parent" targetitemcomponent="Planter" fertilizer="-10" interval="1" disabledeltatime="true">
+      </StatusEffect>
+      <!-- Change hardiness if no fertilizer. I would've much prefered using accelerateDeath="true", but it's hardcoded somehow TODO: particles when out of fertilizer?  -->
+      <StatusEffect type="OnContained" target="This" hardiness="3" interval="1" setvalue="true" comparison="and">
+        <Conditional hastag="planter" targetcontainer="true" />
+        <Conditional targetcontainer="true" fertilizer="lte 0" />
+      </StatusEffect>
+      <StatusEffect type="OnContained" target="This" hardiness="1" interval="1" setvalue="true" >
+       <Conditional targetcontainer="true" fertilizer="gt 0" />
+      </StatusEffect>
+      <ProducedItem identifier="saltbulb" probability="1.0"/>
+      <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,256,256,256" />
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,256,256,256" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,896,128,128" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="128,896,128,128" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,896,128,128" />
+        <VineSprite type="Stem" sourcerect="640,128,128,128" />
+        <VineSprite type="CrossJunction" sourcerect="512,896,128,128" />
+        <VineSprite type="HorizontalLine" sourcerect="512,768,128,128" />
+        <VineSprite type="VerticalLine" sourcerect="640,768,128,128" />
+        <VineSprite type="TurnTopRight" sourcerect="0,768,128,128" />
+        <VineSprite type="TurnTopLeft" sourcerect="384,768,128,128" />
+        <VineSprite type="TurnBottomLeft" sourcerect="256,768,128,128" />
+        <VineSprite type="TurnBottomRight" sourcerect="128,768,128,128" />
+        <VineSprite type="TSectionTop" sourcerect="128,896,128,128" />
+        <VineSprite type="TSectionLeft" sourcerect="256,896,128,128" />
+        <VineSprite type="TSectionBottom" sourcerect="384,896,128,128" />
+        <VineSprite type="TSectionRight" sourcerect="0,896,128,128" />
+        <VineSprite type="StumpTop" sourcerect="768,768,128,128" />
+        <VineSprite type="StumpLeft" sourcerect="896,768,128,128" />
+        <VineSprite type="StumpBottom" sourcerect="768,896,128,128" />
+        <VineSprite type="StumpRight" sourcerect="896,896,128,128" />
+      </VineSprites>
+    </Growable>
+  </Item>
+  
+  
+  <!-- fibrous seed - 50% More health more resistance to fire/flood, but 25% slower growth -->
+  <Item name="fibrousraptorbaneseed" identifier="fibrousraptorbaneseed" variantof="fibrouspoppyseed" spritecolor="255,150,255,255">
+    <PreferredContainer primary="medfabcab" secondary="medcontainer" />
+    <Price baseprice="150">
+    </Price>
+    <Deconstruct time="2" requireddeconstructor="deconstructor"/>
+    <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="829,666,33,35" origin="0.5,0.5" />
+    <Holdable canBeCombined="false" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+    <Body radius="20" density="11" />
+    <Growable growthspeed="99" pickingtime="3" maximumvines="12" maxhealth="270" hardiness="1" floodtolerance="0.2" FireVulnerability="2" increasedDeathSpeed="11" seedrate="0" productrate="45" flowerquantity="5" baseflowerscale="0.35" vinescale="0.25" leaftint="140,146,56,255" vinetint="140,146,56,255" flowertint="238,36,98,255" GrowthWeights="1,1,1,1">
+      <StatusEffect type="OnBroken" target="This" >
+        <Remove />
+      </StatusEffect>
+      <ProducedItem identifier="raptorbane" probability="0.4" />
+      <ProducedItem identifier="badraptorbane" probability="0.6"></ProducedItem>
+      <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,256,256,256" />
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,256,256,256" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,896,128,128" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="128,896,128,128" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,896,128,128" />
+        <VineSprite type="Stem" sourcerect="640,128,128,128" />
+        <VineSprite type="CrossJunction" sourcerect="512,896,128,128" />
+        <VineSprite type="HorizontalLine" sourcerect="512,768,128,128" />
+        <VineSprite type="VerticalLine" sourcerect="640,768,128,128" />
+        <VineSprite type="TurnTopRight" sourcerect="0,768,128,128" />
+        <VineSprite type="TurnTopLeft" sourcerect="384,768,128,128" />
+        <VineSprite type="TurnBottomLeft" sourcerect="256,768,128,128" />
+        <VineSprite type="TurnBottomRight" sourcerect="128,768,128,128" />
+        <VineSprite type="TSectionTop" sourcerect="128,896,128,128" />
+        <VineSprite type="TSectionLeft" sourcerect="256,896,128,128" />
+        <VineSprite type="TSectionBottom" sourcerect="384,896,128,128" />
+        <VineSprite type="TSectionRight" sourcerect="0,896,128,128" />
+        <VineSprite type="StumpTop" sourcerect="768,768,128,128" />
+        <VineSprite type="StumpLeft" sourcerect="896,768,128,128" />
+        <VineSprite type="StumpBottom" sourcerect="768,896,128,128" />
+        <VineSprite type="StumpRight" sourcerect="896,896,128,128" />
+      </VineSprites>
+    </Growable>
+  </Item>
+  
+  <!-- Shroomy seeds - 50% faster growth, 20% less health, demands fertilizer or will enter fast decay 
+  don't forget needsfertilizer tag-->
+  <Item name="shroomyraptorbaneseed" identifier="shroomyraptorbaneseed" variantof="shroomypoppyseed" spritecolor="180,180,255,255">
+    <Growable growthspeed="99" pickingtime="3" maximumvines="12" maxhealth="160" hardiness="1" floodtolerance="0.2" FireVulnerability="2" accelerateDeath="false" increasedDeathSpeed="2" seedrate="0" productrate="60" flowerquantity="5" baseflowerscale="0.35" vinescale="0.25" leaftint="140,146,56,255" vinetint="140,146,56,255" flowertint="238,36,98,255" GrowthWeights="1,1,1,1">
+      <StatusEffect type="OnBroken" target="This" >
+        <Remove />
+      </StatusEffect>
+      <!-- needs fertilizer or will decay fast -->
+      <StatusEffect type="OnContained" target="This,Parent" targetitemcomponent="Planter" fertilizer="-10" interval="1" disabledeltatime="true">
+      </StatusEffect>
+      <!-- Change hardiness if no fertilizer. I would've much prefered using accelerateDeath="true", but it's hardcoded somehow TODO: particles when out of fertilizer?  -->
+      <StatusEffect type="OnContained" target="This" hardiness="3" interval="1" setvalue="true" comparison="and">
+        <Conditional hastag="planter" targetcontainer="true" />
+        <Conditional targetcontainer="true" fertilizer="lte 0" />
+      </StatusEffect>
+      <StatusEffect type="OnContained" target="This" hardiness="1" interval="1" setvalue="true" >
+       <Conditional targetcontainer="true" fertilizer="gt 0" />
+      </StatusEffect>
+      <ProducedItem identifier="raptorbane" probability="0.4" />
+      <ProducedItem identifier="badraptorbane" probability="0.6"></ProducedItem>
+      <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,256,256,256" />
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,256,256,256" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,896,128,128" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="128,896,128,128" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,896,128,128" />
+        <VineSprite type="Stem" sourcerect="640,128,128,128" />
+        <VineSprite type="CrossJunction" sourcerect="512,896,128,128" />
+        <VineSprite type="HorizontalLine" sourcerect="512,768,128,128" />
+        <VineSprite type="VerticalLine" sourcerect="640,768,128,128" />
+        <VineSprite type="TurnTopRight" sourcerect="0,768,128,128" />
+        <VineSprite type="TurnTopLeft" sourcerect="384,768,128,128" />
+        <VineSprite type="TurnBottomLeft" sourcerect="256,768,128,128" />
+        <VineSprite type="TurnBottomRight" sourcerect="128,768,128,128" />
+        <VineSprite type="TSectionTop" sourcerect="128,896,128,128" />
+        <VineSprite type="TSectionLeft" sourcerect="256,896,128,128" />
+        <VineSprite type="TSectionBottom" sourcerect="384,896,128,128" />
+        <VineSprite type="TSectionRight" sourcerect="0,896,128,128" />
+        <VineSprite type="StumpTop" sourcerect="768,768,128,128" />
+        <VineSprite type="StumpLeft" sourcerect="896,768,128,128" />
+        <VineSprite type="StumpBottom" sourcerect="768,896,128,128" />
+        <VineSprite type="StumpRight" sourcerect="896,896,128,128" />
+      </VineSprites>
+    </Growable>
+  </Item>
+  
+  
+  
+  
+  
+  <!-- ///////////////////////////////////// -->
+  
+  <!-- ///////////////////////////////////// -->
+  
+  <!-- ///////////////////////////////////// -->
+  
+  <!-- ///////////////////////////////////// -->
+  
+  <!-- ///////////////////////////////////// -->
+  
+  <!-- ///////////////////////////////////// -->
+  
+  <!-- GrowthWeights="up,left,down,right" -->
+  
+  <!-- pomacco -->
+  <Item name="pomaccoseed" identifier="pomaccoseed" category="Misc" Tags="smallitem,seed,plantitem" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="170,130,70,255">
+    <sprite texture="%Moddir%/GrowablePlants_crossed1.png" depth="0.2" sourcerect="830,636,31,30" origin="0.5,0.5" />
+    <PreferredContainer primary="wreckstoragecab,abandonedstoragecab,piratestoragecab" amount="1" spawnprobability="0.0" />
+    <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.0" />
+    <Price baseprice="30" sold="false" >
+    </Price>
+    <Deconstruct time="2" requireddeconstructor="deconstructor"/>
+    <!-- TODO: adjust growth and sprites -->
+    <Growable growthspeed="777" pickingtime="3" maxhealth="500" hardiness="10" floodtolerance="0.4" seedrate="0" productrate="100" maximumvines="12" flowerquantity="6" leafprobability="0.50" flowertint="255,54,200,255" leaftint="255,150,100,255" vinetint="244,172,132,255" baseflowerscale="0.35" vinescale="0.25" GrowthWeights="0.2,1,0.1,1">
+      <ProducedItem identifier="pomacco" probability="0.98" />
+      <ProducedItem identifier="badcreepingorange" probability="0.02"/>
+      <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
+        <LeafSprite texture="%Moddir%/GrowablePlants_crossed1.png" sourcerect="0,0,256,256" />
+        <LeafSprite texture="%Moddir%/GrowablePlants_crossed1.png" sourcerect="256,0,256,256" />
+        <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,768,128,128" />
+        <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="128,768,128,128" />
+        <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,768,128,128" />
+        <LeafSprite texture="%Moddir%/GrowablePlants_crossed1.png" sourcerect="0,256,256,256" />
+        <LeafSprite texture="%Moddir%/GrowablePlants_crossed1.png" sourcerect="256,256,256,256" />
+        <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="384,896,128,128" />
+        <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="512,896,128,128" />
+        <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="640,896,128,128" />
+        <VineSprite type="Stem" sourcerect="640,128,128,128" />
+        <VineSprite type="CrossJunction" sourcerect="512,128,128,128" />
+        <VineSprite type="HorizontalLine" sourcerect="512,0,128,128" />
+        <VineSprite type="VerticalLine" sourcerect="640,0,128,128" />
+        <VineSprite type="TurnTopRight" sourcerect="0,0,128,128" />
+        <VineSprite type="TurnTopLeft" sourcerect="384,0,128,128" />
+        <VineSprite type="TurnBottomLeft" sourcerect="256,0,128,128" />
+        <VineSprite type="TurnBottomRight" sourcerect="128,0,128,128" />
+        <VineSprite type="TSectionTop" sourcerect="128,128,128,128" />
+        <VineSprite type="TSectionLeft" sourcerect="256,128,128,128" />
+        <VineSprite type="TSectionBottom" sourcerect="384,128,128,128" />
+        <VineSprite type="TSectionRight" sourcerect="0,128,128,128" />
+        <VineSprite type="StumpTop" sourcerect="768,0,128,128" />
+        <VineSprite type="StumpLeft" sourcerect="896,0,128,128" />
+        <VineSprite type="StumpBottom" sourcerect="768,128,128,128" />
+        <VineSprite type="StumpRight" sourcerect="896,128,128,128" />
+      </VineSprites>
+      <!-- TODO: remove honk debug -->
+      <StatusEffect target="this" type="always" condition="-1" >
+       <Conditional targetcontainer="true" fertilizer="lte 0" />
+       <!-- <Sound file="Content/Items/Weapons/honk.ogg" loop="true" range="1000" /> -->
+      </StatusEffect>
+      <StatusEffect target="this" type="OnBroken" decayed="true" setvalue="true" >
+        <!-- <Remove /> -->
+      </StatusEffect>
+    </Growable>
+    <Body radius="15" density="10.1" />
+    <Holdable canBeCombined="false" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+  </Item>
+  
+  <Item name="saltgrenadeseed" identifier="saltgrenadeseed" category="Misc" Tags="smallitem,seed,plantitem" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="255,150,75,255">
+    <sprite texture="%Moddir%/GrowablePlants_crossed1.png" depth="0.2" sourcerect="829,666,33,35" origin="0.5,0.5" />
+    <PreferredContainer primary="wreckstoragecab,abandonedstoragecab,piratestoragecab" amount="1" spawnprobability="0.0" />
+    <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.0" />
+    <Price baseprice="30" sold="false" >
+    </Price>
+    <Deconstruct time="2" requireddeconstructor="deconstructor"/>
+    <!-- TODO: adjust growth and sprites -->
+    <Growable growthspeed="777" pickingtime="3" maxhealth="500" hardiness="10" floodtolerance="0.4" seedrate="0" productrate="100" maximumvines="12" flowerquantity="6" leafprobability="0.33" flowertint="255,180,0,255" leaftint="255,150,100,255" vinetint="210,240,132,255" baseflowerscale="0.35" vinescale="0.25"  GrowthWeights="0.2,1,0.1,1">
+      <ProducedItem identifier="creepingorange" probability="0.50" />
+      <ProducedItem identifier="saltgrenade" probability="0.50"/>
+      <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,0,256,256" />
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,0,256,256" />
+        <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,768,128,128" />
+        <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="128,768,128,128" />
+        <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,768,128,128" />
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,512,256,256" />
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,512,256,256" />
+        <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="384,768,128,128" />
+        <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="512,768,128,128" />
+        <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="640,768,128,128" />
+        <VineSprite type="Stem" sourcerect="640,128,128,128" />
+        <VineSprite type="CrossJunction" sourcerect="512,128,128,128" />
+        <VineSprite type="HorizontalLine" sourcerect="512,0,128,128" />
+        <VineSprite type="VerticalLine" sourcerect="640,0,128,128" />
+        <VineSprite type="TurnTopRight" sourcerect="0,0,128,128" />
+        <VineSprite type="TurnTopLeft" sourcerect="384,0,128,128" />
+        <VineSprite type="TurnBottomLeft" sourcerect="256,0,128,128" />
+        <VineSprite type="TurnBottomRight" sourcerect="128,0,128,128" />
+        <VineSprite type="TSectionTop" sourcerect="128,128,128,128" />
+        <VineSprite type="TSectionLeft" sourcerect="256,128,128,128" />
+        <VineSprite type="TSectionBottom" sourcerect="384,128,128,128" />
+        <VineSprite type="TSectionRight" sourcerect="0,128,128,128" />
+        <VineSprite type="StumpTop" sourcerect="768,0,128,128" />
+        <VineSprite type="StumpLeft" sourcerect="896,0,128,128" />
+        <VineSprite type="StumpBottom" sourcerect="768,128,128,128" />
+        <VineSprite type="StumpRight" sourcerect="896,128,128,128" />
+      </VineSprites>
+      <!-- TODO: remove honk debug -->
+      <StatusEffect target="this" type="always" condition="-1" >
+       <Conditional targetcontainer="true" fertilizer="lte 0" />
+       <!-- <Sound file="Content/Items/Weapons/honk.ogg" loop="true" range="1000" /> -->
+      </StatusEffect>
+      <StatusEffect target="this" type="OnBroken" decayed="true" setvalue="true" >
+        <!-- <Remove /> -->
+      </StatusEffect>
+    </Growable>
+    <Body radius="15" density="10.1" />
+    <Holdable canBeCombined="false" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+  </Item>
+  
+  <Item name="raptorberryseed" identifier="raptorberryseed" category="Misc" Tags="smallitem,seed,plantitem" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="240,220,20,255">
+    <sprite texture="%Moddir%/GrowablePlants_crossed1.png" depth="0.2" sourcerect="830,636,31,30" origin="0.5,0.5" />
+    <PreferredContainer primary="wreckstoragecab,abandonedstoragecab,piratestoragecab" amount="1" spawnprobability="0.0" />
+    <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.0" />
+    <Price baseprice="30" sold="false" >
+    </Price>
+    <Deconstruct time="2" requireddeconstructor="deconstructor"/>
+    <!-- TODO: adjust growth and sprites -->
+    <Growable growthspeed="777" pickingtime="3" maxhealth="500" hardiness="10" floodtolerance="0.4" seedrate="0" productrate="100" maximumvines="20" flowerquantity="8" leafprobability="0.50" flowertint="255,45,50,255" leaftint="140,146,56,255" vinetint="200,160,100,255" baseflowerscale="0.50" vinescale="0.25" GrowthWeights="0.2,1,0.1,1" >
+      <ProducedItem identifier="raptorberry" probability="0.70" />
+      <ProducedItem identifier="badraptorbane" probability="0.30"></ProducedItem>
+      <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,0,256,256" />
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,0,256,256" />
+        <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,768,128,128" />
+        <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="128,768,128,128" />
+        <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,768,128,128" />
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,256,256,256" />
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,256,256,256" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,896,128,128" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="128,896,128,128" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,896,128,128" />
+        <VineSprite type="Stem" sourcerect="640,128,128,128" />
+        <VineSprite type="CrossJunction" sourcerect="512,128,128,128" />
+        <VineSprite type="HorizontalLine" sourcerect="512,0,128,128" />
+        <VineSprite type="VerticalLine" sourcerect="640,0,128,128" />
+        <VineSprite type="TurnTopRight" sourcerect="0,0,128,128" />
+        <VineSprite type="TurnTopLeft" sourcerect="384,0,128,128" />
+        <VineSprite type="TurnBottomLeft" sourcerect="256,0,128,128" />
+        <VineSprite type="TurnBottomRight" sourcerect="128,0,128,128" />
+        <VineSprite type="TSectionTop" sourcerect="128,128,128,128" />
+        <VineSprite type="TSectionLeft" sourcerect="256,128,128,128" />
+        <VineSprite type="TSectionBottom" sourcerect="384,128,128,128" />
+        <VineSprite type="TSectionRight" sourcerect="0,128,128,128" />
+        <VineSprite type="StumpTop" sourcerect="768,0,128,128" />
+        <VineSprite type="StumpLeft" sourcerect="896,0,128,128" />
+        <VineSprite type="StumpBottom" sourcerect="768,128,128,128" />
+        <VineSprite type="StumpRight" sourcerect="896,128,128,128" />
+      </VineSprites>
+      <!-- TODO: remove honk debug -->
+      <StatusEffect target="this" type="always" condition="-1" >
+       <Conditional targetcontainer="true" fertilizer="lte 0" />
+       <!-- <Sound file="Content/Items/Weapons/honk.ogg" loop="true" range="1000" /> -->
+      </StatusEffect>
+      <StatusEffect target="this" type="OnBroken" decayed="true" setvalue="true" >
+        <!-- <Remove /> -->
+      </StatusEffect>
+    </Growable>
+    <Body radius="15" density="10.1" />
+    <Holdable canBeCombined="false" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+  </Item>
+    
+  <Item name="raptorbaccoseed" identifier="raptorbaccoseed" category="Misc" Tags="smallitem,seed,plantitem" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="130,140,100,255">
+    <sprite texture="%Moddir%/GrowablePlants_crossed1.png" depth="0.2" sourcerect="830,636,31,30" origin="0.5,0.5" />
+    <PreferredContainer primary="wreckstoragecab,abandonedstoragecab,piratestoragecab" amount="1" spawnprobability="0.0" />
+    <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.0" />
+    <Price baseprice="30" sold="false" >
+    </Price>
+    <Deconstruct time="2" requireddeconstructor="deconstructor"/>
+    <!-- TODO: adjust growth and sprites -->
+    <Growable growthspeed="777" pickingtime="3" maxhealth="500" hardiness="10" floodtolerance="0.4" seedrate="0" productrate="100" maximumvines="20" flowerquantity="8" leafprobability="0.50" flowertint="148,85,120,255" leaftint="182,120,70,255" vinetint="235,130,112,255" baseflowerscale="0.40" vinescale="0.25" GrowthWeights="0.2,1,0.1,1" >
+      <ProducedItem identifier="raptorbacco" probability="0.85" />
+      <ProducedItem identifier="badraptorbane" probability="0.15"></ProducedItem>
+      <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,256,256,256" />
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,256,256,256" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,896,128,128" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="128,896,128,128" />
+        <FlowerSprite scale="0.25" texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,896,128,128" />
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,256,256,256" />
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,256,256,256" />
+        <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="384,896,128,128" />
+        <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="512,896,128,128" />
+        <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="640,896,128,128" />
+        <VineSprite type="Stem" sourcerect="640,128,128,128" />
+        <VineSprite type="CrossJunction" sourcerect="512,128,128,128" />
+        <VineSprite type="HorizontalLine" sourcerect="512,0,128,128" />
+        <VineSprite type="VerticalLine" sourcerect="640,0,128,128" />
+        <VineSprite type="TurnTopRight" sourcerect="0,0,128,128" />
+        <VineSprite type="TurnTopLeft" sourcerect="384,0,128,128" />
+        <VineSprite type="TurnBottomLeft" sourcerect="256,0,128,128" />
+        <VineSprite type="TurnBottomRight" sourcerect="128,0,128,128" />
+        <VineSprite type="TSectionTop" sourcerect="128,128,128,128" />
+        <VineSprite type="TSectionLeft" sourcerect="256,128,128,128" />
+        <VineSprite type="TSectionBottom" sourcerect="384,128,128,128" />
+        <VineSprite type="TSectionRight" sourcerect="0,128,128,128" />
+        <VineSprite type="StumpTop" sourcerect="768,0,128,128" />
+        <VineSprite type="StumpLeft" sourcerect="896,0,128,128" />
+        <VineSprite type="StumpBottom" sourcerect="768,128,128,128" />
+        <VineSprite type="StumpRight" sourcerect="896,128,128,128" />
+      </VineSprites>
+      <!-- TODO: remove honk debug -->
+      <StatusEffect target="this" type="always" condition="-1" >
+       <Conditional targetcontainer="true" fertilizer="lte 0" />
+       <!-- <Sound file="Content/Items/Weapons/honk.ogg" loop="true" range="1000" /> -->
+      </StatusEffect>
+      <StatusEffect target="this" type="OnBroken" decayed="true" setvalue="true" >
+        <!-- <Remove /> -->
+      </StatusEffect>
+    </Growable>
+    <Body radius="15" density="10.1" />
+    <Holdable canBeCombined="false" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+  </Item>
+  
+  <Item name="bananacigarseed" identifier="bananacigarseed" category="Misc" Tags="smallitem,seed,plantitem" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="220,200,240,255" isshootable="true" requireaimtouse="true">
+    <sprite texture="%Moddir%/GrowablePlants_crossed1.png" depth="0.2" sourcerect="866,706,28,29" origin="0.5,0.5" />
+    <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.03" />
+    <Price baseprice="30" canbespecial="false" sold="false">
+    </Price>
+    <Deconstruct time="2">
+    </Deconstruct>      
+    <Growable growthspeed="777" pickingtime="3" maxhealth="500" hardiness="10" floodtolerance="0.4" seedrate="0" productrate="100" maximumvines="12" flowerquantity="8" leafprobability="0.50" flowertint="148,85,180,255" leaftint="240,180,180,255" vinetint="65,152,45,255" baseflowerscale="0.40" vinescale="0.25" GrowthWeights="0.2,1,0.1,1" >    
+      <ProducedItem identifier="banana" probability="0.7"/>
+      <ProducedItem identifier="bananacigar" probability="0.3"/>
+      <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,256,256,256" />
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,256,256,256" />
+        <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,768,128,128" />
+        <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="128,768,128,128" />
+        <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,768,128,128" />
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,256,256,256" />
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,256,256,256" />
+        <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="384,896,128,128" />
+        <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="512,896,128,128" />
+        <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="640,896,128,128" />
+        <VineSprite type="Stem" sourcerect="640,896,128,128" />
+        <VineSprite type="CrossJunction" sourcerect="512,896,128,128" />
+        <VineSprite type="HorizontalLine" sourcerect="512,768,128,128" />
+        <VineSprite type="VerticalLine" sourcerect="640,768,128,128" />
+        <VineSprite type="TurnTopRight" sourcerect="0,768,128,128" />
+        <VineSprite type="TurnTopLeft" sourcerect="384,768,128,128" />
+        <VineSprite type="TurnBottomLeft" sourcerect="256,768,128,128" />
+        <VineSprite type="TurnBottomRight" sourcerect="128,768,128,128" />
+        <VineSprite type="TSectionTop" sourcerect="128,896,128,128" />
+        <VineSprite type="TSectionLeft" sourcerect="256,896,128,128" />
+        <VineSprite type="TSectionBottom" sourcerect="384,896,128,128" />
+        <VineSprite type="TSectionRight" sourcerect="0,896,128,128" />
+        <VineSprite type="StumpTop" sourcerect="768,768,128,128" />
+        <VineSprite type="StumpLeft" sourcerect="896,768,128,128" />
+        <VineSprite type="StumpBottom" sourcerect="768,896,128,128" />
+        <VineSprite type="StumpRight" sourcerect="896,896,128,128" />
+      </VineSprites>
+    </Growable>
+    <Body radius="15" density="12" />
+    <Holdable canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="24,18" holdpos="25,-25" holdangle="0" aimangle="25" aimable="false" swingwhenusing="True" swingamount="7,7" swingspeed="0.5" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnUse" target="This" Condition="-100.0" >
+        <ParticleEmitter particle="fruitchunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="100,255,100,255" />
+        <Sound file="Content/Items/Medical/ITEM_eatingBiteQuick.ogg" range="250" loop="false" volume="2" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+  </Item>
+  
+  <Item name="bananagunseed" identifier="bananagunseed" category="Misc" Tags="smallitem,seed,plantitem" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="220,200,100,255" isshootable="true" requireaimtouse="true">
+    <sprite texture="%Moddir%/GrowablePlants_crossed1.png" depth="0.2" sourcerect="866,706,28,29" origin="0.5,0.5" />
+    <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.03" />
+    <Price baseprice="30" sold="false">
+    </Price>
+    <Deconstruct time="2">
+    </Deconstruct>      
+    <Growable growthspeed="777" pickingtime="3" maxhealth="500" hardiness="10" floodtolerance="0.4" seedrate="0" productrate="100" maximumvines="12" flowerquantity="8" leafprobability="0.50" flowertint="170,100,120,255" leaftint="240,180,180,255" vinetint="90,152,50,255" baseflowerscale="0.40" vinescale="0.25" GrowthWeights="0.2,1,0.1,1" >      
+      <ProducedItem identifier="banana" probability="0.7"/>
+      <ProducedItem identifier="bananagun" probability="0.3"/>
+      <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,256,256,256" />
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,256,256,256" />
+        <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,768,128,128" />
+        <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="128,768,128,128" />
+        <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,768,128,128" />
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,256,256,256" />
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,256,256,256" />
+        <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="384,896,128,128" />
+        <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="512,896,128,128" />
+        <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="640,896,128,128" />
+        <VineSprite type="Stem" sourcerect="640,896,128,128" />
+        <VineSprite type="CrossJunction" sourcerect="512,896,128,128" />
+        <VineSprite type="HorizontalLine" sourcerect="512,768,128,128" />
+        <VineSprite type="VerticalLine" sourcerect="640,768,128,128" />
+        <VineSprite type="TurnTopRight" sourcerect="0,768,128,128" />
+        <VineSprite type="TurnTopLeft" sourcerect="384,768,128,128" />
+        <VineSprite type="TurnBottomLeft" sourcerect="256,768,128,128" />
+        <VineSprite type="TurnBottomRight" sourcerect="128,768,128,128" />
+        <VineSprite type="TSectionTop" sourcerect="128,896,128,128" />
+        <VineSprite type="TSectionLeft" sourcerect="256,896,128,128" />
+        <VineSprite type="TSectionBottom" sourcerect="384,896,128,128" />
+        <VineSprite type="TSectionRight" sourcerect="0,896,128,128" />
+        <VineSprite type="StumpTop" sourcerect="768,768,128,128" />
+        <VineSprite type="StumpLeft" sourcerect="896,768,128,128" />
+        <VineSprite type="StumpBottom" sourcerect="768,896,128,128" />
+        <VineSprite type="StumpRight" sourcerect="896,896,128,128" />
+      </VineSprites>
+    </Growable>
+    <Body radius="15" density="12" />
+    <Holdable canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="24,18" holdpos="25,-25" holdangle="0" aimangle="25" aimable="false" swingwhenusing="True" swingamount="7,7" swingspeed="0.5" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnUse" target="This" Condition="-100.0" >
+        <ParticleEmitter particle="fruitchunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="100,255,100,255" />
+        <Sound file="Content/Items/Medical/ITEM_eatingBiteQuick.ogg" range="250" loop="false" volume="2" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+  </Item>
+  
+</Items>
+</Override>
