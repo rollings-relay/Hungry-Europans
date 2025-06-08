@@ -96,7 +96,8 @@
           <SuitableSeed items="seed" />
         </Planter>
       </Item>
-      <Item name="" identifier="fertilizer" tags="fertilizer,smallitem" maxstacksize="32" maxstacksizecharacterinventory="8" category="Equipment,Misc" subcategory="Gardening" scale="0.5" health="800">
+      
+      <Item name="" identifier="fertilizer" tags="fertilizer,fertilizercontainer,smallitem" maxstacksize="32" maxstacksizecharacterinventory="8" category="Equipment,Misc" subcategory="Gardening" scale="0.5" health="800">
         <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="910,128,87,125" depth="0.55" origin="0.5,0.5" />
         <Price baseprice="140" minleveldifficulty="1">
           <Price storeidentifier="merchantoutpost" minavailable="1" />
@@ -112,24 +113,16 @@
           <RequiredSkill identifier="electrical" level="20" />
           <RequiredItem identifier="plastic" />
           <RequiredItem identifier="uranium" />
-          <RequiredItem identifier="carbon" />
-          <RequiredItem identifier="saltvineseed" />
-        </Fabricate>
-        <Fabricate suitablefabricators="fabricator" requiredtime="45" displayname="alternative">
-          <RequiredSkill identifier="electrical" level="20" />
-          <RequiredItem identifier="plastic" />
-          <RequiredItem identifier="uranium" />
-          <RequiredItem identifier="poop" />
+          <RequiredItem tag="fertilizeringredient" amount="2" description="fabricationdescription.fertilizeringredient" />
         </Fabricate>
         <Fabricate suitablefabricators="fabricator" requiredtime="45" displayname="recycle">
           <RequiredSkill identifier="electrical" level="20" />
           <RequiredItem identifier="fertilizer" maxcondition="0.1" />
           <RequiredItem identifier="uranium" />
-          <RequiredItem identifier="poop" />
+          <RequiredItem tag="fertilizeringredient" amount="1" description="fabricationdescription.fertilizeringredient" />
         </Fabricate>
         <Deconstruct time="30">
           <Item identifier="uranium" mincondition="0.9" />
-          <Item identifier="carbon" mincondition="0.9" />
           <Item identifier="plastic" />
         </Deconstruct>
         <Body width="85" height="122" density="25" />
@@ -139,6 +132,7 @@
           </StatusEffect>
         </Holdable>
       </Item>
+      
       <Item name="" identifier="wateringcan" category="Equipment,Misc" subcategory="Gardening" Tags="smallitem,tool" cargocontaineridentifier="metalcrate" description="" Scale="0.5" impactsoundtag="impact_metal_light">
         <InventoryIcon texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="896,0,128,128" origin="0.5,0.5" />
         <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="896,0,128,128" depth="0.55" origin="0.5,0.5" />
