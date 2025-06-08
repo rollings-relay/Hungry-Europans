@@ -1,6 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Override>
   <Items>
+  
+      <!-- TODO: add placement restrictions
+      AttachesToFloor (when enabled, the item can only be attached to a position where it touches the floor)
+      DisallowAttachingOverTags (tags of items the item cannot attach over). -->
+
+
       <Item name="" identifier="smallplanter" category="Misc" Tags="planter,mediumitem,dontsellitems" scale="0.5" isshootable="true">
         <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Planter.png" sourcerect="0,0,128,128" depth="0.75" premultiplyalpha="false" origin="0.5,0.5" />
         <!-- Pomegrenade Sprite -->
