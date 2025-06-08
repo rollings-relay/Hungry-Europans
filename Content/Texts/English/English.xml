@@ -976,10 +976,10 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entityname.saltgrenadeseed>Saltgrenade Seed</entityname.saltgrenadeseed>
 <entitydescription.saltgrenadeseed>A genetically engineered seed of the hybrid plant Saltgrenade.</entitydescription.saltgrenadeseed>
 
-<entityname.raptorberry>Raptorberry</entityname.raptorberry>
-<entitydescription.raptorberry>Has the juiciness of a pomegrenade, but also the toxicity of raptor bane. Seems to attract monsters, despite not being suitable for consumption.</entitydescription.raptorberry>
-<entityname.raptorberryseed>Mudberry Seed</entityname.raptorberryseed>
-<entitydescription.raptorberryseed>A genetically engineered seed of the hybrid plant Mudberry.</entitydescription.raptorberryseed>
+<entityname.raptorpom>Raptor Bait</entityname.raptorpom>
+<entitydescription.raptorpom>Has the juiciness of a pomegrenade, but also the toxicity of raptor bane. Seems to attract monsters, despite not being suitable for consumption.</entitydescription.raptorpom>
+<entityname.raptorpomseed>Mudberry Seed</entityname.raptorpomseed>
+<entitydescription.raptorpomseed>A genetically engineered seed of the hybrid plant Mudberry.</entitydescription.raptorpomseed>
 
 <entityname.raptorbacco>Raptor Nip</entityname.raptorbacco>
 <entitydescription.raptorbacco>Combining the toxic properties of raptor's bane and tobacco, this psychoactive fruit enhances physical performance at the cost of your sanity.</entitydescription.raptorbacco>

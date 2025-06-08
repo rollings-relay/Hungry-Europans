@@ -1156,7 +1156,7 @@
     <Holdable canBeCombined="false" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
   </Item>
   
-  <Item name="raptorberryseed" identifier="raptorberryseed" category="Misc" Tags="smallitem,seed,plantitem" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="240,220,20,255">
+  <Item name="raptorpomseed" identifier="raptorpomseed" category="Misc" Tags="smallitem,seed,plantitem" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="240,220,20,255">
     <sprite texture="%Moddir%/GrowablePlants_crossed1.png" depth="0.2" sourcerect="830,636,31,30" origin="0.5,0.5" />
     <PreferredContainer primary="wreckstoragecab,abandonedstoragecab,piratestoragecab" amount="1" spawnprobability="0.0" />
     <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.0" />
@@ -1165,7 +1165,7 @@
     <Deconstruct time="2" requireddeconstructor="deconstructor"/>
     <!-- TODO: adjust growth and sprites -->
     <Growable growthspeed="777" pickingtime="3" maxhealth="500" hardiness="10" floodtolerance="0.4" seedrate="0" productrate="100" maximumvines="20" flowerquantity="8" leafprobability="0.50" flowertint="255,45,50,255" leaftint="140,146,56,255" vinetint="200,160,100,255" baseflowerscale="0.50" vinescale="0.25" GrowthWeights="0.2,1,0.1,1" >
-      <ProducedItem identifier="raptorberry" probability="0.70" />
+      <ProducedItem identifier="raptorpom" probability="0.70" />
       <ProducedItem identifier="badraptorbane" probability="0.30"></ProducedItem>
       <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
         <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,0,256,256" />
