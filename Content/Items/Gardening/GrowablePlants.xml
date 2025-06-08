@@ -37,6 +37,8 @@
   GrowthWeights="up,left,down,right" 
  -->
 
+  <!-- TODO: REDUCE TESTING GROWTH SPEED; find and replace 777 with 0 -->
+
   <!-- ///// VANILLA ///// -->
   <!-- ///// VANILLA ///// -->
   <!-- ///// VANILLA ///// -->
@@ -373,7 +375,8 @@
       <Holdable canbepicked="true" canBeCombined="false" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
     </Item>
 
-
+  <!-- SEPARATED FROM BANANA 
+  banana used to also be a seed -->
   <Item name="bananaseed" identifier="bananaseed" category="Misc" Tags="smallitem,seed,plantitem" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="240,220,140,255" isshootable="true" requireaimtouse="true">
     <sprite texture="%Moddir%/GrowablePlants_crossed1.png" depth="0.2" sourcerect="866,706,28,29" origin="0.5,0.5" />
     <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.03" />
