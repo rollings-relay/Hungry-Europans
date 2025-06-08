@@ -291,6 +291,7 @@
         <ReduceAffliction type="opiatewithdrawal" amount="0.5" />
         <Affliction identifier="spill" amount="1000" probability="0.0005" />
         <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
+        <ParticleEmitter particle="fruitchunks" particlespersecond="3" scalemin="0.2" scalemax="0.35" distancemin="10" distancemax="15" anglemin="95" anglemax="95" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="150,255,200,255" />
       </StatusEffect>
       <StatusEffect type="OnUse" target="Character" comparison="And">
         <Conditional InWater="false" />
@@ -356,7 +357,7 @@
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
         <Conditional HasStatusTag="neq iseating" />
-        <Explosion showEffects="false" decal="fruitsplatter_purpledesat" decalsize="1.0" />
+        <Explosion showEffects="false" decal="fruitsplatter_crimson" decalsize="1.0" />
         <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" />
         <ParticleEmitter particle="fruitchunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" />
       </StatusEffect>
@@ -750,7 +751,7 @@
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
         <Conditional HasStatusTag="neq iseating" />
-        <Explosion showEffects="false" decal="fruitsplatter_pink" decalsize="1.0" />
+        <Explosion showEffects="false" decal="fruitsplatter_crimson" decalsize="1.0" />
         <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" />
         <ParticleEmitter particle="fruitchunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" />
       </StatusEffect>
@@ -972,7 +973,7 @@
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
         <Conditional HasStatusTag="neq iseating" />
-        <Explosion showEffects="false" decal="fruitsplatter1" decalsize="1.0" />
+        <Explosion showEffects="false" decal="fruitsplatter_crimson" decalsize="1.0" />
         <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" />
         <ParticleEmitter particle="fruitchunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" />
       </StatusEffect>
@@ -1045,7 +1046,7 @@
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This" >
         <Conditional HasStatusTag="neq iseating" />
-        <Explosion showEffects="false" decal="fruitsplatter1" decalsize="1.0" />
+        <Explosion showEffects="false" decal="fruitsplatter_orange" decalsize="1.0" />
         <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" />
         <ParticleEmitter particle="fruitchunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" />
       </StatusEffect>
@@ -1093,7 +1094,7 @@
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
         <Conditional HasStatusTag="neq iseating" />
-        <Explosion showEffects="false" decal="fruitsplatter1" decalsize="1.0" />
+        <Explosion showEffects="false" decal="fruitsplatter_purpledark" decalsize="1.0" />
         <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" />
         <ParticleEmitter particle="fruitchunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" />
       </StatusEffect>
