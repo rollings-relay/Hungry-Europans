@@ -697,19 +697,13 @@
         <Conditional HasStatusTag="onfire" />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
-        <Conditional HasStatusTag="onfire" />
-        <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="fruitsplatter1" decalsize="1.0" />
-        <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" />
-        <ParticleEmitter particle="fruitchunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" />
-        <Remove />
-      </StatusEffect>
-      <StatusEffect type="OnBroken" target="This" Condition="-100.0">
-        <Explosion range="150.0" structuredamage="0" itemdamage="0" force="3.0" severlimbsprobability="0.0" decal="blood" decalSize="3.0">
+        <Explosion showEffects="false" range="150.0" force="3.0" decal="fruitsplatter_purpledark" decalSize="1.0">
           <Affliction identifier="nausea" strength="50" />
         </Explosion>
         <sound file="Content/Sounds/Damage/Limbslash2.ogg" range="1000" />
-        <ParticleEmitter particle="bloodsplash" anglemin="0" anglemax="360" particleamount="20" velocitymin="0" velocitymax="0" scalemin="0.75" scalemax="1.75" />
+        <ParticleEmitter particle="bloodsplash" anglemin="0" anglemax="360" particleamount="15" velocitymin="0" velocitymax="0" scalemin="0.75" scalemax="1.75" />
         <ParticleEmitter particle="fruitchunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" />
+        <ParticleEmitter particle="aliengas" anglemin="80" anglemax="100" particleamount="5" velocitymin="50" velocitymax="100" distancemin="10" distancemax="30" scalemin="1" scalemax="1" />
         <Remove />
       </StatusEffect>
     </Throwable>
@@ -756,7 +750,7 @@
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
         <Conditional HasStatusTag="neq iseating" />
-        <Explosion showEffects="false" decal="fruitsplatter_purpledesat" decalsize="1.0" />
+        <Explosion showEffects="false" decal="fruitsplatter_pink" decalsize="1.0" />
         <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" />
         <ParticleEmitter particle="fruitchunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" />
       </StatusEffect>
