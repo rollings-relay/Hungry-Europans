@@ -55,8 +55,7 @@
         </StatusEffect>
         <StatusEffect type="OnUse" target="This" charge="900" targetitemcomponent="PowerContainer" delay="10" stackable="false" setvalue="true"/>
         <StatusEffect type="OnUse" target="Contained" condition="-1.0" />
-      </ItemComponent>      
-     
+     </ItemComponent> 
      <ItemContainer selectkey="Select" capacity="0" canbeselected="true" hideitems="false" itempos="78,5" ShowContainedStateIndicator="false" slotsperrow="3" keepopenwhenequipped="false" movableframe="true">
         <GuiFrame relativesize="0.15,0.30" anchor="Center" relativeoffset="0,0" style="ItemUI" msg="ItemMsgInteractSelect" />
         <!--Watertank Icon-->
