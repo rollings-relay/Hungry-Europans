@@ -196,7 +196,7 @@
         <output name="condition_out" displayname="connection.conditionout" />
         <output name="charge" displayname="connection.batterychargestatusout" />
       </ConnectionPanel>
-      <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" attachable="true" aimable="true">
+      <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" attachable="true" aimable="true" AttachesToFloor="true" DisallowAttachingOverTags="hydroponicplanter">
         <RequiredItem items="wrench" type="Equipped" />
         <StatusEffect target="This" type="OnContained">
           <Conditional attached="false" targetitemcomponentname="Holdable"/>
@@ -266,7 +266,7 @@
         <input name="power_in" displayname="connection.powerin" />
         <output name="condition_out" displayname="connection.conditionout" />
       </ConnectionPanel>
-      <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" attachable="true" aimable="true">
+      <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" attachable="true" aimable="true" AttachesToFloor="true" DisallowAttachingOverTags="distiller" >
         <RequiredItem items="wrench" type="Equipped" />
         <StatusEffect target="This" type="OnContained">
           <Conditional attached="false" targetitemcomponentname="Holdable"/>
@@ -350,7 +350,7 @@
         <input name="power_in" displayname="connection.powerin" />
         <output name="condition_out" displayname="connection.conditionout" />
       </ConnectionPanel>
-      <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" attachable="true" aimable="true">
+      <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" attachable="true" aimable="true" AttachesToFloor="true" DisallowAttachingOverTags="brewkettle">
         <RequiredItem items="wrench" type="Equipped" />
         <StatusEffect target="This" type="OnContained">
           <Conditional attached="false" targetitemcomponentname="Holdable"/>
@@ -416,7 +416,7 @@
         <Containable items="liquorcrate,jarcrate" />
       </ItemContainer>
       <Body width="212" height="330" density="20"/>
-      <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" attachable="true" aimable="true">
+      <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" attachable="true" aimable="true" AttachesToFloor="true" DisallowAttachingOverTags="bottleprinter">
         <RequiredItem items="wrench" type="Equipped" />
         <StatusEffect target="This" type="OnContained">
           <Conditional attached="false" targetitemcomponentname="Holdable"/>
@@ -448,7 +448,7 @@
     </Item>
     <Item name="Refill Station" identifier="he-refillstation" tags="refillstation,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Brewery" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="Used to refill empty bottles from a keg. Needs power." isshootable="true" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2" canflipx="false">
       <Body width="167" height="236" density="20"/>
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="912,1,167,238" depth="0.797" premultiplyalpha="false" origin="0.5,0.6" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="912,1,167,238" depth="0.797" premultiplyalpha="false" origin="0.5,0.5" />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="912,240,167,238" depth="0.797" premultiplyalpha="false" origin="0.5,0.6" maxcondition="80" fadein="true" />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="912,479,167,238" depth="0.797" premultiplyalpha="false" origin="0.5,0.6" maxcondition="0" fadein="false" />
       <Upgrade gameversion="0.10.4.0">
@@ -492,7 +492,7 @@
         <RequiredItem items="screwdriver" type="Equipped" />
         <output name="condition_out" displayname="connection.conditionout" />
       </ConnectionPanel>
-      <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" attachable="true" aimable="true">
+      <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" attachable="true" aimable="true" AttachesToFloor="true" DisallowAttachingOverTags="refillstation" >
         <RequiredItem items="wrench" type="Equipped" />
         <StatusEffect target="This" type="OnContained">
           <Conditional attached="false" targetitemcomponentname="Holdable"/>
@@ -664,7 +664,7 @@
         <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="3" />
       </Price>
       <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.45" />
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.797" sourcerect="1882,429,165,188" origin="0.45,0.404" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.797" sourcerect="1882,429,165,188" origin="0.5,0.5" />
       <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.796" sourcerect="1882,996,165,188" alpha="1.0" origin="0.45,0.404" >
         <IsActiveConditional Condition="gt 0.0" />
         <Conditional Voltage="gt 0.5" isActive="true" targetcontainer="true" targetitemcomponent="Fabricator" />
@@ -735,7 +735,7 @@
         <output name="condition_out" displayname="connection.conditionout" />
       </ConnectionPanel>
       <Body width="165" height="188" density="30" />
-      <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" msg="[Right mouse] Detach (Wrench)" PickingTime="20.0" aimpos="65,-10" handle1="0,0" attachable="true" aimable="true">
+      <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" msg="[Right mouse] Detach (Wrench)" PickingTime="5.0" aimpos="65,-10" handle1="0,0" attachable="true" aimable="true" AttachesToFloor="true" DisallowAttachingOverTags="oven" >
         <requireditem items="wrench" type="Equipped" />
         <StatusEffect target="This" type="OnContained">
           <Conditional attached="false" targetitemcomponentname="Holdable"/>
