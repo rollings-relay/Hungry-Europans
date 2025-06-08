@@ -10,11 +10,16 @@
     <sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="672,416,192,192" origin="0.5,0.5" />
     <sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="672,160,192,192" origin="0.5,0.5" />
   </fruitsplatter_yellow>
-
-  <fruitsplatter_purple color="90,40,90,200" lifetime="6000" fadeouttime="30">
+  
+  <fruitsplatter_purpledark color="90,60,90,200" lifetime="6000" fadeouttime="30">
     <sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="672,416,192,192" origin="0.5,0.5" />
     <sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="672,160,192,192" origin="0.5,0.5" />
-  </fruitsplatter_purple>
+  </fruitsplatter_purpledark>
+
+  <fruitsplatter_purpledesat color="90,60,90,200" lifetime="6000" fadeouttime="30">
+    <sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="672,416,192,192" origin="0.5,0.5" />
+    <sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="672,160,192,192" origin="0.5,0.5" />
+  </fruitsplatter_purpledesat>
 
   <fruitsplatter_cyan color="50,160,160,200" lifetime="6000" fadeouttime="30">
     <sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="672,416,192,192" origin="0.5,0.5" />
