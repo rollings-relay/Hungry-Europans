@@ -2,6 +2,39 @@
 <Override>
   <Items>
 
+
+<!-- 
+  BIG LIST OF EXPLAINING, OVERRIDES AND TODOs:
+  
+  RULES FOR AQUATIC PLANTS:
+  
+  There are FRUITS and there are SEEDS. Make sure every fruit (product) has a seed (separate banana from seed)
+  There are RAW aquatic plants, and there are aquatic plant FRUITS (product version with less yield)
+  Deconstructing FRUITS (and aquatic plants) gives SEEDS (random% chance?)
+  FRUITS (only natural ones) can be be cross-bred to make SEEDS at the research station
+  
+  TODO: increase produce rate by 3-4x, there are way less planters now
+  TODO: increase grow rate by 2x, you will be planting more
+  TODO: decrease plant health in general, watering is more active
+  TODO: PLANT TEXTURES: recolor leaves, flowers to match new fruits, mix and match for hybrids, make new leaves/flowers.
+
+
+  TODO: add onfire to all fruits?
+  TODO: normalize deconstruct times
+  TODO: adjust sprites rect (currently using 32/64 grids)
+  TODO: adjust body size to match sprite
+  TODO: adjust particle/explosion color for eating to match fruit color
+  TODO: adjust aimpos for eating
+  
+  TODO: adjust items to incorporate fruit variants in recipes (pom hybrids in pom extract)
+  
+  OTHER CHANGES:
+  Small Planter "removed" (not sold, not found, deletes itself) - OVERRIDE
+  ULD is swappable into big planter - OVERRIDE
+  Researchstation capacity increased, can take every item - OVERRIDE
+
+ -->
+
   <!-- ///// VANILLA ///// -->
   <!-- ///// VANILLA ///// -->
   <!-- ///// VANILLA ///// -->
