@@ -551,7 +551,7 @@
     <PreferredContainer primary="plantcontainer"/>
   </Item>
   
-  <Item name="Mutated Tobacco Bud" identifier="badtobaccobud" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,mutatedplant,petfood1,petfood2,petfood3" description="A mutated variant of the tobacco bud. Fragile, but strong in flavour and smell." cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true">
+  <Item name="Mutated Tobacco Bud" identifier="badtobaccobud" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,mutatedplant,petfood1,petfood2,petfood3,tobaccoingredient" description="A mutated variant of the tobacco bud. Fragile, but strong in flavour and smell." cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true">
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.2" sourcerect="0,51,47,56" origin="0.5,0.5" />
     <Body radius="30" density="9"/>
     <Deconstruct time="7">

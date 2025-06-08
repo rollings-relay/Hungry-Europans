@@ -22,14 +22,11 @@
   TODO: increase grow rate by 2x, you will be planting more
   TODO: decrease plant health in general, watering is more active
   
-  TODO: add onfire to all fruits?
-  TODO: normalize deconstruct times
-  TODO: adjust sprites rect (currently using 32/64 grids)
-  TODO: adjust body size to match sprite
+  TODO: adjust sprites rect (currently using 32/64 grids) and adjust body size to match sprite
   TODO: adjust particle/explosion color for eating to match fruit color
   TODO: adjust aimpos for eating
   
-  TODO: adjust items to incorporate fruit variants in recipes (pom hybrids in pom extract)
+  TODO: change Fabricate recipes should use tags (example: pipetobacco should use tobaccoingredient tag instead of just tobaccobud )
   
   TODO: PLANT TEXTURES: recolor leaves, flowers to match new fruits, mix and match for hybrids, make new leaves/flowers.
 
