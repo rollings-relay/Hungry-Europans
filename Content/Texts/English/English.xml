@@ -944,10 +944,73 @@ SEARCH FOR THE FOLLOWING:                                                       
 <roomname.brewery>Brewery</roomname.brewery><!--Patch 10-->
 <roomname.restroom>Restroom</roomname.restroom><!--Patch 13-->
 
+
+
+<!-- HUBERT ADDITIONS UNDER THIS -->
+<!-- HUBERT ADDITIONS UNDER THIS -->
+<!-- HUBERT ADDITIONS UNDER THIS
+ TODO: sorting them -->
+
 <itemmsgnomeatleft>No meat left on this corpse...</itemmsgnomeatleft> <!-- TODO: what patch is this? should this be here? -->
 
 <entityname.he-milkingtool>Moloch Lactic Harvester</entityname.he-milkingtool>
 <entitydescription.he-milkingtool>A tool with a pacifying effect used by divers to extract lactic secretions from live Molochs. Infamous among lone beacon keepers...</entitydescription.he-milkingtool>
+
+
+
+<!-- RESEARCH STATION -->
+<researchstation.crossbreed>Cross-breed</researchstation.crossbreed>
+<researchstation.crossbreed.infotext>Possible cross-breeding detected.</researchstation.crossbreed.infotext>
+<researchstation.crossbreed.missingitem>Invalid combination. Try another plant.</researchstation.crossbreed.missingitem>
+
+<entityname.bananaseed>Banana Slice</entityname.bananaseed>
+<entitydescription.bananaseed>A slice of a regular, plain europan banana. Can be planted.</entitydescription.bananaseed>
+
+<entityname.pomacco>Pomacco</entityname.pomacco>
+<entitydescription.pomacco>A somewhat disgusting but addictive cross between a pomegrenade and tobacco. Soothes the nerves and the stomach.</entitydescription.pomacco>
+<entityname.pomaccoseed>Pomacco Seed</entityname.pomaccoseed>
+<entitydescription.pomaccoseed>A genetically engineered seed of the hybrid plant Pomacco.</entitydescription.pomaccoseed>
+ 
+<entityname.saltgrenade>Saltgrenade</entityname.saltgrenade>
+<entitydescription.saltgrenade>Salty and juicy, this pomegrenade and salt bulb hybrid helps dealing with blood loss when consumed. Keep away from water.</entitydescription.saltgrenade>
+<entityname.saltgrenadeseed>Saltgrenade Seed</entityname.saltgrenadeseed>
+<entitydescription.saltgrenadeseed>A genetically engineered seed of the hybrid plant Saltgrenade.</entitydescription.saltgrenadeseed>
+
+<entityname.raptorberry>Raptorberry</entityname.raptorberry>
+<entitydescription.raptorberry>Has the juiciness of a pomegrenade, but also the toxicity of raptor bane. Seems to attract monsters, despite not being suitable for consumption.</entitydescription.raptorberry>
+<entityname.raptorberryseed>Mudberry Seed</entityname.raptorberryseed>
+<entitydescription.raptorberryseed>A genetically engineered seed of the hybrid plant Mudberry.</entitydescription.raptorberryseed>
+
+<entityname.raptorbacco>Raptor Nip</entityname.raptorbacco>
+<entitydescription.raptorbacco>Combining the toxic properties of raptor's bane and tobacco, this psychoactive fruit enhances physical performance at the cost of your sanity.</entitydescription.raptorbacco>
+<entityname.raptorbaccoseed>Raptor Nip Seed</entityname.raptorbaccoseed>
+<entitydescription.raptorbaccoseed>A genetically engineered seed of the hybrid plant Raptor Nip.</entitydescription.raptorbaccoseed>
+
+<entityname.bananacigar>Banana Cigar</entityname.bananacigar>
+<entitydescription.bananacigar>A hollow banana sprouting dry tobacco leaves which can be smoked directly. Ridiculous.</entitydescription.bananacigar>
+<entityname.bananacigarseed>Bananacco Seed</entityname.bananacigarseed>
+<entitydescription.bananacigarseed>A genetically engineered seed of the hybrid plant Bananacco.</entitydescription.bananacigarseed>  
+
+<entityname.bananagun>Bananabulb</entityname.bananagun>
+<entitydescription.bananagun>Packed with potent sodium, this banana can be squeezed to let out a volley of fruity shrapnel.</entitydescription.bananagun>
+<entityname.bananagunseed>Bananabulb Seed</entityname.bananagunseed>
+<entitydescription.bananagunseed>A genetically engineered seed of the hybrid plant Bananabulb.</entitydescription.bananagunseed>  
+
+<entityname.bananafuelrod>Radioactive Banana</entityname.bananafuelrod>
+<entitydescription.bananafuelrod>This inexplicably irradiated banana is warm to the touch, and hard to the tooth. Clowns are known to use these as emergency reactor fuel...</entitydescription.bananafuelrod>
+
+
+<afflictionname.he-tobaccoaddiction>Tobacco addiction</afflictionname.he-tobaccoaddiction>
+<afflictiondescription.he-tobaccoaddiction>It's bad for your lungs. You feel short of breath.</afflictiondescription.he-tobaccoaddiction>
+
+<forcesay.eatingsound>*Om nom nom...*</forcesay.eatingsound>
+<forcesay.eatingsound>*Gulp...*</forcesay.eatingsound>
+<forcesay.eatingsound>*Hmmmf...*</forcesay.eatingsound>
+
+ 
+<!-- HUBERT ADDITIONS ABOVE THIS --> 
+<!-- HUBERT ADDITIONS ABOVE THIS --> 
+<!-- HUBERT ADDITIONS ABOVE THIS --> 
 
 
 </infotexts>
