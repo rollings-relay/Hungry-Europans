@@ -135,7 +135,7 @@
     <Deconstruct time="5" chooserandom="true" amount="1" requireddeconstructor="geneticresearchstation">
       <!-- Cross-breeding -->
       <Item identifier="saltgrenadeseed" commonness="3" requiredotheritem="creepingorange" outconditionmin="1" outconditionmax="1" activatebuttontext="researchstation.crossbreed" infotext="researchstation.crossbreed.infotext" infotextonotheritemmissing="researchstation.crossbreed.missingitem" />
-      <Item identifier="bananagunseed" commonness="3" requiredotheritem="saltbulb" outconditionmin="1" outconditionmax="1" activatebuttontext="researchstation.crossbreed" infotext="researchstation.crossbreed.infotext" infotextonotheritemmissing="researchstation.crossbreed.missingitem" />
+      <Item identifier="bananagunseed" commonness="3" requiredotheritem="banana" outconditionmin="1" outconditionmax="1" activatebuttontext="researchstation.crossbreed" infotext="researchstation.crossbreed.infotext" infotextonotheritemmissing="researchstation.crossbreed.missingitem" />
     </Deconstruct>
     <Throwable characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="3.5" aimpos="35,-10" msg="ItemMsgPickUpSelect">
       <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true"/>
@@ -162,7 +162,7 @@
         <Conditional HasStatusTag="neq iseating" />
         <Explosion showEffects="false" decal="fruitsplatter_yellow" decalsize="1.0" />
         <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" />
-        <ParticleEmitter particle="fruitchunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" />
+        <ParticleEmitter particle="fruitchunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" colormultiplier="200,255,100,255"/>
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
         <Remove />
@@ -825,7 +825,7 @@
       <StatusEffect type="OnUse" target="Character">
         <Affliction identifier="he-stuffed" amount="0.1" />
         <ReduceAffliction type="damage" amount="0.1" />
-        <ParticleEmitter particle="fruitchunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="230,255,255,255" />
+        <ParticleEmitter particle="fruitchunks" particlespersecond="2" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="230,180,180,255" />
         <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingCrunchy.ogg" loop="True" range="300" volume="5.0" frequencymultiplier="1.5" />
       </StatusEffect>
       <StatusEffect type="OnUse" target="Character">
