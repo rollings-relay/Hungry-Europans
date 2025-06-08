@@ -210,7 +210,7 @@
   <!-- SEPARATED BANANA AND SEED INTO TWO ITEMS
   bananas used to be both a fruit AND a seed
   Added "bananaseed" as a seed, needed for crossbreeding -->
-  <Item name="Banana" identifier="banana" category="Misc" subcategory="Food" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,seed,plantitem,bananaseed,fooditem,ingredient,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True">
+  <Item name="Banana" identifier="banana" category="Misc" subcategory="Food" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,seed,plantitem,bananaseed,fooditem,sugary,ingredient,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True">
     <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.04" />
     <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.04" />
     <PreferredContainer primary="seedbag" amount="1" spawnposition="0.03" />
@@ -926,7 +926,7 @@
 
   <!-- POMACCO (pom x tobacco)
   heals a little, but gives you tobacco addicition -->
-  <Item name="pomacco" identifier="pomacco" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,petfood1,petfood2,petfood3,distillable" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" allowasextracargo="true" isshootable="True" >
+  <Item name="pomacco" identifier="pomacco" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,petfood1,petfood2,petfood3,distillable,tobaccoingredient" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" allowasextracargo="true" isshootable="True" >
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.2" sourcerect="960,576,64,64" origin="0.5,0.5" />
     <Body radius="28" density="9" />
     <PreferredContainer primary="plantcontainer"/>
@@ -959,7 +959,7 @@
   
   <!-- SALTGRENADE (saltvine x pom)
   cures small amounts of bloodloss and organ damage, but hates water -->
-  <Item name="saltgrenade" identifier="saltgrenade" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,petfood1,petfood2,petfood3,distillable" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" allowasextracargo="true" isshootable="True" >
+  <Item name="saltgrenade" identifier="saltgrenade" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,fooditem,petfood1,petfood2,petfood3,distillable" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" allowasextracargo="true" isshootable="True" >
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.2" sourcerect="896,576,64,64" origin="0.5,0.5" />
     <Body radius="28" density="9" />
     <PreferredContainer primary="plantcontainer"/>
@@ -1119,7 +1119,6 @@
     </Holdable>
   </Item>
   
-
   <!--BANANAGUN (banana x saltvine)
   it's a banana, it's a gun, it's a bananagun-->
   <Item name="bananagun" identifier="bananagun" Category="Misc" Tags="smallitem,plant,plantitem,weapon,gun,pistolitem,provocativetohumanai,mountableweapon" health="35" maxstacksize="1" cargocontaineridentifier="metalcrate" scale="0.5" impacttolerance="8"  spritecolor="255,255,255,255" isshootable="true" requireaimtouse="true">

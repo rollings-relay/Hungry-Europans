@@ -988,13 +988,13 @@ SEARCH FOR THE FOLLOWING:                                                       
 
 <entityname.bananacigar>Banana Cigar</entityname.bananacigar>
 <entitydescription.bananacigar>A hollow banana sprouting dry tobacco leaves which can be smoked directly. Makes you look cool among clowns, and like a clown among others...</entitydescription.bananacigar>
-<entityname.bananacigarseed>Bananacco Seed</entityname.bananacigarseed>
-<entitydescription.bananacigarseed>A genetically engineered seed of the hybrid plant Bananacco.</entitydescription.bananacigarseed>  
+<entityname.bananacigarseed>Bananacco Slice</entityname.bananacigarseed>
+<entitydescription.bananacigarseed>A genetically engineered slice of the hybrid plant Bananacco. Can be planted.</entitydescription.bananacigarseed>  
 
 <entityname.bananagun>Bananabulb</entityname.bananagun>
 <entitydescription.bananagun>Packed with potent sodium, this banana can be squeezed to let out a volley of fruity shrapnel.</entitydescription.bananagun>
-<entityname.bananagunseed>Bananabulb Seed</entityname.bananagunseed>
-<entitydescription.bananagunseed>A genetically engineered seed of the hybrid plant Bananabulb.</entitydescription.bananagunseed>  
+<entityname.bananagunseed>Bananabulb Slice</entityname.bananagunseed>
+<entitydescription.bananagunseed>A genetically engineered slice of the hybrid plant Bananabulb. Can be planted.</entitydescription.bananagunseed>  
 
 <entityname.bananafuelrod>Radioactive Banana</entityname.bananafuelrod>
 <entitydescription.bananafuelrod>This inexplicably irradiated banana is warm to the touch, and hard to the tooth. Clowns are known to use these as emergency reactor fuel...</entitydescription.bananafuelrod>
