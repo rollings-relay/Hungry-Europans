@@ -1,7 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Override>
 <Items>
-  <!-- REGULAR VARIANTS -->
+  <!-- VANILLA PLANTS -->
+  <!-- VANILLA PLANTS -->
+  <!-- VANILLA PLANTS -->
+  <!-- VANILLA PLANTS -->
+  <!-- VANILLA PLANTS -->
   <Item name="Pomegrenade" identifier="creepingorange" category="Material" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,fooditem,sugary,petfood1,petfood2,petfood3,distillable" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="True">
     <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="971,649,43,55" origin="0.5,0.5" />
     <Body radius="30" density="5" />
@@ -177,6 +181,12 @@
     <AiTarget sightrange="1000" static="true" />
     <PreferredContainer primary="plantcontainer"/>
   </Item>
+
+
+  <!-- NEW PLANTS -->
+  <!-- NEW PLANTS -->
+  <!-- NEW PLANTS -->
+  <!-- NEW PLANTS -->
   <!-- NEW PLANTS -->
   <Item name="Bubbleberries" identifier="bubbleberries" category="Material" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,fooditem,sugary,petfood1,petfood2,petfood3" description="Very tasty and juicy." cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="True">
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.2" sourcerect="183,0,54,48" origin="0.5,0.5" />
@@ -334,6 +344,12 @@
     </ItemContainer>
     <PreferredContainer primary="plantcontainer"/>
   </Item>
+
+
+  <!-- MUTATED VARIANTS -->
+  <!-- MUTATED VARIANTS -->
+  <!-- MUTATED VARIANTS -->
+  <!-- MUTATED VARIANTS -->
   <!-- MUTATED VARIANTS -->
   <Item name="Mutated Pomegrenade" identifier="badcreepingorange" descriptionidentifier="creepingorange" category="Material" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,mutatedplant,sugary,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true">
     <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="971,835,43,55" origin="0.5,0.5" />
@@ -731,7 +747,14 @@
     <AiTarget sightrange="1000" static="true" />
     <PreferredContainer primary="plantcontainer"/>
   </Item>
-  <!--LEAVES-->
+ 
+
+
+ <!--LEAVES-->
+ <!--LEAVES-->
+ <!--LEAVES-->
+ <!--LEAVES-->
+ <!--LEAVES-->
   <Item name="Bubbleberry Leaf" identifier="bubbleberryleaf" category="Material" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" damagedbyexplosions="false" allowasextracargo="True">
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.2" sourcerect="389,0,61,52" origin="0.5,0.5" />
     <Body radius="30" density="5" />
@@ -780,7 +803,13 @@
     </Holdable>
     <PreferredContainer primary="plantcontainer"/>
   </Item>
-  <!-- Hydroponics Only -->
+
+
+
+  <!-- HYDROPONICS -->
+  <!-- HYDROPONICS -->
+  <!-- HYDROPONICS -->
+  <!-- HYDROPONICS -->
   <Item name="Sea Weed" identifier="he-seaweed" category="Material" Tags="smallitem,plant" maxstacksize="32" maxstacksizecharacterinventory="8" canbepicked="true" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" damagedbyexplosions="false">
     <PreferredContainer primary="kitchen" secondary="storagecab" />
     <PreferredContainer secondary="wreckstoragecab" minamount="1" maxamount="2" spawnprobability="0.05" />
