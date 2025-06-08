@@ -1007,6 +1007,8 @@ SEARCH FOR THE FOLLOWING:                                                       
 <forcesay.eatingsound>*Gulp...*</forcesay.eatingsound>
 <forcesay.eatingsound>*Hmmmf...*</forcesay.eatingsound>
 
+<fabricationheader.fertilizeringredient>Fertilizer ingredient</fabricationheader.fertilizeringredient>
+<fabricationdescription.fertilizeringredient>Organic waste that can be recycled as fertilizer ingredients.</fabricationdescription.fertilizeringredient>
  
 <!-- HUBERT ADDITIONS ABOVE THIS --> 
 <!-- HUBERT ADDITIONS ABOVE THIS --> 
