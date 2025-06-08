@@ -21,6 +21,12 @@
       <Item identifier="carbon" mincondition="0.5" />
       <Item identifier="creepingorangevineseed" />
     </Deconstruct>
+    <Deconstruct time="5" chooserandom="true" amount="1" requireddeconstructor="geneticresearchstation">
+      <!-- Cross-breeding -->
+      <Item identifier="pomaccoseed" commonness="3" requiredotheritem="tobaccobud" outconditionmin="1" outconditionmax="1" activatebuttontext="researchstation.crossbreed" infotext="researchstation.crossbreed.infotext" infotextonotheritemmissing="researchstation.crossbreed.missingitem" />
+      <Item identifier="saltgrenadeseed" commonness="3" requiredotheritem="saltbulb" outconditionmin="1" outconditionmax="1" activatebuttontext="researchstation.crossbreed" infotext="researchstation.crossbreed.infotext" infotextonotheritemmissing="researchstation.crossbreed.missingitem" />
+      <Item identifier="raptorberryseed" commonness="3" requiredotheritem="raptorbane" outconditionmin="1" outconditionmax="1" activatebuttontext="researchstation.crossbreed" infotext="researchstation.crossbreed.infotext" infotextonotheritemmissing="researchstation.crossbreed.missingitem" />
+    </Deconstruct>
     <Throwable characterusable="True" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="20,-20" holdangle="0" holdpos="20,-30" aimangle="0" aimable="false" msg="ItemMsgPickUpSelect">
       <StatusEffect type="OnUse" target="This" Condition="-8.0"/>
       <StatusEffect type="OnUse" target="Character">
@@ -63,6 +69,7 @@
     <AiTarget sightrange="1000" static="True" />
     <PreferredContainer primary="plantcontainer"/>
   </Item>
+  
   <Item name="Tobacco Bud" identifier="tobaccobud" category="Material" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true">
     <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="904,646,56,61" origin="0.5,0.5" />
     <Body radius="30" density="9" waterdragcoefficient="20"/>
@@ -76,6 +83,12 @@
     <Deconstruct time="5">
       <Item identifier="carbon" mincondition="0.5" />
       <Item identifier="tobaccovineseed" />
+    </Deconstruct>
+    <Deconstruct time="5" chooserandom="true" amount="1" requireddeconstructor="geneticresearchstation">
+      <!-- Cross-breeding -->
+      <Item identifier="pomaccoseed" commonness="3" requiredotheritem="creepingorange" outconditionmin="1" outconditionmax="1" activatebuttontext="researchstation.crossbreed" infotext="researchstation.crossbreed.infotext" infotextonotheritemmissing="researchstation.crossbreed.missingitem" />
+      <Item identifier="raptorbaccoseed" commonness="3" requiredotheritem="raptorbane" outconditionmin="1" outconditionmax="1" activatebuttontext="researchstation.crossbreed" infotext="researchstation.crossbreed.infotext" infotextonotheritemmissing="researchstation.crossbreed.missingitem" />
+      <Item identifier="bananacigarseed" commonness="3" requiredotheritem="banana" outconditionmin="1" outconditionmax="1" activatebuttontext="researchstation.crossbreed" infotext="researchstation.crossbreed.infotext" infotextonotheritemmissing="researchstation.crossbreed.missingitem" />
     </Deconstruct>
     <Throwable characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="3.5" aimpos="35,-10" msg="ItemMsgPickUpSelect">
       <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true">
@@ -99,6 +112,7 @@
     </Throwable>
     <PreferredContainer primary="plantcontainer"/>
   </Item>
+  
   <Item name="Salt Bulb" identifier="saltbulb" category="Material" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,explodesinwater" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true">
     <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="968,712,49,55" origin="0.5,0.5" />
     <Body radius="30" density="9" />
@@ -112,6 +126,11 @@
     <Deconstruct time="5">
       <Item identifier="sodium" />
       <Item identifier="saltvineseed" />
+    </Deconstruct>
+    <Deconstruct time="5" chooserandom="true" amount="1" requireddeconstructor="geneticresearchstation">
+      <!-- Cross-breeding -->
+      <Item identifier="saltgrenadeseed" commonness="3" requiredotheritem="creepingorange" outconditionmin="1" outconditionmax="1" activatebuttontext="researchstation.crossbreed" infotext="researchstation.crossbreed.infotext" infotextonotheritemmissing="researchstation.crossbreed.missingitem" />
+      <Item identifier="bananagunseed" commonness="3" requiredotheritem="saltbulb" outconditionmin="1" outconditionmax="1" activatebuttontext="researchstation.crossbreed" infotext="researchstation.crossbreed.infotext" infotextonotheritemmissing="researchstation.crossbreed.missingitem" />
     </Deconstruct>
     <Throwable characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="3.5" aimpos="35,-10" msg="ItemMsgPickUpSelect">
       <StatusEffect type="InWater" target="This" Condition="0.0" setvalue="true">
@@ -144,6 +163,7 @@
     </Throwable>
     <PreferredContainer primary="plantcontainer"/>
   </Item>
+  
   <Item name="Raptor Bane" identifier="raptorbane" category="Material" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,petfood1,petfood2,petfood3,distillable" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true">
     <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="971,777,44,50" origin="0.5,0.5" />
     <Body radius="30" density="9" waterdragcoefficient="10"/>
@@ -157,6 +177,11 @@
     <Deconstruct time="5">
       <Item identifier="carbon" mincondition="0.5" />
       <Item identifier="raptorbaneseed" />
+    </Deconstruct>
+    <Deconstruct time="5" chooserandom="true" amount="1" requireddeconstructor="geneticresearchstation">
+      <!-- Cross-breeding -->
+      <Item identifier="raptorberryseed" commonness="3" requiredotheritem="creepingorange" outconditionmin="1" outconditionmax="1" activatebuttontext="researchstation.crossbreed" infotext="researchstation.crossbreed.infotext" infotextonotheritemmissing="researchstation.crossbreed.missingitem" />
+      <Item identifier="raptorbaccoseed" commonness="3" requiredotheritem="tobaccobud" outconditionmin="1" outconditionmax="1" activatebuttontext="researchstation.crossbreed" infotext="researchstation.crossbreed.infotext" infotextonotheritemmissing="researchstation.crossbreed.missingitem" />
     </Deconstruct>
     <Throwable characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="3.5" aimpos="35,-10" msg="ItemMsgPickUpSelect">
       <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true">
