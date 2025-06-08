@@ -59,6 +59,7 @@
   <NPCSets file="%ModDir%/Content/NPCPrefabs/OutpostNpcs.xml" />
   <NPCSets file="%ModDir%/Content/NPCPrefabs/SpecialNpcs.xml" />
   <Particles file="%ModDir%/Content/Particles/ParticlePrefabs.xml" />
+  <Decals file="%ModDir%/Content/Particles/DecalPrefabs.xml" />
   <RandomEvents file="%ModDir%/Content/Events/OutpostEvents.xml" />
   <RandomEvents file="%ModDir%/Content/Events/ItemEvents.xml" />
   <Sounds file="%ModDir%/Content/Sounds/sounds.xml" />
