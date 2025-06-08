@@ -374,6 +374,60 @@
     </Item>
 
 
+  <Item name="bananaseed" identifier="bananaseed" category="Misc" Tags="smallitem,seed,plantitem" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="240,220,140,255" isshootable="true" requireaimtouse="true">
+    <sprite texture="%Moddir%/GrowablePlants_crossed1.png" depth="0.2" sourcerect="866,706,28,29" origin="0.5,0.5" />
+    <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.03" />
+    <Price baseprice="30" canbespecial="false">
+      <Price storeidentifier="merchantoutpost" sold="false" />
+      <Price storeidentifier="merchantcity" sold="false"/>
+      <Price storeidentifier="merchantresearch" sold="false" />
+      <Price storeidentifier="merchantmilitary" sold="false" />
+      <Price storeidentifier="merchantmine" sold="false" />
+      <Price storeidentifier="merchantclown" minavailable="1" maxavailable="2" sold="true">
+        <Reputation faction="clowns" min="50"/>
+      </Price>
+    </Price>
+    <Deconstruct time="2">
+    </Deconstruct>
+    <Growable growthspeed="777.076" pickingtime="3" maximumvines="12" maxhealth="375" hardiness="0.15" floodtolerance="0.2" seedrate="0" productrate="0.0056" flowerquantity="4" baseflowerscale="0.60" vinescale="0.25" vinetint="55,152,27,255" flowertint="139,56,87,255">
+      <ProducedItem identifier="banana" probability="0.9"/>
+      <ProducedItem identifier="bananafuelrod" probability="0.1"/>
+      <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,256,256,256" />
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,256,256,256" />
+        <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,768,128,128" />
+        <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="128,768,128,128" />
+        <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,768,128,128" />
+        <VineSprite type="Stem" sourcerect="640,896,128,128" />
+        <VineSprite type="CrossJunction" sourcerect="512,896,128,128" />
+        <VineSprite type="HorizontalLine" sourcerect="512,768,128,128" />
+        <VineSprite type="VerticalLine" sourcerect="640,768,128,128" />
+        <VineSprite type="TurnTopRight" sourcerect="0,768,128,128" />
+        <VineSprite type="TurnTopLeft" sourcerect="384,768,128,128" />
+        <VineSprite type="TurnBottomLeft" sourcerect="256,768,128,128" />
+        <VineSprite type="TurnBottomRight" sourcerect="128,768,128,128" />
+        <VineSprite type="TSectionTop" sourcerect="128,896,128,128" />
+        <VineSprite type="TSectionLeft" sourcerect="256,896,128,128" />
+        <VineSprite type="TSectionBottom" sourcerect="384,896,128,128" />
+        <VineSprite type="TSectionRight" sourcerect="0,896,128,128" />
+        <VineSprite type="StumpTop" sourcerect="768,768,128,128" />
+        <VineSprite type="StumpLeft" sourcerect="896,768,128,128" />
+        <VineSprite type="StumpBottom" sourcerect="768,896,128,128" />
+        <VineSprite type="StumpRight" sourcerect="896,896,128,128" />
+      </VineSprites>
+    </Growable>
+    <Body radius="15" density="12" />
+    <Holdable canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="24,18" holdpos="25,-25" holdangle="0" aimangle="25" aimable="false" swingwhenusing="True" swingamount="7,7" swingspeed="0.5" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnUse" target="This" Condition="-100.0" >
+        <ParticleEmitter particle="fruitchunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="100,255,100,255" />
+        <Sound file="Content/Items/Medical/ITEM_eatingBiteQuick.ogg" range="250" loop="false" volume="2" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+  </Item>
+
 
   <!-- ///// CROSSBREEDS ///// -->
   <!-- ///// CROSSBREEDS ///// -->
