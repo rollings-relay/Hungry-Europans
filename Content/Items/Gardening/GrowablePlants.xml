@@ -57,7 +57,6 @@
         <Price storeidentifier="merchantmine" sold="false" multiplier="0.75" />
       </Price>
       <Deconstruct time="5">
-        <Item identifier="carbon" mincondition="0.5" />
       </Deconstruct>
       <Fabricate suitablefabricators="cuttingboard" requiredtime="5" requiresrecipe="false" amount="3">
         <RequiredSkill identifier="cooking" level="10" />
@@ -113,7 +112,6 @@
         <Price storeidentifier="merchantmine" sold="false" multiplier="0.75" />
       </Price>
       <Deconstruct time="5">
-        <Item identifier="carbon" mincondition="0.5" />
       </Deconstruct>
       <Fabricate suitablefabricators="cuttingboard" requiredtime="5" requiresrecipe="false" amount="3">
         <RequiredSkill identifier="cooking" level="10" />
@@ -169,7 +167,6 @@
         <Price storeidentifier="merchantmine" sold="false" multiplier="0.75" />
       </Price>
       <Deconstruct time="5">
-        <Item identifier="carbon" mincondition="0.5" />
       </Deconstruct>
       <Fabricate suitablefabricators="cuttingboard" requiredtime="5" requiresrecipe="false" amount="3">
         <RequiredSkill identifier="cooking" level="10" />
@@ -225,7 +222,6 @@
         <Price storeidentifier="merchantmine" sold="false" multiplier="0.75" />
       </Price>
       <Deconstruct time="5">
-        <Item identifier="carbon" mincondition="0.5" />
       </Deconstruct>
       <Fabricate suitablefabricators="cuttingboard" requiredtime="5" requiresrecipe="false" amount="3">
         <RequiredSkill identifier="cooking" level="10" />
@@ -281,7 +277,6 @@
         <Price storeidentifier="merchantmine" sold="false" multiplier="0.75" />
       </Price>
       <Deconstruct time="5">
-        <Item identifier="carbon" mincondition="0.5" />
       </Deconstruct>
       <Fabricate suitablefabricators="cuttingboard" requiredtime="5" requiresrecipe="false" amount="3">
         <RequiredSkill identifier="cooking" level="10" />
@@ -335,7 +330,6 @@
         <Price storeidentifier="merchantmine" sold="false" multiplier="0.75" />
       </Price>
       <Deconstruct time="5">
-        <Item identifier="carbon" mincondition="0.5" />
       </Deconstruct>
       <Fabricate suitablefabricators="cuttingboard" requiredtime="5" requiresrecipe="false" amount="3">
         <RequiredSkill identifier="cooking" level="10" />
