@@ -396,11 +396,7 @@
       </Deconstruct>
       <Fabricate suitablefabricators="cuttingboard" requiredtime="5" requiresrecipe="false" amount="3">
         <RequiredSkill identifier="cooking" level="10" />
-        <RequiredItem identifier="popnut" Amount="1"/>
-      </Fabricate>
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="5" requiresrecipe="false" amount="5">
-        <RequiredSkill identifier="cooking" level="15" />
-        <RequiredItem identifier="badpopnut" Amount="1"/>
+        <RequiredItem identifier="banana" Amount="1"/>
       </Fabricate>
       <Growable growthspeed="777.076" pickingtime="3" maximumvines="12" maxhealth="375" hardiness="0.15" floodtolerance="0.2" seedrate="0" productrate="0.0056" flowerquantity="4" baseflowerscale="0.60" vinescale="0.25" vinetint="55,152,27,255" flowertint="139,56,87,255">
         <ProducedItem identifier="banana" probability="0.9"/>
@@ -430,10 +426,17 @@
         </VineSprites>
       </Growable>
       <Body radius="15" density="12" />
-      <Holdable canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="24,18" holdpos="25,-25" holdangle="0" aimangle="25" aimable="false" swingwhenusing="True" swingamount="7,7" swingspeed="0.5" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnUse" target="This" Condition="-100.0" >
+      <Holdable canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="24,18" holdpos="25,-25" holdangle="0" aimangle="25" aimable="false" swingwhenusing="True" swingamount="7,7" swingspeed="0.5" msg="ItemMsgPickUpSelect">      
+        <!-- Regular eating -->
+        <StatusEffect type="OnUse" target="This" Condition="-100.0">
+          <Conditional InWater="false" />
           <ParticleEmitter particle="fruitchunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="100,255,100,255" />
           <Sound file="Content/Items/Medical/ITEM_eatingBiteQuick.ogg" range="250" loop="false" volume="2" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional hunger="gt 1.4" />
+          <ReduceAffliction type="hunger" amount="1.4" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
