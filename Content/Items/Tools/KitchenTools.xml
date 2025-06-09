@@ -782,9 +782,9 @@
           <Affliction identifier="milkextraction" strength="15" />
           <AITrigger state="Freeze" duration="2" probability="1" mindamage="0" allowtobeoverridden="false" allowtooverride="true" />
           <ParticleEmitter particle="whitegoosplash" particlespersecond="6" copyentityangle="true" anglemin="170" anglemax="190" distancemin="-30" distancemax="-40" velocitymin="120" velocitymax="200" scalemin="0.5" scalemax="1" drawontop="true" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/squeeze1.ogg" type="OnUse" range="500" volume="3" selectionmode="Random" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/squeeze5.ogg" type="OnUse" range="500" volume="3" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/squeeze6.ogg" type="OnUse" range="500" volume="3" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/squeeze1.ogg" type="OnUse" range="500" volume="2" dontmuffle="true" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/squeeze5.ogg" type="OnUse" range="500" volume="2" dontmuffle="true" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/squeeze6.ogg" type="OnUse" range="500" volume="2" dontmuffle="true" selectionmode="Random" />
         </StatusEffect> 
         <!-- bugged, the SE wont remove the contained item, seems like it will only trigger its effect on the target that validates conditional;
              meaning even if I have an empty bottle in the invetory and the effect triggers properly, it will not target the bottle, only the moloch
