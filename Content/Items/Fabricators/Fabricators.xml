@@ -157,8 +157,13 @@
       <Fabricator selectkey="Select" canbeselected="true" powerconsumption="250.0" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
         <poweronsound file="Content/Items/PowerOnLight1.ogg" range="600" loop="false" />
-        <StatusEffect type="OnActive" targettype="This">
-          <sound file="%ModDir:2954998725%/Content/Sounds/Items/Fabricators/Brewkettle.ogg" type="OnActive" range="600.0" loop="true" volume="1.5" />
+        <StatusEffect type="OnActive" targettype="This" offset="-70,20">
+          <sound file="%ModDir:2954998725%/Content/Sounds/Items/Fabricators/Brewkettle.ogg" type="OnActive" range="400.0" loop="true" volume="0.7" />
+          <ParticleEmitter particle="waterdrop" particlespersecond="15" distancemin="0" distancemax="5" anglemin="0" anglemax="360" scalemin="1" scalemax="2" colormultiplier="255,255,255,255" lifetimemultiplier="1" />
+        </StatusEffect>
+        <StatusEffect type="OnActive" targettype="This" interval="45" offset="25,20">
+          <sound file="Content/Items/Reactor/ReactorTemperatureBoostDown.ogg" range="300.0" frequencymultiplier="0.7"/>
+          <ParticleEmitter particle="steamspray" particleamount="5" velocitymin="20" velocitymax="50" distancemin="0" distancemax="10" anglemin="40" anglemax="130" scalemin="0.75" scalemax="1.25" colormultiplier="255,255,255,255" lifetimemultiplier="1" />
         </StatusEffect>
         <StatusEffect type="InWater" target="This" condition="-0.5" />
         <StatusEffect type="OnContaining" targettype="Contained" targets="canspoil" condition="0.05" />
