@@ -720,8 +720,8 @@
       limbspecific="false"
       maxstrength="100"
       indicatorlimb="Head"
-      showiconthreshold="0"
-      showinhealthscannerthreshold="50"
+      showiconthreshold="20"
+      showinhealthscannerthreshold="20"
       iconcolors="100,120,100,255;90,130,90,255;80,140,80,255">
       <Effect minstrength="0" maxstrength="20"
         strengthchange="-0.2">
