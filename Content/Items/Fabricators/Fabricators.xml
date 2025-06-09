@@ -1028,6 +1028,9 @@
       </Holdable>
       <ItemContainer canbeselected="true" selectkey="Select" capacity="2" maxstacksize="1" hideitems="true" allowuioverlap="true">
         <Containable items="pot,emptybottle,bottle,tableware,cleaningagent" />
+        <!-- TODO: adjust these icons for filter and hose -->
+        <!-- <SlotIcon slotindex="2" texture="Content/Items/InventoryIconAtlas2.png" sourcerect="256,320,64,64" origin="0.5,0.5" /> -->
+        <!-- <SlotIcon slotindex="3" texture="Content/Items/InventoryIconAtlas2.png" sourcerect="128,320,64,64" origin="0.5,0.5" /> -->
         <SubContainer capacity="1">
           <Containable items="waterfilter" />
         </SubContainer>
