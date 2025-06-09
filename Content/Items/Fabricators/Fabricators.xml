@@ -665,7 +665,7 @@
       </LightComponent>
       <CustomInterface canbeselected="true" selectkey="Select" allowuioverlap="false">
         <GuiFrame style="ItemUI" relativeoffset="0,0.23" anchor="Center" relativesize="0.1,0.08" allowuioverlap="false" />
-        <TickBox text="On/Off">
+        <TickBox text="interaction.onoff">
           <StatusEffect type="OnUse" target="This" targetitemcomponent="LightComponent" IsOn="true" setvalue="true" />
           <StatusEffect type="OnSecondaryUse" target="This" targetitemcomponent="LightComponent" IsOn="false" setvalue="true" />
         </TickBox>
@@ -708,7 +708,7 @@
           <Affliction identifier="burn" strength="5" />
         </StatusEffect>
       </Repairable>
-      <ItemContainer selectkey="Select" capacity="1" maxstacksize="1" canbeselected="true" hideitems="true" uilabel="" allowuioverlap="false" slotsperrow="4">
+      <ItemContainer selectkey="Select" capacity="1" maxstacksize="1" canbeselected="true" hideitems="true" allowuioverlap="false" slotsperrow="4">
         <GuiFrame relativesize="0.2,0.1" minsize="400,200" maxsize="480,240" anchor="Center" relativeoffset="0.0,0.0" style="ItemUI" />
         <SlotIcon slotindex="0" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="577,0,85,85" origin="0.5,0.5" />
         <!-- <SlotIcon slotindex="1" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="237,0,85,85" origin="0.5,0.5" /> -->
