@@ -238,11 +238,36 @@
         <poweronsound file="Content/Items/PowerOnLight3.ogg" range="600" loop="false" />
         <StatusEffect type="InWater" target="This" condition="-0.5" />
       </Deconstructor>
-      <ItemContainer selectkey="Select" capacity="2" maxstacksize="256" canbeselected="true" hideitems="true" hudpos="0.5, 0.4" slotsperrow="3" allowuioverlap="true">
-        <Containable items="glassfragments,bottleblueprint,jarblueprint,shakerblueprint,cupblueprint" />
+      
+        <!-- TODO: Use a custom interface to spawn blueprints directly in the printer slot instead of making them at fabricator: 
+        -cycle between blueprints like a jukebox cycles between songs, 
+        -press button to spawn the blueprints
+        -blueprints must self-delete if not inside a bottle printer to avoid printing a million of them        
+        I suck at UIs and buttons so you'll have to figure this out -->
+        <!-- <CustomInterface canbeselected="true" ElementStates="true,1,50">
+          <GuiFrame relativesize="0.2,0.15" anchor="CenterLeft" pivot="BottomLeft" relativeoffset="0.006,-0.05" style="ItemUI" />
+          <Button text="Signal out #1" connection="signal_out1" />
+          <TickBox text="speaker.on" targetitemcomponent="Powered" propertyname="IsActive" ContinuousSignal="false" GetValueInterval="1" />
+          <IntegerInput text="speaker.trackselection" propertyname="ManuallySelectedSound" targetitemcomponent="Powered" min="0" max="3">
+            <StatusEffect type="OnUse" targettype="This">
+              <sound file="Content/Sounds/ClubMusic_transitionScratch.ogg" range="1000.0" />
+            </StatusEffect>
+          </IntegerInput>
+        <IntegerInput text="speaker.volume" propertyname="PowerConsumption" targetitemcomponent="Powered" min="0" max="100" step="10"/>
+      </CustomInterface> -->
+      
+      <ItemContainer selectkey="Select" capacity="0" maxstacksize="1" canbeselected="true" hideitems="true" hudpos="0.5, 0.4" slotsperrow="3" allowuioverlap="true">
+        <!-- <SlotIcon slotindex="0" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="291,1,62,14" origin="0.5,0.5" /> -->
+        <SlotIcon slotindex="1" texture="%ModDir:2954998725%/Content/Items/Fabricators/Blueprints1.png" sourcerect="558,467,278,278" origin="0.5,0.5" />
+        <SubContainer capacity="1" maxstacksize="256">
+          <Containable items="glassfragments" />
+        </SubContainer>
+        <SubContainer capacity="1" maxstacksize="1">
+          <Containable items="bottleblueprint,jarblueprint,shakerblueprint,cupblueprint" />
+        </SubContainer>
       </ItemContainer>
       <ItemContainer selectkey="Select" capacity="1" maxstacksize="1" canbeselected="true" hideitems="false" itempos="112,-194" hudpos="0.5, 0.8" slotsperrow="5" uilabel="" allowuioverlap="true">
-        <Containable items="liquorcrate,jarcrate" />
+        <!-- <SlotIcon slotindex="2" texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="621,1,128,364" origin="0.5,0.5" /> -->
       </ItemContainer>
       <Body width="212" height="330" density="20"/>
       <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" attachable="true" aimable="true" AttachesToFloor="true" DisallowAttachingOverTags="bottleprinter">
