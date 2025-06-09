@@ -710,7 +710,8 @@
       <icon texture="Content/UI/CommandUIAtlas.png" sourcerect="896,896,128,128" origin="0,0" />
     </Affliction>
 
-    <!-- TODO: finalize this -->
+    
+    <!-- TODO: make an an icon for this -->
     <Affliction
       name="Tobacco addiction"
       identifier="he-tobaccoaddiction"
@@ -728,7 +729,7 @@
       </Effect>
       <Effect minstrength="20" maxstrength="50"
         strengthchange="-0.2">
-        <!-- Sets oxygen low -->
+        <!-- Sets oxygen low to a minimum of 5 -->
         <StatusEffect target="Character" setvalue="true">
           <Conditional oxygenlow="lt 5" />
           <Affliction identifier="oxygenlow" amount="5" />
@@ -736,7 +737,7 @@
       </Effect>
       <Effect minstrength="50" maxstrength="100"
         strengthchange="-0.2">
-        <!-- Sets oxygen low -->
+        <!-- Sets oxygen low to a minimum of 10 -->
         <StatusEffect target="Character" setvalue="true">
           <Conditional oxygenlow="lt 10" />
           <Affliction identifier="oxygenlow" amount="10" />
