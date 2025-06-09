@@ -2,7 +2,7 @@
 <Override>
   <Items>
     <!-- KEGS -->
-    <Item name="Empty Keg" identifier="he-kegempty" category="Misc" subcategory="Kegs" maxstacksize="1" cargocontaineridentifier="metalcrate" description="An empty keg used for some recipes. Can be used in water to collect dirty water." Tags="keg,emptykeg,crate" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_metal_heavy" isshootable="true" requireaimtouse="false" canflipx="false">
+    <Item name="Empty Keg" identifier="he-kegempty" category="Misc" subcategory="Kegs" maxstacksize="1" cargocontaineridentifier="metalcrate" description="An empty keg used for some recipes. Can be used in water to collect dirty water." Tags="keg,emptykeg,crate" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_metal_heavy" isshootable="true" requireaimtouse="false" canflipx="false" condition="1">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" sourcerect="0,0,91,138" depth="0.699" origin="0.5,0.5" canflipx="false"/>
       <Body width="91" height="136" density="9" />
