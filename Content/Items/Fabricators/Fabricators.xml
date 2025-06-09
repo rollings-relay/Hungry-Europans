@@ -300,6 +300,7 @@
         <output name="condition_out" displayname="connection.conditionout" />
       </ConnectionPanel>
     </Item>
+    
     <Item name="Refill Station" identifier="he-refillstation" tags="refillstation,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Brewery" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="Used to refill empty bottles from a keg. Needs power." isshootable="true" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2" canflipx="false">
       <Body width="167" height="236" density="20"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="912,1,167,238" depth="0.797" premultiplyalpha="false" origin="0.5,0.5" />
@@ -366,20 +367,18 @@
           <Affliction identifier="stun" strength="4" />
         </StatusEffect>
       </Repairable>
-      <ItemContainer selectkey="Select" capacity="3" canbeselected="true" hideitems="false" slotsperrow="4" uilabel="" allowuioverlap="true" itempos="80,34" itemrotation="270" containedspritedepth="0.796">
+      <ItemContainer selectkey="Select" capacity="3" canbeselected="true" hideitems="false" slotsperrow="4" uilabel="" allowuioverlap="true" itempos="80,6" itemrotation="270" containedspritedepth="0.796">
         <SlotIcon slotindex="3" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="237,0,85,85" origin="0.5,0.5" />
         <Containable items="emptybottle" />
-        <SubContainer capacity="1" maxstacksize="1">
+        <SubContainer capacity="1" maxstacksize="1" >
           <Containable items="keg" />
         </SubContainer>
         <StatusEffect type="Always" target="Contained" targetcontainer="this" targetslot="3" targettag="keg" interval="1" stackable="false" disabledeltatime="true">
           <Conditional condition="lt 3" />
           <RequiredItem items="keg" targetslot="3" type="Contained" />
-          <SpawnItem identifier="he-kegempty" spawnposition="This" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-          <Remove />
         </StatusEffect>
       </ItemContainer>
-      <ItemContainer selectkey="Select" capacity="3" canbeselected="true" hideitems="false" slotsperrow="3" uilabel="" allowuioverlap="true" itempos="39,-83" iteminterval="41,0" itemrotation="0" containedspritedepth="0.796">
+      <ItemContainer selectkey="Select" capacity="3" maxstacksize="1" canbeselected="true" hideitems="false" slotsperrow="3" uilabel="" allowuioverlap="true" itempos="39,-106" iteminterval="41,0" itemrotation="0" containedspritedepth="0.796">
         <Containable items="bottle" />
       </ItemContainer>
     </Item>
