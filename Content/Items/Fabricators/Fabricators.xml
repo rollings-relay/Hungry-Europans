@@ -447,26 +447,7 @@
           <Conditional InWater="false" />
           <Conditional voltage="gt 0.1" />
           <Conditional condition="lt 50" />
-          <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-          <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-          <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-          <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-          <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-          <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-          <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-          <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-          <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-          <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-          <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-          <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-          <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-          <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-          <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-          <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-          <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-          <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-          <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-          <SpawnItem identifier="effect_firestarter" spawnposition="ThisInventory" />
+          <SpawnItem identifier="effect_firestarter" spawnposition="ThisInventory" Probability="0.05"/>
         </StatusEffect>
       </Fabricator>
       <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
@@ -562,26 +543,7 @@
           <Conditional InWater="false" />
           <Conditional voltage="gt 0.1" />
           <Conditional condition="lt 50" />
-          <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-          <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-          <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-          <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-          <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-          <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-          <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-          <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-          <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-          <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-          <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-          <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-          <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-          <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-          <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-          <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-          <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-          <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-          <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-          <SpawnItem identifier="effect_firestarter" spawnposition="ThisInventory" />
+          <SpawnItem identifier="effect_firestarter" spawnposition="ThisInventory" Probability="0.05"/>
         </StatusEffect>
       </Fabricator>
       <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
