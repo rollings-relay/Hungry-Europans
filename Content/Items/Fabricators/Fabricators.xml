@@ -267,7 +267,7 @@
         </SubContainer>
       </ItemContainer>
       <ItemContainer selectkey="Select" capacity="1" maxstacksize="1" canbeselected="true" hideitems="false" itempos="112,-194" hudpos="0.5, 0.8" slotsperrow="5" uilabel="" allowuioverlap="true">
-        <!-- <SlotIcon slotindex="2" texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="621,1,128,364" origin="0.5,0.5" /> -->
+        <!-- <SlotIcon slotindex="0" texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="621,1,128,364" origin="0.5,0.5" /> -->
       </ItemContainer>
       <Body width="212" height="330" density="20"/>
       <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" attachable="true" aimable="true" AttachesToFloor="true" DisallowAttachingOverTags="bottleprinter">
