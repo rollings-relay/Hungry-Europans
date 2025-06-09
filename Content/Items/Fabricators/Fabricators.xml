@@ -373,13 +373,18 @@
         <SubContainer capacity="1" maxstacksize="1" >
           <Containable items="keg" />
         </SubContainer>
-          <RequiredItem items="keg" targetslot="3" type="Contained" />
+        <!-- drain all kegs <5% condition to prevent being removed on fabrication -->
+        <StatusEffect type="Always" target="Contained" targetcontainer="this" targetslot="3" targettag="filledkeg" interval="1" condition="-100" setvalue="true" >
+          <Conditional condition="lte 5" />
+          <RequiredItem items="filledkeg" targetslot="3" type="Contained" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/Squeeze2.ogg" volume="5" range="300" frequencymultiplier="0.5" />
         </StatusEffect>
       </ItemContainer>
       <ItemContainer selectkey="Select" capacity="3" maxstacksize="1" canbeselected="true" hideitems="false" slotsperrow="3" uilabel="" allowuioverlap="true" itempos="39,-106" iteminterval="41,0" itemrotation="0" containedspritedepth="0.796">
         <Containable items="bottle" />
       </ItemContainer>
     </Item>
+    
     <Item name="Stove" identifier="he-stove" tags="stove,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="Used for cooking. Needs power." isshootable="true" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
       <Upgrade gameversion="0.10.4.0">
         <Repairable Msg="ItemMsgRepairWrench" />
