@@ -736,9 +736,17 @@
       </ItemContainer>
     </Item>
     
-    <Item name="Cutting Board" identifier="he-cuttingboard" tags="cuttingboard,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="" isshootable="true" scale="0.5" damagedbyexplosions="false">
+    <Item name="Cutting Board" identifier="he-cuttingboard" tags="cuttingboard,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="" isshootable="true" scale="0.5" damagedbyexplosions="false" GrabWhenSelected="true">
       <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.45" />
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1924,1,123,66" depth="0.797" origin="0.45,0.44" />
+      <Body width="123" height="66" density="30" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1924,0,124,66" depth="0.750" origin="0.45,0.44" />
+      <DecorativeSprite name="idle knife" texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1674,0,124,66" depth="0.749" origin="0.5,0.5" comparison="and" >
+        <IsActiveConditional IsActive="False" targetitemcomponent="Fabricator" />
+      </DecorativeSprite>
+      <DecorativeSprite name="animated knife" texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1798,0,124,66" depth="0.751" origin="0.5,0.5" offset="0,-12" offsetanim="Noise" offsetanimspeed="2" rotationanim="Noise" rotation="15" rotationspeed="2" comparison="and" >
+        <AnimationConditional Voltage="gt 0.5" targetitemcomponent="Fabricator" />
+        <IsActiveConditional IsActive="True" targetitemcomponent="Fabricator" />
+      </DecorativeSprite>
       <Price baseprice="99" sold="true">
         <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="1" />
         <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="3" />
@@ -747,11 +755,13 @@
         <RequiredItem identifier="iron" amount="1" />
         <RequiredItem identifier="plastic" amount="3"/>
       </Fabricate>
-      <Fabricator canbeselected="true" powerconsumption="0.0" msg="ItemMsgInteractSelect">
+      <Fabricator canbeselected="true" powerconsumption="10.0" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
-        <sound file="%ModDir:2954998725%/Content/Sounds/Items/Fabricators/CuttingBoard.ogg" type="OnActive" range="500.0" loop="true" volume="5.0" />
+        <sound file="%ModDir:2954998725%/Content/Sounds/Items/Fabricators/CuttingBoard.ogg" type="OnActive" range="500.0" loop="true" volumeproperty="RelativeVoltage"/>
       </Fabricator>
-      <Body width="123" height="66" density="30" />
+      <Controller allowingameediting="false" canbeselected="true" AllowSelectingWhenSelectedByBot="true" AllowSelectingWhenSelectedByOther="true" hidehud="false" IsSecondaryItem="false">
+        <StatusEffect type="OnActive" target="this" voltage="1" setvalue="true" />
+      </Controller>
       <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" attachable="true" aimable="true">
         <RequiredItem items="wrench" type="Equipped" />
         <StatusEffect target="This" type="OnContained">
@@ -760,7 +770,7 @@
         </StatusEffect>
       </Holdable>
       <ItemContainer selectkey="Select" capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="" allowuioverlap="true" />
-      <ItemContainer selectkey="Select" capacity="4" canbeselected="true" hideitems="true" slotsperrow="2" uilabel="" allowuioverlap="true" />
+      <ItemContainer selectkey="Select" capacity="4" canbeselected="true" hideitems="false" slotsperrow="2" uilabel="" allowuioverlap="true" itempos="62,-55" containedspritedepth="0.752"/>
     </Item>
     
     <Item name="Electric Grill" identifier="he-electricgrill" tags="grill,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="Used for cooking. Needs power." isshootable="true" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
