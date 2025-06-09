@@ -67,13 +67,18 @@
       </Fabricate>
       <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.46" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="324,1,370,355" depth="0.797" origin="0.5,0.5" />
-      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="324,357,370,355" depth="0.796" origin="0.5,0.5" maxcondition="80" fadein="true" />
-      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="324,713,370,355" depth="0.795" origin="0.5,0.5" maxcondition="0" fadein="false" />
+      <DecorativeSprite name="background shake" texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="324,1,370,355" depth="0.796" origin="0.5,0.5" offset="3,3" offsetanim="Noise" offsetanimspeed="3" comparison="and" >
+        <AnimationConditional Voltage="gt 0.5" targetitemcomponent="Deconstructor" />
+        <IsActiveConditional IsActive="True" targetitemcomponent="Deconstructor" />
+      </DecorativeSprite>
+      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="324,357,370,355" depth="0.795" origin="0.5,0.5" maxcondition="80" fadein="true" />
+      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="324,713,370,355" depth="0.794" origin="0.5,0.5" maxcondition="0" fadein="false" />
       <Deconstructor canbeselected="true" showoutput="false" powerconsumption="250.0" deconstructitemssimultaneously="true" msg="ItemMsgInteractSelect" activatebuttontext="researchstation.invalidinput" infotext="distiller.empty" infoareawidth="0.7">
         <GuiFrame relativesize="0.25,0.3" style="ItemUI" anchor="Center" />
         <poweronsound file="Content/Items/PowerOnLight3.ogg" range="600" loop="false" />
-        <StatusEffect type="OnActive" targettype="This">
-          <sound file="%ModDir:2954998725%/Content/Sounds/Items/Fabricators/Distiller.ogg" type="OnActive" range="600.0" loop="true" volume="5.0" />
+        <StatusEffect type="OnActive" targettype="This" offset="-60,-40">
+          <sound file="%ModDir:2954998725%/Content/Sounds/Items/Fabricators/Distiller.ogg" type="OnActive" range="600.0" loop="true" volume="5.0" />          
+          <ParticleEmitter particle="steamspray" particlespersecond="20" anglemin="75" anglemax="105" scalemin="0.5" scalemax="1" velocitymin="50" velocitymax="100" highqualitycollisiondetection="true" />
         </StatusEffect>
         <StatusEffect type="InWater" target="This" condition="-0.5" />
       </Deconstructor>
