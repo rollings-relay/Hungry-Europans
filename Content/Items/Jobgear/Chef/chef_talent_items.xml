@@ -48,16 +48,17 @@
         <IsActiveConditional targetcontaineditem="true" conditionpercentage="gt 0"/>
       </LightComponent>       
       <ItemComponent>
-        <StatusEffect type="OnUse" target="NearbyItems" targettags="seed" range="200.0" condition="1" offset="-5,-51" checkconditionalalways="true">
+        <StatusEffect type="OnUse" target="NearbyItems" targettags="sprinkler,seed" range="200.0" condition="1" offset="-5,-51" checkconditionalalways="true">
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="4" range="500" loop="true" />
           <ParticleEmitter particle="waterdrop" anglemin="0" anglemax="359" velocitymin="100.0" velocitymax="300.0" particlespersecond="50" />
           <RequiredItem items="he-kegwater" type="Contained" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="This" charge="900" targetitemcomponent="PowerContainer" delay="10" stackable="false" setvalue="true"/>
+        <StatusEffect type="OnUse" target="This" charge="9999" targetitemcomponent="PowerContainer" delay="10" stackable="false" setvalue="true"/>
         <StatusEffect type="OnUse" target="Contained" condition="-1.0" />
-     </ItemComponent> 
-     <ItemContainer selectkey="Select" capacity="0" canbeselected="true" hideitems="false" itempos="78,5" ShowContainedStateIndicator="false" slotsperrow="3" keepopenwhenequipped="false" movableframe="true">
+      </ItemComponent>
+      <ItemContainer selectkey="Select" capacity="0" canbeselected="true" hideitems="false" itempos="78,5" ShowContainedStateIndicator="false" slotsperrow="3" keepopenwhenequipped="false" movableframe="true">
         <GuiFrame relativesize="0.15,0.30" anchor="Center" relativeoffset="0,0" style="ItemUI" msg="ItemMsgInteractSelect" />
+        <TextBox text="Set timer" targetitemcomponent="PowerContainer" propertyname="capacity" maxtextlength="3" ShouldSetProperty="true" />
         <!--Watertank Icon-->
         <SlotIcon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="237,0,85,85" origin="0.5,0.5" />
         <!--Watertank Slot-->
