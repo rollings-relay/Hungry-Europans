@@ -12,7 +12,7 @@
       TODO: simplify with rotation="90" if it ever gets added https://github.com/FakeFishGames/Barotrauma/discussions/16174 -->
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" sourcerect="0,0,91,138" depth="0.699" origin="0.5,0.5" canflipx="false" />      
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" sourcerect="0,0,91,138" origin="0.5,0.5" />
-      <ContainedSprite texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" allowedcontainertags="cargocontainer" sourcerect="0,0,1,1" depth="0.699" origin="0.5,0.5" decorativespritebehavior="HideWhenNotVisible" />
+      <ContainedSprite texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" allowedcontainertags="cargocontainer" usewhenattached="false" sourcerect="0,0,1,1" depth="0.699" origin="0.5,0.5" decorativespritebehavior="HideWhenNotVisible" />
       <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" sourcerect="0,0,91,138" depth="0.699" origin="0.5,0.5" rotation="90" />
       <Body width="91" height="136" density="9" />
       <Fabricate suitablefabricators="fabricator" requiredtime="15" requiresrecipe="false" amount="1" outcondition="1">
@@ -42,7 +42,7 @@
       TODO: simplify with rotation="90" if it ever gets added https://github.com/FakeFishGames/Barotrauma/discussions/16174 -->
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" sourcerect="546,0,91,138" depth="0.699" origin="0.5,0.5" canflipx="false" />      
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" sourcerect="546,0,91,138" origin="0.5,0.5" />
-      <ContainedSprite texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" allowedcontainertags="cargocontainer" sourcerect="0,0,1,1" depth="0.699" origin="0.5,0.5" decorativespritebehavior="HideWhenNotVisible" />
+      <ContainedSprite texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" allowedcontainertags="cargocontainer" usewhenattached="false" sourcerect="0,0,1,1" depth="0.699" origin="0.5,0.5" decorativespritebehavior="HideWhenNotVisible" />
       <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" sourcerect="546,0,91,138" depth="0.699" origin="0.5,0.5" rotation="90" />
       <Body width="91" height="136" density="10.1" />
       <Deconstruct time="2" requireddeconstructor="deconstructor">
@@ -87,7 +87,7 @@
       TODO: simplify with rotation="90" if it ever gets added https://github.com/FakeFishGames/Barotrauma/discussions/16174 -->
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" sourcerect="637,0,91,138" depth="0.699" origin="0.5,0.5" canflipx="false"/>     
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" sourcerect="637,0,91,138" origin="0.5,0.5" />
-      <ContainedSprite texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" allowedcontainertags="cargocontainer" sourcerect="0,0,1,1" depth="0.699" origin="0.5,0.5" decorativespritebehavior="HideWhenNotVisible" />
+      <ContainedSprite texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" allowedcontainertags="cargocontainer" usewhenattached="false" sourcerect="0,0,1,1" depth="0.699" origin="0.5,0.5" decorativespritebehavior="HideWhenNotVisible" />
       <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" sourcerect="637,0,91,138" depth="0.699" origin="0.5,0.5" rotation="90" />
       <Body width="91" height="136" density="10.1" />
       <Deconstruct time="2" requireddeconstructor="deconstructor">
