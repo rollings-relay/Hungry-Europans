@@ -5,7 +5,7 @@
     <!-- TODO: reputation sale adjustments? -->
   
     <!-- KEGS -->
-    <Item name="Empty Keg" identifier="he-kegempty" Tags="keg,emptykeg,crate" category="Misc" subcategory="Kegs" maxstacksize="1" scale="0.5" impactsoundtag="impact_metal_heavy" canflipx="false" isshootable="false" condition="1" >
+    <Item name="Empty Keg" identifier="he-kegempty" Tags="keg,emptykeg,crate" category="Misc" subcategory="Kegs" maxstacksize="1" scale="0.5" impactsoundtag="impact_metal_heavy" canflipx="false" isshootable="false" >
       <PreferredContainer primary="kitchen" secondary="cargocontainer"/>
       <!-- JANK JANK JANK Instead of just using containedsprite and rotating it 90°, I have to
       -add a 1x1 invisible containedsprite, enabled in crate shelves
@@ -35,7 +35,7 @@
       </Holdable>
     </Item>
     
-    <Item name="Keg of Sea Water" identifier="he-kegseawater" Tags="keg,waterkeg,seawaterkeg,crate" category="Misc" subcategory="Kegs" maxstacksize="1" scale="0.5" impactsoundtag="impact_metal_heavy" canflipx="false" isshootable="true">
+    <Item name="Keg of Sea Water" identifier="he-kegseawater" Tags="keg,filledkeg,waterkeg,seawaterkeg,crate" category="Misc" subcategory="Kegs" maxstacksize="1" scale="0.5" impactsoundtag="impact_metal_heavy" canflipx="false" isshootable="true">
       <PreferredContainer primary="kitchen" secondary="cargocontainer"/>
       <!-- JANK JANK JANK Instead of just using containedsprite and rotating it 90°, I have to
       -add a 1x1 invisible containedsprite, enabled in crate shelves
@@ -80,7 +80,7 @@
       </Holdable>
     </Item>
     
-    <Item name="Keg of Water" identifier="he-kegwater" Tags="keg,waterkeg,crate" category="Misc" subcategory="Kegs" maxstacksize="1" scale="0.5" impactsoundtag="impact_metal_heavy" canflipx="false" isshootable="true">
+    <Item name="Keg of Water" identifier="he-kegwater" Tags="keg,filledkeg,waterkeg,crate" category="Misc" subcategory="Kegs" maxstacksize="1" scale="0.5" impactsoundtag="impact_metal_heavy" canflipx="false" isshootable="true">
       <PreferredContainer primary="kitchen" secondary="cargocontainer"/>
       <!-- JANK JANK JANK Instead of just using containedsprite and rotating it 90°, I have to
       -add a 1x1 invisible containedsprite, enabled in crate shelves
@@ -127,7 +127,7 @@
       </Holdable>
     </Item>
     
-    <Item name="Keg of Coalition Premium Beer" identifier="he-kegcoalitionpremium" Tags="keg,crate" category="Misc" subcategory="Kegs" maxstacksize="1" scale="0.5" impactsoundtag="impact_metal_heavy" canflipx="false" isshootable="true">
+    <Item name="Keg of Coalition Premium Beer" identifier="he-kegcoalitionpremium" Tags="keg,filledkeg,crate" category="Misc" subcategory="Kegs" maxstacksize="1" scale="0.5" impactsoundtag="impact_metal_heavy" canflipx="false" isshootable="true">
       <PreferredContainer primary="kitchen" secondary="cargocontainer"/>
       <!-- JANK JANK JANK Instead of just using containedsprite and rotating it 90°, I have to
       -add a 1x1 invisible containedsprite, enabled in crate shelves
@@ -177,7 +177,7 @@
       </Holdable>
     </Item>
     
-    <Item name="Keg of Jovian Force Beer" identifier="he-kegjovianforce" Tags="keg,crate" category="Misc" subcategory="Kegs" maxstacksize="1" scale="0.5" impactsoundtag="impact_metal_heavy" canflipx="false" isshootable="true">
+    <Item name="Keg of Jovian Force Beer" identifier="he-kegjovianforce" Tags="keg,filledkeg,crate" category="Misc" subcategory="Kegs" maxstacksize="1" scale="0.5" impactsoundtag="impact_metal_heavy" canflipx="false" isshootable="true">
       <PreferredContainer primary="kitchen" secondary="cargocontainer"/>
       <!-- JANK JANK JANK Instead of just using containedsprite and rotating it 90°, I have to
       -add a 1x1 invisible containedsprite, enabled in crate shelves
@@ -227,7 +227,7 @@
       </Holdable>
     </Item>
     
-    <Item name="Keg of Liquid Ascension Beer" identifier="he-kegliquidascension" Tags="keg,crate" category="Misc" subcategory="Kegs" maxstacksize="1" scale="0.5" impactsoundtag="impact_metal_heavy" canflipx="false" isshootable="true">
+    <Item name="Keg of Liquid Ascension Beer" identifier="he-kegliquidascension" Tags="keg,filledkeg,crate" category="Misc" subcategory="Kegs" maxstacksize="1" scale="0.5" impactsoundtag="impact_metal_heavy" canflipx="false" isshootable="true">
       <PreferredContainer primary="kitchen" secondary="cargocontainer"/>
       <!-- JANK JANK JANK Instead of just using containedsprite and rotating it 90°, I have to
       -add a 1x1 invisible containedsprite, enabled in crate shelves
@@ -278,7 +278,7 @@
       </Holdable>
     </Item>
     
-    <Item name="Keg of Clown Juice Beer" identifier="he-kegclownjuice" Tags="keg,crate" category="Misc" subcategory="Kegs" maxstacksize="1" scale="0.5" impactsoundtag="impact_metal_heavy" canflipx="false" isshootable="true">
+    <Item name="Keg of Clown Juice Beer" identifier="he-kegclownjuice" Tags="keg,filledkeg,crate" category="Misc" subcategory="Kegs" maxstacksize="1" scale="0.5" impactsoundtag="impact_metal_heavy" canflipx="false" isshootable="true">
       <PreferredContainer primary="kitchen" secondary="cargocontainer"/>
       <!-- JANK JANK JANK Instead of just using containedsprite and rotating it 90°, I have to
       -add a 1x1 invisible containedsprite, enabled in crate shelves
@@ -328,7 +328,7 @@
       </Holdable>
     </Item>
     
-    <Item name="Keg of Reaper's Tribute Beer" identifier="he-kegreaperstribute" Tags="keg,crate" category="Misc" subcategory="Kegs" maxstacksize="1" scale="0.5" impactsoundtag="impact_metal_heavy" canflipx="false" isshootable="true">
+    <Item name="Keg of Reaper's Tribute Beer" identifier="he-kegreaperstribute" Tags="keg,filledkeg,crate" category="Misc" subcategory="Kegs" maxstacksize="1" scale="0.5" impactsoundtag="impact_metal_heavy" canflipx="false" isshootable="true">
       <PreferredContainer primary="kitchen" secondary="cargocontainer"/>
       <!-- JANK JANK JANK Instead of just using containedsprite and rotating it 90°, I have to
       -add a 1x1 invisible containedsprite, enabled in crate shelves
@@ -380,7 +380,7 @@
       </Holdable>
     </Item>
     
-    <Item name="Keg of Rum" identifier="he-kegrum" Tags="keg,crate" category="Misc" subcategory="Kegs" maxstacksize="1" scale="0.5" impactsoundtag="impact_metal_heavy" canflipx="false" isshootable="true">
+    <Item name="Keg of Rum" identifier="he-kegrum" Tags="keg,filledkeg,crate" category="Misc" subcategory="Kegs" maxstacksize="1" scale="0.5" impactsoundtag="impact_metal_heavy" canflipx="false" isshootable="true">
       <PreferredContainer primary="kitchen" secondary="cargocontainer"/>
       <!-- JANK JANK JANK Instead of just using containedsprite and rotating it 90°, I have to
       -add a 1x1 invisible containedsprite, enabled in crate shelves
@@ -431,7 +431,7 @@
       </Holdable>
     </Item>
     
-    <Item name="Keg of Pirate Rum" identifier="he-kegpiraterum" Tags="keg,crate" category="Misc" subcategory="Kegs" maxstacksize="1" scale="0.5" impactsoundtag="impact_metal_heavy" canflipx="false" isshootable="true">
+    <Item name="Keg of Pirate Rum" identifier="he-kegpiraterum" Tags="keg,filledkeg,crate" category="Misc" subcategory="Kegs" maxstacksize="1" scale="0.5" impactsoundtag="impact_metal_heavy" canflipx="false" isshootable="true">
       <PreferredContainer primary="kitchen" secondary="cargocontainer"/>
       <!-- JANK JANK JANK Instead of just using containedsprite and rotating it 90°, I have to
       -add a 1x1 invisible containedsprite, enabled in crate shelves
@@ -483,7 +483,7 @@
       </Holdable>
     </Item>
     
-    <Item name="Keg of Whiskey" identifier="he-kegwhiskey" Tags="keg,crate" category="Misc" subcategory="Kegs" maxstacksize="1" scale="0.5" impactsoundtag="impact_metal_heavy" canflipx="false" isshootable="true">
+    <Item name="Keg of Whiskey" identifier="he-kegwhiskey" Tags="keg,filledkeg,crate" category="Misc" subcategory="Kegs" maxstacksize="1" scale="0.5" impactsoundtag="impact_metal_heavy" canflipx="false" isshootable="true">
       <PreferredContainer primary="kitchen" secondary="cargocontainer"/>
       <!-- JANK JANK JANK Instead of just using containedsprite and rotating it 90°, I have to
       -add a 1x1 invisible containedsprite, enabled in crate shelves
@@ -535,7 +535,7 @@
       </Holdable>
     </Item>
     
-    <Item name="Keg of Halucinova" identifier="he-keghalucinova" Tags="keg,crate" category="Misc" subcategory="Kegs" maxstacksize="1" scale="0.5" impactsoundtag="impact_metal_heavy" canflipx="false" isshootable="true">
+    <Item name="Keg of Halucinova" identifier="he-keghalucinova" Tags="keg,filledkeg,crate" category="Misc" subcategory="Kegs" maxstacksize="1" scale="0.5" impactsoundtag="impact_metal_heavy" canflipx="false" isshootable="true">
       <PreferredContainer primary="kitchen" secondary="cargocontainer"/>
       <!-- JANK JANK JANK Instead of just using containedsprite and rotating it 90°, I have to
       -add a 1x1 invisible containedsprite, enabled in crate shelves

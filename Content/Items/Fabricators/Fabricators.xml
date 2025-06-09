@@ -373,8 +373,6 @@
         <SubContainer capacity="1" maxstacksize="1" >
           <Containable items="keg" />
         </SubContainer>
-        <StatusEffect type="Always" target="Contained" targetcontainer="this" targetslot="3" targettag="keg" interval="1" stackable="false" disabledeltatime="true">
-          <Conditional condition="lt 3" />
           <RequiredItem items="keg" targetslot="3" type="Contained" />
         </StatusEffect>
       </ItemContainer>
