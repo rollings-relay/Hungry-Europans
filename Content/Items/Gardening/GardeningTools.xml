@@ -172,7 +172,9 @@
 
       <Item name="Hydroponic Planter" identifier="he-hydroponicplanter" tags="hydroponic,hydroponicplanter,donttakeitems,dontsellitems" category="Machine" subcategory="Gardening" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="A device providing perfect conditions for europas underwater plants to grow. Yields a plant every 15 minutes. Needs power." isshootable="true" scale="0.3" damagedbyexplosions="true" explosiondamagemultiplier="0.2" canflipx="false">
         <Body width="414" height="250" density="20"/>
-        <sprite texture="Content/Map/Outposts/Art/MedicalItemResearch.png" sourcerect="0,6,414,297" depth="0.799" premultiplyalpha="false" origin="0.5,0.45" />
+        <sprite texture="Content/Map/Outposts/Art/MedicalItemResearch.png" sourcerect="0,6,414,297" depth="0.799" premultiplyalpha="false" origin="0.5,0.5" />
+        <!-- <Decorativesprite name="foreground" texture="Content/Map/Outposts/Art/MedicalItemResearch.png" sourcerect="0,6,414,297" depth="0.797" premultiplyalpha="false" origin="0.5,0.5" color="255,255,255,100"/>
+        <DecorativeSprite name="spinny thing" texture="Content/Map/Outposts/Art/AdminResidentAssets.png" sourcerect="848,627,99,99" depth="0.798" premultiplyalpha="false" origin="0.5,0.5" rotationspeed="-715" color="255,255,255,100"/> -->
         <Price baseprice="1399" sold="true">
           <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="1" />
           <Price storeidentifier="merchantcity" multiplier="1.4" minavailable="0" maxavailable="3" />
