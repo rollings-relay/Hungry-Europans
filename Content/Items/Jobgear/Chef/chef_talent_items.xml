@@ -15,39 +15,39 @@
         <RequiredItem identifier="fpgacircuit" amount="1"/>
         <RequiredItem identifier="steel" amount="2" />
         <RequiredItem identifier="plastic" amount="3"/>
-      </Fabricate>
-      <CustomInterface canbeselected="true" drawhudwhenequipped="false">
-        <GuiFrame style="ItemUI" absoluteoffset="0,-100" anchor="Center" relativesize="0.07,0.08"/>
-        <TickBox text="interaction.onoff">
-          <StatusEffect type="OnUse" target="This" IsOn="true" targetitemcomponent="LightComponent" setvalue="true">
-            <Conditional IsOn="false" targetitemcomponent="LightComponent" />
-          </StatusEffect>
-          <StatusEffect type="OnSecondaryUse" target="This" IsOn="false" targetitemcomponent="LightComponent" setvalue="true">
-            <Conditional IsOn="true" targetitemcomponent="LightComponent" />
-          </StatusEffect>
-        </TickBox>
-      </CustomInterface>      
+      </Fabricate>    
       <!--PowerContainer charge used to keep track of time to only water every 15min. Multiply by 100 and check for >99% because charge rate drops near 100%-->
       <PowerContainer capacity="900" charge="900" maxrechargespeed="0" rechargespeed="0" canbeselected="false">
-        <StatusEffect type="Always" target="This" interval="1" Charge="-1" disabledeltatime="true">
-          <Conditional chargepercentage="gt 0" />
-        </StatusEffect>
         <StatusEffect type="OnNotContained" target="This" >
           <Conditional chargepercentage="0" />
           <Use />
         </StatusEffect>
       </PowerContainer>
-      <!-- Keg <20% -->
-      <LightComponent range="0.0" lightcolor="255,150,0,111" blinkfrequency="1" pulseamount="0.0" pulsefrequency="0" flicker="0.1" flickerspeed="0.5" IsOn="false" castshadows="false" alphablend="false" allowingameediting="false" powerconsumption="5">
-        <sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="106,1234,105,251" depth="0.1" origin="0.5,0.5" alpha="1.0" />
-        <IsActiveConditional targetcontaineditem="true" conditionpercentage="lte 20"/>
-      </LightComponent>
       <!-- Keg Not Empty -->
       <LightComponent range="0.0" lightcolor="100,255,50,111" flicker="0.1" flickerspeed="0.5" IsOn="false" castshadows="false" alphablend="false" allowingameediting="false" powerconsumption="50">
         <sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="106,1234,105,251" depth="0.1" origin="0.5,0.5" alpha="1.0" />
         <IsActiveConditional targetcontaineditem="true" conditionpercentage="gt 0"/>
-      </LightComponent>       
-      <ItemComponent>
+        <StatusEffect type="OnActive" target="This" interval="1" Charge="-1" disabledeltatime="true" >
+          <Conditional chargepercentage="gt 0" targetitemcomponent="PowerContainer"/>
+        </StatusEffect>
+      </LightComponent>
+      <!-- Keg <20% -->
+      <LightComponent range="0.0" lightcolor="255,0,0,111" blinkfrequency="1" pulseamount="0.0" pulsefrequency="0" flicker="0.1" flickerspeed="0.5" IsOn="false" castshadows="false" alphablend="false" allowingameediting="false" powerconsumption="5">
+        <sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="106,1234,105,251" depth="0.1" origin="0.5,0.5" alpha="1.0" />
+        <IsActiveConditional targetcontaineditem="true" conditionpercentage="lte 20"/>
+      </LightComponent>
+      <CustomInterface canbeselected="true" drawhudwhenequipped="false">
+        <GuiFrame style="ItemUI" absoluteoffset="0,-100" anchor="Center" relativesize="0.07,0.08"/>
+        <TickBox text="interaction.onoff">
+          <StatusEffect type="OnUse" target="This" IsOn="true">
+            <Conditional IsOn="false" targetitemcomponent="LightComponent" />
+          </StatusEffect>
+          <StatusEffect type="OnSecondaryUse" target="This" IsOn="false" >
+            <Conditional IsOn="true" targetitemcomponent="LightComponent" />
+          </StatusEffect>
+        </TickBox>
+      </CustomInterface>
+      <ItemComponent IsOn="false" IsActive="false" >
         <StatusEffect type="OnUse" target="NearbyItems" targettags="sprinkler,seed" range="200.0" condition="1" offset="-5,-51" checkconditionalalways="true">
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="4" range="500" loop="true" />
           <ParticleEmitter particle="waterdrop" anglemin="0" anglemax="359" velocitymin="100.0" velocitymax="300.0" particlespersecond="50" />
