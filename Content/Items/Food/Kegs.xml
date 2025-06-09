@@ -2,9 +2,18 @@
 <Override>
   <Items>
     <!-- KEGS -->
-    <Item name="Empty Keg" identifier="he-kegempty" category="Misc" subcategory="Kegs" maxstacksize="1" cargocontaineridentifier="metalcrate" description="An empty keg used for some recipes. Can be used in water to collect dirty water." Tags="keg,emptykeg,crate" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_metal_heavy" isshootable="true" requireaimtouse="false" canflipx="false" condition="1">
-      <PreferredContainer primary="kitchen" secondary="crewcab"/>
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" sourcerect="0,0,91,138" depth="0.699" origin="0.5,0.5" canflipx="false"/>
+    <Item name="Empty Keg" identifier="he-kegempty" Tags="keg,emptykeg,crate" category="Misc" subcategory="Kegs" maxstacksize="1" scale="0.5" impactsoundtag="impact_metal_heavy" canflipx="false" isshootable="false" condition="1" >
+      <PreferredContainer primary="kitchen" secondary="cargocontainer"/>
+      <!-- JANK JANK JANK Instead of just using containedsprite and rotating it 90°, I have to
+      -add a 1x1 invisible containedsprite, enabled in crate shelves
+      -add an inventoryicon, otherwise the icon becomes invisible in shelves
+      -add a decorativesprite that is the main sprite rotated 90°, because containedsprite doesnt handle rotation
+      -use decorativespritebehavior="HideWhenNotVisible" in the containedsprite to HIDE the decorativesprite when not contained 
+      TODO: simplify with rotation="90" if it ever gets added https://github.com/FakeFishGames/Barotrauma/discussions/16174 -->
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" sourcerect="0,0,91,138" depth="0.699" origin="0.5,0.5" canflipx="false" />      
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" sourcerect="0,0,91,138" origin="0.5,0.5" />
+      <ContainedSprite texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" allowedcontainertags="cargocontainer" sourcerect="0,0,1,1" depth="0.699" origin="0.5,0.5" decorativespritebehavior="HideWhenNotVisible" />
+      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" sourcerect="0,0,91,138" depth="0.699" origin="0.5,0.5" rotation="90" />
       <Body width="91" height="136" density="9" />
       <Fabricate suitablefabricators="fabricator" requiredtime="15" requiresrecipe="false" amount="1" outcondition="1">
         <RequiredSkill identifier="mechanical" level="30" />
@@ -13,12 +22,104 @@
       <Deconstruct time="2">
         <Item identifier="aluminium" amount="3" outcondition="1.0"/>
       </Deconstruct>
-      <Holdable selectkey="Select" canbepicked="true" pickkey="Select" slots="RightHand+LeftHand" holdpos="40,-40" handle1="0,53" handle2="0,53" holdangle="3" msg="ItemMsgPickUpSelect" PickingTime="0" aimpos="65,-10" attachable="true" aimable="true">
+      <Holdable selectkey="Select" canbepicked="true" pickkey="Select" slots="RightHand+LeftHand" holdpos="40,-40" handle1="0,53" handle2="0,53" holdangle="3" msg="ItemMsgPickUpSelect" PickingTime="0" aimpos="65,-10" >
         <StatusEffect type="OnSecondaryUse" target="This" interval="0.1">
           <Conditional InWater="true" />
           <Sound file="Content/Sounds/Water/Splash0.ogg" range="200" volume="0.5"/>
           <Remove />
-          <SpawnItem identifier="he-kegseawater" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <SpawnItem identifier="he-kegseawater" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.01" />
+        </StatusEffect>
+      </Holdable>
+    </Item>
+    
+    <Item name="Keg of Sea Water" identifier="he-kegseawater" Tags="keg,waterkeg,seawaterkeg,crate" category="Misc" subcategory="Kegs" maxstacksize="1" scale="0.5" impactsoundtag="impact_metal_heavy" canflipx="false" isshootable="true">
+      <PreferredContainer primary="kitchen" secondary="cargocontainer"/>
+      <!-- JANK JANK JANK Instead of just using containedsprite and rotating it 90°, I have to
+      -add a 1x1 invisible containedsprite, enabled in crate shelves
+      -add an inventoryicon, otherwise the icon becomes invisible in shelves
+      -add a decorativesprite that is the main sprite rotated 90°, because containedsprite doesnt handle rotation
+      -use decorativespritebehavior="HideWhenNotVisible" in the containedsprite to HIDE the decorativesprite when not contained 
+      TODO: simplify with rotation="90" if it ever gets added https://github.com/FakeFishGames/Barotrauma/discussions/16174 -->
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" sourcerect="546,0,91,138" depth="0.699" origin="0.5,0.5" canflipx="false" />      
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" sourcerect="546,0,91,138" origin="0.5,0.5" />
+      <ContainedSprite texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" allowedcontainertags="cargocontainer" sourcerect="0,0,1,1" depth="0.699" origin="0.5,0.5" decorativespritebehavior="HideWhenNotVisible" />
+      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" sourcerect="546,0,91,138" depth="0.699" origin="0.5,0.5" rotation="90" />
+      <Body width="91" height="136" density="10.1" />
+      <Deconstruct time="2" requireddeconstructor="deconstructor">
+        <Item identifier="aluminium" amount="3" outcondition="1.0"/>
+      </Deconstruct>
+      <Fabricate suitablefabricators="sink" requiredtime="900" requiresrecipe="false" amount="1">
+        <RequiredSkill identifier="cooking" level="30" />
+        <RequiredItem tag="hose" amount="1" />
+      </Fabricate>
+      <Holdable canBeCombined="true" removeOnCombined="false" selectkey="Select" canbepicked="true" pickkey="Select" slots="RightHand+LeftHand" holdpos="40,-40" holdangle="3" aimpos="65,-10" handle1="0,53" handle2="0,53" aimable="false" characterusable="true" msg="ItemMsgPickUpSelect" PickingTime="0">
+        <!-- Revert position if not emptying -->
+        <StatusEffect type="OnActive" target="This" holdpos="40,-40" holdangle="3" aimpos="65,-10" aimangle="0" setvalue="true" >
+          <Conditional hasstatustag="neq emptying" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" condition="-5" />
+        <StatusEffect type="OnUse" target="This" duration="0.1" statuseffecttags="emptying" holdpos="-40,0" holdangle="176" aimpos="0,0" aimangle="180" offset="0,-36" setvalue="true" comparison="and">
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" loop="true" />
+          <ParticleEmitter particle="waterdrop" velocitymin="0.0" velocitymax="10.0" particlespersecond="10" distancemin="-3" distancemax="3" />
+          <Conditional InWater="false" />
+        </StatusEffect>
+        <!-- Exclusive to salt keg: Reload in salt water -->
+        <StatusEffect type="OnSecondaryUse" target="This" condition="10" comparison="And">
+          <Conditional Condition="lt 100" />
+          <Conditional InWater="true" />
+          <ParticleEmitter particle="bubbles" particlespersecond="2" scalemin="0.25" scalemax="0.5" distancemin="30" distancemax="35" velocitymin="20" velocitymax="50" copyentityangle="true" anglemin="90" anglemax="90" colormultiplier="255,255,255,255" lifetimemultiplier="1" /> 
+          <Sound file="Content/Sounds/Water/SplashLoop.ogg" range="200" volume="1" loop="true" frequencymultiplier="2"/>
+        </StatusEffect>
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+          <SpawnItem identifier="he-kegempty" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Count="1" Equip="true" />
+        </StatusEffect>
+      </Holdable>
+    </Item>
+    
+    <Item name="Keg of Water" identifier="he-kegwater" Tags="keg,waterkeg,crate" category="Misc" subcategory="Kegs" maxstacksize="1" scale="0.5" impactsoundtag="impact_metal_heavy" canflipx="false" isshootable="true">
+      <PreferredContainer primary="kitchen" secondary="cargocontainer"/>
+      <!-- JANK JANK JANK Instead of just using containedsprite and rotating it 90°, I have to
+      -add a 1x1 invisible containedsprite, enabled in crate shelves
+      -add an inventoryicon, otherwise the icon becomes invisible in shelves
+      -add a decorativesprite that is the main sprite rotated 90°, because containedsprite doesnt handle rotation
+      -use decorativespritebehavior="HideWhenNotVisible" in the containedsprite to HIDE the decorativesprite when not contained 
+      TODO: simplify with rotation="90" if it ever gets added https://github.com/FakeFishGames/Barotrauma/discussions/16174 -->
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" sourcerect="637,0,91,138" depth="0.699" origin="0.5,0.5" canflipx="false"/>     
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" sourcerect="637,0,91,138" origin="0.5,0.5" />
+      <ContainedSprite texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" allowedcontainertags="cargocontainer" sourcerect="0,0,1,1" depth="0.699" origin="0.5,0.5" decorativespritebehavior="HideWhenNotVisible" />
+      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" sourcerect="637,0,91,138" depth="0.699" origin="0.5,0.5" rotation="90" />
+      <Body width="91" height="136" density="10.1" />
+      <Deconstruct time="2" requireddeconstructor="deconstructor">
+        <Item identifier="aluminium" amount="3" outcondition="1.0"/>
+      </Deconstruct>
+      <Fabricate suitablefabricators="brewkettle" requiredtime="300" requiresrecipe="false" amount="1">
+        <RequiredSkill identifier="cooking" level="20" />
+        <RequiredItem identifier="he-kegseawater" amount="1" />
+      </Fabricate>
+      <Fabricate suitablefabricators="sink" requiredtime="900" requiresrecipe="false" amount="1">
+        <RequiredSkill identifier="cooking" level="30" />
+        <RequiredItem tag="hose" amount="1" />
+        <RequiredItem tag="waterfilter" UseCondition="True" MinCondition="0.2" />
+      </Fabricate>
+      <Fabricate suitablefabricators="stove" requiredtime="600" requiresrecipe="false" amount="1">
+        <RequiredSkill identifier="cooking" level="10" />
+        <RequiredItem identifier="he-kegseawater" amount="1" />
+      </Fabricate>
+      <Holdable canBeCombined="true" removeOnCombined="false" selectkey="Select" canbepicked="true" pickkey="Select" slots="RightHand+LeftHand" holdpos="40,-40" holdangle="3" aimpos="65,-10" handle1="0,53" handle2="0,53" aimable="false" characterusable="true" msg="ItemMsgPickUpSelect" PickingTime="0">
+        <!-- Revert position if not emptying -->
+        <StatusEffect type="OnActive" target="This" holdpos="40,-40" holdangle="3" aimpos="65,-10" aimangle="0" setvalue="true" >
+          <Conditional hasstatustag="neq emptying" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" condition="-5" />
+        <StatusEffect type="OnUse" target="This" duration="0.1" statuseffecttags="emptying" holdpos="-40,0" holdangle="176" aimpos="0,0" aimangle="180" offset="0,-36" setvalue="true" comparison="and">
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" loop="true" />
+          <ParticleEmitter particle="waterdrop" velocitymin="0.0" velocitymax="10.0" particlespersecond="10" distancemin="-3" distancemax="3" />
+          <Conditional InWater="false" />
+        </StatusEffect>
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+          <SpawnItem identifier="he-kegempty" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Count="1" />
         </StatusEffect>
       </Holdable>
     </Item>
@@ -45,10 +146,10 @@
         <Price storeidentifier="merchantmilitary" multiplier="1.1" sold="false" />
         <Price storeidentifier="merchantmine" multiplier="1.1" sold="false" />
       </Price>
-      <Holdable canBeCombined="true" removeOnCombined="false" selectkey="Select" canbepicked="true" pickkey="Select" slots="RightHand+LeftHand" holdpos="40,-40" handle1="0,53" handle2="0,53" holdangle="3" msg="ItemMsgPickUpSelect" PickingTime="0" aimpos="65,-10" attachable="true" aimable="true">
+      <Holdable canBeCombined="true" removeOnCombined="false" selectkey="Select" canbepicked="true" pickkey="Select" slots="RightHand+LeftHand" holdpos="40,-40" handle1="0,53" handle2="0,53" holdangle="3" msg="ItemMsgPickUpSelect" PickingTime="0" aimpos="65,-10"  aimable="true">
         <StatusEffect type="OnBroken" target="This">
           <Remove />
-          <SpawnItem identifier="he-kegempty" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <SpawnItem identifier="he-kegempty" spawnposition="SameInventory" equip="true" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" condition="-5" disabledeltatime="false" offset="0,-36" >
           <Conditional IsActive="true" targetitemcomponent="Powered" />
@@ -93,10 +194,10 @@
         <Price storeidentifier="merchantmilitary" multiplier="1.1" sold="false" />
         <Price storeidentifier="merchantmine" multiplier="1.1" sold="false" />
       </Price>
-      <Holdable canBeCombined="true" removeOnCombined="false" selectkey="Select" canbepicked="true" pickkey="Select" slots="RightHand+LeftHand" holdpos="40,-40" handle1="0,53" handle2="0,53" holdangle="3" msg="ItemMsgPickUpSelect" PickingTime="0" aimpos="65,-10" attachable="true" aimable="true">
+      <Holdable canBeCombined="true" removeOnCombined="false" selectkey="Select" canbepicked="true" pickkey="Select" slots="RightHand+LeftHand" holdpos="40,-40" handle1="0,53" handle2="0,53" holdangle="3" msg="ItemMsgPickUpSelect" PickingTime="0" aimpos="65,-10"  aimable="true">
         <StatusEffect type="OnBroken" target="This">
           <Remove />
-          <SpawnItem identifier="he-kegempty" SpawnPositionType="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Count="1" Equip="false" />
+          <SpawnItem identifier="he-kegempty" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Count="1" Equip="false" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" condition="-5" disabledeltatime="false" offset="0,-36" >
           <Conditional IsActive="true" targetitemcomponent="Powered" />
@@ -142,10 +243,10 @@
         <Price storeidentifier="merchantmilitary" multiplier="1.1" sold="false" />
         <Price storeidentifier="merchantmine" multiplier="1.1" sold="false" />
       </Price>
-      <Holdable canBeCombined="true" removeOnCombined="false" selectkey="Select" canbepicked="true" pickkey="Select" slots="RightHand+LeftHand" holdpos="40,-40" handle1="0,53" handle2="0,53" holdangle="3" msg="ItemMsgPickUpSelect" PickingTime="0" aimpos="65,-10" attachable="true" aimable="true">
+      <Holdable canBeCombined="true" removeOnCombined="false" selectkey="Select" canbepicked="true" pickkey="Select" slots="RightHand+LeftHand" holdpos="40,-40" handle1="0,53" handle2="0,53" holdangle="3" msg="ItemMsgPickUpSelect" PickingTime="0" aimpos="65,-10"  aimable="true">
         <StatusEffect type="OnBroken" target="This">
           <Remove />
-          <SpawnItem identifier="he-kegempty" SpawnPositionType="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Count="1" Equip="false" />
+          <SpawnItem identifier="he-kegempty" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Count="1" Equip="false" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" condition="-5" disabledeltatime="false" offset="0,-36" >
           <Conditional IsActive="true" targetitemcomponent="Powered" />
@@ -190,10 +291,10 @@
         <Price storeidentifier="merchantmilitary" multiplier="1.1" sold="false" />
         <Price storeidentifier="merchantmine" multiplier="1.1" sold="false" />
       </Price>
-      <Holdable canBeCombined="true" removeOnCombined="false" selectkey="Select" canbepicked="true" pickkey="Select" slots="RightHand+LeftHand" holdpos="40,-40" handle1="0,53" handle2="0,53" holdangle="3" msg="ItemMsgPickUpSelect" PickingTime="0" aimpos="65,-10" attachable="true" aimable="true">
+      <Holdable canBeCombined="true" removeOnCombined="false" selectkey="Select" canbepicked="true" pickkey="Select" slots="RightHand+LeftHand" holdpos="40,-40" handle1="0,53" handle2="0,53" holdangle="3" msg="ItemMsgPickUpSelect" PickingTime="0" aimpos="65,-10"  aimable="true">
         <StatusEffect type="OnBroken" target="This">
           <Remove />
-          <SpawnItem identifier="he-kegempty" SpawnPositionType="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Count="1" Equip="true" />
+          <SpawnItem identifier="he-kegempty" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Count="1" Equip="true" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" condition="-5" disabledeltatime="false" offset="0,-36" >
           <Conditional IsActive="true" targetitemcomponent="Powered" />
@@ -240,10 +341,10 @@
         <Price storeidentifier="merchantmilitary" multiplier="1.1" sold="false" />
         <Price storeidentifier="merchantmine" multiplier="1.1" sold="false" />
       </Price>
-      <Holdable canBeCombined="true" removeOnCombined="false" selectkey="Select" canbepicked="true" pickkey="Select" slots="RightHand+LeftHand" holdpos="40,-40" handle1="0,53" handle2="0,53" holdangle="3" msg="ItemMsgPickUpSelect" PickingTime="0" aimpos="65,-10" attachable="true" aimable="true">
+      <Holdable canBeCombined="true" removeOnCombined="false" selectkey="Select" canbepicked="true" pickkey="Select" slots="RightHand+LeftHand" holdpos="40,-40" handle1="0,53" handle2="0,53" holdangle="3" msg="ItemMsgPickUpSelect" PickingTime="0" aimpos="65,-10"  aimable="true">
         <StatusEffect type="OnBroken" target="This">
           <Remove />
-          <SpawnItem identifier="he-kegempty" SpawnPositionType="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Count="1" Equip="true" />
+          <SpawnItem identifier="he-kegempty" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Count="1" Equip="true" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" condition="-5" disabledeltatime="false" offset="0,-36" >
           <Conditional IsActive="true" targetitemcomponent="Powered" />
@@ -289,10 +390,10 @@
         <Price storeidentifier="merchantmilitary" multiplier="1.1" sold="false" />
         <Price storeidentifier="merchantmine" multiplier="1.1" sold="false" />
       </Price>
-      <Holdable canBeCombined="true" removeOnCombined="false" selectkey="Select" canbepicked="true" pickkey="Select" slots="RightHand+LeftHand" holdpos="40,-40" handle1="0,53" handle2="0,53" holdangle="3" msg="ItemMsgPickUpSelect" PickingTime="0" aimpos="65,-10" attachable="true" aimable="true">
+      <Holdable canBeCombined="true" removeOnCombined="false" selectkey="Select" canbepicked="true" pickkey="Select" slots="RightHand+LeftHand" holdpos="40,-40" handle1="0,53" handle2="0,53" holdangle="3" msg="ItemMsgPickUpSelect" PickingTime="0" aimpos="65,-10"  aimable="true">
         <StatusEffect type="OnBroken" target="This">
           <Remove />
-          <SpawnItem identifier="he-kegempty" SpawnPositionType="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Count="1" Equip="true" />
+          <SpawnItem identifier="he-kegempty" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Count="1" Equip="true" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" condition="-5" disabledeltatime="false" offset="0,-36" >
           <Conditional IsActive="true" targetitemcomponent="Powered" />
@@ -339,10 +440,10 @@
         <Price storeidentifier="merchantmilitary" multiplier="1.1" sold="false" />
         <Price storeidentifier="merchantmine" multiplier="1.1" sold="false" />
       </Price>
-      <Holdable canBeCombined="true" removeOnCombined="false" selectkey="Select" canbepicked="true" pickkey="Select" slots="RightHand+LeftHand" holdpos="40,-40" handle1="0,53" handle2="0,53" holdangle="3" msg="ItemMsgPickUpSelect" PickingTime="0" aimpos="65,-10" attachable="true" aimable="true">
+      <Holdable canBeCombined="true" removeOnCombined="false" selectkey="Select" canbepicked="true" pickkey="Select" slots="RightHand+LeftHand" holdpos="40,-40" handle1="0,53" handle2="0,53" holdangle="3" msg="ItemMsgPickUpSelect" PickingTime="0" aimpos="65,-10"  aimable="true">
         <StatusEffect type="OnBroken" target="This">
           <Remove />
-          <SpawnItem identifier="he-kegempty" SpawnPositionType="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Count="1" Equip="true" />
+          <SpawnItem identifier="he-kegempty" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Count="1" Equip="true" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" condition="-5" disabledeltatime="false" offset="0,-36" >
           <Conditional IsActive="true" targetitemcomponent="Powered" />
@@ -389,10 +490,10 @@
         <Price storeidentifier="merchantmilitary" multiplier="1.1" sold="false" />
         <Price storeidentifier="merchantmine" multiplier="1.1" sold="false" />
       </Price>
-      <Holdable canBeCombined="true" removeOnCombined="false" selectkey="Select" canbepicked="true" pickkey="Select" slots="RightHand+LeftHand" holdpos="40,-40" handle1="0,53" handle2="0,53" holdangle="3" msg="ItemMsgPickUpSelect" PickingTime="0" aimpos="65,-10" attachable="true" aimable="true">
+      <Holdable canBeCombined="true" removeOnCombined="false" selectkey="Select" canbepicked="true" pickkey="Select" slots="RightHand+LeftHand" holdpos="40,-40" handle1="0,53" handle2="0,53" holdangle="3" msg="ItemMsgPickUpSelect" PickingTime="0" aimpos="65,-10"  aimable="true">
         <StatusEffect type="OnBroken" target="This">
           <Remove />
-          <SpawnItem identifier="he-kegempty" SpawnPositionType="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Count="1" Equip="true" />
+          <SpawnItem identifier="he-kegempty" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Count="1" Equip="true" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" condition="-5" disabledeltatime="false" offset="0,-36" >
           <Conditional IsActive="true" targetitemcomponent="Powered" />
@@ -439,10 +540,10 @@
         <Price storeidentifier="merchantmilitary" multiplier="1.1" sold="false" />
         <Price storeidentifier="merchantmine" multiplier="1.1" sold="false" />
       </Price>
-      <Holdable canBeCombined="true" removeOnCombined="false" selectkey="Select" canbepicked="true" pickkey="Select" slots="RightHand+LeftHand" holdpos="40,-40" handle1="0,53" handle2="0,53" holdangle="3" msg="ItemMsgPickUpSelect" PickingTime="0" aimpos="65,-10" attachable="true" aimable="true">
+      <Holdable canBeCombined="true" removeOnCombined="false" selectkey="Select" canbepicked="true" pickkey="Select" slots="RightHand+LeftHand" holdpos="40,-40" handle1="0,53" handle2="0,53" holdangle="3" msg="ItemMsgPickUpSelect" PickingTime="0" aimpos="65,-10"  aimable="true">
         <StatusEffect type="OnBroken" target="This">
           <Remove />
-          <SpawnItem identifier="he-kegempty" SpawnPositionType="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Count="1" Equip="true" />
+          <SpawnItem identifier="he-kegempty" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Count="1" Equip="true" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" condition="-5" disabledeltatime="false" offset="0,-36" >
           <Conditional IsActive="true" targetitemcomponent="Powered" />
@@ -464,95 +565,6 @@
       </CustomInterface>
     </Item>
     
-    <Item name="Keg of Sea Water" identifier="he-kegseawater" Tags="keg,waterkeg,seawaterkeg,crate" category="Misc" subcategory="Kegs" maxstacksize="1" description="A keg full of sea water. Can be used to refill bottles at a refill station. Can be cooked into clean water at a stove or brewing kettle. Also used in hydroponic planters." scale="0.5" impactsoundtag="impact_metal_heavy" canflipx="false" isshootable="true">
-      <PreferredContainer primary="kitchen" secondary="cargocontainer"/>
-      <!-- JANK JANK JANK Instead of just using containedsprite and rotating it 90°, I have to
-      -add a 1x1 invisible containedsprite, enabled in crate shelves
-      -add an inventoryicon, otherwise the icon becomes invisible in shelves
-      -add a decorativesprite that is the main sprite rotated 90°, because containedsprite doesnt handle rotation
-      -use decorativespritebehavior="HideWhenNotVisible" in the containedsprite to HIDE the decorativesprite when not contained 
-      TODO: simplify with rotation="90" if it ever gets added https://github.com/FakeFishGames/Barotrauma/discussions/16174 -->
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" sourcerect="546,0,91,138" depth="0.699" origin="0.5,0.5" canflipx="false" />      
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" sourcerect="546,0,91,138" origin="0.5,0.5" />
-      <ContainedSprite texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" allowedcontainertags="cargocontainer" sourcerect="0,0,1,1" depth="0.699" origin="0.5,0.5" decorativespritebehavior="HideWhenNotVisible" />
-      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" sourcerect="546,0,91,138" depth="0.699" origin="0.5,0.5" rotation="90" />
-      <Body width="91" height="136" density="10.1" />
-      <Deconstruct time="2" requireddeconstructor="deconstructor">
-        <Item identifier="aluminium" amount="3" outcondition="1.0"/>
-      </Deconstruct>
-      <Fabricate suitablefabricators="sink" requiredtime="900" requiresrecipe="false" amount="1">
-        <RequiredSkill identifier="cooking" level="30" />
-        <RequiredItem tag="hose" amount="1" />
-      </Fabricate>
-      <Holdable canBeCombined="true" removeOnCombined="false" selectkey="Select" canbepicked="true" pickkey="Select" slots="RightHand+LeftHand" holdpos="40,-40" holdangle="3" aimpos="65,-10" handle1="0,53" handle2="0,53" aimable="false" characterusable="true" msg="ItemMsgPickUpSelect" PickingTime="0">
-        <!-- Revert position if not emptying -->
-        <StatusEffect type="OnActive" target="This" holdpos="40,-40" holdangle="3" aimpos="65,-10" aimangle="0" setvalue="true" >
-          <Conditional hasstatustag="neq emptying" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" condition="-5" />
-        <StatusEffect type="OnUse" target="This" duration="0.1" statuseffecttags="emptying" holdpos="-40,0" holdangle="176" aimpos="0,0" aimangle="180" offset="0,-36" setvalue="true" comparison="and">
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" loop="true" />
-          <ParticleEmitter particle="waterdrop" velocitymin="0.0" velocitymax="10.0" particlespersecond="10" distancemin="-3" distancemax="3" />
-          <Conditional InWater="false" />
-        </StatusEffect>
-        <StatusEffect type="OnBroken" target="This">
-          <Remove />
-          <SpawnItem identifier="he-kegempty" SpawnPositionType="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Count="1" Equip="true" />
-        </StatusEffect>
-        <!-- Exclusive to salt keg: Reload in salt water -->
-        <StatusEffect type="OnSecondaryUse" target="This" condition="10" comparison="And">
-          <Conditional Condition="lt 100" />
-          <Conditional InWater="true" />
-          <ParticleEmitter particle="bubbles" particlespersecond="2" scalemin="0.25" scalemax="0.5" distancemin="30" distancemax="35" velocitymin="20" velocitymax="50" copyentityangle="true" anglemin="90" anglemax="90" colormultiplier="255,255,255,255" lifetimemultiplier="1" /> 
-          <Sound file="Content/Sounds/Water/SplashLoop.ogg" range="200" volume="1" loop="true" frequencymultiplier="2"/>
-        </StatusEffect>
-      </Holdable>
-    </Item>    
-    
-    <Item name="Keg of Water" identifier="he-kegwater" category="Misc" subcategory="Kegs" maxstacksize="1" cargocontaineridentifier="metalcrate" description="A keg full of water. Can be used to refill bottles at a refill station. Also used in hydroponic planters." Tags="keg,waterkeg,crate" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_metal_heavy" isshootable="true" requireaimtouse="true" canflipx="false">
-      <PreferredContainer primary="kitchen" secondary="crewcab"/>
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/Kegs.png" sourcerect="637,0,91,138" depth="0.699" origin="0.5,0.5" canflipx="false"/>
-      <Body width="91" height="136" density="10.1" />
-      <Deconstruct time="2" requireddeconstructor="deconstructor">
-        <Item identifier="aluminium" amount="3" outcondition="1.0"/>
-      </Deconstruct>
-      <Fabricate suitablefabricators="brewkettle" requiredtime="300" requiresrecipe="false" amount="1">
-        <RequiredSkill identifier="cooking" level="20" />
-        <RequiredItem identifier="he-kegseawater" amount="1" />
-      </Fabricate>
-      <Fabricate suitablefabricators="sink" requiredtime="900" requiresrecipe="false" amount="1">
-        <RequiredSkill identifier="cooking" level="30" />
-        <RequiredItem tag="hose" amount="1" />
-        <RequiredItem tag="waterfilter" UseCondition="True" MinCondition="0.2" />
-      </Fabricate>
-      <Fabricate suitablefabricators="stove" requiredtime="600" requiresrecipe="false" amount="1">
-        <RequiredSkill identifier="cooking" level="10" />
-        <RequiredItem identifier="he-kegseawater" amount="1" />
-      </Fabricate>
-      <Holdable canBeCombined="true" removeOnCombined="false" selectkey="Select" canbepicked="true" pickkey="Select" slots="RightHand+LeftHand" holdpos="40,-40" handle1="0,53" handle2="0,53" holdangle="3" msg="ItemMsgPickUpSelect" PickingTime="0" aimpos="65,-10" attachable="true" aimable="true">
-        <StatusEffect type="OnBroken" target="This">
-          <Remove />
-          <SpawnItem identifier="he-kegempty" SpawnPositionType="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Count="1" Equip="true" />
-        </StatusEffect>
-        <StatusEffect type="Always" target="This" condition="-5" disabledeltatime="false" offset="0,-36" >
-          <Conditional IsActive="true" targetitemcomponent="Powered" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" loop="true" />
-          <ParticleEmitter particle="waterdrop" velocitymin="0.0" velocitymax="10.0" particlespersecond="50" />
-        </StatusEffect>
-        <StatusEffect type="Always" target="This" holdpos="-40,0" holdangle="180" aimpos="0,0" aimangle="180" setvalue="true" disabledeltatime="true">
-          <Conditional IsActive="true" targetitemcomponent="Powered" />
-        </StatusEffect>
-      </Holdable>
-      <Powered currpowerconsumption="0" IsOn="false" />
-      <CustomInterface canbeselected="false" drawhudwhenequipped="true">
-        <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
-        <Button text="interaction.emptykeg">
-          <StatusEffect type="OnUse" target="This" IsActive="true" targetitemcomponent="Powered" setvalue="true">
-            <Conditional IsActive="false" targetitemcomponent="Powered" />
-          </StatusEffect>
-        </Button>
-      </CustomInterface>
-    </Item>
   </Items>
 
 </Override>
