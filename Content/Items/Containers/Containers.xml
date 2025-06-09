@@ -314,7 +314,7 @@
         <RequiredItem identifier="he-glassfragments" amount="4" />
         <RequiredItem identifier="steel" amount="3" />
       </Fabricate>
-      <ItemContainer capacity="12" maxstacksize="1" canbeselected="true" hideitems="false" itempos="36,-52" iteminterval="30,-80" itemrotation="0" itemsperrow="6" slotsperrow="6" containedspritedepths="0.798,0.798,0.798,0.798,0.798,0.798,0.799,0.799,0.799,0.799,0.799,0.799" msg="ItemMsgInteractSelect" canflipx="false">
+      <ItemContainer capacity="12" maxstacksize="1" canbeselected="true" hideitems="false" itempos="36,-52" iteminterval="30,-80" itemrotation="0" itemsperrow="6" slotsperrow="6" containedspritedepths="0.798,0.798,0.798,0.798,0.798,0.798,0.799,0.799,0.799,0.799,0.799,0.799" msg="ItemMsgInteractSelect" canflipx="false" ItemsUseInventoryPlacement="true">
         <Containable items="bottle,emptybottle" />
         <GuiFrame relativesize="0.3,0.2" anchor="BottomCenter" pivot="BottomCenter" relativeoffset="0,0.4" style="ItemUI" />
       </ItemContainer>
