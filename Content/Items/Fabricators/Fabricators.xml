@@ -256,6 +256,10 @@
         <poweronsound file="Content/Items/PowerOnLight3.ogg" range="600" loop="false" />
         <StatusEffect type="InWater" target="This" condition="-0.5" />
       </Deconstructor>
+      <LightComponent LightColor="200,200,80,180" LightOffset="5,100" flicker="0.3" flickerspeed="0.5" IsOn="true" powerconsumption="1" range="20" castshadows="false" allowingameediting="false" canbeselected="false" comparison="And">
+        <!-- <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.685" sourcerect="492,301,85,168" origin="0.5,0.5" /> -->
+        <IsActiveConditional isActive="true" targetitemcomponent="Deconstructor" />
+      </LightComponent>
       <ExponentiationComponent exponent="0" canbeselected="false" allowingameediting="false" />
       <!-- Blueprint selector -->
       <CustomInterface canbeselected="true" > <!-- ElementStates="true,1,50" -->
