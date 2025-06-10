@@ -123,7 +123,7 @@
         </StatusEffect>
       </Repairable>
       <ItemContainer selectkey="Select" capacity="1" canbeselected="true" hideitems="true" slotsperrow="2" uilabel="" allowuioverlap="true">
-        <!--<SlotIcon slotindex="1" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="492,0,85,85" origin="0.5,0.5" />-->
+        <!-- <SlotIcon slotindex="1" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="492,0,85,85" origin="0.5,0.5" /> -->
         <Containable items="distilleringredient" />
         <SubContainer capacity="1" maxstacksize="1">
           <Containable items="distilleradditive,yeastshroom" />
@@ -133,6 +133,7 @@
         <Containable items="smallitem" />
       </ItemContainer>
     </Item>
+    
     <Item name="Brewing Kettle" identifier="he-brewkettle" tags="brewkettle,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Brewery" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="Used to brew kegs of almost any kind of beverage. Needs power." isshootable="true" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2" canflipx="true">
       <Body width="370" height="355" density="20"/>
       <Upgrade gameversion="0.10.4.0">
@@ -211,8 +212,12 @@
           <Affliction identifier="burn" strength="5" />
         </StatusEffect>
       </Repairable>
-      <ItemContainer selectkey="Select" capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="" allowuioverlap="true">
-        <!--<Containable items="emptybottle" />-->
+      <ItemContainer selectkey="Select" capacity="4" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="" allowuioverlap="true">
+        <SlotIcon slotindex="4" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="237,0,85,85" origin="0.5,0.5" />
+        <Containable items="smallitem" />
+        <SubContainer capacity="1" maxstacksize="1" >
+          <Containable items="waterkeg" />
+        </SubContainer>
       </ItemContainer>
       <ItemContainer selectkey="Select" capacity="1" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="" allowuioverlap="true">
         <!--<Containable items="bottle,liquorcrate" />-->
