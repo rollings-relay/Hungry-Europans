@@ -589,6 +589,8 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-kitchencounter2>Can store up to 30 different small or medium items.</entitydescription.he-kitchencounter2><!--Changed as of Patch 11 | New identifier-->
 <entityname.he-refrigerator>Refrigerator</entityname.he-refrigerator>
 <entitydescription.he-refrigerator>Prevents spoilage. Can only store food and drinks. Needs power.</entitydescription.he-refrigerator><!--Changed as of Patch 10-->
+
+<!-- TODO: these descriptions are a little sad -->
 <entityname.he-stove>Stove</entityname.he-stove>
 <entitydescription.he-stove>Used for cooking. Needs power.</entitydescription.he-stove>
 <entityname.he-oven>Oven</entityname.he-oven>
@@ -597,6 +599,8 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-cuttingboard>Used to prepare ingredients.</entitydescription.he-cuttingboard>
 <entityname.he-fryer>Fryer</entityname.he-fryer><!--Patch 10-->
 <entitydescription.he-fryer>Used for frying stuff. Needs power.</entitydescription.he-fryer><!--Patch 10-->
+<entityname.he-electricgrill>Fryer</entityname.he-electricgrill><!--Patch 10-->
+<entitydescription.he-electricgrill>Used for grilling meat. Needs power.</entitydescription.he-electricgrill><!--Patch 10-->
 <entityname.he-distiller>Distiller</entityname.he-distiller><!--Patch 10-->
 <entitydescription.he-distiller>Used to distill ethanol from sugar and sea yeast shrooms. Needs power.</entitydescription.he-distiller><!--Patch 10-->
 <entityname.he-brewkettle>Brewing Kettle</entityname.he-brewkettle><!--Patch 10-->
