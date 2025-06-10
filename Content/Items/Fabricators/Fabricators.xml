@@ -256,24 +256,53 @@
         <poweronsound file="Content/Items/PowerOnLight3.ogg" range="600" loop="false" />
         <StatusEffect type="InWater" target="This" condition="-0.5" />
       </Deconstructor>
-      
-        <!-- TODO: Use a custom interface to spawn blueprints directly in the printer slot instead of making them at fabricator: 
-        -cycle between blueprints like a jukebox cycles between songs, 
-        -press button to spawn the blueprints
-        -blueprints must self-delete if not inside a bottle printer to avoid printing a million of them        
-        I suck at UIs and buttons so you'll have to figure this out -->
-        <!-- <CustomInterface canbeselected="true" ElementStates="true,1,50">
-          <GuiFrame relativesize="0.2,0.15" anchor="CenterLeft" pivot="BottomLeft" relativeoffset="0.006,-0.05" style="ItemUI" />
-          <Button text="Signal out #1" connection="signal_out1" />
-          <TickBox text="speaker.on" targetitemcomponent="Powered" propertyname="IsActive" ContinuousSignal="false" GetValueInterval="1" />
-          <IntegerInput text="speaker.trackselection" propertyname="ManuallySelectedSound" targetitemcomponent="Powered" min="0" max="3">
-            <StatusEffect type="OnUse" targettype="This">
-              <sound file="Content/Sounds/ClubMusic_transitionScratch.ogg" range="1000.0" />
-            </StatusEffect>
-          </IntegerInput>
-        <IntegerInput text="speaker.volume" propertyname="PowerConsumption" targetitemcomponent="Powered" min="0" max="100" step="10"/>
-      </CustomInterface> -->
-      
+      <ExponentiationComponent exponent="0" canbeselected="false" allowingameediting="false" />
+      <!-- Blueprint selector -->
+      <CustomInterface canbeselected="true" > <!-- ElementStates="true,1,50" -->
+        <GuiFrame relativesize="0.2,0.15" anchor="CenterLeft" pivot="BottomLeft" relativeoffset="0.006,-0.05" style="ItemUI" />
+        <IntegerInput text="bottleprinter.blueprintselection" propertyname="exponent" targetitemcomponent="ExponentiationComponent" min="0" max="7"/>
+        <Button text="bottleprinter.pickblueprint" >
+          <!-- Remove existing blueprint, figure out a way to not spam this-->
+          <StatusEffect type="OnUse" target="Contained" targetslot="1" targets="blueprint" >
+            <Conditional HasStatusTag="neq preventprintspam" />
+            <Removeitem />
+            <sound file="%ModDir:2954998725%/Content/Sounds/Items/Fabricators/VendingMachine.ogg" type="OnUse" range="150.0" loop="true" volume="2"/>
+          </StatusEffect>
+          <!-- spawn different blueprint based on exponent number -->
+          <StatusEffect type="OnUse" target="This" delay="0.1" stackable="false">
+            <Conditional exponent="0" targetitemcomponent="ExponentiationComponent" />
+            <SpawnItem identifier="he-blueprintbottle" spawnposition="ThisInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false"/>
+          </StatusEffect>
+          <StatusEffect type="OnUse" target="This" delay="0.1" stackable="false">
+            <Conditional exponent="1" targetitemcomponent="ExponentiationComponent" />
+            <SpawnItem identifier="he-blueprintbottlebeer" spawnposition="ThisInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false"/>
+          </StatusEffect>
+          <StatusEffect type="OnUse" target="This" delay="0.1" stackable="false">
+            <Conditional exponent="2" targetitemcomponent="ExponentiationComponent" />
+            <SpawnItem identifier="he-blueprintbottlerum" spawnposition="ThisInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false"/>
+          </StatusEffect>
+          <StatusEffect type="OnUse" target="This" delay="0.1" stackable="false">
+            <Conditional exponent="3" targetitemcomponent="ExponentiationComponent" />
+            <SpawnItem identifier="he-blueprintbottlewhiskey" spawnposition="ThisInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false"/>
+          </StatusEffect>
+          <StatusEffect type="OnUse" target="This" delay="0.1" stackable="false">
+            <Conditional exponent="4" targetitemcomponent="ExponentiationComponent" />
+            <SpawnItem identifier="he-blueprintbottlehalucinova" spawnposition="ThisInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false"/>
+          </StatusEffect>
+          <StatusEffect type="OnUse" target="This" delay="0.1" stackable="false">
+            <Conditional exponent="5" targetitemcomponent="ExponentiationComponent" />
+            <SpawnItem identifier="he-blueprintjar" spawnposition="ThisInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false"/>
+          </StatusEffect>
+          <StatusEffect type="OnUse" target="This" delay="0.1" stackable="false">
+            <Conditional exponent="6" targetitemcomponent="ExponentiationComponent" />
+            <SpawnItem identifier="he-blueprintshaker" spawnposition="ThisInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false"/>
+          </StatusEffect>
+          <StatusEffect type="OnUse" target="This" delay="0.1" stackable="false">
+            <Conditional exponent="7" targetitemcomponent="ExponentiationComponent" />
+            <SpawnItem identifier="he-blueprintcup" spawnposition="ThisInventory" spawnifcantbecontained="false" SpawnIfInventoryFull="false"/>
+          </StatusEffect>
+        </Button>
+      </CustomInterface>
       <ItemContainer selectkey="Select" capacity="0" maxstacksize="1" canbeselected="true" hideitems="true" hudpos="0.5, 0.4" slotsperrow="3" allowuioverlap="true">
         <!-- <SlotIcon slotindex="0" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="291,1,62,14" origin="0.5,0.5" /> -->
         <SlotIcon slotindex="1" texture="%ModDir:2954998725%/Content/Items/Fabricators/Blueprints1.png" sourcerect="558,467,278,278" origin="0.5,0.5" />
@@ -299,7 +328,7 @@
         <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,280" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
         <RequiredSkill identifier="mechanical" level="80" />
         <RequiredItem items="wrench" type="Equipped" />
-        <ParticleEmitter particle="fleshsmoke" particleburstamount="5" particlespersecond="5" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" particleburstinterval="2" scalemin="0.5" scalemax="1" mincondition="0.0" maxcondition="15.0" />
+        <ParticleEmitter particle="fleshsmoke" particleburstamount="5" particlespersecond="5" anglemin="70" anglemax="110" velocitymin="20" velocitymax="50" particleburstinterval="2" scalemin="0.5" scalemax="1" mincondition="0.0" maxcondition="15.0" />
       </Repairable>
       <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
         <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />

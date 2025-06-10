@@ -918,6 +918,11 @@ SEARCH FOR THE FOLLOWING:                                                       
 <bottleprinter.missingitem.blueprint>MATERIAL INSERTED\nERROR: NO BLUEPRINT FOUND! PLEASE INSERT A BLUEPRINT.</bottleprinter.missingitem.blueprint><!--Patch 10-->
 <bottleprinter.missingitem.glassfragments>BLUEPRINT INSERTED\nERROR: NO GLASS FRAGMENTS FOUND! PLEASE INSERT GLASS FRAGMENTS.</bottleprinter.missingitem.glassfragments><!--Patch 10-->
 <bottleprinter.empty>1X BOTTLE: 1X GLASS FRAGMENTS\n1X JAR: 2X GLASS FRAGMENTS\n2X CUPS: 1X GLASS FRAGMENTS\n2X SHAKERS: 1X GLASS FRAGMENTS\n------------------------------------------\nPUT A CRATE INTO THE OUTPUT SLOT</bottleprinter.empty><!--Changed as of Patch 13-->
+
+<bottleprinter.blueprintselection>Select Blueprint Model</bottleprinter.blueprintselection>
+<bottleprinter.pickblueprint>Pick Blueprint</bottleprinter.pickblueprint>
+
+
 <he-bottleprinter.output>Possible prints:</he-bottleprinter.output><!--Patch 10-->
 
 <distiller.distill>DISTILL</distiller.distill><!--Patch 10-->
