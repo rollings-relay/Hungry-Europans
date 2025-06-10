@@ -137,7 +137,7 @@
       </Holdable>
       <AiTarget sightrange="1000" static="True" />
     </Item>
-    <Item name="Burned Meat Patty" identifier="he-burnedmeatpatty" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,allowongrill" spritecolor="41,41,41,255" inventoryiconcolor="41,41,41,255" containercolor="41,41,41,255" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
+    <Item name="Burned Meat Patty" identifier="he-burnedmeatpatty" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,allowongrill,burnedfood" spritecolor="41,41,41,255" inventoryiconcolor="41,41,41,255" containercolor="41,41,41,255" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,458,35,8" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="279,459,31,17" origin="0.5,0.5" />
@@ -309,7 +309,7 @@
       </Holdable>
       <AiTarget sightrange="1000" static="True" />
     </Item>
-    <Item name="Burned Sausage" identifier="he-burnedsausage" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,allowongrill" spritecolor="41,41,41,255" inventoryiconcolor="41,41,41,255" containercolor="41,41,41,255" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
+    <Item name="Burned Sausage" identifier="he-burnedsausage" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,allowongrill,burnedfood" spritecolor="41,41,41,255" inventoryiconcolor="41,41,41,255" containercolor="41,41,41,255" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,444,67,14" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,444,67,14" origin="0.5,0.5" />

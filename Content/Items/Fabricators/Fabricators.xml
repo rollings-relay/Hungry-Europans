@@ -831,6 +831,10 @@
         <StatusEffect type="OnActive" targettype="This" tags="activegrill" condition="-0.03" interval="0.1" duration="0.2">
           <Conditional Voltage="gt 0.5" />
         </StatusEffect>
+        <StatusEffect type="OnActive" targettype="Contained">
+          <Conditional Hastag="burnedfood" />
+          <ParticleEmitter particle="darksmoke" particlespersecond="2" scalemin="1" scalemax="2" />
+        </StatusEffect>
         <!-- spawn a random effect item every ~12 seconds if the item's health is below 65% and is currently active and has voltage -->
         <StatusEffect type="OnActive" target="This" interval="12.1" SpawnItemRandomly="True" comparison="And">
           <Conditional InWater="false" />
