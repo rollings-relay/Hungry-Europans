@@ -1023,6 +1023,9 @@
           <RequiredItem items="dirtytableware" type="contained" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/SinkScrub.ogg" loop="true" range="500" volume="1" />
         </StatusEffect>
+        <StatusEffect type="OnActive" target="This" >
+          <!-- <ParticleEmitter particle="waterdrop" velocitymin="0.0" velocitymax="0.0" particlespersecond="30" colormultiplier="50,50,255,255" lifetimemultiplier="0.1" /> -->
+        </StatusEffect>
       </Fabricator>
       <ItemComponent IsActive="false" allowingameediting="false" canbeselected="false" comparison="And">
         <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/Sink.ogg" type="OnActive" volume="1.5" range="450" loop="true" />
