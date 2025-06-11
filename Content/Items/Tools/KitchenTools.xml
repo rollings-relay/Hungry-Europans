@@ -71,9 +71,13 @@
         </StatusEffect>
       </Holdable>
     </Item>
+    
     <Item name="Pot with Water" identifier="he-potwithwater" category="Equipment" maxstacksize="1" Tags="smallitem,pot,waterpot,tableware" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="kitchen" />
       <PreferredContainer secondary="crewcab" />
+      <Fabricate suitablefabricators="sink" requiredtime="20" requiresrecipe="false" amount="1" displayname="fill">
+        <RequiredItem identifier="he-pot" amount="1" UseCondition="False" MinCondition="0.0" />
+      </Fabricate>
       <Deconstruct time="5">
       </Deconstruct>
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1815,121,59,48" origin="0.5,0.5" />
@@ -92,6 +96,7 @@
         </Button>
       </CustomInterface>
     </Item>
+    
     <Item name="Dirty Pot" identifier="he-dirtypot" category="Equipment" maxstacksize="1" Tags="smallitem,pot,dirtypot,dirtytableware,tableware" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="kitchen" />
       <PreferredContainer secondary="crewcab" />
