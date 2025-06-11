@@ -1355,6 +1355,7 @@
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,128,128,128" origin="0,0" />
     </Affliction>
 
+    <!-- TODO: merge paint afflictions so they dont stack? what's the point of having 5? -->
     <!--Red Paint-->
     <Affliction name="High on Red Paint"
       identifier="he-drankredpaint"
