@@ -48,6 +48,8 @@
     <!--END OF OVERRIDES-->
     
     <!-- FABRICATORS -->
+    
+    <!-- Distills ethanol and flour?  -->
     <Item name="Distiller" identifier="he-distiller" tags="distiller,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Brewery" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="Used to distill ethanol from sugar and sea yeast shrooms. Needs power." isshootable="true" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2" canflipx="true">
       <Body width="322" height="410" density="20" />
       <Upgrade gameversion="0.10.4.0">
@@ -134,6 +136,7 @@
       </ItemContainer>
     </Item>
     
+    <!-- Brews kegs of various liquids  -->
     <Item name="Brewing Kettle" identifier="he-brewkettle" tags="brewkettle,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Brewery" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="Used to brew kegs of almost any kind of beverage. Needs power." isshootable="true" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2" canflipx="true">
       <Body width="370" height="355" density="20"/>
       <Upgrade gameversion="0.10.4.0">
@@ -224,7 +227,8 @@
       </ItemContainer>
     </Item>
     
-    <!-- TODO: spawn blueprints directly from this -->
+    <!-- Prints bottles from glass shards, you can select the type of bottle 
+    Uses a deconstructor instead of a fabricator because it allows the bottles to go inside a crate automatically -->
     <Item name="Bottle Printer" identifier="he-bottleprinter" tags="bottleprinter,kitchenfabricator,donttakeitems,dontsellitems" description="Used to mass produce bottles. Needs power." texturescale="1.0,1.0" scale="0.5" category="Machine" subcategory="Brewery" isshootable="true">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="695,1,212,332" depth="0.795" premultiplyalpha="false" origin="0.5,0.5" />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="695,334,212,332" depth="0.795" premultiplyalpha="false" origin="0.5,0.5" maxcondition="80" fadein="true" />
@@ -352,6 +356,7 @@
       </ConnectionPanel>
     </Item>
     
+    <!-- allows refilling empty bottles from kegs -->
     <Item name="Refill Station" identifier="he-refillstation" tags="refillstation,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Brewery" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="Used to refill empty bottles from a keg. Needs power." isshootable="true" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2" canflipx="false">
       <Body width="167" height="236" density="20"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="912,1,167,238" depth="0.797" premultiplyalpha="false" origin="0.5,0.5" />
@@ -436,6 +441,114 @@
       </ItemContainer>
     </Item>
     
+    <!-- cleans dirty tableware and fills water bottles -->
+    <Item name="Sink" identifier="sink" tags="kitchen,sink" category="Machines" description="Clean tableware or fill pots and bottles with water. Water not save for consumption." scale="0.5" isshootable="true" requireaimtouse="false" impactsoundtag="impact_metal_heavy">
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.786" sourcerect="612,366,135,95" origin="0.5,0.5" />
+      <!-- DecorativeSprite to display the lower half of the sink behind objects -->
+      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="612,456,135,94" depth="0.801" origin="0.5,-0.45" />
+      <Body width="80" height="164" density="15" />
+      <Deconstruct time="10">
+        <Item identifier="steel" amount="2" />
+      </Deconstruct>
+      <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="false">
+        <RequiredSkill identifier="mechanical" level="30" />
+        <RequiredItem identifier="titaniumaluminiumalloy" amount="1" /><!--150-->
+        <RequiredItem identifier="plastic" amount="3" /><!--45x3-->
+        <RequiredItem identifier="fpgacircuit" amount="2" /><!--80x2-->
+      </Fabricate>
+      <Fabricator selectkey="Select" canbeselected="true" powerconsumption="0.0" msg="ItemMsgInteractSelect">
+        <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
+        <StatusEffect type="OnActive" target="This" targetitemcomponent="ItemComponent" IsActive="true" setvalue="true">
+          <Conditional IsActive="false" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/coffee_start.ogg" loop="false" range="500" volume="2" />
+        </StatusEffect>
+        <StatusEffect type="OnActive" target="This" comparison="And">
+          <RequiredItem items="cleaningagent" type="contained" />
+          <RequiredItem items="dirtytableware" type="contained" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/SinkScrub.ogg" loop="true" range="500" volume="1" />
+        </StatusEffect>
+        <StatusEffect type="OnActive" target="This" >
+          <!-- <ParticleEmitter particle="waterdrop" velocitymin="0.0" velocitymax="0.0" particlespersecond="30" colormultiplier="50,50,255,255" lifetimemultiplier="0.1" /> -->
+        </StatusEffect>
+      </Fabricator>
+      <ItemComponent IsActive="false" allowingameediting="false" canbeselected="false" comparison="And">
+        <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/Sink.ogg" type="OnActive" volume="1.5" range="450" loop="true" />
+        <!-- while the pump is on, check if the fabricator is off or receiving too little voltage to apply the "stop" status tag -->
+        <StatusEffect type="OnActive" target="This" targetitemcomponent="Fabricator" tags="stop" duration="0.1" comparison="OR">
+          <Conditional IsActive="false" />
+        </StatusEffect>
+        <!-- while the pump is on, check for the "stop" status tag to play the end sound effect and turn the pump off -->
+        <StatusEffect type="OnActive" target="This" targetitemcomponent="ItemComponent" IsActive="false" setvalue="true">
+          <Conditional HasStatusTag="eq stop" />
+          <!-- <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/SinkStopping.ogg" loop="false" range="500" volume="2" selectionmode="All" /> -->
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/SinkDrain.ogg" loop="false" range="500" volume="2" selectionmode="All" />
+        </StatusEffect>
+      </ItemComponent>
+      <Holdable slots="RightHand+LeftHand" canbeselected="true" selectkey="Select" canbepicked="true" pickkey="Action" PickingTime="5" attachable="true" holdpos="70,-40" handle1="-60,30" handle2="-20,50">
+        <RequiredItem items="wrench" type="Equipped" />
+        <!-- slow down the character carrying the device -->
+        <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.3" PropulsionSpeedMultiplier="0.3" setvalue="true" duration="0.1" />
+        <!-- drop contained items if the device is detached -->
+        <StatusEffect type="OnContained" target="This">
+          <DropContainedItems />
+        </StatusEffect>
+      </Holdable>
+      <ItemContainer canbeselected="true" selectkey="Select" capacity="2" maxstacksize="1" hideitems="true" allowuioverlap="true">
+        <Containable items="pot,emptybottle,bottle,tableware,cleaningagent" />
+        <!-- TODO: adjust these icons for filter and hose -->
+        <!-- <SlotIcon slotindex="2" texture="Content/Items/InventoryIconAtlas2.png" sourcerect="256,320,64,64" origin="0.5,0.5" /> -->
+        <!-- <SlotIcon slotindex="3" texture="Content/Items/InventoryIconAtlas2.png" sourcerect="128,320,64,64" origin="0.5,0.5" /> -->
+        <SubContainer capacity="1">
+          <Containable items="waterfilter" />
+        </SubContainer>
+        <SubContainer capacity="1">
+          <Containable items="hose" />
+        </SubContainer>
+      </ItemContainer>
+      <ItemContainer selectkey="Select" capacity="1" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="" allowuioverlap="true">
+        <Containable items="pot,emptybottle,bottle,tableware"/>
+      </ItemContainer>
+    </Item> 
+    
+    <!-- chops ingredients as long as you interact with it  -->
+    <Item name="Cutting Board" identifier="he-cuttingboard" tags="cuttingboard,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="" isshootable="true" scale="0.5" damagedbyexplosions="false" GrabWhenSelected="true">
+      <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.45" />
+      <Body width="123" height="66" density="30" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1924,0,124,66" depth="0.797" origin="0.45,0.44" />
+      <DecorativeSprite name="idle knife" texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1674,0,124,66" depth="0.796" origin="0.5,0.5" comparison="and" >
+        <IsActiveConditional IsActive="False" targetitemcomponent="Fabricator" />
+      </DecorativeSprite>
+      <DecorativeSprite name="animated knife" texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1798,0,124,66" depth="0.798" origin="0.5,0.5" offset="0,-12" offsetanim="Noise" offsetanimspeed="2" rotationanim="Noise" rotation="15" rotationspeed="2" comparison="and" >
+        <AnimationConditional Voltage="gt 0.5" targetitemcomponent="Fabricator" />
+        <IsActiveConditional IsActive="True" targetitemcomponent="Fabricator" />
+      </DecorativeSprite>
+      <Price baseprice="99" sold="true">
+        <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="1" />
+        <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="3" />
+      </Price>
+      <Fabricate suitablefabricators="fabricator" requiredtime="40">
+        <RequiredItem identifier="iron" amount="1" />
+        <RequiredItem identifier="plastic" amount="3"/>
+      </Fabricate>
+      <Fabricator canbeselected="true" powerconsumption="10.0" msg="ItemMsgInteractSelect">
+        <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
+        <sound file="%ModDir:2954998725%/Content/Sounds/Items/Fabricators/CuttingBoard.ogg" type="OnActive" range="500.0" loop="true" volumeproperty="RelativeVoltage"/>
+      </Fabricator>
+      <Controller allowingameediting="false" canbeselected="true" AllowSelectingWhenSelectedByBot="true" AllowSelectingWhenSelectedByOther="true" hidehud="false" IsSecondaryItem="false">
+        <StatusEffect type="OnActive" target="this" voltage="1" setvalue="true" />
+      </Controller>
+      <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" attachable="true" aimable="true">
+        <RequiredItem items="wrench" type="Equipped" />
+        <StatusEffect target="This" type="OnContained">
+          <Conditional attached="false" targetitemcomponentname="Holdable"/>
+          <DropContainedItems/>
+        </StatusEffect>
+      </Holdable>
+      <ItemContainer selectkey="Select" capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="" allowuioverlap="true" />
+      <ItemContainer selectkey="Select" capacity="4" canbeselected="true" hideitems="false" slotsperrow="2" uilabel="" allowuioverlap="true" itempos="62,-55" containedspritedepth="0.752"/>
+    </Item>
+    
+    <!-- cooks things in a pot? -->
     <Item name="Stove" identifier="he-stove" tags="stove,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="Used for cooking. Needs power." isshootable="true" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
       <Upgrade gameversion="0.10.4.0">
         <Repairable Msg="ItemMsgRepairWrench" />
@@ -532,6 +645,8 @@
       <ItemContainer selectkey="Select" capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="" allowuioverlap="true" />
       <ItemContainer selectkey="Select" capacity="1" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="" allowuioverlap="true" />
     </Item>
+
+    <!-- cooks things  -->
     <Item name="Oven" identifier="he-oven" tags="oven,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" isshootable="true" scale="0.5" description="Used for baking. Needs power." damagedbyexplosions="true" explosiondamagemultiplier="0.2">
       <Upgrade gameversion="0.10.4.0">
         <Repairable Msg="ItemMsgRepairWrench" />
@@ -628,6 +743,7 @@
       <ItemContainer selectkey="Select" capacity="1" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="" allowuioverlap="true" />
     </Item>
     
+    <!-- fries things using oil, overfrying causes fire, water causes explosion -->
     <Item name="Fryer" identifier="he-fryer" tags="fryer,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" isshootable="true" scale="0.5" description="Used for frying stuff. Needs power." damagedbyexplosions="true" explosiondamagemultiplier="0.2">
       <Upgrade gameversion="0.10.4.0">
         <Repairable Msg="ItemMsgRepairWrench" />
@@ -761,43 +877,7 @@
       </ItemContainer>
     </Item>
     
-    <Item name="Cutting Board" identifier="he-cuttingboard" tags="cuttingboard,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="" isshootable="true" scale="0.5" damagedbyexplosions="false" GrabWhenSelected="true">
-      <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.45" />
-      <Body width="123" height="66" density="30" />
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1924,0,124,66" depth="0.797" origin="0.45,0.44" />
-      <DecorativeSprite name="idle knife" texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1674,0,124,66" depth="0.796" origin="0.5,0.5" comparison="and" >
-        <IsActiveConditional IsActive="False" targetitemcomponent="Fabricator" />
-      </DecorativeSprite>
-      <DecorativeSprite name="animated knife" texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1798,0,124,66" depth="0.798" origin="0.5,0.5" offset="0,-12" offsetanim="Noise" offsetanimspeed="2" rotationanim="Noise" rotation="15" rotationspeed="2" comparison="and" >
-        <AnimationConditional Voltage="gt 0.5" targetitemcomponent="Fabricator" />
-        <IsActiveConditional IsActive="True" targetitemcomponent="Fabricator" />
-      </DecorativeSprite>
-      <Price baseprice="99" sold="true">
-        <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="1" />
-        <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="3" />
-      </Price>
-      <Fabricate suitablefabricators="fabricator" requiredtime="40">
-        <RequiredItem identifier="iron" amount="1" />
-        <RequiredItem identifier="plastic" amount="3"/>
-      </Fabricate>
-      <Fabricator canbeselected="true" powerconsumption="10.0" msg="ItemMsgInteractSelect">
-        <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
-        <sound file="%ModDir:2954998725%/Content/Sounds/Items/Fabricators/CuttingBoard.ogg" type="OnActive" range="500.0" loop="true" volumeproperty="RelativeVoltage"/>
-      </Fabricator>
-      <Controller allowingameediting="false" canbeselected="true" AllowSelectingWhenSelectedByBot="true" AllowSelectingWhenSelectedByOther="true" hidehud="false" IsSecondaryItem="false">
-        <StatusEffect type="OnActive" target="this" voltage="1" setvalue="true" />
-      </Controller>
-      <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" attachable="true" aimable="true">
-        <RequiredItem items="wrench" type="Equipped" />
-        <StatusEffect target="This" type="OnContained">
-          <Conditional attached="false" targetitemcomponentname="Holdable"/>
-          <DropContainedItems/>
-        </StatusEffect>
-      </Holdable>
-      <ItemContainer selectkey="Select" capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="" allowuioverlap="true" />
-      <ItemContainer selectkey="Select" capacity="4" canbeselected="true" hideitems="false" slotsperrow="2" uilabel="" allowuioverlap="true" itempos="62,-55" containedspritedepth="0.752"/>
-    </Item>
-    
+    <!-- grills things, overgrilling causes fire -->
     <!-- TODO: Needs lightcomponent + sprite? containable sloticon? -->
     <Item name="Electric Grill" identifier="he-electricgrill" tags="grill,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="Used for cooking. Needs power." isshootable="true" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
       <Deconstruct time="10">
@@ -894,6 +974,7 @@
       </ItemContainer>
     </Item>
     
+    <!-- brews coffee -->
     <Item name="Coffee Machine" identifier="coffeemachine" tags="container,coffeemachine" category="Machines" description="Brews a nice cup of coffee." scale="0.5" isshootable="true" requireaimtouse="false" impactsoundtag="impact_metal_heavy">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.786" sourcerect="406,301,85,168" origin="0.5,0.5" />
       <!-- DecorativeSprite to display the empty cup when it is contained -->
@@ -997,73 +1078,6 @@
         <Containable items="coffeecup" />
       </ItemContainer>
     </Item>
-    
-    <Item name="Sink" identifier="sink" tags="kitchen,sink" category="Machines" description="Clean tableware or fill pots and bottles with water. Water not save for consumption." scale="0.5" isshootable="true" requireaimtouse="false" impactsoundtag="impact_metal_heavy">
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.786" sourcerect="612,366,135,95" origin="0.5,0.5" />
-      <!-- DecorativeSprite to display the lower half of the sink behind objects -->
-      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="612,456,135,94" depth="0.801" origin="0.5,-0.45" />
-      <Body width="80" height="164" density="15" />
-      <Deconstruct time="10">
-        <Item identifier="steel" amount="2" />
-      </Deconstruct>
-      <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="false">
-        <RequiredSkill identifier="mechanical" level="30" />
-        <RequiredItem identifier="titaniumaluminiumalloy" amount="1" /><!--150-->
-        <RequiredItem identifier="plastic" amount="3" /><!--45x3-->
-        <RequiredItem identifier="fpgacircuit" amount="2" /><!--80x2-->
-      </Fabricate>
-      <Fabricator selectkey="Select" canbeselected="true" powerconsumption="0.0" msg="ItemMsgInteractSelect">
-        <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
-        <StatusEffect type="OnActive" target="This" targetitemcomponent="ItemComponent" IsActive="true" setvalue="true">
-          <Conditional IsActive="false" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/coffee_start.ogg" loop="false" range="500" volume="2" />
-        </StatusEffect>
-        <StatusEffect type="OnActive" target="This" comparison="And">
-          <RequiredItem items="cleaningagent" type="contained" />
-          <RequiredItem items="dirtytableware" type="contained" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/SinkScrub.ogg" loop="true" range="500" volume="1" />
-        </StatusEffect>
-        <StatusEffect type="OnActive" target="This" >
-          <!-- <ParticleEmitter particle="waterdrop" velocitymin="0.0" velocitymax="0.0" particlespersecond="30" colormultiplier="50,50,255,255" lifetimemultiplier="0.1" /> -->
-        </StatusEffect>
-      </Fabricator>
-      <ItemComponent IsActive="false" allowingameediting="false" canbeselected="false" comparison="And">
-        <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/Sink.ogg" type="OnActive" volume="1.5" range="450" loop="true" />
-        <!-- while the pump is on, check if the fabricator is off or receiving too little voltage to apply the "stop" status tag -->
-        <StatusEffect type="OnActive" target="This" targetitemcomponent="Fabricator" tags="stop" duration="0.1" comparison="OR">
-          <Conditional IsActive="false" />
-        </StatusEffect>
-        <!-- while the pump is on, check for the "stop" status tag to play the end sound effect and turn the pump off -->
-        <StatusEffect type="OnActive" target="This" targetitemcomponent="ItemComponent" IsActive="false" setvalue="true">
-          <Conditional HasStatusTag="eq stop" />
-          <!-- <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/SinkStopping.ogg" loop="false" range="500" volume="2" selectionmode="All" /> -->
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/SinkDrain.ogg" loop="false" range="500" volume="2" selectionmode="All" />
-        </StatusEffect>
-      </ItemComponent>
-      <Holdable slots="RightHand+LeftHand" canbeselected="true" selectkey="Select" canbepicked="true" pickkey="Action" PickingTime="5" attachable="true" holdpos="70,-40" handle1="-60,30" handle2="-20,50">
-        <RequiredItem items="wrench" type="Equipped" />
-        <!-- slow down the character carrying the device -->
-        <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.3" PropulsionSpeedMultiplier="0.3" setvalue="true" duration="0.1" />
-        <!-- drop contained items if the device is detached -->
-        <StatusEffect type="OnContained" target="This">
-          <DropContainedItems />
-        </StatusEffect>
-      </Holdable>
-      <ItemContainer canbeselected="true" selectkey="Select" capacity="2" maxstacksize="1" hideitems="true" allowuioverlap="true">
-        <Containable items="pot,emptybottle,bottle,tableware,cleaningagent" />
-        <!-- TODO: adjust these icons for filter and hose -->
-        <!-- <SlotIcon slotindex="2" texture="Content/Items/InventoryIconAtlas2.png" sourcerect="256,320,64,64" origin="0.5,0.5" /> -->
-        <!-- <SlotIcon slotindex="3" texture="Content/Items/InventoryIconAtlas2.png" sourcerect="128,320,64,64" origin="0.5,0.5" /> -->
-        <SubContainer capacity="1">
-          <Containable items="waterfilter" />
-        </SubContainer>
-        <SubContainer capacity="1">
-          <Containable items="hose" />
-        </SubContainer>
-      </ItemContainer>
-      <ItemContainer selectkey="Select" capacity="1" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="" allowuioverlap="true">
-        <Containable items="pot,emptybottle,bottle,tableware"/>
-      </ItemContainer>
-    </Item>
+
   </Items>
 </Override>
