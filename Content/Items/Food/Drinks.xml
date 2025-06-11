@@ -2908,7 +2908,7 @@
       </ItemComponent>
     </Item>
    
-    <Item name="" identifier="he-waterrum" variantof="he-water">
+    <Item name="" identifier="he-waterrum" variantof="he-water" Tags="smallitem,drinkitem,cleanwater,cleanwaterrefill_rum,water,bottle,allowinfryer">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,140,26,66" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,140,26,66" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,140,26,66" depth="0.525" origin="0.5,0.85"  />
@@ -2935,7 +2935,7 @@
       </ItemComponent>
     </Item>
    
-    <Item name="" identifier="he-waterwhiskey" variantof="he-water">
+    <Item name="" identifier="he-waterwhiskey" variantof="he-water" Tags="smallitem,drinkitem,cleanwater,cleanwaterrefill_whiskey,water,bottle,allowinfryer">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="27,140,27,66" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="27,140,27,66" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="27,140,27,66" depth="0.525" origin="0.5,0.85"  />
@@ -2962,7 +2962,7 @@
       </ItemComponent>       
     </Item>
 
-    <Item name="" identifier="he-waterhalucinova" variantof="he-water">
+    <Item name="" identifier="he-waterhalucinova" variantof="he-water" Tags="smallitem,drinkitem,cleanwater,cleanwaterrefill_halucinova,water,bottle,allowinfryer">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="76,140,31,66" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="76,140,31,66" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="76,140,31,66" depth="0.525" origin="0.5,0.85" />
@@ -2989,7 +2989,7 @@
       </ItemComponent>       
     </Item>
     
-    <Item name="" identifier="he-waterbeer" variantof="he-water">
+    <Item name="" identifier="he-waterbeer" variantof="he-water" Tags="smallitem,drinkitem,cleanwater,cleanwaterrefill_beer,water,bottle,allowinfryer">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="108,140,17,66" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="108,140,17,66" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="108,140,17,66" depth="0.525" origin="0.5,0.85"  />
