@@ -3504,10 +3504,6 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,140,26,66" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,140,26,66" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,140,26,66" depth="0.525" origin="0.5,0.85"  />
-      <Fabricate suitablefabricators="refillstation" requiredtime="5" requiresrecipe="false" amount="1">
-        <RequiredItem identifier="he-kegtoiletwater" UseCondition="True" MinCondition="0.05"/>
-        <RequiredItem tag="emptybottlewhiskey" amount="1" />
-      </Fabricate>
       <CustomInterface canbeselected="false" drawhudwhenequipped="true">
         <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
         <Button text="interaction.emptybottle">
@@ -3539,11 +3535,7 @@
     <Item name="" identifier="he-toiletwaterwhiskey" variantof="he-toiletwater" Tags="smallitem,drinkitem,dirtywaterwhiskey,toiletwater,water,bottle,allowinfryer">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="27,140,27,66" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="27,140,27,66" origin="0.5,0.5" />
-      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="27,140,27,66" depth="0.525" origin="0.5,0.85"  /> 
-      <Fabricate suitablefabricators="refillstation" requiredtime="5" requiresrecipe="false" amount="1">
-        <RequiredItem identifier="he-kegtoiletwater" UseCondition="True" MinCondition="0.05"/>
-        <RequiredItem tag="emptybottlewhiskey" amount="1" />
-      </Fabricate>
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="27,140,27,66" depth="0.525" origin="0.5,0.85"  />
       <CustomInterface canbeselected="false" drawhudwhenequipped="true">
         <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
         <Button text="interaction.emptybottle">
@@ -3576,10 +3568,6 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="76,140,31,66" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="76,140,31,66" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="76,140,31,66" depth="0.525" origin="0.5,0.85" />
-      <Fabricate suitablefabricators="refillstation" requiredtime="5" requiresrecipe="false" amount="1">
-        <RequiredItem identifier="he-kegtoiletwater" UseCondition="True" MinCondition="0.05"/>
-        <RequiredItem tag="emptybottlehalucinova" amount="1" />
-      </Fabricate>
       <CustomInterface canbeselected="false" drawhudwhenequipped="true">
         <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
         <Button text="interaction.emptybottle">
@@ -3612,10 +3600,6 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="108,140,17,66" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="108,140,17,66" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="108,140,17,66" depth="0.525" origin="0.5,0.85"  />
-      <Fabricate suitablefabricators="refillstation" requiredtime="5" requiresrecipe="false" amount="1">
-        <RequiredItem identifier="he-kegtoiletwater" UseCondition="True" MinCondition="0.05"/>
-        <RequiredItem tag="emptybottlebeer" amount="1" />
-      </Fabricate>
       <CustomInterface canbeselected="false" drawhudwhenequipped="true">
         <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
         <Button text="interaction.emptybottle">
