@@ -711,7 +711,7 @@
     </Affliction>
 
     
-    <!-- TODO: make an an icon for this -->
+    <!-- TODO: make an an icon for this, compatibility with igniteables? -->
     <Affliction
       name="Tobacco addiction"
       identifier="he-tobaccoaddiction"
