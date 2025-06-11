@@ -4,13 +4,6 @@
   
     <Item name="Enable Hungry Europan" identifier="he-enableneeds" description="[RMB + E] Enables the hunger and thirst afflictions for the user, causing them to have to eat and drink regularly. This is completely optional and is NOT required to gain buffs from eating or drinking. Warning: Can't be disabled for your current character once it is enabled." category="Misc" maxstacksize="1" Tags="smallitem" scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="medcab"/>
-      <Price baseprice="0" sold="true">
-        <Price storeidentifier="merchantoutpost" />
-        <Price storeidentifier="merchantcity" />
-        <Price storeidentifier="merchantresearch" />
-        <Price storeidentifier="merchantmilitary" />
-        <Price storeidentifier="merchantmine" />
-      </Price>
       <Fabricate suitablefabricators="vendingmachinefood,vendingmachinedrinks,piratestore" requiredtime="0" requiredmoney="0" fabricationlimitmin="16" fabricationlimitmax="16" />
       <Deconstruct time="3" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
@@ -62,13 +55,6 @@
     
     <Item name="Enable Sleepy Europan" identifier="he-enablesleep" description="[RMB + E] Enables tiredness affliction for the user, causing them to have to sleep regularly. This is completely optional. Warning: Can't be disabled for your current character once it is enabled." category="Misc" maxstacksize="1" Tags="smallitem" scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="medcab"/>
-      <Price baseprice="0" sold="true">
-        <Price storeidentifier="merchantoutpost" />
-        <Price storeidentifier="merchantcity" />
-        <Price storeidentifier="merchantresearch" />
-        <Price storeidentifier="merchantmilitary" />
-        <Price storeidentifier="merchantmine" />
-      </Price>
       <Fabricate suitablefabricators="vendingmachinefood,vendingmachinedrinks,piratestore" requiredtime="0" requiredmoney="0" fabricationlimitmin="16" fabricationlimitmax="16" />
       <Deconstruct time="3" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
@@ -120,13 +106,6 @@
     
     <Item name="Enable Moody Europan" identifier="he-enablemood" description="[RMB + E] Enables the mood affliction for the user, causing them to have to manage their mood by eating and drinking tasty things, using drugs or relaxing. This is completely optional. Warning: Can't be disabled for your current character once it is enabled." category="Misc" maxstacksize="1" Tags="smallitem" scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="medcab"/>
-      <Price baseprice="0" sold="true">
-        <Price storeidentifier="merchantoutpost" />
-        <Price storeidentifier="merchantcity" />
-        <Price storeidentifier="merchantresearch" />
-        <Price storeidentifier="merchantmilitary" />
-        <Price storeidentifier="merchantmine" />
-      </Price>
       <Fabricate suitablefabricators="vendingmachinefood,vendingmachinedrinks,piratestore" requiredtime="0" requiredmoney="0" fabricationlimitmin="16" fabricationlimitmax="16" />
       <Deconstruct time="3" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
