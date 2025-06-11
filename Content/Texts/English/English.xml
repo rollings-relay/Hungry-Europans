@@ -526,9 +526,9 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entityname.he-wafflecone>Waffle Cone</entityname.he-wafflecone><!--Patch 13-->
 <entitydescription.he-wafflecone>A cone shaped waffle for ice cream. Contained ice cream will melt if not contained within a refrigerated container.</entitydescription.he-wafflecone><!--Patch 13-->
 <!-- Tools -->
-<entityname.he-enableneeds>Hungry Europan (Enable Needs)</entityname.he-enableneeds>
+<entityname.he-enableneeds>Enable Hungry Europan</entityname.he-enableneeds>
 <entitydescription.he-enableneeds>[RMB+E] Enables the hunger and thirst afflictions for the user, causing them to have to eat and drink regularly. This is completely optional and is NOT required to gain buffs from eating or drinking. Warning: Can't be disabled for your current character once it is enabled. DO NOT USE WHEN PLAYING WITH 'NEEDS' BY 'LeDoux'!</entitydescription.he-enableneeds>
-<entityname.he-enableextraneeds>Filthy Europan (Enable Extra Needs)</entityname.he-enableextraneeds><!--Patch 13-->
+<entityname.he-enableextraneeds>Enable Filthy Europan</entityname.he-enableextraneeds><!--Patch 13-->
 <entitydescription.he-enableextraneeds>[RMB + E] Enables the bladder and defecate afflictions for the user, causing them to have to pee and poop depending on what or how much they eat and drink. This is completely optional and is NOT required to gain buffs from eating or drinking. Warning: Can't be disabled for your current character once it is enabled.</entitydescription.he-enableextraneeds><!--Patch 13-->
 <entityname.he-cleaver>Meat Cleaver</entityname.he-cleaver>
 <entitydescription.he-cleaver>Time is up! Chop chop!\n\nCan chop up:\n-Crawlers\n-Mudraptors\n-Threshers\n-Hammerheads\n-Hammerhead Spawns\n-Endworms\n-Humans\n</entitydescription.he-cleaver>
