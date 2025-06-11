@@ -3,6 +3,8 @@
   <Items>
 
     <!--OVERRIDES-->
+    <!--OVERRIDES-->
+    <!--OVERRIDES-->
     <Ethanol name="" identifier="ethanol" category="Medical,Material" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,chem,cleaningagent,medical,petfood2" useinhealthinterface="true" scale="0.5" requireaimtouse="true" isshootable="true" impactsoundtag="impact_metal_light">
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
       <PreferredContainer primary="sprayer" amount="1" spawnprobability="1"/>
@@ -238,7 +240,7 @@
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
-      <Price baseprice="150" sold="false">
+      <Price baseprice="150" sold="true">
         <Price storeidentifier="merchantclown" multiplier="2.0" minavailable="0" maxavailable="8">
           <Reputation faction="clowns" min="30"/>
         </Price>
@@ -431,14 +433,14 @@
       </CustomInterface>
     </Rum>
     
-  <!--DISABLE VANILLA ITEM -->
-  <Item name="" nameidentifier="beerbottle" identifier="beerbottle1" category="Medical,Misc" maxstacksize="8" cargocontaineridentifier="mediccrate" description="" Tags="smallitem" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
+    <!--DISABLE VANILLA ITEM -->
+    <Item name="" nameidentifier="beerbottle" identifier="beerbottle1" category="Medical,Misc" maxstacksize="8" cargocontaineridentifier="mediccrate" description="" Tags="smallitem" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
     <PreferredContainer secondary="wreckmedcab,abandonedmedcab,piratemedcab" amount="1" spawnprobability="0.00" />
     <PreferredContainer secondary="abandonedcrewcab,piratecrewcab" minamount="1" maxamount="1" spawnprobability="0.00" />
     <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.00" notcampaign="true" notpvp="true"/>
     <PreferredContainer primary="medfabcab" secondary="medcab"/>
-    <Price baseprice="60" sold="false">
-      <Price storeidentifier="merchantclown" minavailable="0" maxavailable="3" sold="false">
+    <Price baseprice="60" sold="true">
+      <Price storeidentifier="merchantclown" minavailable="0" maxavailable="3" sold="true">
         <Reputation faction="clowns" min="30"/>
       </Price>
       <Price storeidentifier="merchantnightclub" minavailable="20" sold="false" />
@@ -483,25 +485,22 @@
     </Holdable>
   </Item>
   
-  <Item name="" nameidentifier="beerbottle" identifier="beerbottle2" variantof="beerbottle1">
+    <Item name="" nameidentifier="beerbottle" identifier="beerbottle2" variantof="beerbottle1">
     <Sprite texture="Content/Map/Outposts/Art/AdminResidentAssets.png" sourcerect="856,0,21,63" depth="0.6" origin="0.5,0.5" />
   </Item>
-    
+   
     <!--END OF OVERRIDES-->
+    <!--END OF OVERRIDES-->
+    <!--END OF OVERRIDES-->
+    
+    <!-- ALCOHOLS -->
     <Rum name="Pirate Rum" identifier="he-rum" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="A very strong rum enriched with uranium for extra spice. |Alcoholic Beverage |Decrease Psychosis |Decrease Hallucinations |Decrease Husk Infection (If below 90%) |Healing Properties |Increase Psychosis Resistance |Increase Radiation Sickness (Slightly)" Tags="smallitem,drinkitem,alcoholitem,bottle" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="liquorcrate" secondary="kitchen"/>
-      <Price baseprice="299" sold="false">
-        <Price storeidentifier="merchantclown" multiplier="2.0" minavailable="0" maxavailable="8">
-          <Reputation faction="clowns" min="30"/>
-        </Price>
-        <Price storeidentifier="merchantoutpost" multiplier="1.1" minavailable="0" maxavailable="8" />
-        <Price storeidentifier="merchantcity" multiplier="1.5" minavailable="2" maxavailable="16" />
-        <Price storeidentifier="merchantresearch" multiplier="0.9" sold="false" />
-        <Price storeidentifier="merchantmilitary" multiplier="1.1" sold="false" />
-        <Price storeidentifier="merchantmine" multiplier="1.1" sold="false" />
+      <Price baseprice="299" sold="true">
+        <Price storeidentifier="merchantnightclub" multiplier="2.0" minavailable="0" maxavailable="5" sold="true" />
       </Price>
       <Fabricate suitablefabricators="piratestore" requiredtime="3" requiredmoney="299" fabricationlimitmin="0" fabricationlimitmax="10" />
       <Fabricate suitablefabricators="refillstation" requiredtime="5" requiresrecipe="false" amount="1">
@@ -701,14 +700,7 @@
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Price baseprice="125" sold="true">
-        <Price storeidentifier="merchantclown" multiplier="2.0" minavailable="0" maxavailable="16">
-          <Reputation faction="clowns" min="30"/>
-        </Price>
-        <Price storeidentifier="merchantoutpost" multiplier="1.3" minavailable="0" maxavailable="3" />
-        <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="3" maxavailable="9" />
-        <Price storeidentifier="merchantresearch" multiplier="0.9" sold="false" />
-        <Price storeidentifier="merchantmilitary" multiplier="1.1" sold="false" />
-        <Price storeidentifier="merchantmine" multiplier="1.1" sold="false" />
+        <Price storeidentifier="merchantnightclub" multiplier="2.0" minavailable="0" maxavailable="5" sold="true" />
       </Price>
       <Fabricate suitablefabricators="piratestore" requiredtime="3" requiredmoney="125" fabricationlimitmin="0" fabricationlimitmax="6" />
       <Fabricate suitablefabricators="refillstation" requiredtime="5" requiresrecipe="false" amount="1">
@@ -1051,14 +1043,7 @@
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Price baseprice="6" sold="true">
-        <Price storeidentifier="merchantclown" multiplier="2.0" minavailable="0" maxavailable="16">
-          <Reputation faction="clowns" min="30"/>
-        </Price>
-        <Price storeidentifier="merchantoutpost" multiplier="1.3" minavailable="0" maxavailable="16" />
-        <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="6" maxavailable="24" />
-        <Price storeidentifier="merchantresearch" multiplier="0.9" sold="false" />
-        <Price storeidentifier="merchantmilitary" multiplier="1.1" sold="false" />
-        <Price storeidentifier="merchantmine" multiplier="1.1" sold="false" />
+        <Price storeidentifier="merchantnightclub" multiplier="2.0" minavailable="3" maxavailable="5" sold="true" />
       </Price>
       <Fabricate suitablefabricators="vendingmachinedrinks,piratestore,cafeteria" requiredtime="3" requiredmoney="10" fabricationlimitmin="0" fabricationlimitmax="12" />
       <Fabricate suitablefabricators="refillstation" requiredtime="5" requiresrecipe="false" amount="1">
@@ -1207,14 +1192,7 @@
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Price baseprice="6" sold="true">
-        <Price storeidentifier="merchantclown" multiplier="2.0" minavailable="0" maxavailable="16">
-          <Reputation faction="clowns" min="30"/>
-        </Price>
-        <Price storeidentifier="merchantoutpost" multiplier="1.3" minavailable="0" maxavailable="16" />
-        <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="6" maxavailable="24" />
-        <Price storeidentifier="merchantresearch" multiplier="0.9" sold="false" />
-        <Price storeidentifier="merchantmilitary" multiplier="1.1" sold="false" />
-        <Price storeidentifier="merchantmine" multiplier="1.1" sold="false" />
+        <Price storeidentifier="merchantnightclub" multiplier="2.0" minavailable="3" maxavailable="5" sold="true" />
       </Price>
       <Fabricate suitablefabricators="vendingmachinedrinks,piratestore,cafeteria" requiredtime="3" requiredmoney="10" fabricationlimitmin="0" fabricationlimitmax="12" />
       <Fabricate suitablefabricators="refillstation" requiredtime="5" requiresrecipe="false" amount="1">
@@ -1363,14 +1341,10 @@
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Price baseprice="54" sold="true">
-        <Price storeidentifier="merchanthusk" multiplier="2.0" minavailable="0" maxavailable="16">
+        <Price storeidentifier="merchantnightclub" multiplier="2.0" minavailable="0" maxavailable="3" sold="true" />
+        <Price storeidentifier="merchanthusk" multiplier="2.0" minavailable="0" maxavailable="8" sold="true" >
           <Reputation faction="husk" min="30"/>
         </Price>
-        <Price storeidentifier="merchantoutpost" multiplier="1.3" minavailable="0" maxavailable="16" sold="false" />
-        <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="6" maxavailable="24" sold="false" />
-        <Price storeidentifier="merchantresearch" multiplier="0.9" sold="false" />
-        <Price storeidentifier="merchantmilitary" multiplier="1.1" sold="false" />
-        <Price storeidentifier="merchantmine" multiplier="1.1" sold="false" />
       </Price>
       <Fabricate suitablefabricators="vendingmachinedrinks,piratestore,cafeteria" requiredtime="3" requiredmoney="59" fabricationlimitmin="0" fabricationlimitmax="12" />
       <Fabricate suitablefabricators="refillstation" requiredtime="5" requiresrecipe="false" amount="1">
@@ -1522,14 +1496,10 @@
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Price baseprice="32" sold="true">
-        <Price storeidentifier="merchantclown" multiplier="2.0" minavailable="0" maxavailable="16">
+        <Price storeidentifier="merchantnightclub" multiplier="2.0" minavailable="0" maxavailable="3" sold="true" />
+        <Price storeidentifier="merchantclown" multiplier="2.0" minavailable="0" maxavailable="8"  sold="true" >
           <Reputation faction="clowns" min="30"/>
         </Price>
-        <Price storeidentifier="merchantoutpost" multiplier="1.3" minavailable="0" maxavailable="16" sold="false" />
-        <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="6" maxavailable="24" sold="false" />
-        <Price storeidentifier="merchantresearch" multiplier="0.9" sold="false" />
-        <Price storeidentifier="merchantmilitary" multiplier="1.1" sold="false" />
-        <Price storeidentifier="merchantmine" multiplier="1.1" sold="false" />
       </Price>
       <Fabricate suitablefabricators="vendingmachinedrinks,piratestore,cafeteria" requiredtime="3" requiredmoney="38" fabricationlimitmin="0" fabricationlimitmax="12" />
       <Fabricate suitablefabricators="refillstation" requiredtime="5" requiresrecipe="false" amount="1">
@@ -1678,11 +1648,7 @@
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Price baseprice="333" sold="true">
-        <Price storeidentifier="merchantoutpost" multiplier="1.3" minavailable="0" maxavailable="20" />
-        <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="0" maxavailable="20" />
-        <Price storeidentifier="merchantresearch" multiplier="0.9" sold="false" />
-        <Price storeidentifier="merchantmilitary" multiplier="1.1" sold="false" />
-        <Price storeidentifier="merchantmine" multiplier="1.1" sold="false" />
+        <Price storeidentifier="merchantnightclub" multiplier="2.0" minavailable="0" maxavailable="3" sold="true" />
       </Price>
       <Fabricate suitablefabricators="vendingmachinedrinks,piratestore,cafeteria" requiredtime="3" requiredmoney="666" fabricationlimitmin="0" fabricationlimitmax="3" />
       <Fabricate suitablefabricators="refillstation" requiredtime="5" requiresrecipe="false" amount="1">
@@ -1971,6 +1937,21 @@
     <!-- NON-ALCOHOLIC -->
     
     
+    <Item name="WaterVARIANT" identifier="he-water2" variantof="he-water">
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="243,8,21,58" depth="0.6" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="243,8,21,58" origin="0.5,0.5" />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="243,8,21,58" depth="0.525" origin="0.5,0.5"  />
+      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="264,8,21,58" depth="0.6" maxcondition="99" />
+      <ContainedSprite allowedcontainertags="liquorshelf" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="243,8,21,65" depth="0.55" origin="0.5,0.5" />
+      <ItemComponent>      
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+          <SpawnItem identifier="he-emptybottlehalucinova" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+        </StatusEffect>
+      </ItemComponent>       
+    </Item>
+    
+    
     <!-- TODO: remove filter requirement in sink? this is honestly too harsh there's no reason the sink shouldnt have filtered water to begin with -->
     <Item name="Water" identifier="he-water" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Fresh water. Helps a bit if you're feeling stuffed or when you're shit-faced." Tags="smallitem,drinkitem,cleanwater,cleanwaterrefill_common,water,bottle,allowinfryer" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
@@ -1978,9 +1959,6 @@
       <PreferredContainer secondary="crewcab" minamount="1" maxamount="3" spawnprobability="0.05" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Price baseprice="4" sold="true">
-        <Price storeidentifier="merchantclown" multiplier="1.2" minavailable="0" maxavailable="16">
-          <Reputation faction="clowns" min="30"/>
-        </Price>
         <Price storeidentifier="merchantoutpost" multiplier="1.3" minavailable="0" maxavailable="12" />
         <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="6" maxavailable="24" />
       </Price>
@@ -2131,10 +2109,7 @@
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
-      <Price baseprice="4" sold="false">
-        <Price storeidentifier="merchantclown" multiplier="1.2" minavailable="0" maxavailable="16">
-          <Reputation faction="clowns" min="30"/>
-        </Price>
+      <Price baseprice="4" sold="true">
         <Price storeidentifier="merchantoutpost" multiplier="1.3" minavailable="0" maxavailable="12" />
         <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="6" maxavailable="24" />
       </Price>
@@ -2277,10 +2252,7 @@
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
-      <Price baseprice="4" sold="false">
-        <Price storeidentifier="merchantclown" multiplier="1.2" minavailable="0" maxavailable="16">
-          <Reputation faction="clowns" min="30"/>
-        </Price>
+      <Price baseprice="4" sold="true">
         <Price storeidentifier="merchantoutpost" multiplier="1.3" minavailable="0" maxavailable="12" />
         <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="6" maxavailable="24" />
       </Price>
@@ -2423,10 +2395,7 @@
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
-      <Price baseprice="4" sold="false">
-        <Price storeidentifier="merchantclown" multiplier="1.2" minavailable="0" maxavailable="16">
-          <Reputation faction="clowns" min="30"/>
-        </Price>
+      <Price baseprice="4" sold="true">
         <Price storeidentifier="merchantoutpost" multiplier="1.3" minavailable="0" maxavailable="12" />
         <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="6" maxavailable="24" />
       </Price>
@@ -2569,10 +2538,7 @@
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
-      <Price baseprice="4" sold="false">
-        <Price storeidentifier="merchantclown" multiplier="1.2" minavailable="0" maxavailable="16">
-          <Reputation faction="clowns" min="30"/>
-        </Price>
+      <Price baseprice="4" sold="true">
         <Price storeidentifier="merchantoutpost" multiplier="1.3" minavailable="0" maxavailable="12" />
         <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="6" maxavailable="24" />
       </Price>
@@ -3191,11 +3157,9 @@
       <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0" />
       <PreferredContainer primary="kitchen" secondary="liquorcrate"/>
       <Price baseprice="35" sold="true">
-        <Price storeidentifier="merchantclown" multiplier="1.2" minavailable="0" maxavailable="16">
-          <Reputation faction="clowns" min="30"/>
-        </Price>
-        <Price storeidentifier="merchantoutpost" multiplier="1.0" minavailable="0" maxavailable="20" />
-        <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="20" maxavailable="60" />
+        <Price storeidentifier="merchantnightclub" multiplier="2.0" minavailable="0" maxavailable="8" sold="true" />
+        <Price storeidentifier="merchantoutpost" multiplier="1.0" minavailable="0" maxavailable="10" />
+        <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="10" maxavailable="20" />
       </Price>
       <Fabricate suitablefabricators="vendingmachinedrinks,cafeteria" requiredtime="3" requiredmoney="39" fabricationlimitmin="0" fabricationlimitmax="6" />
       <Deconstruct time="2">
@@ -3346,11 +3310,9 @@
       <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0" />
       <PreferredContainer primary="kitchen" secondary="liquorcrate"/>
       <Price baseprice="35" sold="true">
-        <Price storeidentifier="merchantclown" multiplier="1.4" minavailable="0" maxavailable="40" sold="false">
-          <Reputation faction="clowns" min="30"/>
-        </Price>
-        <Price storeidentifier="merchantoutpost" multiplier="1.0" minavailable="0" maxavailable="20" />
-        <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="20" maxavailable="60" />
+        <Price storeidentifier="merchantnightclub" multiplier="2.0" minavailable="0" maxavailable="8" sold="true" />
+        <Price storeidentifier="merchantoutpost" multiplier="1.0" minavailable="0" maxavailable="10" />
+        <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="10" maxavailable="20" />
       </Price>
       <Fabricate suitablefabricators="vendingmachinedrinks,cafeteria" requiredtime="3" requiredmoney="39" fabricationlimitmin="0" fabricationlimitmax="6" />
       <Deconstruct time="2">
@@ -3494,21 +3456,23 @@
       </CustomInterface>
     </Item>
 
+    <!-- TODO: how to buy couwola radiant? -->
     <Item name="Couwola Cola Radiant" identifier="he-colaradiantbottle" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-colacrate" description="A bottle of the rare Couwola Cola radiant. Feeling Overcharged! Very refreshing and helpful when you're shit-faced. Enriched with fulgurium" Tags="smallitem,drinkitem,bottle,colaradiant,colafuel3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="wreckcrewcab,abandonedcrewcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0" />
       <PreferredContainer primary="kitchen" secondary="liquorcrate"/>
-      <Price baseprice="1399" sold="false">
-        <Price storeidentifier="merchanthusk" multiplier="1.0" minavailable="0" maxavailable="40" sold="false">
+      <!-- <Price baseprice="1399" sold="true">
+        <Price storeidentifier="merchanthusk" multiplier="1.0" minavailable="0" maxavailable="40" sold="true">
+          <Reputation faction="huskchurch" min="30"/>
+        </Price>
+        <Price storeidentifier="merchantclown" multiplier="1.0" minavailable="0" maxavailable="40" sold="true">
           <Reputation faction="clowns" min="30"/>
         </Price>
-        <Price storeidentifier="merchantclown" multiplier="1.0" minavailable="0" maxavailable="40" sold="false">
-          <Reputation faction="clowns" min="30"/>
-        </Price>
-        <Price storeidentifier="merchantoutpost" multiplier="1.0" minavailable="0" maxavailable="20" />
-        <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="20" maxavailable="60" />
-      </Price>
+        <Price storeidentifier="merchantnightclub" multiplier="2.0" minavailable="0" maxavailable="8" sold="true" />
+        <Price storeidentifier="merchantoutpost" multiplier="1.0" minavailable="0" maxavailable="10" />
+        <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="10" maxavailable="20" />
+      </Price> -->
       <Deconstruct time="2">
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
       </Deconstruct>
