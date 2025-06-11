@@ -17,6 +17,7 @@
       <Effect minstrength="0" maxstrength="1" strengthchange="-1" />
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,640,128,128" color="150,26,26,255" origin="0,0" />
     </Affliction>
+    
     <!--OVERRIDES-->
     <!-- HALLUCINATIONS OVERRIDE TO MAKE IT LAST LONGER AND ADD VISUAL EFFECTS -->
     <!-- temporarily disabled due to a game bug causing performance issues in a level with many light sources
@@ -71,6 +72,7 @@
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,640,128,128" color="150,26,26,255" origin="0,0" />
     </Affliction>
     -->
+   
     <!-- HASTE OVERRIDE TO REMOVE SKILL GAIN ON APPLIED -->
     <Affliction name="Hyperactivity"
       identifier="haste"
@@ -95,6 +97,7 @@
       <!-- Greater than 1.48 and the ragdolls start snapping when turning and characters take damage from colliding with doors & walls -->
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="128,896,128,128" color="10,193,114,255" origin="0,0" />
     </Affliction>
+    
     <!-- DRUNKNESS OVERRIDE -->
     <Affliction name="Drunk"
       identifier="drunk"
@@ -281,6 +284,7 @@
       </Effect>
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
+    
     <Affliction name="Drunk (No Debuffs)"
       identifier="drunknodebuffs"
       type="debuff"
@@ -389,6 +393,7 @@
       </Effect>
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
+    
     <!--NAUSEA OVERRIDE TO REMOVE STUN TO ENABLE STAYING IN BED WHILE PUKING-->
     <Affliction name="Nausea"
       identifier="nausea"
@@ -459,6 +464,7 @@
       </PeriodicEffect>
       <icon texture="Content/UI/CommandUIAtlas.png" sourcerect="896,896,128,128" origin="0,0" />
     </Affliction>
+    
     <Stun name="Stun"
       identifier="stun"
       description="The patient is dazed and unresponsive."
@@ -515,6 +521,7 @@
       </Effect>
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
+    
     <Affliction name="Disoriented"
       identifier="he-drunkinvertcontrols"
       description="Up is down and left is... right? Where am I?"
@@ -544,6 +551,7 @@
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="640,256,128,128" color="255,255,2255,255" origin="0.5,0.5" />
     </Affliction>
+    
     <Affliction name="Internal Burn"
       identifier="he-internalburn"
       description=""
@@ -1019,6 +1027,7 @@
         </StatusEffect>
       </Effect>
     </Affliction>
+    
     <Affliction identifier="he-reaperstribute" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="true" healableinmedicalclinic="false" MedicalSkillGain="0.0">
       <Effect minstrength="0" 
       maxstrength="99" 
@@ -1098,7 +1107,7 @@
         </StatusEffect>
       </Effect>
       <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/ReapersTributeOverlay.png" />
-    </Affliction>
+    </Affliction>    
     <Affliction identifier="he-passoutreaper" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="true" healableinmedicalclinic="false" MedicalSkillGain="0.0">
       <Effect minstrength="0" maxstrength="100" strengthchange="0" interval="0.5">
         <StatusEffect type="Always" target="Character" comparison="And" delay="10" disabledeltatime="true" stackable="false">
@@ -1120,6 +1129,7 @@
       </Effect>
       <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/PassOutOverlay.png" />
     </Affliction>
+    
     <Affliction identifier="he-passout" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="true" healableinmedicalclinic="false" MedicalSkillGain="0.0">
       <Effect minstrength="0" maxstrength="100" strengthchange="0" interval="0.5">
         <!-- Sound loop to make it harder to hear. Disabled as it might be too annoying 
@@ -1140,6 +1150,7 @@
       </Effect>
       <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/PassOutOverlay.png" />
     </Affliction>
+    
     <Affliction name="Sleeping" identifier="he-sleep" showiconthreshold="1000" showinhealthscannerthreshold="0" maxstrength="1" causespeechimpediment="true" afflictionoverlayalphaislinear="false" MinAfflictionOverlayAlphaMultiplier="0" MaxAfflictionOverlayAlphaMultiplier="1" healableinmedicalclinic="false" MedicalSkillGain="0.0">
       <Effect minstrength="0" maxstrength="1" strengthchange="-0.9" resistancefor="he-exhaustedsleep" minresistance="1.0" maxresistance="1.0" MinAfflictionOverlayAlphaMultiplier="1" MaxAfflictionOverlayAlphaMultiplier="1">
         <StatusEffect target="Character" interval="1" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
@@ -1193,6 +1204,7 @@
       -->
       <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/PassOutOverlay.png" />
     </Affliction>
+    
     <Affliction name="" nameidentifier="he-sleep" identifier="he-exhaustedsleep" showiconthreshold="1000" showinhealthscannerthreshold="0" maxstrength="60" causespeechimpediment="true" afflictionoverlayalphaislinear="false" MinAfflictionOverlayAlphaMultiplier="0" MaxAfflictionOverlayAlphaMultiplier="1" healableinmedicalclinic="false" MedicalSkillGain="0.0">
       <Effect minstrength="0" maxstrength="60" resistancefor="fatigue" minresistance="1.0" maxresistance="1.0" strengthchange="-1" MinAfflictionOverlayAlphaMultiplier="1" MaxAfflictionOverlayAlphaMultiplier="1">
         <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
@@ -1249,10 +1261,12 @@
       -->
       <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/PassOutOverlay.png" />
     </Affliction>
+    
     <Affliction identifier="he-hitbypoop" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="30" afflictionoverlayalphaislinear="true" healableinmedicalclinic="false" MedicalSkillGain="0.0">
       <Effect minstrength="0" maxstrength="30" strengthchange="-1" />
       <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/PoopOverlay.png" />
     </Affliction>
+    
     <Affliction name="Embarrassed"
       identifier="embarrassment"
       type="extra"
@@ -1307,6 +1321,7 @@
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="256,128,128,128" origin="0,0" />
     </Affliction>
+    
     <!--invisible affliction-->
     <Affliction name="On Toilet" identifier="ontoilet" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="1" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="-0.5" />
@@ -1317,6 +1332,7 @@
       <Effect minstrength="0" maxstrength="100" strengthchange="-1" />
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,128,128,128" origin="0,0" />
     </Affliction>
+    
     <!--invisible affliction-->
     <Affliction name="Tripping (Light)" identifier="he-trippinglight" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="100" strengthchange="-1">
@@ -1389,6 +1405,7 @@
       </Effect>
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,640,128,128" color="150,26,26,255" origin="0,0" />
     </Affliction>
+    
     <!--Green Paint-->
     <Affliction name="High on Green Paint"
       identifier="he-drankgreenpaint"
@@ -1439,6 +1456,7 @@
       </Effect>
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,640,128,128" color="150,26,26,255" origin="0,0" />
     </Affliction>
+    
     <!--Blue Paint-->
     <Affliction name="High on Blue Paint"
       identifier="he-drankbluepaint"
@@ -1489,6 +1507,7 @@
       </Effect>
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,640,128,128" color="150,26,26,255" origin="0,0" />
     </Affliction>
+    
     <!--Black Paint-->
     <Affliction name="High on Black Paint"
       identifier="he-drankblackpaint"
@@ -1539,6 +1558,7 @@
       </Effect>
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,640,128,128" color="150,26,26,255" origin="0,0" />
     </Affliction>
+    
     <!--White Paint-->
     <Affliction name="High on White Paint"
       identifier="he-drankwhitepaint"
@@ -1589,5 +1609,6 @@
       </Effect>
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,640,128,128" color="150,26,26,255" origin="0,0" />
     </Affliction>
+    
   </Afflictions>
 </Override>
