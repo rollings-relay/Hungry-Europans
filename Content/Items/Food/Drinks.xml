@@ -2894,7 +2894,7 @@
             <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact4.ogg" selectionmode="Random" range="600" />
-            <Remove />
+            <RemoveItem identifier="he-emptybottle" />
             <SpawnItem identifier="he-glassfragments" spawnposition="This" spawnifcantbecontained="true" SpawnIfInventoryFull="true" probability="0.5"/>
             <SpawnItem identifier="he-shivcommon" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" probability="0.5"/>
           </StatusEffect>
@@ -2926,7 +2926,27 @@
       <Fabricate suitablefabricators="sink" displayname="fill" requiredtime="10" requiresrecipe="false" amount="1">
         <RequiredItem tag="cleanwaterrefill_rum" amount="1" UseCondition="False" MinCondition="0.0" />
         <!-- <RequiredItem tag="waterfilter" UseCondition="True" MinCondition="0.01" /> -->
-      </Fabricate>       
+      </Fabricate>
+      <CustomInterface canbeselected="false" drawhudwhenequipped="true">
+        <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
+        <Button text="interaction.emptybottle">
+          <StatusEffect type="OnUse" target="This" IsActive="true" targetitemcomponent="Powered" setvalue="true">
+            <Conditional IsActive="false" targetitemcomponent="Powered" />
+          </StatusEffect>
+        </Button>
+        <Button text="interaction.breakbottle">
+          <StatusEffect type="OnUse" target="This">
+            <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+            <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
+            <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
+            <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
+            <Sound file="Content/Sounds/Damage/GlassImpact4.ogg" selectionmode="Random" range="600" />
+            <RemoveItem identifier="he-emptybottlerum" />
+            <SpawnItem identifier="he-glassfragments" spawnposition="This" spawnifcantbecontained="true" SpawnIfInventoryFull="true" probability="0.5"/>
+            <SpawnItem identifier="he-shivrum" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" probability="0.5"/>
+          </StatusEffect>
+        </Button>
+      </CustomInterface>    
       <ItemComponent>
         <StatusEffect type="OnBroken" target="This">
           <RemoveItem identifier="he-emptybottlerum" />
@@ -2953,7 +2973,27 @@
       <Fabricate suitablefabricators="sink" displayname="fill" requiredtime="10" requiresrecipe="false" amount="1">
         <RequiredItem tag="cleanwaterrefill_whiskey" amount="1" UseCondition="False" MinCondition="0.0" />
         <!-- <RequiredItem tag="waterfilter" UseCondition="True" MinCondition="0.01" /> -->
-      </Fabricate>    
+      </Fabricate>
+      <CustomInterface canbeselected="false" drawhudwhenequipped="true">
+        <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
+        <Button text="interaction.emptybottle">
+          <StatusEffect type="OnUse" target="This" IsActive="true" targetitemcomponent="Powered" setvalue="true">
+            <Conditional IsActive="false" targetitemcomponent="Powered" />
+          </StatusEffect>
+        </Button>
+        <Button text="interaction.breakbottle">
+          <StatusEffect type="OnUse" target="This">
+            <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+            <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
+            <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
+            <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
+            <Sound file="Content/Sounds/Damage/GlassImpact4.ogg" selectionmode="Random" range="600" />
+            <RemoveItem identifier="he-emptybottlewhiskey" />
+            <SpawnItem identifier="he-glassfragments" spawnposition="This" spawnifcantbecontained="true" SpawnIfInventoryFull="true" probability="0.5"/>
+            <SpawnItem identifier="he-shivwhiskey" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" probability="0.5"/>
+          </StatusEffect>
+        </Button>
+      </CustomInterface> 
       <ItemComponent>
         <StatusEffect type="OnBroken" target="This">
           <RemoveItem identifier="he-emptybottlewhiskey" />
@@ -2980,7 +3020,27 @@
       <Fabricate suitablefabricators="sink" displayname="fill" requiredtime="10" requiresrecipe="false" amount="1">
         <RequiredItem tag="cleanwaterrefill_halucinova" amount="1" UseCondition="False" MinCondition="0.0" />
         <!-- <RequiredItem tag="waterfilter" UseCondition="True" MinCondition="0.01" /> -->
-      </Fabricate>      
+      </Fabricate>
+      <CustomInterface canbeselected="false" drawhudwhenequipped="true">
+        <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
+        <Button text="interaction.emptybottle">
+          <StatusEffect type="OnUse" target="This" IsActive="true" targetitemcomponent="Powered" setvalue="true">
+            <Conditional IsActive="false" targetitemcomponent="Powered" />
+          </StatusEffect>
+        </Button>
+        <Button text="interaction.breakbottle">
+          <StatusEffect type="OnUse" target="This">
+            <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+            <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
+            <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
+            <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
+            <Sound file="Content/Sounds/Damage/GlassImpact4.ogg" selectionmode="Random" range="600" />
+            <RemoveItem identifier="he-emptybottlehalucinova" />
+            <SpawnItem identifier="he-glassfragments" spawnposition="This" spawnifcantbecontained="true" SpawnIfInventoryFull="true" probability="0.5"/>
+            <SpawnItem identifier="he-shivhalucinova" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" probability="0.5"/>
+          </StatusEffect>
+        </Button>
+      </CustomInterface>
       <ItemComponent>
         <StatusEffect type="OnBroken" target="This">
           <RemoveItem identifier="he-emptybottlehalucinova" />
@@ -3007,7 +3067,27 @@
       <Fabricate suitablefabricators="sink" displayname="fill" requiredtime="10" requiresrecipe="false" amount="1">
         <RequiredItem tag="cleanwaterrefill_beer" amount="1" UseCondition="False" MinCondition="0.0" />
         <!-- <RequiredItem tag="waterfilter" UseCondition="True" MinCondition="0.01" /> -->
-      </Fabricate>      
+      </Fabricate>
+      <CustomInterface canbeselected="false" drawhudwhenequipped="true">
+        <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
+        <Button text="interaction.emptybottle">
+          <StatusEffect type="OnUse" target="This" IsActive="true" targetitemcomponent="Powered" setvalue="true">
+            <Conditional IsActive="false" targetitemcomponent="Powered" />
+          </StatusEffect>
+        </Button>
+        <Button text="interaction.breakbottle">
+          <StatusEffect type="OnUse" target="This">
+            <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+            <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
+            <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
+            <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
+            <Sound file="Content/Sounds/Damage/GlassImpact4.ogg" selectionmode="Random" range="600" />
+            <RemoveItem identifier="he-emptybottlebeer" />
+            <SpawnItem identifier="he-glassfragments" spawnposition="This" spawnifcantbecontained="true" SpawnIfInventoryFull="true" probability="0.5"/>
+            <SpawnItem identifier="he-shivbeer" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" probability="0.5"/>
+          </StatusEffect>
+        </Button>
+      </CustomInterface>
       <ItemComponent>
         <StatusEffect type="OnBroken" target="This">
           <RemoveItem identifier="he-emptybottlebeer" />
@@ -3155,7 +3235,27 @@
       <Fabricate suitablefabricators="refillstation" requiredtime="5" requiresrecipe="false" amount="1">
         <RequiredItem identifier="he-kegseawater" UseCondition="True" MinCondition="0.05"/>
         <RequiredItem tag="emptybottlewhiskey" amount="1" />
-      </Fabricate>  
+      </Fabricate>
+      <CustomInterface canbeselected="false" drawhudwhenequipped="true">
+        <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
+        <Button text="interaction.emptybottle">
+          <StatusEffect type="OnUse" target="This" IsActive="true" targetitemcomponent="Powered" setvalue="true">
+            <Conditional IsActive="false" targetitemcomponent="Powered" />
+          </StatusEffect>
+        </Button>
+        <Button text="interaction.breakbottle">
+          <StatusEffect type="OnUse" target="This">
+            <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+            <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
+            <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
+            <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
+            <Sound file="Content/Sounds/Damage/GlassImpact4.ogg" selectionmode="Random" range="600" />
+            <RemoveItem identifier="he-emptybottlerum" />
+            <SpawnItem identifier="he-glassfragments" spawnposition="This" spawnifcantbecontained="true" SpawnIfInventoryFull="true" probability="0.5"/>
+            <SpawnItem identifier="he-shivrum" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" probability="0.5"/>
+          </StatusEffect>
+        </Button>
+      </CustomInterface>   
       <ItemComponent>
         <StatusEffect type="OnBroken" target="This">
           <RemoveItem identifier="he-emptybottlerum" />
@@ -3172,6 +3272,26 @@
         <RequiredItem identifier="he-kegseawater" UseCondition="True" MinCondition="0.05"/>
         <RequiredItem tag="emptybottlewhiskey" amount="1" />
       </Fabricate>
+      <CustomInterface canbeselected="false" drawhudwhenequipped="true">
+        <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
+        <Button text="interaction.emptybottle">
+          <StatusEffect type="OnUse" target="This" IsActive="true" targetitemcomponent="Powered" setvalue="true">
+            <Conditional IsActive="false" targetitemcomponent="Powered" />
+          </StatusEffect>
+        </Button>
+        <Button text="interaction.breakbottle">
+          <StatusEffect type="OnUse" target="This">
+            <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+            <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
+            <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
+            <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
+            <Sound file="Content/Sounds/Damage/GlassImpact4.ogg" selectionmode="Random" range="600" />
+            <RemoveItem identifier="he-emptybottlewhiskey" />
+            <SpawnItem identifier="he-glassfragments" spawnposition="This" spawnifcantbecontained="true" SpawnIfInventoryFull="true" probability="0.5"/>
+            <SpawnItem identifier="he-shivwhiskey" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" probability="0.5"/>
+          </StatusEffect>
+        </Button>
+      </CustomInterface> 
       <ItemComponent>
         <StatusEffect type="OnBroken" target="This">
           <RemoveItem identifier="he-emptybottlewhiskey" />
@@ -3187,7 +3307,27 @@
       <Fabricate suitablefabricators="refillstation" requiredtime="5" requiresrecipe="false" amount="1">
         <RequiredItem identifier="he-kegseawater" UseCondition="True" MinCondition="0.05"/>
         <RequiredItem tag="emptybottlehalucinova" amount="1" />
-      </Fabricate>    
+      </Fabricate>
+      <CustomInterface canbeselected="false" drawhudwhenequipped="true">
+        <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
+        <Button text="interaction.emptybottle">
+          <StatusEffect type="OnUse" target="This" IsActive="true" targetitemcomponent="Powered" setvalue="true">
+            <Conditional IsActive="false" targetitemcomponent="Powered" />
+          </StatusEffect>
+        </Button>
+        <Button text="interaction.breakbottle">
+          <StatusEffect type="OnUse" target="This">
+            <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+            <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
+            <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
+            <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
+            <Sound file="Content/Sounds/Damage/GlassImpact4.ogg" selectionmode="Random" range="600" />
+            <RemoveItem identifier="he-emptybottlehalucinova" />
+            <SpawnItem identifier="he-glassfragments" spawnposition="This" spawnifcantbecontained="true" SpawnIfInventoryFull="true" probability="0.5"/>
+            <SpawnItem identifier="he-shivhalucinova" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" probability="0.5"/>
+          </StatusEffect>
+        </Button>
+      </CustomInterface>
       <ItemComponent>
         <StatusEffect type="OnBroken" target="This">
           <RemoveItem identifier="he-emptybottlehalucinova" />
@@ -3203,7 +3343,27 @@
       <Fabricate suitablefabricators="refillstation" requiredtime="5" requiresrecipe="false" amount="1">
         <RequiredItem identifier="he-kegseawater" UseCondition="True" MinCondition="0.05"/>
         <RequiredItem tag="emptybottlebeer" amount="1" />
-      </Fabricate>     
+      </Fabricate>
+      <CustomInterface canbeselected="false" drawhudwhenequipped="true">
+        <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
+        <Button text="interaction.emptybottle">
+          <StatusEffect type="OnUse" target="This" IsActive="true" targetitemcomponent="Powered" setvalue="true">
+            <Conditional IsActive="false" targetitemcomponent="Powered" />
+          </StatusEffect>
+        </Button>
+        <Button text="interaction.breakbottle">
+          <StatusEffect type="OnUse" target="This">
+            <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+            <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
+            <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
+            <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
+            <Sound file="Content/Sounds/Damage/GlassImpact4.ogg" selectionmode="Random" range="600" />
+            <RemoveItem identifier="he-emptybottlebeer" />
+            <SpawnItem identifier="he-glassfragments" spawnposition="This" spawnifcantbecontained="true" SpawnIfInventoryFull="true" probability="0.5"/>
+            <SpawnItem identifier="he-shivbeer" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" probability="0.5"/>
+          </StatusEffect>
+        </Button>
+      </CustomInterface>     
       <ItemComponent>
         <StatusEffect type="OnBroken" target="This">
           <RemoveItem identifier="he-emptybottlebeer" />
