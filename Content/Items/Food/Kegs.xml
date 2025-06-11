@@ -149,15 +149,13 @@
       <Deconstruct time="2" requireddeconstructor="deconstructor">
         <Item identifier="aluminium" amount="3" outcondition="1.0"/>
       </Deconstruct>
-      <Price baseprice="100" sold="false">
-        <Price storeidentifier="merchantclown" multiplier="2.0" minavailable="1">
-          <Reputation faction="clowns" min="30"/>
+      <Price baseprice="300" sold="false">
+        <Price storeidentifier="merchantoutpost" multiplier="1" minavailable="0" maxavailable="2">
+          <Reputation faction="Coalition" min="30"/>
         </Price>
-        <Price storeidentifier="merchantoutpost" multiplier="1.1" minavailable="0" />
-        <Price storeidentifier="merchantcity" multiplier="1.5" minavailable="1" />
-        <Price storeidentifier="merchantresearch" multiplier="0.9" sold="false" />
-        <Price storeidentifier="merchantmilitary" multiplier="1.1" sold="false" />
-        <Price storeidentifier="merchantmine" multiplier="1.1" sold="false" />
+        <Price storeidentifier="merchantcity" multiplier="1" minavailable="1" maxavailable="2" >
+          <Reputation faction="Coalition" min="30"/>
+        </Price>
       </Price>
       <Holdable canBeCombined="true" removeOnCombined="false" pickkey="Select" slots="RightHand+LeftHand" holdpos="40,-40" holdangle="3" aimpos="65,-10" handle1="0,53" handle2="0,53" aimable="false" characterusable="true" msg="ItemMsgPickUpSelect" PickingTime="0">
         <!-- Revert position if not emptying -->
@@ -199,15 +197,13 @@
       <Deconstruct time="2" requireddeconstructor="deconstructor">
         <Item identifier="aluminium" amount="3" outcondition="1.0"/>
       </Deconstruct>
-      <Price baseprice="100" sold="false">
-        <Price storeidentifier="merchantclown" multiplier="2.0" minavailable="1">
-          <Reputation faction="clowns" min="30"/>
+      <Price baseprice="300" sold="false">
+        <Price storeidentifier="merchantoutpost" multiplier="1" minavailable="0" maxavailable="2">
+          <Reputation faction="Separatists" min="30"/>
         </Price>
-        <Price storeidentifier="merchantoutpost" multiplier="1.1" minavailable="0" />
-        <Price storeidentifier="merchantcity" multiplier="1.5" minavailable="1" />
-        <Price storeidentifier="merchantresearch" multiplier="0.9" sold="false" />
-        <Price storeidentifier="merchantmilitary" multiplier="1.1" sold="false" />
-        <Price storeidentifier="merchantmine" multiplier="1.1" sold="false" />
+        <Price storeidentifier="merchantcity" multiplier="1" minavailable="1" maxavailable="2" >
+          <Reputation faction="Separatists" min="30"/>
+        </Price>
       </Price>
       <Holdable canBeCombined="true" removeOnCombined="false" pickkey="Select" slots="RightHand+LeftHand" holdpos="40,-40" holdangle="3" aimpos="65,-10" handle1="0,53" handle2="0,53" aimable="false" characterusable="true" msg="ItemMsgPickUpSelect" PickingTime="0">
         <!-- Revert position if not emptying -->
@@ -251,14 +247,9 @@
         <Item identifier="aluminium" amount="3" outcondition="1.0"/>
       </Deconstruct>
       <Price baseprice="850" sold="false">
-        <Price storeidentifier="merchantclown" multiplier="2.0" minavailable="1">
-          <Reputation faction="clowns" min="30"/>
+        <Price storeidentifier="merchanthusk" multiplier="1" minavailable="0" maxavailable="2">
+          <Reputation faction="huskchurch" min="30"/>
         </Price>
-        <Price storeidentifier="merchantoutpost" multiplier="1.1" minavailable="0" />
-        <Price storeidentifier="merchantcity" multiplier="1.5" minavailable="1" />
-        <Price storeidentifier="merchantresearch" multiplier="0.9" sold="false" />
-        <Price storeidentifier="merchantmilitary" multiplier="1.1" sold="false" />
-        <Price storeidentifier="merchantmine" multiplier="1.1" sold="false" />
       </Price>
       <Holdable canBeCombined="true" removeOnCombined="false" pickkey="Select" slots="RightHand+LeftHand" holdpos="40,-40" holdangle="3" aimpos="65,-10" handle1="0,53" handle2="0,53" aimable="false" characterusable="true" msg="ItemMsgPickUpSelect" PickingTime="0">
         <!-- Revert position if not emptying -->
@@ -301,14 +292,9 @@
         <Item identifier="aluminium" amount="3" outcondition="1.0"/>
       </Deconstruct>
       <Price baseprice="420" sold="false">
-        <Price storeidentifier="merchantclown" multiplier="2.0" minavailable="1">
+        <Price storeidentifier="merchantclown" multiplier="1" minavailable="1" maxavailable="2">
           <Reputation faction="clowns" min="30"/>
         </Price>
-        <Price storeidentifier="merchantoutpost" multiplier="1.1" minavailable="0" />
-        <Price storeidentifier="merchantcity" multiplier="1.5" minavailable="1" />
-        <Price storeidentifier="merchantresearch" multiplier="0.9" sold="false" />
-        <Price storeidentifier="merchantmilitary" multiplier="1.1" sold="false" />
-        <Price storeidentifier="merchantmine" multiplier="1.1" sold="false" />
       </Price>
       <Holdable canBeCombined="true" removeOnCombined="false" pickkey="Select" slots="RightHand+LeftHand" holdpos="40,-40" holdangle="3" aimpos="65,-10" handle1="0,53" handle2="0,53" aimable="false" characterusable="true" msg="ItemMsgPickUpSelect" PickingTime="0">
         <!-- Revert position if not emptying -->
@@ -352,15 +338,9 @@
       <Deconstruct time="2" requireddeconstructor="deconstructor">
         <Item identifier="aluminium" amount="3" outcondition="1.0"/>
       </Deconstruct>
-      <Price baseprice="4500" sold="false">
-        <Price storeidentifier="merchantclown" multiplier="2.0" minavailable="1">
-          <Reputation faction="clowns" min="30"/>
-        </Price>
-        <Price storeidentifier="merchantoutpost" multiplier="1.1" minavailable="0" />
-        <Price storeidentifier="merchantcity" multiplier="1.5" minavailable="1" />
-        <Price storeidentifier="merchantresearch" multiplier="0.9" sold="false" />
-        <Price storeidentifier="merchantmilitary" multiplier="1.1" sold="false" />
-        <Price storeidentifier="merchantmine" multiplier="1.1" sold="false" />
+      <Price baseprice="450" sold="false">
+        <Price storeidentifier="merchantoutpost" multiplier="1" minavailable="0" maxavailable="2"/>
+        <Price storeidentifier="merchantcity" multiplier="1" minavailable="1" maxavailable="2" />
       </Price>
       <Holdable canBeCombined="true" removeOnCombined="false" pickkey="Select" slots="RightHand+LeftHand" holdpos="40,-40" holdangle="3" aimpos="65,-10" handle1="0,53" handle2="0,53" aimable="false" characterusable="true" msg="ItemMsgPickUpSelect" PickingTime="0">
         <!-- Revert position if not emptying -->
@@ -403,15 +383,9 @@
       <Deconstruct time="2" requireddeconstructor="deconstructor">
         <Item identifier="aluminium" amount="3" outcondition="1.0"/>
       </Deconstruct>
-      <Price baseprice="2100" sold="false">
-        <Price storeidentifier="merchantclown" multiplier="2.0" minavailable="1">
-          <Reputation faction="clowns" min="30"/>
-        </Price>
-        <Price storeidentifier="merchantoutpost" multiplier="1.1" minavailable="0" />
-        <Price storeidentifier="merchantcity" multiplier="1.5" minavailable="1" />
-        <Price storeidentifier="merchantresearch" multiplier="0.9" sold="false" />
-        <Price storeidentifier="merchantmilitary" multiplier="1.1" sold="false" />
-        <Price storeidentifier="merchantmine" multiplier="1.1" sold="false" />
+      <Price baseprice="800" sold="false">
+        <Price storeidentifier="merchantoutpost" multiplier="1" minavailable="0" maxavailable="2"/>
+        <Price storeidentifier="merchantcity" multiplier="1" minavailable="1" maxavailable="2" />
       </Price>
       <Holdable canBeCombined="true" removeOnCombined="false" pickkey="Select" slots="RightHand+LeftHand" holdpos="40,-40" holdangle="3" aimpos="65,-10" handle1="0,53" handle2="0,53" aimable="false" characterusable="true" msg="ItemMsgPickUpSelect" PickingTime="0">
         <!-- Revert position if not emptying -->
@@ -455,15 +429,8 @@
       <Deconstruct time="2" requireddeconstructor="deconstructor">
         <Item identifier="aluminium" amount="3" outcondition="1.0"/>
       </Deconstruct>
-      <Price baseprice="4000" sold="false">
-        <Price storeidentifier="merchantclown" multiplier="2.0" minavailable="1">
-          <Reputation faction="clowns" min="30"/>
-        </Price>
-        <Price storeidentifier="merchantoutpost" multiplier="1.1" minavailable="0" />
-        <Price storeidentifier="merchantcity" multiplier="1.5" minavailable="1" />
-        <Price storeidentifier="merchantresearch" multiplier="0.9" sold="false" />
-        <Price storeidentifier="merchantmilitary" multiplier="1.1" sold="false" />
-        <Price storeidentifier="merchantmine" multiplier="1.1" sold="false" />
+      <Price baseprice="1000" sold="false">
+        <Price storeidentifier="merchantcity" multiplier="1" minavailable="0" maxavailable="1" />
       </Price>
       <Holdable canBeCombined="true" removeOnCombined="false" pickkey="Select" slots="RightHand+LeftHand" holdpos="40,-40" holdangle="3" aimpos="65,-10" handle1="0,53" handle2="0,53" aimable="false" characterusable="true" msg="ItemMsgPickUpSelect" PickingTime="0">
         <!-- Revert position if not emptying -->
@@ -507,15 +474,9 @@
       <Deconstruct time="2" requireddeconstructor="deconstructor">
         <Item identifier="aluminium" amount="3" outcondition="1.0"/>
       </Deconstruct>
-      <Price baseprice="1750" sold="false">
-        <Price storeidentifier="merchantclown" multiplier="2.0" minavailable="1">
-          <Reputation faction="clowns" min="30"/>
-        </Price>
-        <Price storeidentifier="merchantoutpost" multiplier="1.1" minavailable="0" />
-        <Price storeidentifier="merchantcity" multiplier="1.5" minavailable="1" />
-        <Price storeidentifier="merchantresearch" multiplier="0.9" sold="false" />
-        <Price storeidentifier="merchantmilitary" multiplier="1.1" sold="false" />
-        <Price storeidentifier="merchantmine" multiplier="1.1" sold="false" />
+      <Price baseprice="1100" sold="false">
+        <Price storeidentifier="merchantoutpost" multiplier="1" minavailable="0" maxavailable="2"/>
+        <Price storeidentifier="merchantcity" multiplier="1" minavailable="1" maxavailable="2" />
       </Price>
       <Holdable canBeCombined="true" removeOnCombined="false" pickkey="Select" slots="RightHand+LeftHand" holdpos="40,-40" holdangle="3" aimpos="65,-10" handle1="0,53" handle2="0,53" aimable="false" characterusable="true" msg="ItemMsgPickUpSelect" PickingTime="0">
         <!-- Revert position if not emptying -->
@@ -559,15 +520,8 @@
       <Deconstruct time="2" requireddeconstructor="deconstructor">
         <Item identifier="aluminium" amount="3" outcondition="1.0"/>
       </Deconstruct>
-      <Price baseprice="3250" sold="false">
-        <Price storeidentifier="merchantclown" multiplier="2.0" minavailable="1">
-          <Reputation faction="clowns" min="30"/>
-        </Price>
-        <Price storeidentifier="merchantoutpost" multiplier="1.1" minavailable="0" />
-        <Price storeidentifier="merchantcity" multiplier="1.5" minavailable="1" />
-        <Price storeidentifier="merchantresearch" multiplier="0.9" sold="false" />
-        <Price storeidentifier="merchantmilitary" multiplier="1.1" sold="false" />
-        <Price storeidentifier="merchantmine" multiplier="1.1" sold="false" />
+      <Price baseprice="1200" sold="false">
+        <Price storeidentifier="merchantcity" multiplier="1" minavailable="0" maxavailable="1" />
       </Price>
       <Holdable canBeCombined="true" removeOnCombined="false" pickkey="Select" slots="RightHand+LeftHand" holdpos="40,-40" holdangle="3" aimpos="65,-10" handle1="0,53" handle2="0,53" aimable="false" characterusable="true" msg="ItemMsgPickUpSelect" PickingTime="0">
         <!-- Revert position if not emptying -->
