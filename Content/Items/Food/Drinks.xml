@@ -2778,7 +2778,7 @@
       </Fabricate>
       <Fabricate suitablefabricators="sink" displayname="fill" requiredtime="10" requiresrecipe="false" amount="1">
         <RequiredItem tag="cleanwaterrefill_common" amount="1" UseCondition="False" MinCondition="0.0" />
-        <RequiredItem tag="waterfilter" UseCondition="True" MinCondition="0.01" />
+        <!-- <RequiredItem tag="waterfilter" UseCondition="True" MinCondition="0.01" /> -->
       </Fabricate>
       <Deconstruct time="2">
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
@@ -2925,7 +2925,7 @@
       </Fabricate>
       <Fabricate suitablefabricators="sink" displayname="fill" requiredtime="10" requiresrecipe="false" amount="1">
         <RequiredItem tag="cleanwaterrefill_rum" amount="1" UseCondition="False" MinCondition="0.0" />
-        <RequiredItem tag="waterfilter" UseCondition="True" MinCondition="0.01" />
+        <!-- <RequiredItem tag="waterfilter" UseCondition="True" MinCondition="0.01" /> -->
       </Fabricate>       
       <ItemComponent>
         <StatusEffect type="OnBroken" target="This">
@@ -2952,7 +2952,7 @@
       </Fabricate>
       <Fabricate suitablefabricators="sink" displayname="fill" requiredtime="10" requiresrecipe="false" amount="1">
         <RequiredItem tag="cleanwaterrefill_whiskey" amount="1" UseCondition="False" MinCondition="0.0" />
-        <RequiredItem tag="waterfilter" UseCondition="True" MinCondition="0.01" />
+        <!-- <RequiredItem tag="waterfilter" UseCondition="True" MinCondition="0.01" /> -->
       </Fabricate>    
       <ItemComponent>
         <StatusEffect type="OnBroken" target="This">
@@ -2979,7 +2979,7 @@
       </Fabricate>
       <Fabricate suitablefabricators="sink" displayname="fill" requiredtime="10" requiresrecipe="false" amount="1">
         <RequiredItem tag="cleanwaterrefill_halucinova" amount="1" UseCondition="False" MinCondition="0.0" />
-        <RequiredItem tag="waterfilter" UseCondition="True" MinCondition="0.01" />
+        <!-- <RequiredItem tag="waterfilter" UseCondition="True" MinCondition="0.01" /> -->
       </Fabricate>      
       <ItemComponent>
         <StatusEffect type="OnBroken" target="This">
@@ -3006,7 +3006,7 @@
       </Fabricate>
       <Fabricate suitablefabricators="sink" displayname="fill" requiredtime="10" requiresrecipe="false" amount="1">
         <RequiredItem tag="cleanwaterrefill_beer" amount="1" UseCondition="False" MinCondition="0.0" />
-        <RequiredItem tag="waterfilter" UseCondition="True" MinCondition="0.01" />
+        <!-- <RequiredItem tag="waterfilter" UseCondition="True" MinCondition="0.01" /> -->
       </Fabricate>      
       <ItemComponent>
         <StatusEffect type="OnBroken" target="This">
