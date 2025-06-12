@@ -389,7 +389,7 @@
         <RequiredSkill identifier="cooking" level="10" />
         <RequiredItem identifier="banana" Amount="1"/>
       </Fabricate>
-      <Growable name="bananaseed" growthspeed="777.076" pickingtime="3" maximumvines="12" maxhealth="375" hardiness="0.15" floodtolerance="0.2" seedrate="0" productrate="0.0056" flowerquantity="4" baseflowerscale="0.60" vinescale="0.25" vinetint="55,152,27,255" flowertint="139,56,87,255">
+      <Growable name="bananaseed" growthspeed="777.076" pickingtime="3" maximumvines="4" maxhealth="375" hardiness="0.15" floodtolerance="0.2" seedrate="0" productrate="0.0056" flowerquantity="2" baseflowerscale="0.60" vinescale="0.25" vinetint="55,152,27,255" flowertint="139,56,87,255">
         <ProducedItem identifier="banana" probability="0.9"/>
         <ProducedItem identifier="bananafuelrod" probability="0.1"/>
         <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
@@ -451,7 +451,7 @@
       </Price>
       <Deconstruct time="2" requireddeconstructor="deconstructor"/>
       <!-- TODO: adjust growth and sprites -->
-      <Growable name="pomaccoseed" growthspeed="777.075" pickingtime="3" maxhealth="500" hardiness="0.177" floodtolerance="0.4" seedrate="0" productrate="77" maximumvines="12" flowerquantity="6" leafprobability="0.50" flowertint="255,54,200,255" leaftint="255,150,100,255" vinetint="244,172,132,255" baseflowerscale="0.35" vinescale="0.25" GrowthWeights="0.2,1,0.1,1">
+      <Growable name="pomaccoseed" growthspeed="777.075" pickingtime="3" maxhealth="500" hardiness="0.177" floodtolerance="0.4" seedrate="0" productrate="77" maximumvines="4" flowerquantity="2" leafprobability="0.50" flowertint="255,54,200,255" leaftint="255,150,100,255" vinetint="244,172,132,255" baseflowerscale="0.35" vinescale="0.25" GrowthWeights="1,0,0,0">
         <ProducedItem identifier="pomacco" probability="0.98" />
         <ProducedItem identifier="badcreepingorange" probability="0.02"/>
         <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
@@ -504,7 +504,7 @@
       </Price>
       <Deconstruct time="2" requireddeconstructor="deconstructor"/>
       <!-- TODO: adjust growth and sprites -->
-      <Growable name="saltgrenadeseed" growthspeed="777.077" pickingtime="3" maxhealth="500" hardiness="0.177" floodtolerance="0.4" seedrate="0" productrate="77" maximumvines="12" flowerquantity="6" leafprobability="0.33" flowertint="255,180,0,255" leaftint="255,150,100,255" vinetint="210,240,132,255" baseflowerscale="0.35" vinescale="0.25"  GrowthWeights="0.2,1,0.1,1">
+      <Growable name="saltgrenadeseed" growthspeed="777.077" pickingtime="3" maxhealth="500" hardiness="0.177" floodtolerance="0.4" seedrate="0" productrate="77" maximumvines="4" flowerquantity="2" leafprobability="0.50" flowertint="255,180,0,255" leaftint="255,150,100,255" vinetint="210,240,132,255" baseflowerscale="0.35" vinescale="0.25" GrowthWeights="1,0,0,0">
         <ProducedItem identifier="creepingorange" probability="0.50" />
         <ProducedItem identifier="saltgrenade" probability="0.50"/>
         <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
@@ -557,7 +557,7 @@
       </Price>
       <Deconstruct time="2" requireddeconstructor="deconstructor"/>
       <!-- TODO: adjust growth and sprites -->
-      <Growable name="raptorpomseed" growthspeed="777.074" pickingtime="3" maxhealth="500" hardiness="0.177" floodtolerance="0.4" seedrate="0" productrate="77" maximumvines="20" flowerquantity="8" leafprobability="0.50" flowertint="255,45,50,255" leaftint="140,146,56,255" vinetint="200,160,100,255" baseflowerscale="0.50" vinescale="0.25" GrowthWeights="0.2,1,0.1,1" >
+      <Growable name="raptorpomseed" growthspeed="777.074" pickingtime="3" maxhealth="500" hardiness="0.177" floodtolerance="0.4" seedrate="0" productrate="77" maximumvines="4" flowerquantity="2" leafprobability="0.50" flowertint="255,45,50,255" leaftint="140,146,56,255" vinetint="200,160,100,255" baseflowerscale="0.50" vinescale="0.25" GrowthWeights="1,0,0,0" >
         <ProducedItem identifier="raptorpom" probability="0.70" />
         <ProducedItem identifier="badraptorbane" probability="0.30"></ProducedItem>
         <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
@@ -610,7 +610,7 @@
       </Price>
       <Deconstruct time="2" requireddeconstructor="deconstructor"/>
       <!-- TODO: adjust growth and sprites -->
-      <Growable name="raptorbaccoseed" growthspeed="777.073" pickingtime="3" maxhealth="500" hardiness="0.177" floodtolerance="0.4" seedrate="0" productrate="77" maximumvines="20" flowerquantity="8" leafprobability="0.50" flowertint="148,85,120,255" leaftint="182,120,70,255" vinetint="235,130,112,255" baseflowerscale="0.40" vinescale="0.25" GrowthWeights="0.2,1,0.1,1" >
+      <Growable name="raptorbaccoseed" growthspeed="777.073" pickingtime="3" maxhealth="500" hardiness="0.177" floodtolerance="0.4" seedrate="0" productrate="77" maximumvines="4" flowerquantity="2" leafprobability="0.50" flowertint="148,85,120,255" leaftint="182,120,70,255" vinetint="235,130,112,255" baseflowerscale="0.40" vinescale="0.25" GrowthWeights="1,0,0,0" >
         <ProducedItem identifier="raptorbacco" probability="0.85" />
         <ProducedItem identifier="badraptorbane" probability="0.15"></ProducedItem>
         <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
@@ -661,7 +661,7 @@
       <Price baseprice="30" canbespecial="false" sold="false">
       </Price>
       <Deconstruct time="2" requireddeconstructor="deconstructor"/>   
-      <Growable name="bananacigarseed" growthspeed="7770.72" pickingtime="3" maxhealth="500" hardiness="0.177" floodtolerance="0.4" seedrate="0" productrate="77" maximumvines="12" flowerquantity="8" leafprobability="0.50" flowertint="148,85,180,255" leaftint="240,180,180,255" vinetint="65,152,45,255" baseflowerscale="0.40" vinescale="0.25" GrowthWeights="0.2,1,0.1,1" >    
+      <Growable name="bananacigarseed" growthspeed="7770.72" pickingtime="3" maxhealth="500" hardiness="0.177" floodtolerance="0.4" seedrate="0" productrate="77" maximumvines="4" flowerquantity="2" leafprobability="0.50" flowertint="148,85,180,255" leaftint="240,180,180,255" vinetint="65,152,45,255" baseflowerscale="0.40" vinescale="0.25" GrowthWeights="1,0,0,0" >    
         <ProducedItem identifier="banana" probability="0.7"/>
         <ProducedItem identifier="bananacigar" probability="0.3"/>
         <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
@@ -719,7 +719,7 @@
       <Price baseprice="30" sold="false">
       </Price>
       <Deconstruct time="2" requireddeconstructor="deconstructor"/> 
-      <Growable name="bananagunseed" growthspeed="777.071" pickingtime="3" maxhealth="500" hardiness="0.177" floodtolerance="0.4" seedrate="0" productrate="77" maximumvines="12" flowerquantity="8" leafprobability="0.50" flowertint="170,100,120,255" leaftint="240,180,180,255" vinetint="90,152,50,255" baseflowerscale="0.40" vinescale="0.25" GrowthWeights="0.2,1,0.1,1" >      
+      <Growable name="bananagunseed" growthspeed="777.071" pickingtime="3" maxhealth="500" hardiness="0.177" floodtolerance="0.4" seedrate="0" productrate="77" maximumvines="4" flowerquantity="2" leafprobability="0.50" flowertint="170,100,120,255" leaftint="240,180,180,255" vinetint="90,152,50,255" baseflowerscale="0.40" vinescale="0.25" GrowthWeights="1,0,0,0" >      
         <ProducedItem identifier="banana" probability="0.7"/>
         <ProducedItem identifier="bananagun" probability="0.3"/>
         <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
