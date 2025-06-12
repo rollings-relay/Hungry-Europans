@@ -1163,20 +1163,19 @@
     <Deconstruct time="5" chooserandom="true">
       <Item identifier="potassium" mincondition="0.95" />
     </Deconstruct>
-    <LightComponent LightColor="220,150,30,150" range="15" IsOn="false" lightoffset="18,0" vulnerabletoemp="false" pulseamount="0.6" pulsefrequency="1" flicker="0.5" flickerspeed="0.5">
-      <IsActiveConditional IsAiming="true" />
-    </LightComponent>
-    <Holdable slots="Any,RightHand,LeftHand" aimable="false" aimpos="32,21" handle1="0,-22" holdangle="0" aimangle="-25" swingamount="0,0" swingspeed="0.5" swingwhenusing="true" msg="ItemMsgPickUpSelect">
-      <StatusEffect type="OnUse" target="This" Condition="-4.0" />
-      <StatusEffect type="OnUse" target="This" IsOn="true" setvalue="true" targetitemcomponent="LightComponent">
-        <ParticleEmitter particle="flame" particlespersecond="10" scalemin="0.05" scalemax="0.10" anglemin="24" anglemax="24" distancemin="13" distancemax="13" velocitymin="0" velocitymax="0" colormultiplier="255,255,255,180" lifetimemultiplier="0.25"/>
-        <ParticleEmitter particle="smoke" particlespersecond="3" scalemin="0.35" scalemax="0.5" anglemin="24" anglemax="24" distancemin="13" distancemax="14" velocitymin="0" velocitymax="10" colormultiplier="255,255,255,200" />
-        <ParticleEmitter particle="bubbles" particlespersecond="3" scalemin="0.3" scalemax="0.5" anglemin="24" anglemax="24" distancemin="13" distancemax="13" velocitymin="0" velocitymax="10"/>
-      </StatusEffect>
+    <!-- TODO: reenable this when devs fix https://github.com/FakeFishGames/Barotrauma/discussions/16184 -->
+    <!-- <LightComponent LightColor="220,150,30,150" range="15" IsOn="true" castshadows="false" lightoffset="22,5" vulnerabletoemp="false" pulseamount="0.6" pulsefrequency="1" flicker="0.5" flickerspeed="0.5">
+      <LightTexture texture="Content/Lights/light.png" origin="0.5, 0.5" size="1.0,1.0" />
+      <IsActiveConditional HasStatusTag="smoking" />
+    </LightComponent>  -->
+    <RangedWeapon reload="0.1" holdtrigger="true" barrelpos="22,15" combatPriority="0" drawhudwhenequipped="true" crosshairscale="0">
+      <ParticleEmitter particle="flame" particlespersecond="3" scalemin="0.05" scalemax="0.10" velocitymin="0" velocitymax="0" colormultiplier="255,255,255,180" lifetimemultiplier="0.25"/>
+      <ParticleEmitter particle="smoke" particlespersecond="1" scalemin="0.25" scalemax="0.35" velocitymin="0" velocitymax="10" colormultiplier="255,255,255,200" />
+      <ParticleEmitter particle="bubbles" particlespersecond="3" scalemin="0.3" scalemax="0.5" velocitymin="0" velocitymax="10"/>      
+      <StatusEffect type="OnUse" target="This" Condition="-4.0" statuseffecttags="smoking" duration="0.1" stackable="false" />
       <StatusEffect type="OnUse" target="This">
         <Conditional InWater="false" />
         <Sound file="Content/Items/Medical/ITEM_cigarette.ogg" range="250" loop="true" selectionmode="Random" />
-        <!-- <Sound file="Content/Items/Medical/ITEM_cigaretteExtended.ogg" range="250" loop="true" selectionmode="Random" /> -->
       </StatusEffect>
       <StatusEffect tags="medical" type="OnUse" target="Character">
         <Affliction identifier="he-tobaccoaddiction" amount="2" />
@@ -1191,6 +1190,8 @@
         <SpawnItem identifier="bananapeel" spawnposition="SameInventory"/>
         <Remove />
       </StatusEffect>
+    </RangedWeapon>    
+    <Holdable slots="Any,RightHand,LeftHand" aimable="false" aimpos="32,21" handle1="0,-22" holdangle="0" aimangle="-25" swingamount="0,0" swingspeed="0.5" swingwhenusing="true" msg="ItemMsgPickUpSelect">
     </Holdable>
   </Item>
   
