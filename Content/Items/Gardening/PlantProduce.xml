@@ -650,10 +650,10 @@
         <sound file="Content/Items/Weapons/ExplosionSmall3.ogg" range="4000" selectionmode="Random" />
         <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" />
         <ParticleEmitter particle="fruitchunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" />
-        <Explosion range="500.0" ballastfloradamage="500" structuredamage="200" itemdamage="500" force="15" severlimbsprobability="0.5" decal="explosion" decalsize="1.5" penetration="0.5">
-          <Affliction identifier="burn" strength="80" />
+        <Explosion range="250.0" ballastfloradamage="250" structuredamage="100" itemdamage="250" force="10" severlimbsprobability="0.25" decal="explosion" decalsize="1.0" penetration="0.5">
+          <Affliction identifier="burn" strength="30" />
           <Affliction identifier="stun" strength="5" />
-          <Affliction identifier="lacerations" strength="30" />
+          <Affliction identifier="lacerations" strength="15" />
         </Explosion>
         <Fire size="5.0" />
         <Remove />
@@ -663,11 +663,11 @@
         <sound file="Content/Items/Weapons/ExplosionMedium1.ogg" range="4000" selectionmode="Random" />
         <sound file="Content/Items/Weapons/ExplosionMedium2.ogg" range="4000" selectionmode="Random" />
         <sound file="Content/Items/Weapons/ExplosionMedium3.ogg" range="4000" selectionmode="Random" />
-        <Explosion range="1000.0" ballastfloradamage="1000" structuredamage="500" itemdamage="1000" force="20" severlimbsprobability="1.0" decal="explosion" decalsize="3.0" penetration="0.5">
-          <Affliction identifier="burn" strength="90" />
+        <Explosion range="500.0" ballastfloradamage="500" structuredamage="100" itemdamage="1000" force="15" severlimbsprobability="0.5" decal="explosion" decalsize="2.0" penetration="0.5">
+          <Affliction identifier="burn" strength="60" />
           <Affliction identifier="stun" strength="5" />
-          <Affliction identifier="lacerations" strength="50" />
-        </Explosion>
+          <Affliction identifier="lacerations" strength="25" />
+        </Explosion>  
         <Remove />
       </StatusEffect>
     </Throwable>
