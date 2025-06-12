@@ -7,6 +7,8 @@
         <Forcesay message="forcesay.eatingsound" sayinradio="false" />
       </StatusEffect> -->
 
+  <!-- TODO: Fuck the whole eating with E thing, just make items that can be eaten holdable and items that can be thrown throwable???
+  Eating behavior should be the same across all items (LMB+RMB), adding arbitraty eating and throwing inputs across different items is a problem -->
 
   <!-- VANILLA PLANTS -->
   <!-- VANILLA PLANTS -->
