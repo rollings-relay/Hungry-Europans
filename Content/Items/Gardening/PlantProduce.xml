@@ -617,7 +617,11 @@
       <StatusEffect type="OnBroken" targettype="This" IsOn="false" />
     </LightComponent>
     <Throwable characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="3.5" aimpos="35,-10" msg="ItemMsgPickUpSelect">
-      <StatusEffect type="InWater" target="This" Scale="0.08" />
+      <StatusEffect type="InWater" target="This" Scale="0.08" >
+        <sound file="Content/Items/Tools/FlareLoop.ogg" range="600.0" loop="true" frequencymultiplier="2" />
+        <ParticleEmitter particle="risingbubbles" particlespersecond="20" scalemin="0.5" scalemax="0.8" distancemin="-10" distancemax="10" anglemin="-10" anglemax="10" velocitymin="0" velocitymax="10" copyentityangle="false" colormultiplier="255,255,255,255" lifetimemultiplier="0.25" />
+        <ParticleEmitter particle="bubbles" particlespersecond="5" scalemin="0.25" scalemax="0.5" distancemin="-10" distancemax="10" anglemin="0" anglemax="360" velocitymin="0" velocitymax="10" copyentityangle="false" colormultiplier="255,255,255,255" lifetimemultiplier="1" /> 
+      </StatusEffect>      
       <StatusEffect type="OnNotContained" target="This" Scale="0.01">
         <Conditional InWater="false" />
         <sound file="Content/Sounds/Damage/Gore1.ogg" selectionmode="Random" range="500" volume="0.5" />
