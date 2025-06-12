@@ -17,7 +17,7 @@
   <!-- VANILLA PLANTS -->
   
   <Item name="Pomegrenade" identifier="creepingorange" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,fooditem,sugary,petfood1,petfood2,petfood3,distillable" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="True">
-    <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="971,649,43,55" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.52" sourcerect="971,649,43,55" origin="0.5,0.5" />
     <Body radius="30" density="5" />
     <Price baseprice="20" sold="false">
       <Price storeidentifier="merchantoutpost" />
@@ -82,7 +82,7 @@
   </Item>
   
   <Item name="Tobacco Bud" identifier="tobaccobud" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,tobaccoingredient" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true">
-    <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="904,646,56,61" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.52" sourcerect="904,646,56,61" origin="0.5,0.5" />
     <Body radius="30" density="9" waterdragcoefficient="20"/>
     <Price baseprice="40" sold="false">
       <Price storeidentifier="merchantoutpost" />
@@ -121,7 +121,7 @@
   </Item>
   
   <Item name="Salt Bulb" identifier="saltbulb" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,explodesinwater" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true">
-    <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="968,712,49,55" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.52" sourcerect="968,712,49,55" origin="0.5,0.5" />
     <Body radius="30" density="9" />
     <Price baseprice="65" sold="false">
       <Price storeidentifier="merchantoutpost" />
@@ -174,7 +174,7 @@
   </Item>
   
   <Item name="Raptor Bane" identifier="raptorbane" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,petfood1,petfood2,petfood3,distillable" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true">
-    <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="971,777,44,50" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.52" sourcerect="971,777,44,50" origin="0.5,0.5" />
     <Body radius="30" density="9" waterdragcoefficient="10"/>
     <Price baseprice="40" sold="false">
       <Price storeidentifier="merchantoutpost" />
@@ -219,10 +219,10 @@
     <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.04" />
     <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.04" />
     <PreferredContainer primary="seedbag" amount="1" spawnposition="0.03" />
-    <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,330,52,55" depth="0.2" origin="0.5,0.5" />
+    <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,330,52,55" depth="0.52" origin="0.5,0.5" />
     <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,330,52,55" origin="0.5,0.5" />
     <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,330,52,55" depth="0.525" origin="0.5,0.7"  />
-    <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="53,313,47,72" depth="0.2" maxcondition="99" />
+    <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="53,313,47,72" depth="0.52" maxcondition="99" />
     <Price baseprice="50" canbespecial="false">
       <Price storeidentifier="merchantoutpost" sold="false" />
       <Price storeidentifier="merchantcity" sold="false"/>
@@ -314,7 +314,7 @@
   <!-- NEW PLANTS -->
   <!-- NEW PLANTS -->
   <Item name="Bubbleberries" identifier="bubbleberries" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,fooditem,sugary,petfood1,petfood2,petfood3" description="Very tasty and juicy." cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="True">
-    <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.2" sourcerect="183,0,54,48" origin="0.5,0.5" />
+    <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.52" sourcerect="183,0,54,48" origin="0.5,0.5" />
     <Body radius="30" density="5" />
     <Price baseprice="40" sold="false">
       <Price storeidentifier="merchantoutpost" />
@@ -372,7 +372,7 @@
   </Item>
   
   <Item name="Popnut" identifier="popnut" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,waterreactivesize,fooditem,petfood1,petfood2,petfood3" description="Kids love to play with them. Needs to be put in water to pop it open and be able to consume it." cargocontaineridentifier="metalcrate" scale="0.25" impactsoundtag="impact_soft" damagedbyexplosions="false" allowasextracargo="True">
-    <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.2" sourcerect="0,0,46,46" origin="0.5,0.5" />
+    <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.52" sourcerect="0,0,46,46" origin="0.5,0.5" />
     <Body radius="30" density="2.8" />
     <Price baseprice="50" sold="false">
       <Price storeidentifier="merchantoutpost" />
@@ -421,7 +421,7 @@
   </Item>
   
   <Item name="Popped Popnut" identifier="popnutpopped" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,fooditem,sugary,petfood1,petfood2,petfood3" description="It's popped open, ready to be consumed. Used in some recipes." cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" damagedbyexplosions="false" allowasextracargo="True">
-    <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.2" sourcerect="46,0,46,51" origin="0.5,0.5" />
+    <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.52" sourcerect="46,0,46,51" origin="0.5,0.5" />
     <Body radius="30" density="2" />
     <Price baseprice="50" sold="false">
       <Price storeidentifier="merchantoutpost" />
@@ -486,7 +486,7 @@
   <!-- MUTATED VARIANTS -->
   <!-- MUTATED VARIANTS -->
   <Item name="Mutated Pomegrenade" identifier="badcreepingorange" descriptionidentifier="creepingorange" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,mutatedplant,sugary,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true">
-    <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="971,835,43,55" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.52" sourcerect="971,835,43,55" origin="0.5,0.5" />
     <Body radius="30" density="9" />
     <Deconstruct time="7">
       <Item identifier="carbon" amount="2" />
@@ -555,7 +555,7 @@
   </Item>
   
   <Item name="Mutated Tobacco Bud" identifier="badtobaccobud" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,mutatedplant,petfood1,petfood2,petfood3,tobaccoingredient" description="A mutated variant of the tobacco bud. Fragile, but strong in flavour and smell." cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true">
-    <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.2" sourcerect="0,51,47,56" origin="0.5,0.5" />
+    <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.52" sourcerect="0,51,47,56" origin="0.5,0.5" />
     <Body radius="30" density="9"/>
     <Deconstruct time="7">
       <Item identifier="carbon" amount="4" />
@@ -602,7 +602,7 @@
   </Item>
   
   <Item name="Mutated Salt Bulb" identifier="badsaltbulb" descriptionidentifier="saltbulb" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,mutatedplant,explodesinwater,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true">
-    <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.2" sourcerect="0,107,51,57" origin="0.5,0.5" />
+    <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.52" sourcerect="0,107,51,57" origin="0.5,0.5" />
     <Body radius="30" density="9" />
     <Deconstruct time="7">
       <Item identifier="sodium" amount="3" />
@@ -682,7 +682,7 @@
   </Item>
   
   <Item name="Mutated Raptor Bane" identifier="badraptorbane" descriptionidentifier="raptorbane" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,mutatedplant,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true">
-    <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="907,838,44,50" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.52" sourcerect="907,838,44,50" origin="0.5,0.5" />
     <Body radius="30" density="9"/>
     <Deconstruct time="7">
       <Item identifier="carbon" amount="2" />
@@ -719,7 +719,7 @@
   </Item>
   
   <Item name="Mutated Bubbleberries" identifier="badbubbleberries" descriptionidentifier="bubbleberries" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,mutatedplant,fooditem,sugary,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true">
-    <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.2" sourcerect="237,0,54,48" origin="0.5,0.5" />
+    <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.52" sourcerect="237,0,54,48" origin="0.5,0.5" />
     <Body radius="30" density="9" />
     <Deconstruct time="7">
       <Item identifier="carbon" amount="2" />
@@ -770,7 +770,7 @@
   </Item>
   
   <Item name="Mutated Popnut" identifier="badpopnut" descriptionidentifier="popnut" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,mutatedplant,fooditem,waterreactivesize,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.25" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true">
-    <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.2" sourcerect="92,0,45,46" origin="0.5,0.5" />
+    <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.52" sourcerect="92,0,45,46" origin="0.5,0.5" />
     <Body radius="30" density="2.8" />
     <Deconstruct time="7">
       <Item identifier="carbon" amount="3" />
@@ -811,7 +811,7 @@
   </Item>
   
   <Item name="Popped Mutated Popnut" identifier="badpopnutpopped" descriptionidentifier="popnut" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,mutatedplant,waterreactivesize,fooditem,sugary,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" damagedbyexplosions="false" allowasextracargo="true">
-    <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.2" sourcerect="137,0,46,51" origin="0.5,0.5" />
+    <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.52" sourcerect="137,0,46,51" origin="0.5,0.5" />
     <Body radius="30" density="2" />
     <Deconstruct time="7">
       <Item identifier="carbon" amount="3" />
@@ -882,7 +882,7 @@
  
   <!-- mutated Banana fuel rod, 1/3rd the durability (and output?) of a fuel rod  -->
   <Item name="bananafuelrod" identifier="bananafuelrod" Category="Fuel" Tags="smallitem,reactorfuel,divingsuitfuel,plant,plantitem,fuelrod" health="35" maxstacksize="1" cargocontaineridentifier="metalcrate" scale="0.5" impacttolerance="8" spritecolor="255,255,255,255">
-    <sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" sourcerect="960,320,64,64" depth="0.2" origin="0.5,0.5" />
+    <sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" sourcerect="960,320,64,64" depth="0.52" origin="0.5,0.5" />
     <Body radius="28" density="15" />
     <PreferredContainer primary="reactorcab"/>
     <PreferredContainer secondary="nucleargun" minamount="1" maxamount="1" spawnprobability="1"/>
@@ -910,7 +910,7 @@
       </StatusEffect>
     </Throwable>
     <LightComponent range="25.0" lightcolor="100,180,120,255" IsOn="true" castshadows="false" allowingameediting="false" pulseamount="0.6" pulsefrequency="0.3">
-      <sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" sourcerect="896,320,64,64" depth="0.2" origin="0.5,0.5" />
+      <sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" sourcerect="896,320,64,64" depth="0.52" origin="0.5,0.5" />
     </LightComponent>
     <ItemContainer hideitems="true" capacity="1" itemrotation="90" drawinventory="false" canbeselected="false" SpawnWithId="nucleargunbolt" removecontaineditemsondeconstruct="true" showcontainedstateindicator="false">
       <Containable items="nucleargunbolt" />
@@ -936,7 +936,7 @@
   <!-- POMACCO (pom x tobacco)
   heals a little, but gives you tobacco addicition -->
   <Item name="pomacco" identifier="pomacco" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,petfood1,petfood2,petfood3,distillable,tobaccoingredient" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" allowasextracargo="true">
-    <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.2" sourcerect="960,576,64,64" origin="0.5,0.5" />
+    <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.52" sourcerect="960,576,64,64" origin="0.5,0.5" />
     <Body radius="28" density="9" />
     <PreferredContainer primary="plantcontainer"/>
     <PreferredContainer primary="kitchen" secondary="crewcab" />
@@ -994,7 +994,7 @@
   <!-- SALTGRENADE (saltvine x pom)
   cures small amounts of bloodloss and organ damage, but hates water -->
   <Item name="saltgrenade" identifier="saltgrenade" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,fooditem,petfood1,petfood2,petfood3,distillable" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" allowasextracargo="true" >
-    <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.2" sourcerect="896,576,64,64" origin="0.5,0.5" />
+    <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.52" sourcerect="896,576,64,64" origin="0.5,0.5" />
     <Body radius="28" density="9" />
     <PreferredContainer primary="plantcontainer"/>
     <PreferredContainer primary="kitchen" secondary="crewcab" />
@@ -1066,7 +1066,7 @@
   <!-- RAPTOR'S NIP (tobacco x raptorbane)
   enhances physical performance at the cost of your sanity -->
   <Item name="raptorbacco" identifier="raptorbacco" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,petfood1,petfood2,petfood3,distillable,tobaccoingredient" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" allowasextracargo="true">
-    <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.2" sourcerect="960,512,64,64" origin="0.5,0.5" />
+    <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.52" sourcerect="960,512,64,64" origin="0.5,0.5" />
     <Body radius="28" density="9" />
     <PreferredContainer primary="plantcontainer"/>
     <PreferredContainer primary="kitchen" secondary="crewcab" />
@@ -1114,7 +1114,7 @@
   <!-- RAPTOR BAIT (pom x raptorbane)
   acts as cheap distracting item, makes monsters sick (especially raptors) -->
   <Item name="raptorpom" identifier="raptorpom" category="Misc" health="10" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,distillable,provocative" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" allowasextracargo="true" isshootable="True" damagedbymonsters="true" >
-    <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.2" sourcerect="896,512,64,64" origin="0.5,0.5" />
+    <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.52" sourcerect="896,512,64,64" origin="0.5,0.5" />
     <Body radius="28" density="11" />
     <PreferredContainer primary="plantcontainer"/>
     <PreferredContainer primary="kitchen" secondary="crewcab" />
@@ -1154,7 +1154,7 @@
   <!--BANANACIGAR (banana x tobacco)
   a smokeable banana that reduces psychosis and hallucination -->
   <Item name="bananacigar" identifier="bananacigar" Category="Misc" Tags="smallitem,reactorfuel,divingsuitfuel,plant,plantitem,tobaccoingredient" health="35" maxstacksize="1" cargocontaineridentifier="metalcrate" scale="0.5" impacttolerance="8"  spritecolor="255,255,255,255" isshootable="true" requireaimtouse="true">
-    <sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" sourcerect="960,448,64,64" depth="0.2" origin="0.5,0.5" />
+    <sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" sourcerect="960,448,64,64" depth="0.52" origin="0.5,0.5" />
     <Body radius="28" density="15" />
     <PreferredContainer primary="plantcontainer"/>
     <PreferredContainer primary="kitchen" secondary="crewcab" />
@@ -1198,7 +1198,7 @@
   <!--BANANAGUN (banana x saltvine)
   it's a banana, it's a gun, it's a bananagun-->
   <Item name="bananagun" identifier="bananagun" Category="Misc" Tags="smallitem,plant,plantitem,weapon,gun,pistolitem,provocativetohumanai,mountableweapon" health="35" maxstacksize="1" cargocontaineridentifier="metalcrate" scale="0.5" impacttolerance="8"  spritecolor="255,255,255,255" isshootable="true" requireaimtouse="true">
-    <sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" sourcerect="960,384,64,64" depth="0.2" origin="0.5,0.5" />
+    <sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" sourcerect="960,384,64,64" depth="0.52" origin="0.5,0.5" />
     <Body radius="28" density="15" />
     <PreferredContainer primary="plantcontainer"/>
     <PreferredContainer primary="kitchen" secondary="crewcab" />
@@ -1269,7 +1269,7 @@
  <!--LEAVES-->
  <!--LEAVES-->
   <Item name="Bubbleberry Leaf" identifier="bubbleberryleaf" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" damagedbyexplosions="false" allowasextracargo="True">
-    <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.2" sourcerect="389,0,61,52" origin="0.5,0.5" />
+    <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.52" sourcerect="389,0,61,52" origin="0.5,0.5" />
     <Body radius="30" density="5" />
     <!--<Price baseprice="40" sold="false">
       <Price storeidentifier="merchantoutpost" />
@@ -1294,7 +1294,7 @@
   </Item>
   
   <Item name="Popnut Leaf" identifier="popnutleaf" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" damagedbyexplosions="false" allowasextracargo="True">
-    <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.2" sourcerect="451,0,61,52" origin="0.5,0.5" />
+    <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.52" sourcerect="451,0,61,52" origin="0.5,0.5" />
     <Body radius="30" density="5" />
     <!--<Price baseprice="40" sold="false">
       <Price storeidentifier="merchantoutpost" />
