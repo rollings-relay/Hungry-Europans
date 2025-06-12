@@ -511,14 +511,14 @@
     </Item> 
     
     <!-- chops ingredients as long as you interact with it  -->
-    <Item name="Cutting Board" identifier="he-cuttingboard" tags="cuttingboard,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="" isshootable="true" scale="0.5" damagedbyexplosions="false" GrabWhenSelected="true">
+    <Item name="Cutting Board" identifier="he-cuttingboard" tags="cuttingboard,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="" isshootable="true" scale="0.5" damagedbyexplosions="false" GrabWhenSelected="false" canflipx="false">
       <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.45" />
       <Body width="123" height="66" density="30" />
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1924,0,124,66" depth="0.797" origin="0.45,0.44" />
-      <DecorativeSprite name="idle knife" texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1674,0,124,66" depth="0.796" origin="0.5,0.5" comparison="and" >
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1924,0,124,66" depth="0.795" origin="0.45,0.44" />
+      <DecorativeSprite name="idle knife" texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1674,0,124,66" depth="0.797" origin="0.5,0.5" comparison="and" >
         <IsActiveConditional IsActive="False" targetitemcomponent="Fabricator" />
       </DecorativeSprite>
-      <DecorativeSprite name="animated knife" texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1798,0,124,66" depth="0.798" origin="0.5,0.5" offset="0,-12" offsetanim="Noise" offsetanimspeed="2" rotationanim="Noise" rotation="15" rotationspeed="2" comparison="and" >
+      <DecorativeSprite name="animated knife" texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1798,0,124,66" depth="0.797" origin="0.5,0.5" offset="0,-15" offsetanim="Noise" offsetanimspeed="2" rotationanim="Noise" rotation="15" rotationspeed="3" comparison="and" >
         <AnimationConditional Voltage="gt 0.5" targetitemcomponent="Fabricator" />
         <IsActiveConditional IsActive="True" targetitemcomponent="Fabricator" />
       </DecorativeSprite>
@@ -534,8 +534,9 @@
         <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
         <sound file="%ModDir:2954998725%/Content/Sounds/Items/Fabricators/CuttingBoard.ogg" type="OnActive" range="500.0" loop="true" volumeproperty="RelativeVoltage"/>
       </Fabricator>
-      <Controller allowingameediting="false" canbeselected="true" AllowSelectingWhenSelectedByBot="true" AllowSelectingWhenSelectedByOther="true" hidehud="false" IsSecondaryItem="false">
+      <Controller allowingameediting="false" UserPos="55,0" direction="Left" canbeselected="true" AllowSelectingWhenSelectedByBot="true" AllowSelectingWhenSelectedByOther="true" hidehud="false" IsSecondaryItem="false">
         <StatusEffect type="OnActive" target="this" voltage="1" setvalue="true" />
+        <limbposition limb="RightHand" position="100,-40" allowusinglimb="false" />
       </Controller>
       <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" attachable="true" aimable="true">
         <RequiredItem items="wrench" type="Equipped" />
@@ -545,7 +546,7 @@
         </StatusEffect>
       </Holdable>
       <ItemContainer selectkey="Select" capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="" allowuioverlap="true" />
-      <ItemContainer selectkey="Select" capacity="4" canbeselected="true" hideitems="false" slotsperrow="2" uilabel="" allowuioverlap="true" itempos="62,-55" containedspritedepth="0.752"/>
+      <ItemContainer selectkey="Select" capacity="4" canbeselected="true" hideitems="false" slotsperrow="2" uilabel="" allowuioverlap="true" itempos="62,-55" containedspritedepth="0.796"/>
     </Item>
     
     <!-- cooks things in a pot? -->
