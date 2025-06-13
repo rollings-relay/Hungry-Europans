@@ -50,7 +50,7 @@
     <!-- FABRICATORS -->
     
     <!-- Distills ethanol and flour?  -->
-    <Item name="Distiller" identifier="he-distiller" tags="distiller,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Brewery" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="Used to distill ethanol from sugar and sea yeast shrooms. Needs power." isshootable="true" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2" canflipx="true">
+    <Item name="Distiller" identifier="he-distiller" tags="distiller,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Brewery" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="Used to distill ethanol from sugar and sea yeast shrooms. Needs power." isshootable="true" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2" canflipx="false">
       <Body width="322" height="410" density="20" />
       <Upgrade gameversion="0.10.4.0">
         <Repairable Msg="ItemMsgRepairWrench" />
@@ -137,7 +137,7 @@
     </Item>
     
     <!-- Brews kegs of various liquids  -->
-    <Item name="Brewing Kettle" identifier="he-brewkettle" tags="brewkettle,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Brewery" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="Used to brew kegs of almost any kind of beverage. Needs power." isshootable="true" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2" canflipx="true">
+    <Item name="Brewing Kettle" identifier="he-brewkettle" tags="brewkettle,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Brewery" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="Used to brew kegs of almost any kind of beverage. Needs power." isshootable="true" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2" canflipx="false">
       <Body width="370" height="355" density="20"/>
       <Upgrade gameversion="0.10.4.0">
         <Repairable Msg="ItemMsgRepairWrench" />
@@ -178,6 +178,14 @@
           <Conditional Voltage="gt 0.5" />
         </StatusEffect>
       </Fabricator>
+      <LightComponent range="20.0" powerconsumption="5" lightcolor="255,160,80,150" IsOn="true" castshadows="false" allowingameediting="false" LightOffset="45,-79" flicker="0.2" flickerspeed="0.5">
+        <sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="190,266,33,37" depth="0.794" origin="0.5,0.5" alpha="0.2" />
+        <IsActiveConditional isActive="false" targetitemcomponent="Fabricator" />
+      </LightComponent> 
+      <LightComponent range="20.0" powerconsumption="5" lightcolor="255,50,50,150" IsOn="true" castshadows="false" allowingameediting="false" LightOffset="45,-79" flicker="0.2" flickerspeed="0.5" pulseamount="0.3" pulsefrequency="0.5">
+        <sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="190,266,33,37" depth="0.794" origin="0.5,0.5" alpha="0.2" />
+        <IsActiveConditional isActive="true" targetitemcomponent="Fabricator" />
+      </LightComponent>      
       <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
         <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
         <RequiredSkill identifier="electrical" level="55" />
