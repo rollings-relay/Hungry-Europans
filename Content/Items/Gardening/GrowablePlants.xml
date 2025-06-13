@@ -15,9 +15,7 @@
   
   Researchstation capacity increased, can take every item - OVERRIDE
   
-  IF BIG PLANTERS ARE ADDED AND SMALL PLANTERS REMOVED:  
-    Small Planter "removed" (not sold, not found, deletes itself) - OVERRIDE
-    ULD is swappable into big planter - OVERRIDE
+  ADD BIG PLANTERS SWAPPABLE WITH ULD?
   TODO: increase produce rate by 3-4x, there are way less planters now
   TODO: increase grow rate by 2x, you will be planting more
   TODO: decrease plant health in general, watering is more active
@@ -28,9 +26,10 @@
   
   TODO: change Fabricate recipes should use tags (example: pipetobacco should use tobaccoingredient tag instead of just tobaccobud )
   
-  TODO: PLANT TEXTURES: recolor leaves, flowers to match new fruits, mix and match for hybrids, make new leaves/flowers.
+  TODO: PLANT TEXTURES: recolor leaves, flowers to match new fruits, mix and match for hybrids, make new leaves/flowers.....
 
   GrowthWeights can be used in growable to determine the preferred direction of branches (plants use a square grid)
+  we prefer smaller plants that grow up to not fill the entire room
   GrowthWeights="up,left,down,right"   
   
  -->
