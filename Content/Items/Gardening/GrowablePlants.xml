@@ -63,7 +63,7 @@
         <RequiredSkill identifier="cooking" level="15" />
         <RequiredItem identifier="badcreepingorange" Amount="1"/>
       </Fabricate>
-      <Growable name="creepingorangevineseed" growthspeed="777.070" pickingtime="3" maximumvines="4" maxhealth="500" hardiness="0.15" floodtolerance="0.4" seedrate="0" productrate="0.022" flowertint="255,54,0,255" flowerquantity="2" baseflowerscale="0.35" LeafProbability="0.55" baseleafscale="0.85" vinescale="0.25" vinetint="244,172,132,255" GrowthWeights="1,0,0,0">
+      <Growable name="creepingorangevineseed" growthspeed="777.070" pickingtime="3" maximumvines="4" maxhealth="400" hardiness="0.15" floodtolerance="0.4" seedrate="0" productrate="0.022" flowertint="255,54,0,255" flowerquantity="2" baseflowerscale="0.35" LeafProbability="0.55" baseleafscale="0.85" vinescale="0.25" vinetint="244,172,132,255" GrowthWeights="1,0,0,0">
         <ProducedItem identifier="creepingorange" probability="0.95" />
         <ProducedItem identifier="badcreepingorange" probability="0.05"/>
         <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
@@ -118,7 +118,7 @@
         <RequiredSkill identifier="cooking" level="10" />
         <RequiredItem identifier="badtobaccobud" Amount="1"/>
       </Fabricate>
-      <Growable name="tobaccovineseed" growthspeed="777.065" pickingtime="3" maximumvines="4" maxhealth="500" hardiness="0.071" floodtolerance="0.5" seedrate="0" productrate="0.022" flowerquantity="2" baseflowerscale="0.25" LeafProbability="0.55" baseleafscale="0.75" leaftint="226,95,85,255" vinescale="0.25" vinetint="226,95,85,255" flowertint="48,122,245,255" GrowthWeights="1,0,0,0">
+      <Growable name="tobaccovineseed" growthspeed="777.065" pickingtime="3" maximumvines="4" maxhealth="400" hardiness="0.15" floodtolerance="0.5" seedrate="0" productrate="0.022" flowerquantity="2" baseflowerscale="0.25" LeafProbability="0.55" baseleafscale="0.75" leaftint="226,95,85,255" vinescale="0.25" vinetint="226,95,85,255" flowertint="48,122,245,255" GrowthWeights="1,0,0,0">
         <ProducedItem identifier="tobaccobud" probability="1.0" />
         <ProducedItem identifier="badtobaccobud" probability="0.05"/>
         <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
@@ -228,7 +228,7 @@
         <RequiredSkill identifier="cooking" level="15" />
         <RequiredItem identifier="badraptorbane" Amount="1"/>
       </Fabricate>
-      <Growable name="raptorbaneseed" growthspeed="777.065" pickingtime="3" maximumvines="4" maxhealth="325" hardiness="0.062" floodtolerance="0.4" seedrate="0" productrate="0.022" flowerquantity="2" baseflowerscale="0.35" LeafProbability="0.55" baseleafscale="0.65" vinescale="0.25" leaftint="140,146,56,255" vinetint="140,146,56,255" flowertint="238,36,98,255" GrowthWeights="1,0,0,0">
+      <Growable name="raptorbaneseed" growthspeed="777.065" pickingtime="3" maximumvines="4" maxhealth="325" hardiness="0.15" floodtolerance="0.4" seedrate="0" productrate="0.022" flowerquantity="2" baseflowerscale="0.35" LeafProbability="0.55" baseleafscale="0.65" vinescale="0.25" leaftint="140,146,56,255" vinetint="140,146,56,255" flowertint="238,36,98,255" GrowthWeights="1,0,0,0">
         <ProducedItem identifier="raptorbane" probability="0.4" />
         <ProducedItem identifier="badraptorbane" probability="0.6"></ProducedItem>
         <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
@@ -283,7 +283,7 @@
         <RequiredSkill identifier="cooking" level="15" />
         <RequiredItem identifier="badbubbleberries" Amount="1"/>
       </Fabricate>
-      <Growable name="bubbleberryvineseed" growthspeed="777.070" pickingtime="3" maximumvines="3" maxhealth="500" hardiness="0.15" floodtolerance="0.4" seedrate="0" productrate="0.022" flowertint="255,54,0,255" flowerquantity="2" baseflowerscale="0.35" LeafProbability="0.55" baseleafscale="0.7" vinescale="0.25" vinetint="0,240,168,255" GrowthWeights="1,0,0,0">
+      <Growable name="bubbleberryvineseed" growthspeed="777.070" pickingtime="3" maximumvines="3" maxhealth="400" hardiness="0.15" floodtolerance="0.4" seedrate="0" productrate="0.022" flowertint="255,54,0,255" flowerquantity="2" baseflowerscale="0.35" LeafProbability="0.55" baseleafscale="0.7" vinescale="0.25" vinetint="0,240,168,255" GrowthWeights="1,0,0,0">
         <ProducedItem identifier="bubbleberries" probability="0.6" />
         <ProducedItem identifier="bubbleberryleaf" probability="0.3" />
         <ProducedItem identifier="badbubbleberries" probability="0.1"/>
@@ -336,7 +336,7 @@
         <RequiredSkill identifier="cooking" level="15" />
         <RequiredItem identifier="badpopnut" Amount="1"/>
       </Fabricate>
-      <Growable name="popnutvineseed" growthspeed="777.070" pickingtime="3" maximumvines="3" maxhealth="500" hardiness="0.15" floodtolerance="0.4" seedrate="0" productrate="0.022" flowertint="255,54,0,255" flowerquantity="1" baseflowerscale="0.65" baseleafscale="0.75" LeafProbability="0.55" vinescale="0.25" vinetint="222,86,145,255" GrowthWeights="1,0,0,0">
+      <Growable name="popnutvineseed" growthspeed="777.070" pickingtime="3" maximumvines="3" maxhealth="400" hardiness="0.15" floodtolerance="0.4" seedrate="0" productrate="0.022" flowertint="255,54,0,255" flowerquantity="1" baseflowerscale="0.65" baseleafscale="0.75" LeafProbability="0.55" vinescale="0.25" vinetint="222,86,145,255" GrowthWeights="1,0,0,0">
         <ProducedItem identifier="popnut" probability="0.6" />
         <ProducedItem identifier="popnutleaf" probability="0.3" />
         <ProducedItem identifier="badpopnut" probability="0.1"/>
@@ -370,7 +370,7 @@
 
     <!-- SEPARATED FROM BANANA 
     banana used to also be a seed -->
-    <Item name="bananaseed" identifier="bananaseed" category="Misc" Tags="smallitem,seed,plantitem" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="240,220,140,255" isshootable="true" requireaimtouse="true">
+    <Item name="bananaseed" identifier="bananaseed" category="Misc" Tags="smallitem,seed,plantitem,bananaseed" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="240,220,140,255" isshootable="true" requireaimtouse="true">
       <sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.2" sourcerect="866,706,28,29" origin="0.5,0.5" />
       <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.03" />
       <Price baseprice="30" canbespecial="false">
@@ -389,7 +389,7 @@
         <RequiredSkill identifier="cooking" level="10" />
         <RequiredItem identifier="banana" Amount="1"/>
       </Fabricate>
-      <Growable name="bananaseed" growthspeed="777.076" pickingtime="3" maximumvines="4" maxhealth="375" hardiness="0.15" floodtolerance="0.2" seedrate="0" productrate="0.0056" flowerquantity="2" baseflowerscale="0.60" vinescale="0.25" vinetint="55,152,27,255" flowertint="139,56,87,255">
+      <Growable name="bananaseed" growthspeed="777.076" pickingtime="3" maximumvines="4" maxhealth="375" hardiness="0.15" floodtolerance="0.2" seedrate="0" productrate="0.022" flowerquantity="2" baseflowerscale="0.60" vinescale="0.25" vinetint="55,152,27,255" flowertint="139,56,87,255">
         <ProducedItem identifier="banana" probability="0.9"/>
         <ProducedItem identifier="bananafuelrod" probability="0.1"/>
         <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
@@ -443,7 +443,7 @@
   <!-- Crossbreed seeds can only be acquired by merging fruits in research station -->
     
     <!-- POMACCO SEED (pom x tobacco)-->
-    <Item name="pomaccoseed" identifier="pomaccoseed" category="Misc" Tags="smallitem,seed,plantitem" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="170,130,70,255">
+    <Item name="pomaccoseed" identifier="pomaccoseed" category="Misc" Tags="smallitem,seed,plantitem,pomegrenadeseed" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="170,130,70,255">
       <sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.2" sourcerect="830,636,31,30" origin="0.5,0.5" />
       <PreferredContainer primary="wreckstoragecab,abandonedstoragecab,piratestoragecab" amount="1" spawnprobability="0.0" />
       <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.0" />
@@ -451,7 +451,7 @@
       </Price>
       <Deconstruct time="2" requireddeconstructor="deconstructor"/>
       <!-- TODO: adjust growth and sprites -->
-      <Growable name="pomaccoseed" growthspeed="777.075" pickingtime="3" maxhealth="500" hardiness="0.177" floodtolerance="0.4" seedrate="0" productrate="77" maximumvines="4" flowerquantity="2" leafprobability="0.50" flowertint="255,54,200,255" leaftint="255,150,100,255" vinetint="244,172,132,255" baseflowerscale="0.35" vinescale="0.25" GrowthWeights="1,0,0,0">
+      <Growable name="pomaccoseed" growthspeed="777.075" pickingtime="3" maxhealth="400" hardiness="0.177" floodtolerance="0.4" seedrate="0" productrate="0.022" maximumvines="4" flowerquantity="2" leafprobability="0.50" flowertint="255,54,200,255" leaftint="255,150,100,255" vinetint="244,172,132,255" baseflowerscale="0.35" vinescale="0.25" GrowthWeights="1,0,0,0">
         <ProducedItem identifier="pomacco" probability="0.98" />
         <ProducedItem identifier="badcreepingorange" probability="0.02"/>
         <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
@@ -496,7 +496,7 @@
     </Item>
     
     <!-- SALTGRENADE SEED (saltvine x pom) -->
-    <Item name="saltgrenadeseed" identifier="saltgrenadeseed" category="Misc" Tags="smallitem,seed,plantitem" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="255,150,75,255">
+    <Item name="saltgrenadeseed" identifier="saltgrenadeseed" category="Misc" Tags="smallitem,seed,plantitem,saltvineseed" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="255,150,75,255">
       <sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.2" sourcerect="829,666,33,35" origin="0.5,0.5" />
       <PreferredContainer primary="wreckstoragecab,abandonedstoragecab,piratestoragecab" amount="1" spawnprobability="0.0" />
       <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.0" />
@@ -504,7 +504,7 @@
       </Price>
       <Deconstruct time="2" requireddeconstructor="deconstructor"/>
       <!-- TODO: adjust growth and sprites -->
-      <Growable name="saltgrenadeseed" growthspeed="777.077" pickingtime="3" maxhealth="500" hardiness="0.177" floodtolerance="0.4" seedrate="0" productrate="77" maximumvines="4" flowerquantity="2" leafprobability="0.50" flowertint="255,180,0,255" leaftint="255,150,100,255" vinetint="210,240,132,255" baseflowerscale="0.35" vinescale="0.25" GrowthWeights="1,0,0,0">
+      <Growable name="saltgrenadeseed" growthspeed="777.077" pickingtime="3" maxhealth="400" hardiness="0.177" floodtolerance="0.4" seedrate="0" productrate="0.022" maximumvines="4" flowerquantity="2" leafprobability="0.50" flowertint="255,180,0,255" leaftint="255,150,100,255" vinetint="210,240,132,255" baseflowerscale="0.35" vinescale="0.25" GrowthWeights="1,0,0,0">
         <ProducedItem identifier="creepingorange" probability="0.50" />
         <ProducedItem identifier="saltgrenade" probability="0.50"/>
         <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
@@ -549,7 +549,7 @@
     </Item>
     
     <!-- RAPTOR BERRY SEED (pom x raptorbane) -->
-    <Item name="raptorpomseed" identifier="raptorpomseed" category="Misc" Tags="smallitem,seed,plantitem" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="240,220,20,255">
+    <Item name="raptorpomseed" identifier="raptorpomseed" category="Misc" Tags="smallitem,seed,plantitem,raptorbaneseed" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="240,220,20,255">
       <sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.2" sourcerect="830,636,31,30" origin="0.5,0.5" />
       <PreferredContainer primary="wreckstoragecab,abandonedstoragecab,piratestoragecab" amount="1" spawnprobability="0.0" />
       <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.0" />
@@ -557,7 +557,7 @@
       </Price>
       <Deconstruct time="2" requireddeconstructor="deconstructor"/>
       <!-- TODO: adjust growth and sprites -->
-      <Growable name="raptorpomseed" growthspeed="777.074" pickingtime="3" maxhealth="500" hardiness="0.177" floodtolerance="0.4" seedrate="0" productrate="77" maximumvines="4" flowerquantity="2" leafprobability="0.50" flowertint="255,45,50,255" leaftint="140,146,56,255" vinetint="200,160,100,255" baseflowerscale="0.50" vinescale="0.25" GrowthWeights="1,0,0,0" >
+      <Growable name="raptorpomseed" growthspeed="777.074" pickingtime="3" maxhealth="400" hardiness="0.177" floodtolerance="0.4" seedrate="0" productrate="0.022" maximumvines="4" flowerquantity="2" leafprobability="0.50" flowertint="255,45,50,255" leaftint="140,146,56,255" vinetint="200,160,100,255" baseflowerscale="0.50" vinescale="0.25" GrowthWeights="1,0,0,0" >
         <ProducedItem identifier="raptorpom" probability="0.70" />
         <ProducedItem identifier="badraptorbane" probability="0.30"></ProducedItem>
         <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
@@ -602,7 +602,7 @@
     </Item>
       
     <!-- RAPTOR'S NIP SEED (tobacco x raptorbane) -->
-    <Item name="raptorbaccoseed" identifier="raptorbaccoseed" category="Misc" Tags="smallitem,seed,plantitem" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="130,140,100,255">
+    <Item name="raptorbaccoseed" identifier="raptorbaccoseed" category="Misc" Tags="smallitem,seed,plantitem,raptorbaneseed" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="130,140,100,255">
       <sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.2" sourcerect="830,636,31,30" origin="0.5,0.5" />
       <PreferredContainer primary="wreckstoragecab,abandonedstoragecab,piratestoragecab" amount="1" spawnprobability="0.0" />
       <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.0" />
@@ -610,7 +610,7 @@
       </Price>
       <Deconstruct time="2" requireddeconstructor="deconstructor"/>
       <!-- TODO: adjust growth and sprites -->
-      <Growable name="raptorbaccoseed" growthspeed="777.073" pickingtime="3" maxhealth="500" hardiness="0.177" floodtolerance="0.4" seedrate="0" productrate="77" maximumvines="4" flowerquantity="2" leafprobability="0.50" flowertint="148,85,120,255" leaftint="182,120,70,255" vinetint="235,130,112,255" baseflowerscale="0.40" vinescale="0.25" GrowthWeights="1,0,0,0" >
+      <Growable name="raptorbaccoseed" growthspeed="777.073" pickingtime="3" maxhealth="400" hardiness="0.177" floodtolerance="0.4" seedrate="0" productrate="0.022" maximumvines="4" flowerquantity="2" leafprobability="0.50" flowertint="148,85,120,255" leaftint="182,120,70,255" vinetint="235,130,112,255" baseflowerscale="0.40" vinescale="0.25" GrowthWeights="1,0,0,0" >
         <ProducedItem identifier="raptorbacco" probability="0.85" />
         <ProducedItem identifier="badraptorbane" probability="0.15"></ProducedItem>
         <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
@@ -655,13 +655,13 @@
     </Item>
     
     <!-- BANANACIGAR SEED (banana x tobacco) -->
-    <Item name="bananacigarseed" identifier="bananacigarseed" category="Misc" Tags="smallitem,seed,plantitem" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="220,200,240,255" isshootable="true" requireaimtouse="true">
+    <Item name="bananacigarseed" identifier="bananacigarseed" category="Misc" Tags="smallitem,seed,plantitem,bananaseed" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="220,200,240,255" isshootable="true" requireaimtouse="true">
       <sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.2" sourcerect="866,706,28,29" origin="0.5,0.5" />
       <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.03" />
       <Price baseprice="30" canbespecial="false" sold="false">
       </Price>
       <Deconstruct time="2" requireddeconstructor="deconstructor"/>   
-      <Growable name="bananacigarseed" growthspeed="7770.72" pickingtime="3" maxhealth="500" hardiness="0.177" floodtolerance="0.4" seedrate="0" productrate="77" maximumvines="4" flowerquantity="2" leafprobability="0.50" flowertint="148,85,180,255" leaftint="240,180,180,255" vinetint="65,152,45,255" baseflowerscale="0.40" vinescale="0.25" GrowthWeights="1,0,0,0" >    
+      <Growable name="bananacigarseed" growthspeed="7770.72" pickingtime="3" maxhealth="400" hardiness="0.177" floodtolerance="0.4" seedrate="0" productrate="0.022" maximumvines="4" flowerquantity="2" leafprobability="0.50" flowertint="148,85,180,255" leaftint="240,180,180,255" vinetint="65,152,45,255" baseflowerscale="0.40" vinescale="0.25" GrowthWeights="1,0,0,0" >    
         <ProducedItem identifier="banana" probability="0.7"/>
         <ProducedItem identifier="bananacigar" probability="0.3"/>
         <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
@@ -713,13 +713,13 @@
     </Item>
     
     <!-- BANANAGUN SEED (banana x saltvine) -->
-    <Item name="bananagunseed" identifier="bananagunseed" category="Misc" Tags="smallitem,seed,plantitem" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="220,200,100,255" isshootable="true" requireaimtouse="true">
+    <Item name="bananagunseed" identifier="bananagunseed" category="Misc" Tags="smallitem,seed,plantitem,bananaseed" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="220,200,100,255" isshootable="true" requireaimtouse="true">
       <sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.2" sourcerect="866,706,28,29" origin="0.5,0.5" />
       <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.03" />
       <Price baseprice="30" sold="false">
       </Price>
       <Deconstruct time="2" requireddeconstructor="deconstructor"/> 
-      <Growable name="bananagunseed" growthspeed="777.071" pickingtime="3" maxhealth="500" hardiness="0.177" floodtolerance="0.4" seedrate="0" productrate="77" maximumvines="4" flowerquantity="2" leafprobability="0.50" flowertint="170,100,120,255" leaftint="240,180,180,255" vinetint="90,152,50,255" baseflowerscale="0.40" vinescale="0.25" GrowthWeights="1,0,0,0" >      
+      <Growable name="bananagunseed" growthspeed="777.071" pickingtime="3" maxhealth="400" hardiness="0.177" floodtolerance="0.4" seedrate="0" productrate="0.022" maximumvines="4" flowerquantity="2" leafprobability="0.50" flowertint="170,100,120,255" leaftint="240,180,180,255" vinetint="90,152,50,255" baseflowerscale="0.40" vinescale="0.25" GrowthWeights="1,0,0,0" >      
         <ProducedItem identifier="banana" probability="0.7"/>
         <ProducedItem identifier="bananagun" probability="0.3"/>
         <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
