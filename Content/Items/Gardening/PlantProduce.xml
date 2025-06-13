@@ -16,7 +16,7 @@
   <!-- VANILLA PLANTS -->
   <!-- VANILLA PLANTS -->
   
-  <Item name="Pomegrenade" identifier="creepingorange" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,fooditem,sugary,petfood1,petfood2,petfood3,distillable" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="True">
+  <Item name="Pomegrenade" identifier="creepingorange" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,fooditem,sugary,petfood1,petfood2,petfood3,distillable" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="True" requireaimtouse="true" isshootable="true" >
     <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.52" sourcerect="971,649,43,55" origin="0.5,0.5" />
     <Body radius="30" density="5" />
     <Price baseprice="20" sold="false">
@@ -37,13 +37,10 @@
       <Item identifier="saltgrenadeseed" commonness="3" requiredotheritem="saltbulb" outconditionmin="1" outconditionmax="1" activatebuttontext="researchstation.crossbreed" infotext="researchstation.crossbreed.infotext" infotextonotheritemmissing="researchstation.crossbreed.missingitem" />
       <Item identifier="raptorpomseed" commonness="3" requiredotheritem="raptorbane" outconditionmin="1" outconditionmax="1" activatebuttontext="researchstation.crossbreed" infotext="researchstation.crossbreed.infotext" infotextonotheritemmissing="researchstation.crossbreed.missingitem" />
     </Deconstruct>
-    <Throwable characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="20,-20" holdangle="0" holdpos="20,-30" aimangle="0" msg="ItemMsgPickUpSelect" >
-      <!-- TODO: fix eating without aiming if devs allow us to https://github.com/FakeFishGames/Barotrauma/discussions/16166 
+    <Holdable characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="23,20" holdangle="0" holdpos="20,-30" aimangle="0" msg="ItemMsgPickUpSelect" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" >
+      <!-- TODO: fix eating without aiming for throwable if devs allow us to https://github.com/FakeFishGames/Barotrauma/discussions/16166 
       in the meantime, change the holdpos (this is dumb) -->
-      <StatusEffect type="OnUse" target="This" condition="-0.6" holdpos="23,25" statuseffecttags="iseating" duration="0.2" />
-      <StatusEffect type="OnActive" target="This" holdpos="20,-30" setvalue="true" interval="0.1" >
-        <Conditional HasStatusTag="neq iseating" />
-      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" condition="-8" statuseffecttags="iseating" duration="0.1" stackable="false" />
       <StatusEffect type="OnUse" target="Character">
         <Affliction identifier="he-stuffed" amount="0.1" />
         <ReduceAffliction type="damage" amount="0.1" />
@@ -76,7 +73,7 @@
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
         <Remove />
       </StatusEffect>
-    </Throwable>
+    </Holdable>
     <AiTarget sightrange="1000" static="True" />
     <PreferredContainer primary="plantcontainer"/>
   </Item>
@@ -313,7 +310,7 @@
   <!-- NEW PLANTS -->
   <!-- NEW PLANTS -->
   <!-- NEW PLANTS -->
-  <Item name="Bubbleberries" identifier="bubbleberries" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,fooditem,sugary,petfood1,petfood2,petfood3" description="Very tasty and juicy." cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="True">
+  <Item name="Bubbleberries" identifier="bubbleberries" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,fooditem,sugary,petfood1,petfood2,petfood3" description="Very tasty and juicy." cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="True" requireaimtouse="true" isshootable="true" >
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.52" sourcerect="183,0,54,48" origin="0.5,0.5" />
     <Body radius="30" density="5" />
     <Price baseprice="40" sold="false">
@@ -327,13 +324,10 @@
       <Item identifier="carbon" mincondition="0.5" />
       <Item identifier="bubbleberryvineseed" />
     </Deconstruct>
-    <Throwable characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="20,-20" holdangle="0" holdpos="20,-30" aimangle="0" msg="ItemMsgPickUpSelect" >
-      <!-- TODO: fix eating without aiming if devs allow us to https://github.com/FakeFishGames/Barotrauma/discussions/16166 
+    <Holdable characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="23,20" holdangle="0" holdpos="20,-30" aimangle="0" msg="ItemMsgPickUpSelect" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" >
+      <!-- TODO: fix eating without aiming for throwable if devs allow us to https://github.com/FakeFishGames/Barotrauma/discussions/16166 
       in the meantime, change the holdpos (this is dumb) -->
-      <StatusEffect type="OnUse" target="This" condition="-0.6" holdpos="23,25" statuseffecttags="iseating" duration="0.2" />
-      <StatusEffect type="OnActive" target="This" holdpos="20,-30" setvalue="true" interval="0.1" >
-        <Conditional HasStatusTag="neq iseating" />
-      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" condition="-8" statuseffecttags="iseating" duration="0.1" stackable="false" />
       <StatusEffect type="OnUse" target="Character">
         <Affliction identifier="he-stuffed" amount="0.1" />
         <ReduceAffliction type="damage" amount="0.1" />
@@ -366,7 +360,7 @@
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
         <Remove />
       </StatusEffect>
-    </Throwable>
+    </Holdable>
     <AiTarget sightrange="1000" static="True" />
     <PreferredContainer primary="plantcontainer"/>
   </Item>
@@ -420,7 +414,7 @@
     <PreferredContainer primary="plantcontainer"/>
   </Item>
   
-  <Item name="Popped Popnut" identifier="popnutpopped" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,fooditem,sugary,petfood1,petfood2,petfood3" description="It's popped open, ready to be consumed. Used in some recipes." cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" damagedbyexplosions="false" allowasextracargo="True">
+  <Item name="Popped Popnut" identifier="popnutpopped" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,fooditem,sugary,petfood1,petfood2,petfood3" description="It's popped open, ready to be consumed. Used in some recipes." cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" damagedbyexplosions="false" allowasextracargo="True" requireaimtouse="true" isshootable="true" >
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.52" sourcerect="46,0,46,51" origin="0.5,0.5" />
     <Body radius="30" density="2" />
     <Price baseprice="50" sold="false">
@@ -433,13 +427,10 @@
     <Deconstruct time="5" chooserandom="true" >
       <Item identifier="carbon" mincondition="0.5" />
     </Deconstruct>
-    <Throwable characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="20,-20" holdangle="0" holdpos="20,-30" aimangle="0" msg="ItemMsgPickUpSelect" >
-      <!-- TODO: fix eating without aiming if devs allow us to https://github.com/FakeFishGames/Barotrauma/discussions/16166 
+    <Holdable characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="23,20" holdangle="0" holdpos="20,-30" aimangle="0" msg="ItemMsgPickUpSelect" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" >
+      <!-- TODO: fix eating without aiming for throwable if devs allow us to https://github.com/FakeFishGames/Barotrauma/discussions/16166 
       in the meantime, change the holdpos (this is dumb) -->
-      <StatusEffect type="OnUse" target="This" condition="-0.6" holdpos="23,25" statuseffecttags="iseating" duration="0.2" />
-      <StatusEffect type="OnActive" target="This" holdpos="20,-30" setvalue="true" interval="0.1" >
-        <Conditional HasStatusTag="neq iseating" />
-      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" condition="-8" statuseffecttags="iseating" duration="0.1" stackable="false" />
       <StatusEffect type="OnUse" target="Character">
         <Affliction identifier="he-stuffed" amount="0.1" />
         <ReduceAffliction type="damage" amount="0.1" />
@@ -471,7 +462,7 @@
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
         <Remove />
       </StatusEffect>
-    </Throwable>
+    </Holdable>
     <AiTarget sightrange="1000" static="True" />
     <ItemContainer capacity="1" maxstacksize="1" keepopenwhenequipped="false" movableframe="false" spawnwithid="popnutvineseed" ShowContainedStateIndicator="false">
       <Containable items="popnutvineseed" />
@@ -485,20 +476,17 @@
   <!-- MUTATED VARIANTS -->
   <!-- MUTATED VARIANTS -->
   <!-- MUTATED VARIANTS -->
-  <Item name="Mutated Pomegrenade" identifier="badcreepingorange" descriptionidentifier="creepingorange" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,mutatedplant,sugary,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true">
+  <Item name="Mutated Pomegrenade" identifier="badcreepingorange" descriptionidentifier="creepingorange" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,mutatedplant,sugary,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true" requireaimtouse="true" isshootable="true" >
     <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.52" sourcerect="971,835,43,55" origin="0.5,0.5" />
     <Body radius="30" density="9" />
     <Deconstruct time="7">
       <Item identifier="carbon" amount="2" />
       <Item identifier="creepingorangevineseed" />
     </Deconstruct>
-    <Throwable characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="20,-20" holdangle="0" holdpos="20,-30" aimangle="0" msg="ItemMsgPickUpSelect" >
-      <!-- TODO: fix eating without aiming if devs allow us to https://github.com/FakeFishGames/Barotrauma/discussions/16166 
+    <Holdable characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="23,20" holdangle="0" holdpos="20,-30" aimangle="0" msg="ItemMsgPickUpSelect" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" >
+      <!-- TODO: fix eating without aiming for throwable if devs allow us to https://github.com/FakeFishGames/Barotrauma/discussions/16166 
       in the meantime, change the holdpos (this is dumb) -->
-      <StatusEffect type="OnUse" target="This" condition="-0.6" holdpos="23,25" statuseffecttags="iseating" duration="0.2" />
-      <StatusEffect type="OnActive" target="This" holdpos="20,-30" setvalue="true" interval="0.1" >
-        <Conditional HasStatusTag="neq iseating" />
-      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" condition="-8" statuseffecttags="iseating" duration="0.1" stackable="false" />
       <StatusEffect type="OnUse" target="Character">
         <Affliction identifier="he-stuffed" amount="0.1" />
         <ReduceAffliction type="damage" amount="0.1" />
@@ -549,7 +537,7 @@
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
         <Remove />
       </StatusEffect>
-    </Throwable>
+    </Holdable>
     <AiTarget sightrange="1000" static="true" />
     <PreferredContainer primary="plantcontainer"/>
   </Item>
@@ -718,20 +706,17 @@
     <PreferredContainer primary="plantcontainer"/>
   </Item>
   
-  <Item name="Mutated Bubbleberries" identifier="badbubbleberries" descriptionidentifier="bubbleberries" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,mutatedplant,fooditem,sugary,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true">
+  <Item name="Mutated Bubbleberries" identifier="badbubbleberries" descriptionidentifier="bubbleberries" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,mutatedplant,fooditem,sugary,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true" requireaimtouse="true" isshootable="true" >
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.52" sourcerect="237,0,54,48" origin="0.5,0.5" />
     <Body radius="30" density="9" />
     <Deconstruct time="7">
       <Item identifier="carbon" amount="2" />
       <Item identifier="bubbleberryvineseed" />
     </Deconstruct>
-    <Throwable characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="20,-20" holdangle="0" holdpos="20,-30" aimangle="0" msg="ItemMsgPickUpSelect" >
-      <!-- TODO: fix eating without aiming if devs allow us to https://github.com/FakeFishGames/Barotrauma/discussions/16166 
+    <Holdable characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="23,20" holdangle="0" holdpos="20,-30" aimangle="0" msg="ItemMsgPickUpSelect" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" >
+      <!-- TODO: fix eating without aiming for throwable if devs allow us to https://github.com/FakeFishGames/Barotrauma/discussions/16166 
       in the meantime, change the holdpos (this is dumb) -->
-      <StatusEffect type="OnUse" target="This" condition="-0.6" holdpos="23,25" statuseffecttags="iseating" duration="0.2" />
-      <StatusEffect type="OnActive" target="This" holdpos="20,-30" setvalue="true" interval="0.1" >
-        <Conditional HasStatusTag="neq iseating" />
-      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" condition="-8" statuseffecttags="iseating" duration="0.1" stackable="false" />
       <StatusEffect type="OnUse" target="Character">
         <Affliction identifier="he-stuffed" amount="0.1" />
         <ReduceAffliction type="damage" amount="0.1" />
@@ -764,7 +749,7 @@
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
         <Remove />
       </StatusEffect>
-    </Throwable>
+    </Holdable>
     <AiTarget sightrange="1000" static="true" />
     <PreferredContainer primary="plantcontainer"/>
   </Item>
@@ -810,19 +795,16 @@
     <PreferredContainer primary="plantcontainer"/>
   </Item>
   
-  <Item name="Popped Mutated Popnut" identifier="badpopnutpopped" descriptionidentifier="popnut" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,mutatedplant,waterreactivesize,fooditem,sugary,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" damagedbyexplosions="false" allowasextracargo="true">
+  <Item name="Popped Mutated Popnut" identifier="badpopnutpopped" descriptionidentifier="popnut" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,mutatedplant,waterreactivesize,fooditem,sugary,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" damagedbyexplosions="false" allowasextracargo="true" requireaimtouse="true" isshootable="true" >
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.52" sourcerect="137,0,46,51" origin="0.5,0.5" />
     <Body radius="30" density="2" />
     <Deconstruct time="7">
       <Item identifier="carbon" amount="3" />
     </Deconstruct>
-    <Throwable characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="20,-20" holdangle="0" holdpos="20,-30" aimangle="0" msg="ItemMsgPickUpSelect" >
-      <!-- TODO: fix eating without aiming if devs allow us to https://github.com/FakeFishGames/Barotrauma/discussions/16166 
+    <Holdable characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="23,20" holdangle="0" holdpos="20,-30" aimangle="0" msg="ItemMsgPickUpSelect" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" >
+      <!-- TODO: fix eating without aiming for throwable if devs allow us to https://github.com/FakeFishGames/Barotrauma/discussions/16166 
       in the meantime, change the holdpos (this is dumb) -->
-      <StatusEffect type="OnUse" target="This" condition="-0.6" holdpos="23,25" statuseffecttags="iseating" duration="0.2" />
-      <StatusEffect type="OnActive" target="This" holdpos="20,-30" setvalue="true" interval="0.1" >
-        <Conditional HasStatusTag="neq iseating" />
-      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" condition="-8" statuseffecttags="iseating" duration="0.1" stackable="false" />
       <StatusEffect type="OnUse" target="Character">
         <Affliction identifier="he-stuffed" amount="0.1" />
         <ReduceAffliction type="damage" amount="0.1" />
@@ -872,7 +854,7 @@
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
         <Remove />
       </StatusEffect>
-    </Throwable>
+    </Holdable>
     <ItemContainer capacity="1" maxstacksize="3" keepopenwhenequipped="false" movableframe="false" spawnwithid="popnutvineseed,popnutvineseed,popnutvineseed" ShowContainedStateIndicator="false">
       <Containable items="popnutvineseed" />
     </ItemContainer>
@@ -935,7 +917,7 @@
 
   <!-- POMACCO (pom x tobacco)
   heals a little, but gives you tobacco addicition -->
-  <Item name="pomacco" identifier="pomacco" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,petfood1,petfood2,petfood3,distillable,tobaccoingredient" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" allowasextracargo="true">
+  <Item name="pomacco" identifier="pomacco" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,petfood1,petfood2,petfood3,distillable,tobaccoingredient" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" allowasextracargo="true" requireaimtouse="true" isshootable="true" >
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.52" sourcerect="960,576,64,64" origin="0.5,0.5" />
     <Body radius="28" density="9" />
     <PreferredContainer primary="plantcontainer"/>
@@ -945,13 +927,10 @@
     <Deconstruct time="5" >
       <Item identifier="carbon" mincondition="0.5" />
     </Deconstruct>
-    <Throwable characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="20,-20" holdangle="0" holdpos="20,-30" aimangle="0" msg="ItemMsgPickUpSelect" >
-      <!-- TODO: fix eating without aiming if devs allow us to https://github.com/FakeFishGames/Barotrauma/discussions/16166 
+    <Holdable characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="23,20" holdangle="0" holdpos="20,-30" aimangle="0" msg="ItemMsgPickUpSelect" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" >
+      <!-- TODO: fix eating without aiming for throwable if devs allow us to https://github.com/FakeFishGames/Barotrauma/discussions/16166 
       in the meantime, change the holdpos (this is dumb) -->
-      <StatusEffect type="OnUse" target="This" condition="-0.6" holdpos="23,25" statuseffecttags="iseating" duration="0.2" />
-      <StatusEffect type="OnActive" target="This" holdpos="20,-30" setvalue="true" interval="0.1" >
-        <Conditional HasStatusTag="neq iseating" />
-      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" condition="-8" statuseffecttags="iseating" duration="0.1" stackable="false" />
       <StatusEffect type="OnUse" target="Character">
         <Affliction identifier="he-tobaccoaddiction" amount="1.5" />
         <ReduceAffliction type="psychosis" amount="0.5" />
@@ -986,14 +965,14 @@
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
         <Remove />
       </StatusEffect>
-    </Throwable>
+    </Holdable>
     <AiTarget sightrange="1000" static="True" />
     <PreferredContainer primary="plantcontainer"/>
   </Item>
   
   <!-- SALTGRENADE (saltvine x pom)
   cures small amounts of bloodloss and organ damage, but hates water -->
-  <Item name="saltgrenade" identifier="saltgrenade" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,fooditem,petfood1,petfood2,petfood3,distillable" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" allowasextracargo="true" >
+  <Item name="saltgrenade" identifier="saltgrenade" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,fooditem,petfood1,petfood2,petfood3,distillable" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" allowasextracargo="true" requireaimtouse="true" isshootable="true" >
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.52" sourcerect="896,576,64,64" origin="0.5,0.5" />
     <Body radius="28" density="9" />
     <PreferredContainer primary="plantcontainer"/>
@@ -1004,13 +983,10 @@
       <Item identifier="sodium" mincondition="0.5" />
       <Item identifier="carbon" mincondition="0.5" />
     </Deconstruct>    
-    <Throwable characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="20,-20" holdangle="0" holdpos="20,-30" aimangle="0" msg="ItemMsgPickUpSelect" >
-      <!-- TODO: fix eating without aiming if devs allow us to https://github.com/FakeFishGames/Barotrauma/discussions/16166 
+    <Holdable characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="23,20" holdangle="0" holdpos="20,-30" aimangle="0" msg="ItemMsgPickUpSelect" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" >
+      <!-- TODO: fix eating without aiming for throwable if devs allow us to https://github.com/FakeFishGames/Barotrauma/discussions/16166 
       in the meantime, change the holdpos (this is dumb) -->
-      <StatusEffect type="OnUse" target="This" condition="-0.6" holdpos="23,25" statuseffecttags="iseating" duration="0.2" />
-      <StatusEffect type="OnActive" target="This" holdpos="20,-30" setvalue="true" interval="0.1" >
-        <Conditional HasStatusTag="neq iseating" />
-      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" condition="-8" statuseffecttags="iseating" duration="0.1" stackable="false" />
       <StatusEffect type="OnUse" target="Character">
         <Affliction identifier="he-stuffed" amount="0.1" />
         <ReduceAffliction type="damage" amount="0.12" />
@@ -1059,13 +1035,13 @@
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
         <Remove />
       </StatusEffect>
-    </Throwable>
+    </Holdable>
     <AiTarget sightrange="1000" static="true" />
   </Item>
 
   <!-- RAPTOR'S NIP (tobacco x raptorbane)
   enhances physical performance at the cost of your sanity -->
-  <Item name="raptorbacco" identifier="raptorbacco" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,petfood1,petfood2,petfood3,distillable,tobaccoingredient" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" allowasextracargo="true">
+  <Item name="raptorbacco" identifier="raptorbacco" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,petfood1,petfood2,petfood3,distillable,tobaccoingredient" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" allowasextracargo="true" requireaimtouse="true" isshootable="true" >
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.52" sourcerect="960,512,64,64" origin="0.5,0.5" />
     <Body radius="28" density="9" />
     <PreferredContainer primary="plantcontainer"/>
@@ -1076,13 +1052,10 @@
       <Item identifier="sodium" mincondition="0.5" />
       <Item identifier="carbon" mincondition="0.5" />
     </Deconstruct>
-    <Throwable characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="20,-20" holdangle="0" holdpos="20,-30" aimangle="0" msg="ItemMsgPickUpSelect" >
-      <!-- TODO: fix eating without aiming if devs allow us to https://github.com/FakeFishGames/Barotrauma/discussions/16166 
+    <Holdable characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="23,20" holdangle="0" holdpos="20,-30" aimangle="0" msg="ItemMsgPickUpSelect" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" >
+      <!-- TODO: fix eating without aiming for throwable if devs allow us to https://github.com/FakeFishGames/Barotrauma/discussions/16166 
       in the meantime, change the holdpos (this is dumb) -->
-      <StatusEffect type="OnUse" target="This" condition="-0.6" holdpos="23,25" statuseffecttags="iseating" duration="0.2" />
-      <StatusEffect type="OnActive" target="This" holdpos="20,-30" setvalue="true" interval="0.1" >
-        <Conditional HasStatusTag="neq iseating" />
-      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" condition="-8" statuseffecttags="iseating" duration="0.1" stackable="false" />
       <StatusEffect type="OnUse" target="Character">
         <Affliction identifier="strengthen" amount="8" />
         <Affliction identifier="haste" amount="8" />
@@ -1090,8 +1063,8 @@
         <Affliction identifier="chemaddiction" amount="0.4" />
         <Affliction identifier="he-tobaccoaddiction" amount="1.5" />
         <ParticleEmitter particle="fruitchunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="230,255,255,255" />
-        <Sound file="Content/Items/Medical/ITEM_eatingBiteQuick.ogg" range="250" loop="false" selectionmode="random" volume="2" />
-        <Sound file="Content/Items/Medical/ITEM_eatingLoop.ogg" range="250" loop="false" selectionmode="random" volume="2"/>
+        <Sound file="Content/Items/Medical/ITEM_eatingBiteQuick.ogg" range="250" loop="false" selectionmode="random" volume="1" />
+        <Sound file="Content/Items/Medical/ITEM_eatingLoop.ogg" range="250" loop="false" selectionmode="random" volume="1"/>
       </StatusEffect>
       <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="True" />
       <StatusEffect type="OnFire" target="This" tags="onfire" setvalue="true" interval="0.1" duration="0.2" />
@@ -1107,13 +1080,13 @@
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
         <Remove />
       </StatusEffect>
-    </Throwable>
+    </Holdable>
     <AiTarget sightrange="1000" static="true" />
   </Item>
 
   <!-- RAPTOR BAIT (pom x raptorbane)
   acts as cheap distracting item, makes monsters sick (especially raptors) -->
-  <Item name="raptorpom" identifier="raptorpom" category="Misc" health="10" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,distillable,provocative" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" allowasextracargo="true" isshootable="True" damagedbymonsters="true" >
+  <Item name="raptorpom" identifier="raptorpom" category="Misc" health="10" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,distillable,provocative" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" allowasextracargo="true" damagedbymonsters="true" >
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.52" sourcerect="896,512,64,64" origin="0.5,0.5" />
     <Body radius="28" density="11" />
     <PreferredContainer primary="plantcontainer"/>
