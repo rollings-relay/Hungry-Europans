@@ -209,6 +209,7 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="178,391,61,13" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="178,391,61,13" depth="0.525" origin="0.5,0.65"  />
       <Body width="56" radius="6" density="12" />
+      <!-- TODO: Adjust price -->
       <Price baseprice="164" minavailable="4" maxavailable="16" mincondition="0.9" maxcondition="1.0" usecondition="false" sold="false">
         <Price storeidentifier="merchantoutpost"/>
         <Price storeidentifier="merchantcity"/>
@@ -223,16 +224,6 @@
         <RequiredSkill identifier="cooking" level="35" />
         <RequiredItem identifier="he-rawcrawlerfilets" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
       </Fabricate>
-      <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
-        <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
-        <StatusEffect type="Always" target="This" timeframe="0" interval="2" disabledeltatime="true" setvalue="true">
-          <Conditional HasStatusTag="eq activecooling" targetcontainer="true" />
-          <Conditional HasTag="eq kitchenfabricator" targetcontainer="true" />
-        </StatusEffect>
-        <StatusEffect type="Always" target="This" Condition="-0.5" timeframe="-10.0" disabledeltatime="true" interval="0.9">
-          <Conditional timeframe="gte 10" />
-        </StatusEffect>
-      </GreaterComponent>
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand+LeftHand" aimpos="26,20" holdangle="270" holdpos="32,28" aimangle="120" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
         <StatusEffect type="OnUse" target="Character">
