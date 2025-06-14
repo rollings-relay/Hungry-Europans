@@ -2,6 +2,7 @@
 <Override>
   <Items>
     <!-- Water Filter -->
+
     <Item name="Hose" identifier="he-hose" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,hose" spritecolor="255,255,255,255" InventoryIconColor="255,255,255,255" scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer secondary="storagecab" spawnprobability="0.0" />
       <!-- TODO: Price -->
@@ -28,6 +29,7 @@
       <Holdable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="3.5" aimpos="26,24" holdpos="30,-15" holdangle="0" aimangle="120" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
       </Holdable>
     </Item>
+
     <Item name="Water Filter" identifier="he-waterfilter" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,waterfilter" spritecolor="255,255,255,255" InventoryIconColor="255,255,255,255" scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer secondary="storagecab" spawnprobability="0.0" />
       <!-- TODO: Price -->
@@ -53,6 +55,7 @@
       <Holdable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="3.5" aimpos="26,24" holdpos="30,-15" holdangle="0" aimangle="120" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
       </Holdable>
     </Item>
+
     <!-- Bagpipe item - created by Draconis13 for Hungry Europans -->
     <Item name="Bagpipes" identifier="bagpipes" category="Misc" Tags="mediumitem,instrument" scale="0.5" description="An ancient instrument from earth consisting of an inflatable bladder, a mouthpiece and several metal pipes that produce haunting melodies." price="300" isshootable="true">
       <Upgrade gameversion="0.9.2.0" scale="0.5"/>
@@ -80,6 +83,7 @@
         </StatusEffect>
       </Holdable>
     </Item>
+
     <Item hideinmenus="true" name="Toilet Flood" identifier="toiletflooditem" category="Hidden" Tags="flood" scale="0.5" impactsoundtag="impact_metal_heavy" hideconditionbar="true">
       <sprite texture="%ModDir:2954998725%/Content/Items/Misc/Toilet.png" sourcerect="0,0,1,1" depth="0.556" premultiplyalpha="false" origin="0.5,0.5" />
       <Body radius="45" density="40" friction="0.95" />
@@ -97,6 +101,7 @@
         </StatusEffect>
       </Holdable>
     </Item>
+
     <Item name="Toilet" identifier="he-toilet" tags="toilet" description="Relief yourself or get rid of something by flushing it down." type="Controller" width="152" height="240" scale="0.5" noninteractable="false" category="Misc" pickdistance="150" isshootable="true" requireaimtosecondaryuse="true" canflipy="false" GrabWhenSelected="false">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Misc/Toilet.png" sourcerect="0,0,182,154" depth="0.556" premultiplyalpha="false" origin="0.46,0.6" />
       <Price baseprice="580" sold="true">
@@ -248,6 +253,7 @@
         </StatusEffect>
       </Repairable>
     </Item>
+
     <Item name="Toilet" nameidentifier="he-toilet" descriptionidentifier="he-outposttoilet" identifier="he-outposttoilet" tags="toilet" description="Variant of the toilet to be used on outpost modules that can't be picked up and moved by the player." type="Controller" width="152" height="240" scale="0.5" noninteractable="false" category="Misc" pickdistance="150" isshootable="true" requireaimtosecondaryuse="true" canflipy="false" GrabWhenSelected="false">
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Misc/ToiletOutpost.png" sourcerect="0,0,182,154" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Misc/Toilet.png" sourcerect="0,0,182,154" depth="0.556" premultiplyalpha="false" origin="0.46,0.6" />
@@ -379,7 +385,8 @@
         </StatusEffect>
       </Repairable>
     </Item>
-    <Item name="" identifier="poop" nameidentifier="poop" Tags="smallitem" maxstacksize="32" maxstacksizecharacterinventory="8" hideinmenus="true" health="20" damagedbyexplosions="true" damagedbyprojectiles="true" damagedbymeleeweapons="true" damagedbyrepairtools="true" category="Misc" scale="0.5" impactsoundtag="impact_soft" impacttolerance="6">
+
+    <Item name="" identifier="poop" nameidentifier="poop" Tags="smallitem,fertilizeringredient" maxstacksize="32" maxstacksizecharacterinventory="8" hideinmenus="true" health="20" damagedbyexplosions="true" damagedbyprojectiles="true" damagedbymeleeweapons="true" damagedbyrepairtools="true" category="Misc" scale="0.5" impactsoundtag="impact_soft" impacttolerance="6">
       <Sprite texture="Content/Characters/Pets/pets.png" depth="0.7" sourcerect="387,15,53,41" origin="0.5,0.5" />
       <InventoryIcon texture="Content/Characters/Pets/pets.png" sourcerect="387,15,53,41" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="Content/Characters/Pets/pets.png" sourcerect="387,15,53,41" depth="0.525" origin="0.5,0.7"  />
@@ -423,6 +430,7 @@
         </StatusEffect>
       </Projectile>
     </Item>
+
     <!-- EMPTY CANS -->
     <Item hideinmenus="true" DontCleanUp="true" name="Empty Can" identifier="trashcan_emptycanspawner" description="An empty aluminium can. Can be deconstructed into aluminium or thrown around." category="Hidden" Tags="smallitem" scale="0.5" impactsoundtag="impact_aluminiumcan">
       <PreferredContainer primary="outposttrashcan" amount="1" spawnprobability="0.75" />
@@ -534,6 +542,7 @@
         </StatusEffect>
       </ItemComponent>
     </Item>
+
     <Item DontCleanUp="true" name="Empty Can" identifier="he-emptycantonic" description="An empty aluminium can. Can be deconstructed into aluminium or thrown around." category="Misc" Tags="smallitem,emptycan" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_aluminiumcan">
       <PreferredContainer secondary="wreckcrewcab,wreckstoragecab,wreckstorage,wreckengcab" minamount="1" maxamount="2" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab,abandonedengcab,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.01" />
@@ -563,6 +572,7 @@
         </StatusEffect>
       </Projectile>
     </Item>
+
     <Item DontCleanUp="true" name="Empty Can" identifier="he-emptycanenergy1" description="An empty aluminium can. Can be deconstructed into aluminium or thrown around." category="Misc" Tags="smallitem,emptycan" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_aluminiumcan">
       <PreferredContainer secondary="wreckcrewcab,wreckstoragecab,wreckstorage,wreckengcab" minamount="1" maxamount="2" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab,abandonedengcab,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.01" />
@@ -592,6 +602,7 @@
         </StatusEffect>
       </Projectile>
     </Item>
+
     <Item DontCleanUp="true" name="Empty Can" identifier="he-emptycancola" description="An empty aluminium can. Can be deconstructed into aluminium or thrown around." category="Misc" Tags="smallitem,emptycan" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_aluminiumcan">
       <PreferredContainer secondary="wreckcrewcab,wreckstoragecab,wreckstorage,wreckengcab" minamount="1" maxamount="3" spawnprobability="0.03" />
       <PreferredContainer secondary="abandonedcrewcab,abandonedengcab,abandonedstoragecab" minamount="1" maxamount="3" spawnprobability="0.03" />
@@ -621,6 +632,7 @@
         </StatusEffect>
       </Projectile>
     </Item>
+
     <Item DontCleanUp="true" name="Empty Can" identifier="he-emptycancolazero" description="An empty aluminium can. Can be deconstructed into aluminium or thrown around." category="Misc" Tags="smallitem,emptycan" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_aluminiumcan">
       <PreferredContainer secondary="wreckcrewcab,wreckstoragecab,wreckstorage,wreckengcab" minamount="1" maxamount="3" spawnprobability="0.03" />
       <PreferredContainer secondary="abandonedcrewcab,abandonedengcab,abandonedstoragecab" minamount="1" maxamount="3" spawnprobability="0.03" />
@@ -650,6 +662,7 @@
         </StatusEffect>
       </Projectile>
     </Item>
+
     <!-- TOYS -->
     <!-- Punch Gun made by UberPendragon (https://steamcommunity.com/profiles/76561197995266558) -->
     <Item name="Punch-Gun" identifier="punchgun" description="Literally throwing punches!" category="Weapon" cargocontaineridentifier="metalcrate" tags="mediumitem,weapon,gunsmith,mountableweapon" Scale="0.5" impactsoundtag="impact_metal_light">
@@ -670,6 +683,7 @@
         <Containable items="punch" />
       </ItemContainer>
     </Item>
+
     <Item name="punch" identifier="punch" category="Weapon" maxstacksize="6" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="mediumitem,punch" Scale="0.5" impactsoundtag="impact_metal_light" hideinmenus="false" allowasextracargo="true" noninteractable="true">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Misc/punchgun.png" sourcerect="371,70,50,53" depth="0.55" origin="0.5,0.5" />
       <Body width="50" height="50" radius="0" friction="10" density="10" />
@@ -694,6 +708,7 @@
         <StatusEffect type="OnUse" target="This" delay="0.5" projectilepullforce="30" setvalue="True"/>
       </Rope>
     </Item>
+
     <Item name="Whoopee Cushion" identifier="he-whoopeecushion" Category="Hidden" Tags="smallitem,toy" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" scale="0.5" spritecolor="255,255,255,255" requireaimtouse="true" noninteractable="false" hideinmenus="false">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Misc/WhoopeeCushion.png" sourcerect="0,0,45,13" depth="0.55" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/UI/InventoryIcons.png" sourcerect="80,426,85,85" origin="0.5,0.5" />
@@ -735,6 +750,7 @@
         </StatusEffect>
       </MotionSensor>
     </Item>
+
     <!-- Paint -->
     <redpaint name="" identifier="redpaint" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,paint" spritecolor="128,0,0,255" InventoryIconColor="255,0,0,255" scale="0.5" impactsoundtag="impact_metal_light" impacttolerance="6" isshootable="true" requireaimtouse="true" useinhealthinterface="true">
       <PreferredContainer secondary="storagecab" minamount="1" maxamount="2" spawnprobability="0.25" notcampaign="true"/>
@@ -847,6 +863,7 @@
         </StatusEffect>
       </Holdable>
     </redpaint>
+
     <greenpaint name="" identifier="greenpaint" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,paint" spritecolor="0,128,0,255" InventoryIconColor="0,255,0,255" scale="0.5" impactsoundtag="impact_metal_light"  impacttolerance="6" isshootable="true" requireaimtouse="true" useinhealthinterface="true">
       <PreferredContainer secondary="storagecab" minamount="1" maxamount="2" spawnprobability="0.25" notcampaign="true"/>
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.1" />
@@ -958,6 +975,7 @@
         </StatusEffect>
       </Holdable>
     </greenpaint>
+
     <bluepaint name="" identifier="bluepaint" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,paint" spritecolor="0,0,128,255" InventoryIconColor="0,0,255,255" scale="0.5" impactsoundtag="impact_metal_light" impacttolerance="6" isshootable="true" requireaimtouse="true" useinhealthinterface="true">
       <PreferredContainer secondary="storagecab" minamount="1" maxamount="2" spawnprobability="0.25" notcampaign="true"/>
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.1" />
@@ -1069,6 +1087,7 @@
         </StatusEffect>
       </Holdable>
     </bluepaint>
+
     <blackpaint name="" identifier="blackpaint" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,paint" spritecolor="20,20,20,255" InventoryIconColor="20,20,20,255" scale="0.5" impactsoundtag="impact_metal_light" impacttolerance="6" isshootable="true" requireaimtouse="true" useinhealthinterface="true">
       <PreferredContainer secondary="storagecab" minamount="1" maxamount="2" spawnprobability="0.25" notcampaign="true"/>
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.1" />
@@ -1180,6 +1199,7 @@
         </StatusEffect>
       </Holdable>
     </blackpaint>
+
     <whitepaint name="" identifier="whitepaint" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,paint" spritecolor="128,128,128,255" InventoryIconColor="128,128,128,255" scale="0.5" impactsoundtag="impact_metal_light" impacttolerance="6" isshootable="true" requireaimtouse="true" useinhealthinterface="true">
       <PreferredContainer secondary="storagecab" minamount="1" maxamount="2" spawnprobability="0.25" notcampaign="true"/>
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.1" />
@@ -1291,6 +1311,37 @@
         </StatusEffect>
       </Holdable>
     </whitepaint>
+    
+    <!-- use tobaccoingredient instead of just tobaccobud? -->
+    <!-- <Item name="" identifier="pipetobacco" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,pipetobacco" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" isshootable="true">
+      <PreferredContainer primary="captainspipe" spawnprobability="1"/>
+      <PreferredContainer primary="crewcab" spawnprobability="0.05" notcampaign="true"/>
+      <PreferredContainer secondary="wreckcrewcab,abandonedcrewcab,piratecrewcab" spawnprobability="0.1"/>  
+      <Price baseprice="120">
+        <Price storeidentifier="merchantoutpost" multiplier="1.1" minavailable="1"/>
+        <Price storeidentifier="merchantcity" multiplier="0.9"  minavailable="2"/>
+        <Price storeidentifier="merchantresearch" sold="false" />
+        <Price storeidentifier="merchantmilitary" sold="false" />
+        <Price storeidentifier="merchantmine" sold="false" />
+      </Price>
+      <Fabricate suitablefabricators="vendingmachine" requiredtime="1" requiredmoney="190" fabricationlimitmin="0" fabricationlimitmax="10"/>
+      <Fabricate suitablefabricators="fabricator" requiredtime="20">
+        <RequiredSkill identifier="helm" level="30" />
+        <RequiredItem tag="tobaccoingredient" amount="3" description="fabricationdescription.tobaccoingredient" />
+      </Fabricate>
+      <Deconstruct time="2">
+      </Deconstruct>
+      <InventoryIcon texture="Content/Items/InventoryIconAtlas2.png" sourcerect="192,320,64,64" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="848,774,44,58" depth="0.55" origin="0.5,0.5" />
+      <Body width="40" height="50" density="10.5"/>
+      <Holdable slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect" >
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+        </StatusEffect>
+      </Holdable>
+    </Item> -->
+      
+    
     <!-- EVENT ITEMS -->
     <Item name="5mk" identifier="money_5mk" description="Adds 5mk to your Bank Account" Category="Hidden" Tags="smallitem,money" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" scale="0.1" spritecolor="255,255,255,255" noninteractable="false" hideinmenus="true">
       <Sprite texture="%ModDir%/Content/UI/InventoryIcons.png" depth="0.55" sourcerect="166,390,143,122" />
@@ -1381,7 +1432,8 @@
           <Remove />
         </StatusEffect>
       </Holdable>
-    </Item>
+    </Item>    
+    
     <!-- EFFEC ITEMS -->
     <Item name="" identifier="effect_none" Category="Hidden" Tags="effect" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" scale="0.5" spritecolor="255,255,255,0" noninteractable="true" hideinmenus="true">
       <Sprite texture="Content/Items/Tools/tools.png" depth="0.55" sourcerect="0,0,1,1" />

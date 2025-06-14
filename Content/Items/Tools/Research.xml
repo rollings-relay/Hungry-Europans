@@ -1,15 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Override>
   <Items>
-    <Item name="Hungry Europan (Enable Needs)" identifier="he-enableneeds" description="[RMB + E] Enables the hunger and thirst afflictions for the user, causing them to have to eat and drink regularly. This is completely optional and is NOT required to gain buffs from eating or drinking. Warning: Can't be disabled for your current character once it is enabled." category="Misc" maxstacksize="1" Tags="smallitem" scale="0.5" impactsoundtag="impact_metal_light">
+  
+    <Item name="Enable Hungry Europan" identifier="he-enableneeds" description="[RMB + E] Enables the hunger and thirst afflictions for the user, causing them to have to eat and drink regularly. This is completely optional and is NOT required to gain buffs from eating or drinking. Warning: Can't be disabled for your current character once it is enabled." category="Misc" maxstacksize="1" Tags="smallitem" scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="medcab"/>
-      <Price baseprice="0" sold="true">
-        <Price storeidentifier="merchantoutpost" />
-        <Price storeidentifier="merchantcity" />
-        <Price storeidentifier="merchantresearch" />
-        <Price storeidentifier="merchantmilitary" />
-        <Price storeidentifier="merchantmine" />
-      </Price>
       <Fabricate suitablefabricators="vendingmachinefood,vendingmachinedrinks,piratestore" requiredtime="0" requiredmoney="0" fabricationlimitmin="16" fabricationlimitmax="16" />
       <Deconstruct time="3" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
@@ -58,15 +52,9 @@
         </StatusEffect>
       </Holdable>
     </Item>
-    <Item name="Sleepy Europan (Enable Tiredness)" identifier="he-enablesleep" description="[RMB + E] Enables tiredness affliction for the user, causing them to have to sleep regularly. This is completely optional. Warning: Can't be disabled for your current character once it is enabled." category="Misc" maxstacksize="1" Tags="smallitem" scale="0.5" impactsoundtag="impact_metal_light">
+    
+    <Item name="Enable Sleepy Europan" identifier="he-enablesleep" description="[RMB + E] Enables tiredness affliction for the user, causing them to have to sleep regularly. This is completely optional. Warning: Can't be disabled for your current character once it is enabled." category="Misc" maxstacksize="1" Tags="smallitem" scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="medcab"/>
-      <Price baseprice="0" sold="true">
-        <Price storeidentifier="merchantoutpost" />
-        <Price storeidentifier="merchantcity" />
-        <Price storeidentifier="merchantresearch" />
-        <Price storeidentifier="merchantmilitary" />
-        <Price storeidentifier="merchantmine" />
-      </Price>
       <Fabricate suitablefabricators="vendingmachinefood,vendingmachinedrinks,piratestore" requiredtime="0" requiredmoney="0" fabricationlimitmin="16" fabricationlimitmax="16" />
       <Deconstruct time="3" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
@@ -115,15 +103,9 @@
         </StatusEffect>
       </Holdable>
     </Item>
-    <Item name="Moody Europan (Enable Mood)" identifier="he-enablemood" description="[RMB + E] Enables the mood affliction for the user, causing them to have to manage their mood by eating and drinking tasty things, using drugs or relaxing. This is completely optional. Warning: Can't be disabled for your current character once it is enabled." category="Misc" maxstacksize="1" Tags="smallitem" scale="0.5" impactsoundtag="impact_metal_light">
+    
+    <Item name="Enable Moody Europan" identifier="he-enablemood" description="[RMB + E] Enables the mood affliction for the user, causing them to have to manage their mood by eating and drinking tasty things, using drugs or relaxing. This is completely optional. Warning: Can't be disabled for your current character once it is enabled." category="Misc" maxstacksize="1" Tags="smallitem" scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="medcab"/>
-      <Price baseprice="0" sold="true">
-        <Price storeidentifier="merchantoutpost" />
-        <Price storeidentifier="merchantcity" />
-        <Price storeidentifier="merchantresearch" />
-        <Price storeidentifier="merchantmilitary" />
-        <Price storeidentifier="merchantmine" />
-      </Price>
       <Fabricate suitablefabricators="vendingmachinefood,vendingmachinedrinks,piratestore" requiredtime="0" requiredmoney="0" fabricationlimitmin="16" fabricationlimitmax="16" />
       <Deconstruct time="3" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
@@ -198,7 +180,8 @@
         </StatusEffect>
       </Holdable>
     </Item>
-    <Item name="Filthy Europan (Enable Extra Needs)" identifier="he-enableextraneeds" description="[RMB + E] Enables the bladder and defecate afflictions for the user, causing them to have to pee and poop depending on what or how much they eat and drink. This is completely optional and is NOT required to gain buffs from eating or drinking. Warning: Can't be disabled for your current character once it is enabled." category="Misc" maxstacksize="1" Tags="smallitem" scale="0.5" impactsoundtag="impact_metal_light">
+    
+    <Item name="Enable Filthy Europan" identifier="he-enableextraneeds" description="[RMB + E] Enables the bladder and defecate afflictions for the user, causing them to have to pee and poop depending on what or how much they eat and drink. This is completely optional and is NOT required to gain buffs from eating or drinking. Warning: Can't be disabled for your current character once it is enabled." category="Misc" maxstacksize="1" Tags="smallitem" scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="medcab"/>
       <Fabricate suitablefabricators="vendingmachinefood,vendingmachinedrinks,piratestore" requiredtime="0" requiredmoney="0" fabricationlimitmin="16" fabricationlimitmax="16" />
       <Deconstruct time="3" />
@@ -245,6 +228,7 @@
         </StatusEffect>
       </Holdable>
     </Item>
+    
     <Item hideinmenus="true" noninteractable="true" name="Trait Selector (Food)" identifier="he-traitselector_food" description="" category="Hidden" maxstacksize="1" Tags="smallitem" scale="0.5" impactsoundtag="impact_metal_light">
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,0,36,66" depth="0.6" origin="0.5,0.5" />
@@ -336,6 +320,7 @@
         </Button>
       </CustomInterface>
     </Item>
+    
     <Item hideinmenus="true" noninteractable="true" name="Trait Selector (Drinks)" identifier="he-traitselector_drinks" description="" category="Hidden" maxstacksize="1" Tags="smallitem" scale="0.5" impactsoundtag="impact_metal_light">
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,0,36,66" depth="0.6" origin="0.5,0.5" />
@@ -412,6 +397,7 @@
         </Button>
       </CustomInterface>
     </Item>
+    
     <Item hideinmenus="true" name="Trait: Likes Fried Food" identifier="he-like_friedfood" description="" category="Hidden" maxstacksize="1" Tags="smallitem" scale="0.5" impactsoundtag="impact_metal_light">
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,0,36,66" depth="0.6" origin="0.5,0.5" />
@@ -428,6 +414,7 @@
         </StatusEffect>
       </Wearable>
     </Item>
+    
     <Item hideinmenus="true" name="Trait: Likes Burgers" identifier="he-like_burgers" description="" category="Hidden" maxstacksize="1" Tags="smallitem" scale="0.5" impactsoundtag="impact_metal_light">
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,0,36,66" depth="0.6" origin="0.5,0.5" />
@@ -444,6 +431,7 @@
         </StatusEffect>
       </Wearable>
     </Item>
+    
     <Item hideinmenus="true" name="Trait: Likes Hotdogs" identifier="he-like_hotdogs" description="" category="Hidden" maxstacksize="1" Tags="smallitem" scale="0.5" impactsoundtag="impact_metal_light">
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,0,36,66" depth="0.6" origin="0.5,0.5" />
@@ -460,6 +448,7 @@
         </StatusEffect>
       </Wearable>
     </Item>
+    
     <Item hideinmenus="true" name="Trait: Likes Filets" identifier="he-like_filets" description="" category="Hidden" maxstacksize="1" Tags="smallitem" scale="0.5" impactsoundtag="impact_metal_light">
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,0,36,66" depth="0.6" origin="0.5,0.5" />
@@ -476,6 +465,7 @@
         </StatusEffect>
       </Wearable>
     </Item>
+    
     <Item hideinmenus="true" name="Trait: Likes Roasts" identifier="he-like_roasts" description="" category="Hidden" maxstacksize="1" Tags="smallitem" scale="0.5" impactsoundtag="impact_metal_light">
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,0,36,66" depth="0.6" origin="0.5,0.5" />
@@ -492,6 +482,7 @@
         </StatusEffect>
       </Wearable>
     </Item>
+    
     <Item hideinmenus="true" name="Trait: Likes Sandwiches" identifier="he-like_sandwiches" description="" category="Hidden" maxstacksize="1" Tags="smallitem" scale="0.5" impactsoundtag="impact_metal_light">
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,0,36,66" depth="0.6" origin="0.5,0.5" />
@@ -508,6 +499,7 @@
         </StatusEffect>
       </Wearable>
     </Item>
+    
     <Item hideinmenus="true" name="Trait: Likes Beer" identifier="he-like_beer" description="" category="Hidden" maxstacksize="1" Tags="smallitem" scale="0.5" impactsoundtag="impact_metal_light">
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,0,36,66" depth="0.6" origin="0.5,0.5" />
@@ -524,6 +516,7 @@
         </StatusEffect>
       </Wearable>
     </Item>
+    
     <Item hideinmenus="true" name="Trait: Likes Rum" identifier="he-like_rum" description="" category="Hidden" maxstacksize="1" Tags="smallitem" scale="0.5" impactsoundtag="impact_metal_light">
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,0,36,66" depth="0.6" origin="0.5,0.5" />
@@ -540,6 +533,7 @@
         </StatusEffect>
       </Wearable>
     </Item>
+    
     <Item hideinmenus="true" name="Trait: Likes Whiskey" identifier="he-like_whiskey" description="" category="Hidden" maxstacksize="1" Tags="smallitem" scale="0.5" impactsoundtag="impact_metal_light">
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,0,36,66" depth="0.6" origin="0.5,0.5" />
@@ -556,6 +550,7 @@
         </StatusEffect>
       </Wearable>
     </Item>
+    
     <Item hideinmenus="true" name="Trait: Likes Tea" identifier="he-like_tea" description="" category="Hidden" maxstacksize="1" Tags="smallitem" scale="0.5" impactsoundtag="impact_metal_light">
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,0,36,66" depth="0.6" origin="0.5,0.5" />
@@ -572,6 +567,7 @@
         </StatusEffect>
       </Wearable>
     </Item>
+    
     <Item hideinmenus="true" name="Trait: Likes Cola" identifier="he-like_cola" description="" category="Hidden" maxstacksize="1" Tags="smallitem" scale="0.5" impactsoundtag="impact_metal_light">
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,0,36,66" depth="0.6" origin="0.5,0.5" />
@@ -588,6 +584,7 @@
         </StatusEffect>
       </Wearable>
     </Item>
+    
     <Item name="The Europan Volume 66" identifier="he-skillbooktheeuropan" description="" category="Misc" Tags="smallitem,skillbook" maxstacksize="32" maxstacksizecharacterinventory="8" scale="0.5" impactsoundtag="impact_soft" cargocontaineridentifier="metalcrate">
       <PreferredContainer primary="crewcab"/>
       <Price baseprice="150" buyingpricemodifier="2.5" minleveldifficulty="0" sold="True" >
@@ -613,6 +610,7 @@
         </StatusEffect>
       </Holdable>
     </Item>
+    
     <Item name="&quot;The Art of Deep Sea Cooking&quot; by Aunt Doris" identifier="he-skillbookauntdoris" description="" category="Misc" Tags="smallitem,skillbook" maxstacksize="32" maxstacksizecharacterinventory="8" scale="0.5" impactsoundtag="impact_soft" cargocontaineridentifier="metalcrate">
       <PreferredContainer primary="crewcab"/>
       <Price baseprice="350" buyingpricemodifier="2.5" minleveldifficulty="20" >
@@ -637,7 +635,53 @@
           <RemoveItem />
         </StatusEffect>
       </Holdable>
+    </Item>    
+
+    <!-- Override research table to contain more items tags and have 3 output slots to support crossbreeding
+      TODO: remove this if PR gets accepted  https://github.com/FakeFishGames/Barotrauma/pull/15841 -->
+    <Item name="" identifier="op_researchterminal" tags="geneticresearchstation" width="494" height="297" texturescale="1.0,1.0" scale="0.5" category="Machine">
+      <sprite texture="Content/Map/Outposts/Art/MedicalItemResearch.png" sourcerect="417,6,494,297" depth="0.8" premultiplyalpha="false" origin="0.5,0.5" />
+      <BrokenSprite texture="Content/Map/Outposts/Art/MedicalItemResearch.png" sourcerect="440,564,494,224" depth="0.79" maxcondition="50" origin="0.5,1.0" fadein="true" />
+      <BrokenSprite texture="Content/Map/Outposts/Art/MedicalItemResearch.png" sourcerect="440,798,494,224" depth="0.79" maxcondition="10" origin="0.5,1.0" fadein="true" />
+      <UpgradePreviewSprite texture="Content/UI/WeaponUI.png" sourcerect="134,969,54,45" origin="0.5,0.45" />
+      <LightComponent range="0.0" powerconsumption="5" lightcolor="255,255,255,111" IsOn="true" castshadows="false" allowingameediting="false">
+        <sprite texture="Content/Map/Outposts/Art/MedicalItemResearchLights.png" sourcerect="417,6,494,297" depth="0.1" origin="0.5,0.5" alpha="1.0" />
+      </LightComponent>
+      <Deconstructor canbeselected="true" showoutput="false" powerconsumption="500.0" deconstructitemssimultaneously="true" msg="ItemMsgInteractSelect" activatebuttontext="researchstation.invalidinput" infotext="researchstation.empty.infotext" infoareawidth="0.5">
+        <GuiFrame relativesize="0.3,0.3" style="ItemUI" anchor="Center" />
+        <sound file="Content/Items/Fabricators/Deconstructor.ogg" type="OnActive" range="1000.0" loop="true" />
+        <poweronsound file="Content/Items/PowerOnLight3.ogg" range="600" loop="false" />
+        <StatusEffect type="InWater" target="This" condition="-0.5" />
+      </Deconstructor>
+      <ItemContainer capacity="2" maxstacksize="1" canbeselected="true" hideitems="true" hudpos="0.5, 0.4" slotsperrow="3" uilabel="" allowuioverlap="true">
+        <Containable items="geneticmaterial,stabilozine,unidentifiedgeneticmaterial,researchmaterial,smallitem,mediumitem" />
+      </ItemContainer>
+      <ItemContainer capacity="3" maxstacksize="1" canbeselected="true" hideitems="true" hudpos="0.5, 0.8" slotsperrow="5" uilabel="" allowuioverlap="true">
+        <Containable items="geneticmaterial,stabilozine,unidentifiedgeneticmaterial,researchmaterial,smallitem,mediumitem" />
+      </ItemContainer>
+      <Repairable selectkey="Action" header="electricalrepairsheader" deteriorationspeed="0.0" canbeselected="true" RepairThreshold="80" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairScrewdriver" hudpriority="10">
+        <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,280" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
+        <RequiredSkill identifier="electrical" level="80" />
+        <RequiredItem items="screwdriver" type="Equipped" />
+        <ParticleEmitter particle="spark" particleamount="5" emitinterval="2" particlespersecond="5" anglemax="360" distancemax="30" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" mincondition="0.0" maxcondition="15.0" />
+      </Repairable>
+      <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
+        <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+        <RequiredSkill identifier="electrical" level="55" />
+        <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand" AllowWhenBroken="true">
+          <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
+          <Explosion range="100.0" force="1.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
+          <Affliction identifier="stun" strength="4" probability="0.5" />
+          <Affliction identifier="electricshock" strength="60"/>
+          <Affliction identifier="burn" strength="5" />
+          <ParticleEmitter particle="ElectricShock" DistanceMin="10" DistanceMax="25" ParticleAmount="5" ScaleMin="0.1" ScaleMax="0.12" />
+        </StatusEffect>
+        <RequiredItem items="screwdriver" type="Equipped" />
+        <input name="power_in" displayname="connection.powerin" />
+        <output name="condition_out" displayname="connection.conditionout" />
+      </ConnectionPanel>
     </Item>
+    
     <!--<Item name="Genetics Extractor" identifier="he-genesaw" category="Equipment" Tags="smallitem,cuttingequipment,tool,mountableweapon" cargocontaineridentifier="metalcrate" description="" Scale="0.5" impactsoundtag="impact_metal_light" health="100">
       <Fabricate suitablefabricators="fabricator" requiredtime="25" >
         <RequiredSkill identifier="medical" level="40" />

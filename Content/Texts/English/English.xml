@@ -11,6 +11,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <!-- Display names -->
 <displayname.returnitem>[itemname] (Return Item)</displayname.returnitem>
 <displayname.clean>[itemname] (Clean)</displayname.clean>
+<displayname.fill>[itemname] (Fill)</displayname.fill>
 <displayname.vegetarian>[itemname] (Vegetarian)</displayname.vegetarian>
 <displayname.humanfooditem>[itemname] (Human)</displayname.humanfooditem>
 <displayname.crawlerfooditem>[itemname] (Crawler)</displayname.crawlerfooditem>
@@ -236,7 +237,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-toiletwaterbeer>Tastes funny.</entitydescription.he-toiletwaterbeer><!--Patch 15-->
 <entityname.he-toiletwaterrum>Water</entityname.he-toiletwaterrum><!--Patch 15-->
 <entitydescription.he-toiletwaterrum>Tastes funny.</entitydescription.he-toiletwaterrum><!--Patch 15-->
-<entityname.he-waterwhiskey>Water</entityname.he-waterwhiskey><!--Patch 15-->
+<entityname.he-toiletwaterwhiskey>Water</entityname.he-toiletwaterwhiskey><!--Patch 15-->
 <entitydescription.he-toiletwaterwhiskey>Tastes funny.</entitydescription.he-toiletwaterwhiskey><!--Patch 15-->
 <entityname.he-toiletwaterhalucinova>Water</entityname.he-toiletwaterhalucinova><!--Patch 15-->
 <entitydescription.he-toiletwaterhalucinova>Tastes funny.</entitydescription.he-toiletwaterhalucinova><!--Patch 15-->
@@ -525,9 +526,9 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entityname.he-wafflecone>Waffle Cone</entityname.he-wafflecone><!--Patch 13-->
 <entitydescription.he-wafflecone>A cone shaped waffle for ice cream. Contained ice cream will melt if not contained within a refrigerated container.</entitydescription.he-wafflecone><!--Patch 13-->
 <!-- Tools -->
-<entityname.he-enableneeds>Hungry Europan (Enable Needs)</entityname.he-enableneeds>
+<entityname.he-enableneeds>Enable Hungry Europan</entityname.he-enableneeds>
 <entitydescription.he-enableneeds>[RMB+E] Enables the hunger and thirst afflictions for the user, causing them to have to eat and drink regularly. This is completely optional and is NOT required to gain buffs from eating or drinking. Warning: Can't be disabled for your current character once it is enabled. DO NOT USE WHEN PLAYING WITH 'NEEDS' BY 'LeDoux'!</entitydescription.he-enableneeds>
-<entityname.he-enableextraneeds>Filthy Europan (Enable Extra Needs)</entityname.he-enableextraneeds><!--Patch 13-->
+<entityname.he-enableextraneeds>Enable Filthy Europan</entityname.he-enableextraneeds><!--Patch 13-->
 <entitydescription.he-enableextraneeds>[RMB + E] Enables the bladder and defecate afflictions for the user, causing them to have to pee and poop depending on what or how much they eat and drink. This is completely optional and is NOT required to gain buffs from eating or drinking. Warning: Can't be disabled for your current character once it is enabled.</entitydescription.he-enableextraneeds><!--Patch 13-->
 <entityname.he-cleaver>Meat Cleaver</entityname.he-cleaver>
 <entitydescription.he-cleaver>Time is up! Chop chop!\n\nCan chop up:\n-Crawlers\n-Mudraptors\n-Threshers\n-Hammerheads\n-Hammerhead Spawns\n-Endworms\n-Humans\n</entitydescription.he-cleaver>
@@ -589,6 +590,8 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-kitchencounter2>Can store up to 30 different small or medium items.</entitydescription.he-kitchencounter2><!--Changed as of Patch 11 | New identifier-->
 <entityname.he-refrigerator>Refrigerator</entityname.he-refrigerator>
 <entitydescription.he-refrigerator>Prevents spoilage. Can only store food and drinks. Needs power.</entitydescription.he-refrigerator><!--Changed as of Patch 10-->
+
+<!-- TODO: these descriptions are a little sad -->
 <entityname.he-stove>Stove</entityname.he-stove>
 <entitydescription.he-stove>Used for cooking. Needs power.</entitydescription.he-stove>
 <entityname.he-oven>Oven</entityname.he-oven>
@@ -597,6 +600,8 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-cuttingboard>Used to prepare ingredients.</entitydescription.he-cuttingboard>
 <entityname.he-fryer>Fryer</entityname.he-fryer><!--Patch 10-->
 <entitydescription.he-fryer>Used for frying stuff. Needs power.</entitydescription.he-fryer><!--Patch 10-->
+<entityname.he-electricgrill>Electric Grill</entityname.he-electricgrill><!--Patch 10-->
+<entitydescription.he-electricgrill>Used for grilling meat. Needs power.</entitydescription.he-electricgrill><!--Patch 10-->
 <entityname.he-distiller>Distiller</entityname.he-distiller><!--Patch 10-->
 <entitydescription.he-distiller>Used to distill ethanol from sugar and sea yeast shrooms. Needs power.</entitydescription.he-distiller><!--Patch 10-->
 <entityname.he-brewkettle>Brewing Kettle</entityname.he-brewkettle><!--Patch 10-->
@@ -881,6 +886,10 @@ SEARCH FOR THE FOLLOWING:                                                       
 <afflictiondescription.he-halucinova.self>You feel like traveling to a different plane of existence.</afflictiondescription.he-halucinova.self>
 <afflictiondescription.he-halucinova.others>The person is clearly zoning out.</afflictiondescription.he-halucinova.others>
 
+
+<afflictionname.he-drankpaint>High on Paint</afflictionname.he-drankpaint>
+<afflictiondescription.he-drankdpaint.self>Oooooh that's some strong paint right there!</afflictiondescription.he-drankdpaint.self>
+<afflictiondescription.he-drankpaint.others>For some reason the patient thought it would be a good idea to inhale industrial paint. They are, for lack of a better term, out of their gourd.</afflictiondescription.he-drankpaint.others>
 <afflictionname.he-drankredpaint>High on Red Paint</afflictionname.he-drankredpaint><!--Patch 13-->
 <afflictiondescription.he-drankredpaint.self>Bruh... That's some strong paint right there! Kind of tastes like... pomegrenade?</afflictiondescription.he-drankredpaint.self><!--Patch 13-->
 <afflictiondescription.he-drankredpaint.others>The patient consumed and is high on red paint. You can tell by the stains around the mouth.</afflictiondescription.he-drankredpaint.others><!--Patch 13-->
@@ -918,6 +927,11 @@ SEARCH FOR THE FOLLOWING:                                                       
 <bottleprinter.missingitem.blueprint>MATERIAL INSERTED\nERROR: NO BLUEPRINT FOUND! PLEASE INSERT A BLUEPRINT.</bottleprinter.missingitem.blueprint><!--Patch 10-->
 <bottleprinter.missingitem.glassfragments>BLUEPRINT INSERTED\nERROR: NO GLASS FRAGMENTS FOUND! PLEASE INSERT GLASS FRAGMENTS.</bottleprinter.missingitem.glassfragments><!--Patch 10-->
 <bottleprinter.empty>1X BOTTLE: 1X GLASS FRAGMENTS\n1X JAR: 2X GLASS FRAGMENTS\n2X CUPS: 1X GLASS FRAGMENTS\n2X SHAKERS: 1X GLASS FRAGMENTS\n------------------------------------------\nPUT A CRATE INTO THE OUTPUT SLOT</bottleprinter.empty><!--Changed as of Patch 13-->
+
+<bottleprinter.blueprintselection>Select Blueprint Model</bottleprinter.blueprintselection>
+<bottleprinter.pickblueprint>Pick Blueprint</bottleprinter.pickblueprint>
+
+
 <he-bottleprinter.output>Possible prints:</he-bottleprinter.output><!--Patch 10-->
 
 <distiller.distill>DISTILL</distiller.distill><!--Patch 10-->
@@ -943,4 +957,78 @@ SEARCH FOR THE FOLLOWING:                                                       
 <roomname.cafeteria>Cafeteria</roomname.cafeteria><!--Patch 10-->
 <roomname.brewery>Brewery</roomname.brewery><!--Patch 10-->
 <roomname.restroom>Restroom</roomname.restroom><!--Patch 13-->
+
+
+
+<!-- HUBERT ADDITIONS UNDER THIS -->
+<!-- HUBERT ADDITIONS UNDER THIS -->
+<!-- HUBERT ADDITIONS UNDER THIS
+ TODO: sorting them -->
+
+<itemmsgnomeatleft>No meat left on this corpse...</itemmsgnomeatleft> <!-- TODO: what patch is this? should this be here? -->
+
+<entityname.he-milkingtool>Moloch Lactic Harvester</entityname.he-milkingtool>
+<entitydescription.he-milkingtool>A tool with a pacifying effect used by divers to extract lactic secretions from live Molochs. Infamous among lone beacon keepers...</entitydescription.he-milkingtool>
+
+
+
+<!-- RESEARCH STATION -->
+<researchstation.crossbreed>Cross-breed</researchstation.crossbreed>
+<researchstation.crossbreed.infotext>Possible cross-breeding detected.</researchstation.crossbreed.infotext>
+<researchstation.crossbreed.missingitem>Invalid combination. Try another plant.</researchstation.crossbreed.missingitem>
+
+<entityname.bananaseed>Banana Slice</entityname.bananaseed>
+<entitydescription.bananaseed>A slice of a regular, plain europan banana. Can be planted.</entitydescription.bananaseed>
+
+<entityname.pomacco>Pomacco</entityname.pomacco>
+<entitydescription.pomacco>A somewhat disgusting but addictive cross between a pomegrenade and tobacco. Soothes the nerves and the stomach.</entitydescription.pomacco>
+<entityname.pomaccoseed>Pomacco Seed</entityname.pomaccoseed>
+<entitydescription.pomaccoseed>A genetically engineered seed of the hybrid plant Pomacco.</entitydescription.pomaccoseed>
+ 
+<entityname.saltgrenade>Saltgrenade</entityname.saltgrenade>
+<entitydescription.saltgrenade>Salty and juicy, this pomegrenade and salt bulb hybrid helps dealing with blood loss when consumed. Keep away from water.</entitydescription.saltgrenade>
+<entityname.saltgrenadeseed>Saltgrenade Seed</entityname.saltgrenadeseed>
+<entitydescription.saltgrenadeseed>A genetically engineered seed of the hybrid plant Saltgrenade.</entitydescription.saltgrenadeseed>
+
+<entityname.raptorpom>Raptor Bait</entityname.raptorpom>
+<entitydescription.raptorpom>Has the juiciness of a pomegrenade, but also the toxicity of raptor bane. Seems to attract monsters, despite not being suitable for consumption.</entitydescription.raptorpom>
+<entityname.raptorpomseed>Raptor Bait Seed</entityname.raptorpomseed>
+<entitydescription.raptorpomseed>A genetically engineered seed of the hybrid plant known as Raptor Bait.</entitydescription.raptorpomseed>
+
+<entityname.raptorbacco>Raptor Nip</entityname.raptorbacco>
+<entitydescription.raptorbacco>Combining the toxic properties of raptor's bane and tobacco, this psychoactive fruit enhances physical performance at the cost of your sanity.</entitydescription.raptorbacco>
+<entityname.raptorbaccoseed>Raptor Nip Seed</entityname.raptorbaccoseed>
+<entitydescription.raptorbaccoseed>A genetically engineered seed of the hybrid plant Raptor Nip.</entitydescription.raptorbaccoseed>
+
+<entityname.bananacigar>Banana Cigar</entityname.bananacigar>
+<entitydescription.bananacigar>A hollow banana sprouting dry tobacco leaves which can be smoked directly. Makes you look cool among clowns, and like a clown among others...</entitydescription.bananacigar>
+<entityname.bananacigarseed>Bananacco Slice</entityname.bananacigarseed>
+<entitydescription.bananacigarseed>A genetically engineered slice of the hybrid plant Bananacco. Can be planted.</entitydescription.bananacigarseed>  
+
+<entityname.bananagun>Bananabulb</entityname.bananagun>
+<entitydescription.bananagun>Packed with potent sodium, this banana can be squeezed to let out a volley of fruity shrapnel.</entitydescription.bananagun>
+<entityname.bananagunseed>Bananabulb Slice</entityname.bananagunseed>
+<entitydescription.bananagunseed>A genetically engineered slice of the hybrid plant Bananabulb. Can be planted.</entitydescription.bananagunseed>  
+
+<entityname.bananafuelrod>Radioactive Banana</entityname.bananafuelrod>
+<entitydescription.bananafuelrod>This inexplicably irradiated banana is warm to the touch, and hard to the tooth. Clowns are known to use these as emergency reactor fuel...</entitydescription.bananafuelrod>
+
+
+<afflictionname.he-tobaccoaddiction>Tobacco addiction</afflictionname.he-tobaccoaddiction>
+<afflictiondescription.he-tobaccoaddiction>It's bad for your lungs. You feel short of breath.</afflictiondescription.he-tobaccoaddiction>
+
+<forcesay.eatingsound>*Om nom nom...*</forcesay.eatingsound>
+<forcesay.eatingsound>*Gulp...*</forcesay.eatingsound>
+<forcesay.eatingsound>*Hmmmf...*</forcesay.eatingsound>
+
+<fabricationheader.fertilizeringredient>Fertilizer ingredient</fabricationheader.fertilizeringredient>
+<fabricationdescription.fertilizeringredient>Organic waste that can be recycled as fertilizer ingredients.</fabricationdescription.fertilizeringredient>
+<fabricationheader.tobaccoingredient>Tobacco ingredient</fabricationheader.tobaccoingredient>
+<fabricationdescription.tobaccoingredient>Plants that can contain tobacco.</fabricationdescription.tobaccoingredient>
+ 
+<!-- HUBERT ADDITIONS ABOVE THIS --> 
+<!-- HUBERT ADDITIONS ABOVE THIS --> 
+<!-- HUBERT ADDITIONS ABOVE THIS --> 
+
+
 </infotexts>

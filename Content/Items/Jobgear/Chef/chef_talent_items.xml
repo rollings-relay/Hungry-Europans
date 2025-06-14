@@ -15,198 +15,57 @@
         <RequiredItem identifier="fpgacircuit" amount="1"/>
         <RequiredItem identifier="steel" amount="2" />
         <RequiredItem identifier="plastic" amount="3"/>
-      </Fabricate>
+      </Fabricate>    
+      <!--PowerContainer charge used to keep track of time to only water every 15min. Multiply by 100 and check for >99% because charge rate drops near 100%-->
+      <PowerContainer capacity="900" charge="900" maxrechargespeed="0" rechargespeed="0" canbeselected="false">
+        <StatusEffect type="OnNotContained" target="This" >
+          <Conditional chargepercentage="0" />
+          <Use />
+        </StatusEffect>
+      </PowerContainer>
+      <!-- Keg Not Empty -->
+      <LightComponent range="0.0" lightcolor="100,255,50,111" flicker="0.1" flickerspeed="0.5" IsOn="false" castshadows="false" alphablend="false" allowingameediting="false" powerconsumption="50">
+        <sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="106,1234,105,251" depth="0.1" origin="0.5,0.5" alpha="1.0" />
+        <IsActiveConditional targetcontaineditem="true" conditionpercentage="gt 0"/>
+        <StatusEffect type="OnActive" target="This" interval="1" Charge="-1" disabledeltatime="true" >
+          <Conditional chargepercentage="gt 0" targetitemcomponent="PowerContainer"/>
+        </StatusEffect>
+      </LightComponent>
+      <!-- Keg <20% -->
+      <LightComponent range="0.0" lightcolor="255,0,0,111" blinkfrequency="1" pulseamount="0.0" pulsefrequency="0" flicker="0.1" flickerspeed="0.5" IsOn="false" castshadows="false" alphablend="false" allowingameediting="false" powerconsumption="5">
+        <sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="106,1234,105,251" depth="0.1" origin="0.5,0.5" alpha="1.0" />
+        <IsActiveConditional targetcontaineditem="true" conditionpercentage="lte 20"/>
+      </LightComponent>
       <CustomInterface canbeselected="true" drawhudwhenequipped="false">
         <GuiFrame style="ItemUI" absoluteoffset="0,-100" anchor="Center" relativesize="0.07,0.08"/>
         <TickBox text="interaction.onoff">
-          <StatusEffect type="OnUse" target="This" IsOn="true" targetitemcomponent="LightComponent" setvalue="true">
+          <StatusEffect type="OnUse" target="This" IsOn="true">
             <Conditional IsOn="false" targetitemcomponent="LightComponent" />
           </StatusEffect>
-          <StatusEffect type="OnSecondaryUse" target="This" IsOn="false" targetitemcomponent="LightComponent" setvalue="true">
+          <StatusEffect type="OnSecondaryUse" target="This" IsOn="false" >
             <Conditional IsOn="true" targetitemcomponent="LightComponent" />
           </StatusEffect>
         </TickBox>
       </CustomInterface>
-      <!--PowerContainer charge used to keep track of time to only water every 15min (900s)-->
-      <PowerContainer capacity="900" charge="0" maxrechargespeed="0" rechargespeed="0" allowingameediting="false" canbeselected="false" VulnerableToEMP="false" />
-      <LightComponent range="0.0" lightcolor="100,255,50,111" flicker="0.1" flickerspeed="0.5" IsOn="false" castshadows="false" alphablend="false" allowingameediting="false" powerconsumption="50">
-        <sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="106,1234,105,251" depth="0.1" origin="0.5,0.5" alpha="1.0" />
-        <!--Tag the item to allow for StatusEffect conditionals to check if every requirement is met -->
-        <StatusEffect type="OnActive" target="This" disabledeltatime="false" comparison="And" tags="canwater" duration="0.1">
-          <RequiredItem items="he-kegwater" targetslot="0" type="Contained" />
-        </StatusEffect>
-        <!--Increase charge by 1 each second to keep track of time spent active if the item has the status tag "canwater"-->
-        <StatusEffect type="OnActive" target="This" targetitemcomponent="PowerContainer" interval="1" Charge="1" stackable="false" disabledeltatime="true">
-          <Conditional HasStatusTag="eq canwater" />
-        </StatusEffect>
-        <!--Reset the charge after 5 seconds if the charge is equal to or larger than 900 (15 min)-->
-        <StatusEffect type="OnActive" target="This" interval="0.5" stackable="false" Charge="0" setvalue="true" delay="5" disabledeltatime="true" comparison="And">
-          <Conditional HasStatusTag="eq canwater" />
-          <Conditional Charge="gte 900" />
-        </StatusEffect>
-        <!--Set light color to green when all required items are contained and the item has the active tag "canwater"-->
-        <StatusEffect type="OnActive" target="This" lightcolor="100,255,50,111" pulseamount="0" flicker="0.1" flickerspeed="0.5" blinkfrequency="0" pulsefrequency="0" powerconsumption="200" interval="1" stackable="false" setvalue="true" disabledeltatime="true" >
-          <Conditional HasStatusTag="eq canwater" />
-        </StatusEffect>
-        <!--Set light color to orange and pulsate when the item is on, but is missing required items-->
-        <StatusEffect type="OnActive" target="This" lightcolor="255,150,0,111" blinkfrequency="1" pulseamount="0.0" pulsefrequency="0" powerconsumption="5" interval="1" stackable="false" setvalue="true" disabledeltatime="true" >
-          <Conditional HasStatusTag="neq canwater" />
-        </StatusEffect>
-        <!--Drain condition of the water tank when the charge is equal or greater than 900 (15 min)-->
-        <StatusEffect type="OnActive" target="Contained" condition="-3.0" comparison="And" CheckConditionalAlways="true" stackable="false">
-          <Conditional HasStatusTag="eq canwater" targetcontainer="true" />
-          <Conditional Charge="gte 900" targetcontainer="true" />
-        </StatusEffect>
-        <!--Drain condition of the water tank when the charge is equal or greater than 900 (15 min)-->
-        <StatusEffect type="OnActive" target="This" comparison="And" duration="0.1" offset="-5,-51" checkConditionalAlways="true" stackable="true">
-          <Conditional HasStatusTag="eq canwater" />
-          <Conditional Charge="gte 900" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="500" loop="true" />
+      <ItemComponent IsOn="false" IsActive="false" >
+        <StatusEffect type="OnUse" target="NearbyItems" targettags="sprinkler,seed" range="200.0" condition="1" offset="-5,-51" checkconditionalalways="true">
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="4" range="500" loop="true" />
           <ParticleEmitter particle="waterdrop" anglemin="0" anglemax="359" velocitymin="100.0" velocitymax="300.0" particlespersecond="50" />
-          <UseItem />
+          <RequiredItem items="he-kegwater" type="Contained" />
         </StatusEffect>
-      </LightComponent>
-      <!--WifiComponent is used to trigger the StatusEffects that alter the barrelpos one after another and loop them back by keeping track of and adjusting the channel value-->
-      <WifiComponent canbeselected="false" allowingameediting="false" channel="0" range="0" linktochat="false" />
-      <!--Water plants within a 1m range horizontally and 3m down-->
-      <RepairTool extinguishamount="50.0" range="300" spread="180" unskilledspread="180" barrelpos="-5,-51" repairthroughholes="true" characterusable="false" requireaimtouse="false" usablein="air" hititems="true" repairmultiple="true" wateramount="300" barrelrotation="270">
-        <StatusEffect type="OnNotContained" target="This" setvalue="true" requireaimtouse="false" />
-        <StatusEffect type="OnContained" target="This" setvalue="true" requireaimtouse="true" />
-        <!--Move the barrel position every 100ms to the right and reset the position back to the left when reaching the configured limit. This has to be done to actually water all plants within the 1m horizontal distance as it would otherwise only water the plant directly below-->
-        <StatusEffect type="OnUse" target="This" interval="0.1" barrelpos="105,-51" channel="0" disabledeltatime="true" stackable="false" setvalue="true">
-          <Conditional channel="eq 41" />
+        <StatusEffect type="OnUse" target="This" charge="9999" targetitemcomponent="PowerContainer" delay="10" stackable="false" setvalue="true"/>
+        <StatusEffect type="OnUse" target="Contained" condition="-1.0">
+          <RequiredItem items="he-kegwater" type="Contained" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="This" interval="0.1" barrelpos="100,-51" channel="41" disabledeltatime="true" stackable="false" setvalue="true">
-          <Conditional channel="eq 40" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" interval="0.1" barrelpos="95,-51" channel="40" disabledeltatime="true" stackable="false" setvalue="true">
-          <Conditional channel="eq 39" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" interval="0.1" barrelpos="90,-51" channel="39" disabledeltatime="true" stackable="false" setvalue="true">
-          <Conditional channel="eq 38" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" interval="0.1" barrelpos="85,-51" channel="38" disabledeltatime="true" stackable="false" setvalue="true">
-          <Conditional channel="eq 37" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" interval="0.1" barrelpos="80,-51" channel="37" disabledeltatime="true" stackable="false" setvalue="true">
-          <Conditional channel="eq 36" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" interval="0.1" barrelpos="75,-51" channel="36" disabledeltatime="true" stackable="false" setvalue="true">
-          <Conditional channel="eq 35" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" interval="0.1" barrelpos="70,-51" channel="35" disabledeltatime="true" stackable="false" setvalue="true">
-          <Conditional channel="eq 34" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" interval="0.1" barrelpos="65,-51" channel="34" disabledeltatime="true" stackable="false" setvalue="true">
-          <Conditional channel="eq 33" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" interval="0.1" barrelpos="60,-51" channel="33" disabledeltatime="true" stackable="false" setvalue="true">
-          <Conditional channel="eq 32" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" interval="0.1" barrelpos="55,-51" channel="32" disabledeltatime="true" stackable="false" setvalue="true">
-          <Conditional channel="eq 31" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" interval="0.1" barrelpos="50,-51" channel="31" disabledeltatime="true" stackable="false" setvalue="true">
-          <Conditional channel="eq 30" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" interval="0.1" barrelpos="45,-51" channel="30" disabledeltatime="true" stackable="false" setvalue="true">
-          <Conditional channel="eq 29" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" interval="0.1" barrelpos="40,-51" channel="29" disabledeltatime="true" stackable="false" setvalue="true">
-          <Conditional channel="eq 28" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" interval="0.1" barrelpos="35,-51" channel="28" disabledeltatime="true" stackable="false" setvalue="true">
-          <Conditional channel="eq 27" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" interval="0.1" barrelpos="30,-51" channel="27" disabledeltatime="true" stackable="false" setvalue="true">
-          <Conditional channel="eq 26" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" interval="0.1" barrelpos="25,-51" channel="26" disabledeltatime="true" stackable="false" setvalue="true">
-          <Conditional channel="eq 25" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" interval="0.1" barrelpos="20,-51" channel="25" disabledeltatime="true" stackable="false" setvalue="true">
-          <Conditional channel="eq 24" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" interval="0.1" barrelpos="15,-51" channel="24" disabledeltatime="true" stackable="false" setvalue="true">
-          <Conditional channel="eq 23" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" interval="0.1" barrelpos="10,-51" channel="23" disabledeltatime="true" stackable="false" setvalue="true">
-          <Conditional channel="eq 22" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" interval="0.1" barrelpos="5,-51" channel="22" disabledeltatime="true" stackable="false" setvalue="true">
-          <Conditional channel="eq 21" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" interval="0.1" barrelpos="0,-51" channel="21" disabledeltatime="true" stackable="false" setvalue="true">
-          <Conditional channel="eq 20" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" interval="0.1" barrelpos="-5,-51" channel="20" disabledeltatime="true" stackable="false" setvalue="true">
-          <Conditional channel="eq 19" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" interval="0.1" barrelpos="-10,-51" channel="19" disabledeltatime="true" stackable="false" setvalue="true">
-          <Conditional channel="eq 18" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" interval="0.1" barrelpos="-15,-51" channel="18" disabledeltatime="true" stackable="false" setvalue="true">
-          <Conditional channel="eq 17" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" interval="0.1" barrelpos="-20,-51" channel="17" disabledeltatime="true" stackable="false" setvalue="true">
-          <Conditional channel="eq 16" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" interval="0.1" barrelpos="-25,-51" channel="16" disabledeltatime="true" stackable="false" setvalue="true">
-          <Conditional channel="eq 15" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" interval="0.1" barrelpos="-30,-51" channel="15" disabledeltatime="true" stackable="false" setvalue="true">
-          <Conditional channel="eq 14" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" interval="0.1" barrelpos="-35,-51" channel="14" disabledeltatime="true" stackable="false" setvalue="true">
-          <Conditional channel="eq 13" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" interval="0.1" barrelpos="-40,-51" channel="13" disabledeltatime="true" stackable="false" setvalue="true">
-          <Conditional channel="eq 12" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" interval="0.1" barrelpos="-45,-51" channel="12" disabledeltatime="true" stackable="false" setvalue="true">
-          <Conditional channel="eq 11" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" interval="0.1" barrelpos="-50,-51" channel="11" disabledeltatime="true" stackable="false" setvalue="true">
-          <Conditional channel="eq 10" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" interval="0.1" barrelpos="-55,-51" channel="10" disabledeltatime="true" stackable="false" setvalue="true">
-          <Conditional channel="eq 9" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" interval="0.1" barrelpos="-60,-51" channel="9" disabledeltatime="true" stackable="false" setvalue="true">
-          <Conditional channel="eq 8" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" interval="0.1" barrelpos="-65,-51" channel="8" disabledeltatime="true" stackable="false" setvalue="true">
-          <Conditional channel="eq 7" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" interval="0.1" barrelpos="-70,-51" channel="7" disabledeltatime="true" stackable="false" setvalue="true">
-          <Conditional channel="eq 6" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" interval="0.1" barrelpos="-75,-51" channel="6" disabledeltatime="true" stackable="false" setvalue="true">
-          <Conditional channel="eq 5" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" interval="0.1" barrelpos="-80,-51" channel="5" disabledeltatime="true" stackable="false" setvalue="true">
-          <Conditional channel="eq 4" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" interval="0.1" barrelpos="-85,-51" channel="4" disabledeltatime="true" stackable="false" setvalue="true">
-          <Conditional channel="eq 3" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" interval="0.1" barrelpos="-90,-51" channel="3" disabledeltatime="true" stackable="false" setvalue="true">
-          <Conditional channel="eq 2" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" interval="0.1" barrelpos="-95,-51" channel="2" disabledeltatime="true" stackable="false" setvalue="true">
-          <Conditional channel="eq 1" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" interval="0.1" barrelpos="-105,-51" channel="1" disabledeltatime="true" stackable="false" setvalue="true">
-          <Conditional channel="eq 0" />
-        </StatusEffect>
-      </RepairTool>
+      </ItemComponent>
       <ItemContainer selectkey="Select" capacity="0" canbeselected="true" hideitems="false" itempos="78,5" ShowContainedStateIndicator="false" slotsperrow="3" keepopenwhenequipped="false" movableframe="true">
         <GuiFrame relativesize="0.15,0.30" anchor="Center" relativeoffset="0,0" style="ItemUI" msg="ItemMsgInteractSelect" />
+        <TextBox text="Set timer" targetitemcomponent="PowerContainer" propertyname="capacity" maxtextlength="3" ShouldSetProperty="true" />
         <!--Watertank Icon-->
-        <SlotIcon slotindex="0" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="237,0,85,85" origin="0.5,0.5" />
+        <SlotIcon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="237,0,85,85" origin="0.5,0.5" />
         <!--Watertank Slot-->
         <SubContainer capacity="1" maxstacksize="1" slot="0">
-          <Containable items="he-kegwater" />
+          <Containable items="he-kegwater,emptykeg" />
         </SubContainer>
         <!--Play a sound when opening the items interface-->
         <StatusEffect type="OnPicked" target="this">

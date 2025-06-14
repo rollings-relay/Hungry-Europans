@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Override>
   <Afflictions>
+  
     <!-- NEEDS INTEGRATION -->
     <Affliction name="Fatigue"
       identifier="fatigue"
@@ -45,6 +46,7 @@
       </PeriodicEffect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="768,256,128,128" origin="0,0" />
     </Affliction>
+    
     <Affliction name="Mood"
       identifier="mood"
       description=""
@@ -196,6 +198,7 @@
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,128,128,128" origin="0,0" />
       <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/HungerOverlay.png" />
     </Affliction>
+    
     <Affliction name="Thirst"
       identifier="thirst"
       description="You feel refreshed."
@@ -279,6 +282,7 @@
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="128,128,128,128" origin="0,0" />
     </Affliction>
+    
     <Affliction name="Starvation"
       identifier="he-starvation"
       description="Starving"
@@ -421,6 +425,7 @@
 
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="768,128,128,128" color="195,180,60,255" origin="0,0" />
     </Affliction>
+    
     <Affliction name="Alcohol withdrawal"
       identifier="he-alcoholwithdrawal"
       description="Agitation and a tremor are obvious, as are the signs of nausea."
@@ -566,6 +571,7 @@
       <!--<AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/CannibalInfoOverlay.png" />-->
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="640,128,128,128" color="195,180,60,255" origin="0,0" />
     </Affliction>
+    
     <Affliction name="Craving Human Meat"
       identifier="he-hungryforhumanmeat"
       description="Agitation and a tremor are obvious, the eyes stare empty."
@@ -865,6 +871,7 @@
       </PeriodicEffect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,256,128,128" origin="0,0" />
     </Affliction>
+    
     <Affliction name="Need to defecate"
       identifier="defecate"
       description="You need to take a dump."
@@ -961,6 +968,7 @@
       </PeriodicEffect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="128,256,128,128" origin="0,0" />
     </Affliction>
+    
     <Affliction name="Hygiene"
       identifier="hygiene"
       description="You need to clean yourself."
@@ -1044,5 +1052,6 @@
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="896,384,128,128" origin="0,0" />
     </Affliction>
+    
   </Afflictions>
 </Override>
