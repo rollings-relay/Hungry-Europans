@@ -1,4 +1,8 @@
 #TODO:
+M check and approve on fruits, seeds and tobacco addiction
+M slot icons for specific item slots (filter and hose in sink, etc)
+M make sure plant produce is available in large quantities on hydroponic and cities
+
 - Cake
 - Cake slice (requires fork to eat) | either: can be thrown if no fork is equipped | or: when equipped, show GUI to take cake off the plate to be able to throw it
 - Pizza
