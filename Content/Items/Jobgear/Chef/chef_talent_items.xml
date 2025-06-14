@@ -2,9 +2,9 @@
 <Override>
   <Items>
     <Item name="Gardening Sprinkler" identifier="he-sprinkler" tags="talentitem,sprinkler" linkable="true" category="Misc" subcategory="Container" description="Automatically waters nearby plants within a 1m range horizontally below the sprinkler every 15 minutes. Needs power." canflipx="false" pickdistance="150" waterproof="false" isshootable="true" scale="0.5">
-      <Sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" sourcerect="0,1486,156,106" origin="0.5,0.5" />
-      <Sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" depth="0.591" sourcerect="0,1486,156,106" origin="0.5,0.5" />
-      <ContainedSprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" usewhenattached="true" decorativespritebehavior="HideWhenNotVisible" depth="0.805" sourcerect="0,1234,106,251" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="0,1486,156,106" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.591" sourcerect="0,1486,156,106" origin="0.5,0.5" />
+      <ContainedSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" usewhenattached="true" decorativespritebehavior="HideWhenNotVisible" depth="0.805" sourcerect="0,1234,106,251" origin="0.5,0.5" />
       <Body radius="50" width="90" density="25" />
       <Deconstruct time="10">
         <Item identifier="steel" amount="1" />
@@ -28,15 +28,14 @@
         </TickBox>
       </CustomInterface>
       <!--PowerContainer charge used to keep track of time to only water every 15min (900s)-->
-      <PowerContainer capacity="900" charge="0" maxrechargespeed="0" rechargespeed="0" allowingameediting="false" canbeselected="false" />
-      <GreaterComponent TimeFrame="0" allowingameediting="false" canbeselected="false" channel="0" />
+      <PowerContainer capacity="900" charge="0" maxrechargespeed="0" rechargespeed="0" allowingameediting="false" canbeselected="false" VulnerableToEMP="false" />
       <LightComponent range="0.0" lightcolor="100,255,50,111" flicker="0.1" flickerspeed="0.5" IsOn="false" castshadows="false" alphablend="false" allowingameediting="false" powerconsumption="50">
-        <sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" sourcerect="106,1234,105,251" depth="0.1" origin="0.5,0.5" alpha="1.0" />
-        <!--Tag the item to allow for StatusEffect conditionals to check if every requirement is met and play a sound loop to clarify the item is active-->
+        <sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="106,1234,105,251" depth="0.1" origin="0.5,0.5" alpha="1.0" />
+        <!--Tag the item to allow for StatusEffect conditionals to check if every requirement is met -->
         <StatusEffect type="OnActive" target="This" disabledeltatime="false" comparison="And" tags="canwater" duration="0.1">
           <RequiredItem items="he-kegwater" targetslot="0" type="Contained" />
         </StatusEffect>
-        <!--Increase charge by 1 each second to simulate growing if the item has the status tag "canwater"-->
+        <!--Increase charge by 1 each second to keep track of time spent active if the item has the status tag "canwater"-->
         <StatusEffect type="OnActive" target="This" targetitemcomponent="PowerContainer" interval="1" Charge="1" stackable="false" disabledeltatime="true">
           <Conditional HasStatusTag="eq canwater" />
         </StatusEffect>
@@ -62,7 +61,7 @@
         <StatusEffect type="OnActive" target="This" comparison="And" duration="0.1" offset="-5,-51" checkConditionalAlways="true" stackable="true">
           <Conditional HasStatusTag="eq canwater" />
           <Conditional Charge="gte 900" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="500" loop="true" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="500" loop="true" />
           <ParticleEmitter particle="waterdrop" anglemin="0" anglemax="359" velocitymin="100.0" velocitymax="300.0" particlespersecond="50" />
           <UseItem />
         </StatusEffect>
@@ -204,14 +203,14 @@
       <ItemContainer selectkey="Select" capacity="0" canbeselected="true" hideitems="false" itempos="78,5" ShowContainedStateIndicator="false" slotsperrow="3" keepopenwhenequipped="false" movableframe="true">
         <GuiFrame relativesize="0.15,0.30" anchor="Center" relativeoffset="0,0" style="ItemUI" msg="ItemMsgInteractSelect" />
         <!--Watertank Icon-->
-        <SlotIcon slotindex="0" texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="237,0,85,85" origin="0.5,0.5" />
+        <SlotIcon slotindex="0" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="237,0,85,85" origin="0.5,0.5" />
         <!--Watertank Slot-->
         <SubContainer capacity="1" maxstacksize="1" slot="0">
           <Containable items="he-kegwater" />
         </SubContainer>
         <!--Play a sound when opening the items interface-->
         <StatusEffect type="OnPicked" target="this">
-          <Sound file="%ModDir%/Content/Sounds/Items/Fabricators/hydroponics_interact.ogg" volume="1" range="300" selectionmode="random"/>
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Fabricators/hydroponics_interact.ogg" volume="1" range="300" selectionmode="random"/>
         </StatusEffect>
       </ItemContainer>
       <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
@@ -225,7 +224,7 @@
         </StatusEffect>
         <!--Trigger interact sound when opening the connection panel-->
         <StatusEffect type="OnPicked" target="this">
-          <Sound file="%ModDir%/Content/Sounds/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
         </StatusEffect>
         <RequiredItem items="screwdriver" type="Equipped" />
         <input name="power_in" displayname="connection.powerin" />

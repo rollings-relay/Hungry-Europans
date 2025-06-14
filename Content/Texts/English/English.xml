@@ -6,9 +6,12 @@ SEARCH FOR THE FOLLOWING:                                                       
 
 <!-- Keep in mind: The patch comments are behind/below the changed/added lines -->
 
-<!-- LATEST PATCH: 16 -->
+<!-- LATEST PATCH: 17 -->
 <infotexts language="English" nowhitespace="false" translatedname="English">
 <!-- Display names -->
+<displayname.returnitem>[itemname] (Return Item)</displayname.returnitem>
+<displayname.clean>[itemname] (Clean)</displayname.clean>
+<displayname.vegetarian>[itemname] (Vegetarian)</displayname.vegetarian>
 <displayname.humanfooditem>[itemname] (Human)</displayname.humanfooditem>
 <displayname.crawlerfooditem>[itemname] (Crawler)</displayname.crawlerfooditem>
 <displayname.mudraptorfooditem>[itemname] (Mudraptor)</displayname.mudraptorfooditem>
@@ -650,7 +653,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <talentname.he-saltybusiness>Salty Business</talentname.he-saltybusiness>
 <talentdescription.he-saltybusiness>The first time you open a container, you have a chance of [probability]% to find some extra salt in it.</talentdescription.he-saltybusiness>
 <talentname.he-fastfood>Fast Food</talentname.he-fastfood>
-<talentdescription.he-fastfood>Increase the speed of kitchen related fabricators by [amount]%.</talentdescription.he-fastfood>
+<talentdescription.he-fastfood>Increase the speed of kitchen related fabricators by [amount]%.\nDoes not affect [itemname1] and [itemname2].</talentdescription.he-fastfood><!--Patch 17-->
 <talentname.he-chefattire>Master Chef Attire</talentname.he-chefattire>
 <talentdescription.he-chefattire>Unlock the crafting recipes for [itemname1] and [itemname2].</talentdescription.he-chefattire>
 <talentname.he-frenzy>Frenzy</talentname.he-frenzy>
@@ -662,7 +665,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <talentname.he-masterchef>Master Chef</talentname.he-masterchef>
 <talentdescription.he-masterchef>You've become a master of your work and learned how to save some ingredients for later when cooking.\nYou have a [chance]% chance to not consume a random ingredient while preparing a meal.</talentdescription.he-masterchef>
 <talentname.he-lifesaver>Life Saver</talentname.he-lifesaver>
-<talentdescription.he-lifesaver>Gain a bonus of [amount] to [skill].\nUnlock the crafting recipe for [itemname1].</talentdescription.he-lifesaver>
+<talentdescription.he-lifesaver>Gain a bonus of [amount] to [skill].</talentdescription.he-lifesaver><!--Patch 17-->
 <talentname.he-delicacies>Delicacies</talentname.he-delicacies>
 <talentdescription.he-delicacies>Unlock the following recipes of europan delicacies:\n[itemname1]\n[itemname2]</talentdescription.he-delicacies><!--Patch 13 | added \n[itemname2] at the end-->
 <talentname.he-huskfood>Husk Food</talentname.he-huskfood><!--Patch 13-->
@@ -676,6 +679,44 @@ SEARCH FOR THE FOLLOWING:                                                       
 <talentdescription.he-piper>Playing the bagpipes near your crew grants them the following bonuses for the duration you're playing:\n‖color:gui.orange‖20 to Weapons\n20% Increased Walking Speed\n25% Increased Melee Damage\n25% Damage Resistance ‖end‖.</talentdescription.he-piper><!--Patch 13-->
 <talentname.he-lazygardener>Lazy Gardener</talentname.he-lazygardener><!--Patch 14-->
 <talentdescription.he-lazygardener>The time spent watering your plants was just too much for you and your crew simply doesn't look after them when you may be unavailable to do so, so you got creative and managed to come up with a sprinkler design.</talentdescription.he-lazygardener><!--Patch 14-->
+<talentname.he-farmersmarket>Farmers' market</talentname.he-farmersmarket><!--Patch 17-->
+<talentdescription.he-farmersmarket>You can sell prepared food for [amount]% more.</talentdescription.he-farmersmarket><!--Patch 17-->
+<talentname.he-anatomystudy>Anatomy Study</talentname.he-anatomystudy><!--Patch 17-->
+<talentname.he-thirstforknowledge>Thirst for Knowledge</talentname.he-thirstforknowledge><!--Patch 17-->
+<talentname.he-steadyhands>Steady Hands</talentname.he-steadyhands><!--Patch 17-->
+<talentdescription.he-steadyhands>While aiming with a melee weapon, gain [amount]% stun resistance.</talentdescription.he-steadyhands><!--Patch 17-->
+<talentname.he-foodtrucking>Food Trucking</talentname.he-foodtrucking><!--Patch 17-->
+<talentdescription.he-foodtrucking>When entering a new outpost, gain [outpost]mk. \nDouble for cities.</talentdescription.he-foodtrucking><!--Patch 17-->
+<talentname.he-smellslikeabrewery>Smells Like a Brewery</talentname.he-smellslikeabrewery><!--Patch 17-->
+<talentname.he-dietarypreference>Dietary preference</talentname.he-dietarypreference><!--Patch 17-->
+<talentdescription.he-dietarypreferencebase>Choose one type of enemy and gain relevant damage boost against it.</talentdescription.he-dietarypreferencebase><!--Patch 17-->
+<talentdescription.he-dietarypreferencemudraptor>Choose ‖color:gui.orange‖Mudraptors‖end‖ as your preference and gain [amount]% increased damage dealt against them.</talentdescription.he-dietarypreferencemudraptor><!--Patch 17-->
+<talentdescription.he-dietarypreferencecrawler>Choose ‖color:gui.orange‖Crawlers‖end‖ as your preference and gain [amount]% increased damage dealt against them.</talentdescription.he-dietarypreferencecrawler><!--Patch 17-->
+<talentdescription.he-dietarypreferencethresher>Choose ‖color:gui.orange‖Threshers‖end‖ as your preference and gain [amount]% increased damage dealt against them.</talentdescription.he-dietarypreferencethresher><!--Patch 17-->
+<talentdescription.he-dietarypreferencespineling>Choose ‖color:gui.orange‖Spinelings‖end‖ as your preference and gain [amount]% increased damage dealt against them.</talentdescription.he-dietarypreferencespineling><!--Patch 17-->
+<talentdescription.he-dietarypreferencehusk>Choose ‖color:gui.orange‖Husks‖end‖ as your preference and gain [amount]% increased damage dealt against them.</talentdescription.he-dietarypreferencehusk><!--Patch 17-->
+<talentname.he-culinaryschool>Culinary School</talentname.he-culinaryschool><!--Patch 17-->
+<talentdescription.he-culinaryschool>Whenever you gain a [skillname] skill point, gain [amount] random additional skill.</talentdescription.he-culinaryschool><!--Patch 17-->
+<talentname.he-thinnerslices>Thinner Slices</talentname.he-thinnerslices><!--Patch 17-->
+<talentdescription.he-thinnerslices>Gain a [chance]% chance to not consume raw meat when cooking.</talentdescription.he-thinnerslices><!--Patch 17-->
+<talentname.he-dryaging>Dry-Aging</talentname.he-dryaging><!--Patch 17-->
+<talentname.he-slaughterhouse>Slaughterhouse</talentname.he-slaughterhouse><!--Patch 17-->
+<talentname.he-seafoodsamurai>Seafood Samurai</talentname.he-seafoodsamurai><!--Patch 17-->
+<talentdescription.he-seafoodsamurai>If you are in the open sea, gain an additional [amount]% [stattype].</talentdescription.he-seafoodsamurai><!--Patch 17-->
+<talentname.he-parttimejob>Part-Time Job</talentname.he-parttimejob><!--Patch 17-->
+<talentname.he-dinnertheater>Dinner Theater</talentname.he-dinnertheater><!--Patch 17-->
+<talentdescription.he-dinnertheater>Playing the bagpipes prolongs the duration of food and drink buffs for you and nearby allies.</talentdescription.he-dinnertheater><!--Patch 17-->
+<talentname.he-teppanyaki>Teppanyaki</talentname.he-teppanyaki><!--Patch 17-->
+<talentdescription.he-teppanyaki>Whenever you gain a [skillname1] or [skillname2] skill point, your crew gains a point as well.</talentdescription.he-teppanyaki><!--Patch 17-->
+<talentname.he-workpromotion>Work Promotion</talentname.he-workpromotion><!--Patch 17-->
+<talentname.he-headchef>Head Chef</talentname.he-headchef><!--Patch 17-->
+<talentdescription.he-headchef>Allies in the same room gain [amount]% [stattype].</talentdescription.he-headchef><!--Patch 17-->
+<talentname.he-huskegghunt>Husk Egg Hunt</talentname.he-huskegghunt><!--Patch 17-->
+<talentdescription.he-huskegghunt>Husks drop one extra [item].</talentdescription.he-huskegghunt><!--Patch 17-->
+<talentname.he-creamery>Creamery</talentname.he-creamery>
+<talentdescription.he-creamery>Recipes that consume [item] have a [chance]% chance to not consume one.</talentdescription.he-creamery>
+<talentname.he-shortorderchef>Short-Order Chef</talentname.he-shortorderchef>
+<talentdescription.he-shortorderchef>Cooking a ‖color:gui.orange‖Burger‖end‖ or ‖color:gui.orange‖Hotdog‖end‖ has a [chance]% chance to cook a second one for free.</talentdescription.he-shortorderchef>
 <!-- Afflictions -->
 <afflictionname.hunger>Hunger</afflictionname.hunger><!--Patch 10-->
 <afflictionname.he-hunger>Hunger</afflictionname.he-hunger>
@@ -858,6 +899,11 @@ SEARCH FOR THE FOLLOWING:                                                       
 
 <afflictionname.he-battlemusic>Battle Music</afflictionname.he-battlemusic><!--Patch 13-->
 <afflictiondescription.he-battlemusic>This music get's you going. You feel tougher, stronger, faster and more skilled with weapons. You're ready for battle!</afflictiondescription.he-battlemusic><!--Patch 13-->
+
+<afflictionname.he-apprenticechef>Apprentice Chef</afflictionname.he-apprenticechef><!--Patch 17-->
+<afflictiondescription.he-apprenticechef>You are prepared to cook under the guidance of a skilled chef.</afflictiondescription.he-apprenticechef><!--Patch 17-->
+<afflictionname.he-steadyhands>Steady Hands</afflictionname.he-steadyhands><!--Patch 17-->
+<afflictiondescription.he-steadyhands>Your hands are steady and your nerve is unflinching.</afflictiondescription.he-steadyhands><!--Patch 17-->
 <!-- MESSAGES -->
 <msg.pickup.interact>[E] Pick Up</msg.pickup.interact><!--Patch 10-->
 <bottleprinter.infotext.bottle.regular>MATERIAL INSERTED\nBLUEPRINT INSERTED\nREADY TO PRINT REGULAR BOTTLES.</bottleprinter.infotext.bottle.regular><!--Patch 10-->
@@ -876,8 +922,10 @@ SEARCH FOR THE FOLLOWING:                                                       
 
 <distiller.distill>DISTILL</distiller.distill><!--Patch 10-->
 <distiller.ethanol>READY TO DISTILL ETHANOL</distiller.ethanol><!--Patch 10-->
-<distiller.empty>DISTILLER READY\nPLEASE INSERT THE FOLLOWING:\nA PACK OF SUGAR -INTO- INPUT\nA YEAST SHROOM -INTO- INPUT</distiller.empty><!--Patch 10-->
-<distiller.missingitem.yeastshroom>SUGAR INSERTED\nERROR: NO YEAST SHROOM FOUND! PLEASE INSERT A YEASTSHROOM.</distiller.missingitem.yeastshroom><!--Patch 10-->
+<distiller.flourmixture>READY TO DISTILL SYNTHETIC FLOUR MIXTURE</distiller.flourmixture><!--Patch 17-->
+<distiller.empty>DISTILLER READY\nPLEASE INSERT ONE OF THE FOLLOWING:\n-PACK OF SUGAR \n-PULVERIZED SEEDS PACK</distiller.empty><!--Patch 17-->
+<distiller.missingitem.yeastshroom>SUGAR INSERTED\nERROR: NO YEAST SHROOM FOUND! PLEASE INSERT 1X YEASTSHROOM.</distiller.missingitem.yeastshroom><!--Patch 17-->
+<distiller.missingitem.sulphuricacid>PULVERIZED SEEDS PACK INSERTED\nERROR: NO ACID FOUND! PLEASE INSERT 1X SULPHURIC ACID.</distiller.missingitem.sulphuricacid><!--Patch 17-->
 <he-distiller.output>Output:</he-distiller.output><!--Patch 10-->
 
 <interaction.emptybottle>Empty the Bottle</interaction.emptybottle><!--Patch 11-->

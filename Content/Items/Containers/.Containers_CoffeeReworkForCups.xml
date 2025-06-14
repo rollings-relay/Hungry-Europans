@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Override>
+  <Items>
+    <!-- KITCHEN SINK BACKUP -->
+    <!--Performance intensive due to type="always" StatusEffects as OnContaining doesn't work-->
+    <Item name="Kitchen Sink" identifier="he-kitchencounter" tags="kitchen,locker,container" linkable="true" category="Misc" subcategory="Container" description="Can store up to 18 different small or medium items and refill empty bottles and kegs with sea water." pickdistance="150" waterproof="false" isshootable="true" scale="0.5">
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.798" sourcerect="0,0,507,300" origin="0.5,0.5125" />
+      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="0,868,318,149" depth="0.797" origin="0.049,-0.022">
+        <Conditional HasStatusTag="opened" />
+      </DecorativeSprite>
+      <!-- Pump component is set to not have any water flow nor powerconsumption and is only used as a workaround to play a sound if someone stopped interacting with the container since that can't really be done otherwise other than with "Always" StatusEffects which drain performance nonstop instead of only when interaction is happening. -->
+      <Pump canbeselected="false" canbepicked="false" allowingameediting="false" maxflow="0" powerconsumption="0" IsOn="false">
+        <!-- play a closing sound and disable the pump, stopping to execute the check for the "opened" tag which gets applied while someone is interacting with the container -->
+        <StatusEffect type="OnActive" target="This" targetitemcomponent="Pump" IsOn="false" setvalue="true" forceplaysounds="true">
+          <Conditional HasStatusTag="neq opened" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_close2.ogg" volume="2" range="250" frequencymultiplier="1.5" selectionmode="Random" />
+        </StatusEffect>
+      </Pump>
+      <!-- Controller to check if someone is interacting with the container -->
+      <Controller canbeselected="true" selectkey="Select" hidehud="false" drawuserbehind="false" noninteractablewhenflippedy="false" allowingameediting="false" drawhudwhenequipped="false" comparison="And">
+        <!-- play an opening sound when starting to interact with the container -->
+        <StatusEffect type="OnActive" target="this" forceplaysounds="true">
+          <Conditional HasStatusTag="neq opened" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_open1.ogg" volume="2" range="250" frequencymultiplier="1.5" selectionmode="Random" />
+        </StatusEffect>
+        <!-- tag the container with "opened" if the controller is active, meaning someone is interacting with it -->
+        <StatusEffect type="OnActive" target="This" tags="opened" duration="0.1" />
+        <!-- turn the pump component on so we can play a sound when the user stops interacting with the container. Would otherwise require an "Always" check which would always run and thus impact performance. -->
+        <StatusEffect type="OnActive" target="This" targetitemcomponent="Pump" isOn="true" setvalue="true" />
+        <!-- prevent allowing to configure an output for the controller to hide the controller UI. This StatusEffect only executes once per round -->
+        <StatusEffect type="OnActive" target="This" targetitemcomponent="Controller" allowingameediting="false" setvalue="true" oneshot="true" />
+      </Controller>
+      <Price baseprice="899" sold="true">
+        <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="1" />
+        <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="3" />
+      </Price>
+      <Deconstruct time="10">
+        <Item identifier="steel" amount="2" />
+        <Item identifier="titaniumaluminiumalloy" amount="2" />
+      </Deconstruct>
+      <Fabricate suitablefabricators="fabricator" requiredtime="60" requiresrecipe="false" amount="1">
+        <RequiredSkill identifier="mechanical" level="65" />
+        <RequiredItem identifier="steel" amount="5" />
+        <RequiredItem identifier="titaniumaluminiumalloy" amount="5" />
+      </Fabricate>
+      <LightComponent IsOn="false" range="100" drawbehindsubs="true" castshadows="false" lightcolor="0,0,0,0" alphablend="false" canbeselected="false" allowingameediting="false">
+        <!--Bottle Refilling-->
+        <StatusEffect type="OnActive" target="Contained" targetcontainer="this" targettag="emptybottle" targetslot="0" interval="1" stackable="false" condition="1" setvalue="true">
+          <Conditional condition="eq 100" />
+          <RequiredItem items="emptybottle" targetslot="0" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnActive" target="Contained" targetcontainer="this" targettag="emptybottle" targetslot="0" interval="0.1" stackable="false" condition="5" disabledeltatime="true">
+          <Conditional condition="lt 95" />
+          <RequiredItem items="emptybottle" targetslot="0" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnActive" target="Contained" targetcontainer="this" targettag="emptybottle" targetslot="0" interval="0.1" stackable="false" disabledeltatime="true" comparison="And" CheckConditionalAlways="true">
+          <Conditional condition="gte 95" />
+          <Conditional condition="lt 100" />
+          <RequiredItem tag="emptybottlerum" targetslot="0" type="Contained" />
+          <SpawnItem identifier="he-seawaterrum" spawnposition="ThisInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <Remove />
+        </StatusEffect>
+        <StatusEffect type="OnActive" target="Contained" targetcontainer="this" targettag="emptybottle" targetslot="0" interval="0.1" stackable="false" disabledeltatime="true" comparison="And" CheckConditionalAlways="true">
+          <Conditional condition="gte 95" />
+          <Conditional condition="lt 100" />
+          <RequiredItem tag="emptybottlecommon" targetslot="0" type="Contained" />
+          <SpawnItem identifier="he-seawater" spawnposition="ThisInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <Remove />
+        </StatusEffect>
+        <StatusEffect type="OnActive" target="Contained" targetcontainer="this" targettag="emptybottle" targetslot="0" interval="0.1" stackable="false" disabledeltatime="true" comparison="And" CheckConditionalAlways="true">
+          <Conditional condition="gte 95" />
+          <Conditional condition="lt 100" />
+          <RequiredItem tag="emptybottlewhiskey" targetslot="0" type="Contained" />
+          <SpawnItem identifier="he-seawaterwhiskey" spawnposition="ThisInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <Remove />
+        </StatusEffect>
+        <StatusEffect type="OnActive" target="Contained" targetcontainer="this" targettag="emptybottle" targetslot="0" interval="0.1" stackable="false" disabledeltatime="true" comparison="And" CheckConditionalAlways="true">
+          <Conditional condition="gte 95" />
+          <Conditional condition="lt 100" />
+          <RequiredItem tag="emptybottlebeer" targetslot="0" type="Contained" />
+          <SpawnItem identifier="he-seawaterbeer" spawnposition="ThisInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <Remove />
+        </StatusEffect>
+        <StatusEffect type="OnActive" target="Contained" targetcontainer="this" targettag="emptybottle" targetslot="0" interval="0.1" stackable="false" disabledeltatime="true" comparison="And" CheckConditionalAlways="true">
+          <Conditional condition="gte 95" />
+          <Conditional condition="lt 100" />
+          <RequiredItem tag="emptybottlehalucinova" targetslot="0" type="Contained" />
+          <SpawnItem identifier="he-seawaterhalucinova" spawnposition="ThisInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <Remove />
+        </StatusEffect>
+        <!--Keg Refilling-->
+        <StatusEffect type="OnActive" target="Contained" targetcontainer="this" targettag="emptykeg" targetslot="0" interval="1" stackable="false" condition="1" setvalue="true">
+          <Conditional condition="eq 100" />
+          <RequiredItem items="emptykeg" targetslot="0" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnActive" target="Contained" targetcontainer="this" targettag="emptykeg" targetslot="0" interval="0.1" stackable="false" condition="0.25" disabledeltatime="true">
+          <Conditional condition="lt 99" />
+          <RequiredItem items="emptykeg" targetslot="0" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnActive" target="Contained" targetcontainer="this" targettag="seawaterkeg" targetslot="0" interval="0.1" stackable="false" condition="0.25" disabledeltatime="true">
+          <Conditional condition="lt 99" />
+          <RequiredItem items="seawaterkeg" targetslot="0" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnActive" target="Contained" targetcontainer="this" targettag="emptykeg" targetslot="0" interval="0.1" stackable="false" disabledeltatime="true" comparison="And" CheckConditionalAlways="true">
+          <Conditional condition="gte 99" />
+          <Conditional condition="lt 100" />
+          <RequiredItem items="he-kegempty" targetslot="0" type="Contained" />
+          <SpawnItem identifier="he-kegseawater" spawnposition="ThisInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <Remove />
+        </StatusEffect>
+        <StatusEffect type="OnActive" target="Contained" targetcontainer="this" targettag="seawaterkeg" targetslot="0" interval="0.1" stackable="false" disabledeltatime="true" comparison="And" CheckConditionalAlways="true">
+          <Conditional condition="gte 99" />
+          <Conditional condition="lt 100" />
+          <RequiredItem items="he-kegseawater" targetslot="0" type="Contained" />
+          <SpawnItem identifier="he-kegseawater" spawnposition="ThisInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <Remove />
+        </StatusEffect>
+        <!--Cleaning Dishes-->
+        <StatusEffect type="OnActive" target="Contained" targetcontainer="this" targettag="dirtytableware" targetslot="0" interval="1" stackable="false" condition="1" setvalue="true">
+          <Conditional condition="eq 100" />
+          <RequiredItem items="dirtytableware" targetslot="0" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnActive" target="Contained" targetcontainer="this" targettag="dirtytableware" targetslot="0" stackable="false" condition="20" disabledeltatime="false">
+          <Conditional condition="lt 99" />
+          <RequiredItem items="dirtytableware" targetslot="0" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnActive" target="Contained" targetcontainer="this" targettag="dirtytableware" targetslot="0" stackable="false" comparison="And" CheckConditionalAlways="true">
+          <Conditional condition="gte 99" />
+          <Conditional condition="lt 100" />
+          <RequiredItem identifier="he-dirtycup" targetslot="0" type="Contained" />
+          <SpawnItem identifier="he-emptycup" spawnposition="ThisInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <Remove />
+        </StatusEffect>
+        <StatusEffect type="OnActive" target="Contained" targetcontainer="this" targettag="dirtytableware" targetslot="0" interval="0.1" stackable="false" disabledeltatime="true" comparison="And" CheckConditionalAlways="true">
+          <Conditional condition="gte 99" />
+          <Conditional condition="lt 100" />
+          <RequiredItem identifier="he-dirtymug" targetslot="0" type="Contained" />
+          <SpawnItem identifier="he-emptymug" spawnposition="ThisInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <Remove />
+        </StatusEffect>
+        <StatusEffect type="OnActive" target="Contained" targetcontainer="this" targettag="dirtytableware" targetslot="0" interval="0.1" stackable="false" disabledeltatime="true" comparison="And" CheckConditionalAlways="true">
+          <Conditional condition="gte 99" />
+          <Conditional condition="lt 100" />
+          <RequiredItem identifier="he-dirtyplate" targetslot="0" type="Contained" />
+          <SpawnItem identifier="he-emptyplate" spawnposition="ThisInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <Remove />
+        </StatusEffect>
+        <StatusEffect type="OnActive" target="Contained" targetcontainer="this" targettag="dirtytableware" targetslot="0" interval="0.1" stackable="false" disabledeltatime="true" comparison="And" CheckConditionalAlways="true">
+          <Conditional condition="gte 99" />
+          <Conditional condition="lt 100" />
+          <RequiredItem identifier="he-dirtybowl" targetslot="0" type="Contained" />
+          <SpawnItem identifier="he-emptybowl" spawnposition="ThisInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <Remove />
+        </StatusEffect>
+        <StatusEffect type="OnActive" target="Contained" targetcontainer="this" targettag="dirtytableware" targetslot="0" interval="0.1" stackable="false" disabledeltatime="true" comparison="And" CheckConditionalAlways="true">
+          <Conditional condition="gte 99" />
+          <Conditional condition="lt 100" />
+          <RequiredItem identifier="he-dirtyfork" targetslot="0" type="Contained" />
+          <SpawnItem identifier="he-fork" spawnposition="ThisInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <Remove />
+        </StatusEffect>
+        <StatusEffect type="OnActive" target="Contained" targetcontainer="this" targettag="dirtytableware" targetslot="0" interval="0.1" stackable="false" disabledeltatime="true" comparison="And" CheckConditionalAlways="true">
+          <Conditional condition="gte 99" />
+          <Conditional condition="lt 100" />
+          <RequiredItem identifier="he-dirtyspoon" targetslot="0" type="Contained" />
+          <SpawnItem identifier="he-spoon" spawnposition="ThisInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <Remove />
+        </StatusEffect>
+        <!--Tag the item to allow for StatusEffect conditionals to check if every requirement is met and play a sound loop to clarify the item is active-->
+        <StatusEffect type="OnActive" target="This" disabledeltatime="false" duration="0.1" CheckConditionalAlways="true">
+          <RequiredItem items="emptybottle,emptykeg,seawaterkeg,tableware" targetslot="0" type="Contained" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/Sink.ogg" volume="1.5" range="450" loop="true" />
+        </StatusEffect>
+      </LightComponent>
+      <ItemContainer capacity="1" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
+        <GuiFrame relativesize="0.25,0.45" anchor="Center" style="ItemUI" />
+        <!--Water Icon-->
+        <SlotIcon slotindex="0" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="577,0,85,85" origin="0.5,0.5" />
+        <!--PickUp Icon-->
+        <SlotIcon slotindex="1" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="662,0,85,85" origin="0.5,0.5" />
+        <!--Sink Input Container Slot-->
+        <Containable items="emptybottle,emptykeg,seawaterkeg,dirtytableware" />
+        <!--Sink Output Container Slot-->
+        <SubContainer capacity="1" slot="1">
+          <Containable items="seawater,seawaterkeg,tableware" />
+        </SubContainer>
+        <!--Regular Storage Slots-->
+        <SubContainer capacity="18">
+          <Containable items="smallitem,mediumitem,peanutegg,psilotoadegg,orangeboyegg,balloonegg,mudraptoregg,crawleregg,petraptoregg,tigerthresheregg" excludedidentifiers="mobilecontainer" />
+        </SubContainer>
+        <SubContainer capacity="3" maxstacksize="1">
+          <SlotIcon texture="Content/UI/CommandUIAtlas.png" sourcerect="639,926,128,80" origin="0.5,0.5" />
+          <Containable items="mobilecontainer" />
+        </SubContainer>
+        <!-- Disabled due to OnClose only working for doors. No way to check if a player stops interacting to play the sound.
+        <StatusEffect type="OnClose" target="this">
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_close1.ogg" volume="1" range="500" selectionmode="random"/>
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_close2.ogg" volume="1" range="500" selectionmode="random"/>
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_close3.ogg" volume="1" range="500" selectionmode="random"/>
+        </StatusEffect>-->
+      </ItemContainer>
+      <Body width="507" height="300" density="30" />
+      <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="155,-50" handle1="-220,60" handle2="-220,80" holdangle="0" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="155,-50" attachable="true" aimable="true">
+        <RequiredItem items="wrench" type="Equipped" />
+        <StatusEffect target="This" type="OnContained">
+          <Conditional attached="false" targetitemcomponentname="Holdable" />
+          <DropContainedItems />
+        </StatusEffect>
+        <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.3" PropulsionSpeedMultiplier="0.3" setvalue="true" duration="0.1" />
+      </Holdable>
+      <CustomInterface canbeselected="true" drawhudwhenequipped="false">
+        <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
+        <Button text="interaction.refill">
+          <StatusEffect type="OnUse" target="This" targetitemcomponent="LightComponent" IsOn="true" setvalue="true" comparison="or">
+            <RequiredItem items="emptybottle,emptykeg,seawaterkeg,dirtytableware" targetslot="0" type="Contained" />
+          </StatusEffect>
+          <StatusEffect type="OnUse" target="This" targetitemcomponent="LightComponent" IsOn="false" setvalue="true" delay="2.5">
+            <RequiredItem items="emptybottle" targetslot="0" type="Contained" />
+          </StatusEffect>
+          <StatusEffect type="OnUse" target="This" targetitemcomponent="LightComponent" IsOn="false" setvalue="true" delay="5">
+            <RequiredItem items="dirtytableware" targetslot="0" type="Contained" />
+          </StatusEffect>
+          <StatusEffect type="OnUse" target="This" targetitemcomponent="LightComponent" IsOn="false" setvalue="true" delay="47.0">
+            <RequiredItem items="emptykeg,seawaterkeg" targetslot="0" type="Contained" />
+          </StatusEffect>
+        </Button>
+      </CustomInterface>
+    </Item>
+
+    <Item name="Coffee Machine" identifier="coffeemachine" tags="container,coffeemachine" category="Machines" description="Brews a nice cup of coffee." scale="0.5" isshootable="true" requireaimtouse="false" impactsoundtag="impact_metal_heavy">
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.786" sourcerect="406,301,85,168" origin="0.5,0.5" />
+      <!-- DecorativeSprite to display the empty cup when it is contained -->
+      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="83,490,31,21" depth="0.785" origin="0.6,-1.1">
+        <IsActiveConditional HasTag="emptycup" targetcontaineditem="true" />
+      </DecorativeSprite>
+      <!-- DecorativeSprite to display the coffee cup when it is contained -->
+      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="83,425,31,21" depth="0.785" origin="0.6,-1.1">
+        <IsActiveConditional HasTag="cupofcoffee" targetcontaineditem="true" />
+      </DecorativeSprite>
+      <!-- DecorativeSprite to display a mug when it is contained -->
+      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="115,474,36,37" depth="0.785" origin="0.6,-0.4" scale="0.8">
+        <IsActiveConditional HasTag="mug" targetcontaineditem="true" />
+      </DecorativeSprite>
+      <!-- DecorativeSprite to make display light up 
+      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.685" sourcerect="492,301,85,168" origin="0.5,0.5">
+        <IsActiveConditional currpowerconsumption="gte 0.5" />
+      </DecorativeSprite>-->
+      <GreaterComponent canbeselected="false" selectkey="Select" canbepicked="false" allowingameediting="false" timeframe="0" />
+      <Body width="80" height="164" density="15" />
+      <CustomInterface drawhudwhenequipped="false" canbeselected="true" selectkey="Select">
+        <GuiFrame relativesize="0.1,0.1" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
+        <Button text="interaction.brew">
+          <StatusEffect type="OnUse" target="This" timeframe="1" setvalue="true">
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/coffee_start.ogg" loop="false" range="500" volume="2" />
+          </StatusEffect>
+          <StatusEffect type="OnUse" target="This" targetitemcomponent="Pump" IsOn="false" timeframe="0" setvalue="true">
+            <Conditional timeframe="gt 1" />
+          </StatusEffect>
+          <StatusEffect type="OnUse" target="This" IsOn="true" setvalue="true">
+            <Conditional timeframe="eq 1" />
+          </StatusEffect>
+          <StatusEffect type="OnUse" target="Contained" noninteractable="true" setvalue="true">
+            <Conditional HasStatusTag="eq canrefill" targetcontainer="true" />
+          </StatusEffect>
+          <StatusEffect type="OnUse" target="Contained" noninteractable="false" setvalue="true" delay="15" stackable="false">
+            <Conditional HasStatusTag="eq canrefill" targetcontainer="true" />
+          </StatusEffect>
+        </Button>
+      </CustomInterface>
+      <Deconstruct time="10">
+        <Item identifier="steel" amount="2" />
+      </Deconstruct>
+      <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="false">
+        <RequiredSkill identifier="mechanical" level="30" />
+        <RequiredItem identifier="steel" amount="3" />
+        <RequiredItem identifier="fpgacircuit" amount="1" />
+      </Fabricate>
+      <LightComponent LightColor="255,255,255,150" IsOn="true" powerconsumption="1" range="50" castshadows="false" alphablend="true" allowingameediting="false" canbeselected="false" comparison="And">
+        <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.685" sourcerect="492,301,85,168" origin="0.5,0.5" />
+        <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.685" sourcerect="492,301,85,168" origin="0.5,0.5" />
+        <IsActiveConditional HasTag="coffeemachine" />
+      </LightComponent>
+      <Pump IsOn="false" powerconsumption="400" maxflow="0" allowingameediting="false" canbeselected="false" comparison="And">
+        <IsActiveConditional timeframe="1" targetitemcomponent="GreaterComponent" />
+        <IsActiveConditional hastag="coffeemix" targetcontaineditem="true" />
+        <IsActiveConditional hastag="tableware" targetcontaineditem="true" />
+        <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/coffee_brew.ogg" type="OnActive" loop="true" range="500" volume="4" />
+        <StatusEffect type="OnActive" target="Contained" noninteractable="false" setvalue="true">
+          <Conditional HasStatusTag="neq canrefill" targetcontainer="true" />
+        </StatusEffect>
+        <!-- after 15s of actively running with enough voltage, trigger OnUse StatusEffects in the ItemComponent with <Use /> | DOESN'T TRIGGER ONUSE EFFECTS FOR UNKNOWN REASONS -->
+        <StatusEffect type="OnActive" target="This" targetitemcomponent="ItemComponent" disabledeltatime="true" delay="15" stackable="false" checkconditionalalways="true">
+          <Conditional voltage="gte 0.5" />
+          <Use />
+        </StatusEffect>
+        <!-- turn the device off by setting the timeframe to "0" and turning the Pump off, if the contained tank is full -->
+        <StatusEffect type="OnActive" target="This" targetslot="0" targetitemcomponent="Pump" IsOn="false" timeframe="0" setvalue="true" delay="15" stackable="false" checkconditionalalways="true">
+          <Conditional voltage="gte 0.5" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/coffee_end.ogg" loop="false" range="500" volume="2" />
+        </StatusEffect>
+      </Pump>
+      <!-- ItemComponent is used to turn the Pump off and reset the timeframe, if one of the contained items was removed during refilling -->
+      <ItemComponent canbepicked="false" canbeselected="false" allowingameediting="false" comparison="And" characterusable="false">
+        <IsActiveConditional timeframe="1" targetitemcomponent="GreaterComponent" />
+        <!-- turn the device off by setting the timeframe to "0" and turning the Pump off, if it was still active when it wasn't supposed to be -->
+        <StatusEffect type="OnActive" target="This" targetitemcomponent="Pump" IsOn="false" timeframe="0" setvalue="true" comparison="And" stackable="false" checkconditionalalways="true">
+          <Conditional HasStatusTag="neq canrefill" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/coffee_end.ogg" loop="false" range="500" volume="2" />
+        </StatusEffect>
+        <!-- turn the device off by setting the timeframe to "0" and turning the Pump off, if no power is supplied -->
+        <StatusEffect type="OnActive" target="This" targetitemcomponent="Pump" IsOn="false" timeframe="0" setvalue="true" comparison="And" delay="0.5" CheckConditionalAlways="true" stackable="false">
+          <Conditional voltage="lt 0.5" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/coffee_end.ogg" loop="false" range="500" volume="2" />
+        </StatusEffect>
+        <!-- check if a cup is contained and apply the fillcup tag which is used to determine how much condition the coffee mix should lose -->
+        <StatusEffect type="OnUse" target="This" targetslot="1" tags="fillcup" duration="0.1" stackable="false">
+          <Conditional HasTag="emptycup" targetcontaineditem="true" />
+        </StatusEffect>
+        <!-- check if a mug is contained and apply the fillmug tag which is used to determine how much condition the coffee mix should lose -->
+        <StatusEffect type="OnUse" target="This" targetslot="1" tags="fillmug" duration="0.1" stackable="false">
+          <Conditional HasTag="emptymug" targetcontaineditem="true" />
+        </StatusEffect>
+        <!-- spawn a filled cup of coffee after a 0.1s delay to allow the previous item to be removed first, if an empty cup is contained -->
+        <StatusEffect type="OnUse" target="This" targetslot="1" delay="0.1" stackable="false">
+          <Conditional HasTag="emptycup" targetcontaineditem="true" />
+          <SpawnItem identifier="he-cupcoffee" spawnposition="ThisInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+        </StatusEffect>
+        <!-- spawn a filled mug of coffee after a 0.1s delay to allow the previous item to be removed first, if an empty mug is contained -->
+        <StatusEffect type="OnUse" target="This" targetslot="1" delay="0.1" stackable="false">
+          <Conditional HasTag="emptymug" targetcontaineditem="true" />
+          <SpawnItem identifier="he-mugcoffee" spawnposition="ThisInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
+        </StatusEffect>
+        <!-- reduce the coffee mix condition by 10 if the fillcup status tag is applied, meaning a cup was detected -->
+        <StatusEffect type="OnUse" target="Contained" targetslot="0" condition="-10" disabledeltatime="true">
+          <Conditional HasStatusTag="fillcup" targetcontainer="true" />
+        </StatusEffect>
+        <!-- reduce the coffee mix condition by 12.5 if the fillmug status tag is applied, meaning a mug was detected -->
+        <StatusEffect type="OnUse" target="Contained" targetslot="0" condition="-12.5" disabledeltatime="true">
+          <Conditional HasStatusTag="fillmug" targetcontainer="true" />
+        </StatusEffect>
+        <!-- remove the cup or mug in slot 1 -->
+        <StatusEffect type="OnUse" target="Contained" targetslot="1" disabledeltatime="true">
+          <Remove />
+        </StatusEffect>
+      </ItemComponent>
+      <Holdable slots="RightHand+LeftHand" canbeselected="true" selectkey="Select" canbepicked="true" pickkey="Action" PickingTime="5" attachable="true" holdpos="70,-40" handle1="-60,30" handle2="-20,50">
+        <RequiredItem items="wrench" type="Equipped" />
+        <!-- slow down the character carrying the device -->
+        <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.3" PropulsionSpeedMultiplier="0.3" setvalue="true" duration="0.1" />
+        <!-- drop contained items if the device is detached -->
+        <StatusEffect type="OnContained" target="This">
+          <DropContainedItems />
+        </StatusEffect>
+        <!-- tag the device with "canrefill" if both required items for a refill are contained -->
+        <StatusEffect type="Always" target="This" tags="canrefill" interval="0.1" duration="0.2" setvalue="true" comparison="And">
+          <Conditional HasTag="tableware" targetcontaineditem="true" />
+          <Conditional HasTag="coffeemix" targetcontaineditem="true" />
+          <Conditional voltage="gte 0.5" />
+        </StatusEffect>
+      </Holdable>
+      <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+        <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+        <RequiredSkill identifier="electrical" level="55" />
+        <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand" AllowWhenBroken="true">
+          <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
+          <Explosion range="100.0" force="1.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
+          <Affliction identifier="stun" strength="4" />
+          <Affliction identifier="burn" strength="5" />
+        </StatusEffect>
+        <RequiredItem items="screwdriver" type="Equipped" />
+        <ParticleEmitter particle="damagebubbles" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemax="360" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
+        <ParticleEmitter particle="MistSmoke" particlespersecond="60" anglemin="0" anglemax="360" distancemin="0" distancemax="10" velocitymin="0" velocitymax="20" mincondition="0.0" maxcondition="50.0" />
+        <ParticleEmitter particle="spark" particleamount="5" emitinterval="2" particlespersecond="5" anglemax="360" distancemax="30" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" mincondition="0.0" maxcondition="15.0" />
+        <ParticleEmitter particle="fleshsmoke" particlespersecond="2" scalemin="1" scalemax="2" mincondition="0.0" maxcondition="50.0" />
+        <input name="power_in" displayname="connection.powerin" />
+      </ConnectionPanel>
+      <ItemContainer canbeselected="true" selectkey="Select" capacity="1" maxstacksize="1" hideitems="true">
+        <GuiFrame relativesize="0.11,0.17" anchor="Center" minsize="140,170" maxsize="280,280" style="ItemUI" />
+        <SlotIcon slotindex="0" texture="%ModDir:3114087512%/Content/UI/IR-IconsAtlas.png" sourcerect="510,0,85,85" origin="0.5,0.5" />
+        <SlotIcon slotindex="1" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
+        <Containable items="coffeemix" />
+        <SubContainer capacity="1">
+          <Containable items="emptymug,coffeemug,emptycup,cupofcoffee"/>
+        </SubContainer>
+      </ItemContainer>
+    </Item>
+  </Items>
+</Override>

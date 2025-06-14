@@ -16,29 +16,29 @@
         <RequiredItem identifier="titaniumaluminiumalloy" amount="4" />
         <RequiredItem identifier="rubber" amount="3" />
       </Fabricate>-->
-      <InventoryIcon texture="%ModDir%/Content/Items/Misc/CouwolaCola/Exosuit.png" sourcerect="384,384,128,128" origin="0.5,0.5" />
-      <Sprite name="Exosuit Item" texture="%ModDir%/Content/Items/Misc/CouwolaCola/Exosuit.png" sourcerect="2,266,203,244" depth="0.55" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Misc/CouwolaCola/Exosuit.png" sourcerect="384,384,128,128" origin="0.5,0.5" />
+      <Sprite name="Exosuit Item" texture="%ModDir:2954998725%/Content/Items/Misc/CouwolaCola/Exosuit.png" sourcerect="2,266,203,244" depth="0.55" origin="0.5,0.5" />
       <Body width="150" height="230" density="30" />
       <Wearable slots="OuterClothes+RightHand" msg="ItemMsgEquipSelect" displaycontainedstatus="true" canbeselected="false" canbepicked="true" pickkey="Select" allowusewhenworn="true">
-        <sprite name="Exosuit Helmet Wearable" texture="%ModDir%/Content/Items/Misc/CouwolaCola/Exosuit.png" limb="Head" hidelimb="true" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.65" hideotherwearables="true" hidewearablesoftype="" sourcerect="0,0,1,1" origin="0.5,0.5" />
-        <sprite name="Exosuit Torso" texture="%ModDir%/Content/Items/Misc/CouwolaCola/Exosuit.png" limb="Torso" scale="1.2" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" origin="0.5,0.8" inheritlimbdepth="true" inheritsourcerect="false" sourcerect="167,1,203,193">
+        <sprite name="Exosuit Helmet Wearable" texture="%ModDir:2954998725%/Content/Items/Misc/CouwolaCola/Exosuit.png" limb="Head" hidelimb="true" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.65" hideotherwearables="true" hidewearablesoftype="" sourcerect="0,0,1,1" origin="0.5,0.5" />
+        <sprite name="Exosuit Torso" texture="%ModDir:2954998725%/Content/Items/Misc/CouwolaCola/Exosuit.png" limb="Torso" scale="1.2" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" origin="0.5,0.8" inheritlimbdepth="true" inheritsourcerect="false" sourcerect="167,1,203,193">
           <LightComponent range="200.0" lightcolor="250,224,165,255" powerconsumption="10" IsOn="true" allowingameediting="false" offset="-50,-50">
             <LightTexture texture="Content/Lights/divinghelmetlight.png" origin="0.05, 0.5" size="1.0,1.0" />          
           </LightComponent>
         </sprite>
-        <sprite name="Exosuit Right Hand" texture="%ModDir%/Content/Items/Misc/CouwolaCola/Exosuit.png" limb="RightHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="false" inheritlimbdepth="true" SourceRect="383,160,64,48" />
-        <sprite name="Exosuit Left Hand" texture="%ModDir%/Content/Items/Misc/CouwolaCola/Exosuit.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="false" SourceRect="447,160,64,48" />
-        <sprite name="Exosuit Right Upper Arm" texture="%ModDir%/Content/Items/Misc/CouwolaCola/Exosuit.png" limb="RightArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="false" inheritlimbdepth="true" SourceRect="383,0,64,96" />
-        <sprite name="Exosuit Left Upper Arm" texture="%ModDir%/Content/Items/Misc/CouwolaCola/Exosuit.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="false" SourceRect="447,0,64,96" />
-        <sprite name="Exosuit Right Forearm" texture="%ModDir%/Content/Items/Misc/CouwolaCola/Exosuit.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="false" inheritlimbdepth="true" SourceRect="383,96,64,64" />
-        <sprite name="Exosuit Left Forearm" texture="%ModDir%/Content/Items/Misc/CouwolaCola/Exosuit.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="false" SourceRect="447,96,64,64"  />
-        <sprite name="Exosuit Waist" texture="%ModDir%/Content/Items/Misc/CouwolaCola/Exosuit.png" limb="Waist" hidelimb="true" scale="1.2" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" origin="0.5,0.5" inheritsourcerect="false" inheritlimbdepth="true" sourcerect="182,196,178,53" />
-        <sprite name="Exosuit Right Thigh" texture="%ModDir%/Content/Items/Misc/CouwolaCola/Exosuit.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" origin="0.5,0.5" inheritsourcerect="false" inheritlimbdepth="true" sourcerect="0,0,96,112" />
-        <sprite name="Exosuit Left Thigh" texture="%ModDir%/Content/Items/Misc/CouwolaCola/Exosuit.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" origin="0.5,0.5" inheritsourcerect="false" sourcerect="0,0,96,112" />
-        <sprite name="Exosuit Right Leg" texture="%ModDir%/Content/Items/Misc/CouwolaCola/Exosuit.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritlimbdepth="true" inheritsourcerect="true" />
-        <sprite name="Exosuit Left Leg" texture="%ModDir%/Content/Items/Misc/CouwolaCola/Exosuit.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-        <sprite name="Exosuit Left Shoe" texture="%ModDir%/Content/Items/Misc/CouwolaCola/Exosuit.png" limb="LeftFoot" sound="footstep_armor_exosuit" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" origin="0.2,0.5" inheritsourcerect="false" sourcerect="371,211,133,37" />
-        <sprite name="Exosuit Right Shoe" texture="%ModDir%/Content/Items/Misc/CouwolaCola/Exosuit.png" limb="RightFoot" sound="footstep_armor_exosuit" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" origin="0.2,0.5" inheritsourcerect="false" sourcerect="371,211,133,37" />
+        <sprite name="Exosuit Right Hand" texture="%ModDir:2954998725%/Content/Items/Misc/CouwolaCola/Exosuit.png" limb="RightHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="false" inheritlimbdepth="true" SourceRect="383,160,64,48" />
+        <sprite name="Exosuit Left Hand" texture="%ModDir:2954998725%/Content/Items/Misc/CouwolaCola/Exosuit.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="false" SourceRect="447,160,64,48" />
+        <sprite name="Exosuit Right Upper Arm" texture="%ModDir:2954998725%/Content/Items/Misc/CouwolaCola/Exosuit.png" limb="RightArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="false" inheritlimbdepth="true" SourceRect="383,0,64,96" />
+        <sprite name="Exosuit Left Upper Arm" texture="%ModDir:2954998725%/Content/Items/Misc/CouwolaCola/Exosuit.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="false" SourceRect="447,0,64,96" />
+        <sprite name="Exosuit Right Forearm" texture="%ModDir:2954998725%/Content/Items/Misc/CouwolaCola/Exosuit.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="false" inheritlimbdepth="true" SourceRect="383,96,64,64" />
+        <sprite name="Exosuit Left Forearm" texture="%ModDir:2954998725%/Content/Items/Misc/CouwolaCola/Exosuit.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="false" SourceRect="447,96,64,64"  />
+        <sprite name="Exosuit Waist" texture="%ModDir:2954998725%/Content/Items/Misc/CouwolaCola/Exosuit.png" limb="Waist" hidelimb="true" scale="1.2" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" origin="0.5,0.5" inheritsourcerect="false" inheritlimbdepth="true" sourcerect="182,196,178,53" />
+        <sprite name="Exosuit Right Thigh" texture="%ModDir:2954998725%/Content/Items/Misc/CouwolaCola/Exosuit.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" origin="0.5,0.5" inheritsourcerect="false" inheritlimbdepth="true" sourcerect="0,0,96,112" />
+        <sprite name="Exosuit Left Thigh" texture="%ModDir:2954998725%/Content/Items/Misc/CouwolaCola/Exosuit.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" origin="0.5,0.5" inheritsourcerect="false" sourcerect="0,0,96,112" />
+        <sprite name="Exosuit Right Leg" texture="%ModDir:2954998725%/Content/Items/Misc/CouwolaCola/Exosuit.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritlimbdepth="true" inheritsourcerect="true" />
+        <sprite name="Exosuit Left Leg" texture="%ModDir:2954998725%/Content/Items/Misc/CouwolaCola/Exosuit.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+        <sprite name="Exosuit Left Shoe" texture="%ModDir:2954998725%/Content/Items/Misc/CouwolaCola/Exosuit.png" limb="LeftFoot" sound="footstep_armor_exosuit" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" origin="0.2,0.5" inheritsourcerect="false" sourcerect="371,211,133,37" />
+        <sprite name="Exosuit Right Shoe" texture="%ModDir:2954998725%/Content/Items/Misc/CouwolaCola/Exosuit.png" limb="RightFoot" sound="footstep_armor_exosuit" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" origin="0.2,0.5" inheritsourcerect="false" sourcerect="371,211,133,37" />
         <StatusEffect type="OnWearing" target="Character" UseHullOxygen="true" />
         <StatusEffect type="OnWearing" target="Character" LowPassMultiplier="0.2" HideFace="true" ObstructVision="true" PressureProtection="10000.0" SpeedMultiplier="0.4" PropulsionSpeedMultiplier="0.25" setvalue="true" disabledeltatime="true">
           <Conditional InWater="false" />
@@ -49,10 +49,10 @@
         </StatusEffect>
         <StatusEffect type="OnWearing" target="limb" targetlimb="head" interval="6" duration="0.5">
           <Conditional InWater="true" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Diving/DivingSuitBreathUnderwater1.ogg" range="400" selectionmode="Random" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Diving/DivingSuitBreathUnderwater2.ogg" range="400" selectionmode="Random" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Diving/DivingSuitBreathUnderwater3.ogg" range="400" selectionmode="Random" />
-          <Sound file="%ModDir%/Content/Sounds/Items/Diving/DivingSuitBreathUnderwater4.ogg" range="400" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Diving/DivingSuitBreathUnderwater1.ogg" range="400" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Diving/DivingSuitBreathUnderwater2.ogg" range="400" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Diving/DivingSuitBreathUnderwater3.ogg" range="400" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Diving/DivingSuitBreathUnderwater4.ogg" range="400" selectionmode="Random" />
           <ParticleEmitter particle="risingbubbles" velocitymin="10.0" velocitymax="10.0" scalemin="0.6" scalemax="0.6" particlespersecond="20" />
         </StatusEffect>
         <!-- no HMG stun -->
@@ -118,12 +118,12 @@
         </StatusEffect>
         <StatusEffect type="OnUse" targettype="This">
           <Conditional InWater="False" />
-          <sound file="%ModDir%/Content/Sounds/Items/Misc/ColaBubble1.ogg" range="750.0" volume="5" loop="true" />
+          <sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/ColaBubble1.ogg" range="750.0" volume="5" loop="true" />
           <ParticleEmitter particle="colagoosplash" copyentityangle="true" particlespersecond="80" anglemin="0" anglemax="0" velocitymin="300" velocitymax="500" highqualitycollisiondetection="true" />
         </StatusEffect>
         <StatusEffect type="OnUse" targettype="This">
           <Conditional InWater="True" />
-          <sound file="%ModDir%/Content/Sounds/Items/Misc/ColaBubble2.ogg" range="750.0" volume="5" loop="true" />
+          <sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/ColaBubble2.ogg" range="750.0" volume="5" loop="true" />
           <ParticleEmitter particle="colabubbles" colormultiplier="25,5,0" copyentityangle="true" particlespersecond="20" anglemin="-10" anglemax="10" scalemin="0.3" scalemax="0.7" velocitymin="100" velocitymax="200" highqualitycollisiondetection="true" />
         </StatusEffect>
         <StatusEffect type="OnSuccess" targettype="UseTarget" targets="weldable" Stuck="-20.0">
@@ -151,7 +151,7 @@
         <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
         <SlotIcon slotindex="1" texture="Content/UI/StatusMonitorUI.png" sourcerect="192,448,64,64" origin="0.5,0.5" />
         <SlotIcon slotindex="2" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
-        <SlotIcon slotindex="3" texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="662,0,85,85" origin="0.5,0.5" />
+        <SlotIcon slotindex="3" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="662,0,85,85" origin="0.5,0.5" />
         <StatusEffect type="OnWearing" target="Contained" targetslot="0">
           <RequiredItem items="oxygensource" type="Contained" targetslot="0" />
           <Conditional condition="lt 5.0" />

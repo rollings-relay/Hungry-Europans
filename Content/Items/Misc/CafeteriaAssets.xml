@@ -2,7 +2,7 @@
 <Override>
   <Items>
     <Item name="Cafeteria Table" identifier="he-cafeteriatable" tags="largeitem,table" width="252" height="171" scale="0.5" linkable="true" allowedlinks="kitchen,container,table" noninteractable="false" category="Misc" pickdistance="150" canflipy="false" canflipx="false" isshootable="true" GrabWhenSelected="false">
-      <sprite texture="%ModDir%/Content/Items/Misc/CafeteriaAssets.png" sourcerect="1,0,252,171" depth="0.520" premultiplyalpha="false" origin="0.5,0.445" />
+      <sprite texture="%ModDir:2954998725%/Content/Items/Misc/CafeteriaAssets.png" sourcerect="1,0,252,171" depth="0.520" premultiplyalpha="false" origin="0.5,0.445" />
       <Body width="252" height="171" density="30" />
       <Fabricate suitablefabricators="fabricator" requiredtime="40" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="mechanical" level="30" />
@@ -26,21 +26,21 @@
       </Holdable>
     </Item>
     <Item name="Dining Table" identifier="he-diningtable1" tags="largeitem,table" width="152" height="171" scale="0.5" linkable="true" allowedlinks="kitchen,container,table" noninteractable="false" category="Misc" pickdistance="150" canflipy="false" canflipx="false" isshootable="true" GrabWhenSelected="false">
-      <sprite texture="%ModDir%/Content/Items/Misc/CafeteriaAssets.png" sourcerect="592,0,152,171" depth="0.521" premultiplyalpha="false" origin="0.5,0.445" />
+      <sprite texture="%ModDir:2954998725%/Content/Items/Misc/CafeteriaAssets.png" sourcerect="592,0,152,171" depth="0.521" premultiplyalpha="false" origin="0.5,0.445" />
       <ItemContainer capacity="8" maxstacksize="1" canbeselected="true" hideitems="false" itempos="23,0" iteminterval="35,1" itemrotation="0" itemsperrow="4" slotsperrow="4" containedspritedepths="0.528,0.529,0.528,0.529,0.526,0.527,0.526,0.527" msg="ItemMsgInteractSelect" canflipx="false">
         <GuiFrame relativesize="0.20,0.20" absoluteoffset="0,0.15" anchor="BottomCenter" style="ItemUI" />
         <Containable items="smallitem,fooditem" excludeditems="meatchunk,syringe,weapon" />
       </ItemContainer>
     </Item>
     <Item name="Dining Table (Large)" identifier="he-diningtable1large" tags="largeitem,table" width="337" height="171" scale="0.5" linkable="true" allowedlinks="kitchen,container,table" noninteractable="false" category="Misc" pickdistance="150" canflipy="false" canflipx="false" isshootable="true" GrabWhenSelected="false">
-      <sprite texture="%ModDir%/Content/Items/Misc/CafeteriaAssets.png" sourcerect="254,0,337,171" depth="0.522" premultiplyalpha="false" origin="0.5,0.445" />
+      <sprite texture="%ModDir:2954998725%/Content/Items/Misc/CafeteriaAssets.png" sourcerect="254,0,337,171" depth="0.522" premultiplyalpha="false" origin="0.5,0.445" />
       <ItemContainer capacity="16" maxstacksize="1" canbeselected="true" hideitems="false" itempos="27,0" iteminterval="40,1" itemrotation="0" itemsperrow="8" slotsperrow="8" containedspritedepths="0.528,0.529,0.528,0.529,0.528,0.529,0.528,0.529,0.526,0.527,0.526,0.527,0.526,0.527,0.526,0.527" msg="ItemMsgInteractSelect" canflipx="false">
         <GuiFrame relativesize="0.35,0.20" absoluteoffset="0,0.15" anchor="BottomCenter" style="ItemUI" />
         <Containable items="smallitem,fooditem" excludeditems="meatchunk,syringe,weapon" />
       </ItemContainer>
     </Item>
     <Item name="Dining Table" identifier="he-diningtable2" tags="largeitem,table" width="156" height="171" scale="0.5" linkable="true" allowedlinks="kitchen,container,table" noninteractable="false" category="Misc" pickdistance="150" canflipy="false" canflipx="false" isshootable="true" GrabWhenSelected="false">
-      <sprite texture="%ModDir%/Content/Items/Misc/CafeteriaAssets.png" sourcerect="745,0,156,171" depth="0.523" premultiplyalpha="false" origin="0.5,0.445" />
+      <sprite texture="%ModDir:2954998725%/Content/Items/Misc/CafeteriaAssets.png" sourcerect="745,0,156,171" depth="0.523" premultiplyalpha="false" origin="0.5,0.445" />
       <ItemContainer capacity="8" maxstacksize="1" canbeselected="true" hideitems="false" itempos="25,0" iteminterval="35,1" itemrotation="0" itemsperrow="4" slotsperrow="4" containedspritedepths="0.528,0.529,0.528,0.529,0.526,0.527,0.526,0.527" msg="ItemMsgInteractSelect" canflipx="false">
         <GuiFrame relativesize="0.20,0.20" absoluteoffset="0,0.15" anchor="BottomCenter" style="ItemUI" />
         <Containable items="smallitem,fooditem" excludeditems="meatchunk,syringe,weapon" />
@@ -48,7 +48,7 @@
     </Item>
     <!-- CHAIRS -->
     <Item name="Cafeteria Chair" identifier="he-cafeteriachair" tags="largeitem,chair" width="149" height="219" scale="0.5" noninteractable="false" category="Misc" pickdistance="150" canflipy="false" canflipx="true" isshootable="true" GrabWhenSelected="false">
-      <sprite texture="%ModDir%/Content/Items/Misc/CafeteriaAssets.png" sourcerect="0,172,149,219" depth="0.524" premultiplyalpha="false" origin="0.5,0.56" />
+      <sprite texture="%ModDir:2954998725%/Content/Items/Misc/CafeteriaAssets.png" sourcerect="0,172,149,219" depth="0.524" premultiplyalpha="false" origin="0.5,0.56" />
       <Body width="149" height="219" density="25" />
       <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="mechanical" level="30" />
@@ -75,7 +75,7 @@
       </Holdable>
     </Item>
     <Item name="Chair" identifier="he-chair" tags="largeitem,chair" width="144" height="240" scale="0.5" noninteractable="false" category="Misc" pickdistance="150" canflipy="false" canflipx="true" isshootable="true" GrabWhenSelected="false">
-      <sprite texture="%ModDir%/Content/Items/Misc/CafeteriaAssets.png" sourcerect="150,172,144,240" depth="0.524" premultiplyalpha="false" origin="0.5,0.5" />
+      <sprite texture="%ModDir:2954998725%/Content/Items/Misc/CafeteriaAssets.png" sourcerect="150,172,144,240" depth="0.524" premultiplyalpha="false" origin="0.5,0.5" />
       <Body width="144" height="240" density="25" />
       <Holdable selectkey="Select" pickkey="Use" slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" PickingTime="3.0" aimpos="65,-10" attachable="true" aimable="true">
         <RequiredItem items="NonExsitingItem" type="Equipped" />

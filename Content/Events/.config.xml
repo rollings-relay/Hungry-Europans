@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Randomevents>
+  <!-- SCRIPTED EVENTS -->
+  <EventPrefabs>
+    <ScriptedEvent identifier="he-config">
+      <TagAction criteria="player" tag="player" />
+      <TagAction criteria="itemtag:primarynavterminal" tag="targetnav" SubmarineType="Player" />
+      <CheckDataAction identifier="alreadyconfigured" condition="true" forcestring="true">
+        <Success />
+        <Failure>
+          <TriggerAction target1tag="player" target2tag="targetnav" applytotarget1="configuring_player" range="500" waitforinteraction="true" />
+          <ConversationAction targettag="configuring_player" text="Welcome to Hungry Europans.">
+            <!-- configure options -->
+          </ConversationAction>
+        </Failure>
+      </CheckDataAction>
+
+      <!-- enforce hunger and thirst -->
+      <CheckDataAction identifier="force_hunger" condition="true" forcestring="true">
+        <Success>
+          <StatusEffectAction targettag="player">
+            <StatusEffect target="This">
+              <Conditional hunger="lte 0" />
+              <GiveTalentInfo talentidentifiers="he-hungryeuropan" />
+            </StatusEffect>
+          </StatusEffectAction>
+        </Success>
+        <Failure />
+      </CheckDataAction>
+
+      <!-- enforce tiredness -->
+      <CheckDataAction identifier="force_tiredness" condition="true" forcestring="true">
+        <Success>
+          <StatusEffectAction targettag="player">
+            <StatusEffect target="This">
+              <Conditional fatigue="lte 0" />
+              <GiveTalentInfo talentidentifiers="he-sleepyeuropan" />
+            </StatusEffect>
+          </StatusEffectAction>
+        </Success>
+        <Failure />
+      </CheckDataAction>
+
+      <!-- enforce toilet needs -->
+      <CheckDataAction identifier="force_toiletneeds" condition="true" forcestring="true">
+        <Success>
+          <StatusEffectAction targettag="player">
+            <StatusEffect target="This">
+              <Conditional bladder="lte 0" />
+              <GiveTalentInfo talentidentifiers="he-specialeuropan" />
+            </StatusEffect>
+          </StatusEffectAction>
+        </Success>
+        <Failure />
+      </CheckDataAction>
+    </ScriptedEvent>
+  </EventPrefabs>
+</Randomevents>
