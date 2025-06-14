@@ -886,6 +886,10 @@ SEARCH FOR THE FOLLOWING:                                                       
 <afflictiondescription.he-halucinova.self>You feel like traveling to a different plane of existence.</afflictiondescription.he-halucinova.self>
 <afflictiondescription.he-halucinova.others>The person is clearly zoning out.</afflictiondescription.he-halucinova.others>
 
+
+<afflictionname.he-drankpaint>High on Paint</afflictionname.he-drankpaint>
+<afflictiondescription.he-drankdpaint.self>Oooooh that's some strong paint right there!</afflictiondescription.he-drankdpaint.self>
+<afflictiondescription.he-drankpaint.others>For some reason the patient thought it would be a good idea to inhale industrial paint. They are, for lack of a better term, out of their gourd.</afflictiondescription.he-drankpaint.others>
 <afflictionname.he-drankredpaint>High on Red Paint</afflictionname.he-drankredpaint><!--Patch 13-->
 <afflictiondescription.he-drankredpaint.self>Bruh... That's some strong paint right there! Kind of tastes like... pomegrenade?</afflictiondescription.he-drankredpaint.self><!--Patch 13-->
 <afflictiondescription.he-drankredpaint.others>The patient consumed and is high on red paint. You can tell by the stains around the mouth.</afflictiondescription.he-drankredpaint.others><!--Patch 13-->

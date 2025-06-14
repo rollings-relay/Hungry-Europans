@@ -1356,6 +1356,58 @@
     </Affliction>
 
     <!-- TODO: merge paint afflictions so they dont stack? what's the point of having 5? -->
+    
+    <!-- Generic -->
+    <Affliction name="High on Paint"
+      identifier="he-drankpaint"
+      limbspecific="false"
+      indicatorlimb="Head"
+      activationthreshold="0"
+      showiconthreshold="0"
+      showicontoothersthreshold="1000"
+      karmachangeonapplied="-1"
+      maxstrength="100"
+      affectmachines="false">
+      <Description
+        textidentifier="afflictiondescription.he-drankpaint.self"
+        target="Self" 
+        minstrength="0"
+        maxstrength="100" />
+      <Description
+        textidentifier="afflictiondescription.he-drankpaint.others"
+        target="OtherCharacter" 
+        minstrength="0"
+        maxstrength="100" />
+      <Effect minstrength="0" maxstrength="30" strengthchange="-0.3">
+        <StatusEffect target="Character" interval="1" setvalue="true" disabledeltatime="true">
+          <Affliction identifier="he-trippinglight" strength="2" />
+        </StatusEffect>
+        <StatusEffect target="Character" interval="1" disabledeltatime="true">
+          <Affliction identifier="he-trippingmedium" strength="1.5" probability="0.05" />
+          <Affliction identifier="he-trippingheavy" strength="1.5" probability="0.02" />
+        </StatusEffect>
+      </Effect>
+      <Effect minstrength="30" maxstrength="100"
+        minscreendistort="0.0"
+        maxscreendistort="5.0"
+        minscreenblur="0.0"
+        maxscreenblur="0.0"
+        minradialdistort="0"
+        maxradialdistort="2"
+        minchromaticaberration="0"
+        maxchromaticaberration="15"
+        strengthchange="-0.3">
+        <StatusEffect target="Character" interval="1" setvalue="true" disabledeltatime="true">
+          <Affliction identifier="he-trippinglight" strength="2" />
+        </StatusEffect>
+        <StatusEffect target="Character" interval="1" disabledeltatime="true">
+          <Affliction identifier="he-trippingmedium" strength="2" probability="0.15" />
+          <Affliction identifier="he-trippingheavy" strength="2" probability="0.1" />
+        </StatusEffect>
+      </Effect>
+      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,640,128,128" color="150,26,26,255" origin="0,0" />
+    </Affliction> 
+    
     <!--Red Paint-->
     <Affliction name="High on Red Paint"
       identifier="he-drankredpaint"
