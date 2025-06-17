@@ -109,6 +109,8 @@
           <Conditional attached="false" targetitemcomponentname="Holdable"/>
           <DropContainedItems/>
         </StatusEffect>
+        <StatValue stattype="WalkingSpeed" value="-0.5" />
+        <StatValue stattype="SwimmingSpeed" value="-0.7" />
       </Holdable>
       <Repairable selectkey="Action" header="electricalrepairsheader" deteriorationspeed="0.05" mindeteriorationdelay="60" maxdeteriorationdelay="120" RepairThreshold="80" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairScrewdriver" hudpriority="10">
         <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,280" anchor="Center" relativeoffset="0.1,0.27" style="ItemUI" />
@@ -208,6 +210,8 @@
           <Conditional attached="false" targetitemcomponentname="Holdable"/>
           <DropContainedItems/>
         </StatusEffect>
+        <StatValue stattype="WalkingSpeed" value="-0.5" />
+        <StatValue stattype="SwimmingSpeed" value="-0.7" />
       </Holdable>
       <Repairable selectkey="Action" header="electricalrepairsheader" deteriorationspeed="0.00" mindeteriorationdelay="60" maxdeteriorationdelay="120" RepairThreshold="70" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairScrewdriver" hudpriority="10">
         <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,280" anchor="Center" relativeoffset="0.1,0.27" style="ItemUI" />
@@ -339,6 +343,8 @@
           <Conditional attached="false" targetitemcomponentname="Holdable"/>
           <DropContainedItems/>
         </StatusEffect>
+        <StatValue stattype="WalkingSpeed" value="-0.5" />
+        <StatValue stattype="SwimmingSpeed" value="-0.7" />
       </Holdable>
       <Repairable selectkey="Select" header="mechanicalrepairsheader" deteriorationspeed="0.05" canbeselected="true" RepairThreshold="80" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairScrewdriver" hudpriority="10">
         <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,280" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
@@ -417,6 +423,8 @@
           <Conditional attached="false" targetitemcomponentname="Holdable"/>
           <DropContainedItems/>
         </StatusEffect>
+        <StatValue stattype="WalkingSpeed" value="-0.5" />
+        <StatValue stattype="SwimmingSpeed" value="-0.7" />
       </Holdable>
       <Repairable selectkey="Select" header="mechanicalrepairsheader" deteriorationspeed="0.00" mindeteriorationdelay="60" maxdeteriorationdelay="120" RepairThreshold="70" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairWrench" hudpriority="10">
         <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,280" anchor="Center" relativeoffset="0.1,0.27" style="ItemUI"/>
@@ -500,6 +508,8 @@
         <StatusEffect type="OnContained" target="This">
           <DropContainedItems />
         </StatusEffect>
+        <StatValue stattype="WalkingSpeed" value="-0.3" />
+        <StatValue stattype="SwimmingSpeed" value="-0.5" />
       </Holdable>
       <ItemContainer canbeselected="true" selectkey="Select" capacity="2" maxstacksize="1" hideitems="true" allowuioverlap="true">
         <Containable items="pot,emptybottle,bottle,tableware,cleaningagent" />
@@ -734,6 +744,8 @@
           <Conditional attached="false" targetitemcomponentname="Holdable"/>
           <DropContainedItems/>
         </StatusEffect>
+        <StatValue stattype="WalkingSpeed" value="-0.5" />
+        <StatValue stattype="SwimmingSpeed" value="-0.7" />
       </Holdable>
       <Repairable selectkey="Select" header="mechanicalrepairsheader" deteriorationspeed="0.00" mindeteriorationdelay="60" maxdeteriorationdelay="120" RepairThreshold="70" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairWrench" hudpriority="10">
         <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,280" anchor="Center" relativeoffset="0.1,0.27" style="ItemUI"/>

@@ -330,6 +330,8 @@
             <Conditional attached="false" targetitemcomponentname="Holdable"/>
             <DropContainedItems/>
           </StatusEffect>
+          <StatValue stattype="WalkingSpeed" value="-0.5" />
+          <StatValue stattype="SwimmingSpeed" value="-0.7" />
         </Holdable>
         <Repairable selectkey="Action" header="electricalrepairsheader" deteriorationspeed="0.00" mindeteriorationdelay="60" maxdeteriorationdelay="120" RepairThreshold="70" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairScrewdriver" hudpriority="10">
           <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,280" anchor="Center" relativeoffset="0.1,0.27" style="ItemUI" />
