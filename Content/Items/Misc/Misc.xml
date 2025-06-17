@@ -547,7 +547,7 @@
       <PreferredContainer secondary="wreckcrewcab,wreckstoragecab,wreckstorage,wreckengcab" minamount="1" maxamount="2" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab,abandonedengcab,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.01" />
-      <PreferredContainer primary="storagecab" secondary="crewcab"/>
+      <PreferredContainer primary="outposttrashcan" secondary="crewcab"/>
       <Deconstruct time="1" chooserandom="true">
         <Item identifier="aluminium" amount="1"/>
         <Item identifier="aluminium" amount="0"/>
@@ -577,7 +577,7 @@
       <PreferredContainer secondary="wreckcrewcab,wreckstoragecab,wreckstorage,wreckengcab" minamount="1" maxamount="2" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab,abandonedengcab,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.01" />
-      <PreferredContainer primary="storagecab" secondary="crewcab"/>
+      <PreferredContainer primary="outposttrashcan" secondary="crewcab"/>
       <Deconstruct time="1" chooserandom="true">
         <Item identifier="aluminium" amount="1"/>
         <Item identifier="aluminium" amount="0"/>
@@ -607,7 +607,7 @@
       <PreferredContainer secondary="wreckcrewcab,wreckstoragecab,wreckstorage,wreckengcab" minamount="1" maxamount="3" spawnprobability="0.03" />
       <PreferredContainer secondary="abandonedcrewcab,abandonedengcab,abandonedstoragecab" minamount="1" maxamount="3" spawnprobability="0.03" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.03" />
-      <PreferredContainer primary="storagecab" secondary="crewcab"/>
+      <PreferredContainer primary="outposttrashcan" secondary="crewcab"/>
       <Deconstruct time="1" chooserandom="true">
         <Item identifier="aluminium" amount="1"/>
         <Item identifier="aluminium" amount="0"/>
@@ -637,7 +637,7 @@
       <PreferredContainer secondary="wreckcrewcab,wreckstoragecab,wreckstorage,wreckengcab" minamount="1" maxamount="3" spawnprobability="0.03" />
       <PreferredContainer secondary="abandonedcrewcab,abandonedengcab,abandonedstoragecab" minamount="1" maxamount="3" spawnprobability="0.03" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.03" />
-      <PreferredContainer primary="storagecab" secondary="crewcab"/>
+      <PreferredContainer primary="outposttrashcan" secondary="crewcab"/>
       <Deconstruct time="1" chooserandom="true">
         <Item identifier="aluminium" amount="1"/>
         <Item identifier="aluminium" amount="0"/>
