@@ -405,7 +405,7 @@
       <Deconstruct time="2">
         <!-- <Item identifier="he-glassfragments" amount="1" outcondition="0.5"/> -->
       </Deconstruct>
-      <Fabricate suitablefabricators="fabricator" requiredtime="5" requiresrecipe="false" amount="1">
+      <Fabricate suitablefabricators="fabricator" requiredtime="3" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="mechanical" level="35" />
         <RequiredItem identifier="carbon" amount="1" />
         <RequiredItem identifier="calcium" amount="1" />
@@ -473,7 +473,7 @@
       <Deconstruct time="2">
         <!-- <Item identifier="he-glassfragments" amount="1" outcondition="0.5"/> -->
       </Deconstruct>
-      <Fabricate suitablefabricators="fabricator" requiredtime="5" requiresrecipe="false" amount="1">
+      <Fabricate suitablefabricators="fabricator" requiredtime="3" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="mechanical" level="35" />
         <RequiredItem identifier="carbon" amount="1" />
         <RequiredItem identifier="calcium" amount="1" />
