@@ -108,6 +108,7 @@
     <!-- HUNGER AND THIRST -->
     
     <!-- HUNGER AND THIRST -->
+    <!-- TODO: when barodevs fix the treatment threshold literally not working, remove vitality loss from hunger https://github.com/FakeFishGames/Barotrauma/discussions/16221 -->
     <Affliction
       identifier="hunger"
       name="Hunger"
@@ -152,11 +153,13 @@
         minstrength="80"
         maxstrength="100" />
       <!-- No effects at this point -->
-      <Effect minstrength="0" maxstrength="50" strengthchange="0" 
+      <Effect minstrength="0" maxstrength="50"
+        strengthchange="0" 
         MinAfflictionOverlayAlphaMultiplier="0.0"
         MaxAfflictionOverlayAlphaMultiplier="0.0" />
       <!-- Hunger decreases vitality and speed slightly -->
-      <Effect minstrength="50" maxstrength="65" strengthchange="0" 
+      <Effect minstrength="50" maxstrength="65"
+        strengthchange="0" 
         minvitalitydecrease="0"
         maxvitalitydecrease="0"
         minskillmultiplier="1.0"
@@ -165,7 +168,7 @@
         MaxAfflictionOverlayAlphaMultiplier="0.0" />
       <Effect minstrength="65" maxstrength="80"
         minvitalitydecrease="0"
-        maxvitalitydecrease="0"
+        maxvitalitydecrease="25"
         minskillmultiplier="0.8"
         maxskillmultiplier="0.6"
         minscreendistort="0"
@@ -183,8 +186,8 @@
       </Effect>
       <!-- Hunger starts to get lethal -->
       <Effect minstrength="80" maxstrength="100"
-        minvitalitydecrease="0"
-        maxvitalitydecrease="0"
+        minvitalitydecrease="25"
+        maxvitalitydecrease="25"
         minskillmultiplier="0.6"
         maxskillmultiplier="0.2"
         minscreendistort="0"
@@ -283,9 +286,9 @@
         minscreendistort="0"
         maxscreendistort="1"
         minscreenblur="0"
-        maxscreenblur="3.0"
+        maxscreenblur="0.2"
         minradialdistort="0.1"
-        maxradialdistort="1.0"
+        maxradialdistort="0.2"
         strengthchange="0"
         minspeedmultiplier="0.8"
         maxspeedmultiplier="0.5">
@@ -335,7 +338,7 @@
         strengthchange="0" >
         <StatusEffect target="Character" >
           <Conditional hunger="lt 100" />
-          <ReduceAffliction identifier="he-starvation" strength="50" />
+          <ReduceAffliction identifier="he-starvation" strength="20" />
         </StatusEffect>
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="256,128,128,128" origin="0,0" />
