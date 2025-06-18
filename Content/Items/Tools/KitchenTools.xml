@@ -407,7 +407,8 @@
       </Deconstruct>
       <Fabricate suitablefabricators="fabricator" requiredtime="5" requiresrecipe="false" amount="2">
         <RequiredSkill identifier="mechanical" level="35" />
-        <RequiredItem identifier="steel" amount="1" />
+        <RequiredItem identifier="carbon" amount="1" />
+        <RequiredItem identifier="calcium" amount="1" />
         <RequiredItem identifier="whitepaint" amount="1" usecondition="true" mincondition="0.1" />
       </Fabricate>
       <Fabricate suitablefabricators="sink" requiredtime="20" requiresrecipe="false" amount="1" displayname="clean">
@@ -474,7 +475,8 @@
       </Deconstruct>
       <Fabricate suitablefabricators="fabricator" requiredtime="5" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="mechanical" level="35" />
-        <RequiredItem identifier="steel" amount="1" />
+        <RequiredItem identifier="carbon" amount="1" />
+        <RequiredItem identifier="calcium" amount="1" />
         <RequiredItem identifier="whitepaint" amount="1" usecondition="true" mincondition="0.1" />
       </Fabricate>
       <Fabricate suitablefabricators="sink" requiredtime="20" requiresrecipe="false" amount="1" displayname="clean">
