@@ -148,6 +148,7 @@
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
     </Item>
+    
     <!-- MRE -->
     <Item name="MRE - Crawler Ration" identifier="he-mrecrawlerration" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
@@ -254,6 +255,7 @@
       </ItemContainer>
       <AiTarget sightrange="1000" static="true" />
     </Item>
+    
     <Item name="MRE - Mudraptor Ration" identifier="he-mremudraptorration" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,165,28,41" depth="0.6" origin="0.5,0.5" />
@@ -362,6 +364,7 @@
       </ItemContainer>
       <AiTarget sightrange="1000" static="true" />
     </Item>
+    
     <Item name="MRE - Hammerhead Ration" identifier="he-mrehammerheadration" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,165,28,41" depth="0.6" origin="0.5,0.5" />
@@ -467,6 +470,7 @@
       </ItemContainer>
       <AiTarget sightrange="1000" static="true" />
     </Item>
+    
     <Item name="MRE - Thresher Ration" identifier="he-mrethresherration" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,165,28,41" depth="0.6" origin="0.5,0.5" />
@@ -572,6 +576,7 @@
       </ItemContainer>
       <AiTarget sightrange="1000" static="true" />
     </Item>
+    
     <!-- CHIPS -->
     <Item name="Bag of Pomegrenade Chips" identifier="he-chips1" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="Dried pomegrenade chips. A popular little snack to watch the annual 'DUNWICE FACE-OFF' to." Tags="smallitem,fooditem" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.04" />
@@ -648,6 +653,7 @@
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
     </Item>
+
     <Item name="Bag of Mutated Pomegrenade Chips" identifier="he-chips2" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="Dried mutated pomegrenade chips. A popular little snack. It is said to speed up the healing of burns a bit." Tags="smallitem,fooditem" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.04" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.04" />
@@ -734,6 +740,7 @@
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
     </Item>
+
     <!-- BREAD -->
     <Item name="Bread" identifier="he-bread" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
@@ -1040,6 +1047,7 @@
         <Containable items="poison,ethanol,huskeggsbasic,huskeggs,paralyxis" />
       </ItemContainer>
     </Item>
+
     <Item name="Burger Buns" identifier="he-burgerbun" category="Misc" subcategory="Food" maxstacksize="5" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
@@ -1341,6 +1349,7 @@
         <Containable items="poison,ethanol,huskeggsbasic,huskeggs,paralyxis" />
       </ItemContainer>
     </Item>
+
     <Item name="Hotdog Bun" identifier="he-hotdogbun" category="Misc" subcategory="Food" maxstacksize="5" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
@@ -1642,6 +1651,7 @@
         <Containable items="poison,ethanol,huskeggsbasic,huskeggs,paralyxis" />
       </ItemContainer>
     </Item>
+
     <Item name="Bread Slices" identifier="he-breadslices" category="Misc" subcategory="Food" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="Two slices of bread. Great for making sandwiches!" Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
@@ -1945,6 +1955,7 @@
         <Containable items="poison,ethanol,huskeggsbasic,huskeggs,paralyxis" />
       </ItemContainer>
     </Item>
+
     <!-- MEAT -->
     <!-- EASY | NO TYPE | NO BUFFS -->
     <Item name="Jerky" identifier="he-cookedjerky" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="A few stripes of jerky. A cheap and easy meal to make. It's impossible to tell what it's made of, but the taste is ok. Eating it makes you thirsty and doesn't give you any benefits other than satiating you." Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
@@ -2265,6 +2276,7 @@
         <Containable items="poison,ethanol,huskeggsbasic,huskeggs,paralyxis" />
       </ItemContainer>
     </Item>
+
     <!-- MRE -->
     <Item name="MRE - Crawler" identifier="he-mrecrawler" category="Misc" subcategory="Food" maxstacksize="2" maxstacksizecharacterinventory="2" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,ingredient,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" impacttolerance="5.5" isshootable="true" requireaimtouse="true" canflipx="false">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab,abandonedcrewcab" spawnprobability="0.02" />
@@ -2338,6 +2350,8 @@
         </Button>
       </CustomInterface>
     </Item>
+
+
     <Item name="MRE - Mudraptor" identifier="he-mremudraptor" category="Misc" subcategory="Food" maxstacksize="2" maxstacksizecharacterinventory="2" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,ingredient,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" impacttolerance="5.5" isshootable="true" requireaimtouse="true" canflipx="false">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab,abandonedcrewcab" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" spawnprobability="0.04" />
@@ -2410,6 +2424,7 @@
         </Button>
       </CustomInterface>
     </Item>
+
     <Item name="MRE - Hammerhead" identifier="he-mrehammerhead" category="Misc" subcategory="Food" maxstacksize="2" maxstacksizecharacterinventory="2" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,ingredient,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" impacttolerance="5.5" isshootable="true" requireaimtouse="true" canflipx="false">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab,abandonedcrewcab" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" spawnprobability="0.04" />
@@ -2482,6 +2497,7 @@
         </Button>
       </CustomInterface>
     </Item>
+
     <Item name="MRE - Thresher" identifier="he-mrethresher" category="Misc" subcategory="Food" maxstacksize="2" maxstacksizecharacterinventory="2" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,ingredient,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" impacttolerance="5.5" isshootable="true" requireaimtouse="true" canflipx="false">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab,abandonedcrewcab" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" spawnprobability="0.04" />
@@ -2583,6 +2599,7 @@
         </Button>
       </CustomInterface>
     </Item>
+    
     <Item name="Pack of Nuggets" identifier="he-nuggetpack" category="Misc" subcategory="Food" maxstacksize="1" cargocontaineridentifier="metalcrate" description="A pack of 8x nuggets." Tags="smallitem,ingredient,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="true" requireaimtouse="true" canflipx="false">
       <PreferredContainer primary="table" secondary="crewcab,kitchen"/>
       <Fabricate suitablefabricators="cafeteria" requiredtime="10" requiredmoney="35" fabricationlimitmin="0" fabricationlimitmax="10" />
@@ -2621,6 +2638,7 @@
         </StatusEffect>
       </Holdable>
     </Item>
+    
     <Item name="Meal of Madness - Mudraptor" identifier="he-madnessmealmudraptor" category="Misc" subcategory="Food" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Content: 1x Mudraptor Burger | 8x Mudraptor Nuggets | 1x Can of Couwola Cola | 1x Random Toy" Tags="ingredient,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="true" requireaimtouse="true" canflipx="false">
       <PreferredContainer primary="table" secondary="crewcab,kitchen"/>
       <Fabricate suitablefabricators="cafeteria" requiredtime="10" requiredmoney="175" fabricationlimitmin="2" fabricationlimitmax="20" />
@@ -2638,6 +2656,7 @@
         </StatusEffect>
       </Holdable>
     </Item>
+    
     <Item name="Pack of Crawler Nuggets" identifier="he-nuggetpackcrawler" category="Misc" subcategory="Food" maxstacksize="1" cargocontaineridentifier="metalcrate" description="A pack of 8x crawler nuggets." Tags="smallitem,ingredient,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="true" requireaimtouse="true" canflipx="false">
       <PreferredContainer primary="table" secondary="crewcab,kitchen"/>
       <Fabricate suitablefabricators="cafeteria" requiredtime="10" requiredmoney="35" fabricationlimitmin="0" fabricationlimitmax="10" />
@@ -2655,6 +2674,7 @@
         </StatusEffect>
       </Holdable>
     </Item>
+
     <Item name="Pack of Hammerhead Nuggets" identifier="he-nuggetpackhammerhead" category="Misc" subcategory="Food" maxstacksize="1" cargocontaineridentifier="metalcrate" description="A pack of 8x hammerhead nuggets." Tags="smallitem,ingredient,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="true" requireaimtouse="true" canflipx="false">
       <PreferredContainer primary="table" secondary="crewcab,kitchen"/>
       <Fabricate suitablefabricators="cafeteria" requiredtime="10" requiredmoney="160" fabricationlimitmin="0" fabricationlimitmax="10" />
@@ -2672,6 +2692,7 @@
         </StatusEffect>
       </Holdable>
     </Item>
+
     <Item name="Pack of Mudraptor Nuggets" identifier="he-nuggetpackmudraptor" category="Misc" subcategory="Food" maxstacksize="1" cargocontaineridentifier="metalcrate" description="A pack of 8x mudraptor nuggets." Tags="smallitem,ingredient,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="true" requireaimtouse="true" canflipx="false">
       <PreferredContainer primary="table" secondary="crewcab,kitchen"/>
       <Fabricate suitablefabricators="cafeteria" requiredtime="10" requiredmoney="70" fabricationlimitmin="0" fabricationlimitmax="10" />
@@ -2689,6 +2710,7 @@
         </StatusEffect>
       </Holdable>
     </Item>
+
     <Item name="Pack of Thresher Nuggets" identifier="he-nuggetpackthresher" category="Misc" subcategory="Food" maxstacksize="1" cargocontaineridentifier="metalcrate" description="A pack of 8x thresher nuggets." Tags="smallitem,ingredient,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="true" requireaimtouse="true" canflipx="false">
       <PreferredContainer primary="table" secondary="crewcab,kitchen"/>
       <Fabricate suitablefabricators="cafeteria" requiredtime="10" requiredmoney="100" fabricationlimitmin="0" fabricationlimitmax="10" />
@@ -2706,5 +2728,6 @@
         </StatusEffect>
       </Holdable>
     </Item>
+
   </Items>
 </Override>
