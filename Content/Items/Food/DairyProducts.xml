@@ -43,6 +43,7 @@
         </StatusEffect>
       </Holdable>
     </Item>
+
     <Item name="Box of Milky Ice Cream" identifier="he-icecreamboxmilky" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A box of Milky Ice Cream. People say they feel more resilient for a longer period of time after eating it. A full box can yield up to 16 scoops of ice cream." Tags="smallitem,fooditem,canmelt" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True" canflipx="false">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="1,79,108,55" depth="0.6" origin="0.5,0.5" />
@@ -73,6 +74,7 @@
         </Button>
       </CustomInterface>
     </Item>
+
     <Item name="Ball of Milky Ice Cream" identifier="he-icecreamballmilky" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A scoop of Milky Ice Cream. People say they feel more resilient for a longer period of time after eating it." Tags="smallitem,icecreamball,fooditem,canmelt" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="27,23,27,27" depth="0.6" origin="0.5,0.5" />
@@ -146,6 +148,7 @@
         </StatusEffect>
       </Holdable>
     </Item>
+
     <!--ICE CREAM - POMEGRENADE-->
     <Item name="Box of Pomegrenade Ice Cream Base" identifier="he-icecreambasepomegrenade" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="The base for Pomegrenade Ice Cream. Store it in a refrigerated container to make edible ice cream." Tags="smallitem,fooditem,canmelt" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True" canflipx="false">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -187,6 +190,7 @@
         </StatusEffect>
       </Holdable>
     </Item>
+
     <Item name="Box of Pomegrenade Ice Cream" identifier="he-icecreamboxpomegrenade" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A box of Pomegrenade Ice Cream. A tasty snack that apparently reduces a bit of pain and makes more resilient. A full box can yield up to 16 scoops of ice cream." Tags="smallitem,fooditem,canmelt" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True" canflipx="false">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="1,135,108,55" depth="0.6" origin="0.5,0.5" />
@@ -217,6 +221,7 @@
         </Button>
       </CustomInterface>
     </Item>
+
     <Item name="Ball of Pomegrenade Ice Cream" identifier="he-icecreamballpomegrenade" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A scoop of Pomegrenade Ice Cream. A tasty snack that apparently reduces a bit of pain and makes more resilient." Tags="smallitem,icecreamball,fooditem,canmelt" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="27,51,27,27" depth="0.6" origin="0.5,0.5" />
@@ -290,6 +295,7 @@
         </StatusEffect>
       </Holdable>
     </Item>
+
     <!--ICE CREAM - Pop Nut-->
     <Item name="Box of Pop Nut Ice Cream Base" identifier="he-icecreambasepopnut" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="The base for Pop Nut Ice Cream. Tastes kind of similar to what chocolate tasted like back on earth. Store it in a refrigerated container to make edible ice cream." Tags="smallitem,fooditem,canmelt" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True" canflipx="false">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -331,6 +337,7 @@
         </StatusEffect>
       </Holdable>
     </Item>
+
     <Item name="Box of Pop Nut Ice Cream" identifier="he-icecreamboxpopnut" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A box of Pop Nut Ice Cream. Tastes kind of similar to what chocolate tasted like back on earth. Apparently reduces a bit of pain and makes more resilient. A full box can yield up to 16 scoops of ice cream." Tags="smallitem,fooditem,canmelt" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True" canflipx="false">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="110,79,108,55" depth="0.6" origin="0.5,0.5" />
@@ -361,6 +368,7 @@
         </Button>
       </CustomInterface>
     </Item>
+
     <Item name="Ball of Pop Nut Ice Cream" identifier="he-icecreamballpopnut" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A scoop of Pop Nut Ice Cream. Tastes kind of similar to what chocolate tasted like back on earth. Apparently reduces a bit of pain, makes more resilient and quenches thirst quite good." Tags="smallitem,icecreamball,fooditem,canmelt" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_soft" isshootable="false" requireaimtouse="false">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="55,23,27,27" depth="0.6" origin="0.5,0.5" />
@@ -442,6 +450,7 @@
         </StatusEffect>
       </Holdable>
     </Item>
+
     <!--ICE CREAM - Bubble Berry-->
     <Item name="Box of Bubble Berry Ice Cream Base" identifier="he-icecreambasebubbleberry" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="The base for Bubble Berry Ice Cream. A very refreshing taste similar to how strawberries tasted like back on earth. Store it in a refrigerated container to make edible ice cream." Tags="smallitem,fooditem,canmelt" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True" canflipx="false">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -483,6 +492,7 @@
         </StatusEffect>
       </Holdable>
     </Item>
+
     <Item name="Box of Bubble Berry Ice Cream" identifier="he-icecreamboxbubbleberry" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A box of Bubble Berry Ice Cream. A very refreshing taste similar to how strawberries tasted like back on earth. Apparently reduces a bit of pain and makes more resilient. A full box can yield up to 16 scoops of ice cream." Tags="smallitem,fooditem,canmelt" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True" canflipx="false">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="110,135,108,55" depth="0.6" origin="0.5,0.5" />
@@ -513,6 +523,7 @@
         </Button>
       </CustomInterface>
     </Item>
+
     <Item name="Ball of Bubble Berry Ice Cream" identifier="he-icecreamballbubbleberry" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A scoop of Bubble Berry Ice Cream. Tastes kind of similar to what chocolate tasted like back on earth. Apparently reduces a bit of pain, makes more resilient and quenches thirst a little bit." Tags="smallitem,icecreamball,fooditem,canmelt" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_soft" isshootable="false" requireaimtouse="false">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="55,51,27,27" depth="0.6" origin="0.5,0.5" />
@@ -594,6 +605,7 @@
         </StatusEffect>
       </Holdable>
     </Item>
+
     <!--CHEESE-->
     <Item name="Moloch Cheese Curd" identifier="he-molochcheesecurd" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Slowly turns into cheese. A full block of cheese will yield 18 cheese slices." Tags="smallitem,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -620,6 +632,7 @@
         </StatusEffect>
       </Holdable>
     </Item>
+
     <Item name="Moloch Cheese" identifier="he-molochcheese" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Cheese made from moloch milk. Can be cut into 18 cheese slices." Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
@@ -759,6 +772,7 @@
         <Containable items="poison,ethanol,huskeggsbasic,huskeggs" />
       </ItemContainer>
     </Item>
+
     <Item name="Slice of Moloch Cheese" identifier="he-molochcheeseslice" category="Misc" maxstacksize="18" cargocontaineridentifier="metalcrate" description="A slice of moloch cheese." Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
@@ -889,6 +903,7 @@
         <Containable items="poison,ethanol,huskeggsbasic,huskeggs" />
       </ItemContainer>
     </Item>
+
     <!--WAFFLES-->
     <Item name="Waffle Cone" identifier="he-wafflecone" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A cone shaped waffle for ice cream. Contained ice cream will melt if not contained within a refrigerated container." Tags="smallitem,fooditem,wafflecone,petfood1,petfood2,petfood3" showcontentsintooltip="true" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
@@ -1119,5 +1134,6 @@
         <Containable items="icecreamball" />
       </ItemContainer>
     </Item>
+
   </Items>
 </Override>
