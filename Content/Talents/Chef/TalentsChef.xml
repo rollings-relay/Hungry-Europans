@@ -1149,7 +1149,7 @@
           <CharacterAbilityMarkAsLooted identifier="huskegghunt"/>
         </Abilities>
       </AbilityGroupEffect>
-      <AddedRecipe itemidentifier="he-cookedhusklumpomelette"/>
+      <AddedRecipe itemidentifier="he-cookedhuskroe"/>
       <AddedRecipe itemidentifier="he-rawhuskmeat"/>
     </Talent>
   </Override>
