@@ -342,125 +342,125 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entityname.he-emptycup2>Empty Cup</entityname.he-emptycup2><!--Patch 13-->
 <entitydescription.he-emptycup2>An empty cup for drinks. Can be thrown or filled with tea.</entitydescription.he-emptycup2><!--Patch 13-->
 <entityname.he-endwormmeatchunk>Endworm Meat Chunk</entityname.he-endwormmeatchunk>
-<entitydescription.he-endwormmeatchunk>A fat chunk of meat from an Endworm. Spoils if not contained inside a refrigerated container.</entitydescription.he-endwormmeatchunk>
+<entitydescription.he-endwormmeatchunk>A fat chunk of meat from an Endworm. Spoils if not refrigerated.</entitydescription.he-endwormmeatchunk>
 <entityname.he-rawendwormmeat>Raw Endworm Meat</entityname.he-rawendwormmeat>
-<entitydescription.he-rawendwormmeat>Spoils if not contained inside a refrigerated container.</entitydescription.he-rawendwormmeat>
+<entitydescription.he-rawendwormmeat>Spoils if not refrigerated.</entitydescription.he-rawendwormmeat>
 <entityname.he-rawendwormsausage>Raw Endworm Sausage</entityname.he-rawendwormsausage>
-<entitydescription.he-rawendwormsausage>Spoils if not contained inside a refrigerated container.</entitydescription.he-rawendwormsausage>
+<entitydescription.he-rawendwormsausage>Spoils if not refrigerated.</entitydescription.he-rawendwormsausage>
 <entityname.he-rawendwormmeatpatty>Raw Endworm Meat Patty</entityname.he-rawendwormmeatpatty>
-<entitydescription.he-rawendwormmeatpatty>Spoils if not contained inside a refrigerated container.</entitydescription.he-rawendwormmeatpatty>
+<entitydescription.he-rawendwormmeatpatty>Spoils if not refrigerated.</entitydescription.he-rawendwormmeatpatty>
 <entityname.he-humanmeatchunk>Human Meat</entityname.he-humanmeatchunk>
-<entitydescription.he-humanmeatchunk>Parts of a human. Spoils if not contained inside a refrigerated container.</entitydescription.he-humanmeatchunk>
+<entitydescription.he-humanmeatchunk>Parts of a human. Spoils if not refrigerated.</entitydescription.he-humanmeatchunk>
 <entityname.he-rawhumanmeat>Raw Human Meat</entityname.he-rawhumanmeat>
-<entitydescription.he-rawhumanmeat>Spoils if not contained inside a refrigerated container.</entitydescription.he-rawhumanmeat>
+<entitydescription.he-rawhumanmeat>Spoils if not refrigerated.</entitydescription.he-rawhumanmeat>
 <entityname.he-rawhumansausage>Raw Human Sausage</entityname.he-rawhumansausage>
-<entitydescription.he-rawhumansausage>Spoils if not contained inside a refrigerated container.</entitydescription.he-rawhumansausage>
+<entitydescription.he-rawhumansausage>Spoils if not refrigerated.</entitydescription.he-rawhumansausage>
 <entityname.he-rawhumanmeatpatty>Raw Human Meat Patty</entityname.he-rawhumanmeatpatty>
-<entitydescription.he-rawhumanmeatpatty>Spoils if not contained inside a refrigerated container.</entitydescription.he-rawhumanmeatpatty>
+<entitydescription.he-rawhumanmeatpatty>Spoils if not refrigerated.</entitydescription.he-rawhumanmeatpatty>
 <entityname.he-rawhumannuggets>Pile of Raw Human Nuggets</entityname.he-rawhumannuggets><!--Patch 13-->
 <entitydescription.he-rawhumannuggets>A pile of raw nuggets made from human meat. Put it in a fryer.</entitydescription.he-rawhumannuggets><!--Patch 13-->
 
 <entityname.he-crawlermeatchunk>Crawler Half</entityname.he-crawlermeatchunk>
-<entitydescription.he-crawlermeatchunk>A Crawler cut in half. Spoils if not contained inside a refrigerated container.</entitydescription.he-crawlermeatchunk>
+<entitydescription.he-crawlermeatchunk>A Crawler cut in half. Spoils if not refrigerated.</entitydescription.he-crawlermeatchunk>
 <entityname.he-crawlermeatchunkspecial>Crawler Meat Chunk</entityname.he-crawlermeatchunkspecial>
 <entitydescription.he-crawlermeatchunkspecial>A chunk of Crawler meat.</entitydescription.he-crawlermeatchunkspecial>
 <entityname.he-rawcrawlermeat>Raw Crawler Meat</entityname.he-rawcrawlermeat>
-<entitydescription.he-rawcrawlermeat>Spoils if not contained inside a refrigerated container.</entitydescription.he-rawcrawlermeat>
+<entitydescription.he-rawcrawlermeat>Spoils if not refrigerated.</entitydescription.he-rawcrawlermeat>
 <entityname.he-rawcrawlersausage>Raw Crawler Sausage</entityname.he-rawcrawlersausage>
-<entitydescription.he-rawcrawlersausage>Spoils if not contained inside a refrigerated container.</entitydescription.he-rawcrawlersausage>
+<entitydescription.he-rawcrawlersausage>Spoils if not refrigerated.</entitydescription.he-rawcrawlersausage>
 <entityname.he-rawcrawlermeatpatty>Raw Crawler Meat Patty</entityname.he-rawcrawlermeatpatty>
-<entitydescription.he-rawcrawlermeatpatty>Spoils if not contained inside a refrigerated container.</entitydescription.he-rawcrawlermeatpatty>
+<entitydescription.he-rawcrawlermeatpatty>Spoils if not refrigerated.</entitydescription.he-rawcrawlermeatpatty>
 <entityname.he-rawcrawlernuggets>Pile of Raw Crawler Nuggets</entityname.he-rawcrawlernuggets><!--Patch 13-->
 <entitydescription.he-rawcrawlernuggets>A pile of raw nuggets made from crawler meat. Put it in a fryer.</entitydescription.he-rawcrawlernuggets><!--Patch 13-->
 
 <entityname.he-mudraptormeatchunk>Mudraptor Meat Chunk</entityname.he-mudraptormeatchunk>
-<entitydescription.he-mudraptormeatchunk>A nice chunk of meat cut from a Mudraptor. Spoils if not contained inside a refrigerated container.</entitydescription.he-mudraptormeatchunk>
+<entitydescription.he-mudraptormeatchunk>A nice chunk of meat cut from a Mudraptor. Spoils if not refrigerated.</entitydescription.he-mudraptormeatchunk>
 <entityname.he-rawmudraptormeat>Raw Mudraptor Meat</entityname.he-rawmudraptormeat>
-<entitydescription.he-rawmudraptormeat>Spoils if not contained inside a refrigerated container.</entitydescription.he-rawmudraptormeat>
+<entitydescription.he-rawmudraptormeat>Spoils if not refrigerated.</entitydescription.he-rawmudraptormeat>
 <entityname.he-rawmudraptorsausage>Raw Mudraptor Sausage</entityname.he-rawmudraptorsausage>
-<entitydescription.he-rawmudraptorsausage>Spoils if not contained inside a refrigerated container.</entitydescription.he-rawmudraptorsausage>
+<entitydescription.he-rawmudraptorsausage>Spoils if not refrigerated.</entitydescription.he-rawmudraptorsausage>
 <entityname.he-rawmudraptormeatpatty>Raw Mudraptor Meat Patty</entityname.he-rawmudraptormeatpatty>
-<entitydescription.he-rawmudraptormeatpatty>Spoils if not contained inside a refrigerated container.</entitydescription.he-rawmudraptormeatpatty>
+<entitydescription.he-rawmudraptormeatpatty>Spoils if not refrigerated.</entitydescription.he-rawmudraptormeatpatty>
 <entityname.he-rawmudraptorroast>Raw Mudraptor Roast</entityname.he-rawmudraptorroast>
-<entitydescription.he-rawmudraptorroast>Time to put it in the oven! Spoils if not contained inside a refrigerated container.</entitydescription.he-rawmudraptorroast>
+<entitydescription.he-rawmudraptorroast>Time to put it in the oven! Spoils if not refrigerated.</entitydescription.he-rawmudraptorroast>
 <entityname.he-rawmudraptornuggets>Pile of Raw Mudraptor Nuggets</entityname.he-rawmudraptornuggets><!--Patch 13-->
 <entitydescription.he-rawmudraptornuggets>A pile of raw nuggets made from mudraptor meat. Put it in a fryer.</entitydescription.he-rawmudraptornuggets><!--Patch 13-->
 
 <entityname.he-hammerheadmeatchunk>Hammerhead Meat Chunk</entityname.he-hammerheadmeatchunk>
-<entitydescription.he-hammerheadmeatchunk>A nice chunk of meat cut from a Hammerhead. Spoils if not contained inside a refrigerated container.</entitydescription.he-hammerheadmeatchunk>
+<entitydescription.he-hammerheadmeatchunk>A nice chunk of meat cut from a Hammerhead. Spoils if not refrigerated.</entitydescription.he-hammerheadmeatchunk>
 <entityname.he-rawhammerheadmeat>Raw Hammerhead Meat</entityname.he-rawhammerheadmeat>
-<entitydescription.he-rawhammerheadmeat>Spoils if not contained inside a refrigerated container.</entitydescription.he-rawhammerheadmeat>
+<entitydescription.he-rawhammerheadmeat>Spoils if not refrigerated.</entitydescription.he-rawhammerheadmeat>
 <entityname.he-rawhammerheadsausage>Raw Hammerhead Sausage</entityname.he-rawhammerheadsausage>
-<entitydescription.he-rawhammerheadsausage>Spoils if not contained inside a refrigerated container.</entitydescription.he-rawhammerheadsausage>
+<entitydescription.he-rawhammerheadsausage>Spoils if not refrigerated.</entitydescription.he-rawhammerheadsausage>
 <entityname.he-rawhammerheadmeatpatty>Raw Hammerhead Meat Patty</entityname.he-rawhammerheadmeatpatty>
-<entitydescription.he-rawhammerheadmeatpatty>Spoils if not contained inside a refrigerated container.</entitydescription.he-rawhammerheadmeatpatty>
+<entitydescription.he-rawhammerheadmeatpatty>Spoils if not refrigerated.</entitydescription.he-rawhammerheadmeatpatty>
 <entityname.he-rawhammerheadspareribs>Raw Hammerhead Spareribs</entityname.he-rawhammerheadspareribs>
-<entitydescription.he-rawhammerheadspareribs>Cut from a massive ripcage. Spoils if not contained inside a refrigerated container.</entitydescription.he-rawhammerheadspareribs>
+<entitydescription.he-rawhammerheadspareribs>Cut from a massive ripcage. Spoils if not refrigerated.</entitydescription.he-rawhammerheadspareribs>
 <entityname.he-rawhammerheadroast>Raw Hammerhead Roast</entityname.he-rawhammerheadroast>
-<entitydescription.he-rawhammerheadroast>Time to put it in the oven. Spoils if not contained inside a refrigerated container.</entitydescription.he-rawhammerheadroast>
+<entitydescription.he-rawhammerheadroast>Time to put it in the oven. Spoils if not refrigerated.</entitydescription.he-rawhammerheadroast>
 <entityname.he-hammerheadspawnmeatchunk>Hammerhead Spawn</entityname.he-hammerheadspawnmeatchunk>
-<entitydescription.he-hammerheadspawnmeatchunk>A Hammerhead baby. Spoils if not contained inside a refrigerated container.</entitydescription.he-hammerheadspawnmeatchunk>
+<entitydescription.he-hammerheadspawnmeatchunk>A Hammerhead baby. Spoils if not refrigerated.</entitydescription.he-hammerheadspawnmeatchunk>
 <entityname.he-rawhammerheadnuggets>Pile of Raw Hammerhead Nuggets</entityname.he-rawhammerheadnuggets><!--Patch 13-->
 <entitydescription.he-rawhammerheadnuggets>A pile of raw nuggets made from hammerhead meat. Put it in a fryer.</entitydescription.he-rawhammerheadnuggets><!--Patch 13-->
 
 <entityname.he-threshermeatchunk>Thresher Meat Chunk</entityname.he-threshermeatchunk>
-<entitydescription.he-threshermeatchunk>A piece of meat cut from a Thresher. Spoils if not contained inside a refrigerated container.</entitydescription.he-threshermeatchunk>
+<entitydescription.he-threshermeatchunk>A piece of meat cut from a Thresher. Spoils if not refrigerated.</entitydescription.he-threshermeatchunk>
 <entityname.he-rawthreshermeat>Raw Thresher Meat</entityname.he-rawthreshermeat>
-<entitydescription.he-rawthreshermeat>Spoils if not contained inside a refrigerated container.</entitydescription.he-rawthreshermeat>
+<entitydescription.he-rawthreshermeat>Spoils if not refrigerated.</entitydescription.he-rawthreshermeat>
 <entityname.he-rawthreshersausage>Raw Thresher Sausage</entityname.he-rawthreshersausage>
-<entitydescription.he-rawthreshersausage>Spoils if not contained inside a refrigerated container.</entitydescription.he-rawthreshersausage>
+<entitydescription.he-rawthreshersausage>Spoils if not refrigerated.</entitydescription.he-rawthreshersausage>
 <entityname.he-rawthreshermeatpatty>Raw Thresher Meat Patty</entityname.he-rawthreshermeatpatty>
-<entitydescription.he-rawthreshermeatpatty>Spoils if not contained inside a refrigerated container.</entitydescription.he-rawthreshermeatpatty>
+<entitydescription.he-rawthreshermeatpatty>Spoils if not refrigerated.</entitydescription.he-rawthreshermeatpatty>
 <entityname.he-rawthreshernuggets>Pile of Raw Thresher Nuggets</entityname.he-rawthreshernuggets><!--Patch 13-->
 <entitydescription.he-rawthreshernuggets>A pile of raw nuggets made from thresher meat. Put it in a fryer.</entitydescription.he-rawthreshernuggets><!--Patch 13-->
 
 <entityname.he-huskmeatchunk>Husk Meat Chunk</entityname.he-huskmeatchunk><!--Patch 13-->
-<entitydescription.he-huskmeatchunk>A piece of meat cut from a husk. Spoils if not contained inside a refrigerated container.</entitydescription.he-huskmeatchunk><!--Patch 13-->
+<entitydescription.he-huskmeatchunk>A piece of meat cut from a husk. Spoils if not refrigerated.</entitydescription.he-huskmeatchunk><!--Patch 13-->
 <entityname.he-rawhuskmeat>Raw Husk Meat</entityname.he-rawhuskmeat><!--Patch 13-->
-<entitydescription.he-rawhuskmeat>Spoils if not contained inside a refrigerated container.</entitydescription.he-rawhuskmeat><!--Patch 13-->
+<entitydescription.he-rawhuskmeat>Spoils if not refrigerated.</entitydescription.he-rawhuskmeat><!--Patch 13-->
 <entityname.he-rawhusksausage>Raw Husk Sausage</entityname.he-rawhusksausage><!--Patch 13-->
-<entitydescription.he-rawhusksausage>Spoils if not contained inside a refrigerated container.</entitydescription.he-rawhusksausage><!--Patch 13-->
+<entitydescription.he-rawhusksausage>Spoils if not refrigerated.</entitydescription.he-rawhusksausage><!--Patch 13-->
 <entityname.he-rawhuskmeatpatty>Raw Husk Meat Patty</entityname.he-rawhuskmeatpatty><!--Patch 13-->
-<entitydescription.he-rawhuskmeatpatty>Spoils if not contained inside a refrigerated container.</entitydescription.he-rawhuskmeatpatty><!--Patch 13-->
+<entitydescription.he-rawhuskmeatpatty>Spoils if not refrigerated.</entitydescription.he-rawhuskmeatpatty><!--Patch 13-->
 <entityname.he-rawhusknuggets>Pile of Raw Husk Nuggets</entityname.he-rawhusknuggets><!--Patch 13-->
 <entitydescription.he-rawhusknuggets>A pile of raw nuggets made from husk meat. Put it in a fryer.</entitydescription.he-rawhusknuggets><!--Patch 13-->
 
 <entityname.he-watchermeatchunk>Watcher Meat Chunk</entityname.he-watchermeatchunk><!--Patch 13-->
-<entitydescription.he-watchermeatchunk>A piece of watcher meat. Spoils if not contained inside a refrigerated container.</entitydescription.he-watchermeatchunk><!--Patch 13-->
+<entitydescription.he-watchermeatchunk>A piece of watcher meat. Spoils if not refrigerated.</entitydescription.he-watchermeatchunk><!--Patch 13-->
 <entityname.he-rawwatchermeat>Raw Watcher Meat</entityname.he-rawwatchermeat><!--Patch 13-->
-<entitydescription.he-rawwatchermeat>Spoils if not contained inside a refrigerated container.</entitydescription.he-rawwatchermeat><!--Patch 13-->
+<entitydescription.he-rawwatchermeat>Spoils if not refrigerated.</entitydescription.he-rawwatchermeat><!--Patch 13-->
 <entityname.he-rawwatchersteak>Raw Watcher Steak</entityname.he-rawwatchersteak><!--Patch 13-->
-<entitydescription.he-rawwatchersteak>Spoils if not contained inside a refrigerated container.</entitydescription.he-rawwatchersteak><!--Patch 13-->
+<entitydescription.he-rawwatchersteak>Spoils if not refrigerated.</entitydescription.he-rawwatchersteak><!--Patch 13-->
 <entityname.he-rawwatchersausage>Raw Watcher Sausage</entityname.he-rawwatchersausage><!--Patch 13-->
-<entitydescription.he-rawwatchersausage>Spoils if not contained inside a refrigerated container.</entitydescription.he-rawwatchersausage><!--Patch 13-->
+<entitydescription.he-rawwatchersausage>Spoils if not refrigerated.</entitydescription.he-rawwatchersausage><!--Patch 13-->
 <entityname.he-rawwatchermeatpatty>Raw Watcher Meat Patty</entityname.he-rawwatchermeatpatty><!--Patch 13-->
-<entitydescription.he-rawwatchermeatpatty>Spoils if not contained inside a refrigerated container.</entitydescription.he-rawwatchermeatpatty><!--Patch 13-->
+<entitydescription.he-rawwatchermeatpatty>Spoils if not refrigerated.</entitydescription.he-rawwatchermeatpatty><!--Patch 13-->
 <entityname.he-rawwatchernuggets>Pile of Raw Watcher Nuggets</entityname.he-rawwatchernuggets><!--Patch 13-->
 <entitydescription.he-rawwatchernuggets>A pile of raw nuggets made from watcher meat. Put it in a fryer.</entitydescription.he-rawwatchernuggets><!--Patch 13-->
 
 <entityname.he-molochmeatchunk>Moloch Meat Chunk</entityname.he-molochmeatchunk><!--Patch 13-->
-<entitydescription.he-molochmeatchunk>A piece of moloch meat. Spoils if not contained inside a refrigerated container.</entitydescription.he-molochmeatchunk><!--Patch 13-->
+<entitydescription.he-molochmeatchunk>A piece of moloch meat. Spoils if not refrigerated.</entitydescription.he-molochmeatchunk><!--Patch 13-->
 <entityname.he-rawmolochmeat>Raw Moloch Meat</entityname.he-rawmolochmeat><!--Patch 13-->
-<entitydescription.he-rawmolochmeat>Spoils if not contained inside a refrigerated container.</entitydescription.he-rawmolochmeat><!--Patch 13-->
+<entitydescription.he-rawmolochmeat>Spoils if not refrigerated.</entitydescription.he-rawmolochmeat><!--Patch 13-->
 <entityname.he-rawmolochsteak>Raw Moloch Steak</entityname.he-rawmolochsteak><!--Patch 13-->
-<entitydescription.he-rawmolochsteak>Spoils if not contained inside a refrigerated container.</entitydescription.he-rawmolochsteak><!--Patch 13-->
+<entitydescription.he-rawmolochsteak>Spoils if not refrigerated.</entitydescription.he-rawmolochsteak><!--Patch 13-->
 <entityname.he-rawmolochsausage>Raw Moloch Sausage</entityname.he-rawmolochsausage><!--Patch 13-->
-<entitydescription.he-rawmolochsausage>Spoils if not contained inside a refrigerated container.</entitydescription.he-rawmolochsausage><!--Patch 13-->
+<entitydescription.he-rawmolochsausage>Spoils if not refrigerated.</entitydescription.he-rawmolochsausage><!--Patch 13-->
 <entityname.he-rawmolochmeatpatty>Raw Moloch Meat Patty</entityname.he-rawmolochmeatpatty><!--Patch 13-->
-<entitydescription.he-rawmolochmeatpatty>Spoils if not contained inside a refrigerated container.</entitydescription.he-rawmolochmeatpatty><!--Patch 13-->
+<entitydescription.he-rawmolochmeatpatty>Spoils if not refrigerated.</entitydescription.he-rawmolochmeatpatty><!--Patch 13-->
 <entityname.he-rawmolochnuggets>Pile of Raw Moloch Nuggets</entityname.he-rawmolochnuggets><!--Patch 13-->
 <entitydescription.he-rawmolochnuggets>A pile of raw nuggets made from moloch meat. Put it in a fryer.</entitydescription.he-rawmolochnuggets><!--Patch 13-->
 
 <entityname.he-spinelingmeatchunk>Spineling Meat Chunk</entityname.he-spinelingmeatchunk><!--Patch 13-->
-<entitydescription.he-spinelingmeatchunk>A piece of spineling meat. Spoils if not contained inside a refrigerated container.</entitydescription.he-spinelingmeatchunk><!--Patch 13-->
+<entitydescription.he-spinelingmeatchunk>A piece of spineling meat. Spoils if not refrigerated.</entitydescription.he-spinelingmeatchunk><!--Patch 13-->
 <entityname.he-rawspinelingmeat>Raw Spineling Meat</entityname.he-rawspinelingmeat><!--Patch 13-->
-<entitydescription.he-rawspinelingmeat>Spoils if not contained inside a refrigerated container.</entitydescription.he-rawspinelingmeat><!--Patch 13-->
+<entitydescription.he-rawspinelingmeat>Spoils if not refrigerated.</entitydescription.he-rawspinelingmeat><!--Patch 13-->
 <entityname.he-rawspinelingsteak>Raw Spineling Steak</entityname.he-rawspinelingsteak><!--Patch 13-->
-<entitydescription.he-rawspinelingsteak>Spoils if not contained inside a refrigerated container.</entitydescription.he-rawspinelingsteak><!--Patch 13-->
+<entitydescription.he-rawspinelingsteak>Spoils if not refrigerated.</entitydescription.he-rawspinelingsteak><!--Patch 13-->
 <entityname.he-rawspinelingsausage>Raw Spineling Sausage</entityname.he-rawspinelingsausage><!--Patch 13-->
-<entitydescription.he-rawspinelingsausage>Spoils if not contained inside a refrigerated container.</entitydescription.he-rawspinelingsausage><!--Patch 13-->
+<entitydescription.he-rawspinelingsausage>Spoils if not refrigerated.</entitydescription.he-rawspinelingsausage><!--Patch 13-->
 <entityname.he-rawspinelingmeatpatty>Raw Spineling Meat Patty</entityname.he-rawspinelingmeatpatty><!--Patch 13-->
-<entitydescription.he-rawspinelingmeatpatty>Spoils if not contained inside a refrigerated container.</entitydescription.he-rawspinelingmeatpatty><!--Patch 13-->
+<entitydescription.he-rawspinelingmeatpatty>Spoils if not refrigerated.</entitydescription.he-rawspinelingmeatpatty><!--Patch 13-->
 <entityname.he-rawspinelingnuggets>Pile of Raw Spineling Nuggets</entityname.he-rawspinelingnuggets><!--Patch 13-->
 <entitydescription.he-rawspinelingnuggets>A pile of raw nuggets made from spineling meat. Put it in a fryer.</entitydescription.he-rawspinelingnuggets><!--Patch 13-->
 
