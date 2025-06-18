@@ -1476,5 +1476,504 @@
       </Holdable>
     </Item>
 
+
+  <!-- EGGS for omelette -->
+  <!-- EGGS for omelette -->
+  <!-- EGGS for omelette -->
+  
+  <!-- Small eggs -->
+  <Item name="" identifier="peanutegg" nameidentifier="petegg" Tags="smallitem,monsterfood,egg,smallegg" hideinmenus="true" health="20" damagedbyexplosions="true" damagedbyprojectiles="true" damagedbymeleeweapons="true" damagedbyrepairtools="true" category="Misc" scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="crewcab"/>
+    <PreferredContainer secondary="abandonedstoragecab,piratestoragecab,wreckstoragecab" amount="1" spawnprobability="0.05" />
+    <Sprite texture="Content/Characters/Pets/pets.png" depth="0.7" sourcerect="265,5,43,55" origin="0.5,0.5" />
+    <Price baseprice="500" minleveldifficulty="15">
+      <Price storeidentifier="merchantoutpost" sold="false" />
+      <Price storeidentifier="merchantcity" multiplier="1.2"  />
+      <Price storeidentifier="merchantresearch" multiplier="1.4" minavailable="1" />
+      <Price storeidentifier="merchantmilitary" sold="false" />
+      <Price storeidentifier="merchantmine" sold="false" multiplier="0.75" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="alienblood" />
+      <Item identifier="alienblood" />
+      <Item identifier="adrenalinegland" />
+    </Deconstruct>
+    <Body radius="25" friction="1.0" restitution="0.01" angulardamping="0.8" density="11"/>
+    <Holdable slots="RightHand+LeftHand" holdpos="35,-30" handle1="0,-10" handle2="0,-20" swingamount="15,15" swingspeed="2" swingwhenholding="True">
+      <StatusEffect type="OnBroken" target="This">
+        <particleemitter particle="whitegoosplash" particleamount="20" velocitymin="0" velocitymax="300" anglemin="0" anglemax="360" scalemin="0.5" scalemax="1.0" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+        <particleemitter particle="brownchunks" particleamount="50" velocitymin="0" velocitymax="700" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.5" />
+        <Sound file="Content/Sounds/Damage/Gore6.ogg" range="500" />
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnFire" target="This" Condition="-1.0"/>
+      <StatusEffect type="OnActive" target="This" swingamount="100,100" swingspeed="5" setvalue="true">
+        <particleemitter particle="brownchunks" particlespersecond="5" velocitymin="0" velocitymax="500" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.5" />
+        <Conditional Scale="gte 0.7" />
+      </StatusEffect>
+    </Holdable>
+    <ItemContainer capacity="1" hideitems="true" showcontainedstateindicator="false" maxstacksize="1">
+      <Containable items="antibloodloss1">
+        <StatusEffect type="OnContaining" target="Contained" Condition="-9" noninteractable="true" />        
+        <StatusEffect type="OnContaining" target="This" Scale="0.025"/>
+        <StatusEffect type="OnContaining" target="This" Condition="0" setvalue="true">
+          <Conditional Scale="gte 0.75" />
+          <SpawnCharacter speciesname="peanut"/>
+          <Remove />
+        </StatusEffect>
+      </Containable>
+    </ItemContainer>
+    <LightComponent range="15" lightcolor="180,150,30,150" powerconsumption="0" IsOn="true" castshadows="false" allowingameediting="false" pulsefrequency="0.2" pulseamount="0.30" />
+  </Item>
+  
+  <Item name="" identifier="psilotoadegg" nameidentifier="petegg" Tags="smallitem,monsterfood,egg,smallegg" hideinmenus="true" health="20" damagedbyexplosions="true" damagedbyprojectiles="true" damagedbymeleeweapons="true" damagedbyrepairtools="true" category="Misc" scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="crewcab"/>
+    <PreferredContainer secondary="abandonedstoragecab,piratestoragecab,wreckstoragecab" amount="1" spawnprobability="0.05" />
+    <Sprite texture="Content/Characters/Pets/pets.png" depth="0.7" sourcerect="265,133,43,55" origin="0.5,0.5" />
+    <Price baseprice="500" minleveldifficulty="15">
+      <Price storeidentifier="merchantoutpost" sold="false" />
+      <Price storeidentifier="merchantcity" multiplier="1.2"  />
+      <Price storeidentifier="merchantresearch" multiplier="1.4" minavailable="1" />
+      <Price storeidentifier="merchantmilitary" sold="false" />
+      <Price storeidentifier="merchantmine" sold="false" multiplier="0.75" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="alienblood" />
+      <Item identifier="alienblood" />
+      <Item identifier="adrenalinegland" />
+    </Deconstruct>
+    <Body radius="25" friction="1.0" restitution="0.01" angulardamping="0.8" density="11"/>
+    <Holdable slots="RightHand+LeftHand" holdpos="35,-30" handle1="0,-10" handle2="0,-20" swingamount="15,15" swingspeed="2" swingwhenholding="True">
+      <StatusEffect type="OnBroken" target="This">
+        <particleemitter particle="whitegoosplash" particleamount="20" velocitymin="0" velocitymax="300" anglemin="0" anglemax="360" scalemin="0.5" scalemax="1.0" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+        <particleemitter particle="brownchunks" particleamount="50" velocitymin="0" velocitymax="700" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.5" />
+        <Sound file="Content/Sounds/Damage/Gore6.ogg" range="500" />
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnFire" target="This" Condition="-1.0"/>
+      <StatusEffect type="OnActive" target="This" swingamount="100,100" swingspeed="5" setvalue="true">
+        <particleemitter particle="brownchunks" particlespersecond="5" velocitymin="0" velocitymax="500" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.5" />
+        <Conditional Scale="gte 0.7" />
+      </StatusEffect>
+    </Holdable>
+    <ItemContainer capacity="1" hideitems="true" showcontainedstateindicator="false" maxstacksize="1">
+      <Containable items="antibloodloss1">
+        <StatusEffect type="OnContaining" target="Contained" Condition="-9" noninteractable="true" />        
+        <StatusEffect type="OnContaining" target="This" Scale="0.025"/>
+        <StatusEffect type="OnContaining" target="This" Condition="0" setvalue="true">
+          <Conditional Scale="gte 0.75" />
+          <SpawnCharacter speciesname="psilotoad"/>
+          <Remove />
+        </StatusEffect>
+      </Containable>
+    </ItemContainer>
+    <LightComponent range="15" lightcolor="180,150,30,150" powerconsumption="0" IsOn="true" castshadows="false" allowingameediting="false" pulsefrequency="0.2" pulseamount="0.30" />
+  </Item>
+  
+  <Item name="" identifier="orangeboyegg" nameidentifier="petegg" Tags="smallitem,monsterfood,egg,smallegg" hideinmenus="true" health="20" damagedbyexplosions="true" damagedbyprojectiles="true" damagedbymeleeweapons="true" damagedbyrepairtools="true" category="Misc" scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="crewcab"/>
+    <PreferredContainer secondary="abandonedstoragecab,piratestoragecab,wreckstoragecab" amount="1" spawnprobability="0.05" />
+    <Sprite texture="Content/Characters/Pets/pets.png" depth="0.7" sourcerect="266,259,44,56" origin="0.5,0.5" />
+    <Price baseprice="500" minleveldifficulty="15">
+      <Price storeidentifier="merchantoutpost" sold="false" />
+      <Price storeidentifier="merchantcity" multiplier="1.2"  />
+      <Price storeidentifier="merchantresearch" multiplier="1.4" minavailable="1" />
+      <Price storeidentifier="merchantmilitary" sold="false" />
+      <Price storeidentifier="merchantmine" sold="false" multiplier="0.75" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="alienblood" />
+      <Item identifier="alienblood" />
+      <Item identifier="adrenalinegland" />
+    </Deconstruct>
+    <Body radius="25" friction="1.0" restitution="0.01" angulardamping="0.8" density="11"/>
+    <Holdable slots="RightHand+LeftHand" holdpos="35,-30" handle1="0,-10" handle2="0,-20" swingamount="15,15" swingspeed="2" swingwhenholding="True">
+      <StatusEffect type="OnBroken" target="This">
+        <particleemitter particle="whitegoosplash" particleamount="20" velocitymin="0" velocitymax="300" anglemin="0" anglemax="360" scalemin="0.5" scalemax="1.0" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+        <particleemitter particle="brownchunks" particleamount="50" velocitymin="0" velocitymax="700" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.5" />
+        <Sound file="Content/Sounds/Damage/Gore6.ogg" range="500" />
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnFire" target="This" Condition="-1.0"/>
+      <StatusEffect type="OnActive" target="This" swingamount="100,100" swingspeed="5" setvalue="true">
+        <particleemitter particle="brownchunks" particlespersecond="5" velocitymin="0" velocitymax="500" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.5" />
+        <Conditional Scale="gte 0.7" />
+      </StatusEffect>
+    </Holdable>
+    <ItemContainer capacity="1" hideitems="true" showcontainedstateindicator="false" maxstacksize="1">
+      <Containable items="antibloodloss1">
+        <StatusEffect type="OnContaining" target="Contained" Condition="-9" noninteractable="true" />        
+        <StatusEffect type="OnContaining" target="This" Scale="0.025"/>
+        <StatusEffect type="OnContaining" target="This" Condition="0" setvalue="true">
+          <Conditional Scale="gte 0.75" />
+          <SpawnCharacter speciesname="orangeboy"/>
+          <Remove />
+        </StatusEffect>
+      </Containable>
+    </ItemContainer>
+    <LightComponent range="15" lightcolor="180,150,30,150" powerconsumption="0" IsOn="true" castshadows="false" allowingameediting="false" pulsefrequency="0.2" pulseamount="0.30" />
+  </Item>
+  
+  <Item name="" identifier="balloonegg" nameidentifier="petegg" Tags="smallitem,monsterfood,egg,smallegg" hideinmenus="true" health="20" damagedbyexplosions="true" damagedbyprojectiles="true" damagedbymeleeweapons="true" damagedbyrepairtools="true" category="Misc" scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="crewcab"/>
+    <PreferredContainer secondary="abandonedstoragecab,piratestoragecab,wreckstoragecab" amount="1" spawnprobability="0.05" />
+    <Sprite texture="Content/Characters/Pets/pets.png" depth="0.7" sourcerect="11,389,43,55" origin="0.5,0.5" />
+    <Price baseprice="500" sold="false" minleveldifficulty="15">
+      <Price storeidentifier="merchantoutpost" />
+      <Price storeidentifier="merchantcity" multiplier="1.2"  />
+      <Price storeidentifier="merchantresearch" multiplier="1.4" />
+      <Price storeidentifier="merchantmilitary" />
+      <Price storeidentifier="merchantmine" multiplier="0.75" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="alienblood" />
+      <Item identifier="alienblood" />
+      <Item identifier="adrenalinegland" />
+    </Deconstruct>
+    <Body radius="25" friction="1.0" restitution="0.01" angulardamping="0.8" density="11"/>
+    <Holdable slots="RightHand+LeftHand" holdpos="35,-30" handle1="0,-10" handle2="0,-20" swingamount="15,15" swingspeed="2" swingwhenholding="True">
+      <StatusEffect type="OnBroken" target="This">
+        <particleemitter particle="whitegoosplash" particleamount="20" velocitymin="0" velocitymax="300" anglemin="0" anglemax="360" scalemin="0.5" scalemax="1.0" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+        <particleemitter particle="brownchunks" particleamount="50" velocitymin="0" velocitymax="700" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.5" />
+        <Sound file="Content/Sounds/Damage/Gore6.ogg" range="500" />
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnFire" target="This" Condition="-1.0"/>
+      <StatusEffect type="OnActive" target="This" swingamount="100,100" swingspeed="5" setvalue="true">
+        <particleemitter particle="brownchunks" particlespersecond="5" velocitymin="0" velocitymax="500" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.5" />
+        <Conditional Scale="gte 0.7" />
+      </StatusEffect>
+    </Holdable>
+    <ItemContainer capacity="1" hideitems="true" showcontainedstateindicator="false" maxstacksize="1">
+      <Containable items="antibloodloss1">
+        <StatusEffect type="OnContaining" target="Contained" Condition="-9" noninteractable="true" />        
+        <StatusEffect type="OnContaining" target="This" Scale="0.025"/>
+        <StatusEffect type="OnContaining" target="This" Condition="0" setvalue="true">
+          <Conditional Scale="gte 0.75" />
+          <SpawnCharacter speciesname="balloon"/>
+          <Remove />
+        </StatusEffect>
+      </Containable>
+    </ItemContainer>
+    <LightComponent range="15" lightcolor="180,150,30,150" powerconsumption="0" IsOn="true" castshadows="false" allowingameediting="false" pulsefrequency="0.2" pulseamount="0.30" />
+  </Item>
+
+  <Item name="" identifier="smallcrawleregg" nameidentifier="crawleregg" Tags="smallitem,ignorebyai,monsterfood,egg,smallegg" sonarsize="2" health="10" damagedbyexplosions="true" damagedbyprojectiles="true" damagedbymeleeweapons="true" damagedbyrepairtools="true" category="Misc" scale="1" impactsoundtag="impact_soft" impacttolerance="0.05" hideinmenus="true" IsAITurretTarget="true" AITurretPriority="0.75" AISlowTurretPriority="0" AITurretTargetingMaxDistance="2000">
+    <Sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" depth="0.18" sourcerect="323,203,45,53" origin="0.5,0.5" />
+    <Body radius="20" mindensity="9" maxdensity="11" />
+    <Price baseprice="80" sold="false" />
+    <Deconstruct time="10">
+      <Item identifier="sulphuricacid" />
+    </Deconstruct>
+    <Holdable slots="RightHand,LeftHand,Any" holdpos="0,-70" handle1="0,10" handle2="0,-10">
+      <StatusEffect type="OnBroken" target="This">
+        <particleemitter particle="mudrapeggbrownchunks" particleamount="30" velocitymin="100" velocitymax="2000" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.5" />
+        <particleemitter particle="acidmistsmall" particleamount="1" />
+        <particleemitter particle="eggsplashwater" particleamount="5" scalemin="0.7" scalemax="0.8" anglemin="0" anglemax="360" />
+        <Sound file="Content/Characters/Crawlerbroodmother/CRAWLERBR_eggHit1.ogg" range="2000" selectionmode="Random" />
+        <Sound file="Content/Characters/Crawlerbroodmother/CRAWLERBR_eggHit2.ogg" range="2000" selectionmode="Random" />
+        <Sound file="Content/Characters/Crawlerbroodmother/CRAWLERBR_eggHit3.ogg" range="2000" selectionmode="Random" />
+        <Sound file="Content/Characters/Crawlerbroodmother/CRAWLERBR_eggHit4.ogg" range="2000" selectionmode="Random" />
+        <Sound file="Content/Characters/Crawlerbroodmother/CRAWLERBR_eggHit5.ogg" range="2000" selectionmode="Random" />
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnDamaged" target="This">
+        <particleemitter particle="mudrapeggbrownchunks" particleamount="1" velocitymin="100" velocitymax="1000" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.3" />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="This" Condition="-100" setvalue="true">
+        <Explosion range="100" structuredamage="200" itemdamage="75" smoke="false" flames="false" force="0" sparks="false" shockwave="true" underwaterbubble="false" camerashake="0" flash="false" playtinnitus="false">
+          <Affliction identifier="stun" strength="0.5" probability="1" />
+          <Affliction identifier="acidburn" strength="25" probability="1" />
+        </Explosion>
+      </StatusEffect>
+    </Holdable>
+    <LightComponent range="20" lightcolor="127,196,196,61" powerconsumption="0" IsOn="true" castshadows="false" allowingameediting="false">
+      <sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" depth="0.025" sourcerect="327,165,35,38" origin="0.5,0.5" alpha="1.0" />
+    </LightComponent>
+    <aitarget sightrange="1000" static="true" />
+  </Item>
+  
+  <Item name="" identifier="smallmudraptoregg" nameidentifier="mudraptoregg" Tags="smallitem,ignorebyai,mudraptoregg,egg,smallegg" health="20" damagedbyexplosions="true" damagedbyprojectiles="true" damagedbymeleeweapons="true" damagedbyrepairtools="true" category="Misc" scale="0.5" impactsoundtag="impact_soft">
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    <!-- don't allow as a daily special or requested item, because there's 3 identical-looking variants of the egg and it can be confusing if your variant isn't accepted as the requested item -->
+    <Price baseprice="300" sold="false" canbespecial="false">
+      <Price storeidentifier="merchantoutpost" multiplier="0.85" />
+      <Price storeidentifier="merchantcity" multiplier="0.9" />
+      <Price storeidentifier="merchantresearch" sold="true" multiplier="1.5" minavailable="1"/>
+      <Price storeidentifier="merchantmilitary" multiplier="1.1" />
+      <Price storeidentifier="merchantmine" multiplier="0.85" />
+    </Price>
+    <PreferredContainer primary="toxcontainer" spawnprobability="0.01" notcampaign="true" notpvp="true"/>
+    <PreferredContainer secondary="locker" spawnprobability="0.01" notcampaign="true" notpvp="true"/>
+    <Sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" depth="0.18" sourcerect="164,3,42,49" origin="0.5,0.5" />
+    <Deconstruct time="10">
+      <Item identifier="alienblood" />
+    </Deconstruct>
+    <Body width="40" height="45" friction="1.0" restitution="0.01" angulardamping="0.8" density="10.5"/>
+    <Holdable slots="RightHand,LeftHand,Any" holdpos="0,-70" handle1="0,10" handle2="0,-10">
+      <StatusEffect type="OnBroken" target="This">
+        <particleemitter particle="whitegoosplash" particleamount="20" velocitymin="0" velocitymax="300" anglemin="0" anglemax="360" scalemin="0.5" scalemax="1.0" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+        <particleemitter particle="mudrapeggbrownchunks" particleamount="100" velocitymin="100" velocitymax="2000" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.5" />
+        <Sound file="Content/Sounds/Damage/Gore6.ogg" range="500" />
+        <Remove />
+      </StatusEffect>
+	    <StatusEffect type="OnDamaged" target="This">
+	      <particleemitter particle="mudrapeggbrownchunks" particleamount="8" velocitymin="100" velocitymax="1000" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.5" />
+	    </StatusEffect>
+      <StatusEffect type="OnFire" target="This" Condition="-5.0"/>
+    </Holdable>
+    <ItemContainer capacity="1" maxstacksize="1" hideitems="true" showcontainedstateindicator="false">
+      <Containable items="antibloodloss1">
+        <!-- increase scale -->
+        <StatusEffect type="OnContaining" target="This" Scale="0.005"/>
+        <StatusEffect type="OnContaining" target="Contained" Condition="-1"/>
+        <!-- remove and spawn a medium egg when scale is greater than or equal to 0.95 -->
+        <StatusEffect type="OnContaining" target="This">
+          <Sound file="Content/Sounds/Damage/Gore6.ogg" range="500" />
+          <particleemitter particle="brownchunks" particleamount="10" emitinterval="1000" velocitymin="0" velocitymax="100" anglemin="0" anglemax="360" scalemin="0.1" scalemax="0.3" />
+          <Conditional Scale="gte 0.95" />
+          <SpawnItem identifier="mediummudraptoregg" spawnposition="SameInventory" inheriteventtags="true" SpawnIfInventoryFull="true" SpawnIfNotInInventory="true" />
+          <Remove />
+        </StatusEffect>
+      </Containable>
+    </ItemContainer>
+    <LightComponent range="5" lightcolor="127,196,196,61" powerconsumption="0" IsOn="true" castshadows="false" allowingameediting="false" pulsefrequency="1" pulseamount="0.30">
+      <sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" depth="0.025" sourcerect="164,3,42,49" origin="0.5,0.5" alpha="1.0" />
+    </LightComponent>
+    <LightComponent range="20" lightcolor="255,199,0,58" powerconsumption="0" IsOn="true" castshadows="false" allowingameediting="false">
+      <sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" depth="0.025" sourcerect="164,3,42,49" origin="0.5,0.5" alpha="1.0" />
+    </LightComponent>
+  </Item>
+  
+  <Item name="" identifier="mediummudraptoregg" nameidentifier="mudraptoregg" Tags="mediumitem,ignorebyai,mudraptoregg,egg,smallegg" hideinmenus="true" health="40" damagedbyexplosions="true" damagedbyprojectiles="true" damagedbymeleeweapons="true" damagedbyrepairtools="true" category="Misc" scale="0.4" impactsoundtag="impact_soft">
+    <Upgrade gameversion="0.20.15.0" scale="0.4" />
+    <Price baseprice="800" sold="false"/>
+    <Sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" depth="0.18" sourcerect="235,156,67,82" origin="0.5,0.5" />
+    <Deconstruct time="10">
+      <Item identifier="alienblood" />
+      <Item identifier="adrenalinegland" />
+    </Deconstruct>
+    <!-- rectangular body to prevent the egg from rolling -->
+    <Body width="65" height="75" friction="1.0" restitution="0.01" angulardamping="1.0" density="11" />
+    <Holdable slots="RightHand+LeftHand" holdpos="40,-80" handle1="-18,-12" handle2="18,-12" aimable="false">
+      <StatusEffect type="OnBroken" target="This">
+        <particleemitter particle="whitegoosplash" particleamount="20" velocitymin="0" velocitymax="300" anglemin="0" anglemax="360" scalemin="0.5" scalemax="1.0" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+        <particleemitter particle="mudrapeggbrownchunks" particleamount="100" velocitymin="100" velocitymax="2000" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.5" />
+        <Sound file="Content/Sounds/Damage/Gore6.ogg" range="500" />
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+    <ItemContainer capacity="1" maxstacksize="1" hideitems="true" showcontainedstateindicator="false" canbeselected="true">
+      <GuiFrame relativesize="0.15,0.2" anchor="Center" style="ItemUI" />
+	    <StatusEffect type="OnDamaged" target="This">
+	      <particleemitter particle="mudrapeggbrownchunks" particleamount="8" velocitymin="100" velocitymax="1000" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.5" />
+	    </StatusEffect>
+      <StatusEffect type="OnFire" target="This" Condition="-5.0"/>
+      <Containable items="antibloodloss1">
+        <!-- increase scale -->
+        <StatusEffect type="OnContaining" target="This" Scale="0.005"/>
+        <StatusEffect type="OnContaining" target="Contained" Condition="-1"/>
+        <StatusEffect type="OnContaining" target="This">
+          <Sound file="Content/Sounds/Damage/Gore6.ogg" range="500" />
+          <particleemitter particle="brownchunks" particleamount="10" emitinterval="1000" velocitymin="0" velocitymax="500" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.5" />
+          <Conditional Scale="gte 0.75" />
+          <SpawnItem identifier="largemudraptoregg" spawnposition="SameInventory" inheriteventtags="true" SpawnIfInventoryFull="true" SpawnIfNotInInventory="true" />
+          <Remove />
+        </StatusEffect>
+      </Containable>
+    </ItemContainer>
+    <LightComponent range="5" lightcolor="127,196,196,61" powerconsumption="0" IsOn="true" castshadows="false" allowingameediting="false" pulsefrequency="1" pulseamount="0.30">
+      <sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" depth="0.025" sourcerect="235,156,67,82" origin="0.5,0.5" alpha="1.0" />
+    </LightComponent>
+    <LightComponent range="30" lightcolor="255,199,0,58" powerconsumption="0" IsOn="true" castshadows="false" allowingameediting="false">
+      <sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" depth="0.025" sourcerect="235,156,67,82" origin="0.5,0.5" alpha="1.0" />
+    </LightComponent>
+  </Item>
+    
+  <!-- Large eggs -->
+  <Item name="" identifier="largemudraptoregg" nameidentifier="mudraptoregg" Tags="largeitem,ignorebyai,mudraptoregg,egg,largeegg" hideinmenus="true" health="60" damagedbyexplosions="true" damagedbyprojectiles="true" damagedbymeleeweapons="true" damagedbyrepairtools="true" category="Misc" scale="0.4" impactsoundtag="impact_soft">
+    <Upgrade gameversion="0.20.15.0" scale="0.4" />
+    <Price baseprice="1000" sold="false"/>
+    <Sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" depth="0.18" sourcerect="80,105,124,147" origin="0.5,0.5" />
+    <Deconstruct time="10">
+      <Item identifier="alienblood" amount="2" />
+      <Item identifier="adrenalinegland" amount="2" />
+    </Deconstruct>
+    <!-- rectangular body to prevent the egg from rolling -->
+    <Body width="120" height="120" friction="1.0" restitution="0.01" angulardamping="1.0" density="12" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-30,14" handle2="30,14" swingamount="15,15" swingspeed="2" swingwhenholding="True">
+      <StatusEffect type="OnActive" target="This" swingamount="100,100" swingspeed="5" setvalue="true">
+        <particleemitter particle="brownchunks" particlespersecond="5" velocitymin="0" velocitymax="500" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.5" />
+        <Conditional Scale="gte 0.47" />
+      </StatusEffect>
+    </Holdable>
+    <ItemContainer capacity="1" maxstacksize="1" hideitems="true" showcontainedstateindicator="false" canbeselected="true">
+      <GuiFrame relativesize="0.15,0.2" anchor="Center" style="ItemUI" />
+      <StatusEffect type="OnBroken" target="This">
+        <particleemitter particle="mudrapeggbrownchunks" particleamount="100" velocitymin="100" velocitymax="2000" anglemin="0" anglemax="360" scalemin="0.4" scalemax="0.6" />
+        <particleemitter particle="whitegoosplash" particleamount="20" velocitymin="0" velocitymax="300" anglemin="0" anglemax="360" scalemin="0.5" scalemax="1.0" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+        <Sound file="Content/Sounds/Damage/Gore4.ogg" range="500" />
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnDamaged" target="This">
+        <particleemitter particle="mudrapeggbrownchunks" particleamount="8" velocitymin="100" velocitymax="1000" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.5" />
+      </StatusEffect>
+      <StatusEffect type="OnFire" target="This" Condition="-5.0"/>      
+      <StatusEffect type="Always" target="This" Condition="0" setvalue="true">
+        <Conditional Scale="gte 0.5" />
+        <Remove />
+        <SpawnCharacter speciesname="Mudraptor_hatchling" inheriteventtags="true" />
+      </StatusEffect>      
+      <Containable items="antibloodloss1">
+        <!-- increase scale -->
+        <StatusEffect type="OnContaining" target="This" Scale="0.002"/>
+        <StatusEffect type="OnContaining" target="Contained" Condition="-1"/>
+      </Containable>
+    </ItemContainer>
+    <LightComponent range="5" lightcolor="127,196,196,61" powerconsumption="0" IsOn="true" castshadows="false" allowingameediting="false" pulsefrequency="1" pulseamount="0.30">
+      <sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" depth="0.025" sourcerect="300,291,98,113" origin="0.5,0.5" alpha="1.0" />
+    </LightComponent>
+    <LightComponent range="40" lightcolor="255,199,0,58" powerconsumption="0" IsOn="true" castshadows="false" allowingameediting="false">
+      <sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" depth="0.025" sourcerect="410,301,88,95" origin="0.5,0.5" alpha="1.0" />
+    </LightComponent>
+  </Item>  
+  
+  <Item name="" identifier="crawleregg" Tags="largeitem,ignorebyai,monsterfood,egg,largeegg" hideinmenus="true" health="20" damagedbyexplosions="true" damagedbyprojectiles="true" damagedbymeleeweapons="true" damagedbyrepairtools="true" category="Misc" spritecolor="199,253,172,255" scale="0.5" impactsoundtag="impact_soft">
+    <Sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" depth="0.18" sourcerect="8,280,118,145" origin="0.5,0.5" />
+    <Price baseprice="200" sold="false"/>
+    <Deconstruct time="10">
+      <Item identifier="alienblood" />
+      <Item identifier="sulphuricacid" />
+    </Deconstruct>
+    <!-- rectangular body to prevent the egg from rolling -->
+    <Body width="110" height="120" friction="1.0" restitution="0.01" angulardamping="1.0" density="12"/>
+    <Holdable slots="RightHand+LeftHand" holdpos="35,-30" handle1="0,-10" handle2="0,-20" swingamount="15,15" swingspeed="2" swingwhenholding="True">
+      <StatusEffect type="OnActive" target="This" swingamount="100,100" swingspeed="5" setvalue="true">
+        <particleemitter particle="brownchunks" particlespersecond="5" velocitymin="0" velocitymax="500" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.5" />
+        <Conditional Scale="gte 0.7" />
+      </StatusEffect>
+    </Holdable>
+    <ItemContainer capacity="1" maxstacksize="1" hideitems="true" showcontainedstateindicator="false" canbeselected="true">
+      <GuiFrame relativesize="0.15,0.2" anchor="Center" style="ItemUI" />
+      <StatusEffect type="OnBroken" target="This">
+        <particleemitter particle="mudrapeggbrownchunks" particleamount="100" velocitymin="100" velocitymax="2000" anglemin="0" anglemax="360" scalemin="0.4" scalemax="0.6" />
+        <particleemitter particle="whitegoosplash" particleamount="20" velocitymin="0" velocitymax="300" anglemin="0" anglemax="360" scalemin="0.5" scalemax="1.0" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+        <Sound file="Content/Sounds/Damage/Gore4.ogg" range="500" />
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnDamaged" target="This">
+        <particleemitter particle="mudrapeggbrownchunks" particleamount="8" velocitymin="100" velocitymax="1000" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.5" />
+      </StatusEffect>
+      <StatusEffect type="OnFire" target="This" Condition="-5.0"/>
+      <!-- spawn a crawler and remove the item if scale is above 0.75 -->
+      <StatusEffect type="Always" target="This" Condition="0" setvalue="true">
+        <Conditional Scale="gte 0.75" />
+        <SpawnCharacter speciesname="Crawler_hatchling" />
+        <Remove />
+      </StatusEffect>
+      <Containable items="antibloodloss1">
+        <!-- increase scale -->
+        <StatusEffect type="OnContaining" target="This" Scale="0.005"/>
+        <StatusEffect type="OnContaining" target="Contained" Condition="-1"/>
+      </Containable>
+    </ItemContainer>
+    <LightComponent range="5" lightcolor="255,0,0,61" powerconsumption="0" IsOn="true" castshadows="false" allowingameediting="false" pulsefrequency="1" pulseamount="0.30" >
+      <sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" depth="0.025" sourcerect="300,291,98,113" origin="0.5,0.6" alpha="1.0" />
+    </LightComponent>
+    <LightComponent range="40" lightcolor="255,199,0,58" powerconsumption="0" IsOn="true" castshadows="false" allowingameediting="false">
+      <sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" depth="0.025" sourcerect="410,301,88,95" origin="0.5,0.6" alpha="1.0" />
+    </LightComponent>
+  </Item>
+
+  <Item name="" identifier="tigerthresheregg" Tags="largeitem,ignorebyai,monsterfood,egg,largeegg" hideinmenus="true" health="60" damagedbyexplosions="true" damagedbyprojectiles="true" damagedbymeleeweapons="true" damagedbyrepairtools="true" category="Misc" spritecolor="185,230,240,255" scale="0.5" impactsoundtag="impact_soft">
+    <Sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" depth="0.18" sourcerect="165,280,114,145" origin="0.5,0.5" />
+    <Price baseprice="370" sold="false"/>
+    <Deconstruct time="10">
+      <Item identifier="adrenalinegland" />
+      <Item identifier="alienblood" />
+    </Deconstruct>
+    <!-- rectangular body to prevent the egg from rolling -->
+    <Body width="110" height="120" friction="1.0" restitution="0.01" angulardamping="1.0" density="12"/>
+    <Holdable slots="RightHand+LeftHand" holdpos="35,-30" handle1="0,-10" handle2="0,-20" swingamount="15,15" swingspeed="2" swingwhenholding="True">
+      <StatusEffect type="OnActive" target="This" swingamount="100,100" swingspeed="5" setvalue="true">
+        <particleemitter particle="brownchunks" particlespersecond="5" velocitymin="0" velocitymax="500" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.5" />
+        <Conditional Scale="gte 0.7" />
+      </StatusEffect>
+    </Holdable>
+    <ItemContainer capacity="1" maxstacksize="1" hideitems="true" showcontainedstateindicator="false" canbeselected="true">
+      <GuiFrame relativesize="0.15,0.2" anchor="Center" style="ItemUI" />
+      <StatusEffect type="OnBroken" target="This">
+        <particleemitter particle="mudrapeggbrownchunks" particleamount="100" velocitymin="100" velocitymax="2000" anglemin="0" anglemax="360" scalemin="0.4" scalemax="0.6" />
+        <particleemitter particle="whitegoosplash" particleamount="20" velocitymin="0" velocitymax="300" anglemin="0" anglemax="360" scalemin="0.5" scalemax="1.0" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+        <Sound file="Content/Sounds/Damage/Gore4.ogg" range="500" />
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnDamaged" target="This">
+        <particleemitter particle="mudrapeggbrownchunks" particleamount="8" velocitymin="100" velocitymax="1000" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.5" />
+      </StatusEffect>
+      <StatusEffect type="OnFire" target="This" Condition="-5.0"/>      
+      <!-- spawn a thresher and remove the item if scale is above 0.95 -->
+      <StatusEffect type="Always" target="This" Condition="0" setvalue="true">
+        <Conditional Scale="gte 0.75" />
+        <SpawnCharacter speciesname="Tigerthresher_hatchling" />
+        <Remove />
+      </StatusEffect>      
+      <Containable items="antibloodloss1,alienblood">
+        <!-- increase scale -->
+        <StatusEffect type="OnContaining" target="This" Scale="0.005"/>
+        <StatusEffect type="OnContaining" target="Contained" Condition="-1"/>
+      </Containable>
+    </ItemContainer>
+    <LightComponent range="5" lightcolor="217,157,0,61" powerconsumption="0" IsOn="true" castshadows="false" allowingameediting="false" pulsefrequency="1" pulseamount="0.30">
+      <sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" depth="0.025" sourcerect="300,291,98,113" origin="0.5,0.6" alpha="1.0" />
+    </LightComponent>
+    <LightComponent range="40" lightcolor="255,199,0,58" powerconsumption="0" IsOn="true" castshadows="false" allowingameediting="false">
+      <sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" depth="0.025" sourcerect="410,301,88,95" origin="0.5,0.6" alpha="1.0" />
+    </LightComponent>
+  </Item>
+  
+  <!-- Make the projectiles non-interactable and pop after 5 seconds. You want to grab crawlereggsmall instead -->
+  <Item name="" identifier="crawlereggprojectile" nameidentifier="crawleregg" Tags="ignorebyai" sonarsize="2" health="10" scale="1" damagedbyexplosions="true" damagedbyprojectiles="true" damagedbymeleeweapons="true" damagedbyrepairtools="true" category="Misc" impactsoundtag="impact_soft" impacttolerance="0.05" hideinmenus="true" IsAITurretTarget="true" AITurretPriority="2" AISlowTurretPriority="0" noninteractable="true">
+    <Sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" depth="0.18" sourcerect="323,203,45,53" origin="0.5,0.5" />
+    <Body radius="20" mindensity="9" maxdensity="11" />
+    <Deconstruct time="10">
+      <Item identifier="sulphuricacid" />
+    </Deconstruct>
+    <Holdable slots="RightHand,LeftHand,Any" holdpos="0,-70" handle1="0,10" handle2="0,-10" />
+    <Projectile characterusable="false" launchimpulse="18" deactivationtime="1" IgnoreProjectilesWhileActive="true" damagedoors="true">
+      <Attack structuredamage="10" itemdamage="10" targetforce="100">
+        <Affliction identifier="stun" strength="3" probability="1" />
+        <Affliction identifier="blunttrauma" strength="20" probability="1" />
+      </Attack>
+      <StatusEffect type="OnActive" target="This" condition="-20" >
+        <ParticleEmitter particle="bubbles" particlespersecond="10" scalemin="1" scalemax="2" anglemin="0" anglemax="360" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <particleemitter particle="mudrapeggbrownchunks" particleamount="30" velocitymin="100" velocitymax="2000" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.5" />
+        <particleemitter particle="acidmistsmall" particleamount="1" />
+        <particleemitter particle="eggsplashwater" particleamount="5" scalemin="0.7" scalemax="0.8" anglemin="0" anglemax="360" />
+        <Sound file="Content/Characters/Crawlerbroodmother/CRAWLERBR_eggHit1.ogg" range="2000" selectionmode="Random" />
+        <Sound file="Content/Characters/Crawlerbroodmother/CRAWLERBR_eggHit2.ogg" range="2000" selectionmode="Random" />
+        <Sound file="Content/Characters/Crawlerbroodmother/CRAWLERBR_eggHit3.ogg" range="2000" selectionmode="Random" />
+        <Sound file="Content/Characters/Crawlerbroodmother/CRAWLERBR_eggHit4.ogg" range="2000" selectionmode="Random" />
+        <Sound file="Content/Characters/Crawlerbroodmother/CRAWLERBR_eggHit5.ogg" range="2000" selectionmode="Random" />
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnDamaged" target="This">
+        <particleemitter particle="mudrapeggbrownchunks" particleamount="1" velocitymin="100" velocitymax="1000" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.3" />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="This" Condition="-100" setvalue="true">
+        <Explosion range="100" structuredamage="200" itemdamage="75" smoke="false" flames="false" force="0" sparks="false" shockwave="true" underwaterbubble="false" camerashake="0" flash="false" playtinnitus="false">
+          <Affliction identifier="stun" strength="0.5" probability="1" />
+          <Affliction identifier="acidburn" strength="25" probability="1" />
+        </Explosion>
+      </StatusEffect>
+    </Projectile>
+    <LightComponent range="20" lightcolor="127,196,196,61" powerconsumption="0" IsOn="true" castshadows="false" allowingameediting="false">
+      <sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" depth="0.025" sourcerect="327,165,35,38" origin="0.5,0.5" alpha="1.0" />
+    </LightComponent>
+  </Item>
+
+  
   </Items>
 </Override>
