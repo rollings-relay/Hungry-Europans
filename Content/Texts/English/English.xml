@@ -346,7 +346,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entityname.he-rawendwormmeat>Raw Endworm Meat</entityname.he-rawendwormmeat>
 <entitydescription.he-rawendwormmeat>Spoils if not refrigerated.</entitydescription.he-rawendwormmeat>
 <entityname.he-rawendwormsausage>Raw Endworm Sausage</entityname.he-rawendwormsausage>
-<entitydescription.he-rawendwormsausage>Spoils if not refrigerated.</entitydescription.he-rawendwormsausage>
+<entitydescription.he-rawendwormsausage>Expect the wurst! Spoils if not refrigerated.</entitydescription.he-rawendwormsausage>
 <entityname.he-rawendwormmeatpatty>Raw Endworm Meat Patty</entityname.he-rawendwormmeatpatty>
 <entitydescription.he-rawendwormmeatpatty>Spoils if not refrigerated.</entitydescription.he-rawendwormmeatpatty>
 <entityname.he-humanmeatchunk>Human Meat</entityname.he-humanmeatchunk>
@@ -354,7 +354,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entityname.he-rawhumanmeat>Raw Human Meat</entityname.he-rawhumanmeat>
 <entitydescription.he-rawhumanmeat>Spoils if not refrigerated.</entitydescription.he-rawhumanmeat>
 <entityname.he-rawhumansausage>Raw Human Sausage</entityname.he-rawhumansausage>
-<entitydescription.he-rawhumansausage>Spoils if not refrigerated.</entitydescription.he-rawhumansausage>
+<entitydescription.he-rawhumansausage>Expect the wurst! Spoils if not refrigerated.</entitydescription.he-rawhumansausage>
 <entityname.he-rawhumanmeatpatty>Raw Human Meat Patty</entityname.he-rawhumanmeatpatty>
 <entitydescription.he-rawhumanmeatpatty>Spoils if not refrigerated.</entitydescription.he-rawhumanmeatpatty>
 <entityname.he-rawhumannuggets>Pile of Raw Human Nuggets</entityname.he-rawhumannuggets><!--Patch 13-->
@@ -367,7 +367,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entityname.he-rawcrawlermeat>Raw Crawler Meat</entityname.he-rawcrawlermeat>
 <entitydescription.he-rawcrawlermeat>Spoils if not refrigerated.</entitydescription.he-rawcrawlermeat>
 <entityname.he-rawcrawlersausage>Raw Crawler Sausage</entityname.he-rawcrawlersausage>
-<entitydescription.he-rawcrawlersausage>Spoils if not refrigerated.</entitydescription.he-rawcrawlersausage>
+<entitydescription.he-rawcrawlersausage>Expect the wurst! Spoils if not refrigerated.</entitydescription.he-rawcrawlersausage>
 <entityname.he-rawcrawlermeatpatty>Raw Crawler Meat Patty</entityname.he-rawcrawlermeatpatty>
 <entitydescription.he-rawcrawlermeatpatty>Spoils if not refrigerated.</entitydescription.he-rawcrawlermeatpatty>
 <entityname.he-rawcrawlernuggets>Pile of Raw Crawler Nuggets</entityname.he-rawcrawlernuggets><!--Patch 13-->
@@ -378,7 +378,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entityname.he-rawmudraptormeat>Raw Mudraptor Meat</entityname.he-rawmudraptormeat>
 <entitydescription.he-rawmudraptormeat>Spoils if not refrigerated.</entitydescription.he-rawmudraptormeat>
 <entityname.he-rawmudraptorsausage>Raw Mudraptor Sausage</entityname.he-rawmudraptorsausage>
-<entitydescription.he-rawmudraptorsausage>Spoils if not refrigerated.</entitydescription.he-rawmudraptorsausage>
+<entitydescription.he-rawmudraptorsausage>Expect the wurst! Spoils if not refrigerated.</entitydescription.he-rawmudraptorsausage>
 <entityname.he-rawmudraptormeatpatty>Raw Mudraptor Meat Patty</entityname.he-rawmudraptormeatpatty>
 <entitydescription.he-rawmudraptormeatpatty>Spoils if not refrigerated.</entitydescription.he-rawmudraptormeatpatty>
 <entityname.he-rawmudraptorroast>Raw Mudraptor Roast</entityname.he-rawmudraptorroast>
@@ -391,7 +391,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entityname.he-rawhammerheadmeat>Raw Hammerhead Meat</entityname.he-rawhammerheadmeat>
 <entitydescription.he-rawhammerheadmeat>Spoils if not refrigerated.</entitydescription.he-rawhammerheadmeat>
 <entityname.he-rawhammerheadsausage>Raw Hammerhead Sausage</entityname.he-rawhammerheadsausage>
-<entitydescription.he-rawhammerheadsausage>Spoils if not refrigerated.</entitydescription.he-rawhammerheadsausage>
+<entitydescription.he-rawhammerheadsausage>Expect the wurst! Spoils if not refrigerated.</entitydescription.he-rawhammerheadsausage>
 <entityname.he-rawhammerheadmeatpatty>Raw Hammerhead Meat Patty</entityname.he-rawhammerheadmeatpatty>
 <entitydescription.he-rawhammerheadmeatpatty>Spoils if not refrigerated.</entitydescription.he-rawhammerheadmeatpatty>
 <entityname.he-rawhammerheadspareribs>Raw Hammerhead Spareribs</entityname.he-rawhammerheadspareribs>
@@ -408,7 +408,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entityname.he-rawthreshermeat>Raw Thresher Meat</entityname.he-rawthreshermeat>
 <entitydescription.he-rawthreshermeat>Spoils if not refrigerated.</entitydescription.he-rawthreshermeat>
 <entityname.he-rawthreshersausage>Raw Thresher Sausage</entityname.he-rawthreshersausage>
-<entitydescription.he-rawthreshersausage>Spoils if not refrigerated.</entitydescription.he-rawthreshersausage>
+<entitydescription.he-rawthreshersausage>Expect the wurst! Spoils if not refrigerated.</entitydescription.he-rawthreshersausage>
 <entityname.he-rawthreshermeatpatty>Raw Thresher Meat Patty</entityname.he-rawthreshermeatpatty>
 <entitydescription.he-rawthreshermeatpatty>Spoils if not refrigerated.</entitydescription.he-rawthreshermeatpatty>
 <entityname.he-rawthreshernuggets>Pile of Raw Thresher Nuggets</entityname.he-rawthreshernuggets><!--Patch 13-->
@@ -419,7 +419,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entityname.he-rawhuskmeat>Raw Husk Meat</entityname.he-rawhuskmeat><!--Patch 13-->
 <entitydescription.he-rawhuskmeat>Spoils if not refrigerated.</entitydescription.he-rawhuskmeat><!--Patch 13-->
 <entityname.he-rawhusksausage>Raw Husk Sausage</entityname.he-rawhusksausage><!--Patch 13-->
-<entitydescription.he-rawhusksausage>Spoils if not refrigerated.</entitydescription.he-rawhusksausage><!--Patch 13-->
+<entitydescription.he-rawhusksausage>Expect the wurst! Spoils if not refrigerated.</entitydescription.he-rawhusksausage><!--Patch 13-->
 <entityname.he-rawhuskmeatpatty>Raw Husk Meat Patty</entityname.he-rawhuskmeatpatty><!--Patch 13-->
 <entitydescription.he-rawhuskmeatpatty>Spoils if not refrigerated.</entitydescription.he-rawhuskmeatpatty><!--Patch 13-->
 <entityname.he-rawhusknuggets>Pile of Raw Husk Nuggets</entityname.he-rawhusknuggets><!--Patch 13-->
@@ -432,7 +432,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entityname.he-rawwatchersteak>Raw Watcher Steak</entityname.he-rawwatchersteak><!--Patch 13-->
 <entitydescription.he-rawwatchersteak>Spoils if not refrigerated.</entitydescription.he-rawwatchersteak><!--Patch 13-->
 <entityname.he-rawwatchersausage>Raw Watcher Sausage</entityname.he-rawwatchersausage><!--Patch 13-->
-<entitydescription.he-rawwatchersausage>Spoils if not refrigerated.</entitydescription.he-rawwatchersausage><!--Patch 13-->
+<entitydescription.he-rawwatchersausage>Expect the wurst! Spoils if not refrigerated.</entitydescription.he-rawwatchersausage><!--Patch 13-->
 <entityname.he-rawwatchermeatpatty>Raw Watcher Meat Patty</entityname.he-rawwatchermeatpatty><!--Patch 13-->
 <entitydescription.he-rawwatchermeatpatty>Spoils if not refrigerated.</entitydescription.he-rawwatchermeatpatty><!--Patch 13-->
 <entityname.he-rawwatchernuggets>Pile of Raw Watcher Nuggets</entityname.he-rawwatchernuggets><!--Patch 13-->
@@ -445,7 +445,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entityname.he-rawmolochsteak>Raw Moloch Steak</entityname.he-rawmolochsteak><!--Patch 13-->
 <entitydescription.he-rawmolochsteak>Spoils if not refrigerated.</entitydescription.he-rawmolochsteak><!--Patch 13-->
 <entityname.he-rawmolochsausage>Raw Moloch Sausage</entityname.he-rawmolochsausage><!--Patch 13-->
-<entitydescription.he-rawmolochsausage>Spoils if not refrigerated.</entitydescription.he-rawmolochsausage><!--Patch 13-->
+<entitydescription.he-rawmolochsausage>Expect the wurst! Spoils if not refrigerated.</entitydescription.he-rawmolochsausage><!--Patch 13-->
 <entityname.he-rawmolochmeatpatty>Raw Moloch Meat Patty</entityname.he-rawmolochmeatpatty><!--Patch 13-->
 <entitydescription.he-rawmolochmeatpatty>Spoils if not refrigerated.</entitydescription.he-rawmolochmeatpatty><!--Patch 13-->
 <entityname.he-rawmolochnuggets>Pile of Raw Moloch Nuggets</entityname.he-rawmolochnuggets><!--Patch 13-->
@@ -458,7 +458,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entityname.he-rawspinelingsteak>Raw Spineling Steak</entityname.he-rawspinelingsteak><!--Patch 13-->
 <entitydescription.he-rawspinelingsteak>Spoils if not refrigerated.</entitydescription.he-rawspinelingsteak><!--Patch 13-->
 <entityname.he-rawspinelingsausage>Raw Spineling Sausage</entityname.he-rawspinelingsausage><!--Patch 13-->
-<entitydescription.he-rawspinelingsausage>Spoils if not refrigerated.</entitydescription.he-rawspinelingsausage><!--Patch 13-->
+<entitydescription.he-rawspinelingsausage>Expect the wurst! Spoils if not refrigerated.</entitydescription.he-rawspinelingsausage><!--Patch 13-->
 <entityname.he-rawspinelingmeatpatty>Raw Spineling Meat Patty</entityname.he-rawspinelingmeatpatty><!--Patch 13-->
 <entitydescription.he-rawspinelingmeatpatty>Spoils if not refrigerated.</entitydescription.he-rawspinelingmeatpatty><!--Patch 13-->
 <entityname.he-rawspinelingnuggets>Pile of Raw Spineling Nuggets</entityname.he-rawspinelingnuggets><!--Patch 13-->
