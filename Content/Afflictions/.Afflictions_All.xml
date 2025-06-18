@@ -18,6 +18,7 @@
       <Effect minstrength="0" maxstrength="1" strengthchange="-1" />
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,640,128,128" color="150,26,26,255" origin="0,0" />
     </Affliction>
+
     <!-- NEEDS INTEGRATION -->
     <Affliction name="Tiredness"
       identifier="fatigue"
@@ -58,6 +59,7 @@
       </PeriodicEffect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,128,128,128" origin="0,0" />
     </Affliction>
+
     <Affliction name="Mood"
       identifier="mood"
       description=""
@@ -136,6 +138,9 @@
       </PeriodicEffect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,128,128,128" origin="0,0" />
     </Affliction>
+
+    <!--OVERRIDES-->
+    <!--OVERRIDES-->
     <!--OVERRIDES-->
     <!-- HALLUCINATIONS OVERRIDE TO MAKE IT LAST LONGER AND ADD VISUAL EFFECTS -->
     <!-- temporarily disabled due to a game bug causing performance issues in a level with many light sources
@@ -190,6 +195,7 @@
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,640,128,128" color="150,26,26,255" origin="0,0" />
     </Affliction>
     -->
+
     <!-- HASTE OVERRIDE TO REMOVE SKILL GAIN ON APPLIED -->
     <Affliction
       name="Hyperactivity"
@@ -215,6 +221,7 @@
       <!-- Greater than 1.48 and the ragdolls start snapping when turning and characters take damage from colliding with doors & walls -->
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="128,896,128,128" color="10,193,114,255" origin="0,0" />
     </Affliction>
+
     <!-- DRUNKNESS OVERRIDE -->
     <Affliction
       identifier="drunk"
@@ -392,6 +399,7 @@
       </Effect>
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
+
     <Affliction
       identifier="drunknodebuffs"
       type="debuff"
@@ -489,6 +497,7 @@
       </Effect>
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
+
     <!--NAUSEA OVERRIDE TO REMOVE STUN TO ENABLE STAYING IN BED WHILE PUKING-->
     <Affliction
       name="Nausea"
@@ -594,6 +603,7 @@
       </Effect>
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="128,640,128,128" color="195,177,60,255" origin="0,0" />
     </Stun>
+
     <!--END OF OVERRIDES-->
     <!-- APPLY DRUNK OVER TIME | To simulate alcohol kicking in after some time -->
     <Affliction
@@ -623,6 +633,7 @@
       </Effect>
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
+
     <!-- FOOD AFFLICTIONS -->
     <!-- Husk -->
     <Affliction
@@ -645,6 +656,7 @@
       <Effect minstrength="0" maxstrength="1800" strengthchange="-1" tag="huskinfected" />
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
     </Affliction>
+
     <!-- Watcher -->
     <Affliction
       name="Increased Skill Gain (Food)"
@@ -664,6 +676,7 @@
         maxskillgainmultiplier="1.5" />
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
     </Affliction>
+
     <!-- Human (Only for cannibals) -->
     <Affliction
       name="Increased Skills (Food)"
@@ -683,6 +696,7 @@
         maxskillmultiplier="1.2" />
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
     </Affliction>
+
     <!-- CRAWLER -->
     <!-- 10% -->
     <Affliction
@@ -703,6 +717,7 @@
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
     </Affliction>
+
     <!-- 25% -->
     <Affliction
       name="Increased Swimming Speed (Food)"
@@ -740,6 +755,7 @@
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
     </Affliction>
+
     <!-- 50% -->
     <Affliction
       name="Increased Swimming Speed (Food)"
@@ -795,6 +811,7 @@
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
     </Affliction>
+
     <!-- MUDRAPTOR -->
     <Affliction
       name="Damage Resistance (Food)"
@@ -815,6 +832,7 @@
         maxresistance="0.25" />
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
     </Affliction>
+    
     <Affliction
       name="Increased Walking Speed (Food)"
       identifier="he-increasedwalkingspeedmudraptor"
@@ -833,6 +851,7 @@
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
     </Affliction>
+    
     <!-- MOLOCH -->
     <!-- 25% -->
     <Affliction
@@ -854,6 +873,7 @@
         maxresistance="0.25" />
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
     </Affliction>
+    
     <!-- 50% -->
     <Affliction
       name="Damage Resistance (Food)"
@@ -893,6 +913,7 @@
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
     </Affliction>
+    
     <!-- HAMMERHEAD -->
     <Affliction
       name="Increased Melee Damage (Food)"
@@ -912,6 +933,7 @@
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
     </Affliction>
+    
     <!--THRESHER-->
     <Affliction
       name="Decreased Oxygen Consumption (Food)"
@@ -935,6 +957,7 @@
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
     </Affliction>
+    
     <!-- ENDWORM -->
     <Affliction
       name="Pressure Resistance (Food)"
@@ -955,6 +978,7 @@
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
     </Affliction>
+    
     <!-- CLOWN JUICE -->
     <Affliction
       name="Clown Juice"
@@ -973,6 +997,7 @@
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
     </Affliction>
+    
     <!-- COALITION PREMIUM -->
     <Affliction
       name="Coalition Premium"
@@ -989,6 +1014,7 @@
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
     </Affliction>
+    
     <!-- JOVIAN FORCE -->
     <Affliction
       name="Jovian Force"
@@ -1006,6 +1032,7 @@
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
     </Affliction>
+    
     <!-- HUNGER AND THIRST -->
     <Affliction
       identifier="hunger"
@@ -1100,6 +1127,7 @@
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,128,128,128" origin="0,0" />
       <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/HungerOverlay.png" />
     </Affliction>
+    
     <Affliction
       identifier="thirst"
       name="Thirst"
@@ -1184,6 +1212,7 @@
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="128,128,128,128" origin="0,0" />
     </Affliction>
+    
     <Affliction
       identifier="quenched"
       name="Quenched"
@@ -1228,6 +1257,7 @@
       <Effect minstrength="0" maxstrength="100" strengthchange="-0.02" />
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="384,256,128,128" origin="0,0" />
     </Affliction>
+
     <Affliction
       identifier="he-starvation"
       name="Starvation"
@@ -1263,9 +1293,15 @@
         maxscreenblur="3.0"
         minradialdistort="0.0"
         maxradialdistort="1.0"
-        strengthchange="0" />
+        strengthchange="0" >
+        <StatusEffect target="Character" interval="1" disabledeltatime="true">
+          <Conditional hunger="lt 100" />
+          <ReduceAffliction identifier="he-starvation" strength="999" />
+        </StatusEffect>
+      </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="256,128,128,128" origin="0,0" />
     </Affliction>
+
     <Affliction
       identifier="he-dieofthirst"
       name="Dying of thirst"
@@ -1304,6 +1340,7 @@
         strengthchange="0" />
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="256,128,128,128" origin="0,0" />
     </Affliction>
+
     <Affliction
       name="Alcoholic"
       identifier="he-alcoholism"
@@ -1371,6 +1408,7 @@
 
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="768,128,128,128" color="195,180,60,255" origin="0,0" />
     </Affliction>
+
     <Affliction
       name="Alcohol withdrawal"
       identifier="he-alcoholwithdrawal"
@@ -1483,6 +1521,7 @@
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="896,128,128,128" color="209,121,84,255" origin="0,0" />
     </Affliction>
+
     <Affliction
       name="Disoriented"
       identifier="he-drunkinvertcontrols"
@@ -1513,6 +1552,7 @@
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="640,256,128,128" color="255,255,2255,255" origin="0.5,0.5" />
     </Affliction>
+
     <Affliction
       name="Stuffed"
       identifier="he-stuffed"
@@ -1628,6 +1668,7 @@
       </PeriodicEffect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="256,128,128,128" origin="0,0" />
     </Affliction>
+
     <Affliction
       name="Internal Burn"
       identifier="he-internalburn"
@@ -1659,6 +1700,7 @@
         maxvitalitydecrease="110" />
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="768,640,128,128" color="195,104,60,255" origin="0,0" />
     </Affliction>
+
     <Affliction
       name="Stomach Ache"
       identifier="he-stomachache"
@@ -1798,6 +1840,7 @@
       <icon texture="Content/UI/CommandUIAtlas.png" sourcerect="896,896,128,128" origin="0,0" />
     </Affliction>
     <!-- geneticextraction made by UberPendragon (aka #Bringbacktinkering) -->
+
     <Affliction
       name="geneticextraction"
       identifier="he-geneticextraction"
@@ -1811,6 +1854,7 @@
       <Effect minstrength="0" maxstrength="100" strengthchange="0" />
       <icon texture="Content/UI/CommandUIAtlas.png" sourcerect="896,896,128,128" origin="0,0" />
     </Affliction>
+
     <Affliction
       name="Butchered"
       identifier="he-butchered"
@@ -1823,6 +1867,7 @@
       <Effect minstrength="0" maxstrength="100" strengthchange="0" />
       <icon texture="Content/UI/CommandUIAtlas.png" sourcerect="896,896,128,128" origin="0,0" />
     </Affliction>
+
     <Affliction identifier="he-halucinova1" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="true">
       <Effect minstrength="0" maxstrength="100" strengthchange="-100" />
       <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/halucinovaOverlay1.png" />
@@ -1985,6 +2030,7 @@
       </PeriodicEffect>
       <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/halucinovaOverlayBase.png" />
     </Affliction>
+
     <Affliction
       name="Cannibalism"
       identifier="he-cannibalism"
@@ -2018,6 +2064,7 @@
       <!--<AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/CannibalInfoOverlay.png" />-->
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="640,128,128,128" color="195,180,60,255" origin="0,0" />
     </Affliction>
+
     <Affliction
       name="Hungry for Human Meat"
       identifier="he-hungryforhumanmeat"
@@ -2222,11 +2269,13 @@
       <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/HungerForHumanMeatRedOverlay.png" />
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="512,128,128,128" color="209,121,84,255" origin="0,0" />
     </Affliction>
+
     <!--<Override>
     <Affliction identifier="he-hungryforhumanmeatinfo" showiconthreshold="2000" showinhealthscannerthreshold="2000" maxstrength="100" afflictionoverlayalphaislinear="false">
       <Effect minstrength="0" maxstrength="100" strengthchange="-200" interval="0.5" MinAfflictionOverlayAlphaMultiplier="1.0" MaxAfflictionOverlayAlphaMultiplier="1.0" />
       <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/HungerForHumanMeatInfoOverlay.png" />
     </Affliction>-->
+
     <Affliction identifier="he-hungryforhumanmeatveins" showiconthreshold="2000" showinhealthscannerthreshold="2000" maxstrength="1000" afflictionoverlayalphaislinear="true">
       <Effect minstrength="0" maxstrength="1000" strengthchange="-700">
         <StatusEffect target="Character" disabledeltatime="true" stackable="false">
@@ -2263,6 +2312,7 @@
       </Effect>
       <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/HungerForHumanMeatVeinsOverlay60.png" />
     </Affliction>
+
     <Affliction name="Radiant Influence" identifier="he-giveradianttalent" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" healableinmedicalclinic="false" MedicalSkillGain="0.0">
       <Effect minstrength="0" maxstrength="100" strengthchange="0" interval="0.5">
         <StatusEffect type="Always" target="Character" comparison="And" interval="0.1" multiplyafflictionsbymaxvitality="true" stackable="false">
@@ -2272,6 +2322,7 @@
         </StatusEffect>
       </Effect>
     </Affliction>
+
     <Affliction identifier="he-reaperstribute" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="true" healableinmedicalclinic="false" MedicalSkillGain="0.0">
       <Effect minstrength="0" 
       maxstrength="99" 
@@ -2352,6 +2403,7 @@
       </Effect>
       <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/ReapersTributeOverlay.png" />
     </Affliction>
+
     <Affliction identifier="he-passoutreaper" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="true" healableinmedicalclinic="false" MedicalSkillGain="0.0">
       <Effect minstrength="0" maxstrength="100" strengthchange="0" interval="0.5">
         <StatusEffect type="Always" target="Character" comparison="And" delay="10" disabledeltatime="true" stackable="false">
@@ -2373,6 +2425,7 @@
       </Effect>
       <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/PassOutOverlay.png" />
     </Affliction>
+
     <Affliction identifier="he-passout" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="true" healableinmedicalclinic="false" MedicalSkillGain="0.0">
       <Effect minstrength="0" maxstrength="100" strengthchange="0" interval="0.5">
         <!-- Sound loop to make it harder to hear. Disabled as it might be too annoying 
@@ -2393,6 +2446,7 @@
       </Effect>
       <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/PassOutOverlay.png" />
     </Affliction>
+
     <Affliction name="Sleeping" identifier="he-sleep" showiconthreshold="1000" showinhealthscannerthreshold="0" maxstrength="1" causespeechimpediment="true" afflictionoverlayalphaislinear="false" MinAfflictionOverlayAlphaMultiplier="0" MaxAfflictionOverlayAlphaMultiplier="1" healableinmedicalclinic="false" MedicalSkillGain="0.0">
       <Effect minstrength="0" maxstrength="1" strengthchange="-0.9" MinAfflictionOverlayAlphaMultiplier="1" MaxAfflictionOverlayAlphaMultiplier="1">
         <StatusEffect target="Character" interval="1" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
@@ -2438,10 +2492,12 @@
       -->
       <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/PassOutOverlay.png" />
     </Affliction>
+
     <Affliction identifier="he-hitbypoop" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="30" afflictionoverlayalphaislinear="true" healableinmedicalclinic="false" MedicalSkillGain="0.0">
       <Effect minstrength="0" maxstrength="30" strengthchange="-1" />
       <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/PoopOverlay.png" />
     </Affliction>
+
     <!--EXTRA NEEDS-->
     <Affliction
       identifier="bladder"
@@ -2536,6 +2592,7 @@
       </PeriodicEffect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,256,128,128" origin="0,0" />
     </Affliction>
+
     <Affliction
       identifier="defecate"
       name="Need to defecate"
@@ -2628,6 +2685,7 @@
       </PeriodicEffect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="128,256,128,128" origin="0,0" />
     </Affliction>
+
     <Affliction
       name="Embarrassed"
       identifier="embarrassment"
@@ -2656,6 +2714,7 @@
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="256,256,128,128" color="180,180,0,255" origin="0,0" />
     </Affliction>
+
     <!--invisible affliction-->
     <Affliction
       name="Fill Bladder"
@@ -2683,16 +2742,19 @@
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="256,128,128,128" origin="0,0" />
     </Affliction>
+
     <!--invisible affliction-->
     <Affliction name="On Toilet" identifier="ontoilet" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="1" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="-0.5" />
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,128,128,128" origin="0,0" />
     </Affliction>
+
     <!--invisible affliction-->
     <Affliction name="Defecating" identifier="defecating" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="100" strengthchange="-1" />
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,128,128,128" origin="0,0" />
     </Affliction>
+
     <!--invisible affliction-->
     <Affliction name="Tripping (Light)" identifier="he-trippinglight" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="100" strengthchange="-1">
@@ -2700,6 +2762,7 @@
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,128,128,128" origin="0,0" />
     </Affliction>
+
     <!--invisible affliction-->
     <Affliction name="Tripping (Medium)" identifier="he-trippingmedium" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="100" strengthchange="-1">
@@ -2707,6 +2770,7 @@
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,128,128,128" origin="0,0" />
     </Affliction>
+
     <!--invisible affliction-->
     <Affliction name="Tripping (Heavy)" identifier="he-trippingheavy" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="100" strengthchange="-1">
@@ -2714,6 +2778,7 @@
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,128,128,128" origin="0,0" />
     </Affliction>
+
     <!--Red Paint-->
       <Affliction
         name="High on Red Paint"
@@ -2969,6 +3034,7 @@
         </Effect>
         <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,640,128,128" color="150,26,26,255" origin="0,0" />
       </Affliction>
+
     <!-- POISON EFFECTS -->
     <!-- APPLY MORBUSINE POISONING OVER TIME -->
     <Affliction
@@ -2996,6 +3062,7 @@
       </Effect>
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
+
     <!-- APPLY INCREMENTAL STUN OVER TIME -->
     <Affliction
       identifier="applyincrementalstun"
@@ -3022,6 +3089,7 @@
       </Effect>
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
+
     <!-- APPLY CYANIDE POISONING OVER TIME -->
     <Affliction
       identifier="applycyanidepoisoning"
@@ -3048,6 +3116,7 @@
       </Effect>
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
+
     <!-- APPLY RADIATION SICKNESS OVER TIME -->
     <Affliction
       identifier="applyradiationsickness"
@@ -3074,6 +3143,7 @@
       </Effect>
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
+
     <!-- APPLY SUFFORIN POISONING OVER TIME -->
     <Affliction
       identifier="applysufforinpoisoning"
@@ -3100,6 +3170,7 @@
       </Effect>
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
+
     <!-- APPLY DELIRIUM POISONING OVER TIME -->
     <Affliction
       identifier="applydeliriuminepoisoning"
@@ -3126,6 +3197,7 @@
       </Effect>
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
+
     <!-- APPLY SLOW PARALYSIS OVER TIME -->
     <Affliction
       identifier="applyslowparalysis"
@@ -3152,6 +3224,7 @@
       </Effect>
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
+
     <!-- APPLY PARALYSIS OVER TIME -->
     <Affliction
       identifier="applyparalysis"
@@ -3178,6 +3251,7 @@
       </Effect>
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
+
     <!-- APPLY ACID BURN OVER TIME -->
     <Affliction
       identifier="applyacidburn"
@@ -3204,6 +3278,7 @@
       </Effect>
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
+
     <!-- APPLY ORGAN DAMAGE OVER TIME -->
     <Affliction
       identifier="applyorgandamage"
@@ -3230,6 +3305,7 @@
       </Effect>
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
+
     <!-- APPLY ORGAN DAMAGE OVER TIME -->
     <Affliction
       identifier="applyorgandamage"
@@ -3256,6 +3332,7 @@
       </Effect>
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
+
     <!-- APPLY PSYCHOSIS OVER TIME -->
     <Affliction
       identifier="applypsychosis"
@@ -3282,6 +3359,7 @@
       </Effect>
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
+
     <!-- APPLY HALLUCINATING OVER TIME -->
       <Affliction
         identifier="applyhallucinating"
@@ -3308,6 +3386,7 @@
         </Effect>
         <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
       </Affliction>
+
     <!-- APPLY HUSK INFECTION OVER TIME -->
     <Affliction
       identifier="applyhuskinfection"
@@ -3334,6 +3413,7 @@
       </Effect>
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
+
     <!-- APPLY STOMACH ACHE OVER TIME -->
     <Affliction
       identifier="applystomachache"
@@ -3360,6 +3440,7 @@
       </Effect>
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
+
     <!--BACKWARDS COMPATIBILITY-->
     <Affliction
       identifier="he-hunger"
@@ -3428,6 +3509,7 @@
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,128,128,128" origin="0,0" />
       <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/HungerOverlay.png" />
     </Affliction>
+
     <Affliction
       identifier="he-thirst"
       name="Thirst"
@@ -3494,6 +3576,7 @@
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="128,128,128,128" origin="0,0" />
     </Affliction>
+
     <!-- NEEDS BACKWARDS COMPATIBILITY -->
     <Affliction name="Well Fed" identifier="wellfed" description="" type="buff" limbspecific="false" indicatorlimb="Torso" maxstrength="1" affectmachines="true" showiconthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false" iconcolors="0,100,100,255;0,100,100,255">
       <Effect minstrength="0" maxstrength="1" strengthchange="-1000">
@@ -3567,5 +3650,6 @@
     <Affliction name="Sleeping Blindness" identifier="sleepblindnessaffliction" description="You are asleep." type="bedblindness" limbspecific="false" indicatorlimb="Head" maxstrength="100" affectmachines="true" showiconthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false" iconcolors="0,100,0,255;100,0,0,255">
       <Effect minstrength="0" maxstrength="100" strengthchange="-1000" />
     </Affliction>
+
   </Afflictions>
 </Override>
