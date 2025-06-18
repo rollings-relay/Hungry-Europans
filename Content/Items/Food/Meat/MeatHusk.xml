@@ -37,6 +37,7 @@
       </Holdable>
       <AiTarget sightrange="1000" static="True" />
     </Item>
+
     <Item name="Raw Husk Meat" identifier="he-rawhuskmeat" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,rawmeatpiece,ingredient,canspoil,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
@@ -76,6 +77,7 @@
       </Holdable>
       <AiTarget sightrange="1000" static="True" />
     </Item>
+
     
     <!-- TODO: I JUST COPIED THE HUMAN ONE TO MAKE THE CUTTING BOARD ERROR GO AWAY, I DIDNT ACTUALLY MAKE THIS INTO MEAT -->
     <Item name="Husk Filets" identifier="he-preparredhuskmeat" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,canspoil,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
@@ -126,6 +128,7 @@
       </Holdable>
       <AiTarget sightrange="1000" static="True" />
     </Item>
+
     
   </Items>
 </Override>

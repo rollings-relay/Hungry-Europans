@@ -120,5 +120,6 @@
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
     </Item>
+
   </Items>
 </Override>

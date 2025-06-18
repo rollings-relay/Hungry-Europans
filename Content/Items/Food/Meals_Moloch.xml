@@ -114,6 +114,7 @@
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
     </Item>
+
     <Item hideinmenus="false" name="Steak" identifier="he-cookedmolochsteak" variantof="he-poisoneffectpreset_fork" health="120" category="Misc" subcategory="Food - Moloch" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,petfood1,petfood2,petfood3" inventoryiconcolor="140,86,38,255" containercolor="140,86,38,255" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
@@ -229,5 +230,6 @@
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
     </Item>
+
   </Items>
 </Override>

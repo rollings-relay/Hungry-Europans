@@ -124,6 +124,7 @@
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
     </Item>
+
     <Item hideinmenus="false" name="Plate of Human Limbs" identifier="he-cookedhumanlimbs" variantof="he-poisoneffectpreset_fork" health="140" category="Misc" subcategory="Food - Human" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,forkfood,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
@@ -245,5 +246,6 @@
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
     </Item>
+
   </Items>
 </Override>

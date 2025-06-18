@@ -117,6 +117,7 @@
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
     </Item>
+
     <!-- SOUPS & STEWS -->
     <Item hideinmenus="false" name="Craw Yum!" identifier="he-crawyumsoup" variantof="he-poisoneffectpreset_spoon" health="100" category="Misc" subcategory="Food - Crawler" Tags="smallitem,fooditem,spoonfood" description="A soup." maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="false" requireaimtouse="false">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
@@ -231,5 +232,6 @@
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
     </Item>
+
   </Items>
 </Override>

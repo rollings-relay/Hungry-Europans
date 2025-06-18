@@ -82,6 +82,7 @@
       <!-- AiTarget allows the item to be seen and interacted by non-human characters like pets and monsters. SightRange="1000" lets them see the item in a 10m range -->
       <AiTarget sightrange="1000" static="True" />
     </Item>
+
     <Item name="Meat Patty" identifier="he-meatpatty" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,allowongrill,canspoil,petfood1,petfood2,petfood3" spritecolor="108,108,108,255" inventoryiconcolor="108,108,108,255" containercolor="108,108,108,255" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,458,35,8" depth="0.6" origin="0.5,0.5" />
@@ -137,6 +138,7 @@
       </Holdable>
       <AiTarget sightrange="1000" static="True" />
     </Item>
+
     <Item name="Burned Meat Patty" identifier="he-burnedmeatpatty" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,allowongrill,burnedfood" spritecolor="41,41,41,255" inventoryiconcolor="41,41,41,255" containercolor="41,41,41,255" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,458,35,8" depth="0.6" origin="0.5,0.5" />
@@ -190,6 +192,7 @@
       </Holdable>
       <AiTarget sightrange="1000" static="True" />
     </Item>
+
     <!-- Sausage -->
     <Item name="Raw Sausage" identifier="he-rawsausage" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,allowongrill,canspoil,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
@@ -259,6 +262,7 @@
       </Holdable>
       <AiTarget sightrange="1000" static="True" />
     </Item>
+
     <Item name="Sausage" identifier="he-sausage" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,allowongrill,canspoil,petfood1,petfood2,petfood3" spritecolor="108,108,108,255" inventoryiconcolor="108,108,108,255" containercolor="108,108,108,255" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,444,67,14" depth="0.6" origin="0.5,0.5" />
@@ -309,6 +313,7 @@
       </Holdable>
       <AiTarget sightrange="1000" static="True" />
     </Item>
+
     <Item name="Burned Sausage" identifier="he-burnedsausage" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,allowongrill,burnedfood" spritecolor="41,41,41,255" inventoryiconcolor="41,41,41,255" containercolor="41,41,41,255" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,444,67,14" depth="0.6" origin="0.5,0.5" />
@@ -349,6 +354,7 @@
       </Holdable>
       <AiTarget sightrange="1000" static="True" />
     </Item>
+
     <!-- Nuggets -->
     <Item name="Pile of Raw Nuggets" identifier="he-rawnuggets" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,allowinfryer,canspoil,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.0" />
@@ -431,6 +437,7 @@
       </Holdable>
       <AiTarget sightrange="1000" static="True" />
     </Item>
+
     <!-- Offal -->
     <Item name="Raw Offal" identifier="he-rawoffal" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,allowongrill,canspoil,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
@@ -493,5 +500,6 @@
       </Holdable>
       <AiTarget sightrange="1000" static="True" />
     </Item>
+
   </Items>
 </Override>

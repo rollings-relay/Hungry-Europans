@@ -56,6 +56,7 @@
       </Holdable>
       <AiTarget sightrange="1000" static="True" />
     </Item>
+
     <!-- MISC -->
     <Item name="Pulverized Seeds Pack" identifier="he-pulverizedseedspack" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A synthetic liquid that when cooked, turns into synthetic flour." Tags="smallitem,ingredient,distilleringredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" canflipx="false" spritecolor="255,0,0,255" inventoryiconcolor="255,0,0,255">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -90,6 +91,7 @@
         </StatusEffect>
       </Projectile>
     </Item>
+
     <Item name="Salt" identifier="he-salt" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Don't get salty now!" Tags="smallitem,ingredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_shaker" impacttolerance="5.5">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
@@ -152,6 +154,7 @@
         </StatusEffect>
       </Projectile>
     </Item>
+
     <Item name="Synthetic Pepper" identifier="he-pepper" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Pepper be prepared!" Tags="smallitem,ingredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_shaker" impacttolerance="5.5">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.1" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="2" spawnprobability="0.1" />
@@ -209,6 +212,7 @@
         </StatusEffect>
       </Projectile>
     </Item>
+
     <Item name="Sugar" identifier="he-sugar" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Oh so sweet!" Tags="smallitem,ingredient,distilleringredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" impacttolerance="5.5" canflipx="false">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
@@ -253,6 +257,7 @@
         </StatusEffect>
       </Projectile>
     </Item>
+
     <Item name="Bubble Berry Jam" identifier="he-jambubbleberry" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Tasty jam made out of bubble berries. Known to quench a bit of thirst." Tags="smallitem,ingredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" canflipx="false">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
@@ -316,6 +321,7 @@
         </StatusEffect>
       </Projectile>
     </Item>
+
     <Item name="Pomegrenade Jam" identifier="he-jampomegrenade" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Tasty jam made out of pomegrenade. Known to be a bit more filling." Tags="smallitem,ingredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" canflipx="false">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
@@ -379,6 +385,7 @@
         </StatusEffect>
       </Projectile>
     </Item>
+
     <Item name="Ketchup" identifier="he-ketchup" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,ingredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true" canflipx="false">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
@@ -442,6 +449,7 @@
         </StatusEffect>
       </Projectile>
     </Item>
+
     <Item name="Vinegar" identifier="he-vinegar" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,ingredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
@@ -505,6 +513,7 @@
         </StatusEffect>
       </Projectile>
     </Item>
+
     <Item name="Cooking Oil" identifier="he-cookingoil" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,ingredient,cookingoil,oil" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
@@ -567,6 +576,7 @@
         </StatusEffect>
       </Projectile>
     </Item>
+
     <Item name="Synthetic Flour Mixture" identifier="he-flourmixture" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A liquid that when cooked, turns into synthetic flour." Tags="smallitem,ingredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" canflipx="false" spritecolor="255,0,0,255" inventoryiconcolor="255,0,0,255">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Deconstruct time="1" requireddeconstructor="deconstructor" />
@@ -593,6 +603,7 @@
         </StatusEffect>
       </Projectile>
     </Item>
+
     <Item name="Synthetic Flour" identifier="he-flour" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Baking Bad." Tags="smallitem,ingredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" canflipx="false">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.1" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="2" spawnprobability="0.1" />
@@ -634,6 +645,7 @@
         </StatusEffect>
       </Projectile>
     </Item>
+
     <Item name="Dough" identifier="he-dough" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Baking Bad." Tags="smallitem,ingredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" canflipx="false">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.1" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="2" spawnprobability="0.1" />
@@ -668,6 +680,7 @@
         </StatusEffect>
       </Projectile>
     </Item>
+
     <Item name="Bubbleberry Tea Mix" identifier="he-teamixbubbleberry" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" tags="smallitem,mix" description="" scale="0.5" impactsoundtag="impact_soft" canflipx="false">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,367,45,57" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,367,45,57" origin="0.5,0.5" />
@@ -698,6 +711,7 @@
         </StatusEffect>
       </Projectile>
     </Item>
+
     <Item name="Popnut Tea Mix" identifier="he-teamixpopnut" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" tags="smallitem,mix" description="" scale="0.5" impactsoundtag="impact_soft" canflipx="false">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="46,367,45,57" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="46,367,45,57" origin="0.5,0.5" />
@@ -728,6 +742,7 @@
         </StatusEffect>
       </Projectile>
     </Item>
+
     <Item name="Coffee Mix" identifier="he-coffeemix" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" tags="smallitem,mix,coffeemix" description="" scale="0.5" impactsoundtag="impact_soft" canflipx="false">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,309,45,57" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,309,45,57" origin="0.5,0.5" />
@@ -758,6 +773,7 @@
         </StatusEffect>
       </Projectile>
     </Item>
+
     <Item name="Chocolate Mix" identifier="he-chocolatemix" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" tags="smallitem,mix,chocolatemix" description="" scale="0.5" impactsoundtag="impact_soft" canflipx="false">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,309,45,57" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,309,45,57" origin="0.5,0.5" />
@@ -790,6 +806,7 @@
         </StatusEffect>
       </Projectile>
     </Item>
+
     <Item name="Sea Weed Strip" identifier="he-seaweedstrip" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Sea weed pressed and sliced. Let it dry into Nori." Tags="smallitem,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,207,47,13" depth="0.6" origin="0.5,0.5" />
@@ -816,6 +833,7 @@
         </StatusEffect>
       </Holdable>
     </Item>
+
     <Item name="Nori" identifier="he-nori" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Dried and prepared sea weed used for sushi." Tags="smallitem,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,221,47,13" depth="0.6" origin="0.5,0.5" />
@@ -823,6 +841,7 @@
       <Body width="40" radius="6" density="10.2" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect" />
     </Item>
+
     <!-- EARTH INGREDIENTS | High value ingredients for delicacies only found in wrecks -->
     <Item name="Canned Tomatoes" identifier="he-cannedtomatoes" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A rare can of tomatoes back from when supplies were still delivered from earth! High in value, these ingredients are used exclusively for delicacies these days." Tags="smallitem,ingredient,rareingredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_metal_light" impacttolerance="5.5">
       <PreferredContainer secondary="wreckstoragecab" minamount="1" maxamount="4" spawnprobability="0.1" />
@@ -928,6 +947,7 @@
         </Containable>
       </ItemContainer>
     </Item>
+
     <Item name="Open Can of Tomatoes" identifier="he-cannedtomatoesopen" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A rare can of tomatoes back from when supplies were still delivered from earth! High in value, these ingredients are used exclusively for delicacies these days." Tags="smallitem,ingredient,rareingredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_metal_light" impacttolerance="5.5">
       <PreferredContainer secondary="wreckstoragecab" minamount="1" maxamount="4" spawnprobability="0.1" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -976,6 +996,7 @@
         </StatusEffect>
       </Projectile>
     </Item>
+
 
     <Item name="Canned Mushrooms" identifier="he-cannedmushrooms" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A rare can of tomatoes back from when supplies were still delivered from earth! High in value, these ingredients are used exclusively for delicacies these days." Tags="smallitem,ingredient,rareingredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_metal_light" impacttolerance="5.5">
       <PreferredContainer secondary="wreckstoragecab" minamount="1" maxamount="4" spawnprobability="0.1" />
@@ -1081,6 +1102,7 @@
         </Containable>
       </ItemContainer>
     </Item>
+
     <Item name="Open Can of Mushrooms" identifier="he-cannedmushroomssopen" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A rare can of tomatoes back from when supplies were still delivered from earth! High in value, these ingredients are used exclusively for delicacies these days." Tags="smallitem,ingredient,rareingredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_metal_light" impacttolerance="5.5">
       <PreferredContainer secondary="wreckstoragecab" minamount="1" maxamount="4" spawnprobability="0.1" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -1129,6 +1151,7 @@
         </StatusEffect>
       </Projectile>
     </Item>
+
     
     <Item name="Canned Potatoes" identifier="he-cannedpotatoes" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A rare can of tomatoes back from when supplies were still delivered from earth! High in value, these ingredients are used exclusively for delicacies these days." Tags="smallitem,ingredient,rareingredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_metal_light" impacttolerance="5.5">
       <PreferredContainer secondary="wreckstoragecab" minamount="1" maxamount="4" spawnprobability="0.1" />
@@ -1234,6 +1257,7 @@
         </Containable>
       </ItemContainer>
     </Item>
+
     <Item name="Open Can of Potatoes" identifier="he-cannedpotatoesopen" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A rare can of tomatoes back from when supplies were still delivered from earth! High in value, these ingredients are used exclusively for delicacies these days." Tags="smallitem,ingredient,rareingredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_metal_light" impacttolerance="5.5">
       <PreferredContainer secondary="wreckstoragecab" minamount="1" maxamount="4" spawnprobability="0.1" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -1282,6 +1306,7 @@
         </StatusEffect>
       </Projectile>
     </Item>
+
     
     <Item name="Canned Corn" identifier="he-cannedcorn" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A rare can of tomatoes back from when supplies were still delivered from earth! High in value, these ingredients are used exclusively for delicacies these days." Tags="smallitem,ingredient,rareingredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_metal_light" impacttolerance="5.5">
       <PreferredContainer secondary="wreckstoragecab" minamount="1" maxamount="4" spawnprobability="0.1" />
@@ -1387,6 +1412,7 @@
         </Containable>
       </ItemContainer>
     </Item>
+
     <Item name="Open Can of Corn" identifier="he-cannedcornopen" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A rare can of tomatoes back from when supplies were still delivered from earth! High in value, these ingredients are used exclusively for delicacies these days." Tags="smallitem,ingredient,rareingredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_metal_light" impacttolerance="5.5">
       <PreferredContainer secondary="wreckstoragecab" minamount="1" maxamount="4" spawnprobability="0.1" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -1436,6 +1462,7 @@
       </Projectile>
     </Item>
 
+
     <!--PSEUDO ITEM THAT REMOVES ITSELF IF SPAWNED IN | Only used to power the stove for the tea kettle to brew-->
     <Item name="Brew" identifier="he-brewteaitem" category="Hidden" hideinmenus="true" maxstacksize="1" tags="" description="Start brewing whatever is in your kettle. Turn the stove off when you hear the kettle whistle.">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,426,81,85" depth="0.6" origin="0.5,0.5" />
@@ -1448,5 +1475,6 @@
         </StatusEffect>
       </Holdable>
     </Item>
+
   </Items>
 </Override>

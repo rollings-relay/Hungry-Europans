@@ -52,6 +52,7 @@
       </Holdable>
       <AiTarget sightrange="1000" static="True" />
     </Item>
+
     <Item name="Raw Thresher Meat" identifier="he-rawthreshermeat" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,rawmeatpiece,ingredient,canspoil,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
       <Price baseprice="105" minavailable="4" maxavailable="16" mincondition="0.9" maxcondition="1.0" usecondition="false" sold="false">
@@ -101,6 +102,7 @@
       </Holdable>
       <AiTarget sightrange="1000" static="True" />
     </Item>
+
     <Item name="Raw Thresher Filets" identifier="he-rawthresherfilets" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,canspoil,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="178,405,61,13" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="178,405,61,13" origin="0.5,0.5" />
@@ -155,6 +157,7 @@
       </Holdable>
       <AiTarget sightrange="1000" static="True" />
     </Item>
+
     <Item name="Thresher Filets" identifier="he-preparredthresherfilets" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,canspoil,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="178,391,61,13" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="178,391,61,13" origin="0.5,0.5" />
@@ -194,5 +197,6 @@
       </Holdable>
       <AiTarget sightrange="1000" static="True" />
     </Item>
+
   </Items>
 </Override>

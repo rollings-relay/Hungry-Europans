@@ -124,6 +124,7 @@
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
     </Item>
+
     <Item hideinmenus="false" name="Bubble Berry Jam Sandwich" identifier="he-sandwichbbjam" variantof="he-poisoneffectpreset_regular" health="80" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="A tasty sandwich with bubble berry jam." Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
@@ -225,6 +226,7 @@
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
     </Item>
+
     <Item hideinmenus="false" name="Pomegrenade Jam Sandwich" identifier="he-sandwichpgjam" variantof="he-poisoneffectpreset_regular" health="80" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="A tasty sandwich with pomegrenade jam." Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
@@ -325,6 +327,7 @@
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
     </Item>
+
     <!--OMELETE-->
     <Item name="Omelette" identifier="he-omelettecrawler" variantof="he-poisoneffectpreset_regular" health="100" category="Misc" maxstacksize="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,omelette,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.4" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
@@ -421,6 +424,7 @@
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
     </Item>
+
     <Item name="Omelette" identifier="he-omelettemudraptor" variantof="he-poisoneffectpreset_regular" health="100" category="Misc" maxstacksize="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,omelette,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.4" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
@@ -534,6 +538,7 @@
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
     </Item>
+
     <Item name="Omelette" identifier="he-omelettethresher" variantof="he-poisoneffectpreset_regular" health="100" category="Misc" maxstacksize="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,omelette,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.4" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
@@ -630,5 +635,6 @@
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
     </Item>
+
   </Items>
 </Override>
