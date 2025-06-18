@@ -6,36 +6,51 @@
     <Affliction name="" identifier="trait_likes_friedfood" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="0" resistancefor="trait_dislikes_friedfood" minresistance="1" maxresistance="1" multiplybymaxvitality="true" />
     </Affliction>
+
     <Affliction name="" identifier="trait_likes_burgers" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="0" resistancefor="trait_dislikes_burgers" minresistance="1" maxresistance="1" multiplybymaxvitality="true" />
     </Affliction>
+
     <Affliction name="" identifier="trait_likes_hotdogs" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="0" resistancefor="trait_dislikes_hotdogs" minresistance="1" maxresistance="1" multiplybymaxvitality="true" />
     </Affliction>
+
     <Affliction name="" identifier="trait_likes_filets" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="0" resistancefor="trait_dislikes_filets" minresistance="1" maxresistance="1" multiplybymaxvitality="true" />
     </Affliction>
+
     <Affliction name="" identifier="trait_likes_roasts" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="0" resistancefor="trait_dislikes_roasts" minresistance="1" maxresistance="1" multiplybymaxvitality="true" />
     </Affliction>
+
     <Affliction name="" identifier="trait_likes_sandwiches" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="0" resistancefor="trait_dislikes_sandwiches" minresistance="1" maxresistance="1" multiplybymaxvitality="true" />
     </Affliction>
+    
+    <Affliction name="" identifier="trait_likes_omelette" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
+      <Effect minstrength="0" maxstrength="1" strengthchange="0" resistancefor="trait_dislikes_omelette" minresistance="1" maxresistance="1" multiplybymaxvitality="true" />
+    </Affliction>
+
     <!-- DRINKS -->
     <Affliction name="" identifier="trait_likes_beer" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="0" resistancefor="trait_dislikes_beer" minresistance="1" maxresistance="1" multiplybymaxvitality="true" />
     </Affliction>
+
     <Affliction name="" identifier="trait_likes_rum" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="0" resistancefor="trait_dislikes_rum" minresistance="1" maxresistance="1" multiplybymaxvitality="true" />
     </Affliction>
+
     <Affliction name="" identifier="trait_likes_whiskey" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="0" resistancefor="trait_dislikes_whiskey" minresistance="1" maxresistance="1" multiplybymaxvitality="true" />
     </Affliction>
+
     <Affliction name="" identifier="trait_likes_tea" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="0" resistancefor="trait_dislikes_tea" minresistance="1" maxresistance="1" multiplybymaxvitality="true" />
     </Affliction>
+
     <Affliction name="" identifier="trait_likes_cola" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="0" resistancefor="trait_dislikes_cola" minresistance="1" maxresistance="1" multiplybymaxvitality="true" />
     </Affliction>
+
   </Afflictions>
 </Override>
