@@ -37,7 +37,6 @@
           <ReduceAffliction type="damage" amount="12" />
           <ReduceAffliction type="burn" amount="4.0" />
           <ReduceAffliction type="hunger" amount="2" />
-          <ReduceAffliction identifier="he-starvation" amount="40" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="This,UseTarget" duration="5" comparison="And">
@@ -65,7 +64,6 @@
           <ReduceAffliction type="damage" amount="12" />
           <ReduceAffliction type="burn" amount="4.0" />
           <ReduceAffliction type="hunger" amount="2" />
-          <ReduceAffliction identifier="he-starvation" amount="40" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="This,UseTarget" duration="5" comparison="And">
@@ -89,7 +87,6 @@
           <ReduceAffliction type="damage" amount="12" />
           <ReduceAffliction type="burn" amount="4.0" />
           <ReduceAffliction type="hunger" amount="2" />
-          <ReduceAffliction identifier="he-starvation" amount="40" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>

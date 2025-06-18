@@ -40,7 +40,6 @@
           <ReduceAffliction type="damage" amount="0.65" />
           <ReduceAffliction type="burn" amount="0.4" />
           <ReduceAffliction type="hunger" amount="0.5" />
-          <ReduceAffliction identifier="he-starvation" amount="10" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="This,UseTarget" duration="5" comparison="And">
@@ -66,7 +65,6 @@
           <ReduceAffliction type="damage" amount="0.65" />
           <ReduceAffliction type="burn" amount="0.4" />
           <ReduceAffliction type="hunger" amount="0.5" />
-          <ReduceAffliction identifier="he-starvation" amount="10" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="This,UseTarget" duration="5" comparison="And">
@@ -93,7 +91,6 @@
           <ReduceAffliction type="damage" amount="0.65" />
           <ReduceAffliction type="burn" amount="0.4" />
           <ReduceAffliction type="hunger" amount="0.5" />
-          <ReduceAffliction identifier="he-starvation" amount="10" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork1.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork2.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
@@ -160,7 +157,6 @@
           <ReduceAffliction type="damage" amount="1.0" />
           <ReduceAffliction type="burn" amount="0.5" />
           <ReduceAffliction type="hunger" amount="0.5" />
-          <ReduceAffliction identifier="he-starvation" amount="10" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="This,UseTarget" duration="5" comparison="And">
@@ -186,7 +182,6 @@
           <ReduceAffliction type="damage" amount="1.0" />
           <ReduceAffliction type="burn" amount="0.5" />
           <ReduceAffliction type="hunger" amount="0.5" />
-          <ReduceAffliction identifier="he-starvation" amount="10" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="This,UseTarget" duration="5" comparison="And">
@@ -237,7 +232,6 @@
           <ReduceAffliction type="damage" amount="25.0" />
           <ReduceAffliction type="burn" amount="12.5" />
           <ReduceAffliction type="hunger" amount="12.5" />
-          <ReduceAffliction identifier="he-starvation" amount="200" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <!-- Allow the item to be applied to a player fully, if the player is not in water and unconcious/stunned -->
@@ -255,7 +249,6 @@
           <ReduceAffliction type="damage" amount="1.0" />
           <ReduceAffliction type="burn" amount="0.5" />
           <ReduceAffliction type="hunger" amount="0.5" />
-          <ReduceAffliction identifier="he-starvation" amount="20" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <!-- Poison Effects Bot -->
@@ -556,7 +549,6 @@
           <ReduceAffliction type="damage" amount="2.0" />
           <ReduceAffliction type="hunger" amount="0.5" />
           <ReduceAffliction identifier="mood" amount="2.0" />
-          <ReduceAffliction identifier="he-starvation" amount="10" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         
@@ -576,7 +568,6 @@
           <ReduceAffliction type="damage" amount="2.0" />
           <ReduceAffliction type="hunger" amount="0.5" />
           <ReduceAffliction identifier="mood" amount="2.0" />
-          <ReduceAffliction identifier="he-starvation" amount="10" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
 
@@ -630,7 +621,6 @@
           <Affliction identifier="he-stuffed" amount="3.4" />
           <ReduceAffliction type="damage" amount="1.5" />
           <ReduceAffliction type="hunger" amount="0.3" />
-          <ReduceAffliction identifier="he-starvation" amount="10" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="This,UseTarget" duration="5" comparison="And">
@@ -655,7 +645,6 @@
           <Affliction identifier="he-stuffed" amount="3.4" />
           <ReduceAffliction type="damage" amount="1.5" />
           <ReduceAffliction type="hunger" amount="0.3" />
-          <ReduceAffliction identifier="he-starvation" amount="10" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="This,UseTarget" duration="5" comparison="And">

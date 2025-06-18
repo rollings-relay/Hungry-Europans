@@ -100,7 +100,6 @@
           <Affliction identifier="he-damageresistancemoloch" amount="114,4" />
           <ReduceAffliction type="damage" amount="0.858" />
           <ReduceAffliction type="hunger" amount="1.43" />
-          <ReduceAffliction identifier="he-starvation" amount="200" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <!-- Allow the item to be applied to a player fully, if the player is not in water and unconcious/stunned -->
@@ -117,7 +116,6 @@
           <Affliction identifier="he-damageresistancemoloch" amount="8" />
           <ReduceAffliction type="damage" amount="0.06" />
           <ReduceAffliction type="hunger" amount="0.1" />
-          <ReduceAffliction identifier="he-starvation" amount="20" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <!-- Regular eating -->
@@ -246,7 +244,6 @@
           <Affliction identifier="he-damageresistancemoloch" amount="71.5" />
           <ReduceAffliction type="damage" amount="1.0725" />
           <ReduceAffliction type="hunger" amount="1.43" />
-          <ReduceAffliction identifier="he-starvation" amount="200" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <!-- Allow the item to be applied to a player fully, if the player is not in water and unconcious/stunned -->
@@ -263,7 +260,6 @@
           <Affliction identifier="he-damageresistancemoloch" amount="5" />
           <ReduceAffliction type="damage" amount="0.075" />
           <ReduceAffliction type="hunger" amount="0.1" />
-          <ReduceAffliction identifier="he-starvation" amount="20" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <!-- Regular eating -->
@@ -393,7 +389,6 @@
           <ReduceAffliction type="damage" amount="1.0725" />
           <ReduceAffliction type="hunger" amount="1.43" />
           <ReduceAffliction type="thirst" amount="14.3" />
-          <ReduceAffliction identifier="he-starvation" amount="200" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <!-- Allow the item to be applied to a player fully, if the player is not in water and unconcious/stunned -->
@@ -411,7 +406,6 @@
           <ReduceAffliction type="damage" amount="0.075" />
           <ReduceAffliction type="hunger" amount="0.1" />
           <ReduceAffliction type="thirst" amount="1" />
-          <ReduceAffliction identifier="he-starvation" amount="20" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <!-- Regular eating -->
@@ -547,7 +541,6 @@
           <ReduceAffliction type="damage" amount="1.0725" />
           <ReduceAffliction type="hunger" amount="1.43" />
           <ReduceAffliction type="thirst" amount="5.72" />
-          <ReduceAffliction identifier="he-starvation" amount="200" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <!-- Allow the item to be applied to a player fully, if the player is not in water and unconcious/stunned -->
@@ -565,7 +558,6 @@
           <ReduceAffliction type="damage" amount="0.075" />
           <ReduceAffliction type="hunger" amount="0.1" />
           <ReduceAffliction type="thirst" amount="0.4" />
-          <ReduceAffliction identifier="he-starvation" amount="20" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <!-- Regular eating -->
@@ -654,7 +646,6 @@
           <Affliction identifier="he-stuffed" amount="4.98" />
           <ReduceAffliction type="damage" amount="1.66" />
           <ReduceAffliction type="hunger" amount="13.28" />
-          <ReduceAffliction identifier="he-starvation" amount="200" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <!-- Allow the item to be applied to a player fully, if the player is not in water and unconcious/stunned -->
@@ -670,7 +661,6 @@
           <Affliction identifier="he-stuffed" amount="0.3" />
           <ReduceAffliction type="damage" amount="0.1" />
           <ReduceAffliction type="hunger" amount="0.8" />
-          <ReduceAffliction identifier="he-starvation" amount="20" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <!-- Regular eating -->
@@ -793,7 +783,6 @@
           <Affliction identifier="he-stuffed" amount="0.51" />
           <ReduceAffliction type="damage" amount="0.17" />
           <ReduceAffliction type="hunger" amount="1.36" />
-          <ReduceAffliction identifier="he-starvation" amount="200" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <!-- Allow the item to be applied to a player fully, if the player is not in water and unconcious/stunned -->
@@ -809,7 +798,6 @@
           <Affliction identifier="he-stuffed" amount="0.3" />
           <ReduceAffliction type="damage" amount="0.1" />
           <ReduceAffliction type="hunger" amount="0.8" />
-          <ReduceAffliction identifier="he-starvation" amount="20" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <!-- Regular eating -->
