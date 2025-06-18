@@ -106,8 +106,11 @@
     </Affliction>
 
     <!-- HUNGER AND THIRST -->
-    <Affliction name="Hunger"
+    
+    <!-- HUNGER AND THIRST -->
+    <Affliction
       identifier="hunger"
+      name="Hunger"
       description="The stomach is happy."
       type="hunger"
       causeofdeathdescription="Starved"
@@ -117,6 +120,7 @@
       hideiconafterdelay="true"
       activationthreshold="0"
       treatmentthreshold="20"
+      TreatmentSuggestionThreshold="1000"
       iconcolors="0,180,0,255;180,0,0,255"
       showinhealthscannerthreshold="0"
       maxstrength="100"
@@ -154,14 +158,14 @@
       <!-- Hunger decreases vitality and speed slightly -->
       <Effect minstrength="50" maxstrength="65" strengthchange="0" 
         minvitalitydecrease="0"
-        maxvitalitydecrease="15"
+        maxvitalitydecrease="0"
         minskillmultiplier="1.0"
         maxskillmultiplier="0.8"
         MinAfflictionOverlayAlphaMultiplier="0.0"
         MaxAfflictionOverlayAlphaMultiplier="0.0" />
       <Effect minstrength="65" maxstrength="80"
-        minvitalitydecrease="15"
-        maxvitalitydecrease="30"
+        minvitalitydecrease="0"
+        maxvitalitydecrease="0"
         minskillmultiplier="0.8"
         maxskillmultiplier="0.6"
         minscreendistort="0"
@@ -172,11 +176,15 @@
         minspeedmultiplier="1.0"
         maxspeedmultiplier="0.8" 
         MinAfflictionOverlayAlphaMultiplier="0.0"
-        MaxAfflictionOverlayAlphaMultiplier="1.0" />
+        MaxAfflictionOverlayAlphaMultiplier="1.0" >
+        <!-- Apply various debuffs -->
+        <StatValue stattype="RepairSpeed" minvalue="0" maxvalue="-0.2" />
+        <StatValue stattype="MeleeAttackMultiplier" minvalue="0" maxvalue="-0.2" />
+      </Effect>
       <!-- Hunger starts to get lethal -->
       <Effect minstrength="80" maxstrength="100"
-        minvitalitydecrease="30"
-        maxvitalitydecrease="100"
+        minvitalitydecrease="0"
+        maxvitalitydecrease="0"
         minskillmultiplier="0.6"
         maxskillmultiplier="0.2"
         minscreendistort="0"
@@ -190,15 +198,21 @@
         maxspeedmultiplier="0.5" 
         MinAfflictionOverlayAlphaMultiplier="1.0"
         MaxAfflictionOverlayAlphaMultiplier="1.0">
+        <!-- Apply various debuffs -->
+        <StatValue stattype="RepairSpeed" minvalue="-0.2" maxvalue="-0.3" />
+        <StatValue stattype="MeleeAttackMultiplier" minvalue="-0.2" maxvalue="-0.5" />
+        <StatValue stattype="MedicalItemEffectivenessMultiplier" minvalue="0" maxvalue="-0.25" />
+        <StatValue stattype="BuffDurationMultiplier" minvalue="0" maxvalue="-0.5" />
+        <StatValue stattype="DebuffDurationMultiplier" minvalue="0" maxvalue="0.25" />
         <StatusEffect target="Character" >
           <Conditional hunger="gte 100" />
-          <Affliction identifier="he-starvation" strength="0.1" />
+          <Affliction identifier="he-starvation" strength="0.5" />
         </StatusEffect>
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,128,128,128" origin="0,0" />
       <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/HungerOverlay.png" />
     </Affliction>
-    
+        
     <Affliction name="Thirst"
       identifier="thirst"
       description="You feel refreshed."
@@ -282,9 +296,10 @@
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="128,128,128,128" origin="0,0" />
     </Affliction>
-    
-    <Affliction name="Starvation"
+
+    <Affliction
       identifier="he-starvation"
+      name="Starvation"
       description="Starving"
       type="debuff"
       causeofdeathdescription="Starved"
@@ -317,9 +332,15 @@
         maxscreenblur="3.0"
         minradialdistort="0.0"
         maxradialdistort="1.0"
-        strengthchange="0" />
+        strengthchange="0" >
+        <StatusEffect target="Character" >
+          <Conditional hunger="lt 100" />
+          <ReduceAffliction identifier="he-starvation" strength="50" />
+        </StatusEffect>
+      </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="256,128,128,128" origin="0,0" />
     </Affliction>
+    
     <Affliction name="Dying of thirst"
       identifier="he-dieofthirst"
       description="Dying of thirst."
