@@ -37,7 +37,6 @@
           <ReduceAffliction type="damage" amount="0.55" />
           <ReduceAffliction type="hunger" amount="0.5" />
           <ReduceAffliction type="thirst" amount="0.15" />
-          <ReduceAffliction identifier="he-starvation" amount="10" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="This,UseTarget" duration="5" comparison="And">
@@ -63,7 +62,6 @@
           <ReduceAffliction type="damage" amount="0.55" />
           <ReduceAffliction type="hunger" amount="0.5" />
           <ReduceAffliction type="thirst" amount="0.15" />
-          <ReduceAffliction identifier="he-starvation" amount="10" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="This,UseTarget" duration="5" comparison="And">
@@ -159,7 +157,6 @@
           <ReduceAffliction type="damage" amount="0.3" />
           <ReduceAffliction type="hunger" amount="0.5" />
           <ReduceAffliction type="thirst" amount="0.2" />
-          <ReduceAffliction identifier="he-starvation" amount="10" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="This,UseTarget" duration="5" comparison="And">
@@ -185,7 +182,6 @@
           <ReduceAffliction type="damage" amount="0.3" />
           <ReduceAffliction type="hunger" amount="0.5" />
           <ReduceAffliction type="thirst" amount="0.2" />
-          <ReduceAffliction identifier="he-starvation" amount="10" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="This,UseTarget" duration="5" comparison="And">
@@ -262,7 +258,6 @@
           <ReduceAffliction type="damage" amount="0.3" />
           <ReduceAffliction type="hunger" amount="0.5" />
           <ReduceAffliction type="thirst" amount="0.075" />
-          <ReduceAffliction identifier="he-starvation" amount="10" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="This,UseTarget" duration="5" comparison="And">
@@ -288,7 +283,6 @@
           <ReduceAffliction type="damage" amount="0.3" />
           <ReduceAffliction type="hunger" amount="0.5" />
           <ReduceAffliction type="thirst" amount="0.075" />
-          <ReduceAffliction identifier="he-starvation" amount="10" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="This,UseTarget" duration="5" comparison="And">
@@ -365,7 +359,6 @@
           <Affliction identifier="he-stuffed" amount="7.5" />
           <ReduceAffliction type="damage" amount="0.25" />
           <ReduceAffliction type="hunger" amount="0.5" />
-          <ReduceAffliction identifier="he-starvation" amount="10" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="This,UseTarget" duration="5" comparison="And">
@@ -390,7 +383,6 @@
           <Affliction identifier="he-stuffed" amount="8.25" />
           <ReduceAffliction type="damage" amount="0.25" />
           <ReduceAffliction type="hunger" amount="0.5" />
-          <ReduceAffliction identifier="he-starvation" amount="10" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="This,UseTarget" duration="5" comparison="And">
@@ -477,7 +469,6 @@
           <Affliction identifier="he-stuffed" amount="7.5" />
           <ReduceAffliction type="damage" amount="0.25" />
           <ReduceAffliction type="hunger" amount="0.5" />
-          <ReduceAffliction identifier="he-starvation" amount="10" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="This,UseTarget" duration="5" comparison="And">
@@ -503,7 +494,6 @@
           <Affliction identifier="he-stuffed" amount="8.25" />
           <ReduceAffliction type="damage" amount="0.25" />
           <ReduceAffliction type="hunger" amount="0.5" />
-          <ReduceAffliction identifier="he-starvation" amount="10" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="This,UseTarget" duration="5" comparison="And">
@@ -577,7 +567,6 @@
           <Affliction identifier="he-stuffed" amount="7.5" />
           <ReduceAffliction type="damage" amount="0.25" />
           <ReduceAffliction type="hunger" amount="0.5" />
-          <ReduceAffliction identifier="he-starvation" amount="10" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="This,UseTarget" duration="5" comparison="And">
@@ -602,7 +591,6 @@
           <Affliction identifier="he-stuffed" amount="8.25" />
           <ReduceAffliction type="damage" amount="0.25" />
           <ReduceAffliction type="hunger" amount="0.5" />
-          <ReduceAffliction identifier="he-starvation" amount="10" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="This,UseTarget" duration="5" comparison="And">
