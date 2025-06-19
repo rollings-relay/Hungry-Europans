@@ -264,7 +264,7 @@
         <RequiredItem identifier="titaniumaluminiumalloy" amount="2"/>
         <RequiredItem identifier="fpgacircuit" amount="3"/>
       </Fabricate>
-      <Deconstructor canbeselected="true" showoutput="false" powerconsumption="500.0" deconstructitemssimultaneously="true" msg="ItemMsgInteractSelect" activatebuttontext="researchstation.invalidinput" infotext="bottleprinter.empty" infoareawidth="0.7">
+      <Deconstructor canbeselected="true" showoutput="false" powerconsumption="250.0" deconstructitemssimultaneously="true" msg="ItemMsgInteractSelect" activatebuttontext="researchstation.invalidinput" infotext="bottleprinter.empty" infoareawidth="0.7">
         <GuiFrame relativesize="0.25,0.3" style="ItemUI" anchor="Center" />
         <StatusEffect type="OnActive" targettype="This">
           <sound file="%ModDir:2954998725%/Content/Sounds/Items/Fabricators/BottlePrinter.ogg" type="OnActive" range="400.0" loop="true" volume="0.8" />
@@ -603,7 +603,7 @@
       </DecorativeSprite>
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1886,121,161,53" depth="0.795" origin="0.47,0.86" maxcondition="80" fadein="true" />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1886,174,161,53" depth="0.794" origin="0.47,0.86" maxcondition="0" fadein="false" />
-      <Fabricator selectkey="Select" canbeselected="true" powerconsumption="250.0" msg="ItemMsgInteractSelect">
+      <Fabricator selectkey="Select" canbeselected="true" powerconsumption="150.0" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
         <poweronsound file="Content/Items/PowerOnLight1.ogg" range="600" loop="false" />
         <StatusEffect type="InWater" target="This" condition="-0.5" />
@@ -697,7 +697,7 @@
       </DecorativeSprite> -->
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.795" sourcerect="1882,618,165,188" origin="0.5,0.5" maxcondition="80" fadein="true" />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.794" sourcerect="1882,807,165,188" origin="0.5,0.5" maxcondition="0" />
-      <Fabricator canbeselected="true" selectkey="Select" powerconsumption="250.0" msg="ItemMsgInteractSelect">
+      <Fabricator canbeselected="true" selectkey="Select" powerconsumption="300.0" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
         <StatusEffect type="OnPicked" target="this">
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Fabricators/OvenInteract.ogg" volume="1" range="450" />
@@ -796,7 +796,7 @@
       </DecorativeSprite>
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.795" sourcerect="1975,295,72,66" origin="0.45,0.404" maxcondition="80" fadein="true" />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.794" sourcerect="1975,362,72,66" origin="0.45,0.404" maxcondition="0" />
-      <LightComponent lightcolor="255,255,255,0" flicker="0.3" flickerspeed="1.0" range="15" selectkey="Select" canbeselected="false" allowingameediting="false" powerconsumption="750.0" msg="ItemMsgInteractSelect">
+      <LightComponent lightcolor="255,255,255,0" flicker="0.3" flickerspeed="1.0" range="15" powerconsumption="200.0" selectkey="Select" canbeselected="false" allowingameediting="false" msg="ItemMsgInteractSelect">
         <sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.025" sourcerect="1902,228,72,66" alpha="1.0" origin="0.45,0.404" />
         <StatusEffect type="InWater" target="This" condition="-0.5" />
         <StatusEffect type="OnActive" target="This" comparison="And">
@@ -926,7 +926,7 @@
       <Sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" sourcerect="1887,1185,160,56" depth="0.796" origin="0.5,0.44" />
       <BrokenSprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" sourcerect="1887,1242,160,56" depth="0.795" origin="0.5,0.44" maxcondition="80" fadein="true" />
       <BrokenSprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" sourcerect="1887,1299,160,56" depth="0.794" origin="0.5,0.44" maxcondition="0" fadein="false" />
-      <LightComponent lightcolor="255,255,255,0" range="0" selectkey="Select" canbeselected="false" allowingameediting="false" powerconsumption="750.0" msg="ItemMsgInteractSelect">
+      <ItemComponent>
         <StatusEffect type="InWater" target="This" condition="-0.5" />
         <StatusEffect type="OnActive" target="This">
           <Conditional HasTag="allowongrill" targetcontaineditem="true" />
@@ -1029,7 +1029,7 @@
         <RequiredItem identifier="plastic" amount="3" /><!--45x3-->
         <RequiredItem identifier="fpgacircuit" amount="2" /><!--80x2-->
       </Fabricate>
-      <Fabricator selectkey="Select" canbeselected="true" powerconsumption="250.0" msg="ItemMsgInteractSelect">
+      <Fabricator selectkey="Select" canbeselected="true" powerconsumption="100.0" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
         <StatusEffect type="InWater" target="This" condition="-0.5" />
         <!-- <StatusEffect type="OnActive" target="This">
