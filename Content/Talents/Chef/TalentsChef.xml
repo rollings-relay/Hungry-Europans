@@ -137,10 +137,15 @@
       <Description tag="talentdescription.additionalstattype">
         <Replace tag="[amount]" value="50" color="gui.green"/>
         <Replace tag="[stattype]" value="stattypenames.skillgainspeed" color="gui.orange"/>
+      </Description>      
+      <Description tag="talentdescription.additionalresistanceself">
+        <Replace tag="[amount]" value="25" color="gui.green"/>
+        <Replace tag="[affliction]" value="afflictionname.thirst" color="gui.orange"/>
       </Description>
       <AbilityGroupEffect abilityeffecttype="None">
         <Abilities>
           <CharacterAbilityModifyStat stattype="SkillGainSpeed" value="0.5"/>
+          <CharacterAbilityGiveResistance resistanceid="thirst" multiplier="0.75"/>
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
