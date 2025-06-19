@@ -58,7 +58,7 @@
     </Item>
 
     <!-- MISC -->
-    <Item name="Pulverized Seeds Pack" identifier="he-pulverizedseedspack" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A synthetic liquid that when cooked, turns into synthetic flour." Tags="smallitem,ingredient,distilleringredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" canflipx="false" spritecolor="255,0,0,255" inventoryiconcolor="255,0,0,255">
+    <Item name="Pulverized Seeds Pack" identifier="he-pulverizedseedspack" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A synthetic liquid that when cooked, turns into synthetic flour." Tags="smallitem,ingredient,distilleringredient,powderbag" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" canflipx="false" spritecolor="255,0,0,255" inventoryiconcolor="255,0,0,255">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Deconstruct time="1" requireddeconstructor="deconstructor" />
       <Fabricate suitablefabricators="cuttingboard" requiredtime="60" requiresrecipe="false" amount="1">
@@ -213,7 +213,7 @@
       </Projectile>
     </Item>
 
-    <Item name="Sugar" identifier="he-sugar" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Oh so sweet!" Tags="smallitem,ingredient,distilleringredient,condiment" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" impacttolerance="5.5" canflipx="false">
+    <Item name="Sugar" identifier="he-sugar" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Oh so sweet!" Tags="smallitem,ingredient,distilleringredient,powderbag" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" impacttolerance="5.5" canflipx="false">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -577,7 +577,7 @@
       </Projectile>
     </Item>
 
-    <Item name="Synthetic Flour Mixture" identifier="he-flourmixture" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A liquid that when cooked, turns into synthetic flour." Tags="smallitem,ingredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" canflipx="false" spritecolor="255,0,0,255" inventoryiconcolor="255,0,0,255">
+    <Item name="Synthetic Flour Mixture" identifier="he-flourmixture" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A liquid that when cooked, turns into synthetic flour." Tags="smallitem,ingredient,powderbag" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" canflipx="false" spritecolor="255,0,0,255" inventoryiconcolor="255,0,0,255">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Deconstruct time="1" requireddeconstructor="deconstructor" />
       <!-- TODO: Sprite (Similar to jam sprite, but see-through and yellowish liquid -->
@@ -604,7 +604,7 @@
       </Projectile>
     </Item>
 
-    <Item name="Synthetic Flour" identifier="he-flour" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Baking Bad." Tags="smallitem,ingredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" canflipx="false">
+    <Item name="Synthetic Flour" identifier="he-flour" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Baking Bad." Tags="smallitem,ingredient,powderbag" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" canflipx="false">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.1" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="2" spawnprobability="0.1" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.08" notcampaign="true"/>

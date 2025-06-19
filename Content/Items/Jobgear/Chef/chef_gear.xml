@@ -111,7 +111,7 @@
       </Wearable>
       <ItemContainer capacity="2" maxstacksize="1">
         <SlotIcon slotindex="0" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="52,73,15,30" origin="0.5,0.5" />
-        <SlotIcon slotindex="1" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="22,74,14,60" origin="0.5,0.5" />
+        <SlotIcon slotindex="1" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,67,21,67"  origin="0.5,0.5" />
         <Containable items="condiment,emptyshaker" />
       </ItemContainer>
     </Item>
@@ -155,7 +155,7 @@
       </Wearable>
       <ItemContainer capacity="2" maxstacksize="1">
         <SlotIcon slotindex="0" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="52,73,15,30" origin="0.5,0.5" />
-        <SlotIcon slotindex="1" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="22,74,14,60" origin="0.5,0.5" />
+        <SlotIcon slotindex="1" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,67,21,67"  origin="0.5,0.5" />
         <Containable items="condiment,emptyshaker" />
       </ItemContainer>
     </Item>
@@ -200,8 +200,9 @@
       </Wearable>      
       <ItemContainer capacity="3" maxstacksize="1">
         <SlotIcon slotindex="0" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="52,73,15,30" origin="0.5,0.5" />
-        <SlotIcon slotindex="1" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="22,74,14,60" origin="0.5,0.5" />
-        <Containable items="condiment,emptyshaker" />
+        <SlotIcon slotindex="1" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,67,21,67" origin="0.5,0.5" />
+        <SlotIcon slotindex="2" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="127,67,45,67" origin="0.5,0.5" />
+        <Containable items="condiment,emptyshaker,powderbag" />
       </ItemContainer>
     </Item>
     
