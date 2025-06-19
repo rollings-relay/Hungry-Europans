@@ -1300,14 +1300,29 @@
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="4,3" sheetelementsize="128,128"/>
       <Description tag="talentdescription.he-shortorderchef">
         <Replace tag="[chance]" value="20" color="gui.green"/>
+        <Replace tag="[amount]" value="50" color="gui.green"/>
       </Description>
       <AbilityGroupEffect abilityeffecttype="OnItemFabricatedAmount">
         <Conditions>
-          <AbilityConditionItem identifiers="he-spinelingburger,he-spinelinghotdog,he-huskburger,he-huskhotdog,he-watcherburger,he-watcherhotdog,he-molochburger,he-molochhotdog,he-crawlerburger,he-crawlerhotdog,he-humanburger,he-humanhotdog,he-mudraptorburger,he-mudraptorhotdog,he-hammerheadburger,he-hammerheadhotdog,he-thresherburger,he-thresherhotdog,he-endwormburger,he-endwormhotdog"/>
+          <AbilityConditionItem tags="fingerfood"/>
           <AbilityConditionServerRandom randomChance="0.20" />
         </Conditions>
         <Abilities>
           <CharacterAbilityModifyValue multiplyvalue="2"/>
+        </Abilities>
+      </AbilityGroupEffect>
+      <AbilityGroupEffect abilityeffecttype="OnItemFabricatedAmount">
+        <Conditions>
+          <AbilityConditionItem tags="fingerfood"/>
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" multiplyafflictionsbymaxvitality="true">
+                <Affliction identifier="he-shortorderflow" amount="10" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
