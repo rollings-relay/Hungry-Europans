@@ -1333,7 +1333,7 @@
   <!--Damage against Mudraptors talent-->
   <Override>
     <Talent identifier="he-mudraptorpreference" nameidentifier="character.mudraptor" coloroverride="0.22,0.20,0.40">
-      <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,896,128,128" origin="0.5,0.5"/>
+      <Icon texture="Content/Map/MapAtlas.png" sourcerect="796,665,76,76" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-dietarypreferencemudraptor">
         <Replace tag="[amount]" value="20" color="gui.green"/>
       </Description>
@@ -1352,7 +1352,7 @@
   <!--Damage against Crawlers talent-->
   <Override>
     <Talent identifier="he-crawlerpreference" nameidentifier="character.crawler" coloroverride="0.54,0.45,0.34">
-      <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="128,896,128,128" origin="0.5,0.5"/>
+      <Icon texture="Content/Map/MapAtlas.png" sourcerect="796,665,76,76" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-dietarypreferencecrawler">
         <Replace tag="[amount]" value="20" color="gui.green"/>
       </Description>
@@ -1371,7 +1371,7 @@
   <!--Damage against Threshers talent-->
   <Override>
     <Talent identifier="he-thresherpreference" nameidentifier="character.tigerthresher" coloroverride="0.55,0.48,0.12">
-      <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="256,896,128,128" origin="0.5,0.5"/>
+      <Icon texture="Content/Map/MapAtlas.png" sourcerect="796,665,76,76" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-dietarypreferencethresher">
         <Replace tag="[amount]" value="20" color="gui.green"/>
       </Description>
@@ -1390,7 +1390,7 @@
   <!--Damage against Spinelings talent-->
   <Override>
     <Talent identifier="he-spinelingpreference" nameidentifier="character.spineling" coloroverride="0.14,0.20,0.26">
-      <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="384,896,128,128" origin="0.5,0.5"/>
+      <Icon texture="Content/Map/MapAtlas.png" sourcerect="796,665,76,76" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-dietarypreferencespineling">
         <Replace tag="[amount]" value="20" color="gui.green"/>
       </Description>
@@ -1409,7 +1409,7 @@
   <!--Damage against Husks talent-->
   <Override>
     <Talent identifier="he-huskpreference" nameidentifier="character.husk" coloroverride="0.33,0.22,0.20">
-      <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="512,896,128,128" origin="0.5,0.5"/>
+      <Icon texture="Content/Map/MapAtlas.png" sourcerect="796,665,76,76" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-dietarypreferencehusk">
         <Replace tag="[amount]" value="20" color="gui.green"/>
       </Description>
