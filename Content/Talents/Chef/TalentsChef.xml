@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Override>
 <Talents>
   <!--COMMON TALENTS-->
   <!--Increase sell price of Food Items by 20%-->
-  <Override>
     <Talent identifier="he-farmersmarket">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="0,0" sheetelementsize="128,128"/>
       <Description tag="talentdescription.he-farmersmarket">
@@ -22,9 +23,8 @@
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
-  </Override>
+
   <!--Increase Production Speed of Kitchen Fabricators by 25% -->
-  <Override>
     <Talent identifier="he-fastfood">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="1,0" sheetelementsize="128,128"/>
       <Description tag="talentdescription.he-fastfood">
@@ -54,9 +54,8 @@
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
-  </Override>
+
   <!--Bonus XP on Monster and Nest Missions-->
-  <Override>
     <Talent identifier="he-poacher">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="2,0" sheetelementsize="128,128"/>
       <Description tag="talentdescription.he-poacher">
@@ -82,9 +81,8 @@
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
-  </Override>
+
   <!--20% Chance to find salt in a container if opened for the first time-->
-  <Override>
     <Talent identifier="he-saltybusiness">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="3,0" sheetelementsize="128,128"/>
       <Description tag="talentdescription.he-saltybusiness">
@@ -110,9 +108,8 @@
       </AbilityGroupEffect>
       <AddedRecipe itemidentifier="shotgunshellsalt"/>
     </Talent>
-  </Override>
+
   <!--Increase Medical Skill by 10 and increase healing you provide by 20%-->
-  <Override>
     <Talent identifier="he-anatomystudy">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="4,0" sheetelementsize="128,128"/>
       <Description tag="talentdescription.skillbonus">
@@ -133,9 +130,8 @@
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
-  </Override>
+
   <!--Increase skill gain by 50%-->
-  <Override>
     <Talent identifier="he-thirstforknowledge">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="5,0" sheetelementsize="128,128"/>
       <Description tag="talentdescription.additionalstattype">
@@ -148,9 +144,8 @@
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
-  </Override>
+
   <!--20% Stun resist when aiming a melee weapon and 20% increased melee weapon damage-->
-  <Override>
     <Talent identifier="he-steadyhands">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="6,0" sheetelementsize="128,128"/>
       <Description tag="talentdescription.additionalstattypeself">
@@ -180,9 +175,8 @@
         </Abilities>
       </AbilityGroupInterval>
     </Talent>
-  </Override>
+
   <!--Get paid 200 marks for entering new outpost, 400 for entering a new city-->
-  <Override>
     <Talent identifier="he-foodtrucking">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="7,0" sheetelementsize="128,128"/>
       <Description tag="talentdescription.he-foodtrucking">
@@ -235,9 +229,8 @@
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
-  </Override>
+
   <!--Drunken Sailor with new name and icon-->
-  <Override>
     <Talent identifier="he-smellslikeabrewery">
       <Description tag="talentdescription.drunkensailor">
         <Replace tag="[stunresistance]" value="75" color="gui.green"/>
@@ -265,9 +258,8 @@
       </AbilityGroupInterval>
       <AddedRecipe itemidentifier="he-kegrum"/>
     </Talent>
-  </Override>
+
   <!--Lazy Gardener | Unlock Sprinkler-->
-  <Override>
     <Talent identifier="he-lazygardener">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="1,1" sheetelementsize="128,128"/>
       <Description tag="talentdescription.he-lazygardener" />
@@ -276,9 +268,8 @@
       </Description>
       <AddedRecipe itemidentifier="he-sprinkler"/>
     </Talent>
-  </Override>
+
   <!--Gain a random skill when you gain a Cooking skill-->
-  <Override>
     <Talent identifier="he-culinaryschool">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="3,1" sheetelementsize="128,128"/>
       <Description tag="talentdescription.he-culinaryschool">
@@ -300,11 +291,10 @@
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
-  </Override>
+
 
   <!--BUTCHER TREE-->
   <!--Increase Damage with Butcher Knives-->
-  <Override>
     <Talent identifier="he-frenzy">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="4,1" sheetelementsize="128,128"/>
       <Description tag="talentdescription.he-frenzy">
@@ -333,9 +323,8 @@
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
-  </Override>
+
   <!--Chance not to consume raw meat when cooking-->
-  <Override>
     <Talent identifier="he-thinnerslices">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="5,1" sheetelementsize="128,128"/>
       <Description tag="talentdescription.he-thinnerslices">
@@ -352,9 +341,8 @@
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
-  </Override>
+
   <!--Disable meat rotting in inventory-->
-  <Override>
     <Talent identifier="he-coldblood">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="6,1" sheetelementsize="128,128"/>
       <Description tag="talentdescription.he-coldblood">
@@ -378,9 +366,8 @@
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
-  </Override>
+
   <!--Recover from bleeding faster and resistance to infection-->
-  <Override>
     <Talent identifier="he-dryaging">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="7,1" sheetelementsize="128,128"/>
       <Description tag="talentdescription.crustyseaman"/>
@@ -406,9 +393,8 @@
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
-  </Override>
+
   <!--Increases bleed damage & add Butcher Saw when implimented-->
-  <Override>
     <Talent identifier="he-slaughterhouse">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="0,2" sheetelementsize="128,128"/>
       <Description tag="talentdescription.firemanscarry"/>
@@ -432,9 +418,8 @@
       </AbilityGroupEffect>
       <!-- 	<AddedRecipe itemidentifier="butchersaw"/> -->
     </Talent>
-  </Override>
+
   <!--Increase swim speed by 20% and increase melee damage by 20%-->
-  <Override>
     <Talent identifier="he-seafoodsamurai">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="1,2" sheetelementsize="128,128"/>
       <Description tag="talentdescription.additionalstattypeself">
@@ -459,9 +444,8 @@
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
-  </Override>
+
   <!--Currently Unused - Increase Sell Prices of Raw Meat by 50%-->
-  <Override>
     <Talent identifier="he-butchershop">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="905,905,119,119" origin="0.5,0.5"/>
       <!--<Description tag="talentdescription.blackmarketgenes"/>-->
@@ -476,17 +460,15 @@
       </AbilityGroupEffect>
       <!--<AddedStoreItem itemtag="blackmarketgenes" />-->
     </Talent>
-  </Override>
+
   <!--ENTERTAINER TREE-->
   <!--Apprenticeship but reskinned-->
-  <Override>
     <Talent identifier="he-parttimejob">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="2,2" sheetelementsize="128,128"/>
       <Description tag="talentdescription.apprenticeshipbase"/>
     </Talent>
-  </Override>
+
   <!--Buff allies for the duration of your bagpipe playing-->
-  <Override>
     <Talent identifier="he-piper">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="3,2" sheetelementsize="128,128"/>
       <Description tag="talentdescription.he-piper">
@@ -524,9 +506,8 @@
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
-  </Override>
+
   <!--Reskinned "Leading By Example" -->
-  <Override>
     <!-- TODO: make this more interesting, increase mood? -->
     <Talent identifier="he-tastyfood">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="5,3" sheetelementsize="128,128"/>
@@ -564,9 +545,8 @@
         </Abilities>
       </AbilityGroupInterval>
     </Talent>
-  </Override>
+
   <!--Increases food buffs with bagpipes - Insanely long because it lists every food buff-->
-  <Override>
     <Talent identifier="he-dinnertheater">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="4,2" sheetelementsize="128,128"/>
       <Description tag="talentdescription.he-dinnertheater" />
@@ -1095,9 +1075,8 @@
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
-  </Override>
+
   <!--When you gain a cooking or butchery skill allies do as well-->
-  <Override>
     <Talent identifier="he-teppanyaki">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="5,2" sheetelementsize="128,128"/>
       <Description tag="talentdescription.he-teppanyaki">
@@ -1130,9 +1109,8 @@
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
-  </Override>
+
   <!--Graduation Ceremony reskinned-->
-  <Override>
     <Talent identifier="he-workpromotion">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="6,2" sheetelementsize="128,128"/>
       <Description tag="talentdescription.unlockapprenticeshiptalents"/>
@@ -1150,9 +1128,8 @@
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
-  </Override>
+
   <!-- Reskinned Family - Currently Unused-->
-  <Override>
     <Talent identifier="he-favorite">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="905,905,119,119" origin="0.5,0.5"/>
       <Description tag="talentdescription.family" />
@@ -1168,10 +1145,9 @@
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
-  </Override>
+
   <!--CHEF TREE-->
   <!--Unlock Master Chef Attire Crafting Recipes and Give Allies in Same Room Cooking Skill Boost-->
-  <Override>
     <Talent identifier="he-headchef">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="7,2" sheetelementsize="128,128"/>
       <Description tag="talentdescription.he-headchef">
@@ -1196,9 +1172,8 @@
       <AddedRecipe itemidentifier="he-chefscapmaster1"/>
       <AddedRecipe itemidentifier="he-chefsuniformmaster1"/>
     </Talent>
-  </Override>
+
   <!--Loot extra husk eggs from husks and unlock husk food recipes-->
-  <Override>
     <Talent identifier="he-huskegghunt">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="0,3" sheetelementsize="128,128"/>
       <Description tag="talentdescription.he-huskegghunt">
@@ -1230,9 +1205,8 @@
       <AddedRecipe itemidentifier="he-cookedhuskroe"/>
       <AddedRecipe itemidentifier="he-rawhuskmeat"/>
     </Talent>
-  </Override>
+
   <!--Unlock food recipes-->
-  <Override>
     <Talent identifier="he-delicacies">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="1,3" sheetelementsize="128,128"/>
       <Description tag="talentdescription.he-delicacies">
@@ -1244,9 +1218,8 @@
       <AddedRecipe itemidentifier="he-cookedhammerheadspawnpickled"/>
       <AddedRecipe itemidentifier="he-molochsushi"/>
     </Talent>
-  </Override>
+
   <!--Unlock brewing recipes-->
-  <Override>
     <Talent identifier="he-masterbrewer">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="2,3" sheetelementsize="128,128"/>
       <Description tag="talentdescription.he-masterbrewer">
@@ -1258,9 +1231,8 @@
       <AddedRecipe itemidentifier="he-kegwhiskey"/>
       <AddedRecipe itemidentifier="he-keghalucinova"/>
     </Talent>
-  </Override>
+
   <!--Chance not to consume milk when crafting food-->
-  <Override>
     <Talent identifier="he-creamery">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="3,3" sheetelementsize="128,128"/>
       <Description tag="talentdescription.he-creamery">
@@ -1298,9 +1270,8 @@
         </Abilities>
       </AbilityGroupInterval>
     </Talent>
-  </Override>
+
   <!--20% chance to duplicate a cooked hotdog or burger-->
-  <Override>
     <Talent identifier="he-shortorderchef">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="4,3" sheetelementsize="128,128"/>
       <Description tag="talentdescription.he-shortorderchef">
@@ -1332,9 +1303,8 @@
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
-  </Override>
+
   <!--Essentially a placeholder (like assistant) that lets you choose which creature you want a damage buff against-->
-  <Override>
     <Talent identifier="he-dietarypreference">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="2,1" sheetelementsize="128,128"/>
       <Description tag="talentdescription.he-dietarypreferencebase">
@@ -1352,9 +1322,8 @@
       </AbilityGroupEffect>
       <!--<AddedRecipe itemidentifier="he-antistarve"/>	-->
     </Talent>
-  </Override>
+
   <!--Damage against Mudraptors talent-->
-  <Override>
     <Talent identifier="he-mudraptorpreference" nameidentifier="character.mudraptor" coloroverride="0.22,0.20,0.40">
       <Icon texture="Content/Map/MapAtlas.png" sourcerect="796,665,76,76" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-dietarypreferencemudraptor">
@@ -1371,9 +1340,8 @@
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
-  </Override>
+
   <!--Damage against Crawlers talent-->
-  <Override>
     <Talent identifier="he-crawlerpreference" nameidentifier="character.crawler" coloroverride="0.54,0.45,0.34">
       <Icon texture="Content/Map/MapAtlas.png" sourcerect="796,665,76,76" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-dietarypreferencecrawler">
@@ -1390,9 +1358,8 @@
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
-  </Override>
+
   <!--Damage against Threshers talent-->
-  <Override>
     <Talent identifier="he-thresherpreference" nameidentifier="character.tigerthresher" coloroverride="0.55,0.48,0.12">
       <Icon texture="Content/Map/MapAtlas.png" sourcerect="796,665,76,76" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-dietarypreferencethresher">
@@ -1409,9 +1376,8 @@
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
-  </Override>
+
   <!--Damage against Spinelings talent-->
-  <Override>
     <Talent identifier="he-spinelingpreference" nameidentifier="character.spineling" coloroverride="0.14,0.20,0.26">
       <Icon texture="Content/Map/MapAtlas.png" sourcerect="796,665,76,76" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-dietarypreferencespineling">
@@ -1428,9 +1394,8 @@
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
-  </Override>
+
   <!--Damage against Husks talent-->
-  <Override>
     <Talent identifier="he-huskpreference" nameidentifier="character.husk" coloroverride="0.33,0.22,0.20">
       <Icon texture="Content/Map/MapAtlas.png" sourcerect="796,665,76,76" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-dietarypreferencehusk">
@@ -1447,7 +1412,7 @@
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
-  </Override>
+
   <!--Adds Anti-Starve - currently unused/obsolete-->
   <!--<Override>
     <Talent identifier="he-lifesaver">
@@ -1464,6 +1429,7 @@
       </AbilityGroupEffect>
       <AddedRecipe itemidentifier="he-antistarve"/>
     </Talent>
-  </Override>  -->
+  -->
 
 </Talents>
+</Override>
