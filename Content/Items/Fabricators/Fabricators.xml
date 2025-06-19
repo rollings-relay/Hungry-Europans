@@ -1072,12 +1072,12 @@
       </Pump>
       <Holdable slots="RightHand+LeftHand" canbeselected="true" selectkey="Select" canbepicked="true" pickkey="Action" PickingTime="5" attachable="true" holdpos="70,-40" handle1="-60,30" handle2="-20,50">
         <RequiredItem items="wrench" type="Equipped" />
-        <!-- slow down the character carrying the device -->
-        <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.3" PropulsionSpeedMultiplier="0.3" setvalue="true" duration="0.1" />
         <!-- drop contained items if the device is detached -->
         <StatusEffect type="OnContained" target="This">
           <DropContainedItems />
         </StatusEffect>
+        <StatValue stattype="WalkingSpeed" value="-0.5" />
+        <StatValue stattype="SwimmingSpeed" value="-0.7" />
       </Holdable>
       <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
         <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
