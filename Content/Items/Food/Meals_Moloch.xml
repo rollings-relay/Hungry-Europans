@@ -124,7 +124,7 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="858,0,68,29" origin="0.5,0.5" />
       <Fabricate suitablefabricators="cuttingboard" requiredtime="15" requiresrecipe="false" amount="1" displayname="molochfooditem">
         <RequiredSkill identifier="cooking" level="50" />
-        <RequiredItem identifier="he-preparredcrawlerfilets" amount="1" MinCondition="0.25" UseCondition="true" />
+        <RequiredItem identifier="he-rawmolochsteak" amount="1" MinCondition="0.25" UseCondition="true" />
         <RequiredItem identifier="bubbleberryleaf" amount="1" />
         <RequiredItem identifier="he-emptyplate" amount="1" />
       </Fabricate>
