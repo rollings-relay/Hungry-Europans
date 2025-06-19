@@ -274,29 +274,35 @@
       <AddedRecipe itemidentifier="he-sprinkler"/>
     </Talent>
 
-  <!--Gain a random skill when you gain a Cooking skill-->
+  <!--Gain a commendation when cooking a gourmet meal TODO: make it clear what is gourmet, add gourmetfood tag to advanced meals -->
     <Talent identifier="he-culinaryschool">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="3,1" sheetelementsize="128,128"/>
       <Description tag="talentdescription.he-culinaryschool">
-        <Replace tag="[skillname]" vlaue="skillname.cooking" color="gui.orange" />
-        <Replace tag="[amount]" value="1" color="gui.green" />
+        <Replace tag="[selfxpgain]" value="275" color="gui.green"/>
       </Description>
-      <AbilityGroupEffect abilityeffecttype="OnGainSkillPoint">
+      <AbilityGroupEffect abilityeffecttype="OnItemFabricatedAmount">
         <Conditions>
-          <AbilityConditionSkill skillidentifier="cooking"/>
+          <AbilityConditionItem tags="gourmetfood"/>
+          <AbilityConditionHasPermanentStat statidentifier="culinaryschool_cooked" min="1" invert="true"/>
         </Conditions>
         <Abilities>
+          <CharacterAbilityGivePermanentStat statidentifier="culinaryschool_cooked" value="1" setvalue="true" />
           <CharacterAbilityApplyStatusEffects>
             <StatusEffects>
               <StatusEffect type="OnAbility" target="Character">
-                <GiveSkill skillidentifier="randomskill" amount="1" />
+                <SpawnItem identifiers="coalitioncommendation" spawnposition="ThisInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
               </StatusEffect>
             </StatusEffects>
           </CharacterAbilityApplyStatusEffects>
         </Abilities>
       </AbilityGroupEffect>
+      <AbilityGroupEffect abilityeffecttype="OnAnyMissionCompleted">
+        <Abilities>
+          <CharacterAbilityResetPermanentStat statidentifier="culinaryschool_cooked" />
+        </Abilities>
+      </AbilityGroupEffect>
+      
     </Talent>
-
 
   <!--BUTCHER TREE-->
   <!--Increase Damage with Butcher Knives-->

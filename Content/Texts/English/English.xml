@@ -702,7 +702,8 @@ SEARCH FOR THE FOLLOWING:                                                       
 <talentdescription.he-dietarypreferencespineling>Choose ‖color:gui.orange‖Spinelings‖end‖ as your preference and gain [amount]% increased damage dealt against them.</talentdescription.he-dietarypreferencespineling><!--Patch 17-->
 <talentdescription.he-dietarypreferencehusk>Choose ‖color:gui.orange‖Husks‖end‖ as your preference and gain [amount]% increased damage dealt against them.</talentdescription.he-dietarypreferencehusk><!--Patch 17-->
 <talentname.he-culinaryschool>Culinary School</talentname.he-culinaryschool><!--Patch 17-->
-<talentdescription.he-culinaryschool>Whenever you gain a [skillname] skill point, gain [amount] random additional skill.</talentdescription.he-culinaryschool><!--Patch 17-->
+<talentdescription.he-culinaryschool>After completing a mission, the first ‖color:gui.orange‖Gourmet‖end‖ meal you cook earns you a ‖color:gui.orange‖Commendation‖end‖.</talentdescription.he-culinaryschool>
+<!--Patch 17-->
 <talentname.he-thinnerslices>Thinner Slices</talentname.he-thinnerslices><!--Patch 17-->
 <talentdescription.he-thinnerslices>Gain a [chance]% chance to not consume raw meat when cooking.</talentdescription.he-thinnerslices><!--Patch 17-->
 <talentname.he-dryaging>Dry-Aging</talentname.he-dryaging><!--Patch 17-->
