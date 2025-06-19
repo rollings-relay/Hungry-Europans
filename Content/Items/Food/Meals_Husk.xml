@@ -3,7 +3,7 @@
   <Items>
     <!-- MEAT -->
     <!--Husk-->
-    <Item name="Rolled Husk Roe" identifier="he-cookedhuskroe" aliases="he-cookedhuskfilet" category="Misc" subcategory="Food - Husk" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+    <Item name="Rolled Husk Roe" identifier="he-cookedhuskroe" aliases="he-cookedhuskfilet" category="Misc" subcategory="Food - Husk" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,gourmetfood,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
