@@ -1331,7 +1331,9 @@
   <Override>
     <Talent identifier="he-dietarypreference">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="2,1" sheetelementsize="128,128"/>
-      <Description tag="talentdescription.he-dietarypreferencebase"/>
+      <Description tag="talentdescription.he-dietarypreferencebase">
+        <Replace tag="[amount]" value="35" color="gui.green"/>
+      </Description>
       <Description tag="talentdescription.he-lifesaver">
         <!--<Replace tag="[itemname1]" value="entityname.he-antistarve" color="gui.orange"/>-->
         <Replace tag="[skill]" value="skillname.medical" color="gui.orange"/>
@@ -1350,7 +1352,7 @@
     <Talent identifier="he-mudraptorpreference" nameidentifier="character.mudraptor" coloroverride="0.22,0.20,0.40">
       <Icon texture="Content/Map/MapAtlas.png" sourcerect="796,665,76,76" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-dietarypreferencemudraptor">
-        <Replace tag="[amount]" value="20" color="gui.green"/>
+        <Replace tag="[amount]" value="35" color="gui.green"/>
       </Description>
       <AbilityGroupEffect abilityeffecttype="OnAttack">
         <Conditions>
@@ -1359,7 +1361,7 @@
           </AbilityConditionCharacter>
         </Conditions>
         <Abilities>
-          <CharacterAbilityModifyAttackData addeddamagemultiplier="0.20"/>
+          <CharacterAbilityModifyAttackData addeddamagemultiplier="0.35"/>
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
@@ -1369,7 +1371,7 @@
     <Talent identifier="he-crawlerpreference" nameidentifier="character.crawler" coloroverride="0.54,0.45,0.34">
       <Icon texture="Content/Map/MapAtlas.png" sourcerect="796,665,76,76" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-dietarypreferencecrawler">
-        <Replace tag="[amount]" value="20" color="gui.green"/>
+        <Replace tag="[amount]" value="35" color="gui.green"/>
       </Description>
       <AbilityGroupEffect abilityeffecttype="OnAttack">
         <Conditions>
@@ -1378,7 +1380,7 @@
           </AbilityConditionCharacter>
         </Conditions>
         <Abilities>
-          <CharacterAbilityModifyAttackData addeddamagemultiplier="0.20"/>
+          <CharacterAbilityModifyAttackData addeddamagemultiplier="0.35"/>
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
@@ -1388,7 +1390,7 @@
     <Talent identifier="he-thresherpreference" nameidentifier="character.tigerthresher" coloroverride="0.55,0.48,0.12">
       <Icon texture="Content/Map/MapAtlas.png" sourcerect="796,665,76,76" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-dietarypreferencethresher">
-        <Replace tag="[amount]" value="20" color="gui.green"/>
+        <Replace tag="[amount]" value="35" color="gui.green"/>
       </Description>
       <AbilityGroupEffect abilityeffecttype="OnAttack">
         <Conditions>
@@ -1397,7 +1399,7 @@
           </AbilityConditionCharacter>
         </Conditions>
         <Abilities>
-          <CharacterAbilityModifyAttackData addeddamagemultiplier="0.20"/>
+          <CharacterAbilityModifyAttackData addeddamagemultiplier="0.35"/>
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
@@ -1407,7 +1409,7 @@
     <Talent identifier="he-spinelingpreference" nameidentifier="character.spineling" coloroverride="0.14,0.20,0.26">
       <Icon texture="Content/Map/MapAtlas.png" sourcerect="796,665,76,76" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-dietarypreferencespineling">
-        <Replace tag="[amount]" value="20" color="gui.green"/>
+        <Replace tag="[amount]" value="35" color="gui.green"/>
       </Description>
       <AbilityGroupEffect abilityeffecttype="OnAttack">
         <Conditions>
@@ -1416,7 +1418,7 @@
           </AbilityConditionCharacter>
         </Conditions>
         <Abilities>
-          <CharacterAbilityModifyAttackData addeddamagemultiplier="0.20"/>
+          <CharacterAbilityModifyAttackData addeddamagemultiplier="0.35"/>
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
@@ -1426,7 +1428,7 @@
     <Talent identifier="he-huskpreference" nameidentifier="character.husk" coloroverride="0.33,0.22,0.20">
       <Icon texture="Content/Map/MapAtlas.png" sourcerect="796,665,76,76" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-dietarypreferencehusk">
-        <Replace tag="[amount]" value="20" color="gui.green"/>
+        <Replace tag="[amount]" value="35" color="gui.green"/>
       </Description>
       <AbilityGroupEffect abilityeffecttype="OnAttack">
         <Conditions>
@@ -1435,7 +1437,7 @@
           </AbilityConditionCharacter>
         </Conditions>
         <Abilities>
-          <CharacterAbilityModifyAttackData addeddamagemultiplier="0.20"/>
+          <CharacterAbilityModifyAttackData addeddamagemultiplier="0.35"/>
         </Abilities>
       </AbilityGroupEffect>
     </Talent>

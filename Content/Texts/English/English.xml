@@ -695,7 +695,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <talentdescription.he-foodtrucking>Gain a bonus of [helmbonus] ‖color:gui.orange‖Helm‖end‖ skill.\nWhen entering a friendly habitation outpost, gain [outpost]mk.</talentdescription.he-foodtrucking><!--Patch 17-->
 <talentname.he-smellslikeabrewery>Smells Like a Brewery</talentname.he-smellslikeabrewery><!--Patch 17-->
 <talentname.he-dietarypreference>Dietary preference</talentname.he-dietarypreference><!--Patch 17-->
-<talentdescription.he-dietarypreferencebase>Choose one type of enemy and gain relevant damage boost against it.</talentdescription.he-dietarypreferencebase><!--Patch 17-->
+<talentdescription.he-dietarypreferencebase>Choose one type of enemy and gain a [amount]% damage boost against it.</talentdescription.he-dietarypreferencebase><!--Patch 17-->
 <talentdescription.he-dietarypreferencemudraptor>Choose ‖color:gui.orange‖Mudraptors‖end‖ as your preference and gain [amount]% increased damage dealt against them.</talentdescription.he-dietarypreferencemudraptor><!--Patch 17-->
 <talentdescription.he-dietarypreferencecrawler>Choose ‖color:gui.orange‖Crawlers‖end‖ as your preference and gain [amount]% increased damage dealt against them.</talentdescription.he-dietarypreferencecrawler><!--Patch 17-->
 <talentdescription.he-dietarypreferencethresher>Choose ‖color:gui.orange‖Threshers‖end‖ as your preference and gain [amount]% increased damage dealt against them.</talentdescription.he-dietarypreferencethresher><!--Patch 17-->
