@@ -5,8 +5,6 @@ M make sure plant produce is available in large quantities on hydroponic and cit
 
 - Cake
 - Cake slice (requires fork to eat) | either: can be thrown if no fork is equipped | or: when equipped, show GUI to take cake off the plate to be able to throw it
-- Pizza
-- Pizza slices
 - Make more fryable food
 - Make more meat compatible with electric grill cooking and give all of them contained sprites for the grill
 - Recipes that make use of the canned ingredients
@@ -29,7 +27,7 @@ Changelog:
 - Added: Recipe for "Synthetiflour". Crafted by cooking the "Synthetic Flour Mixture" at the stove
 - (TODO) Added: New ingredient "Dough" which is now used to make Bread, Buns and Pizza
 - Added: New food item "Omelette" of every monster egg type (Crawler, Mudraptor, Thresher)
-- (TODO) Added: New food item "Pizza"
+- Added: New food item "Pizza"
 - (WIP) Added: New drinks "Coffee". Reduces your tiredness if you have it enabled and helps to sober up. Can give you a caffeine rush
 - (WIP) Added: New drinks "Hot Chocolate". Increases your tiredness if you have it enabled, but also increases your mood and helps to sober up
 - Added: New output for "Hydroponic Planter" to calculate the seconds until the next produce. Works exactly like the "Gardening Sprinkler"
