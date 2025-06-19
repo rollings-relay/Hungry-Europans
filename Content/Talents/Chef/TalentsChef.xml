@@ -544,29 +544,24 @@
         <Replace tag="[stattype]" value="stattypenames.movementspeed" color="gui.orange"/>
       </Description>
       <AbilityGroupInterval interval="0.9">
-        <Conditions>
-          <AbilityConditionHasTalent identifier="he-family" truthywhen="HasTalent"/>
-          <AbilityConditionNoCrewDied/>
-        </Conditions>
         <Abilities>
           <CharacterAbilityApplyStatusEffectsToAllies allowself="true" requiresalive="true" allowclientsimulation="false">
             <StatusEffects>
-              <StatusEffect type="OnAbility" target="Character" disabledeltatime="true">
+              <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" comparison="and">
+                <Conditional hunger="lt 30" />
+                <Conditional he-stuffed="gte 35" />
                 <Affliction identifier="excellentmorale" amount="10.0"/>
+                <ReduceAffliction identifier="highmorale" strength="10.0"/>
               </StatusEffect>
-            </StatusEffects>
-          </CharacterAbilityApplyStatusEffectsToAllies>
-        </Abilities>
-        <FallbackAbilities>
-          <CharacterAbilityApplyStatusEffectsToAllies allowself="true" requiresalive="true" allowclientsimulation="false">
-            <StatusEffects>
-              <StatusEffect type="OnAbility" target="Character" disabledeltatime="true">
+              <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" comparison="and">
+                <Conditional hunger="lt 30" />
+                <Conditional he-stuffed="lt 35" />
                 <Affliction identifier="highmorale" amount="10.0"/>
                 <ReduceAffliction identifier="excellentmorale" strength="10.0"/>
               </StatusEffect>
             </StatusEffects>
           </CharacterAbilityApplyStatusEffectsToAllies>
-        </FallbackAbilities>
+        </Abilities>
       </AbilityGroupInterval>
     </Talent>
   </Override>
