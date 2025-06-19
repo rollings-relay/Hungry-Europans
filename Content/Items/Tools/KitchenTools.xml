@@ -23,10 +23,11 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="123,29,101,12" depth="0.55" />
       <Body width="98" height="10" density="15.0" />
       <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-18,0" holdangle="60" reload="1.0" range="50" combatpriority="8" msg="ItemMsgPickUpSelect">
-        <Attack structuredamage="0" itemdamage="2" targetimpulse="5">
-          <Affliction identifier="blunttrauma" strength="8" />
-          <Affliction identifier="blunttrauma" strength="8" probability="0.5" />
-          <Affliction identifier="stun" strength="0.2" />
+        <Attack structuredamage="0" itemdamage="2" targetimpulse="5" penetration="0.5">
+          <Affliction identifier="blunttrauma" strength="6" />
+          <Affliction identifier="blunttrauma" strength="2" probability="0.5" />
+          <Affliction identifier="stun" strength="0.1" />
+          <Affliction identifier="stun" strength="0.1" probability="0.5" />
           <StatusEffect type="OnUse" target="UseTarget" forceplaysounds="true">
             <Conditional entitytype="eq Character"/>
             <Sound file="%ModDir:2954998725%/Content/Sounds/Impact/PanHit1.ogg" selectionmode="random" range="700"/>
