@@ -6,7 +6,7 @@
     <Item name="Box of Milky Ice Cream Base" identifier="he-icecreambasemilky" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="The base for Milky Ice Cream. Store it in a refrigerated container to make edible ice cream." Tags="smallitem,fooditem,canmelt" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True" canflipx="false">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="1,79,108,55" depth="0.6" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="30" requiresrecipe="false" amount="1" outcondition="0.0">
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="16" requiresrecipe="false" amount="1" outcondition="0.0">
         <RequiredSkill identifier="cooking" level="30" />
         <RequiredItem tag="milk" UseCondition="True" MinCondition="0.99"/>
         <RequiredItem tag="milk" UseCondition="True" MinCondition="0.99"/>
@@ -153,7 +153,7 @@
     <Item name="Box of Pomegrenade Ice Cream Base" identifier="he-icecreambasepomegrenade" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="The base for Pomegrenade Ice Cream. Store it in a refrigerated container to make edible ice cream." Tags="smallitem,fooditem,canmelt" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True" canflipx="false">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="1,135,108,55" depth="0.6" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="30" requiresrecipe="false" amount="1" outcondition="0.0">
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="16" requiresrecipe="false" amount="1" outcondition="0.0">
         <RequiredSkill identifier="cooking" level="30" />
         <RequiredItem tag="milk" UseCondition="True" MinCondition="0.99"/>
         <RequiredItem tag="milk" UseCondition="True" MinCondition="0.99"/>
@@ -300,7 +300,7 @@
     <Item name="Box of Pop Nut Ice Cream Base" identifier="he-icecreambasepopnut" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="The base for Pop Nut Ice Cream. Tastes kind of similar to what chocolate tasted like back on earth. Store it in a refrigerated container to make edible ice cream." Tags="smallitem,fooditem,canmelt" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True" canflipx="false">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="110,79,108,55" depth="0.6" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="30" requiresrecipe="false" amount="1" outcondition="0.0">
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="16" requiresrecipe="false" amount="1" outcondition="0.0">
         <RequiredSkill identifier="cooking" level="30" />
         <RequiredItem tag="milk" UseCondition="True" MinCondition="0.99"/>
         <RequiredItem tag="milk" UseCondition="True" MinCondition="0.99"/>
@@ -455,7 +455,7 @@
     <Item name="Box of Bubble Berry Ice Cream Base" identifier="he-icecreambasebubbleberry" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="The base for Bubble Berry Ice Cream. A very refreshing taste similar to how strawberries tasted like back on earth. Store it in a refrigerated container to make edible ice cream." Tags="smallitem,fooditem,canmelt" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True" canflipx="false">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="110,135,108,55" depth="0.6" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="30" requiresrecipe="false" amount="1" outcondition="0.0">
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="16" requiresrecipe="false" amount="1" outcondition="0.0">
         <RequiredSkill identifier="cooking" level="30" />
         <RequiredItem tag="milk" UseCondition="True" MinCondition="0.99"/>
         <RequiredItem tag="milk" UseCondition="True" MinCondition="0.99"/>
@@ -610,7 +610,7 @@
     <Item name="Moloch Cheese Curd" identifier="he-molochcheesecurd" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Slowly turns into cheese. A full block of cheese will yield 18 cheese slices." Tags="smallitem,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="1,1,39,21" depth="0.6" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="30" requiresrecipe="false" amount="1" outcondition="0.0">
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="16" requiresrecipe="false" amount="1" outcondition="0.0">
         <RequiredSkill identifier="cooking" level="30" />
         <RequiredItem tag="milk" UseCondition="True" MinCondition="0.99"/>
         <RequiredItem tag="milk" UseCondition="True" MinCondition="0.99"/>
@@ -780,7 +780,7 @@
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="41,5,38,3" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/UI/InventoryIcons.png" sourcerect="0,59,36,20" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="30" requiresrecipe="false" amount="18">
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="16" requiresrecipe="false" amount="18">
         <RequiredSkill identifier="cooking" level="10" />
         <RequiredItem identifier="he-molochcheese" amount="1"/>
       </Fabricate>

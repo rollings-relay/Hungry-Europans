@@ -62,7 +62,7 @@
         <Price storeidentifier="merchantbutcher" multiplier="2.0" minavailable="0" maxavailable="32" sold="true" />
       </Price>
       <Deconstruct time="3" requireddeconstructor="deconstructor" />
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="20" requiresrecipe="false" amount="4">
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="16" requiresrecipe="false" amount="4">
         <RequiredSkill identifier="butchery" level="45" />
         <RequiredItem identifier="he-molochmeatchunk" Amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
       </Fabricate>
@@ -110,7 +110,7 @@
         <Price storeidentifier="merchantbutcher" multiplier="2.0" minavailable="0" maxavailable="16" sold="true" />
       </Price>
       <Deconstruct time="5" requireddeconstructor="deconstructor" />
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="20" requiresrecipe="false" amount="1">
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="16" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="butchery" level="50" />
         <RequiredItem identifier="he-molochmeatchunk" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
       </Fabricate>

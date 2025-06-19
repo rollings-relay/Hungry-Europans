@@ -55,7 +55,7 @@
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="258,477,51,17" depth="0.6" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="20" requiresrecipe="false" amount="4">
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="16" requiresrecipe="false" amount="4">
         <RequiredSkill identifier="butchery" level="60" />
         <RequiredItem identifier="he-humanmeatchunk" Amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
       </Fabricate>
@@ -117,7 +117,7 @@
         <Price storeidentifier="merchantbutcher" multiplier="2.0" minavailable="0" maxavailable="16" sold="true" />
       </Price>
       <Deconstruct time="5" requireddeconstructor="deconstructor" />
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="20" requiresrecipe="false" amount="1">
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="16" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="butchery" level="35" />
         <RequiredItem identifier="he-humanmeatchunk" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
         <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.1"/>
