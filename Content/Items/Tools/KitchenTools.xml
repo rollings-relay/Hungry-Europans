@@ -780,6 +780,7 @@
           <Conditional mass="gt 500" />
           <Conditional IsDead="false" />
           <Affliction identifier="milkextraction" strength="15" />
+          <Affliction identifier="slow" strength="10" />
           <AITrigger state="Freeze" duration="5" probability="1" mindamage="0" allowtobeoverridden="false" allowtooverride="true" />
         </StatusEffect>
         <StatusEffect type="OnUse" targettype="Usetarget" multiplyafflictionsbymaxvitality="true" comparison="and">
@@ -787,6 +788,7 @@
           <Conditional mass="gt 500" />
           <Conditional IsDead="false" />
           <Affliction identifier="milkextraction" strength="15" />
+          <Affliction identifier="slow" strength="15" />
           <AITrigger state="Freeze" duration="2" probability="1" mindamage="0" allowtobeoverridden="false" allowtooverride="true" />
           <ParticleEmitter particle="whitegoosplash" particlespersecond="6" copyentityangle="true" anglemin="170" anglemax="190" distancemin="-30" distancemax="-40" velocitymin="120" velocitymax="200" scalemin="0.5" scalemax="1" drawontop="true" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/squeeze1.ogg" type="OnUse" range="500" volume="2" dontmuffle="true" selectionmode="Random" />

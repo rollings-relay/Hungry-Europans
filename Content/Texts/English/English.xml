@@ -654,19 +654,19 @@ SEARCH FOR THE FOLLOWING:                                                       
 <talentdescription.he-specialeuropan>You're a special europan and need to urinate and defecate regularly, depending on what you eat and drink.</talentdescription.he-specialeuropan><!--Patch 13-->
 
 <talentname.he-poacher>Poacher</talentname.he-poacher>
-<talentdescription.he-poacher>Gain an additional [xpbonus]% bonus XP in [missiontype1] and [missiontype2] missions.</talentdescription.he-poacher>
+<talentdescription.he-poacher>Gain an additional [xpbonus]% bonus XP and [moneybonus]% bonus marks in [missiontype1] and [missiontype2] missions.</talentdescription.he-poacher>
 <talentname.he-saltybusiness>Salty Business</talentname.he-saltybusiness>
 <talentdescription.he-saltybusiness>The first time you open a container, you have a chance of [probability]% to find some extra salt in it.</talentdescription.he-saltybusiness>
 <talentname.he-fastfood>Fast Food</talentname.he-fastfood>
-<talentdescription.he-fastfood>Increase the speed of kitchen related fabricators by [amount]%.\nDoes not affect [itemname1] and [itemname2].</talentdescription.he-fastfood><!--Patch 17-->
+<talentdescription.he-fastfood>Move [value]% faster.\nIncrease the speed of kitchen related fabricators by [amount]%.\nDoes not affect [itemname1] and [itemname2].</talentdescription.he-fastfood><!--Patch 17-->
 <talentname.he-chefattire>Master Chef Attire</talentname.he-chefattire>
 <talentdescription.he-chefattire>Unlock the crafting recipes for [itemname1] and [itemname2].</talentdescription.he-chefattire>
 <talentname.he-frenzy>Frenzy</talentname.he-frenzy>
-<talentdescription.he-frenzy>Increase your attack strength with butcher related knives by [powerincrease]%.</talentdescription.he-frenzy>
+<talentdescription.he-frenzy>Increase your attack strength with butcher related knives by [powerincrease]%.\nIncrease your working speed on the cutting board by [amount]%.</talentdescription.he-frenzy>
 <talentname.he-butchershop>Butcher Shop</talentname.he-butchershop>
 <talentdescription.he-butchershop>You're a talented butcher and it shows!\nGet [amount]% more money when selling meat!</talentdescription.he-butchershop>
 <talentname.he-coldblood>Cold Blood</talentname.he-coldblood><!--Patch 13-->
-<talentdescription.he-coldblood>You're the coolest person around.\nMeat no longer spoils and ice cream no longer melts in your inventory.</talentdescription.he-coldblood><!--Patch 13-->
+<talentdescription.he-coldblood>You're the coolest person around.\n‖color:gui.orange‖Meat‖end‖ no longer spoils and ‖color:gui.orange‖Ice Cream‖end‖ no longer melts in your inventory.</talentdescription.he-coldblood><!--Patch 13-->
 <talentname.he-masterchef>Master Chef</talentname.he-masterchef>
 <talentdescription.he-masterchef>You've become a master of your work and learned how to save some ingredients for later when cooking.\nYou have a [chance]% chance to not consume a random ingredient while preparing a meal.</talentdescription.he-masterchef>
 <talentname.he-lifesaver>Life Saver</talentname.he-lifesaver>
@@ -683,15 +683,16 @@ SEARCH FOR THE FOLLOWING:                                                       
 <talentname.he-piper>Piper</talentname.he-piper><!--Patch 13-->
 <talentdescription.he-piper>Playing the bagpipes near your crew grants them the following bonuses for the duration you're playing:\n‖color:gui.orange‖20 to Weapons\n20% Increased Walking Speed\n25% Increased Melee Damage\n25% Damage Resistance ‖end‖.</talentdescription.he-piper><!--Patch 13-->
 <talentname.he-lazygardener>Lazy Gardener</talentname.he-lazygardener><!--Patch 14-->
-<talentdescription.he-lazygardener>The time spent watering your plants was just too much for you and your crew simply doesn't look after them when you may be unavailable to do so, so you got creative and managed to come up with a sprinkler design.</talentdescription.he-lazygardener><!--Patch 14-->
+<talentdescription.he-lazygardener>The time spent watering your plants was just too much for you.</talentdescription.he-lazygardener><!--Patch 14-->
 <talentname.he-farmersmarket>Farmers' market</talentname.he-farmersmarket><!--Patch 17-->
 <talentdescription.he-farmersmarket>You can sell prepared food for [amount]% more.</talentdescription.he-farmersmarket><!--Patch 17-->
+<talentdescription.fooditemscostless>‖color:gui.orange‖Food‖end‖ items can be bought [amount]% cheaper.</talentdescription.fooditemscostless>
 <talentname.he-anatomystudy>Anatomy Study</talentname.he-anatomystudy><!--Patch 17-->
 <talentname.he-thirstforknowledge>Thirst for Knowledge</talentname.he-thirstforknowledge><!--Patch 17-->
 <talentname.he-steadyhands>Steady Hands</talentname.he-steadyhands><!--Patch 17-->
 <talentdescription.he-steadyhands>While aiming with a melee weapon, gain [amount]% stun resistance.</talentdescription.he-steadyhands><!--Patch 17-->
 <talentname.he-foodtrucking>Food Trucking</talentname.he-foodtrucking><!--Patch 17-->
-<talentdescription.he-foodtrucking>When entering a new outpost, gain [outpost]mk. \nDouble for cities.</talentdescription.he-foodtrucking><!--Patch 17-->
+<talentdescription.he-foodtrucking>Gain a bonus of [helmbonus] ‖color:gui.orange‖Helm‖end‖ skill.\nWhen entering a friendly habitation outpost, gain [outpost]mk.</talentdescription.he-foodtrucking><!--Patch 17-->
 <talentname.he-smellslikeabrewery>Smells Like a Brewery</talentname.he-smellslikeabrewery><!--Patch 17-->
 <talentname.he-dietarypreference>Dietary preference</talentname.he-dietarypreference><!--Patch 17-->
 <talentdescription.he-dietarypreferencebase>Choose one type of enemy and gain relevant damage boost against it.</talentdescription.he-dietarypreferencebase><!--Patch 17-->
@@ -719,7 +720,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <talentname.he-huskegghunt>Husk Egg Hunt</talentname.he-huskegghunt><!--Patch 17-->
 <talentdescription.he-huskegghunt>Husks drop one extra [item].</talentdescription.he-huskegghunt><!--Patch 17-->
 <talentname.he-creamery>Creamery</talentname.he-creamery>
-<talentdescription.he-creamery>Recipes that consume [item] have a [chance]% chance to not consume one.</talentdescription.he-creamery>
+<talentdescription.he-creamery>Recipes that consume [item] have a [chance]% chance to not consume one.\n‖color:gui.orange‖Molochs‖end‖ are less aggressive towards you.</talentdescription.he-creamery>
 <talentname.he-shortorderchef>Short-Order Chef</talentname.he-shortorderchef>
 <talentdescription.he-shortorderchef>Cooking a ‖color:gui.orange‖Burger‖end‖ or ‖color:gui.orange‖Hotdog‖end‖ has a [chance]% chance to cook a second one for free.</talentdescription.he-shortorderchef>
 <!-- Afflictions -->
@@ -1038,6 +1039,10 @@ SEARCH FOR THE FOLLOWING:                                                       
 
 <entityname.he-cookedhuskroe>Rolled Husk Roe</entityname.he-cookedhuskroe>
 <entitydescription.he-cookedhuskroe>Husk parts gently tucked inside a roll of seaweed. You were told the salt neutralizes the eggs...</entitydescription.he-cookedhuskroe>
+ 
+<entityname.shotgunshellsalt>Shotgun Salt Shell</entityname.shotgunshellsalt>
+<entitydescription.shotgunshellsalt>A makeshift shotgun shell containing good old sodium chloride. Ought to put salt in the wound.</entitydescription.shotgunshellsalt>
+ 
  
 <!-- HUBERT ADDITIONS ABOVE THIS --> 
 <!-- HUBERT ADDITIONS ABOVE THIS --> 

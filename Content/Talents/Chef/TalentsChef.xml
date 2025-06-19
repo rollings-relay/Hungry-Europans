@@ -8,6 +8,14 @@
       <Description tag="talentdescription.he-farmersmarket">
         <Replace tag="[amount]" value="20" color="gui.green"/>
       </Description>
+      <Description tag="talentdescription.fooditemscostless">
+        <Replace tag="[amount]" value="10" color="gui.green"/>
+      </Description>
+      <AbilityGroupEffect abilityeffecttype="None">
+        <Abilities>
+          <CharacterAbilityGivePermanentStat statidentifier="fooditem" stattype="StoreBuyMultiplier" value="0.1" setvalue="true" />
+        </Abilities>
+      </AbilityGroupEffect>
       <AbilityGroupEffect abilityeffecttype="None">
         <Abilities>
           <CharacterAbilityGivePermanentStat statidentifier="fooditem" stattype="StoreSellMultiplier" value="0.2" targetallies="true" setvalue="true" />
@@ -15,30 +23,34 @@
       </AbilityGroupEffect>
     </Talent>
   </Override>
-  <!--Increase Production Speed of Kitchen Fabricators-->
+  <!--Increase Production Speed of Kitchen Fabricators by 25% -->
   <Override>
     <Talent identifier="he-fastfood">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="1,0" sheetelementsize="128,128"/>
       <Description tag="talentdescription.he-fastfood">
-        <Replace tag="[amount]" value="50" color="gui.green"/>
+        <Replace tag="[value]" value="10" color="gui.green"/>
+        <Replace tag="[amount]" value="25" color="gui.green"/>
         <Replace tag="[itemname1]" value="entityname.he-electricgrill" color="gui.orange"/>
         <Replace tag="[itemname2]" value="entityname.he-fryer" color="gui.orange"/>
       </Description>
       <Description tag="talentdescription.doesnotstack" />
+      <AbilityGroupEffect abilityeffecttype="None">
+        <Abilities>
+          <CharacterAbilityGiveStat stattype="MovementSpeed" value="0.1"/>
+        </Abilities>
+      </AbilityGroupEffect>    
       <AbilityGroupInterval interval="60">
         <Abilities>
-          <CharacterAbilityGiveItemStatToTags tags="stove" stattype="FabricationSpeed" value="1.5" />
-          <CharacterAbilityGiveItemStatToTags tags="oven" stattype="FabricationSpeed" value="1.5" />
-          <CharacterAbilityGiveItemStatToTags tags="cuttingboard" stattype="FabricationSpeed" value="1.5" />
-          <CharacterAbilityGiveItemStatToTags tags="deepfryer" stattype="FabricationSpeed" value="1.5" />
+          <CharacterAbilityGiveItemStatToTags tags="stove" stattype="FabricationSpeed" value="1.25" />
+          <CharacterAbilityGiveItemStatToTags tags="oven" stattype="FabricationSpeed" value="1.25" />
+          <CharacterAbilityGiveItemStatToTags tags="deepfryer" stattype="FabricationSpeed" value="1.25" />
         </Abilities>
       </AbilityGroupInterval>
       <AbilityGroupEffect abilityeffecttype="None">
         <Abilities>
-          <CharacterAbilityGiveItemStatToTags tags="stove" stattype="FabricationSpeed" value="1.5" />
-          <CharacterAbilityGiveItemStatToTags tags="oven" stattype="FabricationSpeed" value="1.5" />
-          <CharacterAbilityGiveItemStatToTags tags="cuttingboard" stattype="FabricationSpeed" value="1.5" />
-          <CharacterAbilityGiveItemStatToTags tags="deepfryer" stattype="FabricationSpeed" value="1.5" />
+          <CharacterAbilityGiveItemStatToTags tags="stove" stattype="FabricationSpeed" value="1.25" />
+          <CharacterAbilityGiveItemStatToTags tags="oven" stattype="FabricationSpeed" value="1.25" />
+          <CharacterAbilityGiveItemStatToTags tags="deepfryer" stattype="FabricationSpeed" value="1.25" />
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
@@ -48,7 +60,8 @@
     <Talent identifier="he-poacher">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="2,0" sheetelementsize="128,128"/>
       <Description tag="talentdescription.he-poacher">
-        <Replace tag="[xpbonus]" value="15" color="gui.green"/>
+        <Replace tag="[xpbonus]" value="20" color="gui.green"/>
+        <Replace tag="[moneybonus]" value="10" color="gui.green"/>
         <Replace tag="[missiontype1]" value="missiontype.monster" color="gui.orange"/>
         <Replace tag="[missiontype2]" value="missiontype.nest" color="gui.orange"/>
       </Description>
@@ -57,7 +70,15 @@
           <AbilityConditionMission missiontype="Monster,Nest"/>
         </Conditions>
         <Abilities>
-          <CharacterAbilityModifyValue multiplyvalue="1.15"/>
+          <CharacterAbilityModifyValue multiplyvalue="1.20"/>
+        </Abilities>
+      </AbilityGroupEffect>
+      <AbilityGroupEffect abilityeffecttype="OnGainMissionMoney">
+        <Conditions>
+          <AbilityConditionMission isaffiliated="true"/>
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityModifyValue multiplyValue="1.10"/>
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
@@ -68,6 +89,9 @@
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="3,0" sheetelementsize="128,128"/>
       <Description tag="talentdescription.he-saltybusiness">
         <Replace tag="[probability]" value="20" color="gui.green"/>
+      </Description>
+      <Description tag="talentdescription.unlockrecipe">
+        <Replace tag="[itemname]" value="entityname.shotgunshellsalt" color="gui.orange"/>
       </Description>
       <AbilityGroupEffect abilityeffecttype="OnOpenItemContainer">
         <Conditions>
@@ -84,23 +108,28 @@
           </CharacterAbilitySpawnItemsToContainer>
         </Abilities>
       </AbilityGroupEffect>
+      <AddedRecipe itemidentifier="shotgunshellsalt"/>
     </Talent>
   </Override>
-  <!--Increase Medical Skill by 15 and increase healing you provide by 20%-->
+  <!--Increase Medical Skill by 10 and increase healing you provide by 20%-->
   <Override>
     <Talent identifier="he-anatomystudy">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="4,0" sheetelementsize="128,128"/>
       <Description tag="talentdescription.skillbonus">
-        <Replace tag="[amount]" value="15" color="gui.green"/>
+        <Replace tag="[amount]" value="10" color="gui.green"/>
         <Replace tag="[skillname]" value="skillname.medical" color="gui.orange"/>
       </Description>
       <Description tag="talentdescription.gainmedicalitemeffectiveness">
-        <Replace tag="[amount]" value="20" color="gui.green"/>
+        <Replace tag="[amount]" value="15" color="gui.green"/>
+      </Description>
+      <Description tag="talentdescription.poisonsincreased">
+        <Replace tag="[amount]" value="50" color="gui.green"/>
       </Description>
       <AbilityGroupEffect abilityeffecttype="None">
         <Abilities>
-          <CharacterAbilityGiveStat stattype="MedicalSkillBonus" value="15"/>
-          <CharacterAbilityGiveStat stattype="MedicalItemApplyingMultiplier" value="0.20"/>
+          <CharacterAbilityGiveStat stattype="MedicalSkillBonus" value="10"/>
+          <CharacterAbilityGiveStat stattype="MedicalItemApplyingMultiplier" value="0.15"/>
+          <CharacterAbilityGiveStat stattype="PoisonMultiplier" value="0.5"/>
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
@@ -158,11 +187,11 @@
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="7,0" sheetelementsize="128,128"/>
       <Description tag="talentdescription.he-foodtrucking">
         <Replace tag="[outpost]" value="200" color="gui.green" />
-        <Replace tag="[city]" value="400" color="gui.green" />
+        <Replace tag="[helmbonus]" value="20" color="gui.green" />
       </Description>
       <AbilityGroupEffect abilityeffecttype="OnLocationDiscovered">
         <Conditions>
-          <AbilityConditionLocation hasoutpost="true" />
+          <AbilityConditionLocation hasoutpost="true" ispositivereputation="true" locationtype="Outpost"/>
         </Conditions>
         <Abilities>
           <CharacterAbilityGiveMoney amount="200"/>
@@ -170,10 +199,39 @@
       </AbilityGroupEffect>
       <AbilityGroupEffect abilityeffecttype="OnLocationDiscovered">
         <Conditions>
-          <AbilityConditionLocation hasoutpost="true" locationtype="City"/>
+          <AbilityConditionLocation hasoutpost="true" ispositivereputation="true" locationtype="Settlement"/>
         </Conditions>
         <Abilities>
           <CharacterAbilityGiveMoney amount="200"/>
+        </Abilities>
+      </AbilityGroupEffect>
+      <AbilityGroupEffect abilityeffecttype="OnLocationDiscovered">
+        <Conditions>
+          <AbilityConditionLocation hasoutpost="true" ispositivereputation="true" locationtype="Colony"/>
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityGiveMoney amount="200"/>
+        </Abilities>
+      </AbilityGroupEffect>
+      <AbilityGroupEffect abilityeffecttype="OnLocationDiscovered">
+        <Conditions>
+          <AbilityConditionLocation hasoutpost="true" ispositivereputation="true" locationtype="City"/>
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityGiveMoney amount="200"/>
+        </Abilities>
+      </AbilityGroupEffect>
+      <AbilityGroupEffect abilityeffecttype="OnLocationDiscovered">
+        <Conditions>
+          <AbilityConditionLocation hasoutpost="true" ispositivereputation="true" locationtype="Hydroponics"/>
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityGiveMoney amount="200"/>
+        </Abilities>
+      </AbilityGroupEffect>
+      <AbilityGroupEffect abilityeffecttype="None">
+        <Abilities>
+          <CharacterAbilityGiveStat stattype="HelmSkillBonus" value="20"/>
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
@@ -251,6 +309,7 @@
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="4,1" sheetelementsize="128,128"/>
       <Description tag="talentdescription.he-frenzy">
         <Replace tag="[powerincrease]" value="50" color="gui.green"/>
+        <Replace tag="[amount]" value="35" color="gui.green"/>
       </Description>
       <AbilityGroupEffect abilityeffecttype="OnAttack">
         <Conditions>
@@ -266,6 +325,11 @@
         </Conditions>
         <Abilities>
           <CharacterAbilityModifyAttackData addeddamagemultiplier="0.5"/>
+        </Abilities>
+      </AbilityGroupEffect>
+      <AbilityGroupEffect abilityeffecttype="None">
+        <Abilities>
+          <CharacterAbilityGiveItemStatToTags tags="cuttingboard" stattype="FabricationSpeed" value="1.35" />
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
@@ -295,6 +359,10 @@
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="6,1" sheetelementsize="128,128"/>
       <Description tag="talentdescription.he-coldblood">
       </Description>
+      <Description tag="talentdescription.additionalresistanceself">
+        <Replace tag="[amount]" value="20" color="gui.green"/>
+        <Replace tag="[affliction]" value="afflictionname.burn" color="gui.orange"/>
+      </Description>
       <AbilityGroupInterval interval="0.8">
         <Abilities>
           <CharacterAbilityApplyStatusEffects>
@@ -304,6 +372,11 @@
           </CharacterAbilityApplyStatusEffects>
         </Abilities>
       </AbilityGroupInterval>
+      <AbilityGroupEffect abilityeffecttype="None">
+        <Abilities>
+          <CharacterAbilityGiveResistance resistanceid="burn" multiplier="0.8"/>
+        </Abilities>
+      </AbilityGroupEffect>
     </Talent>
   </Override>
   <!--Recover from bleeding faster and resistance to infection-->
@@ -1199,6 +1272,15 @@
           </CharacterAbilityRemoveRandomIngredient>
         </Abilities>
       </AbilityGroupEffect>
+      <AbilityGroupInterval interval="0.8">
+        <Abilities>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" tags="molochbaby" setvalue="true" duration="0.9" />
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupInterval>
     </Talent>
   </Override>
   <!--20% chance to duplicate a cooked hotdog or burger-->

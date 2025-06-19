@@ -1344,7 +1344,7 @@
     
     <!-- EVENT ITEMS -->
     <Item name="5mk" identifier="money_5mk" description="Adds 5mk to your Bank Account" Category="Hidden" Tags="smallitem,money" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" scale="0.1" spritecolor="255,255,255,255" noninteractable="false" hideinmenus="true">
-      <Sprite texture="%ModDir%/Content/UI/InventoryIcons.png" depth="0.55" sourcerect="166,390,143,122" />
+      <Sprite texture="%ModDir:2954998725%/Content/UI/InventoryIcons.png" depth="0.55" sourcerect="166,390,143,122" />
       <Body radius="2" density="10" />
       <Fabricate suitablefabricators="cafeteria" requiredtime="3" requiredmoney="0" fabricationlimitmin="99999" fabricationlimitmax="99999" displayname="returnitem">
         <RequiredItem tag="forkspoonreturn" amount="1" mincondition="0.0" maxcondition="1.0" UseCondition="false" />
@@ -1362,7 +1362,7 @@
       </Holdable>
     </Item>
     <Item name="25mk" identifier="money_25mk" description="Adds 25mk to your Bank Account" Category="Hidden" Tags="smallitem,money" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" scale="0.1" spritecolor="255,255,255,255" noninteractable="false" hideinmenus="true">
-      <Sprite texture="%ModDir%/Content/UI/InventoryIcons.png" depth="0.55" sourcerect="166,390,143,122" />
+      <Sprite texture="%ModDir:2954998725%/Content/UI/InventoryIcons.png" depth="0.55" sourcerect="166,390,143,122" />
       <Body radius="2" density="10" />
       <Fabricate suitablefabricators="cafeteria" requiredtime="5" requiredmoney="0" fabricationlimitmin="99999" fabricationlimitmax="99999" displayname="returnitem">
         <RequiredItem tag="platebowlreturn1" amount="1" mincondition="0.0" maxcondition="1.0" UseCondition="false" />
@@ -1380,7 +1380,7 @@
       </Holdable>
     </Item>
     <Item name="50mk" identifier="money_50mk" description="Adds 50mk to your Bank Account" Category="Hidden" Tags="smallitem,money" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" scale="0.1" spritecolor="255,255,255,255" noninteractable="false" hideinmenus="true">
-      <Sprite texture="%ModDir%/Content/UI/InventoryIcons.png" depth="0.55" sourcerect="166,390,143,122" />
+      <Sprite texture="%ModDir:2954998725%/Content/UI/InventoryIcons.png" depth="0.55" sourcerect="166,390,143,122" />
       <Body radius="2" density="10" />
       <Fabricate suitablefabricators="cafeteria" requiredtime="5" requiredmoney="0" fabricationlimitmin="99999" fabricationlimitmax="99999" displayname="returnitem">
         <RequiredItem tag="platebowlreturn2" amount="1" mincondition="0.0" maxcondition="1.0" UseCondition="false" />
@@ -1398,7 +1398,7 @@
       </Holdable>
     </Item>
     <Item name="75mk" identifier="money_75mk" description="Adds 75mk to your Bank Account" Category="Hidden" Tags="smallitem,money" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" scale="0.1" spritecolor="255,255,255,255" noninteractable="false" hideinmenus="true">
-      <Sprite texture="%ModDir%/Content/UI/InventoryIcons.png" depth="0.55" sourcerect="166,390,143,122" />
+      <Sprite texture="%ModDir:2954998725%/Content/UI/InventoryIcons.png" depth="0.55" sourcerect="166,390,143,122" />
       <Body radius="2" density="10" />
       <Fabricate suitablefabricators="cafeteria" requiredtime="5" requiredmoney="0" fabricationlimitmin="99999" fabricationlimitmax="99999" displayname="returnitem">
         <RequiredItem tag="platebowlreturn3" amount="1" mincondition="0.0" maxcondition="1.0" UseCondition="false" />
@@ -1416,7 +1416,7 @@
       </Holdable>
     </Item>
     <Item name="100mk" identifier="money_100mk" description="Adds 100mk to your Bank Account" Category="Hidden" Tags="smallitem,money" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" scale="0.1" spritecolor="255,255,255,255" noninteractable="false" hideinmenus="true">
-      <Sprite texture="%ModDir%/Content/UI/InventoryIcons.png" depth="0.55" sourcerect="166,390,143,122" />
+      <Sprite texture="%ModDir:2954998725%/Content/UI/InventoryIcons.png" depth="0.55" sourcerect="166,390,143,122" />
       <Body radius="2" density="10" />
       <Fabricate suitablefabricators="cafeteria" requiredtime="5" requiredmoney="0" fabricationlimitmin="99999" fabricationlimitmax="99999" displayname="returnitem">
         <RequiredItem tag="platebowlreturn4" amount="1" mincondition="0.0" maxcondition="1.0" UseCondition="false" />
@@ -1433,6 +1433,41 @@
         </StatusEffect>
       </Holdable>
     </Item>    
+    
+    <Item name="" identifier="shotgunshellsalt" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,shotgunammo,handheldammo" Scale="0.5" impactsoundtag="impact_metal_light">
+      <PreferredContainer primary="shotgun" amount="6" spawnprobability="1" />
+      <PreferredContainer primary="autoshotgun" amount="8" spawnprobability="1" />
+      <PreferredContainer primary="shotgununique" amount="2" spawnprobability="1" />
+      <PreferredContainer secondary="secarmcab" />
+      <Fabricate suitablefabricators="fabricator" requiredtime="2" requiresrecipe="true" amount="6">
+        <RequiredSkill identifier="weapons" level="30" />
+        <RequiredSkill identifier="cooking" level="30" />
+        <RequiredItem tag="munition_propulsion" description="fabricationdescription.munition_propulsion" />
+        <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.50"/>
+        <RequiredItem identifier="plastic" />
+      </Fabricate>
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Misc/Misc.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Misc/Misc.png" sourcerect="65,0,23,11" depth="0.55" origin="0.5,0.5" />
+      <Body width="23" height="10" density="9.5" />
+      <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
+      <!--When fired, spawns 8 projectiles simultaneously.-->
+      <Projectile characterusable="false" hitscan="true" hitscancount="8" removeonhit="true" spread="15">
+        <ParticleEmitter particle="tracerfirearm" particleamount="1" velocitymin="0" velocitymax="0" colormultiplier="255,255,115,100" scalemultiplier="1,0.5" />
+        <Attack structuredamage="1" targetforce="4" itemdamage="1" severlimbsprobability="0">
+          <Affliction identifier="gunshotwound" strength="6" />
+          <Affliction identifier="bleeding" strength="1" />
+          <Affliction identifier="stun" strength="0.1" probability="0.35" />
+        </Attack>
+        <StatusEffect type="OnImpact" target="UseTarget">
+          <ParticleEmitter particle="whiteshards" particleamount="5" distancemin="0" distancemax="10" anglemin="0" anglemax="360" velocitymin="10" velocitymax="30" scalemin="0.1" scalemax="0.2" />
+        </StatusEffect>
+        <StatusEffect type="OnImpact" target="UseTarget">
+          <Conditional entitytype="eq Structure" />
+          <Conditional hastag="eq door" />
+          <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="5" velocitymin="-10" velocitymax="-200" scalemin="0.5" scalemax="1" />
+        </StatusEffect>
+      </Projectile>
+    </Item>
     
     <!-- EFFEC ITEMS -->
     <Item name="" identifier="effect_none" Category="Hidden" Tags="effect" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" scale="0.5" spritecolor="255,255,255,0" noninteractable="true" hideinmenus="true">
