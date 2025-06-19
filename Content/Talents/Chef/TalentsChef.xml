@@ -527,6 +527,7 @@
   </Override>
   <!--Reskinned "Leading By Example" -->
   <Override>
+    <!-- TODO: make this more interesting, increase mood? -->
     <Talent identifier="he-tastyfood">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="5,3" sheetelementsize="128,128"/>
       <Description tag="talentdescription.he-tastyfood" />
@@ -1107,6 +1108,7 @@
       <Description tag="talentdescription.he-teppanyaki">
         <Replace tag="[skillname1]" value="skillname.cooking" color="gui.orange"/>
         <Replace tag="[skillname2]" value="skillname.butchery" color="gui.orange"/>
+        <Replace tag="[powerincrease]" value="100" color="gui.green"/>
       </Description>
       <AbilityGroupEffect abilityeffecttype="OnGainSkillPoint">
         <Conditions>
@@ -1122,6 +1124,14 @@
         </Conditions>
         <Abilities>
           <CharacterAbilityGainSimultaneousSkill skillidentifier="inherit" targetallies="true" />
+        </Abilities>
+      </AbilityGroupEffect>
+      <AbilityGroupEffect abilityeffecttype="OnAttack">
+        <Conditions>
+          <AbilityConditionAttackData tags="pan"/>
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityModifyAttackData addeddamagemultiplier="1"/>
         </Abilities>
       </AbilityGroupEffect>
     </Talent>

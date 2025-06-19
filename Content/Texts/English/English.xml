@@ -662,7 +662,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <talentname.he-chefattire>Master Chef Attire</talentname.he-chefattire>
 <talentdescription.he-chefattire>Unlock the crafting recipes for [itemname1] and [itemname2].</talentdescription.he-chefattire>
 <talentname.he-frenzy>Frenzy</talentname.he-frenzy>
-<talentdescription.he-frenzy>Increase your attack strength with butcher related knives by [powerincrease]%.\nIncrease your working speed on the cutting board by [amount]%.</talentdescription.he-frenzy>
+<talentdescription.he-frenzy>Deal [powerincrease]% more damage with ‖color:gui.orange‖Meat Cleavers‖end‖.\nIncrease your working speed on the cutting board by [amount]%.</talentdescription.he-frenzy>
 <talentname.he-butchershop>Butcher Shop</talentname.he-butchershop>
 <talentdescription.he-butchershop>You're a talented butcher and it shows!\nGet [amount]% more money when selling meat!</talentdescription.he-butchershop>
 <talentname.he-coldblood>Cold Blood</talentname.he-coldblood><!--Patch 13-->
@@ -713,7 +713,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <talentname.he-dinnertheater>Dinner Theater</talentname.he-dinnertheater><!--Patch 17-->
 <talentdescription.he-dinnertheater>Playing the bagpipes prolongs the duration of food and drink buffs for you and nearby allies.</talentdescription.he-dinnertheater><!--Patch 17-->
 <talentname.he-teppanyaki>Teppanyaki</talentname.he-teppanyaki><!--Patch 17-->
-<talentdescription.he-teppanyaki>Whenever you gain a [skillname1] or [skillname2] skill point, your crew gains a point as well.</talentdescription.he-teppanyaki><!--Patch 17-->
+<talentdescription.he-teppanyaki>Whenever you gain a [skillname1] or [skillname2] skill point, your crew gains a point as well.\nDeal [powerincrease]% more damage with ‖color:gui.orange‖Pans‖end‖.</talentdescription.he-teppanyaki><!--Patch 17-->
 <talentname.he-workpromotion>Work Promotion</talentname.he-workpromotion><!--Patch 17-->
 <talentname.he-headchef>Head Chef</talentname.he-headchef><!--Patch 17-->
 <talentdescription.he-headchef>Allies in the same room gain [amount]% [stattype].</talentdescription.he-headchef><!--Patch 17-->
