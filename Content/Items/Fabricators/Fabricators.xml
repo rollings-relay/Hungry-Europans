@@ -948,12 +948,21 @@
           <Conditional condition="lt 50" />
           <SpawnItem identifier="effect_firestarter" spawnposition="ThisInventory" probability="0.05"/>
         </StatusEffect>
+      </ItemComponent>
+      <!-- TODO: improve this light component, not just a random light in a random pos -->
+      <LightComponent range="5.0" lightcolor="50,255,50,0" powerconsumption="200" IsOn="true" LightOffset="-61,7" scale="0.8" castshadows="false" allowingameediting="false">
+        <sprite texture="Content/Items/Button/button.png" sourcerect="6,24,17,17" depth="0.650" origin="0.5,0.5" alpha="1.0" />
+        <IsActive targetitemcomponent="ItemComponent" IsActive="eq True" />
+      </LightComponent>
+      <LightComponent range="5.0" lightcolor="255,50,50,0" powerconsumption="5" IsOn="true" LightOffset="-61,7" scale="0.8" castshadows="false" allowingameediting="false">
+        <sprite texture="Content/Items/Button/button.png" sourcerect="6,93,17,17" depth="0.650" origin="0.5,0.5" alpha="1.0" />
+        <IsActive targetitemcomponent="ItemComponent" IsActive="eq False" />
       </LightComponent>
       <CustomInterface canbeselected="true" selectkey="Select" allowuioverlap="false">
         <GuiFrame style="ItemUI" relativeoffset="0,0.23" anchor="Center" relativesize="0.1,0.08" allowuioverlap="false" />
         <TickBox text="On/Off">
-          <StatusEffect type="OnUse" target="This" targetitemcomponent="LightComponent" IsOn="true" setvalue="true" />
-          <StatusEffect type="OnSecondaryUse" target="This" targetitemcomponent="LightComponent" IsOn="false" setvalue="true" />
+          <StatusEffect type="OnUse" target="This" targetitemcomponent="ItemComponent" IsActive="true" setvalue="true" />
+          <StatusEffect type="OnSecondaryUse" target="This" targetitemcomponent="ItemComponent" IsActive="false" setvalue="true" />
         </TickBox>
       </CustomInterface>
       <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
