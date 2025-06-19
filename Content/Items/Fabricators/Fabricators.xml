@@ -623,6 +623,10 @@
           <SpawnItem identifier="effect_firestarter" spawnposition="ThisInventory" Probability="0.05"/>
         </StatusEffect>
       </Fabricator>
+      <LightComponent LightColor="200,120,80,180" LightOffset="5,5" flicker="0.3" flickerspeed="0.5" IsOn="true" powerconsumption="1" range="1" castshadows="false" allowingameediting="false" canbeselected="false" comparison="And" scale="0.7">
+        <Sprite texture="Content/Items/Electricity/SignalComp.png" depth="0.685" sourcerect="483,820,225,18" origin="0.5,0.5" />
+        <IsActiveConditional isActive="true" targetitemcomponent="Fabricator" />
+      </LightComponent>
       <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
         <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
         <RequiredSkill identifier="electrical" level="55" />
