@@ -1467,7 +1467,25 @@
           <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="5" velocitymin="-10" velocitymax="-200" scalemin="0.5" scalemax="1" />
         </StatusEffect>
       </Projectile>
-    </Item>
+    </Item>       
+
+    <Item name="Simple Spawner" nameidentifier="spawner" identifier="spawner" description="A simple item/creature spawner that can be wired" width="128" height="192" texturescale="0.5,0.5" scale="0.5" category="Electrical" noninteractable="false" spritecolor="255,255,150,255" >
+      <sprite texture="Content/Map/MapAtlas.png" sourcerect="784,526,100,100" depth="0.800" premultiplyalpha="false" origin="0.5,0.5" />
+      <EntitySpawnerComponent ItemIdentifier="" SpeciesName="" OnlySpawnWhenCrewInRange="False" CrewAreaShape="Rectangle" CrewAreaBounds="100,100" CrewAreaRadius="120" CrewAreaOffset="0,0" SpawnAreaShape="Rectangle" SpawnAreaBounds="25,25" SpawnAreaRadius="10" SpawnAreaOffset="0,0" SpawnTimerRange="-1,-1" SpawnAmountRange="1,1" MaximumAmount="0" MaximumAmountInArea="1" MaximumAmountRangePadding="0" PreloadCharacter="False"    />
+      <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+        <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+        <RequiredItem items="screwdriver" type="Equipped" />
+        <input name="trigger_in" displayname="connection.turrettriggerin" />
+        <input name="toggle" displayname="connection.togglestate" />
+        <input name="set_state" displayname="connection.setstate" />      
+        <output name="state_out" displayname="connection.stateout" fallbackdisplayname="connection.signalout" />
+      </ConnectionPanel> 
+      <CustomInterface canbeselected="true" pickkey="Use" drawhudwhenequipped="true" allowuioverlap="false">
+        <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.2,0.13" />
+        <TextBox text="Item Identifier" propertyname="ItemIdentifier" maxtextlength="50" TargetOnlyParentProperty="true" />
+        <TextBox text="Species Name" propertyname="Speciesname" maxtextlength="50" ShouldSetProperty="false" /> 
+      </CustomInterface>    
+    </Item>    
     
     <!-- EFFEC ITEMS -->
     <Item name="" identifier="effect_none" Category="Hidden" Tags="effect" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" scale="0.5" spritecolor="255,255,255,0" noninteractable="true" hideinmenus="true">
