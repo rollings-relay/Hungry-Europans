@@ -1471,7 +1471,7 @@
 
     <Item name="Simple Spawner" nameidentifier="spawner" identifier="spawner" description="A simple item/creature spawner that can be wired" width="128" height="192" texturescale="0.5,0.5" scale="0.5" category="Electrical" noninteractable="false" spritecolor="255,255,150,255" >
       <sprite texture="Content/Map/MapAtlas.png" sourcerect="784,526,100,100" depth="0.800" premultiplyalpha="false" origin="0.5,0.5" />
-      <EntitySpawnerComponent ItemIdentifier="" SpeciesName="" OnlySpawnWhenCrewInRange="False" CrewAreaShape="Rectangle" CrewAreaBounds="100,100" CrewAreaRadius="120" CrewAreaOffset="0,0" SpawnAreaShape="Rectangle" SpawnAreaBounds="25,25" SpawnAreaRadius="10" SpawnAreaOffset="0,0" SpawnTimerRange="-1,-1" SpawnAmountRange="1,1" MaximumAmount="0" MaximumAmountInArea="1" MaximumAmountRangePadding="0" PreloadCharacter="False"    />
+      <EntitySpawnerComponent ItemIdentifier="" SpeciesName="" OnlySpawnWhenCrewInRange="False" CrewAreaShape="Rectangle" CrewAreaBounds="100,100" CrewAreaRadius="120" CrewAreaOffset="0,0" SpawnAreaShape="Rectangle" SpawnAreaBounds="25,25" SpawnAreaRadius="10" SpawnAreaOffset="0,0" SpawnTimerRange="1,1" SpawnAmountRange="1,1" MaximumAmount="0" MaximumAmountInArea="1" MaximumAmountRangePadding="0" PreloadCharacter="False"    />
       <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
         <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
         <RequiredItem items="screwdriver" type="Equipped" />
