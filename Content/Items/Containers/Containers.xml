@@ -518,7 +518,7 @@
         <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_close3.ogg" volume="1" range="500" selectionmode="random"/>
       </StatusEffect>-->
       </ItemContainer>
-      <Body width="191" height="322" density="16" />
+      <Body width="191" height="322" density="16" friction="0.2" />
       <Holdable canbepicked="true" selectkey="Select" pickkey="Select" slots="RightHand+LeftHand" holdpos="70,-58" handle1="-75,50" handle2="-75,70" holdangle="3" msg="ItemMsgDetach" PickingTime="0.5" attachable="false" aimable="true" >
         <StatValue stattype="WalkingSpeed" value="-0.5" />
         <StatValue stattype="SwimmingSpeed" value="-0.7" />      
