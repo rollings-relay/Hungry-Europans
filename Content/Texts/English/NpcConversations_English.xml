@@ -231,6 +231,20 @@ AllOWEDJOBS include jobs
 	<Conversation line="Oh, so all of it is bad? Hehe." speaker="1" speakertags="joker" />
 </Conversation>
 
+
+<!-- medium -->
+<Conversation line="This job is harder than I thought. I'm starting to feel the pressure." speaker="0" flags="mediummood">
+	<Conversation line="If you really felt the pressure, you would implode!" speaker="1" />
+	<Conversation line="It means you're putting your guts in the task at hand." speaker="1" speakertag="professional" />
+	<Conversation line="No presh over here. Cool as a cucumber." speaker="1" speakertag="laid-back" flags="goodmood"/>
+</Conversation>
+
+<Conversation line="This old junk of a ship is just trouble after trouble. I don't like it one bit." speaker="0" flags="mediummood">
+	<Conversation line="Wait until you see the electrical go in flames." speaker="1" allowedjobs="engineer"/>
+	<Conversation line="As long as the pumps are pumping, I'm not complaining." speaker="1" allowedjobs="engineer"/>
+	<Conversation line="Remember that crews break before the submarine does. Always." speaker="1" speakertag="Tough" />
+</Conversation>
+
 <!-- bad -->
 <Conversation line="I want to dry off at a station asap. Water is cold, damp and gets everywhere..." speaker="0" flags="badmood">
 	<Conversation line="A submariner should not complain about getting wet." speaker="1" speakertag="tough" />
