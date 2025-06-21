@@ -246,7 +246,9 @@
         minstrength="80"
         maxstrength="100" />
       <!-- No effects at this point -->
-      <Effect minstrength="0" maxstrength="50" 
+      <Effect minstrength="0" maxstrength="25" 
+        strengthchange="0" />
+      <Effect minstrength="25" maxstrength="50" 
         strengthchange="0" 
         dialogflag="thirstylight" />
       <!-- Thirst decreases vitality and speed slightly -->
@@ -539,8 +541,9 @@
           <ReduceAffliction identifier="he-alcoholism" strength="100" />
         </StatusEffect>
       </Effect>
-
-      <Effect minstrength="20" maxstrength="40" strengthchange="0.0">
+      <Effect minstrength="20" maxstrength="40"
+        dialogflag="alcoholiclight"
+        strengthchange="0.0">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional drunk="lte 0" />
           <Affliction identifier="he-alcoholwithdrawal" strength="0.05" />
@@ -550,8 +553,9 @@
           <ReduceAffliction identifier="he-alcoholism" strength="100" />
         </StatusEffect>
       </Effect>
-
-      <Effect minstrength="40" maxstrength="80" strengthchange="0.0">
+      <Effect minstrength="40" maxstrength="80"
+        dialogflag="alcoholicmedium"
+        strengthchange="0.0">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional drunk="lte 0" />
           <Affliction identifier="he-alcoholwithdrawal" strength="0.1" />
@@ -561,8 +565,9 @@
           <ReduceAffliction identifier="he-alcoholism" strength="100" />
         </StatusEffect>
       </Effect>
-
-      <Effect minstrength="80" maxstrength="100" strengthchange="0.0"
+      <Effect minstrength="80" maxstrength="100"
+        dialogflag="alcoholicheavy"
+        strengthchange="0.0"
         minvitalitydecrease="0"
         maxvitalitydecrease="20">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
@@ -574,7 +579,6 @@
           <ReduceAffliction identifier="he-alcoholism" strength="100" />
         </StatusEffect>
       </Effect>
-
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="768,128,128,128" color="195,180,60,255" origin="0,0" />
     </Affliction>
     
