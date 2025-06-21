@@ -37,7 +37,7 @@ AllOWEDJOBS include jobs
  -->
 
 <!-- NPC IS HUNGRY - different levels -->
-<!-- small -->
+<!-- Light -->
 <Conversation line="I've been feeling peckish ever since we left the station" speaker="0" flags="hungrylight,initial">
 	<Conversation line="" speaker="1" />
 	<Conversation line="Tough it out. Mind over stomach." speaker="1" speakertags="tough" />
@@ -49,7 +49,7 @@ AllOWEDJOBS include jobs
 
 <Conversation line="Do we have any snacks?" speaker="0" flags="hungrylight">
 	<Conversation line="We might. Check the pantry." speaker="1" allowedjobs="chef"/>
-	<Conversation line="Try a cheezeburgars, they are berry gud." speaker="1" flags="brokenenglish"/>
+	<Conversation line="Try a cheezeburgars, they are berry gud." speaker="1" speakertag="brokenenglish"/>
 </Conversation>
 
 <Conversation line="I've got the munchies..." speaker="0" flags="hungrylight">
@@ -70,20 +70,20 @@ AllOWEDJOBS include jobs
 </Conversation>
 
 <Conversation line="I'm so hungry, I could eat a barracuda..." speaker="0" flags="hungrymedium">
-	<Conversation line="A barracu-what?" flags="" speaker="1">
+	<Conversation line="A barracu-what?" speaker="1">
 		<Conversation line="An ancient species from earth. Fast predators with nasty teeth." speaker="0">
       <Conversation line="Can't be worse than a crawler." speaker="1" >
         <Conversation line="There's always worse in the sea!" speaker="2" speakertags="fearful" />
       </Conversation>
     </Conversation>
 	</Conversation>
-  <Conversation line="I'm so hungry, I could eat a manatee..." speaker="1" flags="hungrysmall,hungrymedium,hungryheavy">
+  <Conversation line="I'm so hungry, I could eat a manatee..." speaker="1" flags="hungrylight,hungrymedium,hungryheavy">
     <Conversation line="Those are made-up fish." speaker="2" />
   </Conversation>
   <Conversation line="Yeah, let's hit the bar!" speaker="1" flags="DrunkMedium,DrunkHigh"/>
 </Conversation>
 
-<Conversation line="Am hangry..." speaker="0" flags="hungrymedium,brokenenglish">
+<Conversation line="Am hangry..." speaker="0" flags="hungrymedium" speakertag="brokenenglish">
 	<Conversation line="Don't be angry. Be happy." speaker="1" speakertags="laid-back"/>
 </Conversation>
 
@@ -101,13 +101,67 @@ AllOWEDJOBS include jobs
 </Conversation>
 
 
+<!-- NPC IS Thirsty - different levels -->
+<!-- Light -->
+<Conversation line="Could use a cold beverage." speaker="0" flags="thirstylight">
+	<Conversation line="" speaker="0"/>
+  <Conversation line="Plain water will suffice." speaker="1" speakertags="professional"/>  
+  <Conversation line="Clown juice makes me feel funny!" speaker="1" speakertags="joker">  
+    <Conversation line="That's the only way you'll ever be funny." speaker="2" speakertags="rude"/>
+  </Conversation>
+</Conversation>
+
+<Conversation line="A fresh drink would hit the spot." speaker="0" flags="thirstylight">
+	<Conversation line="" speaker="0"/>
+  <Conversation line="Beer is the answer, always!" speaker="1" flags="likesbeer"/>
+  <Conversation line="Vintage Whiskey goes down easy." speaker="1" flags="likeswhiskey"/>
+  <Conversation line="A glass of Rum for your woes, and mine." speaker="1" flags="likesrum"/>
+  <Conversation line="A sweet can of Cola!" speaker="1" flags="likescola"/>
+</Conversation>
+
+<!-- Medium -->
+<Conversation line="I think I need a drink..." speaker="0" flags="thirstymedium">
+  <Conversation line="You're goddamn right I need a drink!" speaker="1" flags="alcoholiclight,alcoholicmedium,alcoholicheavy"/>
+</Conversation>
+
+<Conversation line="My tongue feels dry..." speaker="0" flags="thirstymedium">
+	<Conversation line="" speaker="0"/>
+  <Conversation line="Try licking the walls then." speaker="1" />
+</Conversation>
+
+
+<!-- Heavy -->
+<Conversation line="Water... I need water!" speaker="0" flags="thirstyheavy">
+	<Conversation line="" speaker="0"/>
+	<Conversation line="There's water outside, if you dare!" speaker="1" speakertag="joker" />
+</Conversation>
+
+<Conversation line="I'm dying of thirst!" speaker="0" flags="thirstyheavy">
+	<Conversation line="" speaker="0"/>
+	<Conversation line="That's easy enough to solve." speaker="1" speakertag="laid-back" />
+</Conversation>
+
 <!-- STUFFED -->
+<!-- Light -->
+<Conversation line="Ahhh, I think I'm full, need to digest a little." speaker="0" flags="stuffedheavy" >
+	<Conversation line="Perform your tasks and those calories will go away." speaker="1" speakertag="professional" />
+	<Conversation line="Glad you enjoyed the meal." speaker="1" allowedjobs="Chef"/> 
+  <Conversation line="A bottle of alcohol should help!" speaker="1" flags="alcoholiclight,alcoholicmedium,alcoholicheavy">    
+    <Conversation line="Stop. Drinking." speaker="2" /> 
+  </Conversation>
+</Conversation>
+
+<Conversation line="That was a pretty good meal, but a bit heavy on the stomach." speaker="0" flags="stuffedheavy" >
+	<Conversation line="Would you prefer a salad next time?" speaker="1" allowedjobs="Chef"/> 
+</Conversation>
+
+
 <!-- Heavy -->
 <Conversation line="I ate too much... I might throw up." speaker="0" flags="stuffedheavy" >
 	<Conversation line="Do that in my ship and I might throw you out of the airlock." speaker="1" allowedjobs="captain"/>
 	<Conversation line="Hold that inside, I'm always the one mopping up!" speaker="1" allowedjobs="Assistant"/>
 	<Conversation line="Surely you still have room for dessert?" speaker="1" allowedjobs="Chef"/>
-	<Conversation line="Stop stuffing yourself, you disgusting pig" speaker="1" speakertags="rude"/>  
+	<Conversation line="Stop stuffing yourself, you disgusting pig." speaker="1" speakertags="rude"/>  
 </Conversation>
 
 <!-- STOMACHACHE -->
