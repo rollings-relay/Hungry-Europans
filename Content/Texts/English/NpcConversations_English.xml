@@ -36,6 +36,13 @@ AllOWEDJOBS include jobs
 
  -->
 
+
+<!-- NPC IS - different levels -->
+<!-- Light -->
+<!-- medium -->
+<!-- heavy -->
+
+
 <!-- NPC IS HUNGRY - different levels -->
 <!-- Light -->
 <Conversation line="I've been feeling peckish ever since we left the station" speaker="0" flags="hungrylight,initial">
@@ -64,9 +71,13 @@ AllOWEDJOBS include jobs
 <!-- medium -->
 <Conversation line="I feel hungry..." speaker="0" flags="hungrymedium">
 	<Conversation line="" speaker="0"/>
-	<Conversation line="You're right, I'm craving some nuggets right now." flags="likesfriedfood" speaker="1">
+	<Conversation line="You're right, I'm craving some nuggets right now." speaker="1" flags="likesfriedfood">
 		<Conversation line="I only see you eating fast-food, at this rate, you'll get rounder than Jupiter." speaker="2"/>
 	</Conversation>
+	<Conversation line="A juicy burger, with thick moloch cheese slices..." speaker="1" flags="likesburgers" >
+		<Conversation line="The idea of milking a moloch scares me..." speaker="2"/>
+	</Conversation>
+	<Conversation line="I could gulp down a hotdog in one bite." speaker="1" flags="likeshotdogs" />
 </Conversation>
 
 <Conversation line="I'm so hungry, I could eat a barracuda..." speaker="0" flags="hungrymedium">
@@ -83,6 +94,17 @@ AllOWEDJOBS include jobs
   <Conversation line="Yeah, let's hit the bar!" speaker="1" flags="DrunkMedium,DrunkHigh"/>
 </Conversation>
 
+<Conversation line="I really want to grab a bite right now..." speaker="0" flags="hungrymedium">
+	<Conversation line="" speaker="0"/>
+  <Conversation line="Why you want to bite people?" speaker="1" speakertag="brokenenglish" />
+	<Conversation line="Have you tried a bubbleberry jam sandwich? They are delish." speaker="1" flags="likessandwiches" />
+	<Conversation line="A good omelette. Orange boy eggs have an unparalleled crunch." speaker="1" flags="likesomelette" />
+	<Conversation line="A good omelette. Orange boy eggs have an unparalleled crunch." speaker="1" flags="likesroast" />
+	<Conversation line="Thick, roasted mudraptor slices are my comfort food." speaker="1" flags="likesroast" >
+    <Conversation line="It's certainly easier to be comfortable around roasted raptors..." speaker="0" />    
+  </Conversation>
+</Conversation>
+
 <Conversation line="Am hangry..." speaker="0" flags="hungrymedium" speakertag="brokenenglish">
 	<Conversation line="Don't be angry. Be happy." speaker="1" speakertags="laid-back"/>
 </Conversation>
@@ -93,6 +115,11 @@ AllOWEDJOBS include jobs
 	<Conversation line="Let them eat cake." speaker="1" allowedjobs="captain"/>
 	<Conversation line="Did you forget to eat? Do you also forget to breathe?" speaker="1" speakertag="rude" />
 	<Conversation line="Help yourself!" speaker="1" allowedjobs="chef" />
+</Conversation>
+
+<Conversation line="If I don't eat, I'm going to pass out!" speaker="0" flags="hungryheavy">
+	<Conversation line="" speaker="0"/>
+	<Conversation line="Urgent culinary care is required!" speaker="1" allowedjobs="medicaldoctor"/>
 </Conversation>
 
 <Conversation line="I need to eat, eat, eat!" speaker="0" flags="hungryheavy" speakertags="crazy">
@@ -155,19 +182,69 @@ AllOWEDJOBS include jobs
 	<Conversation line="Would you prefer a salad next time?" speaker="1" allowedjobs="Chef"/> 
 </Conversation>
 
-
 <!-- Heavy -->
 <Conversation line="I ate too much... I might throw up." speaker="0" flags="stuffedheavy" >
 	<Conversation line="Do that in my ship and I might throw you out of the airlock." speaker="1" allowedjobs="captain"/>
 	<Conversation line="Hold that inside, I'm always the one mopping up!" speaker="1" allowedjobs="Assistant"/>
 	<Conversation line="Surely you still have room for dessert?" speaker="1" allowedjobs="Chef"/>
-	<Conversation line="Stop stuffing yourself, you disgusting pig." speaker="1" speakertags="rude"/>  
+	<Conversation line="Stop stuffing yourself, you disgusting pig." speaker="1" speakertags="rude"/>
 </Conversation>
 
 <!-- STOMACHACHE -->
 <Conversation line="My tummy hurts..." speaker="0" flags="stomachache" allowedjobs="captain">
 	<Conversation line="" speaker="0"/>
 </Conversation>
+
+
+<!-- NPC IS MOODY - different levels -->
+<!-- good -->
+<Conversation line="I have a good feeling about this whole adventure." speaker="0" flags="goodmood">
+	<Conversation line="Easy as it goes." speaker="1" speakertags="laid-back" />
+	<Conversation line="I have a bad feeling about it!" speaker="1" speakertags="fearful">
+		<Conversation line="You always have a bad feeling. Remember when you got scared of petting that psilotoad?" speaker="2"/>  
+  </Conversation>  
+	<Conversation line="Yeah, it's been pretty relaxed so far." speaker="1" flags="goodmood" />
+	<Conversation line="Hope this rust bucket will make it all the way." speaker="1" allowedjobs="captain" />
+</Conversation>
+
+<Conversation line="This crew isn't half bad after all" speaker="0" flags="goodmood">
+	<Conversation line="The signs of a well-oiled machine." speaker="1" speakertag="professional" />
+	<Conversation line="Don't get used to it." speaker="1" speakertags="rude" />
+	<Conversation line="Oh, so all of it is bad? Hehe." speaker="1" speakertags="joker" />
+</Conversation>
+
+<!-- bad -->
+<Conversation line="I want to dry off at a station asap. Water is cold, damp and gets everywhere..." speaker="0" flags="badmood">
+	<Conversation line="A submariner should not complain about getting wet." speaker="1" speakertag="tough" />
+	<Conversation line="It gets in my head sometimes, and all the voices with it!" speaker="1" speakertag="Crazy" />
+	<Conversation line="Did you know know that when you signed up?" speaker="1" allowedjobs="captain"/>
+</Conversation>
+
+<Conversation line="I'm not feeling this place, not feeling this mission, not feeling my toes." speaker="0" flags="badmood">
+	<Conversation line="That's enough complaining for today." speaker="1" />
+	<Conversation line="We might need to amputate them. Where's my saw?" speaker="1" allowedjobs="medicaldoctor"/>
+	<Conversation line="At least you're getting paid. You're getting paid, right?" speaker="1" allowedjobs="assistant"/>
+</Conversation>
+
+<!-- awful -->
+<Conversation line="Screw this place man! I don't wanna work any more!" speaker="0" flags="awfulmood">
+	<Conversation line="Do your jovedamned job and pick up the slack." speaker="1" speakertag="professional" />
+	<Conversation line="Hey we all have our ups and down alright. Just take it easy." speaker="1" speakertag="laid-back" />
+	<Conversation line="I love this place! I love deadly underwater escapades!" speaker="1" speakertags="crazy" />
+</Conversation>
+
+<Conversation line="Fuck this! When is this going to end?" speaker="0" flags="awfulmood">
+	<Conversation line="" speaker="0"/>
+	<Conversation line="Hey, toughen up big boy. We're almost there." speaker="1" speakertag="tough" />
+	<Conversation line="It never ends it never ends it never ends..." speaker="1" speakertags="crazy" />
+</Conversation>
+
+
+
+
+
+
+
 
 <!-- 
 <Conversation line="All right folks, let's take her out for a spin!" speaker="0" flags="Initial" allowedjobs="captain">
