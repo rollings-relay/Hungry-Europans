@@ -10,6 +10,8 @@ Hardcoded flags:
 -Casual (intensity under 0.2)
 -Initial (30 seconds into new cave)
 -EnterOutpost
+-HighReputation (>60, revered)
+-LowReputation (<-60, hostile)
 -SubmarineDeep (crush depth, it's useless)
 -Underwater
 -Bandit (teamid="None")
@@ -42,6 +44,21 @@ AllOWEDJOBS include jobs
 <!-- medium -->
 <!-- heavy -->
 
+
+<!-- GENERAL CONVERSATIONS -->
+<Conversation line="Can't wait to see the catch of the day!" speaker="0" flags="Initial" allowedjobs="chef">
+	<Conversation line="A husk infection, that's what you'll catch if you go out there." speaker="1">
+		<Conversation line="Not as long as it's thoroughly cooked." speaker="0"/>
+		<Conversation line="Make sure to take your antibiotics" speaker="2" allowedjobs="medicaldoctor"/>
+	</Conversation>
+	<Conversation line="It's all fun and games until the catch goes INSIDE the submarine" speaker="1">
+		<Conversation line="Makes it easier for me." speaker="0"/>
+		<Conversation line="Nothing is getting in on my watch." speaker="2" allowedjobs="security"/>
+	</Conversation>
+	<Conversation line="I hope it's hammerhead!" speaker="1">
+		<Conversation line="I hope it is NOT hammerhead!" speaker="2"/>
+	</Conversation>
+</Conversation>
 
 <!-- NPC IS HUNGRY - different levels -->
 <!-- Light -->
@@ -84,7 +101,8 @@ AllOWEDJOBS include jobs
 	<Conversation line="A barracu-what?" speaker="1">
 		<Conversation line="An ancient species from earth. Fast predators with nasty teeth." speaker="0">
       <Conversation line="Can't be worse than a crawler." speaker="1" >
-        <Conversation line="There's always worse in the sea!" speaker="2" speakertags="fearful" />
+        <Conversation line="" speaker="0"/>
+        <Conversation line="This is Europa, crawlers are the least of my worries!" speaker="2" speakertags="fearful" />
       </Conversation>
     </Conversation>
 	</Conversation>
