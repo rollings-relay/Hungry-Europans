@@ -1046,6 +1046,11 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entityname.shotgunshellsalt>Shotgun Salt Shell</entityname.shotgunshellsalt>
 <entitydescription.shotgunshellsalt>A makeshift shotgun shell containing good old sodium chloride. Ought to put salt in the wound.</entitydescription.shotgunshellsalt>
  
+<afflictionname.mood>Stress</afflictionname.mood>
+<afflictiondescription.mood.goodmood>Relaxed and focused.</afflictiondescription.mood.goodmood>
+<afflictiondescription.mood.mediummood>Overworked, but still hanging on.</afflictiondescription.mood.mediummood>
+<afflictiondescription.mood.badmood>One angry europan.</afflictiondescription.mood.badmood>
+<afflictiondescription.mood.awfulmood>Depressed and without motivation.</afflictiondescription.mood.awfulmood>
  
 <!-- HUBERT ADDITIONS ABOVE THIS --> 
 <!-- HUBERT ADDITIONS ABOVE THIS --> 
