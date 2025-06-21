@@ -38,20 +38,21 @@ AllOWEDJOBS include jobs
 
 <!-- NPC IS HUNGRY - different levels -->
 <!-- small -->
-<Conversation line="I've been feeling peckish ever since we left the station" speaker="0" flags="hungrysmall,initial">
+<Conversation line="I've been feeling peckish ever since we left the station" speaker="0" flags="hungrylight,initial">
+	<Conversation line="" speaker="1" />
 	<Conversation line="Tough it out. Mind over stomach." speaker="1" speakertags="tough" />
-	<Conversation line="So am I. But we've got work to do. Stay focused." speaker="1" flags="hungrysmall" speakertags="professional" />
-	<Conversation line="Are we going to starve? I don't want to starve!" speaker="1" flags="hungrysmall" speakertags="fearful" >
+	<Conversation line="So am I. But we've got work to do. Stay focused." speaker="1" flags="hungrylight" speakertags="professional" />
+	<Conversation line="Are we going to starve? I don't want to starve!" speaker="1" speakertags="fearful" >
 		<Conversation line="I vote to eat the captain first!" speakertags="joker" speaker="2" allowedjobs="security,medicaldoctor,engineer,mechanic,assistant,chef" />
 	</Conversation>
 </Conversation>
 
-<Conversation line="Do we have any snacks?" speaker="0" flags="hungrysmall">
+<Conversation line="Do we have any snacks?" speaker="0" flags="hungrylight">
 	<Conversation line="We might. Check the pantry." speaker="1" allowedjobs="chef"/>
 	<Conversation line="Try a cheezeburgars, they are berry gud." speaker="1" flags="brokenenglish"/>
 </Conversation>
 
-<Conversation line="I've got the munchies..." speaker="0" flags="hungrysmall">
+<Conversation line="I've got the munchies..." speaker="0" flags="hungrylight">
 	<Conversation line="I've got the crazies." speaker="1" flags="crazy"/>
 	<Conversation line="Munchies? That's a serious condition right there. Do you want a shot of morphine?" speaker="1" allowedjobs="medicaldoctor">
     <Conversation line="You can't just cure everything with morphine..." speaker="2" >

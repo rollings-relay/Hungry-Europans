@@ -16,13 +16,20 @@
       hideiconafterdelay="true"
       healableinmedicalclinic="false"
       iconcolors="0,100,0,255;100,0,0,255">
-      <Effect minstrength="0" maxstrength="20" strengthchange="0.0">
-        <!--<StatValue stattype="MeleeAttackMultiplier" value="+0.05" />
-        <StatValue stattype="MeleeAttackSpeed" value="+0.05" />
-        <StatValue stattype="SwimmingSpeed" value="+0.05" />-->
+      <Effect minstrength="0" maxstrength="25"
+        dialogflag="tiredlight"
+        strengthchange="0.0">
       </Effect>
-      <Effect minstrength="20" maxstrength="50" strengthchange="0.0" />
-      <Effect minstrength="50" maxstrength="100" strengthchange="0.0" minscreenblur="0.0" maxscreenblur="1.0" minchromaticaberration="0.0" maxchromaticaberration="80.0">
+      <Effect minstrength="25" maxstrength="50"
+        dialogflag="tiredmedium"
+        strengthchange="0.0" />
+      <Effect minstrength="50" maxstrength="100"
+        dialogflag="tiredheavy"
+        strengthchange="0.0"
+        minscreenblur="0.0"
+        maxscreenblur="0.1"
+        minchromaticaberration="0.0"
+        maxchromaticaberration="1.0">
         <StatusEffect type="OnActive" target="Character" interval="1">
           <Affliction identifier="mood" amount="0.05" />
         </StatusEffect>
@@ -60,47 +67,25 @@
       hideiconafterdelay="true"
       healableinmedicalclinic="false"
       iconcolors="0,100,0,255;100,0,0,255">
-      <Effect minstrength="0" maxstrength="20" />
-      <Effect minstrength="20" maxstrength="50" />
-      <Effect minstrength="50" maxstrength="60">
-        <StatValue stattype="ElectricalSkillBonus" value="-10" />
-        <StatValue stattype="HelmSkillBonus" value="-10" />
-        <StatValue stattype="MechanicalSkillBonus" value="-10" />
-        <StatValue stattype="MedicalSkillBonus" value="-10" />
-        <StatValue stattype="WeaponsSkillBonus" value="-10" />
-        <StatValue stattype="RepairSpeed" value="-0.10" />
+      <Effect minstrength="0" maxstrength="25"
+        dialogflag="goodmood"
+        minskillmultiplier="1.1"
+        maxskillmultiplier="1">
       </Effect>
-      <Effect minstrength="60" maxstrength="70">
-        <StatValue stattype="ElectricalSkillBonus" value="-20" />
-        <StatValue stattype="HelmSkillBonus" value="-20" />
-        <StatValue stattype="MechanicalSkillBonus" value="-20" />
-        <StatValue stattype="MedicalSkillBonus" value="-20" />
-        <StatValue stattype="WeaponsSkillBonus" value="-20" />
-        <StatValue stattype="RepairSpeed" value="-0.20" />
+      <Effect minstrength="25" maxstrength="50"
+        dialogflag="mediummood"
+        minskillmultiplier="1"
+        maxskillmultiplier="0.9">
       </Effect>
-      <Effect minstrength="70" maxstrength="80">
-        <StatValue stattype="ElectricalSkillBonus" value="-30" />
-        <StatValue stattype="HelmSkillBonus" value="-30" />
-        <StatValue stattype="MechanicalSkillBonus" value="-30" />
-        <StatValue stattype="MedicalSkillBonus" value="-30" />
-        <StatValue stattype="WeaponsSkillBonus" value="-30" />
-        <StatValue stattype="RepairSpeed" value="-0.30" />
+      <Effect minstrength="50" maxstrength="75"
+        dialogflag="badmood"
+        minskillmultiplier="0.9"
+        maxskillmultiplier="0.8">
       </Effect>
-      <Effect minstrength="80" maxstrength="90">
-        <StatValue stattype="ElectricalSkillBonus" value="-40" />
-        <StatValue stattype="HelmSkillBonus" value="-40" />
-        <StatValue stattype="MechanicalSkillBonus" value="-40" />
-        <StatValue stattype="MedicalSkillBonus" value="-40" />
-        <StatValue stattype="WeaponsSkillBonus" value="-40" />
-        <StatValue stattype="RepairSpeed" value="-0.40" />
-      </Effect>
-      <Effect minstrength="90" maxstrength="100">
-        <StatValue stattype="ElectricalSkillBonus" value="-50" />
-        <StatValue stattype="HelmSkillBonus" value="-50" />
-        <StatValue stattype="MechanicalSkillBonus" value="-50" />
-        <StatValue stattype="MedicalSkillBonus" value="-50" />
-        <StatValue stattype="WeaponsSkillBonus" value="-50" />
-        <StatValue stattype="RepairSpeed" value="-0.50" />
+      <Effect minstrength="75" maxstrength="100"
+        dialogflag="awfulmood"
+        minskillmultiplier="0.8"
+        maxskillmultiplier="0.7">
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="896,256,128,128" origin="0,0" />
     </Affliction>
@@ -153,12 +138,13 @@
         minstrength="80"
         maxstrength="100" />
       <!-- No effects at this point -->
-      <Effect minstrength="0" maxstrength="50"
+      <Effect minstrength="0" maxstrength="30"
         strengthchange="0" 
         MinAfflictionOverlayAlphaMultiplier="0.0"
         MaxAfflictionOverlayAlphaMultiplier="0.0" />
-      <!-- Hunger decreases vitality and speed slightly -->
-      <Effect minstrength="50" maxstrength="65"
+      <!-- Hunger decreases skills slightly -->
+      <Effect minstrength="30" maxstrength="60"
+        dialogflag="hungrylight"
         strengthchange="0" 
         minvitalitydecrease="0"
         maxvitalitydecrease="0"
@@ -166,7 +152,8 @@
         maxskillmultiplier="0.8"
         MinAfflictionOverlayAlphaMultiplier="0.0"
         MaxAfflictionOverlayAlphaMultiplier="0.0" />
-      <Effect minstrength="65" maxstrength="80"
+      <Effect minstrength="60" maxstrength="80"
+        dialogflag="hungrymedium"
         minvitalitydecrease="0"
         maxvitalitydecrease="25"
         minskillmultiplier="0.8"
@@ -186,6 +173,7 @@
       </Effect>
       <!-- Hunger starts to get lethal -->
       <Effect minstrength="80" maxstrength="100"
+        dialogflag="hungryheavy"
         minvitalitydecrease="25"
         maxvitalitydecrease="25"
         minskillmultiplier="0.6"
@@ -258,7 +246,9 @@
         minstrength="80"
         maxstrength="100" />
       <!-- No effects at this point -->
-      <Effect minstrength="0" maxstrength="50" strengthchange="0" />
+      <Effect minstrength="0" maxstrength="50" 
+        strengthchange="0" 
+        dialogflag="thirstylight" />
       <!-- Thirst decreases vitality and speed slightly -->
       <Effect minstrength="50" maxstrength="65" strengthchange="0" 
         minvitalitydecrease="0"
@@ -266,6 +256,7 @@
         minskillmultiplier="1.0"
         maxskillmultiplier="0.8" />
       <Effect minstrength="65" maxstrength="80"
+        dialogflag="thirstymedium"
         minvitalitydecrease="15"
         maxvitalitydecrease="30"
         minskillmultiplier="0.8"
@@ -279,6 +270,7 @@
         maxspeedmultiplier="0.8" />
       <!-- Thirst starts to get lethal -->
       <Effect minstrength="80" maxstrength="100"
+        dialogflag="thirstyheavy"
         minvitalitydecrease="30"
         maxvitalitydecrease="100"
         minskillmultiplier="0.6"
@@ -327,6 +319,7 @@
         minstrength="0"
         maxstrength="100" />
       <Effect minstrength="0" maxstrength="100"
+        dialogflag="starving"
         minvitalitydecrease="0"
         maxvitalitydecrease="100"
         minscreendistort="0"
@@ -370,6 +363,7 @@
         minstrength="0"
         maxstrength="100" />
       <Effect minstrength="0" maxstrength="100"
+        dialogflag="thirsting"
         minvitalitydecrease="0"
         maxvitalitydecrease="100"
         minscreendistort="0"
@@ -430,7 +424,8 @@
         target="OtherCharacter"
         minstrength="536"
         maxstrength="1800" />
-      <Effect minstrength="0" maxstrength="536" minresistance="1.0" maxresistance="1.0" resistancefor="hunger" strengthchange="-1">
+      <Effect minstrength="0" maxstrength="536" minresistance="1.0" maxresistance="1.0" resistancefor="hunger" strengthchange="-1"
+        dialogflag="stuffedlight">
         <StatusEffect target="Character" disabledeltatime="true" interval="1">
           <Conditional defecate="gte 0.01" />
           <Affliction identifier="defecate" strength="0.1" />
@@ -442,7 +437,8 @@
         minbodytint="230,255,230,0"
         maxbodytint="230,255,230,50"
         minspeedmultiplier="1.0"
-        maxspeedmultiplier="0.6">
+        maxspeedmultiplier="0.6"
+        dialogflag="stuffedheavy">
         <StatusEffect target="Character" disabledeltatime="true" interval="1">
           <Conditional defecate="gte 0.01" />
           <Affliction identifier="defecate" strength="0.1" />
@@ -508,7 +504,8 @@
         target="OtherCharacter"
         minstrength="0"
         maxstrength="100" />
-      <Effect minstrength="0" maxstrength="1800" minresistance="1.0" maxresistance="1.0" resistancefor="thirst" strengthchange="-1" />
+      <Effect minstrength="0" maxstrength="1800" minresistance="1.0" maxresistance="1.0" resistancefor="thirst" strengthchange="-1" 
+        dialogflag="quenched"/>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="384,256,128,128" origin="0,0" />
     </Affliction>
     
@@ -968,13 +965,16 @@
         target="OtherCharacter"
         minstrength="80"
         maxstrength="100" />
-      <Effect minstrength="0" maxstrength="50" strengthchange="0">
+      <Effect minstrength="0" maxstrength="50"
+        dialogflag="bladderlight"
+        strengthchange="0" >
         <StatusEffect target="Character" interval="5" disabledeltatime="true">
           <Conditional IsBot="true" />
           <ReduceAffliction identifier="bladder" amount="1000" />
         </StatusEffect>
       </Effect>
       <Effect minstrength="50" maxstrength="80"
+        dialogflag="bladdermedium" 
         strengthchange="0"
         minspeedmultiplier="1.0"
         maxspeedmultiplier="0.8">
@@ -988,6 +988,7 @@
         </StatusEffect>
       </Effect>
       <Effect minstrength="80" maxstrength="100"
+        dialogflag="bladderheavy" 
         strengthchange="0"
         minspeedmultiplier="0.8"
         maxspeedmultiplier="0.5">
@@ -1066,8 +1067,10 @@
         target="OtherCharacter"
         minstrength="80"
         maxstrength="100" />
-      <Effect minstrength="0" maxstrength="50" strengthchange="0" />
+      <Effect minstrength="0" maxstrength="50" strengthchange="0" 
+        dialogflag="defecatelight" />
       <Effect minstrength="50" maxstrength="80"
+        dialogflag="defecatemedium" 
         strengthchange="0"
         minspeedmultiplier="1.0"
         maxspeedmultiplier="0.8">
@@ -1081,6 +1084,7 @@
         </StatusEffect>
       </Effect>
       <Effect minstrength="80" maxstrength="100"
+        dialogflag="defecateheavy" 
         strengthchange="0"
         minspeedmultiplier="0.8"
         maxspeedmultiplier="0.5">
@@ -1163,7 +1167,9 @@
         target="OtherCharacter"
         minstrength="80"
         maxstrength="100" />
-      <Effect minstrength="0" maxstrength="50" strengthchange="0">
+      <Effect minstrength="0" maxstrength="50"
+        dialogflag="filthylight"
+        strengthchange="0" >
         <!-- Slowly reduce the hygiene each second by 0.05 (20s = 1%) if the character is in water -->
         <StatusEffect target="Character" interval="1" disabledeltatime="true" comparison="And">
           <Conditional HasTag="neq deepdiving" targetcontaineditem="true" />
@@ -1172,6 +1178,7 @@
         </StatusEffect>
       </Effect>
       <Effect minstrength="50" maxstrength="80"
+        dialogflag="filthymedium"
         strengthchange="0"
         minspeedmultiplier="1.0"
         maxspeedmultiplier="0.8">
@@ -1189,6 +1196,7 @@
         </StatusEffect>
       </Effect>
       <Effect minstrength="80" maxstrength="100"
+        dialogflag="filthyheavy"
         strengthchange="0"
         minspeedmultiplier="0.8"
         maxspeedmultiplier="0.5">
