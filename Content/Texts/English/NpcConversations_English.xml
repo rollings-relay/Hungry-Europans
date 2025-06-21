@@ -2,6 +2,10 @@
 <Conversations identifier="hungryeuropansconversations" Language="English" nowhitespace="False">
 
 <!-- 
+
+Flags can be defined inside affliction effects using     dialogflag="xxxxx"
+you can combine flags 
+
 Hardcoded flags:
 -Casual (intensity under 0.2)
 -Initial (30 seconds into new cave)
@@ -15,46 +19,99 @@ Hardcoded flags:
 -EndLevel
 
 Personality traits:
--professional" alloweddialogtags="professional,none"
--laid-back" alloweddialogtags="laid-back,none"
--rude" alloweddialogtags="rude,none"
--tough" alloweddialogtags="tough,none"
--joker" alloweddialogtags="joker,none" 
--brokenenglish" alloweddialogtags="brokenenglish" 
--fearful" alloweddialogtags="fearful,none" 
--crazy" alloweddialogtags="crazy,none" 
+-professional"       alloweddialogtags="professional,none"
+-laid-back"          alloweddialogtags="laid-back,none"
+-rude"               alloweddialogtags="rude,none"
+-tough"              alloweddialogtags="tough,none"
+-joker"              alloweddialogtags="joker,none" 
+-brokenenglish"      alloweddialogtags="brokenenglish" 
+-fearful"            alloweddialogtags="fearful,none" 
+-crazy"              alloweddialogtags="crazy,none" 
+
+FLAGS include affliction
+SPEAKERTAG includes personality
+AllOWEDJOBS include jobs
+
+<Conversation line="xxxxx" speaker="x" flags="xxxx" speakertag="xxxxx" allowedjobs="xxxx" maxintensity="0.2">
+
  -->
 
-<Conversation line="My tummy hurts..." speaker="0" flags="Initial" allowedjobs="captain">
-	<Conversation line="" speaker="0"/>
-	<Conversation line="Aye aye." speaker="1">
-		<Conversation line="Aye, sir!" speaker="2"/>
-		<Conversation line="Yes capitan!" speaker="2" speakertags="brokenenglish"/>
-	</Conversation>
-</Conversation>
-
-
-<Conversation line="I've been feeling peckish ever since we left the station" speaker="0" flags="hungrysmall">
-	<Conversation line="" speaker="0"/>
+<!-- NPC IS HUNGRY - different levels -->
+<!-- small -->
+<Conversation line="I've been feeling peckish ever since we left the station" speaker="0" flags="hungrysmall,initial">
+	<Conversation line="Tough it out. Mind over stomach." speaker="1" speakertags="tough" />
 	<Conversation line="So am I. But we've got work to do. Stay focused." speaker="1" flags="hungrysmall" speakertags="professional" />
-	<Conversation line="Tough it out. Mind over stomach." speaker="1" flags="tough" speakertags="tough" />
 	<Conversation line="Are we going to starve? I don't want to starve!" speaker="1" flags="hungrysmall" speakertags="fearful" >
-		<Conversation line="I vote to eat the captain first!" speakertags="joker" speaker="2" allowedjobs="security,medic,engineer,mechanic,assistant,chef" />
+		<Conversation line="I vote to eat the captain first!" speakertags="joker" speaker="2" allowedjobs="security,medicaldoctor,engineer,mechanic,assistant,chef" />
 	</Conversation>
 </Conversation>
 
+<Conversation line="Do we have any snacks?" speaker="0" flags="hungrysmall">
+	<Conversation line="We might. Check the pantry." speaker="1" allowedjobs="chef"/>
+	<Conversation line="Try a cheezeburgars, they are berry gud." speaker="1" flags="brokenenglish"/>
+</Conversation>
+
+<Conversation line="I've got the munchies..." speaker="0" flags="hungrysmall">
+	<Conversation line="I've got the crazies." speaker="1" flags="crazy"/>
+	<Conversation line="Munchies? That's a serious condition right there. Do you want a shot of morphine?" speaker="1" allowedjobs="medicaldoctor">
+    <Conversation line="You can't just cure everything with morphine..." speaker="2" >
+      <Conversation line="That's what they teach at medical school." speaker="1" allowedjobs="medicaldoctor"/>
+    </Conversation>
+  </Conversation>
+</Conversation>
+
+<!-- medium -->
 <Conversation line="I feel hungry..." speaker="0" flags="hungrymedium">
 	<Conversation line="" speaker="0"/>
-	<Conversation line="You're right, I'm craving some nuggets right now." flags="traits_likes_friedfood" speaker="1">
-		<Conversation line="I only see you eating fast-food, at this rate, you'll get bigger than Jupiter." speaker="2"/>
+	<Conversation line="You're right, I'm craving some nuggets right now." flags="likesfriedfood" speaker="1">
+		<Conversation line="I only see you eating fast-food, at this rate, you'll get rounder than Jupiter." speaker="2"/>
 	</Conversation>
+</Conversation>
+
+<Conversation line="I'm so hungry, I could eat a barracuda..." speaker="0" flags="hungrymedium">
+	<Conversation line="A barracu-what?" flags="" speaker="1">
+		<Conversation line="An ancient species from earth. Fast predators with nasty teeth." speaker="0">
+      <Conversation line="Can't be worse than a crawler." speaker="1" >
+        <Conversation line="There's always worse in the sea!" speaker="2" speakertags="fearful" />
+      </Conversation>
+    </Conversation>
+	</Conversation>
+  <Conversation line="I'm so hungry, I could eat a manatee..." speaker="1" flags="hungrysmall,hungrymedium,hungryheavy">
+    <Conversation line="Those are made-up fish." speaker="2" />
+  </Conversation>
+  <Conversation line="Yeah, let's hit the bar!" speaker="1" flags="DrunkMedium,DrunkHigh"/>
 </Conversation>
 
 <Conversation line="Am hangry..." speaker="0" flags="hungrymedium,brokenenglish">
-	<Conversation line="Don't be angry. Be happy." speaker="1" flags="laidback"/>
-	<Conversation line="You're right, I'm craving some nuggets right now." flags="traits_likes_friedfood" speaker="1">
-		<Conversation line="I only see you eating fast-food, at this rate, you'll get bigger than Jupiter." speaker="2"/>
-	</Conversation>
+	<Conversation line="Don't be angry. Be happy." speaker="1" speakertags="laid-back"/>
+</Conversation>
+
+<!-- heavy -->
+<Conversation line="I'm starving here!" speaker="0" flags="hungryheavy">
+	<Conversation line="" speaker="0"/>
+	<Conversation line="Let them eat cake." speaker="1" allowedjobs="captain"/>
+	<Conversation line="Did you forget to eat? Do you also forget to breathe?" speaker="1" speakertag="rude" />
+	<Conversation line="Help yourself!" speaker="1" allowedjobs="chef" />
+</Conversation>
+
+<Conversation line="I need to eat, eat, eat!" speaker="0" flags="hungryheavy" speakertags="crazy">
+	<Conversation line="" speaker="0"/>
+	<Conversation line="Don't eat me!" speaker="1" flags="fearful"/>
+</Conversation>
+
+
+<!-- STUFFED -->
+<!-- Heavy -->
+<Conversation line="I ate too much... I might throw up." speaker="0" flags="stuffedheavy" >
+	<Conversation line="Do that in my ship and I might throw you out of the airlock." speaker="1" allowedjobs="captain"/>
+	<Conversation line="Hold that inside, I'm always the one mopping up!" speaker="1" allowedjobs="Assistant"/>
+	<Conversation line="Surely you still have room for dessert?" speaker="1" allowedjobs="Chef"/>
+	<Conversation line="Stop stuffing yourself, you disgusting pig" speaker="1" speakertags="rude"/>  
+</Conversation>
+
+<!-- STOMACHACHE -->
+<Conversation line="My tummy hurts..." speaker="0" flags="stomachache" allowedjobs="captain">
+	<Conversation line="" speaker="0"/>
 </Conversation>
 
 <!-- 
