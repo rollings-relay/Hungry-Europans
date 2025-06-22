@@ -443,14 +443,14 @@
         target="OtherCharacter"
         minstrength="130"
         maxstrength="1800" />
-      <Effect minstrength="0" maxstrength="100" minresistance="1.0" maxresistance="1.0" resistancefor="hunger" strengthchange="-1"
+      <Effect minstrength="0" maxstrength="100" minresistance="0.0" maxresistance="0.0" resistancefor="hunger" strengthchange="-0.0555555555555"
         dialogflag="stuffedlight">
         <StatusEffect target="Character" disabledeltatime="true" interval="1">
           <Conditional defecate="gte 0.01" />
           <Affliction identifier="defecate" strength="0.1" />
         </StatusEffect>
       </Effect>
-      <Effect minstrength="100" maxstrength="120" minresistance="1.0" maxresistance="1.0" resistancefor="hunger" strengthchange="-1"
+      <Effect minstrength="100" maxstrength="120" minresistance="0.0" maxresistance="0.0" resistancefor="hunger" strengthchange="-0.0555555555555"
         minfacetint="230,255,230,0"
         maxfacetint="230,255,230,100"
         minbodytint="230,255,230,0"
