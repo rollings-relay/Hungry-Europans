@@ -79,7 +79,7 @@
         <StatusEffect type="OnActive" target="This,Character" duration="1" condition="-1" stackable="false" comparison="And">
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
-          <Affliction identifier="ate_friedfood" amount="1" />
+          <Affliction identifier="ate_burger" amount="1" />
           <Affliction identifier="he-stuffed" amount="1.25" />
           <ReduceAffliction type="hunger" amount="1.25" />
           <ReduceAffliction type="damage" amount="0.15" />
@@ -103,7 +103,7 @@
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
-          <Affliction identifier="ate_friedfood" amount="1" />
+          <Affliction identifier="ate_burger" amount="1" />
           <Affliction identifier="he-stuffed" amount="1.25" />
           <ReduceAffliction type="hunger" amount="1.25" />
           <ReduceAffliction type="damage" amount="0.15" />
@@ -315,7 +315,7 @@
         <StatusEffect type="OnActive" target="This,Character" duration="1" condition="-1" stackable="false" comparison="And">
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
-          <Affliction identifier="ate_pizzaslice" amount="1" />
+          <Affliction identifier="ate_pizza" amount="1" />
           <Affliction identifier="he-stuffed" amount="0.625" />
           <ReduceAffliction type="hunger" amount="0.625" />
           <ReduceAffliction type="damage" amount="0.15" />
@@ -329,7 +329,7 @@
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
-          <Affliction identifier="ate_pizzaslice" amount="1" />
+          <Affliction identifier="ate_pizza" amount="1" />
           <Affliction identifier="he-stuffed" amount="0.625" />
           <ReduceAffliction type="hunger" amount="0.625" />
           <ReduceAffliction type="damage" amount="0.15" />
