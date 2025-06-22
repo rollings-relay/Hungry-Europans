@@ -1163,27 +1163,27 @@
       healableinmedicalclinic="false"
       MedicalSkillGain="0.0">
       <Description
-        textidentifier="afflictiondescription.defecate.self"
+        textidentifier="afflictiondescription.hygiene.self.medium"
         target="Self"
         minstrength="30"
         maxstrength="80" />
       <Description
-        textidentifier="afflictiondescription.defecate.self.high"
+        textidentifier="afflictiondescription.hygiene.self.high"
         target="Self"
         minstrength="80"
         maxstrength="100" />
       <Description
-        textidentifier="afflictiondescription.defecate.other.low"
+        textidentifier="afflictiondescription.hygiene.other.low"
         target="OtherCharacter"
         minstrength="0"
         maxstrength="30" />
       <Description
-        textidentifier="afflictiondescription.defecate.other"
+        textidentifier="afflictiondescription.hygiene.other.medium"
         target="OtherCharacter"
         minstrength="30"
         maxstrength="80" />
       <Description
-        textidentifier="afflictiondescription.defecate.other.high"
+        textidentifier="afflictiondescription.hygiene.other.high"
         target="OtherCharacter"
         minstrength="80"
         maxstrength="100" />
