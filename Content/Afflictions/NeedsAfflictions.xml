@@ -1212,11 +1212,13 @@
           <Conditional mood="gt 0" />
           <Affliction identifier="mood" amount="1.0" />
         </StatusEffect>
+        <!-- TODO: BUGGED, RequireEmpty="true" does not work if the inventory is... empty https://github.com/FakeFishGames/Barotrauma/discussions/16238 -->
         <!-- Slowly reduce the hygiene each second by 0.05 (20s = 1%) if the character is in water -->
         <StatusEffect target="Character" interval="1" disabledeltatime="true" comparison="And">
-          <Conditional HasTag="neq deepdiving" targetcontaineditem="true" />
+          <RequiredItem item="clothing" type="Equipped" requireempty="true" CharacterInventorySlotType="InnerClothes" />
+          <RequiredItem item="deepdiving" type="Equipped" requireempty="true" CharacterInventorySlotType="OuterClothes" />
           <Conditional InWater="true" />
-          <ReduceAffliction identifier="hygiene" amount="0.05" />
+          <ReduceAffliction identifier="hygiene" amount="4.0" />
         </StatusEffect>
       </Effect>
       <Effect minstrength="80" maxstrength="100"
@@ -1234,11 +1236,13 @@
           <Conditional mood="gt 0" />
           <Affliction identifier="mood" amount="2.0" />
         </StatusEffect>
+        <!-- TODO: BUGGED, RequireEmpty="true" does not work if the inventory is... empty https://github.com/FakeFishGames/Barotrauma/discussions/16238 -->
         <!-- Slowly reduce the hygiene each second by 0.05 (20s = 1%) if the character is in water -->
         <StatusEffect target="Character" interval="1" disabledeltatime="true" comparison="And">
-          <Conditional HasTag="neq deepdiving" targetcontaineditem="true" />
+          <RequiredItem item="clothing" type="Equipped" requireempty="true" CharacterInventorySlotType="InnerClothes" />
+          <RequiredItem item="deepdiving" type="Equipped" requireempty="true" CharacterInventorySlotType="OuterClothes" />
           <Conditional InWater="true" />
-          <ReduceAffliction identifier="hygiene" amount="0.05" />
+          <ReduceAffliction identifier="hygiene" amount="4.0" />
         </StatusEffect>
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="896,384,128,128" origin="0,0" />
