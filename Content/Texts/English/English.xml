@@ -1051,6 +1051,14 @@ SEARCH FOR THE FOLLOWING:                                                       
 <afflictiondescription.mood.mediummood>Overworked, but still hanging on.</afflictiondescription.mood.mediummood>
 <afflictiondescription.mood.badmood>One angry europan.</afflictiondescription.mood.badmood>
 <afflictiondescription.mood.awfulmood>Depressed and without motivation.</afflictiondescription.mood.awfulmood>
+  
+<afflictionname.hygiene>Personal Hygiene</afflictionname.hygiene>
+<afflictiondescription.hygiene>Don't be a filthy Europan.</afflictiondescription.hygiene>
+<afflictiondescription.hygiene.self.medium>You feel grimy.</afflictiondescription.hygiene.self.medium>
+<afflictiondescription.hygiene.self.high>You stink, and your skin has a layer of muck.</afflictiondescription.hygiene.self.high>
+<afflictiondescription.hygiene.other.low>The patient is as clean a sailor can be.</afflictiondescription.hygiene.other.low>
+<afflictiondescription.hygiene.other.medium>The patient could use a good scrub.</afflictiondescription.hygiene.other.medium>
+<afflictiondescription.hygiene.other.high>An foul odor emanates from the patient due to their execrable hygiene.</afflictiondescription.hygiene.other.high>
  
 <!-- HUBERT ADDITIONS ABOVE THIS --> 
 <!-- HUBERT ADDITIONS ABOVE THIS --> 
