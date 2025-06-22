@@ -401,8 +401,9 @@
       type="nausea"
       causeofdeathdescription="Choked on vomit."
       selfcauseofdeathdescription="You have choked on your own vomit."
-      showiconthreshold="35"
-      showinhealthscannerthreshold="0"
+      showiconthreshold="100"
+      showicontoothersthreshold="100"
+      showinhealthscannerthreshold="100"
       limbspecific="false"
       maxstrength="1800"
       affectmachines="false"
@@ -415,41 +416,41 @@
       <Description
         textidentifier="advancedafflictiondescription.self.he-stuffed"
         target="Self"
-        minstrength="268"
-        maxstrength="402" />
+        minstrength="100"
+        maxstrength="120" />
       <Description
         textidentifier="advancedafflictiondescription.self.he-stuffed.2"
         target="Self"
-        minstrength="402"
-        maxstrength="536" />
+        minstrength="120"
+        maxstrength="130" />
       <Description
         textidentifier="advancedafflictiondescription.self.he-stuffed.3"
         target="Self"
-        minstrength="536"
+        minstrength="130"
         maxstrength="1800" />
       <Description
         textidentifier="advancedafflictiondescription.others.he-stuffed"
         target="OtherCharacter"
-        minstrength="402"
-        maxstrength="536" />
+        minstrength="100"
+        maxstrength="120" />
       <Description
         textidentifier="advancedafflictiondescription.others.he-stuffed.2"
         target="OtherCharacter"
-        minstrength="402"
-        maxstrength="536" />
+        minstrength="120"
+        maxstrength="130" />
       <Description
         textidentifier="advancedafflictiondescription.others.he-stuffed.3"
         target="OtherCharacter"
-        minstrength="536"
+        minstrength="130"
         maxstrength="1800" />
-      <Effect minstrength="0" maxstrength="536" minresistance="1.0" maxresistance="1.0" resistancefor="hunger" strengthchange="-1"
+      <Effect minstrength="0" maxstrength="100" minresistance="1.0" maxresistance="1.0" resistancefor="hunger" strengthchange="-1"
         dialogflag="stuffedlight">
         <StatusEffect target="Character" disabledeltatime="true" interval="1">
           <Conditional defecate="gte 0.01" />
           <Affliction identifier="defecate" strength="0.1" />
         </StatusEffect>
       </Effect>
-      <Effect minstrength="536" maxstrength="1800" minresistance="1.0" maxresistance="1.0" resistancefor="hunger" strengthchange="-1"
+      <Effect minstrength="100" maxstrength="120" minresistance="1.0" maxresistance="1.0" resistancefor="hunger" strengthchange="-1"
         minfacetint="230,255,230,0"
         maxfacetint="230,255,230,100"
         minbodytint="230,255,230,0"
@@ -462,14 +463,14 @@
           <Affliction identifier="defecate" strength="0.1" />
         </StatusEffect>
       </Effect>
-      <PeriodicEffect mininterval="12" maxinterval="90" minstrength="536" maxstrength="1800">
+      <PeriodicEffect mininterval="10" maxinterval="120" minstrength="130" maxstrength="1800">
         <StatusEffect target="Character" SpeedMultiplier="0.0" setvalue="true" duration="1.7" >
-          <Conditional he-stuffed="gte 536" />
+          <Conditional he-stuffed="gte 130" />
         </StatusEffect>
         <StatusEffect target="Character" comparison="And">
           <Conditional ishuman="true" />
           <Conditional hasspecifiertag="male" />
-          <Conditional he-stuffed="gte 536" />
+          <Conditional he-stuffed="gte 130" />
           <Sound file="Content/Sounds/HUMAN_chokeMale1.ogg" selectionmode="Random" />
           <Sound file="Content/Sounds/HUMAN_chokeMale2.ogg" />
           <Sound file="Content/Sounds/HUMAN_chokeMale3.ogg" />
@@ -477,25 +478,24 @@
         <StatusEffect target="Character" comparison="And">
           <Conditional ishuman="true" />
           <Conditional hasspecifiertag="female" />
-          <Conditional he-stuffed="gte 536" />
+          <Conditional he-stuffed="gte 130" />
           <Sound file="Content/Sounds/HUMAN_chokeFemale1.ogg" selectionmode="Random" />
           <Sound file="Content/Sounds/HUMAN_chokeFemale2.ogg" />
           <Sound file="Content/Sounds/HUMAN_chokeFemale3.ogg" />
         </StatusEffect>
+        <StatusEffect target="Character" duration="2">
+          <Conditional he-stuffed="gte 130" />
+          <TriggerAnimation Type="Walk" filename="Vomit" priority="10" ExpectedSpecies="Human" />
+        </StatusEffect>
         <StatusEffect target="Character">
-          <Conditional he-stuffed="gte 536" />
+          <Conditional he-stuffed="gte 130" />
           <Affliction identifier="organdamage" strength="0.5" />
           <ReduceAffliction identifier="he-stuffed" strength="67" />
-          <ReduceAffliction identifier="he-increasedswimmingspeedcrawler" strength="300" />
-          <ReduceAffliction identifier="he-damageresistancemoloch" strength="300" />
-          <ReduceAffliction identifier="he-damageresistancemudraptor" strength="300" />
-          <ReduceAffliction identifier="he-increasedwalkingspeedmudraptor" strength="300" />
-          <ReduceAffliction identifier="he-increasedmeleedamagehammerhead" strength="300" />
-          <ReduceAffliction identifier="he-pressureresistance" strength="300" />
-          <!--<ReduceAffliction identifier="AnyFoodAffliction" strength="300" />-->
+          <ReduceAffliction type="foodbuff" strength="300" />
+          <ReduceAffliction type="drinkbuff" strength="300" />
         </StatusEffect>
         <StatusEffect target="Character" targetlimbs="Head" duration="1" comparison="And">
-          <Conditional he-stuffed="gte 536" />
+          <Conditional he-stuffed="gte 130" />
           <Conditional HideFace="eq False" />
           <ParticleEmitter particle="vomitsplash" copyentityangle="true" anglemin="-10" anglemax="10" particlespersecond="50" velocitymin="50" velocitymax="200" scalemin="0.1" scalemax="0.2" />
           <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="vomitsplatter" decalsize="1.25" shockwave="false" underwaterbubble="false" />
