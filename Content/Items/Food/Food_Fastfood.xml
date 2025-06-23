@@ -277,7 +277,7 @@
       <PreferredContainer primary="refrigerator,table" secondary="kitchen,crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="90,274,80,10" depth="0.6" origin="0.5,0.5" />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="130,274,40,10" depth="0.6" maxcondition="50" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="90,274,80,10" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/InventoryIcons.png" sourcerect="365,0,61,61" origin="0.5,0.5" />
       <Fabricate suitablefabricators="oven" requiredtime="120" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="cooking" level="40" />
         <RequiredItem identifier="he-dough" amount="1" />
@@ -299,7 +299,7 @@
       <PreferredContainer primary="refrigerator,table" secondary="kitchen,crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,274,41,10" depth="0.6" origin="0.5,0.5" />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,274,21,10" depth="0.6" maxcondition="50" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,274,41,10" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/InventoryIcons.png" sourcerect="313,0,52,61" origin="0.5,0.5" />
       <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="35" fabricationlimitmin="0" fabricationlimitmax="10" displayname="pizzadisplayname" />
       <Fabricate suitablefabricators="cuttingboard" requiredtime="3" requiresrecipe="false" amount="1">
         <RequiredItem identifier="he-pizza" amount="1" MinCondition="0.125"/>
