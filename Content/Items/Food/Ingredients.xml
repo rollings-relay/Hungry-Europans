@@ -866,6 +866,12 @@
         <StatusEffect type="OnSecondaryUse" target="This" delay="0.01">
           <Use />
         </StatusEffect>
+        <!-- TODO: leaving this here to simplify cans if barodevs fix https://github.com/FakeFishGames/Barotrauma/issues/16240 -->
+        <!-- <StatusEffect type="OnUse" target="This" condition="-1" disabledeltatime="true">
+          <RequiredItem items="sharptool" type="Picked" CharacterInventorySlotType="LeftHand,RightHand" /> 
+          <Conditional ConditionPercentage="equals 100" />
+          <Sound file="%ModDir%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
+        </StatusEffect> -->
       </Throwable>
       <Projectile characterusable="false" launchimpulse="0" impulsespread="0.0" sticktocharacters="false" sticktoitems="false" sticktostructures="false" sticktodoors="false">
         <Attack targetimpulse="3" severlimbsprobability="0.1" itemdamage="1" structuredamage="0" structuresoundtype="StructureSlash">
@@ -947,7 +953,7 @@
         </Containable>
       </ItemContainer>
     </Item>
-
+    
     <Item name="Open Can of Tomatoes" identifier="he-cannedtomatoesopen" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A rare can of tomatoes back from when supplies were still delivered from earth! High in value, these ingredients are used exclusively for delicacies these days." Tags="smallitem,ingredient,rareingredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_metal_light" impacttolerance="5.5">
       <PreferredContainer secondary="wreckstoragecab" minamount="1" maxamount="4" spawnprobability="0.1" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
