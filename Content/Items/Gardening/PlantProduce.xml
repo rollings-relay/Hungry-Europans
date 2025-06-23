@@ -1311,7 +1311,7 @@
       <Price storeidentifier="merchantmine" sold="false" multiplier="0.9" />
     </Price>
     <Deconstruct time="5" />
-    <InventoryIcon texture="%ModDir:2954998725%/Content/UI/InventoryIcons.png" sourcerect="0,80,69,67" origin="0.5,0.5" />
+    <InventoryIcon texture="%ModDir:2954998725%/Content/Items/InventoryIcons.Png" sourcerect="0,80,69,67" origin="0.5,0.5" />
     <ContainedSprite texture="%ModDir:2954998725%/Content/Items/Gardening/SeaWeed.png" usewhenattached="true" decorativespritebehavior="HideWhenNotVisible" depth="0.55" sourcerect="102,0,100,178" origin="0.5,0.5" />
     <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" sourcerect="0,488,60,24" depth="0.525" origin="0.5,0.6"  />
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.525" sourcerect="0,488,60,24" origin="0.5,0.5" />

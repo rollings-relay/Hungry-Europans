@@ -753,7 +753,7 @@
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.05" />
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="387,312,43,10" depth="0.6" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/UI/InventoryIcons.png" sourcerect="0,0,43,58" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/InventoryIcons.Png" sourcerect="0,0,43,58" origin="0.5,0.5" />
       <Fabricate suitablefabricators="oven" requiredtime="60" requiresrecipe="false" amount="8">
         <RequiredSkill identifier="cooking" level="20" />
         <RequiredItem identifier="he-rawjerky" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
@@ -1103,7 +1103,7 @@
       <Fabricate suitablefabricators="cafeteria" requiredtime="10" requiredmoney="105" fabricationlimitmin="2" fabricationlimitmax="20" />
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="61,63,61,74" depth="0.6" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/UI/InventoryIcons.png" sourcerect="0,404,79,107" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/InventoryIcons.Png" sourcerect="0,404,79,107" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,55,61,82" depth="0.525" origin="0.5,0.85"  />
       <Body width="60" height="72" density="14" />
       <Holdable canbepicked="true" canBeCombined="false" slots="RightHand,LeftHand" holdpos="35,-40" handle1="0,30" holdangle="0" aimable="false" msg="ItemMsgPickUpSelect" />
@@ -1153,7 +1153,7 @@
       <Fabricate suitablefabricators="cafeteria" requiredtime="10" requiredmoney="105" fabricationlimitmin="2" fabricationlimitmax="20" />
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Sprite texture="%ModDir%/Content/Items/Food/FoodAndMeat.png" sourcerect="61,63,61,74" depth="0.6" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir%/Content/UI/InventoryIcons.png" sourcerect="0,404,79,107" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir%/Content/Items/InventoryIcons.Png" sourcerect="0,404,79,107" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,55,61,82" depth="0.525" origin="0.5,0.85"  />
       <Body width="60" height="72" density="14" />
       <Holdable canbepicked="true" canBeCombined="false" slots="RightHand,LeftHand" holdpos="35,-40" handle1="0,30" holdangle="0" aimable="false" msg="ItemMsgPickUpSelect">
@@ -1171,7 +1171,7 @@
       <Fabricate suitablefabricators="cafeteria" requiredtime="10" requiredmoney="175" fabricationlimitmin="2" fabricationlimitmax="20" />
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Sprite texture="%ModDir%/Content/Items/Food/FoodAndMeat.png" sourcerect="61,63,61,74" depth="0.6" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir%/Content/UI/InventoryIcons.png" sourcerect="0,404,79,107" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir%/Content/Items/InventoryIcons.Png" sourcerect="0,404,79,107" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,55,61,82" depth="0.525" origin="0.5,0.85"  />
       <Body width="60" height="72" density="14" />
       <Holdable canbepicked="true" canBeCombined="false" slots="RightHand,LeftHand" holdpos="35,-40" handle1="0,30" holdangle="0" aimable="false" msg="ItemMsgPickUpSelect">

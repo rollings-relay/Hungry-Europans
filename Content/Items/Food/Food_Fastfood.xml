@@ -9,7 +9,7 @@
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="kitchen" secondary="table,crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="225,455,17,11" depth="0.6" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/UI/InventoryIcons.png" sourcerect="191,0,55,38" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/InventoryIcons.Png" sourcerect="191,0,55,38" origin="0.5,0.5" />
       <!-- 8 nuggets should about equal the values of 1 burger patty -->
       <Fabricate suitablefabricators="fryer" requiredtime="60" requiresrecipe="false" amount="16">
         <RequiredSkill identifier="cooking" level="15" />

@@ -779,7 +779,7 @@
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="41,5,38,3" depth="0.6" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/UI/InventoryIcons.png" sourcerect="0,59,36,20" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/InventoryIcons.Png" sourcerect="0,59,36,20" origin="0.5,0.5" />
       <Fabricate suitablefabricators="cuttingboard" requiredtime="16" requiresrecipe="false" amount="18">
         <RequiredSkill identifier="cooking" level="10" />
         <RequiredItem identifier="he-molochcheese" amount="1"/>

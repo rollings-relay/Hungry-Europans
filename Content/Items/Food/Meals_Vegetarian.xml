@@ -335,7 +335,7 @@
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="178,419,61,17" depth="0.6" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/UI/InventoryIcons.png" sourcerect="247,0,66,60" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/InventoryIcons.Png" sourcerect="247,0,66,60" origin="0.5,0.5" />
       <Fabricate suitablefabricators="stove" requiredtime="20" requiresrecipe="false" amount="1" displayname="vegetarian">
         <RequiredSkill identifier="cooking" level="20" />
         <RequiredItem tag="pan" UseCondition="True" MinCondition="0.0"/>
