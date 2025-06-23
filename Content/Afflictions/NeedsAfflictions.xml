@@ -11,11 +11,36 @@
       indicatorlimb="Head"
       maxstrength="100"
       affectmachines="false"
-      showiconthreshold="0"
+      showiconthreshold="25"
       showinhealthscannerthreshold="0.5"
       hideiconafterdelay="true"
       healableinmedicalclinic="false"
       iconcolors="0,100,0,255;100,0,0,255">
+      <Description
+        textidentifier="afflictiondescription.fatigue.self.medium"
+        target="Self"
+        minstrength="25"
+        maxstrength="50" />
+      <Description
+        textidentifier="afflictiondescription.fatigue.self.high"
+        target="Self"
+        minstrength="50"
+        maxstrength="100" />
+      <Description
+        textidentifier="afflictiondescription.fatigue.other.low"
+        target="OtherCharacter"
+        minstrength="0"
+        maxstrength="25" />
+      <Description
+        textidentifier="afflictiondescription.fatigue.other.medium"
+        target="OtherCharacter"
+        minstrength="25"
+        maxstrength="50" />
+      <Description
+        textidentifier="afflictiondescription.fatigue.other.high"
+        target="OtherCharacter"
+        minstrength="50"
+        maxstrength="100" />
       <Effect minstrength="0" maxstrength="25"
         dialogflag="tiredlight"
         strengthchange="0.0">
@@ -63,24 +88,24 @@
       maxstrength="100"
       affectmachines="true"
       showiconthreshold="0"
-      showinhealthscannerthreshold="0.5"
+      showinhealthscannerthreshold="1000"
       hideiconafterdelay="true"
       healableinmedicalclinic="false"
       iconcolors="0,100,0,255;100,0,0,255">
       <Description
-        textidentifier="afflictiondescription.mood.goodmood"
+        textidentifier="afflictiondescription.mood.self.goodmood"
         minstrength="0"
         maxstrength="25" />
       <Description
-        textidentifier="afflictiondescription.mood.mediummood"
+        textidentifier="afflictiondescription.mood.self.mediummood"
         minstrength="25"
         maxstrength="50" />
       <Description
-        textidentifier="afflictiondescription.mood.badmood"
+        textidentifier="afflictiondescription.mood.self.badmood"
         minstrength="50"
         maxstrength="75" />
       <Description
-        textidentifier="afflictiondescription.mood.awfulmood"
+        textidentifier="afflictiondescription.mood.self.awfulmood"
         minstrength="75"
         maxstrength="100" />
       <Effect minstrength="0" maxstrength="25"
