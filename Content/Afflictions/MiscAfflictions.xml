@@ -982,8 +982,8 @@
     -->
     <!-- CANNIBAL VISUAL EFFECTS -->
     <Affliction identifier="he-hungryforhumanmeatveins" showiconthreshold="2000" showinhealthscannerthreshold="2000" maxstrength="1000" afflictionoverlayalphaislinear="true">
-      <Effect minstrength="0" maxstrength="1000" strengthchange="-700">
-        <StatusEffect target="Character" disabledeltatime="true" stackable="false">
+      <Effect minstrength="0" maxstrength="1000" strengthchange="-700" MinAfflictionOverlayAlphaMultiplier="0" MaxAfflictionOverlayAlphaMultiplier="1">
+        <StatusEffect target="Character" interval="1.5" duration="1.5" disabledeltatime="true" stackable="false">
           <Conditional IsLocalPlayer="true" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Cannibalism/CannibalHeartbeat.ogg" volume="5.0" dontmuffle="true" duckvolume="false" />
         </StatusEffect>
@@ -991,31 +991,31 @@
       <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/HungerForHumanMeatVeinsOverlay.png" />
     </Affliction>
     <Affliction identifier="he-hungryforhumanmeatveins10" showiconthreshold="2000" showinhealthscannerthreshold="2000" maxstrength="1000" afflictionoverlayalphaislinear="true">
-      <Effect minstrength="0" maxstrength="1000" strengthchange="-700">
+      <Effect minstrength="0" maxstrength="1000" strengthchange="-700" MinAfflictionOverlayAlphaMultiplier="0" MaxAfflictionOverlayAlphaMultiplier="0.1">
         <StatusEffect target="Character" disabledeltatime="true" stackable="false">
           <Conditional IsLocalPlayer="true" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Cannibalism/CannibalHeartbeat.ogg" volume="3.5" dontmuffle="true" duckvolume="false" />
         </StatusEffect>
       </Effect>
-      <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/HungerForHumanMeatVeinsOverlay10.png" />
+      <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/HungerForHumanMeatVeinsOverlay.png" />
     </Affliction>
     <Affliction identifier="he-hungryforhumanmeatveins30" showiconthreshold="2000" showinhealthscannerthreshold="2000" maxstrength="1000" afflictionoverlayalphaislinear="true">
-      <Effect minstrength="0" maxstrength="1000" strengthchange="-700">
+      <Effect minstrength="0" maxstrength="1000" strengthchange="-700" MinAfflictionOverlayAlphaMultiplier="0" MaxAfflictionOverlayAlphaMultiplier="0.3">
         <StatusEffect target="Character" disabledeltatime="true" stackable="false">
           <Conditional IsLocalPlayer="true" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Cannibalism/CannibalHeartbeat.ogg" volume="4.0" dontmuffle="true" duckvolume="false" />
         </StatusEffect>
       </Effect>
-      <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/HungerForHumanMeatVeinsOverlay30.png" />
+      <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/HungerForHumanMeatVeinsOverlay.png" />
     </Affliction>
     <Affliction identifier="he-hungryforhumanmeatveins60" showiconthreshold="2000" showinhealthscannerthreshold="2000" maxstrength="1000" afflictionoverlayalphaislinear="true">
-      <Effect minstrength="0" maxstrength="1000" strengthchange="-700">
+      <Effect minstrength="0" maxstrength="1000" strengthchange="-700" MinAfflictionOverlayAlphaMultiplier="0" MaxAfflictionOverlayAlphaMultiplier="0.6">
         <StatusEffect target="Character" disabledeltatime="true" stackable="false">
           <Conditional IsLocalPlayer="true" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Cannibalism/CannibalHeartbeat.ogg" volume="4.5" dontmuffle="true" duckvolume="false" />
         </StatusEffect>
       </Effect>
-      <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/HungerForHumanMeatVeinsOverlay60.png" />
+      <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/HungerForHumanMeatVeinsOverlay.png" />
     </Affliction>
 
     <Affliction name="Radiant Influence" identifier="he-giveradianttalent" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" healableinmedicalclinic="false" MedicalSkillGain="0.0">

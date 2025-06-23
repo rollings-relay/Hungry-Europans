@@ -899,70 +899,70 @@
       </Effect>
       <PeriodicEffect interval="1.5">
         <StatusEffect target="Character" comparison="And">
-          <Conditional he-hungryforhumanmeat="gteq 20" />
+          <Conditional he-hungryforhumanmeat="gte 20" />
           <Conditional he-hungryforhumanmeat="lt 25" />
           <Affliction identifier="he-hungryforhumanmeatveins10" strength="300" />
         </StatusEffect>
       </PeriodicEffect>
       <PeriodicEffect interval="1.5">
         <StatusEffect target="Character" comparison="And">
-          <Conditional he-hungryforhumanmeat="gteq 25" />
+          <Conditional he-hungryforhumanmeat="gte 25" />
           <Conditional he-hungryforhumanmeat="lt 30" />
           <Affliction identifier="he-hungryforhumanmeatveins30" strength="300" />
         </StatusEffect>
       </PeriodicEffect>
       <PeriodicEffect interval="1.5">
         <StatusEffect target="Character" comparison="And">
-          <Conditional he-hungryforhumanmeat="gteq 30" />
+          <Conditional he-hungryforhumanmeat="gte 30" />
           <Conditional he-hungryforhumanmeat="lt 35" />
           <Affliction identifier="he-hungryforhumanmeatveins60" strength="300" />
         </StatusEffect>
       </PeriodicEffect>
       <PeriodicEffect interval="1.5">
         <StatusEffect target="Character" comparison="And">
-          <Conditional he-hungryforhumanmeat="gteq 35" />
+          <Conditional he-hungryforhumanmeat="gte 35" />
           <Conditional he-hungryforhumanmeat="lt 40" />
           <Affliction identifier="he-hungryforhumanmeatveins" strength="400" />
         </StatusEffect>
       </PeriodicEffect>
       <PeriodicEffect interval="1.5">
         <StatusEffect target="Character" comparison="And">
-          <Conditional he-hungryforhumanmeat="gteq 40" />
+          <Conditional he-hungryforhumanmeat="gte 40" />
           <Conditional he-hungryforhumanmeat="lt 45" />
           <Affliction identifier="he-hungryforhumanmeatveins" strength="500" />
         </StatusEffect>
       </PeriodicEffect>
       <PeriodicEffect interval="1.5">
         <StatusEffect target="Character" comparison="And">
-          <Conditional he-hungryforhumanmeat="gteq 45" />
+          <Conditional he-hungryforhumanmeat="gte 45" />
           <Conditional he-hungryforhumanmeat="lt 50" />
           <Affliction identifier="he-hungryforhumanmeatveins" strength="600" />
         </StatusEffect>
       </PeriodicEffect>
       <PeriodicEffect interval="1.5">
         <StatusEffect target="Character" comparison="And">
-          <Conditional he-hungryforhumanmeat="gteq 50" />
+          <Conditional he-hungryforhumanmeat="gte 50" />
           <Conditional he-hungryforhumanmeat="lt 60" />
           <Affliction identifier="he-hungryforhumanmeatveins" strength="700" />
         </StatusEffect>
       </PeriodicEffect>
       <PeriodicEffect interval="1.5">
         <StatusEffect target="Character" comparison="And">
-          <Conditional he-hungryforhumanmeat="gteq 60" />
+          <Conditional he-hungryforhumanmeat="gte 60" />
           <Conditional he-hungryforhumanmeat="lt 70" />
           <Affliction identifier="he-hungryforhumanmeatveins" strength="800" />
         </StatusEffect>
       </PeriodicEffect>
       <PeriodicEffect interval="1.5">
         <StatusEffect target="Character" comparison="And">
-          <Conditional he-hungryforhumanmeat="gteq 70" />
+          <Conditional he-hungryforhumanmeat="gte 70" />
           <Conditional he-hungryforhumanmeat="lt 80" />
           <Affliction identifier="he-hungryforhumanmeatveins" strength="900" />
         </StatusEffect>
       </PeriodicEffect>
       <PeriodicEffect interval="1.5">
         <StatusEffect target="Character" comparison="And">
-          <Conditional he-hungryforhumanmeat="gteq 80" />
+          <Conditional he-hungryforhumanmeat="gte 80" />
           <Affliction identifier="he-hungryforhumanmeatveins" strength="1000" />
         </StatusEffect>
       </PeriodicEffect>
