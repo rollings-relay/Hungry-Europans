@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Override>
   <Afflictions>
+  
     <!-- FOOD AFFLICTIONS -->
     <!-- Psilotoad -->
     <Affliction name="Heightened Adrenalin (Food)"
@@ -18,6 +19,7 @@
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
     </Affliction>
+    
     <!-- Orangeboy -->
     <Affliction name="Heightened Senses (Food)"
       identifier="he-maxweaponskill"
@@ -37,6 +39,7 @@
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
     </Affliction>
+    
     <!-- Husk -->
     <Affliction name="Husk Stench (Food)"
       identifier="he-disguisedashusk"
@@ -57,9 +60,10 @@
       <Effect minstrength="0" maxstrength="1800" strengthchange="-1" tag="huskinfected" />
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
     </Affliction>
+    
     <!-- Watcher -->
     <Affliction name="Increased Skill Gain (Food)"
-      identifier="he-watcherskillgainincrease"
+      identifier="he-skillgainincrease"
       type="foodbuff"
       isbuff="true"
       limbspecific="false"
@@ -70,11 +74,16 @@
       maxstrength="1800"
       iconcolors="150,255,150;75,255,75;0,255,0"
       MedicalSkillGain="0.0">
-      <Effect minstrength="0" maxstrength="1800" strengthchange="-1"
-        minskillgainmultiplier="1.5"
-        maxskillgainmultiplier="1.5" />
+      <Effect minstrength="0" maxstrength="100" strengthchange="-1" />
+      <Effect minstrength="100" maxstrength="1200" strengthchange="-1"
+        minskillgainmultiplier="1.0"
+        maxskillgainmultiplier="1.25" />
+      <Effect minstrength="1200" maxstrength="1800" strengthchange="-1"
+        minskillgainmultiplier="1.25"
+        maxskillgainmultiplier="1.25" />
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
     </Affliction>
+    
     <!-- Human (Only for cannibals) -->
     <Affliction name="Increased Skills (Food)"
       identifier="he-cannibalskillincrease"
@@ -93,212 +102,86 @@
         maxskillmultiplier="1.2" />
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
     </Affliction>
+    
     <!-- CRAWLER -->
-    <!-- 10% -->
     <Affliction name="Increased Swimming Speed (Food)"
-      identifier="he-increasedswimmingspeedcrawler10"
+      identifier="he-increasedswimmingspeed"
       type="foodbuff"
       isbuff="true"
       limbspecific="false"
       indicatorlimb="Torso"
       hideiconafterdelay="true"
-      showiconthreshold="0"
+      showiconthreshold="100"
+      showinhealthscannerthreshold="100"
       treatmentthreshold="100"
       maxstrength="1800"
       iconcolors="150,255,150;75,255,75;0,255,0"
       MedicalSkillGain="0.0">
-      <Effect minstrength="0" maxstrength="1800" strengthchange="-1">
-        <StatValue stattype="SwimmingSpeed" minvalue="0.1" maxvalue="0.1" />
+      <Effect minstrength="0" maxstrength="100" strengthchange="-1">      
+      </Effect>
+      <Effect minstrength="100" maxstrength="1200" strengthchange="-1">
+        <StatValue stattype="SwimmingSpeed" minvalue="0.0" maxvalue="0.2" />         
+      </Effect>
+      <Effect minstrength="1200" maxstrength="1800" strengthchange="-1">
+        <StatValue stattype="SwimmingSpeed" minvalue="0.2" maxvalue="0.2" />         
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
     </Affliction>
-    <!-- 25% -->
-    <Affliction name="Increased Swimming Speed (Food)"
-      identifier="he-increasedswimmingspeedcrawler25"
-      type="foodbuff"
-      isbuff="true"
-      limbspecific="false"
-      indicatorlimb="Torso"
-      hideiconafterdelay="true"
-      showiconthreshold="0"
-      treatmentthreshold="100"
-      maxstrength="1800"
-      iconcolors="150,255,150;75,255,75;0,255,0"
-      MedicalSkillGain="0.0">
-      <Effect minstrength="0" maxstrength="1800" strengthchange="-1">
-        <StatValue stattype="SwimmingSpeed" minvalue="0.25" maxvalue="0.25" />
-        <!-- Convert weaker effect to stronger effect with half the duration -->
-        <StatusEffect target="Character" comparison="And">
-          <Conditional he-increasedswimmingspeedcrawler10="gte 100" />
-          <Affliction identifier="he-increasedswimmingspeedcrawler25" strength="50" />
-          <ReduceAffliction identifier="he-increasedswimmingspeedcrawler10" strength="100" />
-        </StatusEffect>
-        <StatusEffect target="Character" comparison="And">
-          <Conditional he-increasedswimmingspeedcrawler10="gte 10" />
-          <Conditional he-increasedswimmingspeedcrawler10="lt 100" />
-          <Affliction identifier="he-increasedswimmingspeedcrawler25" strength="5" />
-          <ReduceAffliction identifier="he-increasedswimmingspeedcrawler10" strength="10" />
-        </StatusEffect>
-        <StatusEffect target="Character" comparison="And">
-          <Conditional he-increasedswimmingspeedcrawler10="gte 2" />
-          <Conditional he-increasedswimmingspeedcrawler10="lt 10" />
-          <Affliction identifier="he-increasedswimmingspeedcrawler25" strength="1" />
-          <ReduceAffliction identifier="he-increasedswimmingspeedcrawler10" strength="2" />
-        </StatusEffect>
-      </Effect>
-      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
-    </Affliction>
-    <!-- 50% -->
-    <Affliction name="Increased Swimming Speed (Food)"
-      identifier="he-increasedswimmingspeedcrawler"
-      type="foodbuff"
-      isbuff="true"
-      limbspecific="false"
-      indicatorlimb="Torso"
-      hideiconafterdelay="true"
-      showiconthreshold="0"
-      treatmentthreshold="100"
-      maxstrength="1800"
-      iconcolors="150,255,150;75,255,75;0,255,0"
-      MedicalSkillGain="0.0">
-      <Effect minstrength="0" maxstrength="1800" strengthchange="-1">
-        <StatValue stattype="SwimmingSpeed" minvalue="0.5" maxvalue="0.5" />
-        <!-- Convert weaker effect to stronger effect with half the duration -->
-        <StatusEffect target="Character" comparison="And" disabledeltatime="true">
-          <Conditional he-increasedswimmingspeedcrawler25="gte 100" />
-          <Affliction identifier="he-increasedswimmingspeedcrawler" strength="50" />
-          <ReduceAffliction identifier="he-increasedswimmingspeedcrawler25" strength="100" />
-        </StatusEffect>
-        <StatusEffect target="Character" comparison="And" disabledeltatime="true">
-          <Conditional he-increasedswimmingspeedcrawler25="gte 10" />
-          <Conditional he-increasedswimmingspeedcrawler25="lt 100" />
-          <Affliction identifier="he-increasedswimmingspeedcrawler" strength="5" />
-          <ReduceAffliction identifier="he-increasedswimmingspeedcrawler25" strength="10" />
-        </StatusEffect>
-        <StatusEffect target="Character" comparison="And" disabledeltatime="true">
-          <Conditional he-increasedswimmingspeedcrawler25="gt 0" />
-          <Conditional he-increasedswimmingspeedcrawler25="lt 10" />
-          <Affliction identifier="he-increasedswimmingspeedcrawler" strength="1" />
-          <ReduceAffliction identifier="he-increasedswimmingspeedcrawler25" strength="2" />
-        </StatusEffect>
-        <!-- Convert weakest effect to stronger effect with a third of the duration -->
-        <StatusEffect target="Character" comparison="And" disabledeltatime="true">
-          <Conditional he-increasedswimmingspeedcrawler10="gte 100" />
-          <Affliction identifier="he-increasedswimmingspeedcrawler" strength="25" />
-          <ReduceAffliction identifier="he-increasedswimmingspeedcrawler10" strength="100" />
-        </StatusEffect>
-        <StatusEffect target="Character" comparison="And" disabledeltatime="true">
-          <Conditional he-increasedswimmingspeedcrawler10="gte 25" />
-          <Conditional he-increasedswimmingspeedcrawler10="lt 100" />
-          <Affliction identifier="he-increasedswimmingspeedcrawler" strength="5" />
-          <ReduceAffliction identifier="he-increasedswimmingspeedcrawler10" strength="25" />
-        </StatusEffect>
-        <StatusEffect target="Character" comparison="And" disabledeltatime="true">
-          <Conditional he-increasedswimmingspeedcrawler10="gt 0" />
-          <Conditional he-increasedswimmingspeedcrawler10="lt 25" />
-          <Affliction identifier="he-increasedswimmingspeedcrawler" strength="1" />
-          <ReduceAffliction identifier="he-increasedswimmingspeedcrawler10" strength="3" />
-        </StatusEffect>
-      </Effect>
-      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
-    </Affliction>
+    
     <!-- MUDRAPTOR -->
     <Affliction name="Damage Resistance (Food)"
-      identifier="he-damageresistancemudraptor"
+      identifier="he-damageresistance"
       type="foodbuff"
       isbuff="true"
       limbspecific="false"
       indicatorlimb="Torso"
       hideiconafterdelay="true"
-      showiconthreshold="0"
+      showiconthreshold="100"
+      showinhealthscannerthreshold="100"
       treatmentthreshold="100"
       maxstrength="1800"
       iconcolors="150,255,150;75,255,75;0,255,0"
       MedicalSkillGain="0.0">
-      <Effect minstrength="0" maxstrength="1800" strengthchange="-1"
+      <Effect minstrength="0" maxstrength="100" strengthchange="-1">      
+      </Effect>
+      <Effect minstrength="100" maxstrength="1200" strengthchange="-1"
         resistancefor="damage"
-        minresistance="0.25"
-        maxresistance="0.25" />
+        minresistance="0.0"
+        maxresistance="0.2" />
+      <Effect minstrength="1200" maxstrength="1800" strengthchange="-1"
+        resistancefor="damage"
+        minresistance="0.2"
+        maxresistance="0.2" />
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
     </Affliction>
+    
     <Affliction name="Increased Walking Speed (Food)"
-      identifier="he-increasedwalkingspeedmudraptor"
+      identifier="he-increasedwalkingspeed"
       type="foodbuff"
       isbuff="true"
       limbspecific="false"
       indicatorlimb="Torso"
       hideiconafterdelay="true"
-      showiconthreshold="0"
+      showiconthreshold="100"
+      showinhealthscannerthreshold="100"
       treatmentthreshold="100"
       maxstrength="1800"
       iconcolors="150,255,150;75,255,75;0,255,0"
       MedicalSkillGain="0.0">
-      <Effect minstrength="0" maxstrength="1800" strengthchange="-1">
+      <Effect minstrength="0" maxstrength="100" strengthchange="-1">      
+      </Effect>
+      <Effect minstrength="100" maxstrength="1200" strengthchange="-1">
+        <StatValue stattype="WalkingSpeed" minvalue="0.0" maxvalue="0.2" />
+      </Effect>
+      <Effect minstrength="1200" maxstrength="1800" strengthchange="-1">
         <StatValue stattype="WalkingSpeed" minvalue="0.2" maxvalue="0.2" />
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
     </Affliction>
-    <!-- MOLOCH -->
-    <!-- 25% -->
-    <Affliction name="Damage Resistance (Food)"
-      identifier="he-damageresistancemoloch25"
-      type="foodbuff"
-      isbuff="true"
-      limbspecific="false"
-      indicatorlimb="Torso"
-      hideiconafterdelay="true"
-      showiconthreshold="0"
-      treatmentthreshold="100"
-      maxstrength="1800"
-      iconcolors="150,255,150;75,255,75;0,255,0"
-      MedicalSkillGain="0.0">
-      <Effect minstrength="0" maxstrength="1800" strengthchange="-1"
-        resistancefor="damage"
-        minresistance="0.25"
-        maxresistance="0.25" />
-      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
-    </Affliction>
-    <!-- 50% -->
-    <Affliction name="Damage Resistance (Food)"
-      identifier="he-damageresistancemoloch"
-      type="foodbuff"
-      isbuff="true"
-      limbspecific="false"
-      indicatorlimb="Torso"
-      hideiconafterdelay="true"
-      showiconthreshold="0"
-      treatmentthreshold="100"
-      maxstrength="1800"
-      iconcolors="150,255,150;75,255,75;0,255,0"
-      MedicalSkillGain="0.0">
-      <Effect minstrength="0" maxstrength="1800" strengthchange="-1"
-        resistancefor="damage"
-        minresistance="0.5"
-        maxresistance="0.5">
-        <!-- Convert weaker effect to stronger effect with half the duration -->
-        <StatusEffect target="Character" comparison="And" disabledeltatime="true">
-          <Conditional he-damageresistancemoloch25="gte 100" />
-          <Affliction identifier="he-damageresistancemoloch" strength="50" />
-          <ReduceAffliction identifier="he-damageresistancemoloch25" strength="100" />
-        </StatusEffect>
-        <StatusEffect target="Character" comparison="And" disabledeltatime="true">
-          <Conditional he-damageresistancemoloch25="gte 10" />
-          <Conditional he-damageresistancemoloch25="lt 100" />
-          <Affliction identifier="he-damageresistancemoloch" strength="5" />
-          <ReduceAffliction identifier="he-damageresistancemoloch25" strength="10" />
-        </StatusEffect>
-        <StatusEffect target="Character" comparison="And" disabledeltatime="true">
-          <Conditional he-damageresistancemoloch25="gt 0" />
-          <Conditional he-damageresistancemoloch25="lt 10" />
-          <Affliction identifier="he-damageresistancemoloch" strength="1" />
-          <ReduceAffliction identifier="he-damageresistancemoloch25" strength="2" />
-        </StatusEffect>
-      </Effect>
-      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
-    </Affliction>
+    
     <!-- HAMMERHEAD -->
     <Affliction name="Increased Melee Damage (Food)"
-      identifier="he-increasedmeleedamagehammerhead"
+      identifier="he-increasedmeleedamage"
       type="foodbuff"
       isbuff="true"
       limbspecific="false"
@@ -314,6 +197,7 @@
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
     </Affliction>
+    
     <!--THRESHER-->
     <Affliction name="Decreased Oxygen Consumption (Food)"
       identifier="he-decreasedoxygenconsumption"
@@ -336,6 +220,7 @@
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
     </Affliction>
+    
     <!-- ENDWORM -->
     <Affliction name="Pressure Resistance (Food)"
       identifier="he-pressureresistance"
@@ -355,6 +240,13 @@
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
     </Affliction>
+    
+    <!-- 
+    //// BEVERAGES ////
+    //// BEVERAGES ////
+    //// BEVERAGES ////
+    //// BEVERAGES //// -->
+    
     <!-- CLOWN JUICE -->
     <Affliction name="Clown Juice"
       identifier="he-clownjuice"
@@ -372,6 +264,7 @@
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
     </Affliction>
+    
     <!-- COALITION PREMIUM -->
     <Affliction name="Coalition Premium"
       identifier="he-coalitionpremium"
@@ -390,6 +283,7 @@
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
     </Affliction>
+    
     <!-- JOVIAN FORCE -->
     <Affliction name="Jovian Force"
       identifier="he-jovianforce"
