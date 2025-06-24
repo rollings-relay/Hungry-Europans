@@ -43,8 +43,8 @@
     </Affliction>
     
     <!-- Lean fat diet, makes you run/swim faster -->
-    <Affliction name="Lean Fat Diet"
-      identifier="he-leanfat"
+    <Affliction name="Fat Rich Diet"
+      identifier="he-fatrich"
       type="foodbuff"
       isbuff="true"
       limbspecific="false"
