@@ -35,7 +35,7 @@
         <StatusEffect type="OnSuccess" target="This,UseTarget" duration="5" comparison="And">
           <Conditional InWater="false" />
           <Conditional IsPlayer="false" />
-          <Affliction identifier="he-increasedmeleedamagehammerhead" amount="20.0" />
+          <Affliction identifier="he-increasedmeleedamage" amount="20.0" />
           <Affliction identifier="he-stuffed" amount="10.0" />
           <ReduceAffliction type="damage" amount="0.65" />
           <ReduceAffliction type="burn" amount="0.4" />
@@ -60,7 +60,7 @@
           <Conditional InWater="false" />
           <Conditional IsPlayer="true" />
           <Conditional stun="gt 0" />
-          <Affliction identifier="he-increasedmeleedamagehammerhead" amount="20.0" />
+          <Affliction identifier="he-increasedmeleedamage" amount="20.0" />
           <Affliction identifier="he-stuffed" amount="10.0" />
           <ReduceAffliction type="damage" amount="0.65" />
           <ReduceAffliction type="burn" amount="0.4" />
@@ -86,7 +86,7 @@
           <Conditional HasStatusTag="usingfork" />
           <Conditional HasStatusTag="neq emptyfork"/>
           <Conditional InWater="false" />
-          <Affliction identifier="he-increasedmeleedamagehammerhead" amount="20.0" />
+          <Affliction identifier="he-increasedmeleedamage" amount="20.0" />
           <Affliction identifier="he-stuffed" amount="10.0" />
           <ReduceAffliction type="damage" amount="0.65" />
           <ReduceAffliction type="burn" amount="0.4" />
@@ -153,7 +153,7 @@
         <StatusEffect type="OnSuccess" target="This,UseTarget" duration="5" comparison="And">
           <Conditional InWater="false" />
           <Conditional IsPlayer="false" />
-          <Affliction identifier="he-increasedmeleedamagehammerhead" amount="18.0" />
+          <Affliction identifier="he-increasedmeleedamage" amount="18.0" />
           <Affliction identifier="he-stuffed" amount="12.75" />
           <ReduceAffliction type="damage" amount="1.0" />
           <ReduceAffliction type="burn" amount="0.5" />
@@ -178,7 +178,7 @@
           <Conditional InWater="false" />
           <Conditional IsPlayer="true" />
           <Conditional stun="gt 0" />
-          <Affliction identifier="he-increasedmeleedamagehammerhead" amount="18.0" />
+          <Affliction identifier="he-increasedmeleedamage" amount="18.0" />
           <Affliction identifier="he-stuffed" amount="12.75" />
           <ReduceAffliction type="damage" amount="1.0" />
           <ReduceAffliction type="burn" amount="0.5" />
@@ -199,7 +199,7 @@
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
-          <Affliction identifier="he-increasedmeleedamagehammerhead" amount="18.0" />
+          <Affliction identifier="he-increasedmeleedamage" amount="18.0" />
           <Affliction identifier="he-stuffed" amount="12.75" />
           <ReduceAffliction type="damage" amount="1.0" />
           <ReduceAffliction type="burn" amount="0.5" />
@@ -228,7 +228,7 @@
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="This,UseTarget" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
           <Conditional IsBot="true" />
-          <Affliction identifier="he-increasedmeleedamagehammerhead" amount="450.0" />
+          <Affliction identifier="he-increasedmeleedamage" amount="450.0" />
           <Affliction identifier="he-stuffed" amount="47.5" />
           <ReduceAffliction type="damage" amount="25.0" />
           <ReduceAffliction type="burn" amount="12.5" />
@@ -245,7 +245,7 @@
           <Conditional InWater="false" />
           <Conditional stun="gt 0" />
           <Conditional IsPlayer="true" />
-          <Affliction identifier="he-increasedmeleedamagehammerhead" amount="18.0" />
+          <Affliction identifier="he-increasedmeleedamage" amount="18.0" />
           <Affliction identifier="he-stuffed" amount="12.75" />
           <ReduceAffliction type="damage" amount="1.0" />
           <ReduceAffliction type="burn" amount="0.5" />
@@ -422,7 +422,7 @@
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
-          <Affliction identifier="he-increasedmeleedamagehammerhead" amount="18.0" />
+          <Affliction identifier="he-increasedmeleedamage" amount="18.0" />
           <Affliction identifier="he-stuffed" amount="12.75" />
           <ReduceAffliction type="damage" amount="1.0" />
           <ReduceAffliction type="burn" amount="0.5" />
@@ -546,7 +546,7 @@
         <StatusEffect type="OnSuccess" target="This,UseTarget" duration="5" comparison="And">
           <Conditional InWater="false" />
           <Conditional IsPlayer="false" />
-          <Affliction identifier="he-increasedmeleedamagehammerhead" amount="36.0" />
+          <Affliction identifier="he-increasedmeleedamage" amount="36.0" />
           <Affliction identifier="he-stuffed" amount="5.4" />
           <ReduceAffliction type="damage" amount="2.0" />
           <ReduceAffliction type="hunger" amount="0.5" />
@@ -565,7 +565,7 @@
           <Conditional InWater="false" />
           <Conditional IsPlayer="true" />
           <Conditional stun="gt 0" />
-          <Affliction identifier="he-increasedmeleedamagehammerhead" amount="36.0" />
+          <Affliction identifier="he-increasedmeleedamage" amount="36.0" />
           <Affliction identifier="he-stuffed" amount="5.4" />
           <ReduceAffliction type="damage" amount="2.0" />
           <ReduceAffliction type="hunger" amount="0.5" />
@@ -579,7 +579,7 @@
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
-          <Affliction identifier="he-increasedmeleedamagehammerhead" amount="36.0" />
+          <Affliction identifier="he-increasedmeleedamage" amount="36.0" />
           <Affliction identifier="he-stuffed" amount="5.4" />
           <ReduceAffliction type="damage" amount="2.0" />
           <ReduceAffliction identifier="mood" amount="2.0" />
@@ -620,7 +620,7 @@
         <StatusEffect type="OnSuccess" target="This,UseTarget" duration="5" comparison="And">
           <Conditional InWater="false" />
           <Conditional IsPlayer="false" />
-          <Affliction identifier="he-increasedmeleedamagehammerhead" amount="20.0" />
+          <Affliction identifier="he-increasedmeleedamage" amount="20.0" />
           <Affliction identifier="he-stuffed" amount="3.4" />
           <ReduceAffliction type="damage" amount="1.5" />
           <ReduceAffliction type="hunger" amount="0.3" />
@@ -644,7 +644,7 @@
           <Conditional InWater="false" />
           <Conditional IsPlayer="true" />
           <Conditional stun="gt 0" />
-          <Affliction identifier="he-increasedmeleedamagehammerhead" amount="20.0" />
+          <Affliction identifier="he-increasedmeleedamage" amount="20.0" />
           <Affliction identifier="he-stuffed" amount="3.4" />
           <ReduceAffliction type="damage" amount="1.5" />
           <ReduceAffliction type="hunger" amount="0.3" />
@@ -664,7 +664,7 @@
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
-          <Affliction identifier="he-increasedmeleedamagehammerhead" amount="20.0" />
+          <Affliction identifier="he-increasedmeleedamage" amount="20.0" />
           <Affliction identifier="he-stuffed" amount="3.4" />
           <ReduceAffliction type="damage" amount="1.5" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />

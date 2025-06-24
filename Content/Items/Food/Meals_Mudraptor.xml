@@ -33,7 +33,7 @@
         <StatusEffect type="OnSuccess" target="This,UseTarget" duration="5" comparison="And">
           <Conditional InWater="false" />
           <Conditional IsPlayer="false" />
-          <Affliction identifier="he-damageresistancemudraptor" amount="30.0" />
+          <Affliction identifier="he-damageresistance" amount="30.0" />
           <Affliction identifier="he-increasedwalkingspeedmudraptor" amount="30.0" />
           <Affliction identifier="he-stuffed" amount="9.4" />
           <ReduceAffliction type="damage" amount="0.55" />
@@ -58,7 +58,7 @@
           <Conditional InWater="false" />
           <Conditional IsPlayer="true" />
           <Conditional stun="gt 0" />
-          <Affliction identifier="he-damageresistancemudraptor" amount="30.0" />
+          <Affliction identifier="he-damageresistance" amount="30.0" />
           <Affliction identifier="he-increasedwalkingspeedmudraptor" amount="30.0" />
           <Affliction identifier="he-stuffed" amount="9.4" />
           <ReduceAffliction type="damage" amount="0.55" />
@@ -84,7 +84,7 @@
           <Conditional HasStatusTag="usingfork" />
           <Conditional HasStatusTag="neq emptyfork"/>
           <Conditional InWater="false" />
-          <Affliction identifier="he-damageresistancemudraptor" amount="30.0" />
+          <Affliction identifier="he-damageresistance" amount="30.0" />
           <Affliction identifier="he-increasedwalkingspeedmudraptor" amount="30.0" />
           <Affliction identifier="he-stuffed" amount="9.4" />
           <ReduceAffliction type="damage" amount="0.55" />

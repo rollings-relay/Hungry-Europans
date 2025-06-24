@@ -33,7 +33,7 @@
         <StatusEffect type="OnSuccess" target="This,UseTarget" stackable="false" disabledeltatime="true" comparison="And">
           <Conditional InWater="false" />
           <Conditional IsPlayer="false" />
-          <Affliction identifier="he-damageresistancemoloch" amount="80.0" />
+          <Affliction identifier="he-damageresistance" amount="80.0" />
           <Affliction identifier="he-stuffed" amount="10.0" />
           <ReduceAffliction type="damage" amount="1.75" />
           <ReduceAffliction type="hunger" amount="2.5" />
@@ -56,7 +56,7 @@
           <Conditional InWater="false" />
           <Conditional IsPlayer="true" />
           <Conditional stun="gt 0" />
-          <Affliction identifier="he-damageresistancemoloch" amount="80.0" />
+          <Affliction identifier="he-damageresistance" amount="80.0" />
           <Affliction identifier="he-stuffed" amount="10.0" />
           <ReduceAffliction type="damage" amount="1.75" />
           <ReduceAffliction type="hunger" amount="2.5" />
@@ -86,7 +86,7 @@
         <StatusEffect type="OnSecondaryUse" target="Character" stackable="false" disabledeltatime="true" comparison="And">
           <Conditional HasStatusTag="neq emptyhand"/>
           <Conditional InWater="false" />
-          <Affliction identifier="he-damageresistancemoloch" amount="80.0" />
+          <Affliction identifier="he-damageresistance" amount="80.0" />
           <Affliction identifier="he-stuffed" amount="10.0" />
           <ReduceAffliction type="damage" amount="1.75" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
@@ -143,7 +143,7 @@
         <StatusEffect type="OnSuccess" target="This,UseTarget" duration="5" comparison="And">
           <Conditional InWater="false" />
           <Conditional IsPlayer="false" />
-          <Affliction identifier="he-damageresistancemoloch" amount="18.0" />
+          <Affliction identifier="he-damageresistance" amount="18.0" />
           <Affliction identifier="he-stuffed" amount="12.75" />
           <ReduceAffliction type="damage" amount="1.0" />
           <ReduceAffliction type="burn" amount="0.5" />
@@ -168,7 +168,7 @@
           <Conditional InWater="false" />
           <Conditional IsPlayer="true" />
           <Conditional stun="gt 0" />
-          <Affliction identifier="he-damageresistancemoloch" amount="18.0" />
+          <Affliction identifier="he-damageresistance" amount="18.0" />
           <Affliction identifier="he-stuffed" amount="12.75" />
           <ReduceAffliction type="damage" amount="1.0" />
           <ReduceAffliction type="burn" amount="0.5" />
@@ -194,7 +194,7 @@
           <Conditional HasStatusTag="usingfork" />
           <Conditional HasStatusTag="neq emptyfork"/>
           <Conditional InWater="false" />
-          <Affliction identifier="he-damageresistancemoloch" amount="18.0" />
+          <Affliction identifier="he-damageresistance" amount="18.0" />
           <Affliction identifier="he-stuffed" amount="12.75" />
           <ReduceAffliction type="damage" amount="1.0" />
           <ReduceAffliction type="burn" amount="0.5" />

@@ -5323,7 +5323,7 @@
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="This,UseTarget" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
           <Conditional IsBot="true" />
-          <Affliction identifier="he-damageresistancemoloch25" amount="175" />
+          <Affliction identifier="he-damageresistance" amount="175" />
           <ReduceAffliction identifier="drunk" amount="1.25" />
           <ReduceAffliction identifier="drunknodebuffs" amount="1.25" />
           <ReduceAffliction identifier="hallucinating" amount="1.25" />
@@ -5348,7 +5348,7 @@
           <Conditional InWater="false" />
           <Conditional stun="gt 0" />
           <Conditional IsPlayer="true" />
-          <Affliction identifier="he-damageresistancemoloch25" amount="14" />
+          <Affliction identifier="he-damageresistance" amount="14" />
           <ReduceAffliction identifier="drunk" amount="0.1" />
           <ReduceAffliction identifier="drunknodebuffs" amount="0.1" />
           <ReduceAffliction identifier="hallucinating" amount="0.1" />
@@ -5376,7 +5376,7 @@
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
-          <Affliction identifier="he-damageresistancemoloch25" amount="14" />
+          <Affliction identifier="he-damageresistance" amount="14" />
           <ReduceAffliction identifier="drunk" amount="0.1" />
           <ReduceAffliction identifier="drunknodebuffs" amount="0.1" />
           <ReduceAffliction identifier="hallucinating" amount="0.1" />

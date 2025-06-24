@@ -99,7 +99,7 @@
         <StatusEffect type="OnSuccess" target="This,UseTarget" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
           <Conditional IsBot="true" />
           <Affliction identifier="he-stuffed" amount="1.43" />
-          <Affliction identifier="he-damageresistancemoloch" amount="114,4" />
+          <Affliction identifier="he-damageresistance" amount="114,4" />
           <ReduceAffliction type="damage" amount="0.858" />
           <ReduceAffliction type="hunger" amount="1.43" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
@@ -115,7 +115,7 @@
           <Conditional stun="gt 0" />
           <Conditional IsPlayer="true" />
           <Affliction identifier="he-stuffed" amount="0.1" />
-          <Affliction identifier="he-damageresistancemoloch" amount="8" />
+          <Affliction identifier="he-damageresistance" amount="8" />
           <ReduceAffliction type="damage" amount="0.06" />
           <ReduceAffliction type="hunger" amount="0.1" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
@@ -128,7 +128,7 @@
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <Affliction identifier="he-stuffed" amount="0.1" />
-          <Affliction identifier="he-damageresistancemoloch" amount="8" />
+          <Affliction identifier="he-damageresistance" amount="8" />
           <ReduceAffliction type="damage" amount="0.06" />
         </StatusEffect>
         <!--Play eating sound only if not contained within a waffle cone-->
@@ -246,7 +246,7 @@
         <StatusEffect type="OnSuccess" target="This,UseTarget" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
           <Conditional IsBot="true" />
           <Affliction identifier="he-stuffed" amount="1.43" />
-          <Affliction identifier="he-damageresistancemoloch" amount="71.5" />
+          <Affliction identifier="he-damageresistance" amount="71.5" />
           <ReduceAffliction type="damage" amount="1.0725" />
           <ReduceAffliction type="hunger" amount="1.43" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
@@ -262,7 +262,7 @@
           <Conditional stun="gt 0" />
           <Conditional IsPlayer="true" />
           <Affliction identifier="he-stuffed" amount="0.1" />
-          <Affliction identifier="he-damageresistancemoloch" amount="5" />
+          <Affliction identifier="he-damageresistance" amount="5" />
           <ReduceAffliction type="damage" amount="0.075" />
           <ReduceAffliction type="hunger" amount="0.1" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
@@ -275,7 +275,7 @@
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <Affliction identifier="he-stuffed" amount="0.1" />
-          <Affliction identifier="he-damageresistancemoloch" amount="5" />
+          <Affliction identifier="he-damageresistance" amount="5" />
           <ReduceAffliction type="damage" amount="0.075" />
         </StatusEffect>
         <!--Play eating sound only if not contained within a waffle cone-->
@@ -393,7 +393,7 @@
         <StatusEffect type="OnSuccess" target="This,UseTarget" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
           <Conditional IsBot="true" />
           <Affliction identifier="he-stuffed" amount="1.43" />
-          <Affliction identifier="he-damageresistancemoloch" amount="71.5" />
+          <Affliction identifier="he-damageresistance" amount="71.5" />
           <ReduceAffliction type="damage" amount="1.0725" />
           <ReduceAffliction type="hunger" amount="1.43" />
           <ReduceAffliction type="thirst" amount="14.3" />
@@ -410,7 +410,7 @@
           <Conditional stun="gt 0" />
           <Conditional IsPlayer="true" />
           <Affliction identifier="he-stuffed" amount="0.1" />
-          <Affliction identifier="he-damageresistancemoloch" amount="5" />
+          <Affliction identifier="he-damageresistance" amount="5" />
           <ReduceAffliction type="damage" amount="0.075" />
           <ReduceAffliction type="hunger" amount="0.1" />
           <ReduceAffliction type="thirst" amount="1" />
@@ -424,7 +424,7 @@
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <Affliction identifier="he-stuffed" amount="0.1" />
-          <Affliction identifier="he-damageresistancemoloch" amount="5" />
+          <Affliction identifier="he-damageresistance" amount="5" />
           <ReduceAffliction type="damage" amount="0.075" />
         </StatusEffect>
         <!--Play eating sound only if not contained within a waffle cone-->
@@ -548,7 +548,7 @@
         <StatusEffect type="OnSuccess" target="This,UseTarget" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
           <Conditional IsBot="true" />
           <Affliction identifier="he-stuffed" amount="1.43" />
-          <Affliction identifier="he-damageresistancemoloch" amount="71.5" />
+          <Affliction identifier="he-damageresistance" amount="71.5" />
           <ReduceAffliction type="damage" amount="1.0725" />
           <ReduceAffliction type="hunger" amount="1.43" />
           <ReduceAffliction type="thirst" amount="5.72" />
@@ -565,7 +565,7 @@
           <Conditional stun="gt 0" />
           <Conditional IsPlayer="true" />
           <Affliction identifier="he-stuffed" amount="0.1" />
-          <Affliction identifier="he-damageresistancemoloch" amount="5" />
+          <Affliction identifier="he-damageresistance" amount="5" />
           <ReduceAffliction type="damage" amount="0.075" />
           <ReduceAffliction type="hunger" amount="0.1" />
           <ReduceAffliction type="thirst" amount="0.4" />
@@ -579,7 +579,7 @@
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <Affliction identifier="he-stuffed" amount="0.1" />
-          <Affliction identifier="he-damageresistancemoloch" amount="5" />
+          <Affliction identifier="he-damageresistance" amount="5" />
           <ReduceAffliction type="damage" amount="0.075" />
         </StatusEffect>
         <!--Play eating sound only if not contained within a waffle cone-->
@@ -989,17 +989,17 @@
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <RequiredItem identifier="he-icecreamballmilky" type="contained" targetslot="0" />
-          <Affliction identifier="he-damageresistancemoloch" amount="3" />
+          <Affliction identifier="he-damageresistance" amount="3" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <RequiredItem identifier="he-icecreamballmilky" type="contained" targetslot="1" />
-          <Affliction identifier="he-damageresistancemoloch" amount="3" />
+          <Affliction identifier="he-damageresistance" amount="3" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <RequiredItem identifier="he-icecreamballmilky" type="contained" targetslot="2" />
-          <Affliction identifier="he-damageresistancemoloch" amount="3" />
+          <Affliction identifier="he-damageresistance" amount="3" />
         </StatusEffect>
         <!--Decrease thirst when eating depending on the type of ice cream contained, only if needs are enabled-->
         <StatusEffect type="OnUse" target="Character" comparison="And">
@@ -1043,21 +1043,21 @@
           <Conditional InWater="false" />
           <RequiredItem tag="icecreamball" type="contained" targetslot="0" />
           <Affliction identifier="he-stuffed" amount="0.1" />
-          <Affliction identifier="he-damageresistancemoloch" amount="5" />
+          <Affliction identifier="he-damageresistance" amount="5" />
           <ReduceAffliction type="damage" amount="0.075" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <RequiredItem tag="icecreamball" type="contained" targetslot="1" />
           <Affliction identifier="he-stuffed" amount="0.1" />
-          <Affliction identifier="he-damageresistancemoloch" amount="5" />
+          <Affliction identifier="he-damageresistance" amount="5" />
           <ReduceAffliction type="damage" amount="0.075" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <RequiredItem tag="icecreamball" type="contained" targetslot="2" />
           <Affliction identifier="he-stuffed" amount="0.1" />
-          <Affliction identifier="he-damageresistancemoloch" amount="5" />
+          <Affliction identifier="he-damageresistance" amount="5" />
           <ReduceAffliction type="damage" amount="0.075" />
         </StatusEffect>
         <!--Apply base effects-->

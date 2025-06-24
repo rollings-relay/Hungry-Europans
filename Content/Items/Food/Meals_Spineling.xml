@@ -29,9 +29,9 @@
         <StatusEffect type="OnSuccess" target="This,UseTarget" duration="5" comparison="And">
           <Conditional InWater="false" />
           <Conditional IsPlayer="false" />
-          <Affliction identifier="he-increasedmeleedamagehammerhead" amount="18.0" />
+          <Affliction identifier="he-increasedmeleedamage" amount="18.0" />
           <Affliction identifier="he-increasedwalkingspeedmudraptor" amount="18.0" />
-          <Affliction identifier="he-increasedswimmingspeedcrawler" amount="18.0" />
+          <Affliction identifier="he-increasedspeed" amount="18.0" />
           <Affliction identifier="he-stuffed" amount="5.4" />
           <ReduceAffliction type="damage" amount="1.0" />
           <ReduceAffliction type="burn" amount="0.5" />
@@ -55,9 +55,9 @@
           <Conditional InWater="false" />
           <Conditional IsPlayer="true" />
           <Conditional stun="gt 0" />
-          <Affliction identifier="he-increasedmeleedamagehammerhead" amount="18.0" />
+          <Affliction identifier="he-increasedmeleedamage" amount="18.0" />
           <Affliction identifier="he-increasedwalkingspeedmudraptor" amount="18.0" />
-          <Affliction identifier="he-increasedswimmingspeedcrawler" amount="18.0" />
+          <Affliction identifier="he-increasedspeed" amount="18.0" />
           <Affliction identifier="he-stuffed" amount="5.4" />
           <ReduceAffliction type="damage" amount="1.0" />
           <ReduceAffliction type="burn" amount="0.5" />
@@ -77,9 +77,9 @@
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
-          <Affliction identifier="he-increasedmeleedamagehammerhead" amount="18.0" />
+          <Affliction identifier="he-increasedmeleedamage" amount="18.0" />
           <Affliction identifier="he-increasedwalkingspeedmudraptor" amount="18.0" />
-          <Affliction identifier="he-increasedswimmingspeedcrawler" amount="18.0" />
+          <Affliction identifier="he-increasedspeed" amount="18.0" />
           <Affliction identifier="he-stuffed" amount="5.4" />
           <ReduceAffliction type="damage" amount="1.0" />
           <ReduceAffliction type="burn" amount="0.5" />
