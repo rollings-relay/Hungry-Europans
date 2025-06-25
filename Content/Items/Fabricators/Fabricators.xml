@@ -528,6 +528,7 @@
       </ItemContainer>
     </Item> 
     
+    <!-- TODO: inventory icon w knife? -->
     <!-- chops ingredients as long as you interact with it  -->
     <Item name="Cutting Board" identifier="he-cuttingboard" tags="cuttingboard,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="" isshootable="true" scale="0.5" damagedbyexplosions="false" GrabWhenSelected="false" canflipx="false">
       <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.45" />
