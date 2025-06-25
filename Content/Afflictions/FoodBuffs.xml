@@ -167,6 +167,8 @@
   //////////////
   ////////////// -->
   
+  <!-- TODO: I merged the damage/speed afflictions but they don't have text yet. 
+    Those afflictions will be replaced with those above -->
   
     <!-- FOOD AFFLICTIONS -->
     <!-- Psilotoad -->
@@ -270,7 +272,7 @@
     </Affliction>
     
     <!-- CRAWLER -->
-    <Affliction name="Lean Meat (Food)"
+    <Affliction name="Increased Speed (Food)"
       identifier="he-increasedspeed"
       type="foodbuff"
       isbuff="true"
@@ -297,7 +299,7 @@
     </Affliction>
     
     <!-- MUDRAPTOR -->
-    <Affliction name="Tough Meat (Food)"
+    <Affliction name="Damage Resistance (Food)"
       identifier="he-damageresistance"
       type="foodbuff"
       isbuff="true"
