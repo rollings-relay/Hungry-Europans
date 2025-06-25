@@ -225,7 +225,7 @@ AllOWEDJOBS include jobs
 	<Conversation line="Hope this rust bucket will make it all the way." speaker="1" allowedjobs="captain" />
 </Conversation>
 
-<Conversation line="This crew isn't half bad after all" speaker="0" flags="goodmood">
+<Conversation line="This crew isn't half-bad after all..." speaker="0" flags="goodmood">
 	<Conversation line="The signs of a well-oiled machine." speaker="1" speakertag="professional" />
 	<Conversation line="Don't get used to it." speaker="1" speakertags="rude" />
 	<Conversation line="Oh, so all of it is bad? Hehe." speaker="1" speakertags="joker" />
@@ -249,7 +249,7 @@ AllOWEDJOBS include jobs
 <Conversation line="I want to dry off at a station asap. Water is cold, damp and gets everywhere..." speaker="0" flags="badmood">
 	<Conversation line="A submariner should not complain about getting wet." speaker="1" speakertag="tough" />
 	<Conversation line="It gets in my head sometimes, and all the voices with it!" speaker="1" speakertag="Crazy" />
-	<Conversation line="Did you know know that when you signed up?" speaker="1" allowedjobs="captain"/>
+	<Conversation line="Did you not know that when you signed up?" speaker="1" allowedjobs="captain"/>
 </Conversation>
 
 <Conversation line="I'm not feeling this place, not feeling this mission, not feeling my toes." speaker="0" flags="badmood">
