@@ -28,6 +28,8 @@
       <Body width="108" height="79" density="15" />
       <Wearable slots="Bag" msg="ItemMsgEquipSelect" canbeselected="false" canbepicked="true" pickkey="Select">
         <sprite name="ToolBeltLunchBox" texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="915,656,108,79" limb="Torso" inherittexturescale="true" origin="0.6,-0.2" />
+        <StatValue stattype="WalkingSpeed" value="-0.1" />
+        <StatValue stattype="SwimmingSpeed" value="-0.2" />
       </Wearable>
       <Holdable canbepicked="true" slots="RightHand+LeftHand" holdpos="0,-70" handle1="-5,0" handle2="10,-20" holdangle="0" msg="ItemMsgPickUpUse" canbeselected="false" pickkey="Use" allowswappingwhenpicked="false" />
       <ItemContainer capacity="6" depth="0.5" slotsperrow="3">
