@@ -6,11 +6,11 @@
     NEW GENERAL FOOD BUFFS (WIP):
     merges effect into these
             
-    - "Calcium Rich"      (blunt/fracture damage reduction, stuffed reduction)   cheese, mudraptor meat
-    - "Lean fats"         (swim speed)                        crawler, spineling
-    - "Protein Rich"      (melee damage,weapons skill)        hammerhead, cheese
-    - "Vitamin Rich"      (O2 capacity, bloodloss reduction)  threshers, salads 
-    - "Neuronutrient Rich"     (skill learning)                    salads
+    - "Calcium Rich"          (blunt+stuffed resistance)         cheese, mudraptor meat
+    - "Lean fats"            (swim speed)                        crawler, spineling
+    - "Protein Rich"         (melee damage,weapons skill)        hammerhead, cheese
+    - "Vitamin Rich"         (O2 capacity, bloodloss reduction)  threshers, salads 
+    - "Neuronutrient Rich"   (skill learning, fatigue res)       salads
        
     --> 
   
@@ -32,13 +32,21 @@
       <Effect minstrength="0" maxstrength="100" strengthchange="-1">      
       </Effect>
       <Effect minstrength="100" maxstrength="1200" strengthchange="-1"
-        resistancefor="blunttrauma,he-stuffed"
+        resistancefor="blunttrauma"
         minresistance="0.0"
-        maxresistance="0.25" />
+        maxresistance="0.25">
+        <StatusEffect target="Character" >
+          <ReduceAffliction identifier="he-stuffed" strength="0.025" />
+        </StatusEffect>
+      </Effect>
       <Effect minstrength="1200" maxstrength="1800" strengthchange="-1"
-        resistancefor="blunttrauma,he-stuffed"
+        resistancefor="blunttrauma"
         minresistance="0.25"
-        maxresistance="0.25" />
+        maxresistance="0.25" >
+        <StatusEffect target="Character" >
+          <ReduceAffliction identifier="he-stuffed" strength="0.05" />
+        </StatusEffect>
+      </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
     </Affliction>
     
