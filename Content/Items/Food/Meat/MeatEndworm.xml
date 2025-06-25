@@ -3,7 +3,7 @@
   <Items>
     <!--endworm-->
     <Item name="Endworm Meat Chunk" identifier="he-endwormmeatchunk" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,meatchunk,ingredient,canspoil,petfood1,petfood2,petfood3,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
+      <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="333,66,179,85" depth="0.6" origin="0.5,0.5" />
@@ -59,7 +59,7 @@
     </Item>
 
     <Item name="Raw Endworm Meat" identifier="he-rawendwormmeat" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,rawmeatpiece,ingredient,canspoil,petfood1,petfood2,petfood3,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
+      <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="280,266,86,65" depth="0.6" origin="0.5,0.5" />
@@ -112,7 +112,7 @@
     </Item>
 
     <Item name="Raw Endworm Sausage" identifier="he-rawendwormsausage" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,allowongrill,canspoil,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
+      <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,444,67,14" depth="0.6" origin="0.5,0.5" />

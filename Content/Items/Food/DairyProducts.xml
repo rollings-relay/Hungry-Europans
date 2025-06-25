@@ -634,7 +634,7 @@
     </Item>
 
     <Item name="Moloch Cheese" identifier="he-molochcheese" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Cheese made from moloch milk. Can be cut into 18 cheese slices." Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
+      <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -774,7 +774,7 @@
     </Item>
 
     <Item name="Slice of Moloch Cheese" identifier="he-molochcheeseslice" category="Misc" maxstacksize="18" cargocontaineridentifier="metalcrate" description="A slice of moloch cheese." Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
+      <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -906,7 +906,7 @@
 
     <!--WAFFLES-->
     <Item name="Waffle Cone" identifier="he-wafflecone" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A cone shaped waffle for ice cream. Contained ice cream will melt if not contained within a refrigerated container." Tags="smallitem,fooditem,wafflecone,petfood1,petfood2,petfood3" showcontentsintooltip="true" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
+      <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>

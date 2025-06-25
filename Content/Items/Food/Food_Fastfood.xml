@@ -4,7 +4,7 @@
   
     <!-- Nuggets can't be poisoned -->
     <Item hideinmenus="false" name="Nugget" identifier="he-cookednugget" health="3" category="Misc" subcategory="Food" maxstacksize="20" maxstacksizecharacterinventory="20" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,allowinfryer,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
+      <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="kitchen" secondary="table,crewcab"/>
@@ -52,7 +52,7 @@
 
     <!-- PROTOTYPING SIMPLER FOOD. TODO: COPY THIS AND REPLACE ALL FOODS -->
     <Item hideinmenus="false" name="Burger" identifier="he-burger" variantof="he-poisoneffectpreset_regular" health="25" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
+      <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
@@ -118,7 +118,7 @@
     </Item>
 
     <Item hideinmenus="false" name="Hotdog" identifier="he-hotdog" variantof="he-poisoneffectpreset_regular" health="20" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.4" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
+      <PreferredContainer secondary="abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="True"/>
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
@@ -171,7 +171,7 @@
     
     <!-- TODO: sprite -->
     <Item name="Raw Fries" identifier="he-rawfries" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="Two slices of bread. Great for making sandwiches!" Tags="smallitem,fooditem,fingerfood,allowinfryer,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
+      <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="kitchen" secondary="table,crewcab"/>
@@ -208,7 +208,7 @@
     
     <!-- PROTOTYPING SIMPLER FOOD. TODO: COPY THIS AND REPLACE ALL FOODS -->
     <Item name="Fries" identifier="he-fries" health="25" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,allowinfryer,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
+      <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="kitchen" secondary="table,crewcab"/>

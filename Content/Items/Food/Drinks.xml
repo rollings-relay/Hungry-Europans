@@ -3634,7 +3634,7 @@
     <!-- TEA -->
     <!-- TEA -->
     <Item name="Cup of Bubbleberry Tea" identifier="he-cupbubbleberrytea" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="It's said to be very soothing on your mind, helping you calm down and relax. Apparently also very effective to get alcohol out of your system." Tags="smallitem,drinkitem,teacup,cup" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
+      <PreferredContainer secondary="abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -3900,7 +3900,7 @@
     </Item>
     
     <Item name="Cup of Popnut Tea" identifier="he-cuppopnuttea" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,teacup,cup" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
+      <PreferredContainer secondary="abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -4151,7 +4151,7 @@
     <!-- COFFEE -->
     <!-- COFFEE -->
     <Item name="Cup of Coffee" identifier="he-cupcoffee" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeecup,cupofcoffee,cup" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
+      <PreferredContainer secondary="abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -4907,7 +4907,7 @@
     <!-- HOT CHOCOLATE -->
     <!-- HOT CHOCOLATE -->
     <Item name="Cup of Hot Chocolate" identifier="he-cuphotchocolate" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeecup,cupofchocolate,cup" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
+      <PreferredContainer secondary="abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -5105,7 +5105,7 @@
     </Item>
     
     <Item name="Cup of Hot Chocolate" identifier="he-mughotchocolate" category="Misc" subcategory="Drinks" maxstacksize="1" health="167" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeemug,coffeecup,mug" useinhealthinterface="true" scale="0.4" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
+      <PreferredContainer secondary="abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -5297,7 +5297,7 @@
     </Item>
 
     <Item name="Moloch Milk" identifier="he-milk" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="A bottle of Moloch Milk. Tastes a bit funny. Don't ask how they get milk from a Moloch! May help a bit when you're shit-faced." Tags="smallitem,drinkitem,bottle,milk" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
+      <PreferredContainer secondary="abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
