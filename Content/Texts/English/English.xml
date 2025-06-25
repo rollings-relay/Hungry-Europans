@@ -1085,6 +1085,20 @@ SEARCH FOR THE FOLLOWING:                                                       
 <afflictionname.he-neuronutrientrich>Neuronutrient Rich Diet</afflictionname.he-neuronutrientrich>
 <afflictiondescription.he-neuronutrientrich>Deoxidizes the brain. Learn faster, improves the mood and fatigue. </afflictiondescription.he-neuronutrientrich>
  
+<entityname.money_5mk>5mk</entityname.money_5mk>
+<entitydescription.money_5mk>Adds 5mk to your bank account.</entitydescription.money_5mk>
+<entityname.money_25mk>25mk</entityname.money_25mk>
+<entitydescription.money_25mk>Adds 25mk to your bank account.</entitydescription.money_25mk>
+<entityname.money_50mk>50mk</entityname.money_50mk>
+<entitydescription.money_50mk>Adds 50mk to your bank account.</entitydescription.money_50mk>
+<entityname.money_75mk>75mk</entityname.money_75mk>
+<entitydescription.money_75mk>Adds 75mk to your bank account.</entitydescription.money_75mk>
+
+
+<entityname.he-spoon>Spoon</entityname.he-spoon>
+<entitydescription.he-spoon>For scooping things.</entitydescription.he-spoon>
+<entityname.he-fork>Fork</entityname.he-fork>
+<entitydescription.he-fork>It's like a little trident.</entitydescription.he-fork>
  
  
 <!-- HUBERT ADDITIONS ABOVE THIS --> 
