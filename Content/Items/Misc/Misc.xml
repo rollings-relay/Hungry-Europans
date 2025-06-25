@@ -1365,7 +1365,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/InventoryIcons.Png" depth="0.55" sourcerect="166,390,143,122" />
       <Body radius="2" density="10" />
       <Fabricate suitablefabricators="cafeteria" requiredtime="5" requiredmoney="0" fabricationlimitmin="99999" fabricationlimitmax="99999" displayname="returnitem">
-        <RequiredItem tag="platebowlreturn1" amount="1" mincondition="0.0" maxcondition="1.0" UseCondition="false" />
+        <RequiredItem tag="platebowlreturn" amount="1" mincondition="0.0" maxcondition="1.0" UseCondition="false" />
       </Fabricate>
       <Holdable handle1="0,0" slots="RightHand,LeftHand,Any" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnContained" target="Character" eventtargettag="moneyrecipient" disabledeltatime="true" setvalue="true" oneshot="true">
@@ -1383,7 +1383,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/InventoryIcons.Png" depth="0.55" sourcerect="166,390,143,122" />
       <Body radius="2" density="10" />
       <Fabricate suitablefabricators="cafeteria" requiredtime="5" requiredmoney="0" fabricationlimitmin="99999" fabricationlimitmax="99999" displayname="returnitem">
-        <RequiredItem tag="platebowlreturn2" amount="1" mincondition="0.0" maxcondition="1.0" UseCondition="false" />
+        <RequiredItem tag="platebowlreturn" amount="2" mincondition="0.0" maxcondition="1.0" UseCondition="false" />
       </Fabricate>
       <Holdable handle1="0,0" slots="RightHand,LeftHand,Any" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnContained" target="Character" eventtargettag="moneyrecipient" disabledeltatime="true" setvalue="true" oneshot="true">
@@ -1401,7 +1401,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/InventoryIcons.Png" depth="0.55" sourcerect="166,390,143,122" />
       <Body radius="2" density="10" />
       <Fabricate suitablefabricators="cafeteria" requiredtime="5" requiredmoney="0" fabricationlimitmin="99999" fabricationlimitmax="99999" displayname="returnitem">
-        <RequiredItem tag="platebowlreturn3" amount="1" mincondition="0.0" maxcondition="1.0" UseCondition="false" />
+        <RequiredItem tag="platebowlreturn" amount="3" mincondition="0.0" maxcondition="1.0" UseCondition="false" />
       </Fabricate>
       <Holdable handle1="0,0" slots="RightHand,LeftHand,Any" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnContained" target="Character" eventtargettag="moneyrecipient" disabledeltatime="true" setvalue="true" oneshot="true">
@@ -1419,7 +1419,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/InventoryIcons.Png" depth="0.55" sourcerect="166,390,143,122" />
       <Body radius="2" density="10" />
       <Fabricate suitablefabricators="cafeteria" requiredtime="5" requiredmoney="0" fabricationlimitmin="99999" fabricationlimitmax="99999" displayname="returnitem">
-        <RequiredItem tag="platebowlreturn4" amount="1" mincondition="0.0" maxcondition="1.0" UseCondition="false" />
+        <RequiredItem tag="platebowlreturn" amount="4" mincondition="0.0" maxcondition="1.0" UseCondition="false" />
       </Fabricate>
       <Holdable handle1="0,0" slots="RightHand,LeftHand,Any" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnContained" target="Character" eventtargettag="moneyrecipient" disabledeltatime="true" setvalue="true" oneshot="true">
