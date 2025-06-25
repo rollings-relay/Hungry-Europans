@@ -500,7 +500,7 @@
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/SinkDrain.ogg" loop="false" range="500" volume="2" selectionmode="All" />
         </StatusEffect>
       </ItemComponent>
-      <Holdable slots="RightHand+LeftHand" canbeselected="true" selectkey="Select" canbepicked="true" pickkey="Action" PickingTime="5" attachable="true" holdpos="70,-40" handle1="-60,30" handle2="-20,50">
+      <Holdable slots="RightHand+LeftHand" canbeselected="true" selectkey="Select" canbepicked="true" pickkey="Action" PickingTime="5" attachable="true" holdpos="70,-30" handle1="-60,-40" handle2="-20,-60">
         <RequiredItem items="wrench" type="Equipped" />
         <!-- slow down the character carrying the device -->
         <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.3" PropulsionSpeedMultiplier="0.3" setvalue="true" duration="0.1" />
