@@ -60,7 +60,7 @@
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,485,47,27" depth="0.6" maxcondition="99.99" />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="96,486,43,26" depth="0.6" maxcondition="50" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="96,486,43,26" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="45" fabricationlimitmin="0" fabricationlimitmax="10" displayname="crawlerfooditem" />
+      <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="45" fabricationlimitmin="0" fabricationlimitmax="10" />
       <Fabricate suitablefabricators="cuttingboard" requiredtime="15" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="cooking" level="20" />
         <RequiredItem identifier="he-meatpatty" amount="1" />
@@ -129,7 +129,7 @@
         <RequiredItem identifier="he-hotdogbun" amount="1"/>
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
-      <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="41" fabricationlimitmin="0" fabricationlimitmax="10" displayname="crawlerfooditem" />
+      <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="41" fabricationlimitmin="0" fabricationlimitmax="10" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="139,489,67,23" depth="0.6" origin="0.5,0.5" />
       <Body width="67" radius="11" density="15" />
       <SuitableTreatment type="hunger" suitability="60" />
@@ -300,7 +300,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,274,41,10" depth="0.6" origin="0.5,0.5" />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,274,21,10" depth="0.6" maxcondition="50" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/InventoryIcons.png" sourcerect="313,0,52,61" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="35" fabricationlimitmin="0" fabricationlimitmax="10" displayname="pizzadisplayname" />
+      <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="35" fabricationlimitmin="0" fabricationlimitmax="10" />
       <Fabricate suitablefabricators="cuttingboard" requiredtime="3" requiresrecipe="false" amount="1">
         <RequiredItem identifier="he-pizza" amount="1" MinCondition="0.125"/>
       </Fabricate>
