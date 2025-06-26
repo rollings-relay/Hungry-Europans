@@ -123,7 +123,7 @@
         minresistance="0.0"
         maxresistance="0.25" />
       <Effect minstrength="1200" maxstrength="1800" strengthchange="-1"
-        resistancefor="oxygenlow,he-bloodloss"
+        resistancefor="oxygenlow,bloodloss"
         minresistance="0.25"
         maxresistance="0.25" />
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
