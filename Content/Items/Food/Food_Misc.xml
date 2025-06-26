@@ -546,10 +546,11 @@
           <ReduceAffliction type="damage" amount="0.2" />
           <ReduceAffliction type="burn" amount="0.2" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurping.ogg" loop="true" range="200" volume="4.0" frequencymultiplier="0.5" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" range="200" volume="4.0" frequencymultiplier="1" />
         </StatusEffect>
       </Holdable>
       <ItemContainer characterusable="false" canbeselected="false" capacity="1" maxstacksize="1" hideitems="true" drawinventory="true" allowdraganddrop="true" allowswappingcontaineditems="false" autofill="false" ShowConditionInContainedStateIndicator="false" ShowContainedStateIndicator="false" removecontaineditemsondeconstruct="true">
