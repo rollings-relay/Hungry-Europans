@@ -94,350 +94,7 @@
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
     </Item>
-    
-    <!-- MRE -->
-    <Item name="MRE - Crawler Ration" identifier="he-mrecrawlerration" health="20" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
-      <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,165,28,41" depth="0.6" origin="0.5,0.5" />
-      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="77,168,31,38" depth="0.6" maxcondition="99" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,165,28,41" origin="0.5,0.5" />
-      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,165,28,41" depth="0.525" origin="0.5,0.75"  />
-      <Deconstruct time="1" requireddeconstructor="deconstructor"/>
-      <Body width="28" height="39" density="10.3" />
-      <SuitableTreatment type="hunger" suitability="100" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="32,28" holdpos="30,-15" holdangle="0" aimangle="120" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
-        <!--////////// BOT EATING \\\\\\\\\\-->
-        <!-- Bots "eat" by holding the food in their hands -->
-        <StatusEffect type="OnActive" target="This,Character" duration="1" condition="-1" stackable="false" comparison="And">
-          <Conditional IsPlayer="false" targetcontainer="true" />
-          <Conditional IsHuman="true" targetcontainer="true" />
-          <Affliction identifier="he-increasedspeed" amount="12.0" />
-          <Affliction identifier="he-stuffed" amount="1.5" />
-          <ReduceAffliction type="hunger" amount="1.5" />
-          <ReduceAffliction type="damage" amount="0.2" />
-          <ReduceAffliction type="burn" amount="0.2" />
-          <Affliction identifier="spill" amount="1000" probability="0.0005" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
-        </StatusEffect>
-        
-        <!--////////// REGULAR EATING \\\\\\\\\\-->
-        <StatusEffect type="OnUse" target="This" Condition="-1" comparison="And">
-          <Conditional InWater="false" />
-          <Conditional ConditionPercentage="lt 100" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And">
-          <Conditional InWater="false" />
-          <Conditional ConditionPercentage="lt 100" />
-          <Affliction identifier="he-increasedspeed" amount="12.0" />
-          <Affliction identifier="he-stuffed" amount="1.5" />
-          <ReduceAffliction type="hunger" amount="1.5" />
-          <ReduceAffliction type="damage" amount="0.2" />
-          <ReduceAffliction type="burn" amount="0.2" />
-          <Affliction identifier="spill" amount="1000" probability="0.0005" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
-        </StatusEffect>
-        <StatusEffect type="OnBroken" target="This">
-          <Remove />
-        </StatusEffect>
-      </Holdable>
-      <ItemContainer characterusable="false" canbeselected="false" capacity="1" maxstacksize="1" hideitems="true" drawinventory="true" allowdraganddrop="true" allowswappingcontaineditems="false" autofill="false" ShowConditionInContainedStateIndicator="false" ShowContainedStateIndicator="false" removecontaineditemsondeconstruct="true">
-        <SlotIcon slotindex="0" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="577,0,85,85" origin="0.5,0.5" />
-        <Containable identifiers="he-water,he-waterrum,he-waterwhiskey,he-waterhalucinova,he-waterbeer">
-          <StatusEffect type="OnInserted" target="This" capacity="0" condition="19.9" drawinventory="false" allowaccess="false" setvalue="true" disabledeltatime="true" interval="1">
-            <Conditional ConditionPercentage="eq 100" />
-            <RequiredItem identifier="he-water" type="Contained" />
-            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
-            <SpawnItem identifier="he-emptybottle" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-          </StatusEffect>
-          <StatusEffect type="OnInserted" target="This" capacity="0" condition="19.9" drawinventory="false" allowaccess="false" setvalue="true" disabledeltatime="true" interval="1">
-            <Conditional ConditionPercentage="eq 100" />
-            <RequiredItem identifier="he-waterrum" type="Contained" />
-            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
-            <SpawnItem identifier="he-emptybottlerum" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-          </StatusEffect>
-          <StatusEffect type="OnInserted" target="This" capacity="0" condition="19.9" drawinventory="false" allowaccess="false" setvalue="true" disabledeltatime="true" interval="1">
-            <Conditional ConditionPercentage="eq 100" />
-            <RequiredItem identifier="he-waterwhiskey" type="Contained" />
-            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
-            <SpawnItem identifier="he-emptybottlewhiskey" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-          </StatusEffect>
-          <StatusEffect type="OnInserted" target="This" capacity="0" condition="19.9" drawinventory="false" allowaccess="false" setvalue="true" disabledeltatime="true" interval="1">
-            <Conditional ConditionPercentage="eq 100" />
-            <RequiredItem identifier="he-waterhalucinova" type="Contained" />
-            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
-            <SpawnItem identifier="he-emptybottlehalucinova" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-          </StatusEffect>
-          <StatusEffect type="OnInserted" target="This" capacity="0" condition="19.9" drawinventory="false" allowaccess="false" setvalue="true" disabledeltatime="true" interval="1">
-            <Conditional ConditionPercentage="eq 100" />
-            <RequiredItem identifier="he-waterbeer" type="Contained" />
-            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
-            <SpawnItem identifier="he-emptybottlebeer" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-          </StatusEffect>
-          <StatusEffect type="OnInserted" target="Contained" setvalue="true" disabledeltatime="true" interval="1">
-            <Remove />
-          </StatusEffect>
-        </Containable>
-      </ItemContainer>
-      <AiTarget sightrange="1000" static="true" />
-    </Item>
-    
-    <Item name="MRE - Mudraptor Ration" identifier="he-mremudraptorration" health="20" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
-      <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,165,28,41" depth="0.6" origin="0.5,0.5" />
-      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="77,168,31,38" depth="0.6" maxcondition="99" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,165,28,41" origin="0.5,0.5" />
-      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,165,28,41" depth="0.525" origin="0.5,0.75"  />
-      <Deconstruct time="1" requireddeconstructor="deconstructor"/>
-      <Body width="28" height="39" density="10.3" />
-      <SuitableTreatment type="hunger" suitability="100" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="32,28" holdpos="30,-15" holdangle="0" aimangle="120" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
-        <!--////////// BOT EATING \\\\\\\\\\-->
-        <!-- Bots "eat" by holding the food in their hands -->
-        <StatusEffect type="OnActive" target="This,Character" duration="1" condition="-1" stackable="false" comparison="And">
-          <Conditional IsPlayer="false" targetcontainer="true" />
-          <Conditional IsHuman="true" targetcontainer="true" />
-          <Affliction identifier="he-damageresistance" amount="12.0" />
-          <Affliction identifier="he-increasedspeed" amount="12.0" />
-          <Affliction identifier="he-stuffed" amount="1.75" />
-          <ReduceAffliction type="hunger" amount="1.75" />
-          <ReduceAffliction type="damage" amount="0.2" />
-          <ReduceAffliction type="burn" amount="0.2" />
-          <Affliction identifier="spill" amount="1000" probability="0.0005" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
-        </StatusEffect>
-        
-        <!--////////// REGULAR EATING \\\\\\\\\\-->
-        <StatusEffect type="OnUse" target="This" Condition="-1" comparison="And">
-          <Conditional InWater="false" />
-          <Conditional ConditionPercentage="lt 100" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And">
-          <Conditional InWater="false" />
-          <Conditional ConditionPercentage="lt 100" />
-          <Affliction identifier="he-damageresistance" amount="12.0" />
-          <Affliction identifier="he-increasedspeed" amount="12.0" />
-          <Affliction identifier="he-stuffed" amount="1.75" />
-          <ReduceAffliction type="hunger" amount="1.75" />
-          <ReduceAffliction type="damage" amount="0.2" />
-          <ReduceAffliction type="burn" amount="0.2" />
-          <Affliction identifier="spill" amount="1000" probability="0.0005" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
-        </StatusEffect>
-        <StatusEffect type="OnBroken" target="This">
-          <Remove />
-        </StatusEffect>
-      </Holdable>
-      <ItemContainer characterusable="false" canbeselected="false" capacity="1" maxstacksize="1" hideitems="true" drawinventory="true" allowdraganddrop="true" allowswappingcontaineditems="false" autofill="false" ShowConditionInContainedStateIndicator="false" ShowContainedStateIndicator="false" removecontaineditemsondeconstruct="true">
-        <SlotIcon slotindex="0" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="577,0,85,85" origin="0.5,0.5" />
-        <Containable identifiers="he-water,he-waterrum,he-waterwhiskey,he-waterhalucinova,he-waterbeer">
-          <StatusEffect type="OnInserted" target="This" capacity="0" condition="19.9" drawinventory="false" allowaccess="false" setvalue="true" disabledeltatime="true" interval="1">
-            <Conditional ConditionPercentage="eq 100" />
-            <RequiredItem identifier="he-water" type="Contained" />
-            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
-            <SpawnItem identifier="he-emptybottle" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-          </StatusEffect>
-          <StatusEffect type="OnInserted" target="This" capacity="0" condition="19.9" drawinventory="false" allowaccess="false" setvalue="true" disabledeltatime="true" interval="1">
-            <Conditional ConditionPercentage="eq 100" />
-            <RequiredItem identifier="he-waterrum" type="Contained" />
-            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
-            <SpawnItem identifier="he-emptybottlerum" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-          </StatusEffect>
-          <StatusEffect type="OnInserted" target="This" capacity="0" condition="19.9" drawinventory="false" allowaccess="false" setvalue="true" disabledeltatime="true" interval="1">
-            <Conditional ConditionPercentage="eq 100" />
-            <RequiredItem identifier="he-waterwhiskey" type="Contained" />
-            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
-            <SpawnItem identifier="he-emptybottlewhiskey" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-          </StatusEffect>
-          <StatusEffect type="OnInserted" target="This" capacity="0" condition="19.9" drawinventory="false" allowaccess="false" setvalue="true" disabledeltatime="true" interval="1">
-            <Conditional ConditionPercentage="eq 100" />
-            <RequiredItem identifier="he-waterhalucinova" type="Contained" />
-            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
-            <SpawnItem identifier="he-emptybottlehalucinova" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-          </StatusEffect>
-          <StatusEffect type="OnInserted" target="This" capacity="0" condition="19.9" drawinventory="false" allowaccess="false" setvalue="true" disabledeltatime="true" interval="1">
-            <Conditional ConditionPercentage="eq 100" />
-            <RequiredItem identifier="he-waterbeer" type="Contained" />
-            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
-            <SpawnItem identifier="he-emptybottlebeer" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-          </StatusEffect>
-          <StatusEffect type="OnInserted" target="Contained" setvalue="true" disabledeltatime="true" interval="1">
-            <Remove />
-          </StatusEffect>
-        </Containable>
-      </ItemContainer>
-      <AiTarget sightrange="1000" static="true" />
-    </Item>
-    
-    <Item name="MRE - Hammerhead Ration" identifier="he-mrehammerheadration" health="20" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
-      <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,165,28,41" depth="0.6" origin="0.5,0.5" />
-      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="77,168,31,38" depth="0.6" maxcondition="99" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,165,28,41" origin="0.5,0.5" />
-      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,165,28,41" depth="0.525" origin="0.5,0.75"  />
-      <Deconstruct time="1" requireddeconstructor="deconstructor"/>
-      <Body width="28" height="39" density="10.3" />
-      <SuitableTreatment type="hunger" suitability="100" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="32,28" holdpos="30,-15" holdangle="0" aimangle="120" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
-        <!--////////// BOT EATING \\\\\\\\\\-->
-        <!-- Bots "eat" by holding the food in their hands -->
-        <StatusEffect type="OnActive" target="This,Character" duration="1" condition="-1" stackable="false" comparison="And">
-          <Conditional IsPlayer="false" targetcontainer="true" />
-          <Conditional IsHuman="true" targetcontainer="true" />
-          <Affliction identifier="he-increasedmeleedamage" amount="12.0" />
-          <Affliction identifier="he-stuffed" amount="2.0" />
-          <ReduceAffliction type="hunger" amount="2.0" />
-          <ReduceAffliction type="damage" amount="0.2" />
-          <ReduceAffliction type="burn" amount="0.2" />
-          <Affliction identifier="spill" amount="1000" probability="0.0005" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
-        </StatusEffect>
-        
-        <!--////////// REGULAR EATING \\\\\\\\\\-->
-        <StatusEffect type="OnUse" target="This" Condition="-1" comparison="And">
-          <Conditional InWater="false" />
-          <Conditional ConditionPercentage="lt 100" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And">
-          <Conditional InWater="false" />
-          <Conditional ConditionPercentage="lt 100" />
-          <Affliction identifier="he-increasedmeleedamage" amount="12.0" />
-          <Affliction identifier="he-stuffed" amount="2.0" />
-          <ReduceAffliction type="hunger" amount="2.0" />
-          <ReduceAffliction type="damage" amount="0.2" />
-          <ReduceAffliction type="burn" amount="0.2" />
-          <Affliction identifier="spill" amount="1000" probability="0.0005" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
-        </StatusEffect>
-        <StatusEffect type="OnBroken" target="This">
-          <Remove />
-        </StatusEffect>
-      </Holdable>
-      <ItemContainer characterusable="false" canbeselected="false" capacity="1" maxstacksize="1" hideitems="true" drawinventory="true" allowdraganddrop="true" allowswappingcontaineditems="false" autofill="false" ShowConditionInContainedStateIndicator="false" ShowContainedStateIndicator="false" removecontaineditemsondeconstruct="true">
-        <SlotIcon slotindex="0" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="577,0,85,85" origin="0.5,0.5" />
-        <Containable identifiers="he-water,he-waterrum,he-waterwhiskey,he-waterhalucinova,he-waterbeer">
-          <StatusEffect type="OnInserted" target="This" capacity="0" condition="19.9" drawinventory="false" allowaccess="false" setvalue="true" disabledeltatime="true" interval="1">
-            <Conditional ConditionPercentage="eq 100" />
-            <RequiredItem identifier="he-water" type="Contained" />
-            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
-            <SpawnItem identifier="he-emptybottle" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-          </StatusEffect>
-          <StatusEffect type="OnInserted" target="This" capacity="0" condition="19.9" drawinventory="false" allowaccess="false" setvalue="true" disabledeltatime="true" interval="1">
-            <Conditional ConditionPercentage="eq 100" />
-            <RequiredItem identifier="he-waterrum" type="Contained" />
-            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
-            <SpawnItem identifier="he-emptybottlerum" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-          </StatusEffect>
-          <StatusEffect type="OnInserted" target="This" capacity="0" condition="19.9" drawinventory="false" allowaccess="false" setvalue="true" disabledeltatime="true" interval="1">
-            <Conditional ConditionPercentage="eq 100" />
-            <RequiredItem identifier="he-waterwhiskey" type="Contained" />
-            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
-            <SpawnItem identifier="he-emptybottlewhiskey" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-          </StatusEffect>
-          <StatusEffect type="OnInserted" target="This" capacity="0" condition="19.9" drawinventory="false" allowaccess="false" setvalue="true" disabledeltatime="true" interval="1">
-            <Conditional ConditionPercentage="eq 100" />
-            <RequiredItem identifier="he-waterhalucinova" type="Contained" />
-            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
-            <SpawnItem identifier="he-emptybottlehalucinova" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-          </StatusEffect>
-          <StatusEffect type="OnInserted" target="This" capacity="0" condition="19.9" drawinventory="false" allowaccess="false" setvalue="true" disabledeltatime="true" interval="1">
-            <Conditional ConditionPercentage="eq 100" />
-            <RequiredItem identifier="he-waterbeer" type="Contained" />
-            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
-            <SpawnItem identifier="he-emptybottlebeer" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-          </StatusEffect>
-          <StatusEffect type="OnInserted" target="Contained" setvalue="true" disabledeltatime="true" interval="1">
-            <Remove />
-          </StatusEffect>
-        </Containable>
-      </ItemContainer>
-      <AiTarget sightrange="1000" static="true" />
-    </Item>
-    
-    <Item name="MRE - Thresher Ration" identifier="he-mrethresherration" health="20" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
-      <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,165,28,41" depth="0.6" origin="0.5,0.5" />
-      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="77,168,31,38" depth="0.6" maxcondition="99" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,165,28,41" origin="0.5,0.5" />
-      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,165,28,41" depth="0.525" origin="0.5,0.75"  />
-      <Deconstruct time="1" requireddeconstructor="deconstructor"/>
-      <Body width="28" height="39" density="10.3" />
-      <SuitableTreatment type="hunger" suitability="100" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="32,28" holdpos="30,-15" holdangle="0" aimangle="120" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
-        <!--////////// BOT EATING \\\\\\\\\\-->
-        <!-- Bots "eat" by holding the food in their hands -->
-        <StatusEffect type="OnActive" target="This,Character" duration="1" condition="-1" stackable="false" comparison="And">
-          <Conditional IsPlayer="false" targetcontainer="true" />
-          <Conditional IsHuman="true" targetcontainer="true" />
-          <Affliction identifier="he-decreasedoxygenconsumption" amount="12.0" />
-          <Affliction identifier="he-stuffed" amount="1.75" />
-          <ReduceAffliction type="hunger" amount="1.75" />
-          <ReduceAffliction type="damage" amount="0.2" />
-          <ReduceAffliction type="burn" amount="0.2" />
-          <Affliction identifier="spill" amount="1000" probability="0.0005" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
-        </StatusEffect>
-        
-        <!--////////// REGULAR EATING \\\\\\\\\\-->
-        <StatusEffect type="OnUse" target="This" Condition="-1" comparison="And">
-          <Conditional InWater="false" />
-          <Conditional ConditionPercentage="lt 100" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And">
-          <Conditional InWater="false" />
-          <Conditional ConditionPercentage="lt 100" />
-          <Affliction identifier="he-decreasedoxygenconsumption" amount="12.0" />
-          <Affliction identifier="he-stuffed" amount="1.75" />
-          <ReduceAffliction type="hunger" amount="1.75" />
-          <ReduceAffliction type="damage" amount="0.2" />
-          <ReduceAffliction type="burn" amount="0.2" />
-          <Affliction identifier="spill" amount="1000" probability="0.0005" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
-        </StatusEffect>
-        <StatusEffect type="OnBroken" target="This">
-          <Remove />
-        </StatusEffect>
-      </Holdable>
-      <ItemContainer characterusable="false" canbeselected="false" capacity="1" maxstacksize="1" hideitems="true" drawinventory="true" allowdraganddrop="true" allowswappingcontaineditems="false" autofill="false" ShowConditionInContainedStateIndicator="false" ShowContainedStateIndicator="false" removecontaineditemsondeconstruct="true">
-        <SlotIcon slotindex="0" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="577,0,85,85" origin="0.5,0.5" />
-        <Containable identifiers="he-water,he-waterrum,he-waterwhiskey,he-waterhalucinova,he-waterbeer">
-          <StatusEffect type="OnInserted" target="This" capacity="0" condition="19.9" drawinventory="false" allowaccess="false" setvalue="true" disabledeltatime="true" interval="1">
-            <Conditional ConditionPercentage="eq 100" />
-            <RequiredItem identifier="he-water" type="Contained" />
-            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
-            <SpawnItem identifier="he-emptybottle" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-          </StatusEffect>
-          <StatusEffect type="OnInserted" target="This" capacity="0" condition="19.9" drawinventory="false" allowaccess="false" setvalue="true" disabledeltatime="true" interval="1">
-            <Conditional ConditionPercentage="eq 100" />
-            <RequiredItem identifier="he-waterrum" type="Contained" />
-            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
-            <SpawnItem identifier="he-emptybottlerum" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-          </StatusEffect>
-          <StatusEffect type="OnInserted" target="This" capacity="0" condition="19.9" drawinventory="false" allowaccess="false" setvalue="true" disabledeltatime="true" interval="1">
-            <Conditional ConditionPercentage="eq 100" />
-            <RequiredItem identifier="he-waterwhiskey" type="Contained" />
-            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
-            <SpawnItem identifier="he-emptybottlewhiskey" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-          </StatusEffect>
-          <StatusEffect type="OnInserted" target="This" capacity="0" condition="19.9" drawinventory="false" allowaccess="false" setvalue="true" disabledeltatime="true" interval="1">
-            <Conditional ConditionPercentage="eq 100" />
-            <RequiredItem identifier="he-waterhalucinova" type="Contained" />
-            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
-            <SpawnItem identifier="he-emptybottlehalucinova" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-          </StatusEffect>
-          <StatusEffect type="OnInserted" target="This" capacity="0" condition="19.9" drawinventory="false" allowaccess="false" setvalue="true" disabledeltatime="true" interval="1">
-            <Conditional ConditionPercentage="eq 100" />
-            <RequiredItem identifier="he-waterbeer" type="Contained" />
-            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
-            <SpawnItem identifier="he-emptybottlebeer" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-          </StatusEffect>
-          <StatusEffect type="OnInserted" target="Contained" setvalue="true" disabledeltatime="true" interval="1">
-            <Remove />
-          </StatusEffect>
-        </Containable>
-      </ItemContainer>
-      <AiTarget sightrange="1000" static="true" />
-    </Item>
-    
+
     <!-- CHIPS -->
     <Item name="Bag of Pomegrenade Chips" identifier="he-chips1" health="15" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="Dried pomegrenade chips. A popular little snack to watch the annual 'DUNWICE FACE-OFF' to." Tags="smallitem,fooditem" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.04" />
@@ -806,7 +463,7 @@
     </Item>
 
     <!-- MRE -->
-    <Item name="MRE - Crawler" identifier="he-mrecrawler" category="Misc" subcategory="Food" maxstacksize="2" maxstacksizecharacterinventory="2" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,ingredient,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" impacttolerance="5.5" isshootable="true" requireaimtouse="true" canflipx="false">
+    <Item name="MRE - Packet" identifier="he-mrepacket" category="Misc" subcategory="Food" maxstacksize="2" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" impacttolerance="5.5" canflipx="false">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab,abandonedcrewcab" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" spawnprobability="0.04" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -823,280 +480,97 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,139,47,67" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,139,47,67" depth="0.525" origin="0.5,0.85"  />
       <Body width="41" height="67" density="11" />
-      <Holdable canbepicked="true" characterusable="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" swingwhenusing="true" msg="ItemMsgPickUpSelect">
-        <!-- simulate throwing actions -->
-        <StatusEffect type="OnSecondaryUse" target="This" aimpos="50,10" setvalue="true">
-          <Conditional targetitemcomponent="RangedWeapon" reloadtimer="gt 0.6" />
+      <Throwable canbepicked="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" handle1="-12,-3" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+        <StatusEffect type="OnSecondaryUse" target="This" delay="0.1">
+          <Use />
         </StatusEffect>
-        <StatusEffect type="OnSecondaryUse" target="This" aimpos="-10,30" setvalue="true">
-          <Conditional targetitemcomponent="RangedWeapon" reloadtimer="lt 0.6" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" aimpos="50,10" setvalue="true" comparison="And">
-          <Conditional targetitemcomponent="RangedWeapon" reloadtimer="lt 0.1" />
-        </StatusEffect>
-        <!-- clone self only once -->
-        <StatusEffect type="OnActive" target="This" oneshot="true">
-          <SpawnItem identifier="he-mrecrawler" spawnposition="ThisInventory" spawnifinventoryfull="true" />
-        </StatusEffect>
-        <StatusEffect type="OnBroken" target="this">
-          <Remove />
-        </StatusEffect>
-      </Holdable>
-      <RangedWeapon barrelpos="0,0" spread="1" unskilledspread="20" reload="0.7" combatpriority="40" drawhudwhenequipped="true" crosshairscale="0.2">
-        <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
-        <StatusEffect type="OnUse" target="This">
-          <Explosion range="50" force="5" showeffects="false" />
-          <Remove />
-        </StatusEffect>
-        <RequiredItems identifier="he-mrecrawler" type="Contained" />
-      </RangedWeapon>
-      <Projectile characterusable="false" launchimpulse="15" impulsespread="0.01" sticktocharacters="false" sticktoitems="false" sticktostructures="false" sticktodoors="false">
-        <Attack targetimpulse="3" severlimbsprobability="0.1" itemdamage="1" structuredamage="0" structuresoundtype="StructureSlash">
-          <Affliction identifier="blunttrauma" strength="2" />
-          <Affliction identifier="blunttrauma" strength="2" probability="0.25" />
-          <Affliction identifier="stun" strength="0.2" />
+      </Throwable>
+      <Projectile characterusable="false" launchimpulse="0.0" sticktocharacters="false">
+        <Attack structuredamage="5">
+          <Affliction identifier="blunttrauma" strength="5" />
+          <Affliction identifier="stun" strength="0.5" />
+          <StatusEffect type="OnUse" target="UseTarget">
+            <Conditional entitytype="eq Character"/>
+            <Sound file="Content/Items/Weapons/Smack1.ogg" selectionmode="random" range="500"/>
+            <Sound file="Content/Items/Weapons/Smack2.ogg" range="500" />
+          </StatusEffect>
         </Attack>
-        <StatusEffect type="OnImpact" target="UseTarget">
-          <Conditional entitytype="Character" />
-          <Sound file="Content/Items/Weapons/Smack1.ogg" selectionmode="random" range="1000" />
-          <Sound file="Content/Items/Weapons/Smack2.ogg" range="1000" />
-        </StatusEffect>
       </Projectile>
-      <!-- projectile container -->
-      <ItemContainer characterusable="false" canbeselected="false" capacity="1" maxstacksize="1" hideitems="true" allowaccess="false" drawinventory="false" allowdraganddrop="false" allowswappingcontaineditems="false" autofill="false" ShowConditionInContainedStateIndicator="false" ShowContainedStateIndicator="false" removecontaineditemsondeconstruct="true">
-        <Containable items="he-mrecrawler" />
-      </ItemContainer>
+      
       <CustomInterface canbeselected="false" drawhudwhenequipped="true">
         <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
         <Button text="interaction.open">
           <StatusEffect type="OnUse" target="This">
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
             <Remove />
-            <SpawnItem identifier="he-mrecrawlerration" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-            <SpawnItem identifier="he-mrecrawlerration" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+            <SpawnItem identifier="he-mreration" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+            <SpawnItem identifier="he-mreration" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
           </StatusEffect>
         </Button>
       </CustomInterface>
     </Item>
-
-    <Item name="MRE - Mudraptor" identifier="he-mremudraptor" category="Misc" subcategory="Food" maxstacksize="2" maxstacksizecharacterinventory="2" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,ingredient,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" impacttolerance="5.5" isshootable="true" requireaimtouse="true" canflipx="false">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab,abandonedcrewcab" spawnprobability="0.02" />
-      <PreferredContainer secondary="crewcab" spawnprobability="0.04" />
-      <PreferredContainer primary="kitchen" secondary="crewcab"/>
-      <Price baseprice="185" canbespecial="false">
-        <Price storeidentifier="merchantoutpost" minavailable="1" maxavailable="10" sold="true" />
-        <Price storeidentifier="merchantcity" minavailable="1" maxavailable="10" sold="true"/>
-        <Price storeidentifier="merchantresearch" minavailable="1" maxavailable="10" sold="true" />
-        <Price storeidentifier="merchantmilitary" minavailable="5" maxavailable="20" sold="true" />
-        <Price storeidentifier="merchantmine" minavailable="1" maxavailable="10" sold="true" />
-      </Price>
-      <Fabricate suitablefabricators="vendingmachinefood" requiredtime="3" requiredmoney="185" fabricationlimitmin="0" fabricationlimitmax="10" />
+    
+    <Item name="MRE - Dehydrated Ration" identifier="he-mreration" health="20" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,dehydrated" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+      <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,165,28,41" depth="0.6" origin="0.5,0.5" />
+      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="77,168,31,38" depth="0.6" maxcondition="99" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,165,28,41" origin="0.5,0.5" />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,165,28,41" depth="0.525" origin="0.5,0.75"  />
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,139,47,67" depth="0.6" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,139,47,67" origin="0.5,0.5" />
-      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,139,47,67" depth="0.525" origin="0.5,0.85"  />
-      <Body width="41" height="67" density="11" />
-      <Holdable canbepicked="true" characterusable="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" swingwhenusing="true" msg="ItemMsgPickUpSelect">
-        <!-- simulate throwing actions -->
-        <StatusEffect type="OnSecondaryUse" target="This" aimpos="50,10" setvalue="true">
-          <Conditional targetitemcomponent="RangedWeapon" reloadtimer="gt 0.6" />
+      <Body width="28" height="39" density="10.3" />
+      <SuitableTreatment type="hunger" suitability="100" />
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="32,28" holdpos="30,-15" holdangle="0" aimangle="120" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+        <!--////////// BOT EATING \\\\\\\\\\-->
+        <!-- Bots "eat" by holding the food in their hands -->
+        <StatusEffect type="OnActive" target="This,Character" duration="1" condition="-1" stackable="false" comparison="And">
+          <Conditional IsPlayer="false" targetcontainer="true" />
+          <Conditional IsHuman="true" targetcontainer="true" />
+          <Affliction identifier="he-stuffed" amount="1.5" />
+          <ReduceAffliction type="hunger" amount="1.5" />
+          <ReduceAffliction type="damage" amount="0.2" />
+          <ReduceAffliction type="burn" amount="0.2" />
+          <Affliction identifier="spill" amount="1000" probability="0.0005" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
-        <StatusEffect type="OnSecondaryUse" target="This" aimpos="-10,30" setvalue="true">
-          <Conditional targetitemcomponent="RangedWeapon" reloadtimer="lt 0.6" />
+        
+        <!--////////// REGULAR EATING \\\\\\\\\\-->
+        <StatusEffect type="OnUse" target="This" Condition="-1" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional ConditionPercentage="lt 100" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="This" aimpos="50,10" setvalue="true" comparison="And">
-          <Conditional targetitemcomponent="RangedWeapon" reloadtimer="lt 0.1" />
+        <StatusEffect type="OnUse" target="Character" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional ConditionPercentage="lt 100" />
+          <Affliction identifier="he-stuffed" amount="1.5" />
+          <ReduceAffliction type="hunger" amount="1.5" />
+          <ReduceAffliction type="damage" amount="0.2" />
+          <ReduceAffliction type="burn" amount="0.2" />
+          <Affliction identifier="spill" amount="1000" probability="0.0005" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
-        <!-- clone self only once -->
-        <StatusEffect type="OnActive" target="This" oneshot="true">
-          <SpawnItem identifier="he-mremudraptor" spawnposition="ThisInventory" spawnifinventoryfull="true" />
-        </StatusEffect>
-        <StatusEffect type="OnBroken" target="this">
+        <StatusEffect type="OnBroken" target="This">
           <Remove />
         </StatusEffect>
       </Holdable>
-      <RangedWeapon barrelpos="0,0" spread="1" unskilledspread="20" reload="0.7" combatpriority="40" drawhudwhenequipped="true" crosshairscale="0.2">
-        <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
-        <StatusEffect type="OnUse" target="This">
-          <Explosion range="50" force="5" showeffects="false" />
-          <Remove />
-        </StatusEffect>
-        <RequiredItems identifier="he-mremudraptor" type="Contained" />
-      </RangedWeapon>
-      <Projectile characterusable="false" launchimpulse="15" impulsespread="0.01" sticktocharacters="false" sticktoitems="false" sticktostructures="false" sticktodoors="false">
-        <Attack targetimpulse="3" severlimbsprobability="0.1" itemdamage="1" structuredamage="0" structuresoundtype="StructureSlash">
-          <Affliction identifier="blunttrauma" strength="2" />
-          <Affliction identifier="blunttrauma" strength="2" probability="0.25" />
-          <Affliction identifier="stun" strength="0.2" />
-        </Attack>
-        <StatusEffect type="OnImpact" target="UseTarget">
-          <Conditional entitytype="Character" />
-          <Sound file="Content/Items/Weapons/Smack1.ogg" selectionmode="random" range="1000" />
-          <Sound file="Content/Items/Weapons/Smack2.ogg" range="1000" />
-        </StatusEffect>
-      </Projectile>
-      <!-- projectile container -->
-      <ItemContainer characterusable="false" canbeselected="false" capacity="1" maxstacksize="1" hideitems="true" allowaccess="false" drawinventory="false" allowdraganddrop="false" allowswappingcontaineditems="false" autofill="false" ShowConditionInContainedStateIndicator="false" ShowContainedStateIndicator="false" removecontaineditemsondeconstruct="true">
-        <Containable items="he-mremudraptor" />
-      </ItemContainer>
-      <CustomInterface canbeselected="false" drawhudwhenequipped="true">
-        <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
-        <Button text="interaction.open">
-          <StatusEffect type="OnUse" target="This">
+      <ItemContainer characterusable="false" canbeselected="false" capacity="1" maxstacksize="1" hideitems="true" drawinventory="true" allowdraganddrop="true" allowswappingcontaineditems="false" autofill="false" ShowConditionInContainedStateIndicator="false" ShowContainedStateIndicator="false" removecontaineditemsondeconstruct="true">
+        <SlotIcon slotindex="0" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="577,0,85,85" origin="0.5,0.5" />
+        <Containable items="cleanwater,emptybottle">
+          <StatusEffect type="OnInserted" target="This" condition="19.9" setvalue="true" disabledeltatime="true" interval="1">
+            <Conditional ConditionPercentage="eq 100" />
+            <RequiredItem items="cleanwater" type="Contained" />
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
-            <Remove />
-            <SpawnItem identifier="he-mremudraptorration" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-            <SpawnItem identifier="he-mremudraptorration" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
           </StatusEffect>
-        </Button>
-      </CustomInterface>
-    </Item>
-
-    <Item name="MRE - Hammerhead" identifier="he-mrehammerhead" category="Misc" subcategory="Food" maxstacksize="2" maxstacksizecharacterinventory="2" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,ingredient,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" impacttolerance="5.5" isshootable="true" requireaimtouse="true" canflipx="false">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab,abandonedcrewcab" spawnprobability="0.02" />
-      <PreferredContainer secondary="crewcab" spawnprobability="0.04" />
-      <PreferredContainer primary="kitchen" secondary="crewcab"/>
-      <Price baseprice="365" canbespecial="false">
-        <Price storeidentifier="merchantoutpost" minavailable="1" maxavailable="10" sold="true" />
-        <Price storeidentifier="merchantcity" minavailable="1" maxavailable="10" sold="true"/>
-        <Price storeidentifier="merchantresearch" minavailable="1" maxavailable="10" sold="true" />
-        <Price storeidentifier="merchantmilitary" minavailable="5" maxavailable="20" sold="true" />
-        <Price storeidentifier="merchantmine" minavailable="1" maxavailable="10" sold="true" />
-      </Price>
-      <Fabricate suitablefabricators="vendingmachinefood" requiredtime="3" requiredmoney="365" fabricationlimitmin="0" fabricationlimitmax="10" />
-      <Deconstruct time="1" requireddeconstructor="deconstructor"/>
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,139,47,67" depth="0.6" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,139,47,67" origin="0.5,0.5" />
-      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,139,47,67" depth="0.525" origin="0.5,0.85"  />
-      <Body width="41" height="67" density="11" />
-      <Holdable canbepicked="true" characterusable="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" swingwhenusing="true" msg="ItemMsgPickUpSelect">
-        <!-- simulate throwing actions -->
-        <StatusEffect type="OnSecondaryUse" target="This" aimpos="50,10" setvalue="true">
-          <Conditional targetitemcomponent="RangedWeapon" reloadtimer="gt 0.6" />
-        </StatusEffect>
-        <StatusEffect type="OnSecondaryUse" target="This" aimpos="-10,30" setvalue="true">
-          <Conditional targetitemcomponent="RangedWeapon" reloadtimer="lt 0.6" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" aimpos="50,10" setvalue="true" comparison="And">
-          <Conditional targetitemcomponent="RangedWeapon" reloadtimer="lt 0.1" />
-        </StatusEffect>
-        <!-- clone self only once -->
-        <StatusEffect type="OnActive" target="This" oneshot="true">
-          <SpawnItem identifier="he-mrehammerhead" spawnposition="ThisInventory" spawnifinventoryfull="true" />
-        </StatusEffect>
-        <StatusEffect type="OnBroken" target="this">
-          <Remove />
-        </StatusEffect>
-      </Holdable>
-      <RangedWeapon barrelpos="0,0" spread="1" unskilledspread="20" reload="0.7" combatpriority="40" drawhudwhenequipped="true" crosshairscale="0.2">
-        <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
-        <StatusEffect type="OnUse" target="This">
-          <Explosion range="50" force="5" showeffects="false" />
-          <Remove />
-        </StatusEffect>
-        <RequiredItems identifier="he-mrehammerhead" type="Contained" />
-      </RangedWeapon>
-      <Projectile characterusable="false" launchimpulse="15" impulsespread="0.01" sticktocharacters="false" sticktoitems="false" sticktostructures="false" sticktodoors="false">
-        <Attack targetimpulse="3" severlimbsprobability="0.1" itemdamage="1" structuredamage="0" structuresoundtype="StructureSlash">
-          <Affliction identifier="blunttrauma" strength="2" />
-          <Affliction identifier="blunttrauma" strength="2" probability="0.25" />
-          <Affliction identifier="stun" strength="0.2" />
-        </Attack>
-        <StatusEffect type="OnImpact" target="UseTarget">
-          <Conditional entitytype="Character" />
-          <Sound file="Content/Items/Weapons/Smack1.ogg" selectionmode="random" range="1000" />
-          <Sound file="Content/Items/Weapons/Smack2.ogg" range="1000" />
-        </StatusEffect>
-      </Projectile>
-      <!-- projectile container -->
-      <ItemContainer characterusable="false" canbeselected="false" capacity="1" maxstacksize="1" hideitems="true" allowaccess="false" drawinventory="false" allowdraganddrop="false" allowswappingcontaineditems="false" autofill="false" ShowConditionInContainedStateIndicator="false" ShowContainedStateIndicator="false" removecontaineditemsondeconstruct="true">
-        <Containable items="he-mrehammerhead" />
+          <StatusEffect type="OnInserted" target="Contained" condition="0" setvalue="true">
+            <Conditional hastag="cleanwater" />
+          </StatusEffect>
+          <StatusEffect type="OnRemoved" target="This,Contained" capacity="0" drawinventory="false" allowaccess="false" setvalue="true" >
+            <Conditional ConditionPercentage="lt 100" />
+          </StatusEffect>
+        </Containable>
       </ItemContainer>
-      <CustomInterface canbeselected="false" drawhudwhenequipped="true">
-        <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
-        <Button text="interaction.open">
-          <StatusEffect type="OnUse" target="This">
-            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
-            <Remove />
-            <SpawnItem identifier="he-mrehammerheadration" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-            <SpawnItem identifier="he-mrehammerheadration" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-          </StatusEffect>
-        </Button>
-      </CustomInterface>
+      <AiTarget sightrange="1000" static="true" />
     </Item>
-
-    <Item name="MRE - Thresher" identifier="he-mrethresher" category="Misc" subcategory="Food" maxstacksize="2" maxstacksizecharacterinventory="2" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,ingredient,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" impacttolerance="5.5" isshootable="true" requireaimtouse="true" canflipx="false">
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab,abandonedcrewcab" spawnprobability="0.02" />
-      <PreferredContainer secondary="crewcab" spawnprobability="0.04" />
-      <PreferredContainer primary="kitchen" secondary="crewcab"/>
-      <Price baseprice="250" canbespecial="false">
-        <Price storeidentifier="merchantoutpost" minavailable="1" maxavailable="10" sold="true" />
-        <Price storeidentifier="merchantcity" minavailable="1" maxavailable="10" sold="true"/>
-        <Price storeidentifier="merchantresearch" minavailable="1" maxavailable="10" sold="true" />
-        <Price storeidentifier="merchantmilitary" minavailable="5" maxavailable="20" sold="true" />
-        <Price storeidentifier="merchantmine" minavailable="1" maxavailable="10" sold="true" />
-      </Price>
-      <Fabricate suitablefabricators="vendingmachinefood" requiredtime="3" requiredmoney="250" fabricationlimitmin="0" fabricationlimitmax="10" />
-      <Deconstruct time="1" requireddeconstructor="deconstructor"/>
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,139,47,67" depth="0.6" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,139,47,67" origin="0.5,0.5" />
-      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,139,47,67" depth="0.525" origin="0.5,0.85"  />
-      <Body width="41" height="67" density="11" />
-      <Holdable canbepicked="true" characterusable="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" swingwhenusing="true" msg="ItemMsgPickUpSelect">
-        <!-- simulate throwing actions -->
-        <StatusEffect type="OnSecondaryUse" target="This" aimpos="50,10" setvalue="true">
-          <Conditional targetitemcomponent="RangedWeapon" reloadtimer="gt 0.6" />
-        </StatusEffect>
-        <StatusEffect type="OnSecondaryUse" target="This" aimpos="-10,30" setvalue="true">
-          <Conditional targetitemcomponent="RangedWeapon" reloadtimer="lt 0.6" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" aimpos="50,10" setvalue="true" comparison="And">
-          <Conditional targetitemcomponent="RangedWeapon" reloadtimer="lt 0.1" />
-        </StatusEffect>
-        <!-- clone self only once -->
-        <StatusEffect type="OnActive" target="This" oneshot="true">
-          <SpawnItem identifier="he-mrethresher" spawnposition="ThisInventory" spawnifinventoryfull="true" />
-        </StatusEffect>
-        <StatusEffect type="OnBroken" target="this">
-          <Remove />
-        </StatusEffect>
-      </Holdable>
-      <RangedWeapon barrelpos="0,0" spread="1" unskilledspread="20" reload="0.7" combatpriority="40" drawhudwhenequipped="true" crosshairscale="0.2">
-        <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
-        <StatusEffect type="OnUse" target="This">
-          <Explosion range="50" force="5" showeffects="false" />
-          <Remove />
-        </StatusEffect>
-        <RequiredItems identifier="he-mrethresher" type="Contained" />
-      </RangedWeapon>
-      <Projectile characterusable="false" launchimpulse="15" impulsespread="0.01" sticktocharacters="false" sticktoitems="false" sticktostructures="false" sticktodoors="false">
-        <Attack targetimpulse="3" severlimbsprobability="0.1" itemdamage="1" structuredamage="0" structuresoundtype="StructureSlash">
-          <Affliction identifier="blunttrauma" strength="2" />
-          <Affliction identifier="blunttrauma" strength="2" probability="0.25" />
-          <Affliction identifier="stun" strength="0.2" />
-        </Attack>
-        <StatusEffect type="OnImpact" target="UseTarget">
-          <Conditional entitytype="Character" />
-          <Sound file="Content/Items/Weapons/Smack1.ogg" selectionmode="random" range="1000" />
-          <Sound file="Content/Items/Weapons/Smack2.ogg" range="1000" />
-        </StatusEffect>
-      </Projectile>
-      <!-- projectile container -->
-      <ItemContainer characterusable="false" canbeselected="false" capacity="1" maxstacksize="1" hideitems="true" allowaccess="false" drawinventory="false" allowdraganddrop="false" allowswappingcontaineditems="false" autofill="false" ShowConditionInContainedStateIndicator="false" ShowContainedStateIndicator="false" removecontaineditemsondeconstruct="true">
-        <Containable items="he-mrethresher" />
-      </ItemContainer>
-      <CustomInterface canbeselected="false" drawhudwhenequipped="true">
-        <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
-        <Button text="interaction.open">
-          <StatusEffect type="OnUse" target="This">
-            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
-            <Remove />
-            <SpawnItem identifier="he-mrethresherration" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-            <SpawnItem identifier="he-mrethresherration" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-          </StatusEffect>
-        </Button>
-      </CustomInterface>
-    </Item>
+    
     <!-- Fast Food Menus -->
     <Item name="Meal of Madness" identifier="he-madnessmeal" category="Misc" subcategory="Food" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Content: 1x Crawler Burger | 8x Crawler Nuggets | 1x Can of Couwola Cola | 1x Random Toy" Tags="ingredient,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="true" requireaimtouse="true" canflipx="false">
       <PreferredContainer primary="table" secondary="crewcab,kitchen"/>
@@ -1239,6 +713,554 @@
         </StatusEffect>
       </Holdable>
     </Item>
+    
+    <!-- These rations are no longer used -->
+    <Item name="MRE - Crawler" identifier="he-mrecrawler" category="Misc" subcategory="Food" maxstacksize="2" maxstacksizecharacterinventory="2" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,ingredient,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" impacttolerance="5.5" isshootable="true" requireaimtouse="true" canflipx="false">
+      <PreferredContainer secondary="wreckmedcab,abandonedmedcab,abandonedcrewcab" spawnprobability="0.02" />
+      <PreferredContainer secondary="crewcab" spawnprobability="0.04" />
+      <PreferredContainer primary="kitchen" secondary="crewcab"/>
+      <Price baseprice="125" canbespecial="false">
+        <Price storeidentifier="merchantoutpost" minavailable="1" maxavailable="10" sold="true" />
+        <Price storeidentifier="merchantcity" minavailable="1" maxavailable="10" sold="true"/>
+        <Price storeidentifier="merchantresearch" minavailable="1" maxavailable="10" sold="true" />
+        <Price storeidentifier="merchantmilitary" minavailable="5" maxavailable="20" sold="true" />
+        <Price storeidentifier="merchantmine" minavailable="1" maxavailable="10" sold="true" />
+      </Price>
+      <!-- <Fabricate suitablefabricators="vendingmachinefood" requiredtime="3" requiredmoney="125" fabricationlimitmin="0" fabricationlimitmax="10" /> -->
+      <Deconstruct time="1" requireddeconstructor="deconstructor"/>
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,139,47,67" depth="0.6" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,139,47,67" origin="0.5,0.5" />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,139,47,67" depth="0.525" origin="0.5,0.85"  />
+      <Body width="41" height="67" density="11" />
+      <Holdable canbepicked="true" characterusable="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+        <!-- simulate throwing actions -->
+        <StatusEffect type="OnSecondaryUse" target="This" aimpos="50,10" setvalue="true">
+          <Conditional targetitemcomponent="RangedWeapon" reloadtimer="gt 0.6" />
+        </StatusEffect>
+        <StatusEffect type="OnSecondaryUse" target="This" aimpos="-10,30" setvalue="true">
+          <Conditional targetitemcomponent="RangedWeapon" reloadtimer="lt 0.6" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" aimpos="50,10" setvalue="true" comparison="And">
+          <Conditional targetitemcomponent="RangedWeapon" reloadtimer="lt 0.1" />
+        </StatusEffect>
+        <!-- clone self only once -->
+        <StatusEffect type="OnActive" target="This" oneshot="true">
+          <SpawnItem identifier="he-mrecrawler" spawnposition="ThisInventory" spawnifinventoryfull="true" />
+        </StatusEffect>
+        <StatusEffect type="OnBroken" target="this">
+          <Remove />
+        </StatusEffect>
+      </Holdable>
+      <RangedWeapon barrelpos="0,0" spread="1" unskilledspread="20" reload="0.7" combatpriority="40" drawhudwhenequipped="true" crosshairscale="0.2">
+        <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+        <StatusEffect type="OnUse" target="This">
+          <Explosion range="50" force="5" showeffects="false" />
+          <Remove />
+        </StatusEffect>
+        <RequiredItems identifier="he-mrecrawler" type="Contained" />
+      </RangedWeapon>
+      <Projectile characterusable="false" launchimpulse="15" impulsespread="0.01" sticktocharacters="false" sticktoitems="false" sticktostructures="false" sticktodoors="false">
+        <Attack targetimpulse="3" severlimbsprobability="0.1" itemdamage="1" structuredamage="0" structuresoundtype="StructureSlash">
+          <Affliction identifier="blunttrauma" strength="2" />
+          <Affliction identifier="blunttrauma" strength="2" probability="0.25" />
+          <Affliction identifier="stun" strength="0.2" />
+        </Attack>
+        <StatusEffect type="OnImpact" target="UseTarget">
+          <Conditional entitytype="Character" />
+          <Sound file="Content/Items/Weapons/Smack1.ogg" selectionmode="random" range="1000" />
+          <Sound file="Content/Items/Weapons/Smack2.ogg" range="1000" />
+        </StatusEffect>
+      </Projectile>
+      <!-- projectile container -->
+      <ItemContainer characterusable="false" canbeselected="false" capacity="1" maxstacksize="1" hideitems="true" allowaccess="false" drawinventory="false" allowdraganddrop="false" allowswappingcontaineditems="false" autofill="false" ShowConditionInContainedStateIndicator="false" ShowContainedStateIndicator="false" removecontaineditemsondeconstruct="true">
+        <Containable items="he-mrecrawler" />
+      </ItemContainer>
+      <CustomInterface canbeselected="false" drawhudwhenequipped="true">
+        <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
+        <Button text="interaction.open">
+          <StatusEffect type="OnUse" target="This">
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
+            <Remove />
+            <SpawnItem identifier="he-mrecrawlerration" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+            <SpawnItem identifier="he-mrecrawlerration" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          </StatusEffect>
+        </Button>
+      </CustomInterface>
+    </Item>
+
+    <Item name="MRE - Mudraptor" identifier="he-mremudraptor" category="Misc" subcategory="Food" maxstacksize="2" maxstacksizecharacterinventory="2" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,ingredient,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" impacttolerance="5.5" isshootable="true" requireaimtouse="true" canflipx="false">
+      <PreferredContainer secondary="wreckmedcab,abandonedmedcab,abandonedcrewcab" spawnprobability="0.02" />
+      <PreferredContainer secondary="crewcab" spawnprobability="0.04" />
+      <PreferredContainer primary="kitchen" secondary="crewcab"/>
+      <Price baseprice="185" canbespecial="false">
+        <Price storeidentifier="merchantoutpost" minavailable="1" maxavailable="10" sold="true" />
+        <Price storeidentifier="merchantcity" minavailable="1" maxavailable="10" sold="true"/>
+        <Price storeidentifier="merchantresearch" minavailable="1" maxavailable="10" sold="true" />
+        <Price storeidentifier="merchantmilitary" minavailable="5" maxavailable="20" sold="true" />
+        <Price storeidentifier="merchantmine" minavailable="1" maxavailable="10" sold="true" />
+      </Price>
+      <!-- <Fabricate suitablefabricators="vendingmachinefood" requiredtime="3" requiredmoney="185" fabricationlimitmin="0" fabricationlimitmax="10" /> -->
+      <Deconstruct time="1" requireddeconstructor="deconstructor"/>
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,139,47,67" depth="0.6" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,139,47,67" origin="0.5,0.5" />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,139,47,67" depth="0.525" origin="0.5,0.85"  />
+      <Body width="41" height="67" density="11" />
+      <Holdable canbepicked="true" characterusable="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+        <!-- simulate throwing actions -->
+        <StatusEffect type="OnSecondaryUse" target="This" aimpos="50,10" setvalue="true">
+          <Conditional targetitemcomponent="RangedWeapon" reloadtimer="gt 0.6" />
+        </StatusEffect>
+        <StatusEffect type="OnSecondaryUse" target="This" aimpos="-10,30" setvalue="true">
+          <Conditional targetitemcomponent="RangedWeapon" reloadtimer="lt 0.6" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" aimpos="50,10" setvalue="true" comparison="And">
+          <Conditional targetitemcomponent="RangedWeapon" reloadtimer="lt 0.1" />
+        </StatusEffect>
+        <!-- clone self only once -->
+        <StatusEffect type="OnActive" target="This" oneshot="true">
+          <SpawnItem identifier="he-mremudraptor" spawnposition="ThisInventory" spawnifinventoryfull="true" />
+        </StatusEffect>
+        <StatusEffect type="OnBroken" target="this">
+          <Remove />
+        </StatusEffect>
+      </Holdable>
+      <RangedWeapon barrelpos="0,0" spread="1" unskilledspread="20" reload="0.7" combatpriority="40" drawhudwhenequipped="true" crosshairscale="0.2">
+        <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+        <StatusEffect type="OnUse" target="This">
+          <Explosion range="50" force="5" showeffects="false" />
+          <Remove />
+        </StatusEffect>
+        <RequiredItems identifier="he-mremudraptor" type="Contained" />
+      </RangedWeapon>
+      <Projectile characterusable="false" launchimpulse="15" impulsespread="0.01" sticktocharacters="false" sticktoitems="false" sticktostructures="false" sticktodoors="false">
+        <Attack targetimpulse="3" severlimbsprobability="0.1" itemdamage="1" structuredamage="0" structuresoundtype="StructureSlash">
+          <Affliction identifier="blunttrauma" strength="2" />
+          <Affliction identifier="blunttrauma" strength="2" probability="0.25" />
+          <Affliction identifier="stun" strength="0.2" />
+        </Attack>
+        <StatusEffect type="OnImpact" target="UseTarget">
+          <Conditional entitytype="Character" />
+          <Sound file="Content/Items/Weapons/Smack1.ogg" selectionmode="random" range="1000" />
+          <Sound file="Content/Items/Weapons/Smack2.ogg" range="1000" />
+        </StatusEffect>
+      </Projectile>
+      <!-- projectile container -->
+      <ItemContainer characterusable="false" canbeselected="false" capacity="1" maxstacksize="1" hideitems="true" allowaccess="false" drawinventory="false" allowdraganddrop="false" allowswappingcontaineditems="false" autofill="false" ShowConditionInContainedStateIndicator="false" ShowContainedStateIndicator="false" removecontaineditemsondeconstruct="true">
+        <Containable items="he-mremudraptor" />
+      </ItemContainer>
+      <CustomInterface canbeselected="false" drawhudwhenequipped="true">
+        <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
+        <Button text="interaction.open">
+          <StatusEffect type="OnUse" target="This">
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
+            <Remove />
+            <SpawnItem identifier="he-mremudraptorration" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+            <SpawnItem identifier="he-mremudraptorration" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          </StatusEffect>
+        </Button>
+      </CustomInterface>
+    </Item>
+
+    <Item name="MRE - Hammerhead" identifier="he-mrehammerhead" category="Misc" subcategory="Food" maxstacksize="2" maxstacksizecharacterinventory="2" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,ingredient,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" impacttolerance="5.5" isshootable="true" requireaimtouse="true" canflipx="false">
+      <PreferredContainer secondary="wreckmedcab,abandonedmedcab,abandonedcrewcab" spawnprobability="0.02" />
+      <PreferredContainer secondary="crewcab" spawnprobability="0.04" />
+      <PreferredContainer primary="kitchen" secondary="crewcab"/>
+      <Price baseprice="365" canbespecial="false">
+        <Price storeidentifier="merchantoutpost" minavailable="1" maxavailable="10" sold="true" />
+        <Price storeidentifier="merchantcity" minavailable="1" maxavailable="10" sold="true"/>
+        <Price storeidentifier="merchantresearch" minavailable="1" maxavailable="10" sold="true" />
+        <Price storeidentifier="merchantmilitary" minavailable="5" maxavailable="20" sold="true" />
+        <Price storeidentifier="merchantmine" minavailable="1" maxavailable="10" sold="true" />
+      </Price>
+      <!-- <Fabricate suitablefabricators="vendingmachinefood" requiredtime="3" requiredmoney="365" fabricationlimitmin="0" fabricationlimitmax="10" /> -->
+      <Deconstruct time="1" requireddeconstructor="deconstructor"/>
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,139,47,67" depth="0.6" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,139,47,67" origin="0.5,0.5" />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,139,47,67" depth="0.525" origin="0.5,0.85"  />
+      <Body width="41" height="67" density="11" />
+      <Holdable canbepicked="true" characterusable="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+        <!-- simulate throwing actions -->
+        <StatusEffect type="OnSecondaryUse" target="This" aimpos="50,10" setvalue="true">
+          <Conditional targetitemcomponent="RangedWeapon" reloadtimer="gt 0.6" />
+        </StatusEffect>
+        <StatusEffect type="OnSecondaryUse" target="This" aimpos="-10,30" setvalue="true">
+          <Conditional targetitemcomponent="RangedWeapon" reloadtimer="lt 0.6" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" aimpos="50,10" setvalue="true" comparison="And">
+          <Conditional targetitemcomponent="RangedWeapon" reloadtimer="lt 0.1" />
+        </StatusEffect>
+        <!-- clone self only once -->
+        <StatusEffect type="OnActive" target="This" oneshot="true">
+          <SpawnItem identifier="he-mrehammerhead" spawnposition="ThisInventory" spawnifinventoryfull="true" />
+        </StatusEffect>
+        <StatusEffect type="OnBroken" target="this">
+          <Remove />
+        </StatusEffect>
+      </Holdable>
+      <RangedWeapon barrelpos="0,0" spread="1" unskilledspread="20" reload="0.7" combatpriority="40" drawhudwhenequipped="true" crosshairscale="0.2">
+        <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+        <StatusEffect type="OnUse" target="This">
+          <Explosion range="50" force="5" showeffects="false" />
+          <Remove />
+        </StatusEffect>
+        <RequiredItems identifier="he-mrehammerhead" type="Contained" />
+      </RangedWeapon>
+      <Projectile characterusable="false" launchimpulse="15" impulsespread="0.01" sticktocharacters="false" sticktoitems="false" sticktostructures="false" sticktodoors="false">
+        <Attack targetimpulse="3" severlimbsprobability="0.1" itemdamage="1" structuredamage="0" structuresoundtype="StructureSlash">
+          <Affliction identifier="blunttrauma" strength="2" />
+          <Affliction identifier="blunttrauma" strength="2" probability="0.25" />
+          <Affliction identifier="stun" strength="0.2" />
+        </Attack>
+        <StatusEffect type="OnImpact" target="UseTarget">
+          <Conditional entitytype="Character" />
+          <Sound file="Content/Items/Weapons/Smack1.ogg" selectionmode="random" range="1000" />
+          <Sound file="Content/Items/Weapons/Smack2.ogg" range="1000" />
+        </StatusEffect>
+      </Projectile>
+      <!-- projectile container -->
+      <ItemContainer characterusable="false" canbeselected="false" capacity="1" maxstacksize="1" hideitems="true" allowaccess="false" drawinventory="false" allowdraganddrop="false" allowswappingcontaineditems="false" autofill="false" ShowConditionInContainedStateIndicator="false" ShowContainedStateIndicator="false" removecontaineditemsondeconstruct="true">
+        <Containable items="he-mrehammerhead" />
+      </ItemContainer>
+      <CustomInterface canbeselected="false" drawhudwhenequipped="true">
+        <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
+        <Button text="interaction.open">
+          <StatusEffect type="OnUse" target="This">
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
+            <Remove />
+            <SpawnItem identifier="he-mrehammerheadration" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+            <SpawnItem identifier="he-mrehammerheadration" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          </StatusEffect>
+        </Button>
+      </CustomInterface>
+    </Item>
+
+    <Item name="MRE - Thresher" identifier="he-mrethresher" category="Misc" subcategory="Food" maxstacksize="2" maxstacksizecharacterinventory="2" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,ingredient,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" impacttolerance="5.5" isshootable="true" requireaimtouse="true" canflipx="false">
+      <PreferredContainer secondary="wreckmedcab,abandonedmedcab,abandonedcrewcab" spawnprobability="0.02" />
+      <PreferredContainer secondary="crewcab" spawnprobability="0.04" />
+      <PreferredContainer primary="kitchen" secondary="crewcab"/>
+      <Price baseprice="250" canbespecial="false">
+        <Price storeidentifier="merchantoutpost" minavailable="1" maxavailable="10" sold="true" />
+        <Price storeidentifier="merchantcity" minavailable="1" maxavailable="10" sold="true"/>
+        <Price storeidentifier="merchantresearch" minavailable="1" maxavailable="10" sold="true" />
+        <Price storeidentifier="merchantmilitary" minavailable="5" maxavailable="20" sold="true" />
+        <Price storeidentifier="merchantmine" minavailable="1" maxavailable="10" sold="true" />
+      </Price>
+      <!-- <Fabricate suitablefabricators="vendingmachinefood" requiredtime="3" requiredmoney="250" fabricationlimitmin="0" fabricationlimitmax="10" /> -->
+      <Deconstruct time="1" requireddeconstructor="deconstructor"/>
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,139,47,67" depth="0.6" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,139,47,67" origin="0.5,0.5" />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,139,47,67" depth="0.525" origin="0.5,0.85"  />
+      <Body width="41" height="67" density="11" />
+      <Holdable canbepicked="true" characterusable="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+        <!-- simulate throwing actions -->
+        <StatusEffect type="OnSecondaryUse" target="This" aimpos="50,10" setvalue="true">
+          <Conditional targetitemcomponent="RangedWeapon" reloadtimer="gt 0.6" />
+        </StatusEffect>
+        <StatusEffect type="OnSecondaryUse" target="This" aimpos="-10,30" setvalue="true">
+          <Conditional targetitemcomponent="RangedWeapon" reloadtimer="lt 0.6" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" aimpos="50,10" setvalue="true" comparison="And">
+          <Conditional targetitemcomponent="RangedWeapon" reloadtimer="lt 0.1" />
+        </StatusEffect>
+        <!-- clone self only once -->
+        <StatusEffect type="OnActive" target="This" oneshot="true">
+          <SpawnItem identifier="he-mrethresher" spawnposition="ThisInventory" spawnifinventoryfull="true" />
+        </StatusEffect>
+        <StatusEffect type="OnBroken" target="this">
+          <Remove />
+        </StatusEffect>
+      </Holdable>
+      <RangedWeapon barrelpos="0,0" spread="1" unskilledspread="20" reload="0.7" combatpriority="40" drawhudwhenequipped="true" crosshairscale="0.2">
+        <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+        <StatusEffect type="OnUse" target="This">
+          <Explosion range="50" force="5" showeffects="false" />
+          <Remove />
+        </StatusEffect>
+        <RequiredItems identifier="he-mrethresher" type="Contained" />
+      </RangedWeapon>
+      <Projectile characterusable="false" launchimpulse="15" impulsespread="0.01" sticktocharacters="false" sticktoitems="false" sticktostructures="false" sticktodoors="false">
+        <Attack targetimpulse="3" severlimbsprobability="0.1" itemdamage="1" structuredamage="0" structuresoundtype="StructureSlash">
+          <Affliction identifier="blunttrauma" strength="2" />
+          <Affliction identifier="blunttrauma" strength="2" probability="0.25" />
+          <Affliction identifier="stun" strength="0.2" />
+        </Attack>
+        <StatusEffect type="OnImpact" target="UseTarget">
+          <Conditional entitytype="Character" />
+          <Sound file="Content/Items/Weapons/Smack1.ogg" selectionmode="random" range="1000" />
+          <Sound file="Content/Items/Weapons/Smack2.ogg" range="1000" />
+        </StatusEffect>
+      </Projectile>
+      <!-- projectile container -->
+      <ItemContainer characterusable="false" canbeselected="false" capacity="1" maxstacksize="1" hideitems="true" allowaccess="false" drawinventory="false" allowdraganddrop="false" allowswappingcontaineditems="false" autofill="false" ShowConditionInContainedStateIndicator="false" ShowContainedStateIndicator="false" removecontaineditemsondeconstruct="true">
+        <Containable items="he-mrethresher" />
+      </ItemContainer>
+      <CustomInterface canbeselected="false" drawhudwhenequipped="true">
+        <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
+        <Button text="interaction.open">
+          <StatusEffect type="OnUse" target="This">
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
+            <Remove />
+            <SpawnItem identifier="he-mrethresherration" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+            <SpawnItem identifier="he-mrethresherration" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          </StatusEffect>
+        </Button>
+      </CustomInterface>
+    </Item>
+
+    <Item name="MRE - Crawler Ration" identifier="he-mrecrawlerration" health="20" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+      <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,165,28,41" depth="0.6" origin="0.5,0.5" />
+      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="77,168,31,38" depth="0.6" maxcondition="99" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,165,28,41" origin="0.5,0.5" />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,165,28,41" depth="0.525" origin="0.5,0.75"  />
+      <Deconstruct time="1" requireddeconstructor="deconstructor"/>
+      <Body width="28" height="39" density="10.3" />
+      <SuitableTreatment type="hunger" suitability="100" />
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="32,28" holdpos="30,-15" holdangle="0" aimangle="120" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+        <!--////////// BOT EATING \\\\\\\\\\-->
+        <!-- Bots "eat" by holding the food in their hands -->
+        <StatusEffect type="OnActive" target="This,Character" duration="1" condition="-1" stackable="false" comparison="And">
+          <Conditional IsPlayer="false" targetcontainer="true" />
+          <Conditional IsHuman="true" targetcontainer="true" />
+          <Affliction identifier="he-increasedspeed" amount="12.0" />
+          <Affliction identifier="he-stuffed" amount="1.5" />
+          <ReduceAffliction type="hunger" amount="1.5" />
+          <ReduceAffliction type="damage" amount="0.2" />
+          <ReduceAffliction type="burn" amount="0.2" />
+          <Affliction identifier="spill" amount="1000" probability="0.0005" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
+        </StatusEffect>
+        
+        <!--////////// REGULAR EATING \\\\\\\\\\-->
+        <StatusEffect type="OnUse" target="This" Condition="-1" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional ConditionPercentage="lt 100" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional ConditionPercentage="lt 100" />
+          <!-- <Affliction identifier="he-increasedspeed" amount="12.0" /> -->
+          <Affliction identifier="he-stuffed" amount="1.5" />
+          <ReduceAffliction type="hunger" amount="1.5" />
+          <ReduceAffliction type="damage" amount="0.2" />
+          <ReduceAffliction type="burn" amount="0.2" />
+          <Affliction identifier="spill" amount="1000" probability="0.0005" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
+        </StatusEffect>
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+        </StatusEffect>
+      </Holdable>
+      <ItemContainer characterusable="false" canbeselected="false" capacity="1" maxstacksize="1" hideitems="true" drawinventory="true" allowdraganddrop="true" allowswappingcontaineditems="false" autofill="false" ShowConditionInContainedStateIndicator="false" ShowContainedStateIndicator="false" removecontaineditemsondeconstruct="true">
+        <SlotIcon slotindex="0" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="577,0,85,85" origin="0.5,0.5" />
+        <Containable items="cleanwater,emptybottle">
+          <StatusEffect type="OnInserted" target="This" condition="19.9" setvalue="true" disabledeltatime="true" interval="1">
+            <Conditional ConditionPercentage="eq 100" />
+            <RequiredItem items="cleanwater" type="Contained" />
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
+          </StatusEffect>
+          <StatusEffect type="OnInserted" target="Contained" condition="0" setvalue="true">
+            <Conditional hastag="cleanwater" />
+          </StatusEffect>
+          <StatusEffect type="OnRemoved" target="This,Contained" capacity="0" drawinventory="false" allowaccess="false" setvalue="true" >
+            <Conditional ConditionPercentage="lt 100" />
+          </StatusEffect>
+        </Containable>
+      </ItemContainer>
+      <AiTarget sightrange="1000" static="true" />
+    </Item>
+        
+    <Item name="MRE - Mudraptor Ration" identifier="he-mremudraptorration" health="20" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+      <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,165,28,41" depth="0.6" origin="0.5,0.5" />
+      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="77,168,31,38" depth="0.6" maxcondition="99" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,165,28,41" origin="0.5,0.5" />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,165,28,41" depth="0.525" origin="0.5,0.75"  />
+      <Deconstruct time="1" requireddeconstructor="deconstructor"/>
+      <Body width="28" height="39" density="10.3" />
+      <SuitableTreatment type="hunger" suitability="100" />
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="32,28" holdpos="30,-15" holdangle="0" aimangle="120" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+        <!--////////// BOT EATING \\\\\\\\\\-->
+        <!-- Bots "eat" by holding the food in their hands -->
+        <StatusEffect type="OnActive" target="This,Character" duration="1" condition="-1" stackable="false" comparison="And">
+          <Conditional IsPlayer="false" targetcontainer="true" />
+          <Conditional IsHuman="true" targetcontainer="true" />
+          <Affliction identifier="he-damageresistance" amount="12.0" />
+          <Affliction identifier="he-increasedspeed" amount="12.0" />
+          <Affliction identifier="he-stuffed" amount="1.75" />
+          <ReduceAffliction type="hunger" amount="1.75" />
+          <ReduceAffliction type="damage" amount="0.2" />
+          <ReduceAffliction type="burn" amount="0.2" />
+          <Affliction identifier="spill" amount="1000" probability="0.0005" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
+        </StatusEffect>
+        
+        <!--////////// REGULAR EATING \\\\\\\\\\-->
+        <StatusEffect type="OnUse" target="This" Condition="-1" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional ConditionPercentage="lt 100" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional ConditionPercentage="lt 100" />
+          <Affliction identifier="he-damageresistance" amount="12.0" />
+          <Affliction identifier="he-increasedspeed" amount="12.0" />
+          <Affliction identifier="he-stuffed" amount="1.75" />
+          <ReduceAffliction type="hunger" amount="1.75" />
+          <ReduceAffliction type="damage" amount="0.2" />
+          <ReduceAffliction type="burn" amount="0.2" />
+          <Affliction identifier="spill" amount="1000" probability="0.0005" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
+        </StatusEffect>
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+        </StatusEffect>
+      </Holdable>
+      <ItemContainer characterusable="false" canbeselected="false" capacity="1" maxstacksize="1" hideitems="true" drawinventory="true" allowdraganddrop="true" allowswappingcontaineditems="false" autofill="false" ShowConditionInContainedStateIndicator="false" ShowContainedStateIndicator="false" removecontaineditemsondeconstruct="true">
+        <SlotIcon slotindex="0" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="577,0,85,85" origin="0.5,0.5" />
+        <Containable items="cleanwater,emptybottle">
+          <StatusEffect type="OnInserted" target="This" condition="19.9" setvalue="true" disabledeltatime="true" interval="1">
+            <Conditional ConditionPercentage="eq 100" />
+            <RequiredItem items="cleanwater" type="Contained" />
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
+          </StatusEffect>
+          <StatusEffect type="OnInserted" target="Contained" condition="0" setvalue="true">
+            <Conditional hastag="cleanwater" />
+          </StatusEffect>
+          <StatusEffect type="OnRemoved" target="This,Contained" capacity="0" drawinventory="false" allowaccess="false" setvalue="true" >
+            <Conditional ConditionPercentage="lt 100" />
+          </StatusEffect>
+        </Containable>
+      </ItemContainer>
+      <AiTarget sightrange="1000" static="true" />
+    </Item>
+    
+    <Item name="MRE - Hammerhead Ration" identifier="he-mrehammerheadration" health="20" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+      <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,165,28,41" depth="0.6" origin="0.5,0.5" />
+      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="77,168,31,38" depth="0.6" maxcondition="99" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,165,28,41" origin="0.5,0.5" />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,165,28,41" depth="0.525" origin="0.5,0.75"  />
+      <Deconstruct time="1" requireddeconstructor="deconstructor"/>
+      <Body width="28" height="39" density="10.3" />
+      <SuitableTreatment type="hunger" suitability="100" />
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="32,28" holdpos="30,-15" holdangle="0" aimangle="120" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+        <!--////////// BOT EATING \\\\\\\\\\-->
+        <!-- Bots "eat" by holding the food in their hands -->
+        <StatusEffect type="OnActive" target="This,Character" duration="1" condition="-1" stackable="false" comparison="And">
+          <Conditional IsPlayer="false" targetcontainer="true" />
+          <Conditional IsHuman="true" targetcontainer="true" />
+          <Affliction identifier="he-increasedmeleedamage" amount="12.0" />
+          <Affliction identifier="he-stuffed" amount="2.0" />
+          <ReduceAffliction type="hunger" amount="2.0" />
+          <ReduceAffliction type="damage" amount="0.2" />
+          <ReduceAffliction type="burn" amount="0.2" />
+          <Affliction identifier="spill" amount="1000" probability="0.0005" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
+        </StatusEffect>
+        
+        <!--////////// REGULAR EATING \\\\\\\\\\-->
+        <StatusEffect type="OnUse" target="This" Condition="-1" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional ConditionPercentage="lt 100" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional ConditionPercentage="lt 100" />
+          <Affliction identifier="he-increasedmeleedamage" amount="12.0" />
+          <Affliction identifier="he-stuffed" amount="2.0" />
+          <ReduceAffliction type="hunger" amount="2.0" />
+          <ReduceAffliction type="damage" amount="0.2" />
+          <ReduceAffliction type="burn" amount="0.2" />
+          <Affliction identifier="spill" amount="1000" probability="0.0005" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
+        </StatusEffect>
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+        </StatusEffect>
+      </Holdable>
+      <ItemContainer characterusable="false" canbeselected="false" capacity="1" maxstacksize="1" hideitems="true" drawinventory="true" allowdraganddrop="true" allowswappingcontaineditems="false" autofill="false" ShowConditionInContainedStateIndicator="false" ShowContainedStateIndicator="false" removecontaineditemsondeconstruct="true">
+        <SlotIcon slotindex="0" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="577,0,85,85" origin="0.5,0.5" />
+        <Containable items="cleanwater,emptybottle">
+          <StatusEffect type="OnInserted" target="This" condition="19.9" setvalue="true" disabledeltatime="true" interval="1">
+            <Conditional ConditionPercentage="eq 100" />
+            <RequiredItem items="cleanwater" type="Contained" />
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
+          </StatusEffect>
+          <StatusEffect type="OnInserted" target="Contained" condition="0" setvalue="true">
+            <Conditional hastag="cleanwater" />
+          </StatusEffect>
+          <StatusEffect type="OnRemoved" target="This,Contained" capacity="0" drawinventory="false" allowaccess="false" setvalue="true" >
+            <Conditional ConditionPercentage="lt 100" />
+          </StatusEffect>
+        </Containable>
+      </ItemContainer>
+      <AiTarget sightrange="1000" static="true" />
+    </Item>
+    
+    <Item name="MRE - Thresher Ration" identifier="he-mrethresherration" health="20" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+      <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,165,28,41" depth="0.6" origin="0.5,0.5" />
+      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="77,168,31,38" depth="0.6" maxcondition="99" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,165,28,41" origin="0.5,0.5" />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,165,28,41" depth="0.525" origin="0.5,0.75"  />
+      <Deconstruct time="1" requireddeconstructor="deconstructor"/>
+      <Body width="28" height="39" density="10.3" />
+      <SuitableTreatment type="hunger" suitability="100" />
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="32,28" holdpos="30,-15" holdangle="0" aimangle="120" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+        <!--////////// BOT EATING \\\\\\\\\\-->
+        <!-- Bots "eat" by holding the food in their hands -->
+        <StatusEffect type="OnActive" target="This,Character" duration="1" condition="-1" stackable="false" comparison="And">
+          <Conditional IsPlayer="false" targetcontainer="true" />
+          <Conditional IsHuman="true" targetcontainer="true" />
+          <Affliction identifier="he-decreasedoxygenconsumption" amount="12.0" />
+          <Affliction identifier="he-stuffed" amount="1.75" />
+          <ReduceAffliction type="hunger" amount="1.75" />
+          <ReduceAffliction type="damage" amount="0.2" />
+          <ReduceAffliction type="burn" amount="0.2" />
+          <Affliction identifier="spill" amount="1000" probability="0.0005" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
+        </StatusEffect>
+        
+        <!--////////// REGULAR EATING \\\\\\\\\\-->
+        <StatusEffect type="OnUse" target="This" Condition="-1" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional ConditionPercentage="lt 100" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional ConditionPercentage="lt 100" />
+          <Affliction identifier="he-decreasedoxygenconsumption" amount="12.0" />
+          <Affliction identifier="he-stuffed" amount="1.75" />
+          <ReduceAffliction type="hunger" amount="1.75" />
+          <ReduceAffliction type="damage" amount="0.2" />
+          <ReduceAffliction type="burn" amount="0.2" />
+          <Affliction identifier="spill" amount="1000" probability="0.0005" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
+        </StatusEffect>
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+        </StatusEffect>
+      </Holdable>
+      <ItemContainer characterusable="false" canbeselected="false" capacity="1" maxstacksize="1" hideitems="true" drawinventory="true" allowdraganddrop="true" allowswappingcontaineditems="false" autofill="false" ShowConditionInContainedStateIndicator="false" ShowContainedStateIndicator="false" removecontaineditemsondeconstruct="true">
+        <SlotIcon slotindex="0" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="577,0,85,85" origin="0.5,0.5" />
+        <Containable items="cleanwater,emptybottle">
+          <StatusEffect type="OnInserted" target="This" condition="19.9" setvalue="true" disabledeltatime="true" interval="1">
+            <Conditional ConditionPercentage="eq 100" />
+            <RequiredItem items="cleanwater" type="Contained" />
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
+          </StatusEffect>
+          <StatusEffect type="OnInserted" target="Contained" condition="0" setvalue="true">
+            <Conditional hastag="cleanwater" />
+          </StatusEffect>
+          <StatusEffect type="OnRemoved" target="This,Contained" capacity="0" drawinventory="false" allowaccess="false" setvalue="true" >
+            <Conditional ConditionPercentage="lt 100" />
+          </StatusEffect>
+        </Containable>
+      </ItemContainer>
+      <AiTarget sightrange="1000" static="true" />
+    </Item>
+    
 
   </Items>
 </Override>
