@@ -187,10 +187,10 @@
         </Deconstruct>
         <Fabricate suitablefabricators="fabricator" requiredtime="45" requiresrecipe="false" amount="1">
           <RequiredSkill identifier="mechanical" level="75" />
-          <RequiredItem identifier="steel" amount="2"/>
-          <RequiredItem identifier="titaniumaluminiumalloy" amount="8"/>
-          <RequiredItem identifier="plastic" amount="4"/>
-          <RequiredItem identifier="fpgacircuit" amount="1"/>
+          <RequiredItem identifier="steel" amount="4"/>
+          <RequiredItem identifier="titaniumaluminiumalloy" amount="3"/>
+          <RequiredItem identifier="plastic" amount="6"/>
+          <RequiredItem identifier="fpgacircuit" amount="4"/>
         </Fabricate>
         <CustomInterface canbeselected="true" drawhudwhenequipped="false">
           <GuiFrame style="ItemUI" absoluteoffset="0,-100" anchor="Center" relativesize="0.07,0.08"/>
