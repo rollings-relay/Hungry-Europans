@@ -60,6 +60,17 @@ AllOWEDJOBS include jobs
 	</Conversation>
 </Conversation>
 
+<Conversation line="All you need is salt, pepper and engine oil to spice up a good meal." speaker="0" allowedjobs="chef">
+	<Conversation line="No wonder I couldn't find it!" speaker="1" allowedjobs="mechanic"/>
+	<Conversation line="I'm fine with just rations." speaker="1" flags="Tough">
+		<Conversation line="You sir have a wooden palate. Maybe I should just let you chew on the cutting board instead of serving you food." speaker="0"/>
+	</Conversation>
+	<Conversation line="Make sure to watch your salt intake levels. Higher doses maybe cause rising blood pressure and premature death." speaker="1" allowedjobs="medicaldoctor">
+		<Conversation line="We're not going to mention the oil?" speaker="2"/>
+		<Conversation line="I'd be lucky if it's salt that kills me." speaker="2" />
+	</Conversation>
+</Conversation>
+
 <!-- NPC IS HUNGRY - different levels -->
 <!-- Light -->
 <Conversation line="I've been feeling peckish ever since we left the station" speaker="0" flags="hungrylight,initial">
@@ -186,7 +197,7 @@ AllOWEDJOBS include jobs
 	<Conversation line="That's easy enough to solve." speaker="1" speakertag="laid-back" />
 </Conversation>
 
-<!-- STUFFED -->
+<!-- NPC is STUFFED -->
 <!-- Light -->
 <Conversation line="Ahhh, I think I'm full, need to digest a little." speaker="0" flags="stuffedheavy" >
 	<Conversation line="Perform your tasks and those calories will go away." speaker="1" speakertag="professional" />
