@@ -71,6 +71,20 @@ AllOWEDJOBS include jobs
 	</Conversation>
 </Conversation>
 
+<Conversation line="I've heard about a recipe that is all the rage on New Iapetus." speaker="0" allowedjobs="chef">
+	<Conversation line="You have my attention..." speaker="1" >
+		<Conversation line="You salt fish and put it in a can. Then you let it ferment in radiation for several days." speaker="0">
+      <Conversation line="You are NOT putting canned fish inside my reactor." speaker="2" allowedjobs="engineer"/>
+      <Conversation line="I've seen it once. Half of the room passed out, but I couldn't tell whether it was the radiation or the smell." speaker="2" allowedjobs="engineer"/>
+    </Conversation>
+	</Conversation>
+</Conversation>
+
+<Conversation line="A pomegrenade a day keeps the doctor away..." speaker="0" allowedjobs="chef">
+  <Conversation line="This is not proper medical advice. Please consult a trained professional regularly." speaker="1" allowedjobs="medicaldoctor"/>
+	<Conversation line="A mutated fruit a day burns the submarine away." speaker="1" />
+</Conversation>
+
 <!-- NPC IS HUNGRY - different levels -->
 <!-- Light -->
 <Conversation line="I've been feeling peckish ever since we left the station" speaker="0" flags="hungrylight,initial">
