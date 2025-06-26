@@ -624,7 +624,10 @@
     
     
     <!-- BACKWORDS COMPATIBILITY -->
-    <Item name="Meal of Madness - Crawler" identifier="he-madnessmealcrawler" category="Misc" subcategory="Food" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Content: 1x Crawler Burger | 8x Crawler Nuggets | 1x Can of Couwola Cola | 1x Random Toy" Tags="ingredient,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="true" requireaimtouse="true" canflipx="false">
+    <!-- BACKWORDS COMPATIBILITY -->
+    <!-- BACKWORDS COMPATIBILITY -->
+    <!-- BACKWORDS COMPATIBILITY -->
+    <Item name="Meal of Madness - Crawler" identifier="he-madnessmealcrawler" showinmenus="false" category="Misc" subcategory="Food" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Content: 1x Crawler Burger | 8x Crawler Nuggets | 1x Can of Couwola Cola | 1x Random Toy" Tags="ingredient,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="true" requireaimtouse="true" canflipx="false">
       <PreferredContainer primary="table" secondary="crewcab,kitchen"/>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Sprite texture="%ModDir%/Content/Items/Food/FoodAndMeat.png" sourcerect="61,63,61,74" depth="0.6" origin="0.5,0.5" />
@@ -639,7 +642,7 @@
       </Holdable>
     </Item>
     
-    <Item name="Meal of Madness - Mudraptor" identifier="he-madnessmealmudraptor" category="Misc" subcategory="Food" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Content: 1x Mudraptor Burger | 8x Mudraptor Nuggets | 1x Can of Couwola Cola | 1x Random Toy" Tags="ingredient,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="true" requireaimtouse="true" canflipx="false">
+    <Item name="Meal of Madness - Mudraptor" identifier="he-madnessmealmudraptor" showinmenus="false" category="Misc" subcategory="Food" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Content: 1x Mudraptor Burger | 8x Mudraptor Nuggets | 1x Can of Couwola Cola | 1x Random Toy" Tags="ingredient,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="true" requireaimtouse="true" canflipx="false">
       <PreferredContainer primary="table" secondary="crewcab,kitchen"/>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Sprite texture="%ModDir%/Content/Items/Food/FoodAndMeat.png" sourcerect="61,63,61,74" depth="0.6" origin="0.5,0.5" />
@@ -654,7 +657,7 @@
       </Holdable>
     </Item>
     
-    <Item name="Pack of Crawler Nuggets" identifier="he-nuggetpackcrawler" category="Misc" subcategory="Food" maxstacksize="1" cargocontaineridentifier="metalcrate" description="A pack of 8x crawler nuggets." Tags="smallitem,ingredient,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="true" requireaimtouse="true" canflipx="false">
+    <Item name="Pack of Crawler Nuggets" identifier="he-nuggetpackcrawler" showinmenus="false" category="Misc" subcategory="Food" maxstacksize="1" cargocontaineridentifier="metalcrate" description="A pack of 8x crawler nuggets." Tags="smallitem,ingredient,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="true" requireaimtouse="true" canflipx="false">
       <PreferredContainer primary="table" secondary="crewcab,kitchen"/>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Sprite texture="%ModDir%/Content/Items/Food/FoodAndMeat.png" sourcerect="123,109,49,28" depth="0.6" origin="0.5,0.5" />
@@ -669,7 +672,7 @@
       </Holdable>
     </Item>
 
-    <Item name="Pack of Hammerhead Nuggets" identifier="he-nuggetpackhammerhead" category="Misc" subcategory="Food" maxstacksize="1" cargocontaineridentifier="metalcrate" description="A pack of 8x hammerhead nuggets." Tags="smallitem,ingredient,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="true" requireaimtouse="true" canflipx="false">
+    <Item name="Pack of Hammerhead Nuggets" identifier="he-nuggetpackhammerhead" showinmenus="false" category="Misc" subcategory="Food" maxstacksize="1" cargocontaineridentifier="metalcrate" description="A pack of 8x hammerhead nuggets." Tags="smallitem,ingredient,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="true" requireaimtouse="true" canflipx="false">
       <PreferredContainer primary="table" secondary="crewcab,kitchen"/>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Sprite texture="%ModDir%/Content/Items/Food/FoodAndMeat.png" sourcerect="123,109,49,28" depth="0.6" origin="0.5,0.5" />
@@ -684,7 +687,7 @@
       </Holdable>
     </Item>
 
-    <Item name="Pack of Mudraptor Nuggets" identifier="he-nuggetpackmudraptor" category="Misc" subcategory="Food" maxstacksize="1" cargocontaineridentifier="metalcrate" description="A pack of 8x mudraptor nuggets." Tags="smallitem,ingredient,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="true" requireaimtouse="true" canflipx="false">
+    <Item name="Pack of Mudraptor Nuggets" identifier="he-nuggetpackmudraptor" showinmenus="false" category="Misc" subcategory="Food" maxstacksize="1" cargocontaineridentifier="metalcrate" description="A pack of 8x mudraptor nuggets." Tags="smallitem,ingredient,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="true" requireaimtouse="true" canflipx="false">
       <PreferredContainer primary="table" secondary="crewcab,kitchen"/>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Sprite texture="%ModDir%/Content/Items/Food/FoodAndMeat.png" sourcerect="123,109,49,28" depth="0.6" origin="0.5,0.5" />
@@ -699,7 +702,7 @@
       </Holdable>
     </Item>
 
-    <Item name="Pack of Thresher Nuggets" identifier="he-nuggetpackthresher" category="Misc" subcategory="Food" maxstacksize="1" cargocontaineridentifier="metalcrate" description="A pack of 8x thresher nuggets." Tags="smallitem,ingredient,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="true" requireaimtouse="true" canflipx="false">
+    <Item name="Pack of Thresher Nuggets" identifier="he-nuggetpackthresher" showinmenus="false" category="Misc" subcategory="Food" maxstacksize="1" cargocontaineridentifier="metalcrate" description="A pack of 8x thresher nuggets." Tags="smallitem,ingredient,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="true" requireaimtouse="true" canflipx="false">
       <PreferredContainer primary="table" secondary="crewcab,kitchen"/>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Sprite texture="%ModDir%/Content/Items/Food/FoodAndMeat.png" sourcerect="123,109,49,28" depth="0.6" origin="0.5,0.5" />
@@ -715,7 +718,7 @@
     </Item>
     
     <!-- These rations are no longer used -->
-    <Item name="MRE - Crawler" identifier="he-mrecrawler" category="Misc" subcategory="Food" maxstacksize="2" maxstacksizecharacterinventory="2" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,ingredient,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" impacttolerance="5.5" isshootable="true" requireaimtouse="true" canflipx="false">
+    <Item name="MRE - Crawler" identifier="he-mrecrawler" showinmenus="false" category="Misc" subcategory="Food" maxstacksize="2" maxstacksizecharacterinventory="2" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,ingredient,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" impacttolerance="5.5" isshootable="true" requireaimtouse="true" canflipx="false">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab,abandonedcrewcab" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" spawnprobability="0.04" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -788,7 +791,7 @@
       </CustomInterface>
     </Item>
 
-    <Item name="MRE - Mudraptor" identifier="he-mremudraptor" category="Misc" subcategory="Food" maxstacksize="2" maxstacksizecharacterinventory="2" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,ingredient,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" impacttolerance="5.5" isshootable="true" requireaimtouse="true" canflipx="false">
+    <Item name="MRE - Mudraptor" identifier="he-mremudraptor" showinmenus="false" category="Misc" subcategory="Food" maxstacksize="2" maxstacksizecharacterinventory="2" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,ingredient,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" impacttolerance="5.5" isshootable="true" requireaimtouse="true" canflipx="false">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab,abandonedcrewcab" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" spawnprobability="0.04" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -861,7 +864,7 @@
       </CustomInterface>
     </Item>
 
-    <Item name="MRE - Hammerhead" identifier="he-mrehammerhead" category="Misc" subcategory="Food" maxstacksize="2" maxstacksizecharacterinventory="2" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,ingredient,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" impacttolerance="5.5" isshootable="true" requireaimtouse="true" canflipx="false">
+    <Item name="MRE - Hammerhead" identifier="he-mrehammerhead" showinmenus="false" category="Misc" subcategory="Food" maxstacksize="2" maxstacksizecharacterinventory="2" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,ingredient,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" impacttolerance="5.5" isshootable="true" requireaimtouse="true" canflipx="false">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab,abandonedcrewcab" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" spawnprobability="0.04" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -934,7 +937,7 @@
       </CustomInterface>
     </Item>
 
-    <Item name="MRE - Thresher" identifier="he-mrethresher" category="Misc" subcategory="Food" maxstacksize="2" maxstacksizecharacterinventory="2" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,ingredient,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" impacttolerance="5.5" isshootable="true" requireaimtouse="true" canflipx="false">
+    <Item name="MRE - Thresher" identifier="he-mrethresher" showinmenus="false" category="Misc" subcategory="Food" maxstacksize="2" maxstacksizecharacterinventory="2" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,ingredient,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" impacttolerance="5.5" isshootable="true" requireaimtouse="true" canflipx="false">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab,abandonedcrewcab" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" spawnprobability="0.04" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -1007,7 +1010,7 @@
       </CustomInterface>
     </Item>
 
-    <Item name="MRE - Crawler Ration" identifier="he-mrecrawlerration" health="20" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+    <Item name="MRE - Crawler Ration" identifier="he-mrecrawlerration" health="20" showinmenus="false" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,165,28,41" depth="0.6" origin="0.5,0.5" />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="77,168,31,38" depth="0.6" maxcondition="99" />
@@ -1070,7 +1073,7 @@
       <AiTarget sightrange="1000" static="true" />
     </Item>
         
-    <Item name="MRE - Mudraptor Ration" identifier="he-mremudraptorration" health="20" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+    <Item name="MRE - Mudraptor Ration" identifier="he-mremudraptorration" health="20" showinmenus="false" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,165,28,41" depth="0.6" origin="0.5,0.5" />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="77,168,31,38" depth="0.6" maxcondition="99" />
@@ -1135,7 +1138,7 @@
       <AiTarget sightrange="1000" static="true" />
     </Item>
     
-    <Item name="MRE - Hammerhead Ration" identifier="he-mrehammerheadration" health="20" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+    <Item name="MRE - Hammerhead Ration" identifier="he-mrehammerheadration" health="20" showinmenus="false" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,165,28,41" depth="0.6" origin="0.5,0.5" />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="77,168,31,38" depth="0.6" maxcondition="99" />
@@ -1198,7 +1201,7 @@
       <AiTarget sightrange="1000" static="true" />
     </Item>
     
-    <Item name="MRE - Thresher Ration" identifier="he-mrethresherration" health="20" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+    <Item name="MRE - Thresher Ration" identifier="he-mrethresherration" health="20" showinmenus="false" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,165,28,41" depth="0.6" origin="0.5,0.5" />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="77,168,31,38" depth="0.6" maxcondition="99" />
