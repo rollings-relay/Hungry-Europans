@@ -1501,7 +1501,7 @@
       <Item identifier="adrenalinegland" />
     </Deconstruct>
     <Body radius="25" friction="1.0" restitution="0.01" angulardamping="0.8" density="11"/>
-    <Holdable slots="RightHand+LeftHand" holdpos="35,-30" handle1="0,-10" handle2="0,-20" swingamount="15,15" swingspeed="2" swingwhenholding="True">
+    <Holdable slots="RightHand,LeftHand" holdpos="35,-30" handle1="0,-10" handle2="0,-20" swingamount="15,15" swingspeed="2" swingwhenholding="True">
       <StatusEffect type="OnBroken" target="This">
         <particleemitter particle="whitegoosplash" particleamount="20" velocitymin="0" velocitymax="300" anglemin="0" anglemax="360" scalemin="0.5" scalemax="1.0" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
         <particleemitter particle="brownchunks" particleamount="50" velocitymin="0" velocitymax="700" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.5" />
@@ -1545,7 +1545,7 @@
       <Item identifier="adrenalinegland" />
     </Deconstruct>
     <Body radius="25" friction="1.0" restitution="0.01" angulardamping="0.8" density="11"/>
-    <Holdable slots="RightHand+LeftHand" holdpos="35,-30" handle1="0,-10" handle2="0,-20" swingamount="15,15" swingspeed="2" swingwhenholding="True">
+    <Holdable slots="RightHand,LeftHand" holdpos="35,-30" handle1="0,-10" handle2="0,-20" swingamount="15,15" swingspeed="2" swingwhenholding="True">
       <StatusEffect type="OnBroken" target="This">
         <particleemitter particle="whitegoosplash" particleamount="20" velocitymin="0" velocitymax="300" anglemin="0" anglemax="360" scalemin="0.5" scalemax="1.0" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
         <particleemitter particle="brownchunks" particleamount="50" velocitymin="0" velocitymax="700" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.5" />
@@ -1589,7 +1589,7 @@
       <Item identifier="adrenalinegland" />
     </Deconstruct>
     <Body radius="25" friction="1.0" restitution="0.01" angulardamping="0.8" density="11"/>
-    <Holdable slots="RightHand+LeftHand" holdpos="35,-30" handle1="0,-10" handle2="0,-20" swingamount="15,15" swingspeed="2" swingwhenholding="True">
+    <Holdable slots="RightHand,LeftHand" holdpos="35,-30" handle1="0,-10" handle2="0,-20" swingamount="15,15" swingspeed="2" swingwhenholding="True">
       <StatusEffect type="OnBroken" target="This">
         <particleemitter particle="whitegoosplash" particleamount="20" velocitymin="0" velocitymax="300" anglemin="0" anglemax="360" scalemin="0.5" scalemax="1.0" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
         <particleemitter particle="brownchunks" particleamount="50" velocitymin="0" velocitymax="700" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.5" />
@@ -1633,7 +1633,7 @@
       <Item identifier="adrenalinegland" />
     </Deconstruct>
     <Body radius="25" friction="1.0" restitution="0.01" angulardamping="0.8" density="11"/>
-    <Holdable slots="RightHand+LeftHand" holdpos="35,-30" handle1="0,-10" handle2="0,-20" swingamount="15,15" swingspeed="2" swingwhenholding="True">
+    <Holdable slots="RightHand,LeftHand" holdpos="35,-30" handle1="0,-10" handle2="0,-20" swingamount="15,15" swingspeed="2" swingwhenholding="True">
       <StatusEffect type="OnBroken" target="This">
         <particleemitter particle="whitegoosplash" particleamount="20" velocitymin="0" velocitymax="300" anglemin="0" anglemax="360" scalemin="0.5" scalemax="1.0" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
         <particleemitter particle="brownchunks" particleamount="50" velocitymin="0" velocitymax="700" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.5" />
