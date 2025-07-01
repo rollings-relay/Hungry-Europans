@@ -77,7 +77,7 @@
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
     </Affliction>  
 
-    <!-- Portein Rich Diet, gives extra melee damage and weapons skill  -->
+    <!-- Protein Rich Diet, gives extra melee damage and weapons skill  -->
     <Affliction name="Potein Rich Diet"
       identifier="he-proteinrich"
       type="foodbuff"
