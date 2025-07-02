@@ -178,7 +178,7 @@
         <RequiredSkill identifier="mechanical" level="15" />
         <RequiredItem identifier="plastic" amount="4" />
       </Fabricate>
-      <ItemContainer capacity="8" maxstacksize="1" canbeselected="false" hideitems="false" itempos="-20,5" iteminterval="40,1" itemrotation="0" itemsperrow="2" slotsperrow="4" containedspritedepths="0.71,0.72,0.73,0.74,0.75,0.76,0.77,0.78,0.79,0.80,0.81,0.82,0.83,0.84,0.85" msg="ItemMsgInteractSelect" canflipx="false">
+      <ItemContainer ItemsUseInventoryPlacement="true" capacity="8" maxstacksize="1" canbeselected="false" hideitems="false" itempos="-20,5" iteminterval="40,1" itemrotation="0" itemsperrow="2" slotsperrow="4" containedspritedepths="0.71,0.72,0.73,0.74,0.75,0.76,0.77,0.78,0.79,0.80,0.81,0.82,0.83,0.84,0.85" msg="ItemMsgInteractSelect" canflipx="false">
         <Containable items="jar,emptyjar" />
         <StatusEffect type="OnImpact" target="this">
           <RequiredItem items="jar,emptyjar" type="Contained" />
@@ -202,7 +202,7 @@
         <RequiredSkill identifier="mechanical" level="15" />
         <RequiredItem identifier="plastic" amount="4" />
       </Fabricate>
-      <ItemContainer capacity="20" maxstacksize="1" canbeselected="false" hideitems="false" itempos="-30,4" iteminterval="20,1" itemrotation="0" itemsperrow="4" slotsperrow="4" containedspritedepths="0.71,0.72,0.73,0.74,0.75,0.76,0.77,0.78,0.79,0.80,0.81,0.82,0.83,0.84,0.85,0.86,0.87,0.88,0.89,0.90" msg="ItemMsgInteractSelect" canflipx="false">
+      <ItemContainer ItemsUseInventoryPlacement="true" capacity="20" maxstacksize="1" canbeselected="false" hideitems="false" itempos="-30,4" iteminterval="20,1" itemrotation="0" itemsperrow="4" slotsperrow="4" containedspritedepths="0.71,0.72,0.73,0.74,0.75,0.76,0.77,0.78,0.79,0.80,0.81,0.82,0.83,0.84,0.85,0.86,0.87,0.88,0.89,0.90" msg="ItemMsgInteractSelect" canflipx="false">
         <Containable items="bottle,emptybottle" />
         <StatusEffect type="OnImpact" target="this">
           <RequiredItem items="bottle,emptybottle" type="Contained" />
@@ -221,7 +221,7 @@
       <Deconstruct time="5">
         <Item identifier="plastic" amount="2" />
       </Deconstruct>
-      <ItemContainer capacity="20" maxstacksize="1" canbeselected="false" hideitems="false" itempos="-30,4" iteminterval="20,1" itemrotation="0" itemsperrow="4" slotsperrow="4" containedspritedepths="0.71,0.72,0.73,0.74,0.75,0.76,0.77,0.78,0.79,0.80,0.81,0.82,0.83,0.84,0.85,0.86,0.87,0.88,0.89,0.90" msg="ItemMsgInteractSelect" canflipx="false">
+      <ItemContainer ItemsUseInventoryPlacement="true" capacity="20" maxstacksize="1" canbeselected="false" hideitems="false" itempos="-30,4" iteminterval="20,1" itemrotation="0" itemsperrow="4" slotsperrow="4" containedspritedepths="0.71,0.72,0.73,0.74,0.75,0.76,0.77,0.78,0.79,0.80,0.81,0.82,0.83,0.84,0.85,0.86,0.87,0.88,0.89,0.90" msg="ItemMsgInteractSelect" canflipx="false">
         <Containable items="bottle,emptybottle" />
         <StatusEffect type="OnImpact" target="this">
           <RequiredItem items="bottle,emptybottle" type="Contained" />
@@ -251,7 +251,7 @@
         </StatusEffect>
         <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.6" PropulsionSpeedMultiplier="0.6" setvalue="true" duration="0.1" />
       </Holdable>
-      <ItemContainer capacity="4" maxstacksize="1" slotsperrow="1" canbeselected="true" hideitems="false" itempos="64,-62" iteminterval="0,-92" msg="ItemMsgInteractSelect">
+      <ItemContainer ItemsUseInventoryPlacement="true" capacity="4" maxstacksize="1" slotsperrow="1" canbeselected="true" hideitems="false" itempos="64,-62" iteminterval="0,-92" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.15,0.6" anchor="Center" style="ItemUI" />
         <Containable items="liquorcrate,jarcrate,smallcrate" />
       </ItemContainer>
@@ -275,7 +275,7 @@
         </StatusEffect>
         <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.8" PropulsionSpeedMultiplier="0.8" setvalue="true" duration="0.1" />
       </Holdable>
-      <ItemContainer capacity="2" maxstacksize="1" slotsperrow="1" canbeselected="true" hideitems="false" itempos="64,-57" iteminterval="0,-92" msg="ItemMsgInteractSelect">
+      <ItemContainer ItemsUseInventoryPlacement="true" capacity="2" maxstacksize="1" slotsperrow="1" canbeselected="true" hideitems="false" itempos="64,-57" iteminterval="0,-92" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.15,0.3" anchor="Center" style="ItemUI" />
         <Containable items="liquorcrate,jarcrate,smallcrate" />
       </ItemContainer>
@@ -317,7 +317,7 @@
         <RequiredItem identifier="he-glassfragments" amount="4" />
         <RequiredItem identifier="steel" amount="3" />
       </Fabricate>
-      <ItemContainer capacity="12" maxstacksize="1" canbeselected="true" hideitems="false" itempos="36,-52" iteminterval="30,-80" itemrotation="0" itemsperrow="6" slotsperrow="6" containedspritedepths="0.798,0.798,0.798,0.798,0.798,0.798,0.799,0.799,0.799,0.799,0.799,0.799" msg="ItemMsgInteractSelect" canflipx="false" ItemsUseInventoryPlacement="true">
+      <ItemContainer ItemsUseInventoryPlacement="true" capacity="12" maxstacksize="1" canbeselected="true" hideitems="false" itempos="36,-52" iteminterval="30,-80" itemrotation="0" itemsperrow="6" slotsperrow="6" containedspritedepths="0.798,0.798,0.798,0.798,0.798,0.798,0.799,0.799,0.799,0.799,0.799,0.799" msg="ItemMsgInteractSelect" canflipx="false">
         <Containable items="bottle,emptybottle" />
         <GuiFrame relativesize="0.3,0.2" anchor="BottomCenter" pivot="BottomCenter" relativeoffset="0,0.4" style="ItemUI" />
       </ItemContainer>
@@ -529,7 +529,7 @@
         <RequiredItem identifier="steel" amount="5" />
         <RequiredItem identifier="titaniumaluminiumalloy" amount="2" />
       </Fabricate>
-      <ItemContainer capacity="30" canbeselected="true" selectkey="Action" hideitems="true" msg="ItemMsgInteractSelect">
+      <ItemContainer ItemsUseInventoryPlacement="true" capacity="30" canbeselected="true" selectkey="Action" hideitems="true" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.25,0.55" anchor="Center" style="ItemUI" />
         <SlotIcon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="152,0,85,85" origin="0.5,0.5" />
         <Containable items="fooditem,drinkitem,emptybottle,emptyjar,kettle,tableware" />
