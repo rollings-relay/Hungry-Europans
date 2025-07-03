@@ -602,7 +602,7 @@
       <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1725,121,161,53" origin="0.47,0.86" depth="0.795" comparison="And">
         <IsActiveConditional HasTag="pot" targetcontaineditem="true" />
       </DecorativeSprite>
-      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,426,81,85" origin="0.47,0.86" depth="0.793" comparison="And">
+      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,426,81,85" origin="0.6,0.9" depth="0.793" comparison="And">
         <IsActiveConditional HasTag="teakettle" targetcontaineditem="true" />
       </DecorativeSprite>
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1886,121,161,53" depth="0.795" origin="0.47,0.86" maxcondition="80" fadein="true" />
