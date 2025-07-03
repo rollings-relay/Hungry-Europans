@@ -11,7 +11,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="651,0,68,29" depth="0.6" origin="0.5,0.5" />
       <Fabricate suitablefabricators="cuttingboard" requiredtime="10" requiresrecipe="true" amount="1" displayname="huskfooditem">
         <RequiredSkill identifier="cooking" level="50" />
-        <RequiredItem identifier="he-preparredhuskmeat" amount="1" MinCondition="0.25" UseCondition="true" />
+        <RequiredItem identifier="he-preparedhuskmeat" amount="1" MinCondition="0.25" UseCondition="true" />
         <RequiredItem identifier="he-seaweedstrip" amount="1" />
         <RequiredItem identifier="he-emptyplate" amount="1" />
         <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.01"/>

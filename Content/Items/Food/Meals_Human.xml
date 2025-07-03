@@ -12,7 +12,7 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="789,30,68,29" origin="0.5,0.5" />
       <Fabricate suitablefabricators="cuttingboard" requiredtime="10" requiresrecipe="false" amount="1" displayname="humanfooditem">
         <RequiredSkill identifier="cooking" level="50" />
-        <RequiredItem identifier="he-preparredhumanfilets" amount="1" MinCondition="0.25" UseCondition="true" />
+        <RequiredItem identifier="he-preparedhumanfilets" amount="1" MinCondition="0.25" UseCondition="true" />
         <RequiredItem identifier="bubbleberryleaf" amount="1" />
         <RequiredItem identifier="he-emptyplate" amount="1" />
       </Fabricate>

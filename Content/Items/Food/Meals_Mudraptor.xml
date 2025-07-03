@@ -12,7 +12,7 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="513,0,68,29" origin="0.5,0.5" />
       <Fabricate suitablefabricators="cuttingboard" requiredtime="10" requiresrecipe="false" amount="1" displayname="mudraptorfooditem">
         <RequiredSkill identifier="cooking" level="35" />
-        <RequiredItem identifier="he-preparredmudraptorroast" amount="1" MinCondition="0.25" UseCondition="true" />
+        <RequiredItem identifier="he-preparedmudraptorroast" amount="1" MinCondition="0.25" UseCondition="true" />
         <RequiredItem identifier="bubbleberryleaf" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
         <RequiredItem identifier="popnutleaf" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
         <RequiredItem identifier="he-emptyplate" amount="1" />

@@ -12,7 +12,7 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="651,30,68,29" origin="0.5,0.5" />
       <Fabricate suitablefabricators="cuttingboard" requiredtime="10" requiresrecipe="false" amount="1" displayname="thresherfooditem">
         <RequiredSkill identifier="cooking" level="50" />
-        <RequiredItem identifier="he-preparredthresherfilets" amount="1" MinCondition="0.25" UseCondition="true" />
+        <RequiredItem identifier="he-preparedthresherfilets" amount="1" MinCondition="0.25" UseCondition="true" />
         <RequiredItem identifier="he-seaweedstrip" amount="1" />
         <RequiredItem identifier="he-emptyplate" amount="1" />
       </Fabricate>
