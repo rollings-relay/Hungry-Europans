@@ -61,7 +61,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-huskhotdog>Got a prickly taste to it.</entitydescription.he-huskhotdog><!--Patch 13-->
 <entityname.he-cookedhusknugget>Nugget</entityname.he-cookedhusknugget><!--Patch 13-->
 <entitydescription.he-cookedhusknugget>Got a prickly taste to it.</entitydescription.he-cookedhusknugget><!--Patch 13-->
-<entityname.he-cookedhuskfilet>Filet</entityname.he-cookedhuskfilet><!--Patch 13-->
+<entityname.he-cookedhuskfilet>Cooked Filet</entityname.he-cookedhuskfilet><!--Patch 13-->
 <entitydescription.he-cookedhuskfilet>Got a prickly taste to it.</entitydescription.he-cookedhuskfilet><!--Patch 13-->
 <!--watcher-->
 <entityname.he-watcherburger>Burger</entityname.he-watcherburger><!--Patch 13-->
@@ -164,7 +164,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-nuggetpackthresher>A pack of 8x thresher nuggets.</entitydescription.he-nuggetpackthresher><!--Patch 13-->
 <!--endworm-->
 <entityname.he-endwormhotdog>Hotdog</entityname.he-endwormhotdog>
-<entitydescription.he-endwormhotdog>The taste is insane!</entitydescription.he-endwormhotdog>
+<entitydescription.he-endwormhotdog>Abandon your religion and prepare for culinary annihilation.</entitydescription.he-endwormhotdog>
 <entityname.he-endwormburger>Burger</entityname.he-endwormburger>
 <entitydescription.he-endwormburger>The taste is insane!</entitydescription.he-endwormburger>
 <entityname.he-cookedendwormnugget>Nugget</entityname.he-cookedendwormnugget><!--Patch 13-->
@@ -346,7 +346,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entityname.he-rawendwormmeat>Raw Endworm Meat</entityname.he-rawendwormmeat>
 <entitydescription.he-rawendwormmeat>Spoils if not refrigerated.</entitydescription.he-rawendwormmeat>
 <entityname.he-rawendwormsausage>Raw Endworm Sausage</entityname.he-rawendwormsausage>
-<entitydescription.he-rawendwormsausage>Expect the wurst! Spoils if not refrigerated.</entitydescription.he-rawendwormsausage>
+<entitydescription.he-rawendwormsausage>Butter the pan,butter yourself. Spoils if not refrigerated.</entitydescription.he-rawendwormsausage>
 <entityname.he-rawendwormmeatpatty>Raw Endworm Meat Patty</entityname.he-rawendwormmeatpatty>
 <entitydescription.he-rawendwormmeatpatty>Spoils if not refrigerated.</entitydescription.he-rawendwormmeatpatty>
 <entityname.he-humanmeatchunk>Human Meat</entityname.he-humanmeatchunk>
@@ -1031,12 +1031,6 @@ SEARCH FOR THE FOLLOWING:                                                       
 <fabricationdescription.tobaccoingredient>Plants that can contain tobacco.</fabricationdescription.tobaccoingredient>
 
 
-
-<entityname.he-pizza>Pizza</entityname.he-pizza>
-<entitydescription.he-pizza>A flat base of dough, a good dose of cheese, flakes of meat and most important of all, sweet sliced fruit to honor the old earthian recipe. Cut yourself a piece!</entitydescription.he-pizza>
-<entityname.he-pizzaslice>Pizza Slice</entityname.he-pizzaslice>
-<entitydescription.he-pizzaslice>Kowabunga!</entitydescription.he-pizzaslice>
-
 <entityname.he-omelette>Omelette</entityname.he-omelette>
 <entitydescription.he-omelette>Protein-rich and hatchling-free.</entitydescription.he-omelette>
 
@@ -1104,6 +1098,52 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-mrepacket>Open it up to get 2 MRE rations.</entitydescription.he-mrepacket>
 <entityname.he-mreration>MRE - Dehydrated Ration</entityname.he-mreration>
 <entitydescription.he-mreration>A ready-to-eat meal of uncertain composition. Just pour water in it and enjoy the moist gruel.</entitydescription.he-mreration>
+
+
+<!-- Fast food -->
+<entityname.he-rawfries>Raw Fries</entityname.he-rawfries>
+<entitydescription.he-rawfries>Out of the pom, into the fryer.</entitydescription.he-rawfries>
+
+<entityname.he-fries>Fries</entityname.he-fries>
+<entitydescription.he-fries>Crunchy and salty pomegrenade fries.</entitydescription.he-fries>
+
+<entityname.he-rawnuggets>Pile of Raw Nuggets</entityname.he-rawnuggets>
+<entitydescription.he-rawnuggets>A pile of raw nuggets. Put it in a fryer.</entitydescription.he-rawnuggets>
+
+<entityname.he-cookednugget>Nugget</entityname.he-cookednugget>
+<entitydescription.he-cookednugget>Meaty slosh, battered and deep-fried.</entitydescription.he-cookednugget>
+
+<entityname.he-burger>Burger</entityname.he-burger>
+<entitydescription.he-burger>A culinary classic, the building brick of space colonization. Some say a healthy Europan is half water, half burger.</entitydescription.he-burger>
+
+<entityname.he-hotdog>Hotdog</entityname.he-hotdog>
+<entitydescription.he-hotdog>Grab a bite while watching mudraptor races.</entitydescription.he-hotdog>
+
+<entityname.he-pizza>Pizza</entityname.he-pizza>
+<entitydescription.he-pizza>A flat base of dough, a good dose of cheese, flakes of meat and most important of all, sweet sliced fruit to honor the old earthian recipe. Cut yourself a piece!</entitydescription.he-pizza>
+<entityname.he-pizzaslice>Pizza Slice</entityname.he-pizzaslice>
+<entitydescription.he-pizzaslice>Kowabunga!</entitydescription.he-pizzaslice>
+
+
+<!-- other ingredients -->
+<entityname.he-rawsausage>Raw Sausage</entityname.he-rawsausage>
+<entitydescription.he-rawsausage>Expect the wurst! Spoils if not refrigerated.</entitydescription.he-rawsausage>
+
+<entityname.he-sausage>Cooked Sausage</entityname.he-sausage>
+<entitydescription.he-sausage>Expect the wurst!</entitydescription.he-sausage>
+
+<entityname.he-endwormsausage>Sausage</entityname.he-endwormsausage>
+<entitydescription.he-endwormsausage>Blaspheme with me.</entitydescription.he-endwormsausage>
+
+<entityname.he-rawmeatpatty>Raw Meat Patty</entityname.he-rawmeatpatty>
+<entitydescription.he-rawmeatpatty>Cook it on the grill. Spoils if not refrigerated.</entitydescription.he-rawmeatpatty>
+
+<entityname.he-meatpatty>Cooked Meat Patty</entityname.he-meatpatty>
+<entitydescription.he-meatpatty>Seared to perfection.</entitydescription.he-meatpatty>
+
+<entityname.he-proteinalgaecake>Protein Algae Cake</entityname.he-proteinalgaecake>
+<entitydescription.he-proteinalgaecake>There is way more algae than protein in these. You could say the cake is a lie.</entitydescription.he-proteinalgaecake>
+
 
 <!-- HUBERT ADDITIONS ABOVE THIS --> 
 <!-- HUBERT ADDITIONS ABOVE THIS --> 
