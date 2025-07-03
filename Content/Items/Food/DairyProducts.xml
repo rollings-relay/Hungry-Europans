@@ -917,39 +917,7 @@
         <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.05"/>
         <RequiredItem identifier="he-sugar" UseCondition="True" MinCondition="0.1"/>
         <RequiredItem identifier="he-flour" UseCondition="True" MinCondition="0.25"/>
-        <RequiredItem tag="mudraptoregg" amount="1" MinCondition="0.5" UseCondition="False" />
-      </Fabricate>
-      <Fabricate suitablefabricators="oven" requiredtime="180" requiresrecipe="false" amount="8">
-        <RequiredSkill identifier="cooking" level="30" />
-        <RequiredItem tag="milk" UseCondition="True" MinCondition="0.099"/>
-        <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.05"/>
-        <RequiredItem identifier="he-sugar" UseCondition="True" MinCondition="0.1"/>
-        <RequiredItem identifier="he-flour" UseCondition="True" MinCondition="0.25"/>
-        <RequiredItem identifier="peanutegg" amount="1" MinCondition="0.5" UseCondition="False" />
-      </Fabricate>
-      <Fabricate suitablefabricators="oven" requiredtime="180" requiresrecipe="false" amount="8">
-        <RequiredSkill identifier="cooking" level="30" />
-        <RequiredItem tag="milk" UseCondition="True" MinCondition="0.099"/>
-        <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.05"/>
-        <RequiredItem identifier="he-sugar" UseCondition="True" MinCondition="0.1"/>
-        <RequiredItem identifier="he-flour" UseCondition="True" MinCondition="0.25"/>
-        <RequiredItem identifier="psilotoadegg" amount="1" MinCondition="0.5" UseCondition="False" />
-      </Fabricate>
-      <Fabricate suitablefabricators="oven" requiredtime="180" requiresrecipe="false" amount="8">
-        <RequiredSkill identifier="cooking" level="30" />
-        <RequiredItem tag="milk" UseCondition="True" MinCondition="0.099"/>
-        <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.05"/>
-        <RequiredItem identifier="he-sugar" UseCondition="True" MinCondition="0.1"/>
-        <RequiredItem identifier="he-flour" UseCondition="True" MinCondition="0.25"/>
-        <RequiredItem identifier="orangeboyegg" amount="1" MinCondition="0.5" UseCondition="False" />
-      </Fabricate>
-      <Fabricate suitablefabricators="oven" requiredtime="180" requiresrecipe="false" amount="8">
-        <RequiredSkill identifier="cooking" level="30" />
-        <RequiredItem tag="milk" UseCondition="True" MinCondition="0.099"/>
-        <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.05"/>
-        <RequiredItem identifier="he-sugar" UseCondition="True" MinCondition="0.1"/>
-        <RequiredItem identifier="he-flour" UseCondition="True" MinCondition="0.25"/>
-        <RequiredItem identifier="balloonegg" amount="1" MinCondition="0.5" UseCondition="False" />
+        <RequiredItem tag="smallegg" amount="1" />
       </Fabricate>
       <Deconstruct time="1" />
       <Body radius="12" height="55" density="7" />
