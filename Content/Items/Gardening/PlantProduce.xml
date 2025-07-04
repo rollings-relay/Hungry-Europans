@@ -117,7 +117,7 @@
     <PreferredContainer primary="plantcontainer"/>
   </Item>
   
-  <Item name="Salt Bulb" identifier="saltbulb" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,explodesinwater" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true">
+  <Item name="Salt Bulb" identifier="saltbulb" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,salty,explodesinwater" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true">
     <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.52" sourcerect="968,712,49,55" origin="0.5,0.5" />
     <Body radius="30" density="9" />
     <Price baseprice="65" sold="false">
@@ -589,7 +589,7 @@
     <PreferredContainer primary="plantcontainer"/>
   </Item>
   
-  <Item name="Mutated Salt Bulb" identifier="badsaltbulb" descriptionidentifier="saltbulb" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,mutatedplant,explodesinwater,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true">
+  <Item name="Mutated Salt Bulb" identifier="badsaltbulb" descriptionidentifier="saltbulb" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,mutatedplant,salty,explodesinwater,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true">
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.52" sourcerect="0,107,51,57" origin="0.5,0.5" />
     <Body radius="30" density="9" />
     <Deconstruct time="7">
@@ -972,7 +972,7 @@
   
   <!-- SALTGRENADE (saltvine x pom)
   cures small amounts of bloodloss and organ damage, but hates water -->
-  <Item name="saltgrenade" identifier="saltgrenade" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,fooditem,petfood1,petfood2,petfood3,distillable" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" allowasextracargo="true" requireaimtouse="true" isshootable="true" >
+  <Item name="saltgrenade" identifier="saltgrenade" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,fooditem,salty,petfood1,petfood2,petfood3,distillable" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" allowasextracargo="true" requireaimtouse="true" isshootable="true" >
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.52" sourcerect="896,576,64,64" origin="0.5,0.5" />
     <Body radius="28" density="9" />
     <PreferredContainer primary="plantcontainer"/>
