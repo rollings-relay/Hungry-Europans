@@ -2770,7 +2770,7 @@
       <Fabricate suitablefabricators="he-stove" requiredtime="60" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="cooking" level="10" />
         <RequiredItem tag="dirtywaterregular" amount="1" mincondition="100" />
-        <RequiredItem tag="pot" UseCondition="True" MinCondition="0.0"/>
+        <RequiredItem identifier="he-pot" UseCondition="True" MinCondition="0.0"/>
       </Fabricate>
       <Fabricate suitablefabricators="refillstation" displayname="fill" requiredtime="5" requiresrecipe="false" amount="1">
         <RequiredItem identifier="he-kegwater" UseCondition="True" MinCondition="0.05"/>
@@ -2917,7 +2917,7 @@
       <Fabricate suitablefabricators="he-stove" requiredtime="60" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="cooking" level="10" />
         <RequiredItem tag="dirtywaterrum" amount="1" mincondition="100" />
-        <RequiredItem tag="pot" UseCondition="True" MinCondition="0.0"/>
+        <RequiredItem identifier="he-pot" UseCondition="True" MinCondition="0.0"/>
       </Fabricate>
       <Fabricate suitablefabricators="refillstation" displayname="fill" requiredtime="5" requiresrecipe="false" amount="1">
         <RequiredItem identifier="he-kegwater" UseCondition="True" MinCondition="0.05"/>
@@ -2964,7 +2964,7 @@
       <Fabricate suitablefabricators="he-stove" requiredtime="60" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="cooking" level="10" />
         <RequiredItem tag="dirtywaterwhiskey" amount="1" mincondition="100" />
-        <RequiredItem tag="pot" UseCondition="True" MinCondition="0.0"/>
+        <RequiredItem identifier="he-pot" UseCondition="True" MinCondition="0.0"/>
       </Fabricate>
       <Fabricate suitablefabricators="refillstation" displayname="fill" requiredtime="5" requiresrecipe="false" amount="1">
         <RequiredItem identifier="he-kegwater" UseCondition="True" MinCondition="0.05"/>
@@ -3011,7 +3011,7 @@
       <Fabricate suitablefabricators="he-stove" requiredtime="60" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="cooking" level="10" />
         <RequiredItem tag="dirtywaterhalucinova" amount="1" mincondition="100" />
-        <RequiredItem tag="pot" UseCondition="True" MinCondition="0.0"/>
+        <RequiredItem identifier="he-pot" UseCondition="True" MinCondition="0.0"/>
       </Fabricate>
       <Fabricate suitablefabricators="refillstation" displayname="fill" requiredtime="5" requiresrecipe="false" amount="1">
         <RequiredItem identifier="he-kegwater" UseCondition="True" MinCondition="0.05"/>
@@ -3058,7 +3058,7 @@
       <Fabricate suitablefabricators="he-stove" requiredtime="60" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="cooking" level="10" />
         <RequiredItem tag="dirtywaterbeer" amount="1" mincondition="100" />
-        <RequiredItem tag="pot" UseCondition="True" MinCondition="0.0"/>
+        <RequiredItem identifier="he-pot" UseCondition="True" MinCondition="0.0"/>
       </Fabricate>
       <Fabricate suitablefabricators="refillstation" displayname="fill" requiredtime="5" requiresrecipe="false" amount="1">
         <RequiredItem identifier="he-kegwater" UseCondition="True" MinCondition="0.05"/>

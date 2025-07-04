@@ -783,7 +783,7 @@
         <RequiredItem tag="milk" UseCondition="True" MinCondition="0.99"/>
         <RequiredItem identifier="popnutpopped" amount="2" />
         <RequiredItem identifier="he-sugar" UseCondition="True" MinCondition="0.25"/>
-        <RequiredItem tag="pot" UseCondition="True" MinCondition="0.0"/>
+        <RequiredItem identifier="he-pot" UseCondition="True" MinCondition="0.0"/>
       </Fabricate>
       <Throwable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" swingwhenusing="true" holdangle="0" handle1="0,0" holdpos="36,-20" aimable="false" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnBroken" target="This">
