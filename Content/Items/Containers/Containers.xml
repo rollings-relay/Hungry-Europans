@@ -753,12 +753,13 @@
           <ParticleEmitter particle="weldsmoke" particlespersecond="3" scalemin="0.15" scalemax="0.25" anglemin="0" anglemax="360" velocitymin="0" velocitymax="10" lifetimemultiplier="0.5" colormultiplier="255,255,255,150"/>
         </StatusEffect> -->
         <!-- cool down after 100 seconds -->
-        <StatusEffect type="OnActive" target="This" delay="100" stackable="false" duration="100" condition="-1" />
+        <StatusEffect type="OnActive" target="This" delay="100" duration="100" condition="-1" stackable="false" checkconditionalalways="true" >
+          <Conditional IsActive="False" targetcontainer="true" targetitemcomponent="Fabricator" />
+        </StatusEffect>
       </LightComponent>
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand,LeftHand" aimpos="0,0" aimangle="0" holdangle="0" handle1="-26,30" holdpos="36,-40" aimable="false" msg="ItemMsgPickUpSelect">
         <!--Increase condition within a stove to simulate brewing, if tea is contained-->
         <StatusEffect type="OnContained" target="This" condition="1.5" comparison="And">
-          <Conditional IsOn="false" targetitemcomponent="LightComponent" />
           <Conditional condition="lt 100" />
           <Conditional HasTag="stove" targetcontainer="true" />
           <Conditional IsActive="true" targetcontainer="true" targetitemcomponent="Fabricator" />
@@ -767,17 +768,13 @@
         </StatusEffect>
         <StatusEffect type="OnContained" target="This" duration="1" stackable="false" comparison="And" disabledeltatime="true">
           <Conditional IsOn="true" targetitemcomponent="LightComponent" />
+          <Conditional Condition="gte 100" />
           <Conditional HasTag="stove" targetcontainer="true" />
           <Conditional IsActive="true" targetcontainer="true" targetitemcomponent="Fabricator" />
           <Conditional Voltage="gt 0.5" targetcontainer="true" />
           <RequiredItem tag="mix" type="contained" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/KettleWhistle.ogg" range="500.0" loop="true" volume="1.0" />
         </StatusEffect>
-        <!--<StatusEffect type="OnContained" target="This" condition="1" comparison="And" disabledeltatime="true">
-          <Conditional condition="eq 99" />
-          <Conditional HasTag="stove" targetcontainer="true" />
-          <RequiredItem tag="mix" type="contained" />
-        </StatusEffect>-->
         <!--Set Light component to active if tea was brewed in the stove to allow refilling of cups-->
         <StatusEffect type="Always" target="this" targetitemcomponent="LightComponent" IsOn="true" setvalue="true">
           <Conditional condition="eq 100" />
@@ -789,7 +786,16 @@
       <ItemContainer capacity="1" maxstacksize="1" hideitems="true" drawinventory="true" canbeselected="false" ShowConditionInContainedStateIndicator="false" ShowContainedStateIndicator="false" removecontaineditemsondeconstruct="true" msg="ItemMsgInteractSelect">
         <SlotIcon slotindex="0" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,367,45,57" origin="0.5,0.5" />
         <SlotIcon slotindex="1" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="83,490,31,21" origin="0.5,0.5" />
-        <Containable items="mix" />
+        <Containable items="mix" >
+          <StatusEffect type="OnRemoved" target="This" targetitemcomponent="LightComponent" IsOn="false" condition="0" setvalue="true" />       
+        </Containable>
+          <StatusEffect type="OnUse" target="This,Contained" targetslot="0" condition="-12.5" disabledeltatime="true" AllowWhenBroken="true">
+            <Conditional IsOn="true" targetitemcomponent="LightComponent"/>
+            <RequiredItem identifier="he-teamixpopnut" targetslot="0" type="Contained" />
+            <RequiredItem items="emptycup" targetslot="1" type="Contained" />
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/PourTea.ogg" type="OnUse" range="250.0" loop="false" volume="1.0" />
+            <SpawnItem identifier="he-cuppopnuttea" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          </StatusEffect>
         <Subcontainer capacity="1" maxstacksize="1" slot="1">
           <Containable items="emptycup,emptymug" />
         </Subcontainer>
