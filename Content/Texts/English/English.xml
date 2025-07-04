@@ -1063,6 +1063,15 @@ SEARCH FOR THE FOLLOWING:                                                       
 <afflictionname.he-tobaccoaddiction>Tobacco addiction</afflictionname.he-tobaccoaddiction>
 <afflictiondescription.he-tobaccoaddiction>It's bad for your lungs. You feel short of breath.</afflictiondescription.he-tobaccoaddiction>
  
+<!-- Fabrication tags -->
+<fabricationdescription.sugary>Sugary Ingredient</fabricationdescription.sugary>
+<!-- <fabricationheader.sugary>A sugary ingredient.</fabricationheader.sugary> -->
+<fabricationdescription.salty>Salty Ingredient</fabricationdescription.salty>
+<!-- <fabricationheader.salty>A salty ingredient.</fabricationheader.salty> -->
+<fabricationdescription.smallegg>Small Egg</fabricationdescription.smallegg>
+<!-- <fabricationheader.smallegg>A small egg.</fabricationheader.smallegg> -->
+ 
+ 
 <!-- misc -->
 <entityname.money_5mk>5mk</entityname.money_5mk>
 <entitydescription.money_5mk>Adds 5mk to your bank account.</entitydescription.money_5mk>
