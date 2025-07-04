@@ -972,16 +972,13 @@ SEARCH FOR THE FOLLOWING:                                                       
 
 <itemmsgnomeatleft>No meat left on this corpse...</itemmsgnomeatleft> <!-- TODO: what patch is this? should this be here? -->
 
-<entityname.he-milkingtool>Moloch Lactic Harvester</entityname.he-milkingtool>
-<entitydescription.he-milkingtool>A tool with a pacifying effect used by divers to extract lactic secretions from live Molochs. Infamous among lone beacon keepers...</entitydescription.he-milkingtool>
-
-
 
 <!-- RESEARCH STATION -->
 <researchstation.crossbreed>Cross-breed</researchstation.crossbreed>
 <researchstation.crossbreed.infotext>Possible cross-breeding detected.</researchstation.crossbreed.infotext>
 <researchstation.crossbreed.missingitem>Invalid combination. Try another plant.</researchstation.crossbreed.missingitem>
 
+<!-- fruits and plants -->
 <entityname.bananaseed>Banana Slice</entityname.bananaseed>
 <entitydescription.bananaseed>A slice of a regular, plain europan banana. Can be planted.</entitydescription.bananaseed>
 
@@ -1018,28 +1015,13 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entityname.bananafuelrod>Radioactive Banana</entityname.bananafuelrod>
 <entitydescription.bananafuelrod>This inexplicably irradiated banana is warm to the touch, and hard to the tooth. Clowns are known to use these as emergency reactor fuel...</entitydescription.bananafuelrod>
 
-<afflictionname.he-tobaccoaddiction>Tobacco addiction</afflictionname.he-tobaccoaddiction>
-<afflictiondescription.he-tobaccoaddiction>It's bad for your lungs. You feel short of breath.</afflictiondescription.he-tobaccoaddiction>
-
-<forcesay.eatingsound>*Om nom nom...*</forcesay.eatingsound>
-<forcesay.eatingsound>*Gulp...*</forcesay.eatingsound>
-<forcesay.eatingsound>*Hmmmf...*</forcesay.eatingsound>
-
 <fabricationheader.fertilizeringredient>Fertilizer ingredient</fabricationheader.fertilizeringredient>
 <fabricationdescription.fertilizeringredient>Organic waste that can be recycled as fertilizer ingredients.</fabricationdescription.fertilizeringredient>
 <fabricationheader.tobaccoingredient>Tobacco ingredient</fabricationheader.tobaccoingredient>
 <fabricationdescription.tobaccoingredient>Plants that can contain tobacco.</fabricationdescription.tobaccoingredient>
 
-
-<entityname.he-omelette>Omelette</entityname.he-omelette>
-<entitydescription.he-omelette>Protein-rich and hatchling-free.</entitydescription.he-omelette>
-
-<entityname.he-cookedhuskroe>Rolled Husk Roe</entityname.he-cookedhuskroe>
-<entitydescription.he-cookedhuskroe>Husk parts gently tucked inside a roll of seaweed. You were told the salt neutralizes the eggs...</entitydescription.he-cookedhuskroe>
  
-<entityname.shotgunshellsalt>Shotgun Salt Shell</entityname.shotgunshellsalt>
-<entitydescription.shotgunshellsalt>A makeshift shotgun shell containing good old sodium chloride. Ought to put salt in the wound.</entitydescription.shotgunshellsalt>
- 
+<!-- afflictions (needs) -->
 <afflictionname.mood>Stress</afflictionname.mood>
 <afflictiondescription.mood.goodmood>Relaxed and focused.</afflictiondescription.mood.goodmood>
 <afflictiondescription.mood.mediummood>Overworked, but still hanging on.</afflictiondescription.mood.mediummood>
@@ -1062,8 +1044,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <afflictiondescription.fatigue.other.medium>The patient could probably use some rest.</afflictiondescription.fatigue.other.medium>
 <afflictiondescription.fatigue.other.high>The patient suffers from acute sleep deprivation.</afflictiondescription.fatigue.other.high>
 
-
-
+<!-- afflictions (foodbuffs) -->
 <afflictionname.he-calciumrich>Calcium Rich Diet</afflictionname.he-calciumrich>
 <afflictiondescription.he-calciumrich>Strengthens the bones and helps with digestion.</afflictiondescription.he-calciumrich>
 
@@ -1079,6 +1060,10 @@ SEARCH FOR THE FOLLOWING:                                                       
 <afflictionname.he-neuronutrientrich>Neuronutrient Rich Diet</afflictionname.he-neuronutrientrich>
 <afflictiondescription.he-neuronutrientrich>Deoxidizes the brain. Learn faster, improves the mood and fatigue. </afflictiondescription.he-neuronutrientrich>
  
+<afflictionname.he-tobaccoaddiction>Tobacco addiction</afflictionname.he-tobaccoaddiction>
+<afflictiondescription.he-tobaccoaddiction>It's bad for your lungs. You feel short of breath.</afflictiondescription.he-tobaccoaddiction>
+ 
+<!-- misc -->
 <entityname.money_5mk>5mk</entityname.money_5mk>
 <entitydescription.money_5mk>Adds 5mk to your bank account.</entitydescription.money_5mk>
 <entityname.money_25mk>25mk</entityname.money_25mk>
@@ -1088,16 +1073,37 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entityname.money_75mk>75mk</entityname.money_75mk>
 <entitydescription.money_75mk>Adds 75mk to your bank account.</entitydescription.money_75mk>
 
+<entityname.shotgunshellsalt>Shotgun Salt Shell</entityname.shotgunshellsalt>
+<entitydescription.shotgunshellsalt>A makeshift shotgun shell containing good old sodium chloride. Ought to put salt in the wound.</entitydescription.shotgunshellsalt>
 
+<entityname.he-omelette>Omelette</entityname.he-omelette>
+<entitydescription.he-omelette>Protein-rich and hatchling-free.</entitydescription.he-omelette>
+
+<entityname.he-cookedhuskroe>Rolled Husk Roe</entityname.he-cookedhuskroe>
+<entitydescription.he-cookedhuskroe>Husk parts gently tucked inside a roll of seaweed. You were told the salt neutralizes the eggs...</entitydescription.he-cookedhuskroe>
+
+<entityname.he-mrepacket>MRE - Packet</entityname.he-mrepacket>
+<entitydescription.he-mrepacket>Open it up to get 2 MRE rations.</entitydescription.he-mrepacket>
+<entityname.he-mreration>MRE - Dehydrated Ration</entityname.he-mreration>
+<entitydescription.he-mreration>A ready-to-eat meal of uncertain composition that does not spoil. Just pour water in and enjoy the moist gruel.</entitydescription.he-mreration>
+
+<forcesay.eatingsound>*Om nom nom...*</forcesay.eatingsound>
+<forcesay.eatingsound>*Gulp...*</forcesay.eatingsound>
+<forcesay.eatingsound>*Hmmmf...*</forcesay.eatingsound>
+
+<!-- Tools -->
 <entityname.he-spoon>Spoon</entityname.he-spoon>
 <entitydescription.he-spoon>For scooping things.</entitydescription.he-spoon>
 <entityname.he-fork>Fork</entityname.he-fork>
 <entitydescription.he-fork>It's like a little trident.</entitydescription.he-fork>
 
-<entityname.he-mrepacket>MRE - Packet</entityname.he-mrepacket>
-<entitydescription.he-mrepacket>Open it up to get 2 MRE rations.</entitydescription.he-mrepacket>
-<entityname.he-mreration>MRE - Dehydrated Ration</entityname.he-mreration>
-<entitydescription.he-mreration>A ready-to-eat meal of uncertain composition. Just pour water in it and enjoy the moist gruel.</entitydescription.he-mreration>
+<entityname.he-pot>Pot</entityname.he-pot>
+<entitydescription.he-pot>A stainless steel pot.</entitydescription.he-pot>
+<entityname.he-potwithwater>Pot with water</entityname.he-potwithwater>
+<entitydescription.he-potwithwater>A pot, with water.</entitydescription.he-potwithwater>
+
+<entityname.he-milkingtool>Moloch Lactic Harvester</entityname.he-milkingtool>
+<entitydescription.he-milkingtool>A tool with a pacifying effect used by divers to extract lactic secretions from live Molochs. Infamous among lone beacon keepers...</entitydescription.he-milkingtool>
 
 
 <!-- Fast food -->
@@ -1123,7 +1129,6 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-pizza>A flat base of dough, a good dose of cheese, flakes of meat and most important of all, sweet sliced fruit to honor the old earthian recipe. Cut yourself a piece!</entitydescription.he-pizza>
 <entityname.he-pizzaslice>Pizza Slice</entityname.he-pizzaslice>
 <entitydescription.he-pizzaslice>Kowabunga!</entitydescription.he-pizzaslice>
-
 
 <!-- other ingredients -->
 <entityname.he-rawsausage>Raw Sausage</entityname.he-rawsausage>
