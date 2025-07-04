@@ -85,6 +85,15 @@ AllOWEDJOBS include jobs
 	<Conversation line="A mutated fruit a day burns the submarine away." speaker="1" />
 </Conversation>
 
+<Conversation line="" speaker="0" flags="likeshotdogs" >
+	<Conversation line="So, I got your blood work in, and I've got a couple questions... Just about how many hotdogs do you eat a day?" speaker="1" allowedjobs="medicaldoctor" >
+		<Conversation line="Well... I usually have a hotdog at breakfast. And if I walk by the cafeteria, I might grab one or two hotdogs." speaker="0">
+      <Conversation line="Three. Hotdogs. I hope there's no more hotdogs in the day..." speaker="1" />
+    </Conversation>
+	</Conversation>
+</Conversation>
+
+
 <!-- NPC IS HUNGRY - different levels -->
 <!-- Light -->
 <Conversation line="I've been feeling peckish ever since we left the station" speaker="0" flags="hungrylight,initial">
