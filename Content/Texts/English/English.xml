@@ -1091,6 +1091,8 @@ SEARCH FOR THE FOLLOWING:                                                       
 <forcesay.eatingsound>*Gulp...*</forcesay.eatingsound>
 <forcesay.eatingsound>*Hmmmf...*</forcesay.eatingsound>
 
+<displayname.boil>[itemname] (Boil)</displayname.boil>
+
 <!-- Tools -->
 <entityname.he-spoon>Spoon</entityname.he-spoon>
 <entitydescription.he-spoon>For scooping things.</entitydescription.he-spoon>
