@@ -240,7 +240,6 @@
         <StatusEffect type="OnSuccess" target="This,UseTarget" duration="5" comparison="And">
           <Conditional InWater="false" />
           <Conditional IsPlayer="false" />
-          <Affliction identifier="he-increasedspeed" amount="16.0" />
           <Affliction identifier="he-stuffed" amount="7.5" />
           <ReduceAffliction type="damage" amount="0.25" />
           <ReduceAffliction type="hunger" amount="0.5" />
