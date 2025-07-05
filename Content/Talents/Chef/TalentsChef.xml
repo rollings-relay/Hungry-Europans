@@ -562,24 +562,8 @@
     <Talent identifier="he-dinnertheater">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="4,2" sheetelementsize="128,128"/>
       <Description tag="talentdescription.he-dinnertheater" />
-      <!--Husk Food Buff-->
-      <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
-        <Conditions>
-          <AbilityConditionItem identifiers="bagpipes"/>
-          <AbilityConditionCharacter>
-            <Conditional he-disguisedashusk="gt 0"/>
-          </AbilityConditionCharacter>
-        </Conditions>
-        <Abilities>
-          <CharacterAbilityApplyStatusEffects>
-            <StatusEffects>
-              <StatusEffect type="OnAbility" target="Character" interval="1.4" disabledeltatime="true">
-                <Affliction identifier="he-disguisedashusk" amount="1" />
-              </StatusEffect>
-            </StatusEffects>
-          </CharacterAbilityApplyStatusEffects>
-        </Abilities>
-      </AbilityGroupEffect>
+      <!-- Generic food buffs -->
+      <!--Calcium Food Buff-->
       <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
         <Conditions>
           <AbilityConditionItem identifiers="bagpipes"/>
@@ -587,65 +571,194 @@
         <Abilities>
           <CharacterAbilityApplyStatusEffectsToAllies range="1000">
             <StatusEffects>
-              <StatusEffect type="OnAbility" target="Character" interval="1.4" disabledeltatime="true">
+              <StatusEffect type="OnAbility" target="Character" interval="1" disabledeltatime="true" targetlimb="Torso">
+                <Conditional he-calciumrich="gt 0"/>
+                <Affliction identifier="he-calciumrich" amount="1" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffectsToAllies>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" interval="1" disabledeltatime="true" targetlimb="Torso">
+                <Conditional he-calciumrich="gt 0"/>
+                <Affliction identifier="he-calciumrich" amount="1" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupEffect>
+      <!--Fat Food Buff-->
+      <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
+        <Conditions>
+          <AbilityConditionItem identifiers="bagpipes"/>
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityApplyStatusEffectsToAllies range="1000">
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" interval="1" disabledeltatime="true" targetlimb="Torso">
+                <Conditional he-fatrich="gt 0"/>
+                <Affliction identifier="he-fatrich" amount="1" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffectsToAllies>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" interval="1" disabledeltatime="true" targetlimb="Torso">
+                <Conditional he-fatrich="gt 0"/>
+                <Affliction identifier="he-fatrich" amount="1" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupEffect>
+      <!--Protein Food Buff-->
+      <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
+        <Conditions>
+          <AbilityConditionItem identifiers="bagpipes"/>
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityApplyStatusEffectsToAllies range="1000">
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" interval="1" disabledeltatime="true" targetlimb="Torso">
+                <Conditional he-proteinrich="gt 0"/>
+                <Affliction identifier="he-proteinrich" amount="1" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffectsToAllies>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" interval="1" disabledeltatime="true" targetlimb="Torso">
+                <Conditional he-proteinrich="gt 0"/>
+                <Affliction identifier="he-proteinrich" amount="1" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupEffect>
+      <!--vitamin Food Buff-->
+      <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
+        <Conditions>
+          <AbilityConditionItem identifiers="bagpipes"/>
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityApplyStatusEffectsToAllies range="1000">
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" interval="1" disabledeltatime="true" targetlimb="Torso">
+                <Conditional he-vitaminrich="gt 0"/>
+                <Affliction identifier="he-vitaminrich" amount="1" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffectsToAllies>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" interval="1" disabledeltatime="true" targetlimb="Torso">
+                <Conditional he-vitaminrich="gt 0"/>
+                <Affliction identifier="he-vitaminrich" amount="1" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupEffect>
+      <!--neuronutrient Food Buff-->
+      <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
+        <Conditions>
+          <AbilityConditionItem identifiers="bagpipes"/>
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityApplyStatusEffectsToAllies range="1000">
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" interval="1" disabledeltatime="true" targetlimb="Torso">
+                <Conditional he-neuronutrientrich="gt 0"/>
+                <Affliction identifier="he-neuronutrientrich" amount="1" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffectsToAllies>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" interval="1" disabledeltatime="true" targetlimb="Torso">
+                <Conditional he-neuronutrientrich="gt 0"/>
+                <Affliction identifier="he-neuronutrientrich" amount="1" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupEffect>
+      
+      
+      <!-- Other buffs: -->
+      <!--Husk Food Buff-->
+      <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
+        <Conditions>
+          <AbilityConditionItem identifiers="bagpipes"/>
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityApplyStatusEffectsToAllies range="1000">
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" interval="1" disabledeltatime="true" targetlimb="Torso">
                 <Conditional he-disguisedashusk="gt 0"/>
                 <Affliction identifier="he-disguisedashusk" amount="1" />
               </StatusEffect>
             </StatusEffects>
           </CharacterAbilityApplyStatusEffectsToAllies>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" interval="1" disabledeltatime="true" targetlimb="Torso">
+                <Conditional he-disguisedashusk="gt 0"/>
+                <Affliction identifier="he-disguisedashusk" amount="1" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
         </Abilities>
       </AbilityGroupEffect>
       <!--Watcher food buff-->
       <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
         <Conditions>
           <AbilityConditionItem identifiers="bagpipes"/>
-          <AbilityConditionCharacter>
-            <Conditional he-watcherskillgainincrease="gt 0"/>
-          </AbilityConditionCharacter>
-        </Conditions>
-        <Abilities>
-          <CharacterAbilityApplyStatusEffects>
-            <StatusEffects>
-              <StatusEffect type="OnAbility" target="Character" interval="1.4" disabledeltatime="true">
-                <Affliction identifier="he-watcherskillgainincrease" amount="1" />
-              </StatusEffect>
-            </StatusEffects>
-          </CharacterAbilityApplyStatusEffects>
-        </Abilities>
-      </AbilityGroupEffect>
-      <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
-        <Conditions>
-          <AbilityConditionItem identifiers="bagpipes"/>
         </Conditions>
         <Abilities>
           <CharacterAbilityApplyStatusEffectsToAllies range="1000">
             <StatusEffects>
-              <StatusEffect type="OnAbility" target="Character" interval="1.4" disabledeltatime="true">
+              <StatusEffect type="OnAbility" target="Character" interval="1" disabledeltatime="true" targetlimb="Torso">
                 <Conditional he-watcherskillgainincrease="gt 0"/>
                 <Affliction identifier="he-watcherskillgainincrease" amount="1" />
               </StatusEffect>
             </StatusEffects>
           </CharacterAbilityApplyStatusEffectsToAllies>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" interval="1" disabledeltatime="true" targetlimb="Torso">
+                <Conditional he-watcherskillgainincrease="gt 0"/>
+                <Affliction identifier="he-watcherskillgainincrease" amount="1" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
         </Abilities>
       </AbilityGroupEffect>
       <!--Human food buff-->
       <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
         <Conditions>
           <AbilityConditionItem identifiers="bagpipes"/>
-          <AbilityConditionCharacter>
-            <Conditional he-cannibalskillincrease="gt 0"/>
-          </AbilityConditionCharacter>
         </Conditions>
         <Abilities>
+          <CharacterAbilityApplyStatusEffectsToAllies range="1000">
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" interval="1" disabledeltatime="true" targetlimb="Torso">
+                <Conditional he-cannibalskillincrease="gt 0"/>
+                <Affliction identifier="he-cannibalskillincrease" amount="1" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffectsToAllies>
           <CharacterAbilityApplyStatusEffects>
             <StatusEffects>
-              <StatusEffect type="OnAbility" target="Character" interval="1.4" disabledeltatime="true">
+              <StatusEffect type="OnAbility" target="Character" interval="1" disabledeltatime="true" targetlimb="Torso">
+                <Conditional he-cannibalskillincrease="gt 0"/>
                 <Affliction identifier="he-cannibalskillincrease" amount="1" />
               </StatusEffect>
             </StatusEffects>
           </CharacterAbilityApplyStatusEffects>
         </Abilities>
       </AbilityGroupEffect>
+      <!--Pressure food buff-->
       <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
         <Conditions>
           <AbilityConditionItem identifiers="bagpipes"/>
@@ -653,437 +766,92 @@
         <Abilities>
           <CharacterAbilityApplyStatusEffectsToAllies range="1000">
             <StatusEffects>
-              <StatusEffect type="OnAbility" target="Character" interval="1.4" disabledeltatime="true">
-                <Conditional he-cannibalskillincrease="gt 0" />
-                <Affliction identifier="he-cannibalskillincrease" amount="1" />
-              </StatusEffect>
-            </StatusEffects>
-          </CharacterAbilityApplyStatusEffectsToAllies>
-        </Abilities>
-      </AbilityGroupEffect>
-      <!--Crawler food buff-->
-      <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
-        <Conditions>
-          <AbilityConditionItem identifiers="bagpipes"/>
-          <AbilityConditionCharacter>
-            <Conditional he-increasedswimmingspeedcrawler10="gt 0"/>
-          </AbilityConditionCharacter>
-        </Conditions>
-        <Abilities>
-          <CharacterAbilityApplyStatusEffects>
-            <StatusEffects>
-              <StatusEffect type="OnAbility" target="Character" interval="1.4" disabledeltatime="true">
-                <Affliction identifier="he-increasedswimmingspeedcrawler10" amount="1" />
-              </StatusEffect>
-            </StatusEffects>
-          </CharacterAbilityApplyStatusEffects>
-        </Abilities>
-      </AbilityGroupEffect>
-      <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
-        <Conditions>
-          <AbilityConditionItem identifiers="bagpipes"/>
-        </Conditions>
-        <Abilities>
-          <CharacterAbilityApplyStatusEffectsToAllies range="1000">
-            <StatusEffects>
-              <StatusEffect type="OnAbility" target="Character" interval="1.4" disabledeltatime="true">
-                <Conditional he-increasedswimmingspeedcrawler10="gt 0"/>
-                <Affliction identifier="he-increasedswimmingspeedcrawler10" amount="1" />
-              </StatusEffect>
-            </StatusEffects>
-          </CharacterAbilityApplyStatusEffectsToAllies>
-        </Abilities>
-      </AbilityGroupEffect>
-      <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
-        <Conditions>
-          <AbilityConditionItem identifiers="bagpipes"/>
-          <AbilityConditionCharacter>
-            <Conditional he-increasedswimmingspeedcrawler25="gt 0"/>
-          </AbilityConditionCharacter>
-        </Conditions>
-        <Abilities>
-          <CharacterAbilityApplyStatusEffects>
-            <StatusEffects>
-              <StatusEffect type="OnAbility" target="Character" interval="1.4" disabledeltatime="true">
-                <Affliction identifier="he-increasedswimmingspeedcrawler25" amount="1" />
-              </StatusEffect>
-            </StatusEffects>
-          </CharacterAbilityApplyStatusEffects>
-        </Abilities>
-      </AbilityGroupEffect>
-      <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
-        <Conditions>
-          <AbilityConditionItem identifiers="bagpipes"/>
-        </Conditions>
-        <Abilities>
-          <CharacterAbilityApplyStatusEffectsToAllies range="1000">
-            <StatusEffects>
-              <StatusEffect type="OnAbility" target="Character" interval="1.4" disabledeltatime="true">
-                <Conditional he-increasedswimmingspeedcrawler25="gt 0"/>
-                <Affliction identifier="he-increasedswimmingspeedcrawler25" amount="1" />
-              </StatusEffect>
-            </StatusEffects>
-          </CharacterAbilityApplyStatusEffectsToAllies>
-        </Abilities>
-      </AbilityGroupEffect>
-      <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
-        <Conditions>
-          <AbilityConditionItem identifiers="bagpipes"/>
-          <AbilityConditionCharacter>
-            <Conditional he-increasedswimmingspeedcrawler="gt 0"/>
-          </AbilityConditionCharacter>
-        </Conditions>
-        <Abilities>
-          <CharacterAbilityApplyStatusEffects>
-            <StatusEffects>
-              <StatusEffect type="OnAbility" target="Character" interval="1.4" disabledeltatime="true">
-                <Affliction identifier="he-increasedswimmingspeedcrawler" amount="1" />
-              </StatusEffect>
-            </StatusEffects>
-          </CharacterAbilityApplyStatusEffects>
-        </Abilities>
-      </AbilityGroupEffect>
-      <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
-        <Conditions>
-          <AbilityConditionItem identifiers="bagpipes"/>
-        </Conditions>
-        <Abilities>
-          <CharacterAbilityApplyStatusEffectsToAllies range="1000">
-            <StatusEffects>
-              <StatusEffect type="OnAbility" target="Character" interval="1.4" disabledeltatime="true">
-                <Conditional he-increasedswimmingspeedcrawler="gt 0"/>
-                <Affliction identifier="he-increasedswimmingspeedcrawler" amount="1" />
-              </StatusEffect>
-            </StatusEffects>
-          </CharacterAbilityApplyStatusEffectsToAllies>
-        </Abilities>
-      </AbilityGroupEffect>
-      <!--Mudraptor food buff-->
-      <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
-        <Conditions>
-          <AbilityConditionItem identifiers="bagpipes"/>
-          <AbilityConditionCharacter>
-            <Conditional he-damageresistancemudraptor="gt 0"/>
-          </AbilityConditionCharacter>
-        </Conditions>
-        <Abilities>
-          <CharacterAbilityApplyStatusEffects>
-            <StatusEffects>
-              <StatusEffect type="OnAbility" target="Character" interval="1.4" disabledeltatime="true">
-                <Affliction identifier="he-damageresistancemudraptor" amount="1" />
-              </StatusEffect>
-            </StatusEffects>
-          </CharacterAbilityApplyStatusEffects>
-        </Abilities>
-      </AbilityGroupEffect>
-      <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
-        <Conditions>
-          <AbilityConditionItem identifiers="bagpipes"/>
-        </Conditions>
-        <Abilities>
-          <CharacterAbilityApplyStatusEffectsToAllies range="1000">
-            <StatusEffects>
-              <StatusEffect type="OnAbility" target="Character" interval="1.4" disabledeltatime="true">
-                <Conditional he-damageresistancemudraptor="gt 0"/>
-                <Affliction identifier="he-damageresistancemudraptor" amount="1" />
-              </StatusEffect>
-            </StatusEffects>
-          </CharacterAbilityApplyStatusEffectsToAllies>
-        </Abilities>
-      </AbilityGroupEffect>
-      <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
-        <Conditions>
-          <AbilityConditionItem identifiers="bagpipes"/>
-          <AbilityConditionCharacter>
-            <Conditional he-increasedwalkingspeedmudraptor="gt 0"/>
-          </AbilityConditionCharacter>
-        </Conditions>
-        <Abilities>
-          <CharacterAbilityApplyStatusEffects>
-            <StatusEffects>
-              <StatusEffect type="OnAbility" target="Character" interval="1.4" disabledeltatime="true">
-                <Affliction identifier="he-increasedwalkingspeedmudraptor" amount="1" />
-              </StatusEffect>
-            </StatusEffects>
-          </CharacterAbilityApplyStatusEffects>
-        </Abilities>
-      </AbilityGroupEffect>
-      <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
-        <Conditions>
-          <AbilityConditionItem identifiers="bagpipes"/>
-        </Conditions>
-        <Abilities>
-          <CharacterAbilityApplyStatusEffectsToAllies range="1000">
-            <StatusEffects>
-              <StatusEffect type="OnAbility" target="Character" interval="1.4" disabledeltatime="true">
-                <Conditional he-increasedwalkingspeedmudraptor="gt 0"/>
-                <Affliction identifier="he-increasedwalkingspeedmudraptor" amount="1" />
-              </StatusEffect>
-            </StatusEffects>
-          </CharacterAbilityApplyStatusEffectsToAllies>
-        </Abilities>
-      </AbilityGroupEffect>
-      <!--Moloch food buff-->
-      <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
-        <Conditions>
-          <AbilityConditionItem identifiers="bagpipes"/>
-          <AbilityConditionCharacter>
-            <Conditional he-damageresistancemoloch25="gt 0"/>
-          </AbilityConditionCharacter>
-        </Conditions>
-        <Abilities>
-          <CharacterAbilityApplyStatusEffects>
-            <StatusEffects>
-              <StatusEffect type="OnAbility" target="Character" interval="1.4" disabledeltatime="true">
-                <Affliction identifier="he-damageresistancemoloch25" amount="1" />
-              </StatusEffect>
-            </StatusEffects>
-          </CharacterAbilityApplyStatusEffects>
-        </Abilities>
-      </AbilityGroupEffect>
-      <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
-        <Conditions>
-          <AbilityConditionItem identifiers="bagpipes"/>
-        </Conditions>
-        <Abilities>
-          <CharacterAbilityApplyStatusEffectsToAllies range="1000">
-            <StatusEffects>
-              <StatusEffect type="OnAbility" target="Character" interval="1.4" disabledeltatime="true">
-                <Conditional he-damageresistancemoloch25="gt 0"/>
-                <Affliction identifier="he-damageresistancemoloch25" amount="1" />
-              </StatusEffect>
-            </StatusEffects>
-          </CharacterAbilityApplyStatusEffectsToAllies>
-        </Abilities>
-      </AbilityGroupEffect>
-      <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
-        <Conditions>
-          <AbilityConditionItem identifiers="bagpipes"/>
-          <AbilityConditionCharacter>
-            <Conditional he-damageresistancemoloch="gt 0"/>
-          </AbilityConditionCharacter>
-        </Conditions>
-        <Abilities>
-          <CharacterAbilityApplyStatusEffects>
-            <StatusEffects>
-              <StatusEffect type="OnAbility" target="Character" interval="1.4" disabledeltatime="true">
-                <Affliction identifier="he-damageresistancemoloch" amount="1" />
-              </StatusEffect>
-            </StatusEffects>
-          </CharacterAbilityApplyStatusEffects>
-        </Abilities>
-      </AbilityGroupEffect>
-      <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
-        <Conditions>
-          <AbilityConditionItem identifiers="bagpipes"/>
-        </Conditions>
-        <Abilities>
-          <CharacterAbilityApplyStatusEffectsToAllies range="1000">
-            <StatusEffects>
-              <StatusEffect type="OnAbility" target="Character" interval="1.4" disabledeltatime="true">
-                <Conditional he-damageresistancemoloch="gt 0"/>
-                <Affliction identifier="he-damageresistancemoloch" amount="1" />
-              </StatusEffect>
-            </StatusEffects>
-          </CharacterAbilityApplyStatusEffectsToAllies>
-        </Abilities>
-      </AbilityGroupEffect>
-      <!--Hammerhead food buff-->
-      <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
-        <Conditions>
-          <AbilityConditionItem identifiers="bagpipes"/>
-          <AbilityConditionCharacter>
-            <Conditional he-increasedmeleedamagehammerhead="gt 0"/>
-          </AbilityConditionCharacter>
-        </Conditions>
-        <Abilities>
-          <CharacterAbilityApplyStatusEffects>
-            <StatusEffects>
-              <StatusEffect type="OnAbility" target="Character" interval="1.4" disabledeltatime="true">
-                <Affliction identifier="he-increasedmeleedamagehammerhead" amount="1" />
-              </StatusEffect>
-            </StatusEffects>
-          </CharacterAbilityApplyStatusEffects>
-        </Abilities>
-      </AbilityGroupEffect>
-      <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
-        <Conditions>
-          <AbilityConditionItem identifiers="bagpipes"/>
-        </Conditions>
-        <Abilities>
-          <CharacterAbilityApplyStatusEffectsToAllies range="1000">
-            <StatusEffects>
-              <StatusEffect type="OnAbility" target="Character" interval="1.4" disabledeltatime="true">
-                <Conditional he-increasedmeleedamagehammerhead="gt 0"/>
-                <Affliction identifier="he-increasedmeleedamagehammerhead" amount="1" />
-              </StatusEffect>
-            </StatusEffects>
-          </CharacterAbilityApplyStatusEffectsToAllies>
-        </Abilities>
-      </AbilityGroupEffect>
-      <!--Thresher food buff-->
-      <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
-        <Conditions>
-          <AbilityConditionItem identifiers="bagpipes"/>
-          <AbilityConditionCharacter>
-            <Conditional he-decreasedoxygenconsumption="gt 0"/>
-          </AbilityConditionCharacter>
-        </Conditions>
-        <Abilities>
-          <CharacterAbilityApplyStatusEffects>
-            <StatusEffects>
-              <StatusEffect type="OnAbility" target="Character" interval="1.4" disabledeltatime="true">
-                <Affliction identifier="he-decreasedoxygenconsumption" amount="1" />
-              </StatusEffect>
-            </StatusEffects>
-          </CharacterAbilityApplyStatusEffects>
-        </Abilities>
-      </AbilityGroupEffect>
-      <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
-        <Conditions>
-          <AbilityConditionItem identifiers="bagpipes"/>
-        </Conditions>
-        <Abilities>
-          <CharacterAbilityApplyStatusEffectsToAllies range="1000">
-            <StatusEffects>
-              <StatusEffect type="OnAbility" target="Character" interval="1.4" disabledeltatime="true">
-                <Conditional he-decreasedoxygenconsumption="gt 0"/>
-                <Affliction identifier="he-decreasedoxygenconsumption" amount="1" />
-              </StatusEffect>
-            </StatusEffects>
-          </CharacterAbilityApplyStatusEffectsToAllies>
-        </Abilities>
-      </AbilityGroupEffect>
-      <!--Endworm food buff-->
-      <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
-        <Conditions>
-          <AbilityConditionItem identifiers="bagpipes"/>
-          <AbilityConditionCharacter>
-            <Conditional he-pressureresistance="gt 0"/>
-          </AbilityConditionCharacter>
-        </Conditions>
-        <Abilities>
-          <CharacterAbilityApplyStatusEffects>
-            <StatusEffects>
-              <StatusEffect type="OnAbility" target="Character" interval="1.4" disabledeltatime="true">
-                <Affliction identifier="he-pressureresistance" amount="1" />
-              </StatusEffect>
-            </StatusEffects>
-          </CharacterAbilityApplyStatusEffects>
-        </Abilities>
-      </AbilityGroupEffect>
-      <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
-        <Conditions>
-          <AbilityConditionItem identifiers="bagpipes"/>
-        </Conditions>
-        <Abilities>
-          <CharacterAbilityApplyStatusEffectsToAllies range="1000">
-            <StatusEffects>
-              <StatusEffect type="OnAbility" target="Character" interval="1.4" disabledeltatime="true">
+              <StatusEffect type="OnAbility" target="Character" interval="1" disabledeltatime="true" targetlimb="Torso">
                 <Conditional he-pressureresistance="gt 0"/>
                 <Affliction identifier="he-pressureresistance" amount="1" />
               </StatusEffect>
             </StatusEffects>
           </CharacterAbilityApplyStatusEffectsToAllies>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" interval="1" disabledeltatime="true" targetlimb="Torso">
+                <Conditional he-pressureresistance="gt 0"/>
+                <Affliction identifier="he-pressureresistance" amount="1" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
         </Abilities>
       </AbilityGroupEffect>
       <!--Clownjuice drink buff-->
       <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
         <Conditions>
           <AbilityConditionItem identifiers="bagpipes"/>
-          <AbilityConditionCharacter>
-            <Conditional he-clownjuice="gt 0"/>
-          </AbilityConditionCharacter>
-        </Conditions>
-        <Abilities>
-          <CharacterAbilityApplyStatusEffects>
-            <StatusEffects>
-              <StatusEffect type="OnAbility" target="Character" interval="1.4" disabledeltatime="true">
-                <Affliction identifier="he-clownjuice" amount="1" />
-              </StatusEffect>
-            </StatusEffects>
-          </CharacterAbilityApplyStatusEffects>
-        </Abilities>
-      </AbilityGroupEffect>
-      <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
-        <Conditions>
-          <AbilityConditionItem identifiers="bagpipes"/>
         </Conditions>
         <Abilities>
           <CharacterAbilityApplyStatusEffectsToAllies range="1000">
             <StatusEffects>
-              <StatusEffect type="OnAbility" target="Character" interval="1.4" disabledeltatime="true">
+              <StatusEffect type="OnAbility" target="Character" interval="1" disabledeltatime="true" targetlimb="Torso">
                 <Conditional he-clownjuice="gt 0"/>
                 <Affliction identifier="he-clownjuice" amount="1" />
               </StatusEffect>
             </StatusEffects>
           </CharacterAbilityApplyStatusEffectsToAllies>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" interval="1" disabledeltatime="true" targetlimb="Torso">
+                <Conditional he-clownjuice="gt 0"/>
+                <Affliction identifier="he-clownjuice" amount="1" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
         </Abilities>
       </AbilityGroupEffect>
       <!--Coalition Premium drink buff-->
       <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
         <Conditions>
           <AbilityConditionItem identifiers="bagpipes"/>
-          <AbilityConditionCharacter>
-            <Conditional he-coalitionpremium="gt 0"/>
-          </AbilityConditionCharacter>
-        </Conditions>
-        <Abilities>
-          <CharacterAbilityApplyStatusEffects>
-            <StatusEffects>
-              <StatusEffect type="OnAbility" target="Character" interval="1.4" disabledeltatime="true">
-                <Affliction identifier="he-coalitionpremium" amount="1" />
-              </StatusEffect>
-            </StatusEffects>
-          </CharacterAbilityApplyStatusEffects>
-        </Abilities>
-      </AbilityGroupEffect>
-      <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
-        <Conditions>
-          <AbilityConditionItem identifiers="bagpipes"/>
         </Conditions>
         <Abilities>
           <CharacterAbilityApplyStatusEffectsToAllies range="1000">
             <StatusEffects>
-              <StatusEffect type="OnAbility" target="Character" interval="1.4" disabledeltatime="true">
+              <StatusEffect type="OnAbility" target="Character" interval="1" disabledeltatime="true" targetlimb="Torso">
                 <Conditional he-coalitionpremium="gt 0"/>
                 <Affliction identifier="he-coalitionpremium" amount="1" />
               </StatusEffect>
             </StatusEffects>
           </CharacterAbilityApplyStatusEffectsToAllies>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" interval="1" disabledeltatime="true" targetlimb="Torso">
+                <Conditional he-coalitionpremium="gt 0"/>
+                <Affliction identifier="he-coalitionpremium" amount="1" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
         </Abilities>
       </AbilityGroupEffect>
       <!--Jovian Force drink buff-->
       <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
         <Conditions>
           <AbilityConditionItem identifiers="bagpipes"/>
-          <AbilityConditionCharacter>
-            <Conditional he-jovianforce="gt 0"/>
-          </AbilityConditionCharacter>
-        </Conditions>
-        <Abilities>
-          <CharacterAbilityApplyStatusEffects>
-            <StatusEffects>
-              <StatusEffect type="OnAbility" target="Character" interval="1.4" disabledeltatime="true">
-                <Affliction identifier="he-jovianforce" amount="1" />
-              </StatusEffect>
-            </StatusEffects>
-          </CharacterAbilityApplyStatusEffects>
-        </Abilities>
-      </AbilityGroupEffect>
-      <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
-        <Conditions>
-          <AbilityConditionItem identifiers="bagpipes"/>
         </Conditions>
         <Abilities>
           <CharacterAbilityApplyStatusEffectsToAllies range="1000">
             <StatusEffects>
-              <StatusEffect type="OnAbility" target="Character" interval="1.4" disabledeltatime="true">
+              <StatusEffect type="OnAbility" target="Character" interval="1" disabledeltatime="true" targetlimb="Torso">
                 <Conditional he-jovianforce="gt 0"/>
                 <Affliction identifier="he-jovianforce" amount="1" />
               </StatusEffect>
             </StatusEffects>
           </CharacterAbilityApplyStatusEffectsToAllies>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" interval="1" disabledeltatime="true" targetlimb="Torso">
+                <Conditional he-jovianforce="gt 0"/>
+                <Affliction identifier="he-jovianforce" amount="1" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
