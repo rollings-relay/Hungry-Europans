@@ -557,7 +557,7 @@
       </AbilityGroupInterval>
     </Talent>
 
-  <!-- TODO: replace old afflictions with new ones -->
+  <!-- TODO: add missing afflictions to this -->
   <!--Increases food buffs with bagpipes - Insanely long because it lists every food buff-->
     <Talent identifier="he-dinnertheater">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="4,2" sheetelementsize="128,128"/>
@@ -682,9 +682,7 @@
             </StatusEffects>
           </CharacterAbilityApplyStatusEffects>
         </Abilities>
-      </AbilityGroupEffect>
-      
-      
+      </AbilityGroupEffect>      
       <!-- Other buffs: -->
       <!--Husk Food Buff-->
       <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
