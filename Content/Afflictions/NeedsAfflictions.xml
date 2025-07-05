@@ -797,20 +797,30 @@
       <Description
         textidentifier="advancedafflictiondescription.self.he-hungryforhumanmeat.2"
         minstrength="50"
-        maxstrength="100" 
+        maxstrength="90" 
         target="Self" />
       <Description
         textidentifier="advancedafflictiondescription.others.he-hungryforhumanmeat.2"
         minstrength="50"
+        maxstrength="90" 
+        target="OtherCharacter" />
+      <Description
+        textidentifier="advancedafflictiondescription.self.he-hungryforhumanmeat.2"
+        minstrength="90"
+        maxstrength="100" 
+        target="Self" />
+      <Description
+        textidentifier="advancedafflictiondescription.others.he-hungryforhumanmeat.2"
+        minstrength="90"
         maxstrength="100" 
         target="OtherCharacter" />
       <!-- no effects at this point -->
       <Effect minstrength="0" maxstrength="20"
         MinAfflictionOverlayAlphaMultiplier="0.0"
         MaxAfflictionOverlayAlphaMultiplier="0.0"
-        resistancefor="damage"
+        resistancefor="damage,stun"
         minresistance="0.0"
-        maxresistance="0.2">
+        maxresistance="0.1">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional he-cannibalism="lte 0.0" />
           <ReduceAffliction identifier="he-hungryforhumanmeat" strength="0.05" />
@@ -827,9 +837,9 @@
         maxfacetint="255,255,255,50"
         minspeedmultiplier="1.0"
         maxspeedmultiplier="0.8"
-        resistancefor="damage"
-        minresistance="0.2"
-        maxresistance="0.4"
+        resistancefor="damage,stun"
+        minresistance="0.1"
+        maxresistance="0.2"
         MinAfflictionOverlayAlphaMultiplier="0.0"
         MaxAfflictionOverlayAlphaMultiplier="0.1">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
@@ -839,9 +849,9 @@
           <Conditional he-cannibalism="lte 0.0" />
           <ReduceAffliction identifier="he-hungryforhumanmeat" strength="0.05" />
         </StatusEffect>
-        <StatValue stattype="MeleeAttackMultiplier" minvalue="0.2" maxvalue="0.4" />
+        <StatValue stattype="MeleeAttackMultiplier" minvalue="0.2" maxvalue="0.3" />
       </Effect>
-      <Effect minstrength="40" maxstrength="98"
+      <Effect minstrength="40" maxstrength="90"
         minvitalitydecrease="20"
         maxvitalitydecrease="50"
         strengthchange="0.0"
@@ -852,9 +862,11 @@
         maxfacetint="255,255,255,100"
         minspeedmultiplier="0.8"
         maxspeedmultiplier="0.7"
-        resistancefor="damage"
-        minresistance="0.4"
-        maxresistance="0.75"
+        resistancefor="damage,stun"
+        minresistance="0.2"
+        maxresistance="0.3"
+        minskillmultiplier="1"
+        maxskillmultiplier="0.8"
         MinAfflictionOverlayAlphaMultiplier="0.1"
         MaxAfflictionOverlayAlphaMultiplier="0.1">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
@@ -865,37 +877,39 @@
           <Conditional he-cannibalism="lte 0.0" />
           <ReduceAffliction identifier="he-hungryforhumanmeat" strength="0.05" />
         </StatusEffect>
-        <StatValue stattype="MeleeAttackMultiplier" minvalue="0.4" maxvalue="1.0" />
+        <StatValue stattype="MeleeAttackMultiplier" minvalue="0.3" maxvalue="0.5" />
       </Effect>
-      <Effect minstrength="98" maxstrength="100"
-        minvitalitydecrease="50"
-        maxvitalitydecrease="180"
+      <Effect minstrength="90" maxstrength="100"
+        minvitalitydecrease="25"
+        maxvitalitydecrease="25"
         minscreendistort="0.0"
         maxscreendistort="3.0"
-        strengthchange="0.0"
+        strengthchange="0.05"
         minchromaticaberration="5.0"
         maxchromaticaberration="10.0"
-        minradialdistort="10.0"
-        maxradialdistort="40.0"
+        minradialdistort="2.0"
+        maxradialdistort="5.0"
         dialogflag="HungryForHumanMeatHigh"
         minfacetint="255,255,255,100"
         maxfacetint="255,255,255,150"
         minspeedmultiplier="0.7"
         maxspeedmultiplier="0.5"
-        resistancefor="damage"
-        minresistance="0.90"
-        maxresistance="0.99"
+        resistancefor="damage,stun"
+        minresistance="0.3"
+        maxresistance="0.3"
+        minskillmultiplier="0.8"
+        maxskillmultiplier="0.5"
         MinAfflictionOverlayAlphaMultiplier="1.0"
         MaxAfflictionOverlayAlphaMultiplier="1.0">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <ReduceAffliction identifier="he-cannibalism" strength="0.01" probability="1.0" />
           <ReduceAffliction identifier="bleeding" strength="5" />
+          <Affliction identifier="hunger" strength="0.2" />
         </StatusEffect>
-        <StatusEffect target="Character" interval="2" disabledeltatime="true">
-          <Conditional he-cannibalism="lte 0.0" />
-          <ReduceAffliction identifier="he-hungryforhumanmeat" strength="0.05" />
+        <StatusEffect target="Character" setvalue="true" multiplyafflictionsbymaxvitality="true">
+          <Affliction identifier="he-cannibalmouth" amount="1" />
         </StatusEffect>
-        <StatValue stattype="MeleeAttackMultiplier" minvalue="1.0" maxvalue="2.0" />
+        <StatValue stattype="MeleeAttackMultiplier" minvalue="0.5" maxvalue="1.0" />
       </Effect>
       <PeriodicEffect interval="1.5">
         <StatusEffect target="Character" comparison="And">
@@ -969,6 +983,28 @@
       <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/HungerForHumanMeatRedOverlay.png" />
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="512,128,128,128" color="209,121,84,255" origin="0,0" />
     </Affliction>
+
+    <AfflictionHusk name="Cannibal Mouth"
+      identifier="he-cannibalmouth"
+      description="So hungry for human meat you feel like biting people."
+      healableinmedicalclinic="false"
+      type="alieninfection"
+      huskedspeciesname="cannibal"
+      targets="human"
+      limbspecific="false"
+      indicatorlimb="Torso"
+      showiconthreshold="1000"
+      showinhealthscannerthreshold="1000"
+      treatmentthreshold="1000"
+      maxstrength="1"
+      affectmachines="false"
+      MedicalSkillGain="0.0"
+      sendmessages="false">
+      <Effect minstrength="0" maxstrength="1" strengthchange="-1" >
+      </Effect>
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="512,128,128,128" color="209,121,84,255" origin="0,0" />
+    </AfflictionHusk>    
+
 
     <!--EXTRA NEEDS-->
     <Affliction name="Bladder"

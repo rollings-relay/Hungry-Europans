@@ -850,8 +850,10 @@ SEARCH FOR THE FOLLOWING:                                                       
 <afflictioncauseofdeathself.he-hungryforhumanmeat>You lost your mind over human meat.</afflictioncauseofdeathself.he-hungryforhumanmeat><!--Patch 8-->
 <advancedafflictiondescription.self.he-hungryforhumanmeat>Your crewmates are starting to look quite tasty!</advancedafflictiondescription.self.he-hungryforhumanmeat><!--Patch 8-->
 <advancedafflictiondescription.others.he-hungryforhumanmeat>The Patient gives you a cold stare.</advancedafflictiondescription.others.he-hungryforhumanmeat><!--Patch 8-->
-<advancedafflictiondescription.self.he-hungryforhumanmeat.2>Your struggling to focus on anything. You crave for human flesh. You want to murder. Your arms grow stronger just by thinking about it.</advancedafflictiondescription.self.he-hungryforhumanmeat.2><!--Patch 8-->
+<advancedafflictiondescription.self.he-hungryforhumanmeat.2>You are struggling to focus on anything. You crave for human flesh. You want to murder. Your arms grow stronger just by thinking about it.</advancedafflictiondescription.self.he-hungryforhumanmeat.2><!--Patch 8-->
 <advancedafflictiondescription.others.he-hungryforhumanmeat.2>The Patient gives you a cold stare and is severly twitching.</advancedafflictiondescription.others.he-hungryforhumanmeat.2><!--Patch 8-->
+<advancedafflictiondescription.self.he-hungryforhumanmeat.3>You have an irresistible desire to bite into your crewmates. It's the only way to appease the craving.</advancedafflictiondescription.self.he-hungryforhumanmeat.3><!--Patch 8-->
+<advancedafflictiondescription.others.he-hungryforhumanmeat.3>The Patient has acquired a craving for human meat. Do not approach your hand if you want to keep your fingers.</advancedafflictiondescription.others.he-hungryforhumanmeat.3><!--Patch 8-->
 
 <afflictionname.he-drunkinvertcontrols>Disoriented</afflictionname.he-drunkinvertcontrols>
 <afflictiondescription.he-drunkinvertcontrols>Up is down and left is... right? Where am I?</afflictiondescription.he-drunkinvertcontrols>

@@ -87,4 +87,5 @@
   <Submarine file="%ModDir%/Content/Submarines/Bulker - Abyss Carrier.sub" />
   <NPCConversations file="%ModDir%/Content/Texts/English/NpcConversations_English.xml" />
   <Submarine file="%ModDir%/#Testkitchen.sub" />
+  <Character file="%ModDir%/Content/Afflictions/CannibalHusk.xml" />
 </contentpackage>
