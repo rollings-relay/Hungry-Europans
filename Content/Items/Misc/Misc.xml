@@ -73,13 +73,13 @@
       <Holdable slots="RightHand+LeftHand" aimable="false" holdpos="15,-20" aimpos="12,1" handle1="23,-67" handle2="46,-18" aimangle="15" swingamount="3,1" swingspeed="0.18" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnUse" target="Character">
           <Conditional HasStatusTag="!equals clown" />
-          <sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/bagpipes1.ogg" type="OnUse" selectionmode="CharacterSpecific" range="600" loop="true" />
-          <sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/bagpipes2.ogg" type="OnUse" selectionmode="CharacterSpecific" range="600" loop="true" />
-          <sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/bagpipes3.ogg" type="OnUse" selectionmode="CharacterSpecific" range="600" loop="true" />
+          <sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/bagpipes1.ogg" type="OnUse" selectionmode="CharacterSpecific" range="600" loop="true" stream="true"/>
+          <sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/bagpipes2.ogg" type="OnUse" selectionmode="CharacterSpecific" range="600" loop="true" stream="true"/>
+          <sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/bagpipes3.ogg" type="OnUse" selectionmode="CharacterSpecific" range="600" loop="true" stream="true"/>
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character">
           <Conditional HasStatusTag="clown" />
-          <sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/clownbagpipes.ogg" type="OnUse" range="600" loop="true" />
+          <sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/clownbagpipes.ogg" type="OnUse" range="600" loop="true" stream="true"/>
         </StatusEffect>
       </Holdable>
     </Item>
