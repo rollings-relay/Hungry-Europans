@@ -1148,7 +1148,6 @@
         <StatusEffect type="OnActive" target="This,Character" duration="1" condition="-1" stackable="false" comparison="And">
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
-          <Affliction identifier="he-increasedmeleedamage" amount="12.0" />
           <Affliction identifier="he-stuffed" amount="2.0" />
           <ReduceAffliction type="hunger" amount="2.0" />
           <ReduceAffliction type="damage" amount="0.2" />
@@ -1165,7 +1164,6 @@
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <Conditional ConditionPercentage="lt 100" />
-          <Affliction identifier="he-increasedmeleedamage" amount="12.0" />
           <Affliction identifier="he-stuffed" amount="2.0" />
           <ReduceAffliction type="hunger" amount="2.0" />
           <ReduceAffliction type="damage" amount="0.2" />
