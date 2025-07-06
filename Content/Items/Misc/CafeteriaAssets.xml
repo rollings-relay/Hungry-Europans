@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Override>
+
+  <!-- TODO: fix the plates floating above tables, that's a shitton of sprites to adjust -->
+
   <Items>
     <Item name="Cafeteria Table" identifier="he-cafeteriatable" tags="largeitem,table" width="252" height="171" scale="0.5" linkable="true" allowedlinks="kitchen,container,table" noninteractable="false" category="Misc" pickdistance="150" canflipy="false" canflipx="false" isshootable="true" GrabWhenSelected="false">
       <sprite texture="%ModDir:2954998725%/Content/Items/Misc/CafeteriaAssets.png" sourcerect="1,0,252,171" depth="0.520" premultiplyalpha="false" origin="0.5,0.445" />
@@ -25,6 +28,7 @@
         </StatusEffect>
       </Holdable>
     </Item>
+    
     <Item name="Dining Table" identifier="he-diningtable1" tags="largeitem,table" width="152" height="171" scale="0.5" linkable="true" allowedlinks="kitchen,container,table" noninteractable="false" category="Misc" pickdistance="150" canflipy="false" canflipx="false" isshootable="true" GrabWhenSelected="false">
       <sprite texture="%ModDir:2954998725%/Content/Items/Misc/CafeteriaAssets.png" sourcerect="592,0,152,171" depth="0.521" premultiplyalpha="false" origin="0.5,0.445" />
       <ItemContainer ItemsUseInventoryPlacement="true" capacity="8" maxstacksize="1" canbeselected="true" hideitems="false" itempos="23,0" iteminterval="35,1" itemrotation="0" itemsperrow="4" slotsperrow="4" containedspritedepths="0.528,0.529,0.528,0.529,0.526,0.527,0.526,0.527" msg="ItemMsgInteractSelect" canflipx="false">
@@ -39,6 +43,7 @@
         <Containable items="smallitem,fooditem" excludeditems="meatchunk,syringe,weapon" />
       </ItemContainer>
     </Item>
+    
     <Item name="Dining Table" identifier="he-diningtable2" tags="largeitem,table" width="156" height="171" scale="0.5" linkable="true" allowedlinks="kitchen,container,table" noninteractable="false" category="Misc" pickdistance="150" canflipy="false" canflipx="false" isshootable="true" GrabWhenSelected="false">
       <sprite texture="%ModDir:2954998725%/Content/Items/Misc/CafeteriaAssets.png" sourcerect="745,0,156,171" depth="0.523" premultiplyalpha="false" origin="0.5,0.445" />
       <ItemContainer ItemsUseInventoryPlacement="true" capacity="8" maxstacksize="1" canbeselected="true" hideitems="false" itempos="25,0" iteminterval="35,1" itemrotation="0" itemsperrow="4" slotsperrow="4" containedspritedepths="0.528,0.529,0.528,0.529,0.526,0.527,0.526,0.527" msg="ItemMsgInteractSelect" canflipx="false">
@@ -46,6 +51,7 @@
         <Containable items="smallitem,fooditem" excludeditems="meatchunk,syringe,weapon" />
       </ItemContainer>
     </Item>
+    
     <!-- CHAIRS -->
     <Item name="Cafeteria Chair" identifier="he-cafeteriachair" tags="largeitem,chair" width="149" height="219" scale="0.5" noninteractable="false" category="Misc" pickdistance="150" canflipy="false" canflipx="true" isshootable="true" GrabWhenSelected="false">
       <sprite texture="%ModDir:2954998725%/Content/Items/Misc/CafeteriaAssets.png" sourcerect="0,172,149,219" depth="0.524" premultiplyalpha="false" origin="0.5,0.56" />
@@ -74,6 +80,7 @@
         <!--<RequiredItem items="wrench" type="Equipped" />-->
       </Holdable>
     </Item>
+    
     <Item name="Chair" identifier="he-chair" tags="largeitem,chair" width="144" height="240" scale="0.5" noninteractable="false" category="Misc" pickdistance="150" canflipy="false" canflipx="true" isshootable="true" GrabWhenSelected="false">
       <sprite texture="%ModDir:2954998725%/Content/Items/Misc/CafeteriaAssets.png" sourcerect="150,172,144,240" depth="0.524" premultiplyalpha="false" origin="0.5,0.5" />
       <Body width="144" height="240" density="25" />
@@ -90,5 +97,6 @@
         <limbposition limb="LeftHand" position="40,-120" allowusinglimb="true" />
       </Controller>
     </Item>
+    
   </Items>
 </Override>
