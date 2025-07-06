@@ -593,20 +593,22 @@
         <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="3" />
       </Price>
       <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.46" />
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1886,68,161,53" depth="0.796" origin="0.47,0.86" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1886,84,162,35" depth="0.796" origin="0.47,0.86" />
       <!-- DecorativeSprite to display the pan when it is contained -->
-      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1725,68,161,53" origin="0.47,0.86" depth="0.794" comparison="And">
+      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1753,105,76,10" origin="0.47,1" depth="0.794" comparison="And">
         <IsActiveConditional HasTag="pan" targetcontaineditem="true" />
       </DecorativeSprite>
       <!-- DecorativeSprite to display the pot when it is contained -->
-      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1725,121,161,53" origin="0.47,0.86" depth="0.795" comparison="And">
+      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1725,121,162,35" origin="0.47,1" depth="0.795" comparison="And">
         <IsActiveConditional HasTag="pot" targetcontaineditem="true" />
       </DecorativeSprite>
-      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,426,81,85" origin="0.6,0.9" depth="0.793" comparison="And">
-        <IsActiveConditional HasTag="teakettle" targetcontaineditem="true" />
+      <!-- DecorativeSprite to display the kettle when it is contained -->
+      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,426,81,85" origin="0.6,1" depth="0.793" comparison="And">
+        <IsActiveConditional HasTag="kettle" targetcontaineditem="true" />
       </DecorativeSprite>
-      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1886,121,161,53" depth="0.795" origin="0.47,0.86" maxcondition="80" fadein="true" />
-      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1886,174,161,53" depth="0.794" origin="0.47,0.86" maxcondition="0" fadein="false" />
+      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1886,137,162,35" depth="0.795" origin="0.47,0.86" maxcondition="80" fadein="true" />
+      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1886,190,162,35" depth="0.794" origin="0.47,0.86" maxcondition="0" fadein="false" />
+      <Body width="162" height="25" density="30" />
       <Fabricator selectkey="Select" canbeselected="true" powerconsumption="150.0" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
         <poweronsound file="Content/Items/PowerOnLight1.ogg" range="600" loop="false" />
@@ -647,7 +649,6 @@
         <input name="power_in" displayname="connection.powerin" />
         <output name="condition_out" displayname="connection.conditionout" />
       </ConnectionPanel>
-      <Body width="161" height="53" density="30" />
       <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" attachable="true" aimable="true">
         <RequiredItem items="wrench" type="Equipped" />
         <StatusEffect target="This" type="OnContained">
