@@ -6,6 +6,9 @@ SEARCH FOR THE FOLLOWING:                                                       
 
 <!-- Keep in mind: The patch comments are behind/below the changed/added lines -->
 
+
+<!-- TODO: ANNOTATE EVERY TEXT CHANGE WHEN MERGING THE UPDATE FOR THE PROPER PATCH NUMBER, I DID NOT ADD A SINGLE PATCH NOT ANYWHERE, SO I WILL DO IT ON EVERY LINE THAT WAS ADDED OR MODIFIED IN THE DIFF INSTEAD -->
+
 <!-- LATEST PATCH: 17 -->
 <infotexts language="English" nowhitespace="false" translatedname="English">
 <!-- Display names -->
@@ -597,7 +600,6 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entityname.he-refrigerator>Refrigerator</entityname.he-refrigerator>
 <entitydescription.he-refrigerator>Prevents spoilage. Can only store food and drinks. Needs power.</entitydescription.he-refrigerator><!--Changed as of Patch 10-->
 
-<!-- TODO: these descriptions are a little sad -->
 <entityname.he-stove>Stove</entityname.he-stove>
 <entitydescription.he-stove>Used for cooking. Needs power.</entitydescription.he-stove>
 <entityname.he-oven>Oven</entityname.he-oven>
@@ -978,8 +980,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 
  TODO: sort this text in proper places when done  -->
 
-<itemmsgnomeatleft>No meat left on this corpse...</itemmsgnomeatleft> <!-- TODO: what patch is this? should this be here? -->
-
+<itemmsgnomeatleft>No meat left on this corpse...</itemmsgnomeatleft> 
 
 <!-- RESEARCH STATION -->
 <researchstation.crossbreed>Cross-breed</researchstation.crossbreed>

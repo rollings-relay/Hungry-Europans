@@ -2,8 +2,6 @@
 <Override>
   <Items>
   
-    <!-- TODO: reputation sale adjustments? -->
-  
     <!-- KEGS -->
     <Item name="Empty Keg" identifier="he-kegempty" Tags="keg,emptykeg,crate" category="Misc" subcategory="Kegs" maxstacksize="1" scale="0.5" impactsoundtag="impact_metal_heavy" canflipx="false" isshootable="false" >
       <PreferredContainer primary="kitchen" secondary="cargocontainer"/>

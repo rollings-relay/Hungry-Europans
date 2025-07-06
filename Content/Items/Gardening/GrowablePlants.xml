@@ -2,12 +2,12 @@
 <Override>
   <Items>
 
+ <!-- TODO: RE-REWORK PLANTS WHEN DLC RELEASES -->
 
 <!-- 
   BIG LIST OF EXPLAINING, OVERRIDES AND TODOs:
   
-  RULES FOR AQUATIC PLANTS:
-  
+  RULES FOR AQUATIC PLANTS:  
   There are FRUITS and there are SEEDS. Make sure every fruit (product) has a seed (separate banana from seed)
   There are RAW aquatic plants, and there are aquatic plant FRUITS (product version with less yield)
   Deconstructing FRUITS (and aquatic plants) gives SEEDS (random% chance?)

@@ -318,7 +318,7 @@
           <SpawnItem identifier="he-endwormmeatchunk" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
         </StatusEffect>
         <!--abyss meat
-        generic abyss meat for anything modded TODO: enable this        
+        generic abyss meat for anything modded TODO: enable abyssal meat chunk        
         I multiply affliction by max health so it doesn't take an eternity to butcher (1 point = 1%)-->
         <StatusEffect type="OnSuccess" target="UseTarget" comparison="And" multiplyafflictionsbymaxvitality="false">
           <Conditional group="eq abyss" />

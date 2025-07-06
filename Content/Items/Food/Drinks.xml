@@ -2756,7 +2756,7 @@
     <!-- WATER -->
     <!-- WATER -->
     <!-- WATER -->
-    <!-- TODO: remove filter requirement in sink? this is honestly too harsh there's no reason the sink shouldnt have filtered water to begin with -->
+    <!-- TODO:  reenable filter requirement in sink? alternatively just make sink degrade if not filtered  -->
     <Item name="Water" identifier="he-water" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Fresh water. Helps a bit if you're feeling stuffed or when you're shit-faced." Tags="smallitem,drinkitem,cleanwater,cleanwaterrefill_common,water,bottle,allowinfryer" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />

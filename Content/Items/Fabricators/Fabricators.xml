@@ -907,7 +907,6 @@
     </Item>
     
     <!-- grills things, overgrilling causes fire -->
-    <!-- TODO: Needs lightcomponent + sprite? containable sloticon? -->
     <Item name="Electric Grill" identifier="he-electricgrill" tags="grill,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="Used for cooking. Needs power." isshootable="true" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
       <Deconstruct time="10">
         <Item identifier="steel" amount="2"/>
@@ -1007,6 +1006,7 @@
         </StatusEffect>
       </Repairable>
       <ItemContainer selectkey="Select" capacity="20" maxstacksize="1" canbeselected="true" hideitems="false" allowuioverlap="false" itempos="50,-30" iteminterval="20,1" itemrotation="0" itemsperrow="4" slotsperrow="4" containedspritedepths="0.71,0.72,0.73,0.74,0.75,0.76,0.77,0.78,0.79,0.80,0.81,0.82,0.83,0.84,0.85,0.86,0.87,0.88,0.89,0.90">
+        <!-- TODO: grill containable sloticon? -->
         <GuiFrame relativesize="0.2,0.2" minsize="400,400" maxsize="480,480" anchor="Center" relativeoffset="0.0,0.0" style="ItemUI" />
         <Containable items="allowongrill" />
       </ItemContainer>
