@@ -810,7 +810,7 @@
     <Item name="Sea Weed Strip" identifier="he-seaweedstrip" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Sea weed pressed and sliced. Let it dry into Nori." Tags="smallitem,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,207,47,13" depth="0.6" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="16" requiresrecipe="false" amount="8" outcondition="0.0">
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="16" requiresrecipe="false" amount="1" outcondition="0.0">
         <RequiredSkill identifier="cooking" level="40" />
         <RequiredItem identifier="he-seaweed" />
       </Fabricate>
@@ -823,12 +823,12 @@
         <StatusEffect type="InWater" target="This" condition="-1.0" interval="5" stackable="false" disabledeltatime="true" />
         <StatusEffect type="OnContained" target="This" interval="1">
           <Conditional condition="eq 100" />
-          <SpawnItem identifier="he-nori" spawnposition="SameInventory" count="1" SpawnIfInventoryFull="true" />
+          <SpawnItem identifier="he-nori" spawnposition="SameInventory" count="8" SpawnIfInventoryFull="true" />
           <Remove />
         </StatusEffect>
         <StatusEffect type="OnNotContained" target="This" interval="1">
           <Conditional condition="eq 100" />
-          <SpawnItem identifier="he-nori" spawnposition="This" count="1" />
+          <SpawnItem identifier="he-nori" spawnposition="This" count="8" />
           <Remove />
         </StatusEffect>
       </Holdable>
