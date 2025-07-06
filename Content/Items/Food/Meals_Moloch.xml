@@ -13,7 +13,7 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="582,30,68,29" origin="0.5,0.5" />
       <Fabricate suitablefabricators="cuttingboard" requiredtime="16" requiresrecipe="true" amount="1" displayname="molochfooditem">
         <RequiredSkill identifier="cooking" level="40" />
-        <RequiredItem identifier="he-rawmolochmeat" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
+        <RequiredItem identifier="he-rawmolochmeat" amount="2" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
         <RequiredItem identifier="he-nori" amount="8" />
         <RequiredItem identifier="he-vinegar" UseCondition="True" MinCondition="0.1"/>
         <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.05"/>
@@ -84,7 +84,7 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="858,0,68,29" origin="0.5,0.5" />
       <Fabricate suitablefabricators="cuttingboard" requiredtime="15" requiresrecipe="false" amount="1" >
         <RequiredSkill identifier="cooking" level="50" />
-        <RequiredItem identifier="he-rawmolochsteak" amount="1" MinCondition="0.25" UseCondition="true" />
+        <RequiredItem identifier="he-rawmolochsteak" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="false" />
         <RequiredItem identifier="bubbleberryleaf" amount="1" />
         <RequiredItem tag="smallegg" amount="1" />
         <RequiredItem identifier="he-emptyplate" amount="1" />
