@@ -729,14 +729,15 @@
       <Deconstruct time="2">
         <Item identifier="he-glassfragments" amount="1" />
       </Deconstruct>
-      <Fabricate suitablefabricators="fabricator" requiredtime="5" requiresrecipe="false" amount="1">
+      <!-- TODO: disabled cocktail crafting for now until we have actual recipes -->
+      <!-- <Fabricate suitablefabricators="fabricator" requiredtime="5" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="mechanical" level="35" />
         <RequiredItem identifier="he-glassfragments" amount="1" />
       </Fabricate>
       <Fabricate suitablefabricators="sink" requiredtime="20" requiresrecipe="false" amount="1" displayname="clean">
         <RequiredItem tag="cleaningagent" UseCondition="True" MinCondition="0.025" />
         <RequiredItem identifier="he-dirtycocktailglass" amount="1" UseCondition="False" MinCondition="0.0" />
-      </Fabricate>
+      </Fabricate> -->
       <Throwable canbepicked="true" characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnSecondaryUse" target="This" delay="0.01">
           <Use />
