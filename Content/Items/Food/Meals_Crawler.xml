@@ -79,13 +79,11 @@
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="342,0,45,20" depth="0.6" origin="0.5,0.5" />
-      <!-- Gained from filling an empty bowl in a pot with soup
-      <Fabricate suitablefabricators="stove" requiredtime="60" requiresrecipe="false" amount="1" displayname="crawlerfooditem">
-        <RequiredSkill identifier="cooking" level="25" />
-        <RequiredItem identifier="he-rawcrawlermeat" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
-        <RequiredItem tag="water" UseCondition="True" MinCondition="0.1"/>
-        <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.05"/>
-      </Fabricate> -->
+      <Fabricate suitablefabricators="stove" requiredtime="3" requiresrecipe="false" amount="1" displayname="crawlerfooditem">
+        <RequiredSkill identifier="cooking" level="15" />
+        <RequiredItem identifier="he-emptybowl" amount="1" />
+        <RequiredItem identifier="he-potcrawyum" UseCondition="True" MinCondition="0.20"/>
+      </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="49" fabricationlimitmin="0" fabricationlimitmax="10" displayname="crawlerfooditem" />
       <Body width="42" height="14" density="12" />
@@ -118,7 +116,7 @@
           <Conditional HasStatusTag="usingspoon" />
           <Conditional HasStatusTag="neq emptyspoon"/>
           <Conditional InWater="false" />
-          <Affliction identifier="he-fatrich" amount="50.0" />
+          <Affliction identifier="he-fatrich" amount="20.0" />
           <Affliction identifier="ate_soup" amount="1" />
           <Affliction identifier="he-stuffed" amount="1.5" />
           <ReduceAffliction type="hunger" amount="1.5" />
@@ -128,6 +126,7 @@
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork3.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork4.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork5.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurping.ogg" loop="False" range="200" volume="4.0" selectionmode="Random" />
         </StatusEffect>
         <!-- Prevent using this item continuously by applying the tag "emptyspoon" which prevents the StatusEffect that uses the item from triggering again, effectively only allowing it to trigger once per mouse-click -->
         <StatusEffect type="OnActive" target="Character" tags="emptyspoon" interval="0.1" duration="0.2">

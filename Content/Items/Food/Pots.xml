@@ -2,14 +2,25 @@
 <Override>
   <Items>
     <!-- SOUPS -->
-    <Item name="Pot of Craw Yum!" identifier="he-potcrawyum" category="Equipment" maxstacksize="1" Tags="smallitem,pot,tableware" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="Pot of Craw Yum!" identifier="he-potcrawyum" category="Misc" maxstacksize="1" Tags="smallitem,pot,tableware" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="kitchen" />
       <PreferredContainer secondary="crewcab" />
       <Deconstruct time="5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1815,121,59,48" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1815,121,59,48" depth="0.55" />
       <Body width="58" height="46" density="13.0" />
+      <Fabricate suitablefabricators="stove" requiredtime="60" requiresrecipe="false" amount="1" displayname="crawlerfooditem">
+        <RequiredSkill identifier="cooking" level="25" />
+        <RequiredItem identifier="he-rawcrawlermeat" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
+        <RequiredItem identifier="he-potwithwater" />
+        <RequiredItem identifier="he-flour" UseCondition="True" MinCondition="0.1"/>
+        <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.1"/>
+      </Fabricate>
       <Holdable canbecombined="false" slots="Any,RightHand+LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect">
+        <StatusEffect type="Always" target="This" >
+          <Conditional condition="gt 10" />
+          <ParticleEmitter particle="weldsmoke" particlespersecond="3" scalemin="0.15" scalemax="0.25" anglemin="80" anglemax="100" velocitymin="0" velocitymax="10" lifetimemultiplier="0.5" colormultiplier="255,255,255,150"/>
+        </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
           <SpawnItem identifier="he-dirtypot" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
@@ -38,9 +49,10 @@
           </StatusEffect>
         </Button>
       </CustomInterface>
-      <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true">
+      <!-- TODO: currently using fabricator. Are we using the insert bowl method instead? -->
+      <!-- <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true">
         <Containable items="emptybowl" />
-      </ItemContainer>
+      </ItemContainer> -->
     </Item>
 
     <!--STEWS-->
