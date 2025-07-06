@@ -225,7 +225,12 @@
       <Description
       textidentifier="afflictiondescription.he-disguisedashusk.others"
       target="OtherCharacter" />
-      <Effect minstrength="0" maxstrength="1800" strengthchange="-1" tag="huskinfected" />
+      <Effect minstrength="0" maxstrength="100" strengthchange="-1" />
+      <Effect minstrength="100" maxstrength="1800" strengthchange="-1" tag="huskinfected" >      
+        <StatusEffect target="Character" >
+          <ParticleEmitter particle="plasmasmoke" anglemin="60" anglemax="120" particlespersecond="4" distancemin="-30" distancemax="30" velocitymin="30" velocitymax="50" scalemin="1" scalemax="2" scalemultiplier="1,1" lifetimemultiplier="0.25" colormultiplier="255,180,255,120" />
+        </StatusEffect>      
+      </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
     </Affliction>
     
