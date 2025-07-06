@@ -747,7 +747,7 @@
         <output name="condition_out" displayname="connection.conditionout" />
       </ConnectionPanel>
       <Body width="165" height="188" density="30" />
-      <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" msg="[Right mouse] Detach (Wrench)" PickingTime="5.0" aimpos="65,-10" handle1="0,0" attachable="true" aimable="true" AttachesToFloor="true" DisallowAttachingOverTags="oven" >
+      <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" handle1="0,0" attachable="true" aimable="true" AttachesToFloor="true" DisallowAttachingOverTags="oven" >
         <requireditem items="wrench" type="Equipped" />
         <StatusEffect target="This" type="OnContained">
           <Conditional attached="false" targetitemcomponentname="Holdable"/>
@@ -875,8 +875,7 @@
         <input name="power_in" displayname="connection.powerin" />
         <output name="condition_out" displayname="connection.conditionout" />
       </ConnectionPanel>
-      <Body width="72" height="66" density="30" />
-      <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" msg="[Right mouse] Detach (Wrench)" PickingTime="5.0" aimpos="65,-10" handle1="0,0" attachable="true" aimable="true">
+      <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" handle1="0,0" attachable="true" aimable="true">
         <requireditem items="wrench" type="Equipped" />
         <StatusEffect target="This" type="OnContained">
           <Conditional attached="false" targetitemcomponentname="Holdable"/>
