@@ -396,7 +396,7 @@
         </SubContainer>
       </ItemContainer>
       <Body width="507" height="300" density="30" />
-      <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="155,-50" handle1="-220,60" handle2="-220,80" holdangle="0" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="155,-50" attachable="true" aimable="true" AttachesToFloor="true" DisallowAttachingOverTags="kitchensink,kitchencounter">
+      <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="155,-50" handle1="-220,60" handle2="-220,80" holdangle="0" msg="ItemMsgDetachWrench" PickingTime="15.0" aimpos="155,-50" attachable="true" aimable="true" AttachesToFloor="true" DisallowAttachingOverTags="kitchensink,kitchencounter">
         <RequiredItem items="wrench" type="Equipped" />
         <StatusEffect target="This" type="OnContained">
           <Conditional attached="false" targetitemcomponentname="Holdable" />
@@ -484,7 +484,7 @@
       </StatusEffect>-->
       </ItemContainer>
       <Body width="405" height="204" density="30" />
-      <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="155,-105" handle1="-170,60" handle2="-160,80" holdangle="0" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="155,-50" attachable="true" aimable="true" AttachesToFloor="true" DisallowAttachingOverTags="kitchensink,kitchencounter">
+      <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="155,-105" handle1="-170,60" handle2="-160,80" holdangle="0" msg="ItemMsgDetachWrench" PickingTime="15.0" aimpos="155,-50" attachable="true" aimable="true" AttachesToFloor="true" DisallowAttachingOverTags="kitchensink,kitchencounter">
         <RequiredItem items="wrench" type="Equipped" />
         <StatusEffect target="This" type="OnContained">
           <Conditional attached="false" targetitemcomponentname="Holdable" />
