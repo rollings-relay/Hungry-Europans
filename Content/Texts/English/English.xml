@@ -497,8 +497,8 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-jampomegrenade>Tasty jam made out of pomegrenade. Known to be slightly more filling.</entitydescription.he-jampomegrenade><!--Patch 13-->
 <entityname.he-bubbleberryleaf>Bubbleberry Leaf</entityname.he-bubbleberryleaf><!--Patch 13-->
 <entitydescription.he-bubbleberryleaf>Can be used to make tea.</entitydescription.he-bubbleberryleaf><!--Patch 13-->
-<entityname.he-seaweedstrip>Sea Weed Strip</entityname.he-seaweedstrip><!--Patch 13-->
-<entitydescription.he-seaweedstrip>Sea weed pressed and sliced. Let it dry into Nori.</entitydescription.he-seaweedstrip><!--Patch 13-->
+<entityname.he-seaweedstrip>Sea Weed Strips</entityname.he-seaweedstrip><!--Patch 13-->
+<entitydescription.he-seaweedstrip>Sea weed pressed and sliced into strips. Let it dry into Nori.</entitydescription.he-seaweedstrip><!--Patch 13-->
 <entityname.he-nori>Nori</entityname.he-nori><!--Patch 13-->
 <entitydescription.he-nori>Dried and prepared sea weed used for sushi.</entitydescription.he-nori><!--Patch 13-->
 <!-- Dairy Products -->
