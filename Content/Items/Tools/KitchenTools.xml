@@ -66,7 +66,7 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1815,121,59,48" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1815,121,59,48" depth="0.55" />
       <Body width="58" height="46" density="13.0" />
-      <Holdable canbecombined="false" slots="Any,RightHand+LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect">
+      <Holdable canbecombined="false" slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect">
         <StatusEffect type="InWater" target="This">
           <SpawnItem identifier="he-potwithwater" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
           <Remove />
@@ -85,7 +85,7 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1815,121,59,48" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1815,121,59,48" depth="0.55" />
       <Body width="58" height="46" density="13.0" />
-      <Holdable canbecombined="false" slots="Any,RightHand+LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect" />
+      <Holdable canbecombined="false" slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect" />
       <CustomInterface canbeselected="false" drawhudwhenequipped="true">
         <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
         <Button text="interaction.emptypot">
@@ -107,7 +107,7 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1815,121,59,48" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1815,121,59,48" depth="0.55" />
       <Body width="58" height="46" density="13.0" />
-      <Holdable canbecombined="false" slots="Any,RightHand+LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect" />
+      <Holdable canbecombined="false" slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect" />
     </Item>
 
     <Item name="Meat Cleaver" identifier="he-cleaver" category="Weapon" Tags="smallitem,weapon,gunsmith,mountableweapon,sharptool,butcheritem,cleaver" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">

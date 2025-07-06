@@ -16,7 +16,7 @@
         <RequiredItem identifier="he-flour" UseCondition="True" MinCondition="0.1"/>
         <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.1"/>
       </Fabricate>
-      <Holdable canbecombined="false" slots="Any,RightHand+LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect">
+      <Holdable canbecombined="false" slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect">
         <StatusEffect type="Always" target="This" >
           <Conditional condition="gt 10" />
           <ParticleEmitter particle="weldsmoke" particlespersecond="3" scalemin="0.15" scalemax="0.25" anglemin="80" anglemax="100" velocitymin="0" velocitymax="10" lifetimemultiplier="0.5" colormultiplier="255,255,255,150"/>
