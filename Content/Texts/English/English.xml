@@ -1073,13 +1073,12 @@ SEARCH FOR THE FOLLOWING:                                                       
 <afflictiondescription.he-tobaccoaddiction>It's bad for your lungs. You feel short of breath.</afflictiondescription.he-tobaccoaddiction>
  
 <!-- Fabrication tags -->
-<fabricationdescription.sugary>Sugary Ingredient</fabricationdescription.sugary>
-<!-- <fabricationheader.sugary>A sugary ingredient.</fabricationheader.sugary> -->
-<fabricationdescription.salty>Salty Ingredient</fabricationdescription.salty>
-<!-- <fabricationheader.salty>A salty ingredient.</fabricationheader.salty> -->
-<fabricationdescription.smallegg>Small Egg</fabricationdescription.smallegg>
-<!-- <fabricationheader.smallegg>A small egg.</fabricationheader.smallegg> -->
- 
+<fabricationheader.sugary>Sugary Ingredient.</fabricationheader.sugary>
+<fabricationdescription.sugary>Any ingredient of sugary taste.</fabricationdescription.sugary>
+<fabricationheader.salty>Salty Ingredient.</fabricationheader.salty>
+<fabricationdescription.salty>Any ingredient of salty taste.</fabricationdescription.salty>
+<fabricationheader.smallegg>Small Egg</fabricationheader.smallegg>
+<fabricationdescription.smallegg>Any alien egg of small caliber.</fabricationdescription.smallegg> 
  
 <!-- misc -->
 <entityname.money_5mk>5mk</entityname.money_5mk>
