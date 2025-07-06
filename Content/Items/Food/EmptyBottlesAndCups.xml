@@ -787,10 +787,6 @@
       <Deconstruct time="2">
         <Item identifier="he-glassfragments" amount="1" outcondition="0.5"/>
       </Deconstruct>
-      <Fabricate suitablefabricators="fabricator" requiredtime="5" requiresrecipe="false" amount="2">
-        <RequiredSkill identifier="mechanical" level="35" />
-        <RequiredItem identifier="he-glassfragments" amount="1" UseCondition="True" MinCondition="1.0"/>
-      </Fabricate>
       <Throwable canbepicked="true" characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" handle1="-12,-3" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnSecondaryUse" target="This" delay="0.01">
           <Use />
@@ -840,10 +836,6 @@
       <Deconstruct time="2">
         <!-- <Item identifier="he-glassfragments" amount="1" outcondition="0.5"/> -->
       </Deconstruct>
-      <Fabricate suitablefabricators="fabricator" requiredtime="5" requiresrecipe="false" amount="2">
-        <RequiredSkill identifier="mechanical" level="35" />
-        <RequiredItem identifier="steel" amount="1" />
-      </Fabricate>
       <Throwable canbepicked="true" characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" handle1="-12,-3" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnSecondaryUse" target="This" delay="0.01">
           <Use />
@@ -880,10 +872,6 @@
       <Deconstruct time="2">
         <Item identifier="he-glassfragments" amount="1" />
       </Deconstruct>
-      <Fabricate suitablefabricators="fabricator" requiredtime="5" requiresrecipe="false" amount="1">
-        <RequiredSkill identifier="mechanical" level="35" />
-        <RequiredItem identifier="he-glassfragments" amount="1" />
-      </Fabricate>
       <Throwable canbepicked="true" characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnSecondaryUse" target="This" delay="0.01">
           <Use />
