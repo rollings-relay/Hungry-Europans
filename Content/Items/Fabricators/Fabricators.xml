@@ -572,7 +572,7 @@
     </Item>
     
     <!-- cooks things in a pot? -->
-    <Item name="Stove" identifier="he-stove" tags="stove,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="Used for cooking. Needs power." isshootable="true" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
+    <Item name="Stove" identifier="he-stove" tags="stove,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="Used for cooking. Needs power." isshootable="true" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2" impactsoundtag="impact_metal_heavy">
       <Upgrade gameversion="0.10.4.0">
         <Repairable Msg="ItemMsgRepairWrench" />
       </Upgrade>
@@ -608,7 +608,7 @@
       </DecorativeSprite>
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1886,137,162,35" depth="0.795" origin="0.47,0.86" maxcondition="80" fadein="true" />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1886,190,162,35" depth="0.794" origin="0.47,0.86" maxcondition="0" fadein="false" />
-      <Body width="162" height="25" density="30" />
+      <Body width="162" height="15" density="30" />
       <Fabricator selectkey="Select" canbeselected="true" powerconsumption="150.0" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
         <poweronsound file="Content/Items/PowerOnLight1.ogg" range="600" loop="false" />
