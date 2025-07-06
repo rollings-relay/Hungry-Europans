@@ -1106,7 +1106,8 @@
       </AbilityGroupEffect>
     </Talent>
 
-  <!--Essentially a placeholder (like assistant) that lets you choose which creature you want a damage buff against-->
+  <!--Essentially a placeholder (like assistant) that lets you choose which creature you want a damage buff against
+      The talent isn't great, wish I could give butchery and cooking skills instead of medical but stattype is hardcoded -->
     <Talent identifier="he-dietarypreference">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="2,1" sheetelementsize="128,128"/>
       <Description tag="talentdescription.he-dietarypreferencebase">
