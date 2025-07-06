@@ -730,11 +730,11 @@
       <Body width="52" height="2" density="25" />
       <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" handle1="-10,0" aimpos="26,16" holdpos="30,-15" holdangle="-20" aimangle="190" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnSecondaryUse" target="Character" interval="0.1" disabledeltatime="true" AllowWhenBroken="true" comparison="And">
-          <Conditional HasStatusTag="neq usingfork" />
-          <Conditional HasStatusTag="neq emptyfork" />
+          <Conditional HasStatusTag="neq usingspoon" />
+          <Conditional HasStatusTag="neq emptyspoon" />
           <Affliction identifier="applystomachache" amount="25" probability="0.01" />
         </StatusEffect>
-        <StatusEffect type="OnSecondaryUse" target="Character" tags="usingfork" interval="0.1" duration="0.2" AllowWhenBroken="true" />
+        <StatusEffect type="OnSecondaryUse" target="Character" tags="usingspoon" interval="0.1" duration="0.2" AllowWhenBroken="true" />
       </Holdable>
     </Item>    
 
