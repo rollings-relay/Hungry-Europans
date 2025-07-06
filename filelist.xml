@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Hungry Europans" modversion="2.0.6" corepackage="False" steamworkshopid="2954998725" gameversion="1.9.8.0">
+<contentpackage name="Hungry Europans" modversion="2.0.7" corepackage="False" steamworkshopid="2954998725" gameversion="1.9.8.0">
   <Afflictions file="%ModDir%/Content/Afflictions/BackwardsCompatibility.xml" />
   <Afflictions file="%ModDir%/Content/Afflictions/FoodBuffs.xml" />
   <Afflictions file="%ModDir%/Content/Afflictions/MiscAfflictions.xml" />
@@ -86,6 +86,6 @@
   <Submarine file="%ModDir%/Content/Submarines/Bulker - Abyss Scout.sub" />
   <Submarine file="%ModDir%/Content/Submarines/Bulker - Abyss Carrier.sub" />
   <NPCConversations file="%ModDir%/Content/Texts/English/NpcConversations_English.xml" />
-  <Submarine file="%ModDir%/#Testkitchen.sub" />
   <Character file="%ModDir%/Content/Afflictions/CannibalHusk.xml" />
+  <Submarine file="%ModDir%/#Testkitchen.sub" />
 </contentpackage>
