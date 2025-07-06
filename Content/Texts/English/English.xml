@@ -82,10 +82,10 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-molochhotdog>The taste makes you feel resilient</entitydescription.he-molochhotdog><!--Patch 13-->
 <entityname.he-cookedmolochnugget>Nugget</entityname.he-cookedmolochnugget><!--Patch 13-->
 <entitydescription.he-cookedmolochnugget>The taste makes you feel resilient</entitydescription.he-cookedmolochnugget><!--Patch 13-->
-<entityname.he-cookedmolochsteak>Steak</entityname.he-cookedmolochsteak><!--Patch 13-->
-<entitydescription.he-cookedmolochsteak>The taste makes you feel resilient</entitydescription.he-cookedmolochsteak><!--Patch 13-->
+<entityname.he-cookedmolochsteak>Moloch Tartare</entityname.he-cookedmolochsteak><!--Patch 13-->
+<entitydescription.he-cookedmolochsteak>Ground Moloch meat served raw with a cracked egg on top.</entitydescription.he-cookedmolochsteak><!--Patch 13-->
 <entityname.he-molochsushi>Moloch Sushi</entityname.he-molochsushi><!--Patch 13-->
-<entitydescription.he-molochsushi>The taste makes you feel resilient</entitydescription.he-molochsushi><!--Patch 13-->
+<entitydescription.he-molochsushi>Seasoned Moloch bits rolled in a leaf of Nori.</entitydescription.he-molochsushi><!--Patch 13-->
 <!--crawler-->
 <entityname.he-madnessmealcrawler>Meal of Madness - Crawler</entityname.he-madnessmealcrawler><!--Patch 13-->
 <entitydescription.he-madnessmealcrawler>Content:\n - 1x Crawler Burger\n - 8x Crawler Nuggets\n - 1x Can of Couwola Cola\n - 1x Random Toy</entitydescription.he-madnessmealcrawler><!--Patch 13-->
