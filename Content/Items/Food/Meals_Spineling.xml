@@ -9,7 +9,7 @@
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="364,1,99,25" depth="0.6" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="15" requiresrecipe="false" amount="1" displayname="spinelingfooditem">
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="15" requiresrecipe="false" amount="1" >
         <RequiredSkill identifier="cooking" level="25" />
         <RequiredItem identifier="he-spinelingslices" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
         <RequiredItem identifier="spinelingspikeloot" amount="1" />
