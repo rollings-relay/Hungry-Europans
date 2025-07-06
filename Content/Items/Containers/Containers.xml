@@ -492,26 +492,6 @@
         </StatusEffect>
         <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.3" PropulsionSpeedMultiplier="0.3" setvalue="true" duration="0.1" />
       </Holdable>
-      <PowerTransfer canbeselected="false" CanBeOverloaded="false" FireProbability="0" msg="ItemMsgInteractSelect">
-        <GuiFrame relativesize="0.2,0.14" minsize="450,160" anchor="Center" style="ItemUI" /> <!--minsize="350,160" maxsize="420,190"-->
-        <StatusEffect type="InWater" target="This" condition="-0.25">
-          <Conditional voltage="gt 0.1" />
-        </StatusEffect>
-      </PowerTransfer>
-      <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
-        <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
-        <RequiredSkill identifier="electrical" level="55" />
-        <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand" AllowWhenBroken="true">
-          <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
-          <Explosion range="100.0" force="1.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
-          <Affliction identifier="stun" strength="4" probability="0.5" />
-          <Affliction identifier="electricshock" strength="60"/>
-          <Affliction identifier="burn" strength="5" />
-          <ParticleEmitter particle="ElectricShock" DistanceMin="10" DistanceMax="25" ParticleAmount="5" ScaleMin="0.1" ScaleMax="0.12" />
-        </StatusEffect>
-        <RequiredItem items="screwdriver" type="Equipped" />
-        <output name="power" displayname="connection.power" />
-      </ConnectionPanel>
     </Item>
     
     <Item name="Cafeteria Cart" identifier="he-cafeteriacart" tags="kitchen,locker,container" linkable="true" category="Misc" subcategory="Container" description="Can store up to 30 different small items." pickdistance="150" waterproof="false" isshootable="true" scale="0.5">
