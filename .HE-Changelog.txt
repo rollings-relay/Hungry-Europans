@@ -1,18 +1,43 @@
-#TODO:
-M check and approve on fruits, seeds and tobacco addiction
-M slot icons for specific item slots (filter and hose in sink, etc)
-M make sure plant produce is available in large quantities on hydroponic and cities
 
-- Cake
-- Cake slice (requires fork to eat) | either: can be thrown if no fork is equipped | or: when equipped, show GUI to take cake off the plate to be able to throw it
-- Make more fryable food
-- Make more meat compatible with electric grill cooking and give all of them contained sprites for the grill
+//////////////////////
+//////////////////////
+//////////////////////
+
+Search "TODO:" in the mod
+PRIORITIES
+
+High:
+- Testing, testing, testing
+- Plant RE-rework when DLC comes out
+- Missing text
+- Make ingredients visible in the cooked items sprite
+- Dough sprite
+
+Medium:
+-Declutter fabricator windows
+-Avoid dupe foods/afflictions...
 - Recipes that make use of the canned ingredients
-- Adjust recipes to use what's visible in the sprites
-- Adjust food values depending on ingredients
-- Check liver damage not working from drunkness in NT comp patch
+- Contained Sprites for table/grill (avoid floating items)
+- Containable icon sprites
+- Adjust food values with new foodbuffs
+- Balance food values
+- Expand existing food types (soups)
+
+Low: 
+- Adding new food types
+- Sell prices, shops, hydroponic shop multiplier...
+- Check and approve on fruits, seeds and tobacco addiction
+- Cake+Slice
+- More fryable food
+- More grillable food
 - Worm infection | causes random stomache pains and will eventually kill the character | can be treated with antibiotics or strong alcohol
 - Tapeworm infection | causes the character to get hungry faster and will eventually kill them | can be treated with antibiotics
+- Check liver damage not working from drunkness in NT comp patch
+
+//////////////////////
+//////////////////////
+//////////////////////
+
 
 Changelog:
 
@@ -125,15 +150,17 @@ LongTermPlans:
 - Meat Chunks cookable and burnable in open fires.
 - More recipes and unlockable recipes by recipe items found or bought.
 - Moloch meat, Broodmother meat, Spineling meat, Latcher meat, Charybdis meat, Husked meat, meat from pets.
-- Gather Moloch Milk from living molochs (Black Molochs are males) using a special tool.
 - Plant based talents. Craftable item that makes items grow faster? Special fertilizer?
 - Tier 4 talents for butcher (choice): 1. cannibalism buff with butcher saw. Can directly harvest abyssal meat. | 2. Meat tenderizer hammer (two handed blunt weapon). Will allow meat cleaver to harvest abyssal creature meat after hitting their corpse a few times.
 - Assistant "Tasty target" talent for Chef
-- Assistant starter quest talent but you can select for which creature and deal more damage to that creature
-- Make bots say something when hungry/thirsty
 - Unique Couwola location with cola bottle plant and a locked, run down old part of the station and questline to obtain access to it and grab special bottles for the Couwola Cola collector to obtain his Limited Edition Exosuit.
 
+
+
+
+
 Here's my current list of what I want to add this month before pushing the content to the original Hungry Europans:
+
 
 BACKUP OF OLD POISON EFFECTS:
 <!-- Poison Effects -->
