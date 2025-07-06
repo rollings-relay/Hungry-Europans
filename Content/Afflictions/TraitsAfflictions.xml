@@ -11,7 +11,7 @@
           <ReduceAffliction identifier="mood" amount="1.0" />
         </StatusEffect> 
       </Effect>
-    </Affliction>    
+    </Affliction>
     <Affliction name="" identifier="ate_friedfood" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="10" strengthchange="-1" resistancefor="ate_friedfood" minresistance="1" maxresistance="1" multiplybymaxvitality="true" />
     </Affliction>    
@@ -112,6 +112,17 @@
       <Effect minstrength="0" maxstrength="10" strengthchange="-1" resistancefor="ate_soup" minresistance="1" maxresistance="1" multiplybymaxvitality="true" />
     </Affliction>
        
+    <Affliction name="" identifier="trait_likes_salad" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
+      <Effect minstrength="0" maxstrength="1" strengthchange="0" resistancefor="trait_dislikes_salad" minresistance="1" maxresistance="1" multiplybymaxvitality="true" dialogflag="likessalad">
+        <StatusEffect target="Character">
+          <Conditional ate_salad="gt 0" />
+          <ReduceAffliction identifier="mood" amount="1.0" />
+        </StatusEffect> 
+      </Effect>
+    </Affliction>
+    <Affliction name="" identifier="ate_salad" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
+      <Effect minstrength="0" maxstrength="10" strengthchange="-1" resistancefor="ate_salad" minresistance="1" maxresistance="1" multiplybymaxvitality="true" />
+    </Affliction>
 
     <!-- DRINKS -->
     <Affliction name="" identifier="trait_likes_beer" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
