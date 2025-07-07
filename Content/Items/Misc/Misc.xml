@@ -1363,6 +1363,7 @@
         </StatusEffect>
       </Holdable>
     </Item>
+    
     <Item name="25mk" identifier="money_25mk" description="Adds 25mk to your Bank Account" Category="Hidden" Tags="smallitem,money" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" scale="0.1" spritecolor="255,255,255,255" noninteractable="false" hideinmenus="true">
       <Sprite texture="%ModDir:2954998725%/Content/Items/InventoryIcons.Png" depth="0.55" sourcerect="166,390,143,122" />
       <Body radius="2" density="10" />
@@ -1381,7 +1382,8 @@
         </StatusEffect>
       </Holdable>
     </Item>
-    <Item name="50mk" identifier="money_50mk" description="Adds 50mk to your Bank Account" Category="Hidden" Tags="smallitem,money" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" scale="0.1" spritecolor="255,255,255,255" noninteractable="false" hideinmenus="true">
+    
+<!--     <Item name="50mk" identifier="money_50mk" description="Adds 50mk to your Bank Account" Category="Hidden" Tags="smallitem,money" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" scale="0.1" spritecolor="255,255,255,255" noninteractable="false" hideinmenus="true">
       <Sprite texture="%ModDir:2954998725%/Content/Items/InventoryIcons.Png" depth="0.55" sourcerect="166,390,143,122" />
       <Body radius="2" density="10" />
       <Fabricate suitablefabricators="cafeteria" requiredtime="5" requiredmoney="0" fabricationlimitmin="99999" fabricationlimitmax="99999" displayname="returnitem">
@@ -1434,7 +1436,7 @@
           <Remove />
         </StatusEffect>
       </Holdable>
-    </Item>    
+    </Item> -->
     
     <Item name="" identifier="shotgunshellsalt" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,shotgunammo,handheldammo" Scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="shotgun" amount="6" spawnprobability="1" />
