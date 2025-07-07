@@ -1,7 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Override>
 
-  <!-- TODO: fix the plates floating above tables, that's a shitton of sprites to adjust -->
+  <!-- TODO: tons of things to fix about table sprite alignment, it's a headache:
+             
+             
+             -every meal needs a containedsprite and its Y origin adjusted to line up
+             -items inside items do not align items properly (stacked plates)
+             -when moving a stack of bowls, only the main bowl is moved and not the contained ones
+             -the biggest problem was not normalizing the Y height of items, like empty plates vs plates with meals     
+             -items that are too big will be thicker than the table and peek out below
+             -for tables to be properly implemented there needs to be a parameter to align contained items based on their lower sprite border...
+              
+              -->
 
   <Items>
     <Item name="Cafeteria Table" identifier="he-cafeteriatable" tags="largeitem,table" width="252" height="171" scale="0.5" linkable="true" allowedlinks="kitchen,container,table" noninteractable="false" category="Misc" pickdistance="150" canflipy="false" canflipx="false" isshootable="true" GrabWhenSelected="false">
