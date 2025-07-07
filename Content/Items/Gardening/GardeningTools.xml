@@ -172,6 +172,19 @@
             <Conditional HasTag="neq explodesinwater"/>
           </StatusEffect>-->
         </RepairTool>
+        <!-- filling with water bottle is possible but less effective -->
+        <ItemContainer capacity="1" maxstacksize="1" hideitems="true" drawinventory="true" autofill="false" ShowConditionInContainedStateIndicator="false" ShowContainedStateIndicator="false">
+          <SlotIcon slotindex="0" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="577,0,85,85" origin="0.5,0.5" />
+          <Containable items="cleanwater,emptybottle">
+            <StatusEffect type="OnInserted" target="This" condition="50" disabledeltatime="true">
+              <RequiredItem items="cleanwater" type="Contained" />
+              <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/SinkDrain.ogg" loop="false" range="200" volume="2" frequencymultiplier="2" />
+            </StatusEffect>
+            <StatusEffect type="OnInserted" target="Contained" condition="0" setvalue="true">
+              <RequiredItem items="cleanwater" type="Contained" />
+            </StatusEffect>
+          </Containable>
+        </ItemContainer>
       </Item>
 
       <Item name="Hydroponic Planter" identifier="he-hydroponicplanter" tags="hydroponic,hydroponicplanter,donttakeitems,dontsellitems" category="Machine" subcategory="Gardening" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="A device providing perfect conditions for europas underwater plants to grow. Yields a plant every 15 minutes. Needs power." isshootable="true" scale="0.3" damagedbyexplosions="true" explosiondamagemultiplier="0.2" canflipx="false">
