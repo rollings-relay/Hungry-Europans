@@ -94,19 +94,19 @@
       healableinmedicalclinic="false"
       iconcolors="0,100,0,255;100,0,0,255">
       <Description
-        textidentifier="afflictiondescription.mood.self.goodmood"
+        textidentifier="afflictiondescription.mood.goodmood"
         minstrength="0"
         maxstrength="25" />
       <Description
-        textidentifier="afflictiondescription.mood.self.mediummood"
+        textidentifier="afflictiondescription.mood.mediummood"
         minstrength="25"
         maxstrength="50" />
       <Description
-        textidentifier="afflictiondescription.mood.self.badmood"
+        textidentifier="afflictiondescription.mood.badmood"
         minstrength="50"
         maxstrength="75" />
       <Description
-        textidentifier="afflictiondescription.mood.self.awfulmood"
+        textidentifier="afflictiondescription.mood.awfulmood"
         minstrength="75"
         maxstrength="100" />
       <Effect minstrength="0" maxstrength="25"
