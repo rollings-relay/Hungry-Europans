@@ -469,6 +469,7 @@
         target="OtherCharacter"
         minstrength="130"
         maxstrength="1800" />
+      <!-- TODO: Rework? Stuffed is weird. Why 1800 max strength? How can you vommit and still be stuffed? The descriptions are all off since it only shows up at 100. Also I do not think baro handles -0.05555555, don't we have a better number? -->
       <Effect minstrength="0" maxstrength="100" minresistance="0.0" maxresistance="0.0" resistancefor="hunger" strengthchange="-0.0555555555555"
         dialogflag="stuffedlight">
         <StatusEffect target="Character" disabledeltatime="true" interval="1">
