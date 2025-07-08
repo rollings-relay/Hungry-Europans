@@ -540,12 +540,14 @@
           <CharacterAbilityApplyStatusEffectsToAllies allowself="true" requiresalive="true" allowclientsimulation="false">
             <StatusEffects>
               <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" comparison="and">
+                <Conditional hunger="gt 0" />
                 <Conditional hunger="lt 30" />
                 <Conditional he-stuffed="gte 35" />
                 <Affliction identifier="excellentmorale" amount="10.0"/>
                 <ReduceAffliction identifier="highmorale" strength="10.0"/>
               </StatusEffect>
               <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" comparison="and">
+                <Conditional hunger="gt 0" />
                 <Conditional hunger="lt 30" />
                 <Conditional he-stuffed="lt 35" />
                 <Affliction identifier="highmorale" amount="10.0"/>
