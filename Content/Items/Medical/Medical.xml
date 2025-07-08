@@ -172,7 +172,7 @@
         <StatusEffect tags="medical" type="OnSuccess" target="UseTarget">
           <ReduceAffliction type="hunger" amount="20" />
           <ReduceAffliction type="thirst" amount="20" />
-          <ReduceAffliction type="he-hungryforhumanmeat" amount="10" />
+          <ReduceAffliction identifier="he-hungryforhumanmeat" amount="10" />
           <ReduceAffliction type="he-starvation" amount="100" />
           <ReduceAffliction type="he-dieofthirst" amount="100" />
           <Affliction identifier="oxygenlow" amount="6" />
@@ -180,7 +180,7 @@
         <StatusEffect tags="medical" type="OnFailure" target="UseTarget">
           <ReduceAffliction type="hunger" amount="5" />
           <ReduceAffliction type="thirst" amount="5" />
-          <ReduceAffliction type="he-hungryforhumanmeat" amount="5" />
+          <ReduceAffliction identifier="he-hungryforhumanmeat" amount="5" />
           <ReduceAffliction type="he-starvation" amount="100" />
           <ReduceAffliction type="he-dieofthirst" amount="100" />
           <Affliction identifier="oxygenlow" amount="12" />

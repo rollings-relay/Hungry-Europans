@@ -23,7 +23,7 @@
         <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
         <StatusEffect type="OnUse" target="Character">
           <Affliction identifier="he-cannibalism" amount="0.75" />
-          <ReduceAffliction type="he-hungryforhumanmeat" amount="3" />
+          <ReduceAffliction identifier="he-hungryforhumanmeat" amount="3" />
           <Affliction identifier="he-stuffed" amount="4" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
@@ -75,7 +75,7 @@
         <StatusEffect type="OnUse" target="Character">
           <Affliction identifier="he-cannibalism" amount="0.5" />
           <Affliction identifier="he-stuffed" amount="1" />
-          <ReduceAffliction type="he-hungryforhumanmeat" amount="0.75" />
+          <ReduceAffliction identifier="he-hungryforhumanmeat" amount="0.75" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>

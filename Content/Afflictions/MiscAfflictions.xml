@@ -1156,7 +1156,7 @@
         <StatusEffect target="Character" interval="1" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
           <ReduceAffliction type="hunger" strength="0.005" />
           <ReduceAffliction type="thirst" strength="0.01" />
-          <ReduceAffliction type="he-hungryforhumanmeat" strength="0.005" />
+          <ReduceAffliction identifier="he-hungryforhumanmeat" strength="0.005" />
           <ReduceAffliction identifier="embarrassment" strength="1.5" />
           <ReduceAffliction type="damage" strength="0.1" />
           <ReduceAffliction identifier="bloodloss" strength="0.05" />
@@ -1210,7 +1210,7 @@
         <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true">
           <ReduceAffliction type="hunger" strength="0.005" />
           <ReduceAffliction type="thirst" strength="0.01" />
-          <ReduceAffliction type="he-hungryforhumanmeat" strength="0.005" />
+          <ReduceAffliction identifier="he-hungryforhumanmeat" strength="0.005" />
           <ReduceAffliction identifier="embarrassment" strength="1.5" />
           <ReduceAffliction type="damage" strength="0.1" />
           <ReduceAffliction identifier="bloodloss" strength="0.05" />
