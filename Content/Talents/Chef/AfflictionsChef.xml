@@ -19,6 +19,30 @@
     <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="5,6" sheetelementsize="128,128" color="10,193,114,255" origin="0,0"/>
   </Affliction>  
   
+  
+  <!-- WIP - not working -->
+  <!-- <Affliction
+    identifier="he-lazygardener"
+    type="talentbuff"
+    isbuff="true"
+    limbspecific="false"
+    hideiconafterdelay="true"
+    maxstrength="1"
+    duration="1"
+    treatmentthreshold="1000"
+    iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="1" >
+      <StatusEffect target="Character,NearbyItems" range="250" >
+        <Conditional FullyGrown="true" targetitemcomponent="Growable" />
+        <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/SnoringMale.ogg" loop="true" range="200" volume="2" />
+        <ReduceAffliction identifier="mood" strength="25"/>
+        <ReduceAffliction identifier="fatigue" strength="25"/>
+      </StatusEffect>    
+    </Effect>
+    <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="2,6" sheetelementsize="128,128" color="10,193,114,255" origin="0,0"/>
+  </Affliction>  -->
+    
+  
   <Affliction
     identifier="he-steadyhands"
     type="talentbuff"

@@ -272,6 +272,31 @@
         <Replace tag="[itemname]" value="entityname.he-sprinkler" color="gui.orange"/>
       </Description>
       <AddedRecipe itemidentifier="he-sprinkler"/>
+      <!-- I tried making lazy gardener reduce mood/fatigue when sleeping near grown plants but it's possible as conditional tries to do a double check on both targets -->
+      <!-- <AbilityGroupInterval effectdelay="2">
+        <Conditions>
+          <AbilityConditionRagdolled />
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="NearbyItems" range="500" >
+                <Conditional FullyGrown="true" targetitemcomponent="Growable" />
+                <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/SnoringMale.ogg" loop="true" range="200" volume="2" />
+                <ReduceAffliction identifier="mood" strength="25"/>
+                <ReduceAffliction identifier="fatigue" strength="25"/>
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" disabledeltatime="true">
+                <Affliction identifier="he-lazygardener" amount="1.0"/>
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupInterval> -->
     </Talent>
 
   <!--Gain a commendation when cooking a gourmet meal TODO: make it clear what is gourmet, add gourmetfood tag to advanced meals? -->
