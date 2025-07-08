@@ -1229,6 +1229,49 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entityname.he-preparedhuskfilets>Prepared Husk Filets</entityname.he-preparedhuskfilets>
 <entitydescription.he-preparedhuskfilets>Husk filets, roasted in an oven.</entitydescription.he-preparedhuskfilets>
 
+
+
+
+
+<!-- TRAITS -->
+
+<talentname.he-moodyeuropan>Moody Europan</talentname.he-moodyeuropan>
+<talentdescription.he-moodyeuropan>Keep your stress low by enjoying foods and drinks you like.</talentdescription.he-moodyeuropan>
+
+<talentname.he-trait_likes_friedfood>Likes Fried Food</talentname.he-trait_likes_friedfood>
+<talentdescription.he-trait_likes_burgers>You like eating Fried Food.</talentdescription.he-trait_likes_burgers>
+<talentname.he-trait_likes_burgers>Likes Burgers</talentname.he-trait_likes_burgers>
+<talentdescription.he-trait_likes_hotdogs>You like eating Hotdogs.</talentdescription.he-trait_likes_hotdogs>
+<talentname.he-trait_likes_hotdogs>Likes Hotdogs</talentname.he-trait_likes_hotdogs>
+<talentdescription.he-trait_likes_pizzas>You like eating Pizzas.</talentdescription.he-trait_likes_pizzas>
+<talentname.he-trait_likes_pizzas>Likes Pizzas</talentname.he-trait_likes_pizzas>
+<talentdescription.he-trait_likes_filets>You like eating Filets.</talentdescription.he-trait_likes_filets>
+<talentname.he-trait_likes_filets>Likes Filets</talentname.he-trait_likes_filets>
+<talentdescription.he-trait_likes_roasts>You like eating Roasts.</talentdescription.he-trait_likes_roasts>
+<talentname.he-trait_likes_roasts>Likes Roasts</talentname.he-trait_likes_roasts>
+<talentdescription.he-trait_likes_sandwiches>You like eating Sandwiches.</talentdescription.he-trait_likes_sandwiches>
+<talentname.he-trait_likes_sandwiches>Likes Sandwiches</talentname.he-trait_likes_sandwiches>
+<talentdescription.he-trait_likes_omelette>You like eating Omelette.</talentdescription.he-trait_likes_omelette>
+<talentname.he-trait_likes_omelette>Likes Omelette</talentname.he-trait_likes_omelette>
+<talentdescription.he-trait_likes_soup>You like eating Soup.</talentdescription.he-trait_likes_soup>
+<talentname.he-trait_likes_soup>Likes Soup</talentname.he-trait_likes_soup>
+<talentdescription.he-trait_likes_salad>You like eating Salad.</talentdescription.he-trait_likes_salad>
+<talentname.he-trait_likes_salad>Likes Salad</talentname.he-trait_likes_salad>
+
+<talentname.he-trait_likes_beer>Likes Beer</talentname.he-trait_likes_beer>
+<talentdescription.he-trait_likes_beer>You like drinking Beer.</talentdescription.he-trait_likes_beer>
+<talentname.he-trait_likes_rum>Likes Rum</talentname.he-trait_likes_rum>
+<talentdescription.he-trait_likes_rum>You like drinking Rum.</talentdescription.he-trait_likes_rum>
+<talentname.he-trait_likes_whiskey>Likes Whiskey</talentname.he-trait_likes_whiskey>
+<talentdescription.he-trait_likes_whiskey>You like drinking Whiskey.</talentdescription.he-trait_likes_whiskey>
+<talentname.he-trait_likes_tea>Likes Tea</talentname.he-trait_likes_tea>
+<talentdescription.he-trait_likes_tea>You like drinking Tea.</talentdescription.he-trait_likes_tea>
+<talentname.he-trait_likes_cola>Likes Cola</talentname.he-trait_likes_cola>
+<talentdescription.he-trait_likes_cola>You like drinking Cola.</talentdescription.he-trait_likes_cola>
+
+
+
+
 <!-- HUBERT ADDITIONS ABOVE THIS --> 
 <!-- HUBERT ADDITIONS ABOVE THIS --> 
 <!-- HUBERT ADDITIONS ABOVE THIS --> 
