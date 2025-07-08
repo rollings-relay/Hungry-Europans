@@ -257,6 +257,8 @@
         </StatusEffect>
       </Wearable>
       
+      
+      <!-- TODO: The way trait selection works is insane. Do we really need to spawn items instead of just giving talents directly... -->
       <!-- TODO: add new traits to selector part -->
       <CustomInterface uilabel="Select your preferred food:" drawhudwhenequipped="true">
         <GuiFrame relativesize="0.2,0.4" anchor="Center" style="DialogBox" hidedragicons="true" />
