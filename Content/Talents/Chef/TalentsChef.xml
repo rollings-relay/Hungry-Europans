@@ -300,26 +300,17 @@
         <Abilities>
           <CharacterAbilityResetPermanentStat statidentifier="culinaryschool_cooked" />
         </Abilities>
-      </AbilityGroupEffect>
-      
+      </AbilityGroupEffect>      
     </Talent>
 
   <!--BUTCHER TREE-->
-  <!--Increase Damage with Butcher Knives-->
+  <!--Increase Damage with Butcher Knives + faster cutting board -->
     <Talent identifier="he-frenzy">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="4,1" sheetelementsize="128,128"/>
       <Description tag="talentdescription.he-frenzy">
         <Replace tag="[powerincrease]" value="50" color="gui.green"/>
         <Replace tag="[amount]" value="35" color="gui.green"/>
       </Description>
-      <AbilityGroupEffect abilityeffecttype="OnAttack">
-        <Conditions>
-          <AbilityConditionAttackData tags="butcheritem"/>
-        </Conditions>
-        <Abilities>
-          <CharacterAbilityModifyAttackData addeddamagemultiplier="0.5"/>
-        </Abilities>
-      </AbilityGroupEffect>
       <AbilityGroupEffect abilityeffecttype="OnAttack">
         <Conditions>
           <AbilityConditionAttackData tags="butcheritem"/>
@@ -353,7 +344,7 @@
       </AbilityGroupEffect>
     </Talent>
 
-  <!--Disable meat rotting in inventory-->
+  <!--Disable meat rotting in inventory + 20% burn resistance -->
     <Talent identifier="he-coldblood">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="6,1" sheetelementsize="128,128"/>
       <Description tag="talentdescription.he-coldblood">
@@ -405,7 +396,7 @@
       </AbilityGroupEffect>
     </Talent>
 
-  <!--Increases bleed damage & add Butcher Saw when implimented-->
+  <!--UNUSED - Increases bleed damage & add Butcher Saw when implimented-->
     <Talent identifier="he-slaughterhouse">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="0,2" sheetelementsize="128,128"/>
       <Description tag="talentdescription.firemanscarry"/>
@@ -456,7 +447,7 @@
       </AbilityGroupEffect>
     </Talent>
 
-  <!--Currently Unused - Increase Sell Prices of Raw Meat by 50%-->
+  <!--UNUSED - Increase Sell Prices of Raw Meat by 50%-->
     <Talent identifier="he-butchershop">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="905,905,119,119" origin="0.5,0.5"/>
       <!--<Description tag="talentdescription.blackmarketgenes"/>-->
