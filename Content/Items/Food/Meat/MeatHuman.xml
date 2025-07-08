@@ -35,7 +35,6 @@
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character">
           <Conditional he-cannibalism="gte 20" />
-          <Affliction identifier="he-cannibalskillincrease" amount="20.0" />
           <ReduceAffliction identifier="psychosis" amount="4" />
           <ReduceAffliction identifier="nausea" amount="4" />
         </StatusEffect>
@@ -87,7 +86,6 @@
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character">
           <Conditional he-cannibalism="gte 20" />
-          <Affliction identifier="he-cannibalskillincrease" amount="5.0" />
           <ReduceAffliction identifier="psychosis" amount="1" />
           <ReduceAffliction identifier="nausea" amount="1" />
         </StatusEffect>
