@@ -219,8 +219,11 @@
       </AbilityGroupInterval>
       <AddedRecipe itemidentifier="he-kegrum"/>
     </Talent>
+    
+    
+    
     <!-- TRAITS -->
-    <Talent name="Preferred Food: Nuggets" identifier="he-trait_likes_nuggets">
+    <Talent name="Preferred Food: Fried Food" identifier="he-trait_likes_friedfood">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,385,119,119" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-moodyeuropan" />
       <AbilityGroupEffect abilityeffecttype="OnRoundEnd">
@@ -228,13 +231,14 @@
           <CharacterAbilityApplyStatusEffects>
             <StatusEffects>
               <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
-                <Affliction identifier="trait_likes_nuggets" amount="1" />
+                <Affliction identifier="trait_likes_friedfood" amount="1" />
               </StatusEffect>
             </StatusEffects>
           </CharacterAbilityApplyStatusEffects>
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
+    
     <Talent name="Preferred Food: Burgers" identifier="he-trait_likes_burgers">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,385,119,119" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-moodyeuropan" />
@@ -250,6 +254,7 @@
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
+    
     <Talent name="Preferred Food: Hotdogs" identifier="he-trait_likes_hotdogs">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,385,119,119" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-moodyeuropan" />
@@ -264,7 +269,24 @@
           </CharacterAbilityApplyStatusEffects>
         </Abilities>
       </AbilityGroupEffect>
+    </Talent>    
+    
+    <Talent name="Preferred Food: Pizza" identifier="he-trait_likes_pizza">
+      <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,385,119,119" origin="0.5,0.5"/>
+      <Description tag="talentdescription.he-moodyeuropan" />
+      <AbilityGroupEffect abilityeffecttype="OnRoundEnd">
+        <Abilities>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+                <Affliction identifier="trait_likes_pizza" amount="1" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupEffect>
     </Talent>
+    
     <Talent name="Preferred Food: Filets" identifier="he-trait_likes_filets">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,385,119,119" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-moodyeuropan" />
@@ -280,7 +302,8 @@
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
-    <Talent name="Preferred Food: roasts" identifier="he-trait_likes_roasts">
+    
+    <Talent name="Preferred Food: Roasts" identifier="he-trait_likes_roasts">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,385,119,119" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-moodyeuropan" />
       <AbilityGroupEffect abilityeffecttype="OnRoundEnd">
@@ -295,6 +318,7 @@
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
+    
     <Talent name="Preferred Food: Sandwiches" identifier="he-trait_likes_sandwiches">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,385,119,119" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-moodyeuropan" />
@@ -310,6 +334,56 @@
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
+    
+    <Talent name="Preferred Food: Omelette" identifier="he-trait_likes_omelette">
+      <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,385,119,119" origin="0.5,0.5"/>
+      <Description tag="talentdescription.he-moodyeuropan" />
+      <AbilityGroupEffect abilityeffecttype="OnRoundEnd">
+        <Abilities>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+                <Affliction identifier="trait_likes_omelette" amount="1" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupEffect>
+    </Talent>
+    
+    <Talent name="Preferred Food: Soup" identifier="he-trait_likes_soup">
+      <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,385,119,119" origin="0.5,0.5"/>
+      <Description tag="talentdescription.he-moodyeuropan" />
+      <AbilityGroupEffect abilityeffecttype="OnRoundEnd">
+        <Abilities>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+                <Affliction identifier="trait_likes_soup" amount="1" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupEffect>
+    </Talent>    
+    
+    <Talent name="Preferred Food: Salad" identifier="he-trait_likes_salad">
+      <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,385,119,119" origin="0.5,0.5"/>
+      <Description tag="talentdescription.he-moodyeuropan" />
+      <AbilityGroupEffect abilityeffecttype="OnRoundEnd">
+        <Abilities>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+                <Affliction identifier="trait_likes_salad" amount="1" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupEffect>
+    </Talent>        
+    
+    
     <Talent name="Preferred Drink: Beer" identifier="he-trait_likes_beer">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,385,119,119" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-moodyeuropan" />
@@ -325,6 +399,7 @@
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
+    
     <Talent name="Preferred Drink: Rum" identifier="he-trait_likes_rum">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,385,119,119" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-moodyeuropan" />
@@ -340,6 +415,7 @@
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
+    
     <Talent name="Preferred Drink: Whiskey" identifier="he-trait_likes_whiskey">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,385,119,119" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-moodyeuropan" />
@@ -355,6 +431,7 @@
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
+    
     <Talent name="Preferred Drink: Tea" identifier="he-trait_likes_tea">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,385,119,119" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-moodyeuropan" />
@@ -370,6 +447,7 @@
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
+    
     <Talent name="Preferred Drink: Cola" identifier="he-trait_likes_cola">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,385,119,119" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-moodyeuropan" />
