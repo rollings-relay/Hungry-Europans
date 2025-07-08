@@ -807,12 +807,12 @@
         maxstrength="90" 
         target="OtherCharacter" />
       <Description
-        textidentifier="advancedafflictiondescription.self.he-hungryforhumanmeat.2"
+        textidentifier="advancedafflictiondescription.self.he-hungryforhumanmeat.3"
         minstrength="90"
         maxstrength="100" 
         target="Self" />
       <Description
-        textidentifier="advancedafflictiondescription.others.he-hungryforhumanmeat.2"
+        textidentifier="advancedafflictiondescription.others.he-hungryforhumanmeat.3"
         minstrength="90"
         maxstrength="100" 
         target="OtherCharacter" />
