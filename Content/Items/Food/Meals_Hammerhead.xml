@@ -34,6 +34,7 @@
           <Conditional IsHuman="true" targetcontainer="true" />
           <Affliction identifier="he-proteinrich" amount="50.0" />
           <Affliction identifier="ate_roast" amount="1" />
+          <Affliction identifier="ate_omelette" amount="1" />
           <Affliction identifier="he-stuffed" amount="2.0" />
           <ReduceAffliction type="hunger" amount="2.0" />
           <ReduceAffliction type="damage" amount="0.1" />
@@ -53,6 +54,7 @@
           <Conditional InWater="false" />
           <Affliction identifier="he-proteinrich" amount="50.0" />
           <Affliction identifier="ate_roast" amount="1" />
+          <Affliction identifier="ate_omelette" amount="1" />
           <Affliction identifier="he-stuffed" amount="2.0" />
           <ReduceAffliction type="hunger" amount="2.0" />
           <ReduceAffliction type="damage" amount="0.1" />
@@ -174,7 +176,6 @@
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <Affliction identifier="he-proteinrich" amount="50.0" />
-          <Affliction identifier="ate_hotdog" amount="1" />
           <Affliction identifier="he-stuffed" amount="2.0" />
           <ReduceAffliction type="hunger" amount="2.0" />
           <ReduceAffliction type="damage" amount="0.15" />
