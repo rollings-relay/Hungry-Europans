@@ -2788,26 +2788,54 @@
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="243,0,21,66" depth="0.525" origin="0.5,0.8"  />
       <Body width="21" height="58" density="15" />
       <SuitableTreatment type="thirst" suitability="90" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,26" holdpos="30,-15" holdangle="0" aimangle="120" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">      
-
-        <!--////////// BOT DRINKING \\\\\\\\\\-->
-        <!-- Bots "drink" by holding the food in their hands -->
-        <StatusEffect type="OnActive" target="This,Character" duration="1" condition="-1" stackable="false" comparison="And">
-          <Conditional thirst="gt 1" targetcontainer="true" />
-          <Conditional IsPlayer="false" targetcontainer="true" />
-          <Conditional IsHuman="true" targetcontainer="true" />
-          <ReduceAffliction type="thirst" amount="3.0" />
-          <ReduceAffliction identifier="he-dieofthirst" amount="20" />
+      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,26" holdpos="30,-15" holdangle="0" aimangle="120" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+        <!-- Allow the item to be applied to a bot, but prevent full usage on a player -->
+        <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
+          <Conditional IsBot="true" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
+          <Conditional IsBot="true" />
+          <ReduceAffliction identifier="he-stuffed" amount="3.125" />
+          <ReduceAffliction identifier="drunk" amount="6.25" />
+          <ReduceAffliction identifier="drunknodebuffs" amount="6.25" />
+          <ReduceAffliction identifier="hallucinating" amount="1.25" />
+          <ReduceAffliction identifier="he-halucinova" amount="1.25" />
+          <ReduceAffliction type="thirst" amount="37.5" />
+          <ReduceAffliction identifier="he-dieofthirst" amount="200" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" comparison="And" multiplyafflictionsbymaxvitality="true">
+          <Conditional IsBot="true" />
+          <Conditional bladder="gte 0.01" />
+          <Affliction identifier="fillbladder" amount="3.0" />
+        </StatusEffect>
+        <!-- Allow the item to be applied to a player fully, if the player is not in water and unconcious/stunned -->
+        <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional stun="gt 0" />
+          <Conditional IsPlayer="true" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" comparison="And" multiplyafflictionsbymaxvitality="true">
+          <Conditional InWater="false" />
+          <Conditional stun="gt 0" />
+          <Conditional IsPlayer="true" />
           <ReduceAffliction identifier="he-stuffed" amount="0.25" />
           <ReduceAffliction identifier="drunk" amount="0.5" />
           <ReduceAffliction identifier="drunknodebuffs" amount="0.5" />
           <ReduceAffliction identifier="hallucinating" amount="0.1" />
           <ReduceAffliction identifier="he-halucinova" amount="0.1" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
+          <ReduceAffliction type="thirst" amount="3.0" />
+          <ReduceAffliction identifier="he-dieofthirst" amount="20" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
-        
-        <!--////////// REGULAR DRINKING \\\\\\\\\\-->
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" comparison="And" multiplyafflictionsbymaxvitality="true">
+          <Conditional InWater="false" />
+          <Conditional stun="gt 0" />
+          <Conditional IsPlayer="true" />
+          <Conditional bladder="gte 0.01" />
+          <Affliction identifier="fillbladder" amount="3.0" />
+        </StatusEffect>
+        <!-- Regular drinking -->
         <StatusEffect type="OnSecondaryUse" target="This" Condition="99" setvalue="true" comparison="And">
           <Conditional Condition="equals 100" />
           <Conditional InWater="false" />
@@ -2816,16 +2844,20 @@
         <StatusEffect type="OnUse" target="This" Condition="-8.0">
           <Conditional InWater="false" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="This,Character" comparison="And">
+        <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
-          <ReduceAffliction type="thirst" amount="3.0" />
-          <ReduceAffliction identifier="he-dieofthirst" amount="20" />
           <ReduceAffliction identifier="he-stuffed" amount="0.25" />
           <ReduceAffliction identifier="drunk" amount="0.5" />
           <ReduceAffliction identifier="drunknodebuffs" amount="0.5" />
           <ReduceAffliction identifier="hallucinating" amount="0.1" />
           <ReduceAffliction identifier="he-halucinova" amount="0.1" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character" comparison="And">
+          <Conditional thirst="gt 3.0" />
+          <Conditional InWater="false" />
+          <ReduceAffliction type="thirst" amount="3.0" />
+          <ReduceAffliction identifier="he-dieofthirst" amount="20" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional bladder="gte 0.01" />
@@ -5408,6 +5440,3 @@
 
   </Items>
 </Override>
-
-
-        <!-- <StatusEffect type="OnActive" target="This,Character" duration="1" condition="-1" stackable="false" comparison="And">\r\n          <Conditional thirst="gt 1" targetcontainer="true" /> -->
