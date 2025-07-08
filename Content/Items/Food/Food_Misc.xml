@@ -22,6 +22,7 @@
           <Conditional hunger="gt 1" targetcontainer="true" />
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
+          <Affliction identifier="he-proteinrich" amount="5.0" />
           <Affliction identifier="he-stuffed" amount="0.75" />
           <ReduceAffliction type="hunger" amount="0.75" />
           <ReduceAffliction type="damage" amount="0.2" />
@@ -69,6 +70,7 @@
           <Conditional hunger="gt 1" targetcontainer="true" />
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
+          <Affliction identifier="he-proteinrich" amount="5.0" />
           <Affliction identifier="he-stuffed" amount="0.75" />
           <ReduceAffliction type="hunger" amount="0.75" />
           <ReduceAffliction type="damage" amount="0.25" />
@@ -83,6 +85,7 @@
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
+          <Affliction identifier="he-proteinrich" amount="5.0" />
           <Affliction identifier="he-stuffed" amount="0.75" />
           <ReduceAffliction type="hunger" amount="0.75" />
           <ReduceAffliction type="damage" amount="0.25" />
