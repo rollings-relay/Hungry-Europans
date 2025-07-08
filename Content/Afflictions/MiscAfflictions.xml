@@ -565,15 +565,33 @@
       healableinmedicalclinic="false"
       MedicalSkillGain="0.0">
       <Description
-        textidentifier="afflictiondescription.he-internalburn.low"
+        textidentifier="afflictiondescription.self.he-internalburn.low"
+        target="Self" 
         minstrength="0"
         maxstrength="30" />
       <Description
-        textidentifier="afflictiondescription.he-internalburn"
+        textidentifier="afflictiondescription.self.he-internalburn"
+        target="Self" 
         minstrength="30"
         maxstrength="60" />
       <Description
-        textidentifier="afflictiondescription.he-internalburn.high"
+        textidentifier="afflictiondescription.self.he-internalburn.high"
+        target="Self" 
+        minstrength="60"
+        maxstrength="100" />
+      <Description
+        textidentifier="afflictiondescription.others.he-internalburn.low"
+        target="OtherCharacter" 
+        minstrength="0"
+        maxstrength="30" />
+      <Description
+        textidentifier="afflictiondescription.others.he-internalburn"
+        target="OtherCharacter" 
+        minstrength="30"
+        maxstrength="60" />
+      <Description
+        textidentifier="afflictiondescription.others.he-internalburn.high"
+        target="OtherCharacter" 
         minstrength="60"
         maxstrength="100" />
       <Effect minstrength="0" maxstrength="20" strengthchange="-0.1" />
