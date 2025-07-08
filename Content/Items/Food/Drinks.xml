@@ -2857,6 +2857,7 @@
           <Conditional thirst="gt 3.0" />
           <Conditional InWater="false" />
           <ReduceAffliction type="thirst" amount="3.0" />
+          <ReduceAffliction identifier="he-dieofthirst" amount="20" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional bladder="gte 0.01" />
