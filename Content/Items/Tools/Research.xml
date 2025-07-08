@@ -50,6 +50,9 @@
         <StatusEffect type="OnBroken" target="This">
           <Remove />
         </StatusEffect>
+        <StatusEffect type="OnNotContained" target="This">
+          <Remove />
+        </StatusEffect>
       </Holdable>
     </Item>
     
@@ -99,6 +102,9 @@
           <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
+          <Remove />
+        </StatusEffect>
+        <StatusEffect type="OnNotContained" target="This">
           <Remove />
         </StatusEffect>
       </Holdable>
@@ -178,6 +184,9 @@
         <StatusEffect type="OnBroken" target="This">
           <Remove />
         </StatusEffect>
+        <StatusEffect type="OnNotContained" target="This">
+          <Remove />
+        </StatusEffect>
       </Holdable>
     </Item>
     
@@ -224,6 +233,9 @@
           <Sound file="Content/Characters/Human/female_damage10.ogg" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
+          <Remove />
+        </StatusEffect>
+        <StatusEffect type="OnNotContained" target="This">
           <Remove />
         </StatusEffect>
       </Holdable>
