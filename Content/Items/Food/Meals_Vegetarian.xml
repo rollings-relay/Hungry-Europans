@@ -100,6 +100,7 @@
           <Conditional IsHuman="true" targetcontainer="true" />
           <Affliction identifier="ate_sandwich" amount="1" />
           <Affliction identifier="he-stuffed" amount="1.0" />
+          <Affliction identifier="he-sugarrich" amount="4" />
           <ReduceAffliction type="hunger" amount="1.0" />
           <ReduceAffliction type="thirst" amount="1.0" />
           <ReduceAffliction type="damage" amount="0.15" />
@@ -115,6 +116,7 @@
           <Conditional InWater="false" />
           <Affliction identifier="ate_sandwich" amount="1" />
           <Affliction identifier="he-stuffed" amount="1.0" />
+          <Affliction identifier="he-sugarrich" amount="4" />
           <ReduceAffliction type="hunger" amount="1.0" />
           <ReduceAffliction type="thirst" amount="1.0" />
           <ReduceAffliction type="damage" amount="0.15" />
@@ -155,6 +157,7 @@
           <Conditional IsHuman="true" targetcontainer="true" />
           <Affliction identifier="ate_sandwich" amount="1" />
           <Affliction identifier="he-stuffed" amount="1.5" />
+          <Affliction identifier="he-sugarrich" amount="4" />
           <ReduceAffliction type="hunger" amount="1.5" />
           <ReduceAffliction type="thirst" amount="0.25" />
           <ReduceAffliction type="damage" amount="0.15" />
@@ -170,6 +173,7 @@
           <Conditional InWater="false" />
           <Affliction identifier="ate_sandwich" amount="1" />
           <Affliction identifier="he-stuffed" amount="1.5" />
+          <Affliction identifier="he-sugarrich" amount="4" />
           <ReduceAffliction type="hunger" amount="1.5" />
           <ReduceAffliction type="thirst" amount="0.25" />
           <ReduceAffliction type="damage" amount="0.15" />
