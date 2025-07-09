@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Override>
   <Items>
+    
+    <!-- TODO: figure out a way for nondestructive recipes. Using bottles of milk in recipe should give you back empty bottles -->
+  
     <!-- DAIRY PRODUCTS -->
     <!--ICE CREAM - MILKY-->
     <Item name="Box of Milky Ice Cream Base" identifier="he-icecreambasemilky" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="The base for Milky Ice Cream. Store it in a refrigerated container to make edible ice cream." Tags="smallitem,fooditem,canmelt" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True" canflipx="false">
@@ -8,9 +11,9 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="1,79,108,55" depth="0.6" origin="0.5,0.5" />
       <Fabricate suitablefabricators="cuttingboard" requiredtime="16" requiresrecipe="false" amount="1" outcondition="0.0">
         <RequiredSkill identifier="cooking" level="30" />
-        <RequiredItem tag="milk" UseCondition="True" MinCondition="0.99"/>
-        <RequiredItem tag="milk" UseCondition="True" MinCondition="0.99"/>
-        <RequiredItem tag="milk" UseCondition="True" MinCondition="0.99"/>
+        <RequiredItem tag="milk" />
+        <RequiredItem tag="milk" />
+        <RequiredItem tag="milk" />
         <RequiredItem identifier="he-sugar" UseCondition="True" MinCondition="0.5"/>
       </Fabricate>
       <Deconstruct time="1" />
@@ -27,7 +30,7 @@
       </GreaterComponent>
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <!--Increase condition when refrigerated-->
-        <StatusEffect type="OnContained" target="This" condition="2.0" delay="5" stackable="false" CheckConditionalAlways="true" disabledeltatime="true" >
+        <StatusEffect type="OnContained" target="This" condition="2.0" delay="5" stackable="false" CheckConditionalAlways="true" disabledeltatime="true" comparison="And" >
           <Conditional HasStatusTag="eq activecooling" targetcontainer="true" />
           <Conditional HasTag="eq kitchenfabricator" targetcontainer="true" />
         </StatusEffect>
@@ -129,6 +132,7 @@
           <Conditional InWater="false" />
           <Affliction identifier="he-stuffed" amount="0.1" />
           <Affliction identifier="he-calciumrich" amount="8" />
+          <Affliction identifier="he-sugarrich" amount="4" />
           <ReduceAffliction type="damage" amount="0.06" />
         </StatusEffect>
         <!--Play eating sound only if not contained within a waffle cone-->
@@ -155,10 +159,10 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="1,135,108,55" depth="0.6" origin="0.5,0.5" />
       <Fabricate suitablefabricators="cuttingboard" requiredtime="16" requiresrecipe="false" amount="1" outcondition="0.0">
         <RequiredSkill identifier="cooking" level="30" />
-        <RequiredItem tag="milk" UseCondition="True" MinCondition="0.99"/>
-        <RequiredItem tag="milk" UseCondition="True" MinCondition="0.99"/>
+        <RequiredItem tag="milk" />
+        <RequiredItem tag="milk" />
         <RequiredItem identifier="creepingorange" amount="3"/>
-        <RequiredItem identifier="he-sugar" UseCondition="True" MinCondition="0.5"/>
+        <RequiredItem identifier="he-sugar" UseCondition="True" MinCondition="1"/>
       </Fabricate>
       <Deconstruct time="1" />
       <Body width="81" radius="27" density="12" />
@@ -174,7 +178,7 @@
       </GreaterComponent>
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <!--Increase condition when refrigerated-->
-        <StatusEffect type="OnContained" target="This" condition="2.0" delay="5" stackable="false" CheckConditionalAlways="true" disabledeltatime="true" >
+        <StatusEffect type="OnContained" target="This" condition="2.0" delay="5" stackable="false" CheckConditionalAlways="true" disabledeltatime="true" comparison="And" >
           <Conditional HasStatusTag="eq activecooling" targetcontainer="true" />
           <Conditional HasTag="eq kitchenfabricator" targetcontainer="true" />
         </StatusEffect>
@@ -275,7 +279,8 @@
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <Affliction identifier="he-stuffed" amount="0.1" />
-          <Affliction identifier="he-calciumrich" amount="5" />
+          <Affliction identifier="he-calciumrich" amount="4" />
+          <Affliction identifier="he-sugarrich" amount="8" />
           <ReduceAffliction type="damage" amount="0.075" />
         </StatusEffect>
         <!--Play eating sound only if not contained within a waffle cone-->
@@ -302,8 +307,8 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="110,79,108,55" depth="0.6" origin="0.5,0.5" />
       <Fabricate suitablefabricators="cuttingboard" requiredtime="16" requiresrecipe="false" amount="1" outcondition="0.0">
         <RequiredSkill identifier="cooking" level="30" />
-        <RequiredItem tag="milk" UseCondition="True" MinCondition="0.99"/>
-        <RequiredItem tag="milk" UseCondition="True" MinCondition="0.99"/>
+        <RequiredItem tag="milk" />
+        <RequiredItem tag="milk" />
         <RequiredItem identifier="popnutpopped" amount="3"/>
         <RequiredItem identifier="he-sugar" UseCondition="True" MinCondition="1.0"/>
       </Fabricate>
@@ -321,7 +326,7 @@
       </GreaterComponent>
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <!--Increase condition when refrigerated-->
-        <StatusEffect type="OnContained" target="This" condition="2.0" delay="5" stackable="false" CheckConditionalAlways="true" disabledeltatime="true" >
+        <StatusEffect type="OnContained" target="This" condition="2.0" delay="5" stackable="false" CheckConditionalAlways="true" disabledeltatime="true" comparison="And" >
           <Conditional HasStatusTag="eq activecooling" targetcontainer="true" />
           <Conditional HasTag="eq kitchenfabricator" targetcontainer="true" />
         </StatusEffect>
@@ -424,7 +429,8 @@
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <Affliction identifier="he-stuffed" amount="0.1" />
-          <Affliction identifier="he-calciumrich" amount="5" />
+          <Affliction identifier="he-calciumrich" amount="4" />
+          <Affliction identifier="he-sugarrich" amount="8" />
           <ReduceAffliction type="damage" amount="0.075" />
         </StatusEffect>
         <!--Play eating sound only if not contained within a waffle cone-->
@@ -457,8 +463,8 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="110,135,108,55" depth="0.6" origin="0.5,0.5" />
       <Fabricate suitablefabricators="cuttingboard" requiredtime="16" requiresrecipe="false" amount="1" outcondition="0.0">
         <RequiredSkill identifier="cooking" level="30" />
-        <RequiredItem tag="milk" UseCondition="True" MinCondition="0.99"/>
-        <RequiredItem tag="milk" UseCondition="True" MinCondition="0.99"/>
+        <RequiredItem tag="milk" />
+        <RequiredItem tag="milk" />
         <RequiredItem identifier="bubbleberries" amount="3"/>
         <RequiredItem identifier="he-sugar" UseCondition="True" MinCondition="1.0"/>
       </Fabricate>
@@ -476,7 +482,7 @@
       </GreaterComponent>
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <!--Increase condition when refrigerated-->
-        <StatusEffect type="OnContained" target="This" condition="2.0" delay="5" stackable="false" CheckConditionalAlways="true" disabledeltatime="true" >
+        <StatusEffect type="OnContained" target="This" condition="2.0" delay="5" stackable="false" CheckConditionalAlways="true" disabledeltatime="true" comparison="And" >
           <Conditional HasStatusTag="eq activecooling" targetcontainer="true" />
           <Conditional HasTag="eq kitchenfabricator" targetcontainer="true" />
         </StatusEffect>
@@ -579,7 +585,8 @@
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <Affliction identifier="he-stuffed" amount="0.1" />
-          <Affliction identifier="he-calciumrich" amount="5" />
+          <Affliction identifier="he-calciumrich" amount="4" />
+          <Affliction identifier="he-sugarrich" amount="8" />
           <ReduceAffliction type="damage" amount="0.075" />
         </StatusEffect>
         <!--Play eating sound only if not contained within a waffle cone-->
@@ -612,8 +619,8 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="1,1,39,21" depth="0.6" origin="0.5,0.5" />
       <Fabricate suitablefabricators="cuttingboard" requiredtime="16" requiresrecipe="false" amount="1" outcondition="0.0">
         <RequiredSkill identifier="cooking" level="30" />
-        <RequiredItem tag="milk" UseCondition="True" MinCondition="0.99"/>
-        <RequiredItem tag="milk" UseCondition="True" MinCondition="0.99"/>
+        <RequiredItem tag="milk" />
+        <RequiredItem tag="milk" />
         <RequiredItem identifier="slimebacteria" amount="1"/>
       </Fabricate>
       <Deconstruct time="1" />
