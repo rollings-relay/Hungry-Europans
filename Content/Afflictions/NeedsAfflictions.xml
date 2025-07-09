@@ -179,13 +179,15 @@
         target="OtherCharacter"
         minstrength="80"
         maxstrength="100" />
+        <!-- Foodbuff effects should be worse the hungrier you are. Find a way to make that work -->
+      <!-- <Effect minstrength="0" maxstrength="100" minresistance="1.0" maxresistance="0.0" resistancefor="foodbuff" /> -->
       <!-- No effects at this point -->
-      <Effect minstrength="0" maxstrength="30"
+      <Effect minstrength="0" maxstrength="30" minresistance="1.0" maxresistance="1.0" resistancefor="he-stuffed"
         strengthchange="0" 
         MinAfflictionOverlayAlphaMultiplier="0.0"
         MaxAfflictionOverlayAlphaMultiplier="0.0" />
       <!-- Hunger decreases skills slightly -->
-      <Effect minstrength="30" maxstrength="60"
+      <Effect minstrength="30" maxstrength="60" minresistance="1.0" maxresistance="1.0" resistancefor="he-stuffed"
         dialogflag="hungrylight"
         strengthchange="0" 
         minvitalitydecrease="0"
@@ -194,7 +196,7 @@
         maxskillmultiplier="0.8"
         MinAfflictionOverlayAlphaMultiplier="0.0"
         MaxAfflictionOverlayAlphaMultiplier="0.0" />
-      <Effect minstrength="60" maxstrength="80"
+      <Effect minstrength="60" maxstrength="80" minresistance="1.0" maxresistance="1.0" resistancefor="he-stuffed"
         dialogflag="hungrymedium"
         minvitalitydecrease="0"
         maxvitalitydecrease="25"
@@ -214,7 +216,7 @@
         <StatValue stattype="MeleeAttackMultiplier" minvalue="0" maxvalue="-0.2" />
       </Effect>
       <!-- Hunger starts to get lethal -->
-      <Effect minstrength="80" maxstrength="100"
+      <Effect minstrength="80" maxstrength="100" minresistance="1.0" maxresistance="1.0" resistancefor="he-stuffed"
         dialogflag="hungryheavy"
         minvitalitydecrease="25"
         maxvitalitydecrease="25"
@@ -244,6 +246,26 @@
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,128,128,128" origin="0,0" />
       <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/HungerOverlay.png" />
+    </Affliction>
+    
+    <!-- invisible affliction that makes food buffs less effective at higher hunger levels -->
+    <!-- used to avoid starving to death to max out on buffs -->
+    <Affliction
+      identifier="hungerfoodbuffresistance"
+      name="Hunger Foodbuff Resistance"
+      description="The hungrier you are the less food buffs are effective."
+      type="hunger"
+      limbspecific="false"
+      hideiconafterdelay="true"
+      activationthreshold="0"
+      showiconthreshold="1000"
+      showinhealthscannerthreshold="1000"
+      TreatmentSuggestionThreshold="1000"
+      maxstrength="100"
+      healableinmedicalclinic="false"
+      MedicalSkillGain="0.0">
+      <Effect minstrength="0" maxstrength="100" minresistance="0.0" maxresistance="1" resistancefor="foodbuff" />
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,128,128,128" origin="0,0" />
     </Affliction>
         
     <Affliction name="Thirst"
@@ -427,11 +449,11 @@
       type="nausea"
       causeofdeathdescription="Choked on vomit."
       selfcauseofdeathdescription="You have choked on your own vomit."
-      showiconthreshold="100"
-      showicontoothersthreshold="100"
-      showinhealthscannerthreshold="100"
+      showiconthreshold="0"
+      showicontoothersthreshold="0"
+      showinhealthscannerthreshold="0"
       limbspecific="false"
-      maxstrength="1800"
+      maxstrength="100"
       affectmachines="false"
       treatmentthreshold="10000"
       karmachangeonapplied="0"
@@ -442,46 +464,45 @@
       <Description
         textidentifier="advancedafflictiondescription.self.he-stuffed"
         target="Self"
-        minstrength="100"
-        maxstrength="120" />
+        minstrength="0"
+        maxstrength="30" />
       <Description
         textidentifier="advancedafflictiondescription.self.he-stuffed.2"
         target="Self"
-        minstrength="120"
-        maxstrength="130" />
+        minstrength="50"
+        maxstrength="80" />
       <Description
         textidentifier="advancedafflictiondescription.self.he-stuffed.3"
         target="Self"
-        minstrength="130"
-        maxstrength="1800" />
+        minstrength="80"
+        maxstrength="100" />
       <Description
         textidentifier="advancedafflictiondescription.others.he-stuffed"
         target="OtherCharacter"
-        minstrength="100"
-        maxstrength="120" />
+        minstrength="0"
+        maxstrength="30" />
       <Description
         textidentifier="advancedafflictiondescription.others.he-stuffed.2"
         target="OtherCharacter"
-        minstrength="120"
-        maxstrength="130" />
+        minstrength="50"
+        maxstrength="80" />
       <Description
         textidentifier="advancedafflictiondescription.others.he-stuffed.3"
         target="OtherCharacter"
-        minstrength="130"
-        maxstrength="1800" />
-      <!-- TODO: Rework? Stuffed is weird. Why 1800 max strength? How can you vommit and still be stuffed? The descriptions are all off since it only shows up at 100. Also I do not think baro handles -0.05555555, don't we have a better number? -->
-      <Effect minstrength="0" maxstrength="100" minresistance="0.0" maxresistance="0.0" resistancefor="hunger" strengthchange="-0.0555555555555"
+        minstrength="80"
+        maxstrength="100" />
+      <Effect minstrength="0" maxstrength="80" minresistance="1.0" maxresistance="1.0" resistancefor="hunger" strengthchange="-0.05"
         dialogflag="stuffedlight">
         <StatusEffect target="Character" disabledeltatime="true" interval="1">
           <Conditional defecate="gte 0.01" />
           <Affliction identifier="defecate" strength="0.1" />
         </StatusEffect>
       </Effect>
-      <Effect minstrength="100" maxstrength="120" minresistance="0.0" maxresistance="0.0" resistancefor="hunger" strengthchange="-0.0555555555555"
+      <Effect minstrength="80" maxstrength="100" minresistance="1.0" maxresistance="1.0" resistancefor="hunger" strengthchange="-0.05"
         minfacetint="230,255,230,0"
-        maxfacetint="230,255,230,100"
+        maxfacetint="210,255,210,150"
         minbodytint="230,255,230,0"
-        maxbodytint="230,255,230,50"
+        maxbodytint="210,255,210,100"
         minspeedmultiplier="1.0"
         maxspeedmultiplier="0.6"
         dialogflag="stuffedheavy">
@@ -490,14 +511,14 @@
           <Affliction identifier="defecate" strength="0.1" />
         </StatusEffect>
       </Effect>
-      <PeriodicEffect mininterval="10" maxinterval="120" minstrength="130" maxstrength="1800">
+      <PeriodicEffect mininterval="20" maxinterval="40" minstrength="80" maxstrength="1800">
         <StatusEffect target="Character" SpeedMultiplier="0.0" setvalue="true" duration="1.7" >
-          <Conditional he-stuffed="gte 130" />
+          <Conditional he-stuffed="gte 80" />
         </StatusEffect>
         <StatusEffect target="Character" comparison="And">
           <Conditional ishuman="true" />
           <Conditional hasspecifiertag="male" />
-          <Conditional he-stuffed="gte 130" />
+          <Conditional he-stuffed="gte 80" />
           <Sound file="Content/Sounds/HUMAN_chokeMale1.ogg" selectionmode="Random" />
           <Sound file="Content/Sounds/HUMAN_chokeMale2.ogg" />
           <Sound file="Content/Sounds/HUMAN_chokeMale3.ogg" />
@@ -505,27 +526,27 @@
         <StatusEffect target="Character" comparison="And">
           <Conditional ishuman="true" />
           <Conditional hasspecifiertag="female" />
-          <Conditional he-stuffed="gte 130" />
+          <Conditional he-stuffed="gte 80" />
           <Sound file="Content/Sounds/HUMAN_chokeFemale1.ogg" selectionmode="Random" />
           <Sound file="Content/Sounds/HUMAN_chokeFemale2.ogg" />
           <Sound file="Content/Sounds/HUMAN_chokeFemale3.ogg" />
         </StatusEffect>
         <StatusEffect target="Character" duration="2">
-          <Conditional he-stuffed="gte 130" />
+          <Conditional he-stuffed="gte 80" />
           <TriggerAnimation Type="Walk" filename="Vomit" priority="10" ExpectedSpecies="Human" />
         </StatusEffect>
         <StatusEffect target="Character">
-          <Conditional he-stuffed="gte 130" />
+          <Conditional he-stuffed="gte 80" />
           <Affliction identifier="organdamage" strength="0.5" />
-          <ReduceAffliction identifier="he-stuffed" strength="67" />
+          <ReduceAffliction identifier="he-stuffed" strength="50" />
           <ReduceAffliction type="foodbuff" strength="300" />
           <ReduceAffliction type="drinkbuff" strength="300" />
         </StatusEffect>
         <StatusEffect target="Character" targetlimbs="Head" duration="1" comparison="And">
-          <Conditional he-stuffed="gte 130" />
+          <Conditional he-stuffed="gte 80" />
           <Conditional HideFace="eq False" />
           <ParticleEmitter particle="vomitsplash" copyentityangle="true" anglemin="-10" anglemax="10" particlespersecond="50" velocitymin="50" velocitymax="200" scalemin="0.1" scalemax="0.2" />
-          <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="vomitsplatter" decalsize="1.25" shockwave="false" underwaterbubble="false" />
+          <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="vomitsplatter" decalsize="0.5" shockwave="false" underwaterbubble="false" />
         </StatusEffect>
       </PeriodicEffect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="256,128,128,128" origin="0,0" />
