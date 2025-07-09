@@ -2,6 +2,7 @@
 <Override>
   <Items>
     
+    <!-- TODO: update these with new eating method -->
     <!-- TODO: figure out a way for nondestructive recipes. Using bottles of milk in recipe should give you back empty bottles -->
   
     <!-- DAIRY PRODUCTS -->
