@@ -676,7 +676,7 @@
           </CharacterAbilityApplyStatusEffects>
         </Abilities>
       </AbilityGroupEffect>
-      <!--neuronutrient Food Buff-->
+      <!--Sugar Food Buff-->
       <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
         <Conditions>
           <AbilityConditionItem identifiers="bagpipes"/>
@@ -685,21 +685,45 @@
           <CharacterAbilityApplyStatusEffectsToAllies range="1000">
             <StatusEffects>
               <StatusEffect type="OnAbility" target="Character" interval="1" disabledeltatime="true" targetlimb="Torso">
-                <Conditional he-neuronutrientrich="gt 0"/>
-                <Affliction identifier="he-neuronutrientrich" amount="1" />
+                <Conditional he-sugarrich="gt 0"/>
+                <Affliction identifier="he-sugarrich" amount="1" />
               </StatusEffect>
             </StatusEffects>
           </CharacterAbilityApplyStatusEffectsToAllies>
           <CharacterAbilityApplyStatusEffects>
             <StatusEffects>
               <StatusEffect type="OnAbility" target="Character" interval="1" disabledeltatime="true" targetlimb="Torso">
-                <Conditional he-neuronutrientrich="gt 0"/>
-                <Affliction identifier="he-neuronutrientrich" amount="1" />
+                <Conditional he-sugarrich="gt 0"/>
+                <Affliction identifier="he-sugarrich" amount="1" />
               </StatusEffect>
             </StatusEffects>
           </CharacterAbilityApplyStatusEffects>
         </Abilities>
-      </AbilityGroupEffect>      
+      </AbilityGroupEffect> 
+      <!--Fiber Food Buff-->
+      <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
+        <Conditions>
+          <AbilityConditionItem identifiers="bagpipes"/>
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityApplyStatusEffectsToAllies range="1000">
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" interval="1" disabledeltatime="true" targetlimb="Torso">
+                <Conditional he-fiberrich="gt 0"/>
+                <Affliction identifier="he-fiberrich" amount="1" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffectsToAllies>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" interval="1" disabledeltatime="true" targetlimb="Torso">
+                <Conditional he-fiberrich="gt 0"/>
+                <Affliction identifier="he-fiberrich" amount="1" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupEffect> 
       <!-- Other buffs: -->
       <!--Husk Food Buff-->
       <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">

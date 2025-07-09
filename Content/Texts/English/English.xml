@@ -1066,8 +1066,11 @@ SEARCH FOR THE FOLLOWING:                                                       
 <afflictionname.he-vitaminrich>Vitamin Rich Diet</afflictionname.he-vitaminrich>
 <afflictiondescription.he-vitaminrich>Stimulates red blood cells. Hold your breath for longer and reduce bleed less.</afflictiondescription.he-vitaminrich>
 
-<afflictionname.he-neuronutrientrich>Neuronutrient Rich Diet</afflictionname.he-neuronutrientrich>
-<afflictiondescription.he-neuronutrientrich>Deoxidizes the brain. Learn faster, improves the mood and fatigue. </afflictiondescription.he-neuronutrientrich>
+<afflictionname.he-sugarrich>Sugar Rich Diet</afflictionname.he-sugarrich>
+<afflictiondescription.he-sugarrich>The sugar rush keeps you focused. Learn faster, improves the mood and fatigue. </afflictiondescription.he-sugarrich>
+
+<afflictionname.he-fiberrich>Fiber Rich Diet</afflictionname.he-fiberrich>
+<afflictiondescription.he-fiberrich>Fibers help with digestion and stomachache. </afflictiondescription.he-fiberrich>
  
 <afflictionname.he-tobaccoaddiction>Tobacco addiction</afflictionname.he-tobaccoaddiction>
 <afflictiondescription.he-tobaccoaddiction>It's bad for your lungs. You feel short of breath.</afflictiondescription.he-tobaccoaddiction>

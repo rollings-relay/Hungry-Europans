@@ -10,7 +10,8 @@
     - "Lean fats"            (swim speed)                        crawler, spineling
     - "Protein Rich"         (melee damage,weapons skill)        hammerhead, cheese
     - "Vitamin Rich"         (O2 capacity, bloodloss reduction)  threshers, salads 
-    - "Neuronutrient Rich"   (skill learning, fatigue res)       salads
+    - "Sugar Rich"          (skill learning, fatigue res)        sugary meals
+    - "Fiber Rich"          (defecation, stomachache res)        vegetables
        
     --> 
   
@@ -36,7 +37,7 @@
         minresistance="0.0"
         maxresistance="0.25">
         <StatusEffect target="Character" >
-          <ReduceAffliction identifier="he-stuffed" strength="0.025" />
+          <ReduceAffliction identifier="he-stuffed" strength="0.015" />
         </StatusEffect>
       </Effect>
       <Effect minstrength="1200" maxstrength="1800" strengthchange="-1"
@@ -44,7 +45,7 @@
         minresistance="0.25"
         maxresistance="0.25" >
         <StatusEffect target="Character" >
-          <ReduceAffliction identifier="he-stuffed" strength="0.05" />
+          <ReduceAffliction identifier="he-stuffed" strength="0.025" />
         </StatusEffect>
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
@@ -129,9 +130,9 @@
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
     </Affliction>
      
-    <!-- Neuronutrient Rich Diet, helps with skill gain and mood -->
-    <Affliction name="Neuronutrient Rich Diet"
-      identifier="he-neuronutrientrich"
+    <!-- Sugar Rich Diet, helps with skill gain and mood -->
+    <Affliction name="Sugar Rich Diet"
+      identifier="he-sugarrich"
       type="foodbuff"
       isbuff="true"
       limbspecific="false"
@@ -157,7 +158,31 @@
         maxskillgainmultiplier="1.25" />
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
     </Affliction>
-  
+       
+    <!-- Fiber Rich Diet, slows down defecation and stomachache -->
+    <Affliction name="Fiber Rich Diet"
+      identifier="he-fiberrich"
+      type="foodbuff"
+      isbuff="true"
+      limbspecific="false"
+      indicatorlimb="Torso"
+      hideiconafterdelay="true"
+      showiconthreshold="0"
+      treatmentthreshold="100"
+      maxstrength="1800"
+      iconcolors="150,255,150;75,255,75;0,255,0"
+      MedicalSkillGain="0.0">
+      <Effect minstrength="0" maxstrength="100" strengthchange="-1" />
+      <Effect minstrength="100" maxstrength="1200" strengthchange="-1"
+        resistancefor="defecate,stomachache"
+        minresistance="0.0"
+        maxresistance="0.5" />
+      <Effect minstrength="1200" maxstrength="1800" strengthchange="-1"
+        resistancefor="defecate,stomachache"
+        minresistance="0.5"
+        maxresistance="0.5"/>
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
+    </Affliction>
   
  <!--  //////////////
   //////////////
