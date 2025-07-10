@@ -33,7 +33,7 @@
           <Conditional hunger="gt 1" targetcontainer="true" />
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
-          <!-- <Affliction identifier="he-vitaminrich" amount="50.0" /> -->
+          <Affliction identifier="he-watchermindsense" amount="50.0" />
           <Affliction identifier="ate_filet" amount="1" />
           <Affliction identifier="he-stuffed" amount="1.75" />
           <ReduceAffliction type="hunger" amount="1.75" />
@@ -52,7 +52,7 @@
           <Conditional HasStatusTag="usingfork" />
           <Conditional HasStatusTag="neq emptyfork"/>
           <Conditional InWater="false" />
-          <!-- <Affliction identifier="he-vitaminrich" amount="50.0" /> -->
+          <Affliction identifier="he-watchermindsense" amount="50.0" />
           <Affliction identifier="ate_filet" amount="1" />
           <Affliction identifier="he-stuffed" amount="1.75" />
           <ReduceAffliction type="hunger" amount="1.75" />
