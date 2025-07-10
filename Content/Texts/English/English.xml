@@ -477,8 +477,8 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-rawjerky>A pile of raw jerky. Cheap and easy to make. It's impossible to tell what it's made of. Put it in an oven.</entitydescription.he-rawjerky><!--Patch 13-->
 <entityname.he-salt>Salt</entityname.he-salt>
 <entitydescription.he-salt>Don't get salty now!</entitydescription.he-salt>
-<entityname.he-pepper>Synthetic Pepper</entityname.he-pepper>
-<entitydescription.he-pepper>Pepper be prepared!</entitydescription.he-pepper>
+<entityname.he-pepper>Pepper</entityname.he-pepper>
+<entitydescription.he-pepper>Made out of dried out poppy seeds. Pepper be prepared!</entitydescription.he-pepper>
 <entityname.he-sugar>Sugar</entityname.he-sugar>
 <entitydescription.he-sugar>Oh so sweet!</entitydescription.he-sugar>
 <entityname.he-ketchup>Ketchup</entityname.he-ketchup>
