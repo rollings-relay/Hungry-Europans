@@ -2,12 +2,7 @@
 <Override>
   <Items>
   
-  <!-- 
-    Soup ideas: 
-    - Moloch Bone Broth: soup made with moloch bone
-    - Miso soup: has nori in it
-    - Fondue: cheese + bread in a bowl
-   -->
+  <!-- TODO: InventoryIcon for soups so we can tell them apart -->
   
     <!-- SOUPS -->
     <Item name="Pot of Craw Yum" identifier="he-potcrawyum" category="Misc" maxstacksize="1" Tags="smallitem,pot,tableware" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
