@@ -1106,10 +1106,9 @@
           <CharacterAbilityModifyValue multiplyvalue="2"/>
         </Abilities>
       </AbilityGroupEffect>
-      <!-- TODO: add "cookedfood" tags to more meals in general to trigger this and change description?  -->
       <AbilityGroupEffect abilityeffecttype="OnItemFabricatedAmount">
         <Conditions>
-          <AbilityConditionItem tags="fingerfood,cookedfood"/>
+          <AbilityConditionItem tags="fingerfood"/>
         </Conditions>
         <Abilities>
           <CharacterAbilityApplyStatusEffects>
