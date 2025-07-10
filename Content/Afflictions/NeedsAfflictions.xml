@@ -513,7 +513,7 @@
           <Affliction identifier="defecate" strength="0.1" />
         </StatusEffect>
       </Effect>
-      <PeriodicEffect mininterval="20" maxinterval="40" minstrength="80" maxstrength="1800">
+      <PeriodicEffect mininterval="30" maxinterval="120" minstrength="80" maxstrength="1800">
         <StatusEffect target="Character" SpeedMultiplier="0.0" setvalue="true" duration="1.7" >
           <Conditional he-stuffed="gte 80" />
         </StatusEffect>
