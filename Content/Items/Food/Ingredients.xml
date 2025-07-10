@@ -57,41 +57,6 @@
       <AiTarget sightrange="1000" static="True" />
     </Item>
 
-    <!-- MISC -->
-    <Item name="Pulverized Seeds Pack" identifier="he-pulverizedseedspack" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A synthetic liquid that when cooked, turns into synthetic flour." Tags="smallitem,ingredient,distilleringredient,powderbag" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" canflipx="false" spritecolor="255,0,0,255" inventoryiconcolor="255,0,0,255">
-      <PreferredContainer primary="kitchen" secondary="crewcab"/>
-      <Deconstruct time="1" requireddeconstructor="deconstructor" />
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="38" requiresrecipe="false" amount="1">
-        <RequiredSkill identifier="cooking" level="20" />
-        <RequiredItem tag="seed" amount="32" />
-      </Fabricate>
-      <Deconstruct time="60" requireddeconstructor="distiller">
-        <Item identifier="he-flourmixture" amount="4" requiredotheritem="sulphuricacid" activatebuttontext="distiller.distill" infotext="distiller.flourmixture" infotextonotheritemmissing="distiller.missingitem.sulphuricacid" />
-      </Deconstruct>
-      <!-- TODO: Seed pack Sprite -->
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="127,67,45,67" depth="0.6" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="127,67,45,67" origin="0.5,0.5" />
-      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="127,67,45,67" depth="0.525" origin="0.5,0.87"  />
-      <Body width="45" height="67" density="15" />
-      <Throwable canbepicked="true" characterusable="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" swingwhenusing="true" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnSecondaryUse" target="This" delay="0.01">
-          <Use />
-        </StatusEffect>
-      </Throwable>
-      <Projectile characterusable="false" launchimpulse="0.0" impulsespread="0.0" sticktocharacters="false" sticktoitems="false" sticktostructures="false" sticktodoors="false">
-        <Attack targetimpulse="3" severlimbsprobability="0.1" itemdamage="1" structuredamage="0" structuresoundtype="StructureSlash">
-          <Affliction identifier="blunttrauma" strength="2" />
-          <Affliction identifier="blunttrauma" strength="2" probability="0.25" />
-          <Affliction identifier="stun" strength="0.2" />
-        </Attack>
-        <StatusEffect type="OnImpact" target="UseTarget">
-          <Conditional entitytype="Character" />
-          <Sound file="Content/Items/Weapons/Smack1.ogg" selectionmode="random" range="1000" />
-          <Sound file="Content/Items/Weapons/Smack2.ogg" range="1000" />
-        </StatusEffect>
-      </Projectile>
-    </Item>
-
     <Item name="Salt" identifier="he-salt" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Don't get salty now!" Tags="smallitem,ingredient,condiment" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_shaker" impacttolerance="5.5">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
@@ -577,6 +542,44 @@
       </Projectile>
     </Item>
 
+    <!-- MISC -->
+    
+    <!-- TODO: UNUSED, the process to make flour was way too complicated, now you craft flour directly by crushing seeds 
+               This leaves the distiller somewhat lacking. -->
+    <Item name="Pulverized Seeds Pack" identifier="he-pulverizedseedspack" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A synthetic liquid that when cooked, turns into synthetic flour." Tags="smallitem,ingredient,distilleringredient,powderbag" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" canflipx="false" spritecolor="255,0,0,255" inventoryiconcolor="255,0,0,255">
+      <PreferredContainer primary="kitchen" secondary="crewcab"/>
+      <Deconstruct time="1" requireddeconstructor="deconstructor" />
+      <!-- <Fabricate suitablefabricators="cuttingboard" requiredtime="38" requiresrecipe="false" amount="1">
+        <RequiredSkill identifier="cooking" level="20" />
+        <RequiredItem tag="seed" amount="32" />
+      </Fabricate> -->
+      <!-- <Deconstruct time="60" requireddeconstructor="distiller">
+        <Item identifier="he-flourmixture" amount="4" requiredotheritem="sulphuricacid" activatebuttontext="distiller.distill" infotext="distiller.flourmixture" infotextonotheritemmissing="distiller.missingitem.sulphuricacid" />
+      </Deconstruct> -->
+      <!-- TODO: Seed pack Sprite -->
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="127,67,45,67" depth="0.6" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="127,67,45,67" origin="0.5,0.5" />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="127,67,45,67" depth="0.525" origin="0.5,0.87"  />
+      <Body width="45" height="67" density="15" />
+      <Throwable canbepicked="true" characterusable="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+        <StatusEffect type="OnSecondaryUse" target="This" delay="0.01">
+          <Use />
+        </StatusEffect>
+      </Throwable>
+      <Projectile characterusable="false" launchimpulse="0.0" impulsespread="0.0" sticktocharacters="false" sticktoitems="false" sticktostructures="false" sticktodoors="false">
+        <Attack targetimpulse="3" severlimbsprobability="0.1" itemdamage="1" structuredamage="0" structuresoundtype="StructureSlash">
+          <Affliction identifier="blunttrauma" strength="2" />
+          <Affliction identifier="blunttrauma" strength="2" probability="0.25" />
+          <Affliction identifier="stun" strength="0.2" />
+        </Attack>
+        <StatusEffect type="OnImpact" target="UseTarget">
+          <Conditional entitytype="Character" />
+          <Sound file="Content/Items/Weapons/Smack1.ogg" selectionmode="random" range="1000" />
+          <Sound file="Content/Items/Weapons/Smack2.ogg" range="1000" />
+        </StatusEffect>
+      </Projectile>
+    </Item>
+
     <Item name="Synthetic Flour Mixture" identifier="he-flourmixture" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A liquid that when cooked, turns into synthetic flour." Tags="smallitem,ingredient,powderbag" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" canflipx="false" spritecolor="255,0,0,255" inventoryiconcolor="255,0,0,255">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Deconstruct time="1" requireddeconstructor="deconstructor" />
@@ -604,7 +607,7 @@
       </Projectile>
     </Item>
 
-    <Item name="Synthetic Flour" identifier="he-flour" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Baking Bad." Tags="smallitem,ingredient,powderbag" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" canflipx="false">
+    <Item name="Natural Flour" identifier="he-flour" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Baking Bad." Tags="smallitem,ingredient,powderbag" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" canflipx="false">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.1" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="2" spawnprobability="0.1" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.08" notcampaign="true"/>
@@ -617,10 +620,11 @@
         <Price storeidentifier="merchantmine"/>
         <Price storeidentifier="merchantmedical"/>
       </Price>
-      <Fabricate suitablefabricators="stove" requiredtime="30" requiresrecipe="false" amount="1">
-        <RequiredSkill identifier="cooking" level="45" />
-        <RequiredItem tag="emptypot" mincondition="0.0" UseCondition="true" />
-        <RequiredItem identifier="he-flourmixture" amount="1" />
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="38" requiresrecipe="false" amount="1">
+        <RequiredSkill identifier="cooking" level="20" />
+        <RequiredItem tag="seed" amount="30" />
+        <RequiredItem identifier="sulphuricacid" amount="1" />
+        <RequiredItem identifier="he-emptybowl" amount="1" MinCondition="0" usecondition="true" />
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="127,67,45,67" depth="0.6" origin="0.5,0.5" />
