@@ -529,8 +529,7 @@
       <Holdable canbepicked="true" selectkey="Select" pickkey="Select" slots="RightHand+LeftHand" holdpos="70,-58" handle1="-75,50" handle2="-75,70" holdangle="3" msg="ItemMsgDetach" PickingTime="0.5" attachable="false" aimable="true" >
         <StatValue stattype="WalkingSpeed" value="-0.5" />
         <StatValue stattype="SwimmingSpeed" value="-0.7" />      
-      </Holdable>
-      
+      </Holdable>      
     </Item>
     
     <Item name="Refrigerator" identifier="he-refrigerator" tags="kitchen,locker,container,refrigerator" category="Misc" subcategory="Container" description="Prevents spoilage. Can only store food and drinks. Needs power." linkable="true" pickdistance="150" waterproof="true" fireproof="true" isshootable="true" scale="0.5">
@@ -580,7 +579,8 @@
       <Fabricate suitablefabricators="fabricator" requiredtime="60" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="mechanical" level="65" />
         <RequiredItem identifier="steel" amount="8" />
-        <RequiredItem identifier="titaniumaluminiumalloy" amount="8" />
+        <RequiredItem identifier="titaniumaluminiumalloy" amount="5" />
+        <RequiredItem identifier="fpgacircuit" amount="2" />
       </Fabricate>
       <!--
       <Powered powerconsumption="200" currpowerconsumption="200" isactive="true">
