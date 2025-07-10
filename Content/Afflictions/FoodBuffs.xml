@@ -13,6 +13,18 @@
     - "Sugar Rich"          (skill learning, fatigue res)        sugary meals
     - "Fiber Rich"          (defecation, stomachache res)        vegetables
        
+    NOTE: if you want a food item to reach the 1800% cap of foodbuffs, use a 20/1  foodbuff/stuffed ratio
+          stuffed makes you vomit above 80, so you want to gain 1800 foodbuff at 80 stuffed
+          when hunger is factored (allows you to stack more foodbuff before reaching stuffed), then 20 is a good number
+          Only the BEST foods should make you cap before getting fully stuffed
+          
+    
+    like this:    
+          <Affliction identifier="he-proteinrich" amount="20" />
+          <Affliction identifier="he-stuffed" amount="1" />
+       
+       All foodbuff effects ramp up from 0-100 and then have their full effect above 100
+       
     --> 
   
   
