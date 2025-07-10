@@ -40,7 +40,23 @@ Low:
 //////////////////////
 
 
-Changelog:
+LIST OF FOODS IDEAS:
+
+- Moloch Bone Broth: soup made with moloch bone
+- Miso soup: has nori in it
+- Fondue: cheese + bread in a bowl
+- Thresher Sauté with Mushrooms: thresher meat + mushroom
+- Cake + Cake Slice
+- Pasta + pasta recipes?
+- Chewing gum. Made from elastin. Reduces effects of hunger and prevents it from increasing.
+- Endeavour's cuppa: minor healing properties, slow metabolism cures psychosis and hallucinations, cures husk 
+- Grog! It'd be made of sea water and rum.
+- Homemade kvass from water, bread, yeast and sugar.
+- Gravy (water, flour, salt, pepper, broth?)
+
+
+
+Changelog: TODO: changelog is ultra outdated and I didn't take any notes :^)
 
 - Fixed "Pomegrenade Jam" recipe having a wrong identifier for pomegrenades, causing performance issues when trying to craft it
 - Fixed Refrigerators not being fireproof
@@ -48,12 +64,10 @@ Changelog:
 - Added: "Pan" item. Required for cooking some recipes on the stove and can be used as a melee weapon
 - Added: "Pot" item. Required for cooking some recipes on the stove
 - Added: New tableware items including: Fork, Spoon, Cups, Plates, Bowls and their dirty variants
-- Added: "Pulverized Seeds Pack". Crafted from 32 seeds and used in a distiller to create "Synthetic Flour Mixture"
-- Added: "Synthetic Flour Mixture" item. Created at a distiller using "Pulverized Seeds Pack" and "Sulphuric Acid"
-- Added: Recipe for "Synthetiflour". Crafted by cooking the "Synthetic Flour Mixture" at the stove
+- Added: "Flour". Crafted from 30 seeds and "Sulphuric Acid"
 - (TODO) Added: New ingredient "Dough" which is now used to make Bread, Buns and Pizza
 - Added: New food item "Omelette" of every monster egg type (Crawler, Mudraptor, Thresher)
-- Added: New food item "Pizza"
+- Added: New food item "Pizza" + "Pizza Slice"
 - (WIP) Added: New drinks "Coffee". Reduces your tiredness if you have it enabled and helps to sober up. Can give you a caffeine rush
 - (WIP) Added: New drinks "Hot Chocolate". Increases your tiredness if you have it enabled, but also increases your mood and helps to sober up
 - Added: New output for "Hydroponic Planter" to calculate the seconds until the next produce. Works exactly like the "Gardening Sprinkler"
@@ -77,87 +91,50 @@ Changelog:
 - Disabled "Starvation Conciousness Regainer" from spawning purchasing and crafting since you can just feed someone unconcious with regular food and drinks to help them out
 - Made empty cans spawn in or nearby outpost trash cans
 
-Enforced:
 
-- Changes to the lua function. Mainly important for singleplayer or multiplayer with bots:
-Bots will now only get the "Hungry Europan" talent and thus the hunger and thirst afflictions if you actively control them. Hunger and thirst values will be stored and then set to 0 for characters controlled by a bot. Upon taking back control over the character, the previous hunger and thirst values for this specific character will be restored. Switching into the next round will however delete all stored values that are currently not in use so always switch back to your main character or your hunger and thirst will be reset to 0.
+Misc TODOs:
 
-
-Also, M, please, make a crafting recipe for the fryer consisting of 5 water bottles. it crafts instantly and spawns a proxy item that causes fryer to explode.
-It should deal serious burn damage
-Like you literally dumped 5 bottles of cold water into a fryer
-This should cause some troubles i believe
-
-Deathwish: Fix controller component showing when interacting with surgical table on stimpy subs
-ToDo - Current Update:
-- algae protein cakes from vending machines as mentioned in bot convos.
 - Make tea kettle storable in cafeteria cart
 - Rework alcoholic to reduce and potentially remove the disoriented from being drunk.
-- Change drunkness to not apply disoriented while in water and instead slow the character down.
-- Check Discord DMs from ED for talent stuff
-
-- Change lunch box recipe to 1x aluminum + 1x plastic and increase price accordingly
-- Make items in lunch boxes non-stackable
-- Change jam to be eatable by itself / make the jar emptyable and increase the required jam amount for sandwiches to 0.124
-- Make jams non-stackable like other jar items
-- Add Poutine
+- Change drunkness to not apply disoriented while in water and instead slow the character down
+- Skin for Poutine
 - Ethanol gives some radiation resistance
 - Rework alcohol to invert controls less on lower to mid drunkness like drunknodebuffs and only really get annoying at high drunkness to compensate for high damage resistance.
-- Clown Juice gives stun resistance.
-- Coalition Premium gives ranged spread reduction or sellmultiplier <StatValue stattype="RangedSpreadReduction" minvalue="0.25" maxvalue="0.5" /> <StatValue stattype="StoreSellMultiplier" minvalue="0.25" maxvalue="0.5" />
-- Jovian Force gives ranged attack speed <StatValue stattype="RangedAttackSpeed" minvalue="0.25" maxvalue="0.5" />
-- Pirate Rum gives turret attack speed <StatValue stattype="TurretAttackSpeed" minvalue="0.25" maxvalue="0.5" />
 - Investigate salt shakers dropping shards instead of empty shaker on combined
-- Attachable Auto-Sprinkler to reduce the need of watering plants.
 - Fix meat spoiling in fabricators.
-- Add container to chairs accessible by pressing the "Use" key.
-- Chewing gum. Made from elastin. Reduces effects of hunger and prevents it from increasing.
 - "Constipated" affliction. Caused by eating elastin and prevents you from pooping which will result in constantly increasing organ damage (And/Or custom bowel rupture affliction) until death if not treated.
 - Canned food. Requires can opener, knife or boarding axe to open. Explodes after being in fire for a while.
 	Can Opener: 100% | No injuries
 	Diving Knife: 80% | 10% chance of lacerations
 	Meat Cleaver: 60% | 30% chance of lacerations
 	Boarding Axe: 20% | 50% chance of lacerations
-- Homemade kvass from water, bread, yeast and sugar.
-# Moloch sushi.
-- Grog! It'd be made of sea water and rum.
-- Make Kegs sellable.
-- Soups
 - Endworm and Watcher products giving "concealed" affliction to passivy creatures.
 
-fries by themselves could be made via cutting board, using 2 pomegrenade, 10% salt and 10% pepper, and are afterwards used in the frier with cooking oil (25% is what I advise because its the same amount for nuggets and such). Fries would have similar properties to pomegrenade chips ig.
-
-gravy irl tends to be relatively up to personal preferences and families. But generally speaking, all of them require water, flour, salt and pepper, the last ingredients mostly being dependant to tastes. Non-vegan recipes tends to use broth, vegan recipes can use soy sauce, cornstarch, etc.
-So the recipe I would advise would be 99% water bottle, 20% flour, 10% salt, 10% pepper, and maybe an additional ingredient depending if you feel like it
-the recipes aren't realistic themselves, but they're tuned for in game balance
-a batch of 5 fries and gravy would cost 1 salt, 1 pepper, 1 flour, 1.25 cooking oil (I don't like it but its made to be tuned around other frier recipes), 5 water and 10 pomegrenade 
-maybe the additional ingredient for gravy could be a jar, since from my experience jars are only used for jams and delicacy no one craft because hammerhead meals tends to be better in term of cost and yeald
-as for poutine itself, the idea I had about it if we want to give it a buff could be related to drink afflictions since poutine tends to be combo'd well with beer or sodas, so maybe giving it a buff to drinks buff
 
 
+
+
+
+Enforced NEEDS:
+- Changes to the lua function. Mainly important for singleplayer or multiplayer with bots:
+Bots will now only get the "Hungry Europan" talent and thus the hunger and thirst afflictions if you actively control them. Hunger and thirst values will be stored and then set to 0 for characters controlled by a bot. Upon taking back control over the character, the previous hunger and thirst values for this specific character will be restored. Switching into the next round will however delete all stored values that are currently not in use so always switch back to your main character or your hunger and thirst will be reset to 0.
+
+Deathwish: Fix controller component showing when interacting with surgical table on stimpy subs
 
 NEEDS:
 - Updated to the latest version of Hungry Europans. See changelogs [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2954998725]HERE[/url]
 
-
-Doc's Whiskey  fiber plant, pomegranate, adrenaline (maybe water ;3) 
-name :  Endeavour's cuppa
-(if possible it acts like rum does, can be applied thru the health ui or drank with lmb)
-minor healing properties, applies slow metabolism(not too much) cures 30% psychosis and hallucinations,  cures 15% husk 
 
 
 LongTermPlans:
 - Kuru sickness
 - Meat Chunks cookable and burnable in open fires.
 - More recipes and unlockable recipes by recipe items found or bought.
-- Moloch meat, Broodmother meat, Spineling meat, Latcher meat, Charybdis meat, Husked meat, meat from pets.
+- Abyssal meats.
 - Plant based talents. Craftable item that makes items grow faster? Special fertilizer?
 - Tier 4 talents for butcher (choice): 1. cannibalism buff with butcher saw. Can directly harvest abyssal meat. | 2. Meat tenderizer hammer (two handed blunt weapon). Will allow meat cleaver to harvest abyssal creature meat after hitting their corpse a few times.
 - Assistant "Tasty target" talent for Chef
 - Unique Couwola location with cola bottle plant and a locked, run down old part of the station and questline to obtain access to it and grab special bottles for the Couwola Cola collector to obtain his Limited Edition Exosuit.
-
-
-
 
 
 Here's my current list of what I want to add this month before pushing the content to the original Hungry Europans:
