@@ -10,12 +10,13 @@ High:
 - Testing, testing, testing
 - Plant RE-rework when DLC comes out
 - Missing text
+- Missing item sprites
 - Make ingredients visible in the cooked items sprite
-- Dough sprite
+- Finalize Traits
 
 Medium:
--Declutter fabricator windows
--Avoid dupe foods/afflictions...
+- Declutter fabricator windows
+- Avoid dupe foods/afflictions...
 - Recipes that make use of the canned ingredients
 - Contained Sprites for table/grill (avoid floating items)
 - Containable icon sprites
