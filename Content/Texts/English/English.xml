@@ -633,7 +633,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entityname.he-liquordisplayshelf>Liquor Display Shelf</entityname.he-liquordisplayshelf><!--Patch 10-->
 <entitydescription.he-liquordisplayshelf>A shelf to display and store your bottles. Jars don't fit.</entitydescription.he-liquordisplayshelf><!--Patch 10-->
 <entityname.he-toolbeltlunch>Tool Belt with Lunch Box</entityname.he-toolbeltlunch><!--Patch 10-->
-<entitydescription.he-toolbeltlunch>A Tool Belt with a Lunch Box attached to it to always carry your food with you.</entitydescription.he-toolbeltlunch><!--Patch 10-->
+<entitydescription.he-toolbeltlunch>A Tool Belt with a Lunch Box attached to it to always carry your food with you. Slows you down.</entitydescription.he-toolbeltlunch><!--Patch 10-->
 <entityname.he-lunchbox>Lunch Box</entityname.he-lunchbox><!--Patch 10-->
 <entitydescription.he-lunchbox>It's a box with a handle to carry your food around. Can be attached to a toolbelt at a fabricator.</entitydescription.he-lunchbox><!--Patch 10-->
 <entityname.he-hydroponicplanter>Hydroponic Planter</entityname.he-hydroponicplanter><!--Patch 10-->

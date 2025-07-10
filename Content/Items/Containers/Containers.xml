@@ -28,7 +28,7 @@
       <Body width="108" height="79" density="15" />
       <Wearable slots="Bag" msg="ItemMsgEquipSelect" canbeselected="false" canbepicked="true" pickkey="Select">
         <sprite name="ToolBeltLunchBox" texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="915,656,108,79" limb="Torso" inherittexturescale="true" origin="0.6,-0.2" />
-        <StatValue stattype="WalkingSpeed" value="-0.1" />
+        <StatValue stattype="WalkingSpeed" value="-0.2" />
         <StatValue stattype="SwimmingSpeed" value="-0.2" />
       </Wearable>
       <Holdable canbepicked="true" slots="RightHand+LeftHand" holdpos="0,-70" handle1="-5,0" handle2="10,-20" holdangle="0" msg="ItemMsgPickUpUse" canbeselected="false" pickkey="Use" allowswappingwhenpicked="false" />
@@ -46,7 +46,7 @@
         <SlotIcon slotindex="16" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="152,0,85,85" origin="0.5,0.5" />
         <SlotIcon slotindex="17" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="152,0,85,85" origin="0.5,0.5" />
         <Containable items="smallitem" excludeditems="toolbelt,toolbox,bandolier,he-toolbeltlunch" />
-        <SubContainer capacity="12" depth="0.5">
+        <SubContainer capacity="6" depth="0.5">
           <Containable items="fooditem,drinkitem,bottle,emptybottle,emptyjar" />
         </SubContainer>
       </ItemContainer>
@@ -84,7 +84,7 @@
           </StatusEffect>
         </Attack>
       </MeleeWeapon>
-      <ItemContainer capacity="12" keepopenwhenequipped="true" movableframe="true">
+      <ItemContainer capacity="6" slotsperrow="3" keepopenwhenequipped="true" movableframe="true">
         <SlotIcon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="152,0,85,85" origin="0.5,0.5" />
         <Containable items="fooditem,drinkitem,bottle,emptybottle,emptyjar" />
       </ItemContainer>
