@@ -51,17 +51,19 @@
           <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="1000" />
           <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="1000" />
         </StatusEffect>
-        <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true">
+        <StatusEffect type="OnImpact" target="This" >
           <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
           <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact4.ogg" selectionmode="Random" range="600" />
+          <Remove />
+          <SpawnItem identifier="he-glassfragments" spawnposition="This" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.5"/>
         </StatusEffect>
         <!-- remove the bottle if broken and spawn glass fragments, but prevent contained projectile bottle from breaking as well if the bottle drops and shatters instead of being thrown -->
         <StatusEffect type="OnBroken" target="This">
           <Remove />
-          <SpawnItem identifier="he-glassfragments" spawnposition="This" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.5"/>
+          <SpawnItem identifier="he-emptyshaker" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
         </StatusEffect>
       </Projectile>
     </Item>
@@ -114,17 +116,19 @@
           <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="1000" />
           <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="1000" />
         </StatusEffect>
-        <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true">
+        <StatusEffect type="OnImpact" target="This" >
           <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
           <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact4.ogg" selectionmode="Random" range="600" />
+          <Remove />
+          <SpawnItem identifier="he-glassfragments" spawnposition="This" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.5"/>
         </StatusEffect>
         <!-- remove the bottle if broken and spawn glass fragments, but prevent contained projectile bottle from breaking as well if the bottle drops and shatters instead of being thrown -->
         <StatusEffect type="OnBroken" target="This">
           <Remove />
-          <SpawnItem identifier="he-glassfragments" spawnposition="This" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="0.5"/>
+          <SpawnItem identifier="he-emptyshaker" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
         </StatusEffect>
       </Projectile>
     </Item>
