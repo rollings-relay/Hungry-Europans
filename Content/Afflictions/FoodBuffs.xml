@@ -224,10 +224,7 @@
       maxstrength="1800"
       MedicalSkillGain="0.0">
       <Effect minstrength="0" maxstrength="1800"
-        strengthchange="-1"
-        resistancefor="pressure"
-        minresistance="1"
-        maxresistance="1">
+        strengthchange="-1">
         <StatValue stattype="WeaponsSkillOverride" value="100" />
       </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
