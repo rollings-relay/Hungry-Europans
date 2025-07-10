@@ -30,17 +30,15 @@
       maxstrength="1800"
       iconcolors="150,255,150;75,255,75;0,255,0"
       MedicalSkillGain="0.0">
-      <Effect minstrength="0" maxstrength="100" strengthchange="-1">      
-      </Effect>
-      <Effect minstrength="100" maxstrength="1200" strengthchange="-1"
+      <Effect minstrength="0" maxstrength="100" strengthchange="-1"
         resistancefor="blunttrauma"
         minresistance="0.0"
         maxresistance="0.25">
         <StatusEffect target="Character" >
-          <ReduceAffliction identifier="he-stuffed" strength="0.015" />
+          <ReduceAffliction identifier="he-stuffed" strength="0.010" />
         </StatusEffect>
       </Effect>
-      <Effect minstrength="1200" maxstrength="1800" strengthchange="-1"
+      <Effect minstrength="100" maxstrength="1800" strengthchange="-1"
         resistancefor="blunttrauma"
         minresistance="0.25"
         maxresistance="0.25" >
@@ -65,13 +63,11 @@
       maxstrength="1800"
       iconcolors="150,255,150;75,255,75;0,255,0"
       MedicalSkillGain="0.0">
-      <Effect minstrength="0" maxstrength="100" strengthchange="-1">      
-      </Effect>
-      <Effect minstrength="100" maxstrength="1200" strengthchange="-1">
+      <Effect minstrength="0" maxstrength="100" strengthchange="-1">
         <StatValue stattype="SwimmingSpeed" minvalue="0.0" maxvalue="0.15" />   
         <StatValue stattype="WalkingSpeed" minvalue="0.0" maxvalue="0.15" />      
       </Effect>
-      <Effect minstrength="1200" maxstrength="1800" strengthchange="-1">
+      <Effect minstrength="100" maxstrength="1800" strengthchange="-1">
         <StatValue stattype="SwimmingSpeed" minvalue="0.15" maxvalue="0.15" />
         <StatValue stattype="WalkingSpeed" minvalue="0.15" maxvalue="0.15" />         
       </Effect>
@@ -91,13 +87,11 @@
       maxstrength="1800"
       iconcolors="150,255,150;75,255,75;0,255,0"
       MedicalSkillGain="0.0">
-      <Effect minstrength="0" maxstrength="100" strengthchange="-1">      
-      </Effect>
-      <Effect minstrength="100" maxstrength="1200" strengthchange="-1">
+      <Effect minstrength="0" maxstrength="100" strengthchange="-1">
         <StatValue stattype="MeleeAttackMultiplier" minvalue="0.0" maxvalue="0.15" />    
-        <StatValue stattype="WeaponsSkillBonus" value="5" />  
+        <StatValue stattype="WeaponsSkillBonus" value="0" />  
       </Effect>
-      <Effect minstrength="1200" maxstrength="1800" strengthchange="-1">
+      <Effect minstrength="100" maxstrength="1800" strengthchange="-1">
         <StatValue stattype="MeleeAttackMultiplier" minvalue="0.15" maxvalue="0.15" />
         <StatValue stattype="WeaponsSkillBonus" value="5" />
       </Effect>
@@ -117,13 +111,11 @@
       maxstrength="1800"
       iconcolors="150,255,150;75,255,75;0,255,0"
       MedicalSkillGain="0.0">
-      <Effect minstrength="0" maxstrength="100" strengthchange="-1">      
-      </Effect>
-      <Effect minstrength="100" maxstrength="1200" strengthchange="-1"
+      <Effect minstrength="0" maxstrength="100" strengthchange="-1"
         resistancefor="oxygenlow,bloodloss"
         minresistance="0.0"
         maxresistance="0.25" />
-      <Effect minstrength="1200" maxstrength="1800" strengthchange="-1"
+      <Effect minstrength="100" maxstrength="1800" strengthchange="-1"
         resistancefor="oxygenlow,bloodloss"
         minresistance="0.25"
         maxresistance="0.25" />
@@ -143,14 +135,13 @@
       maxstrength="1800"
       iconcolors="150,255,150;75,255,75;0,255,0"
       MedicalSkillGain="0.0">
-      <Effect minstrength="0" maxstrength="100" strengthchange="-1" />
-      <Effect minstrength="100" maxstrength="1200" strengthchange="-1"
+      <Effect minstrength="0" maxstrength="100" strengthchange="-1"
         resistancefor="mood,fatigue"
         minresistance="0.0"
         maxresistance="0.25"
         minskillgainmultiplier="1.0"
         maxskillgainmultiplier="1.25" />
-      <Effect minstrength="1200" maxstrength="1800" strengthchange="-1"
+      <Effect minstrength="100" maxstrength="1800" strengthchange="-1"
         resistancefor="mood,fatigue"
         minresistance="0.25"
         maxresistance="0.25"
@@ -172,12 +163,11 @@
       maxstrength="1800"
       iconcolors="150,255,150;75,255,75;0,255,0"
       MedicalSkillGain="0.0">
-      <Effect minstrength="0" maxstrength="100" strengthchange="-1" />
-      <Effect minstrength="100" maxstrength="1200" strengthchange="-1"
+      <Effect minstrength="0" maxstrength="100" strengthchange="-1"
         resistancefor="defecate,stomachache"
         minresistance="0.0"
         maxresistance="0.5" />
-      <Effect minstrength="1200" maxstrength="1800" strengthchange="-1"
+      <Effect minstrength="100" maxstrength="1800" strengthchange="-1"
         resistancefor="defecate,stomachache"
         minresistance="0.5"
         maxresistance="0.5"/>
