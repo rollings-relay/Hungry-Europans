@@ -124,6 +124,7 @@ NEEDS:
 
 
 LongTermPlans:
+- Meat Cleaver sharpening + Whetstone - prevents players from harvesting too much meat in one go
 - Kuru sickness
 - Meat Chunks cookable and burnable in open fires.
 - More recipes and unlockable recipes by recipe items found or bought.
