@@ -416,7 +416,7 @@
 
     <!-- MEAT -->
     <!-- EASY | NO TYPE | NO BUFFS -->
-    <Item hideinmenus="false" name="Jerky" identifier="he-cookedjerky" health="15" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="A few stripes of jerky. A cheap and easy meal to make. It's impossible to tell what it's made of, but the taste is ok. Eating it makes you thirsty and doesn't give you any benefits other than satiating you." Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+    <Item hideinmenus="false" name="Jerky" identifier="he-cookedjerky" health="15" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.05" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="3" spawnprobability="0.05" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.05" />
@@ -442,6 +442,7 @@
           <Affliction identifier="he-stuffed" amount="2.0" />
           <ReduceAffliction type="hunger" amount="2.0" />
           <ReduceAffliction type="damage" amount="0.15" />
+          <Affliction identifier="thirst" amount="0.02"/>
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
@@ -460,6 +461,7 @@
           <Affliction identifier="he-stuffed" amount="2.0" />
           <ReduceAffliction type="hunger" amount="2.0" />
           <ReduceAffliction type="damage" amount="0.15" />
+          <Affliction identifier="thirst" amount="0.02"/>
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingCrunchy.ogg" loop="True" range="200" volume="4.0" />
         </StatusEffect>
