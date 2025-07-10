@@ -2,6 +2,8 @@
 <Override>
   <Afflictions>
   
+    <!-- TODO: Make all of these affectmachines="false"? -->
+  
     <!-- NEEDS INTEGRATION -->
     <Affliction name="Fatigue"
       identifier="fatigue"
