@@ -773,30 +773,6 @@
           </CharacterAbilityApplyStatusEffects>
         </Abilities>
       </AbilityGroupEffect>
-      <!--Human food buff-->
-      <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
-        <Conditions>
-          <AbilityConditionItem identifiers="bagpipes"/>
-        </Conditions>
-        <Abilities>
-          <CharacterAbilityApplyStatusEffectsToAllies range="1000">
-            <StatusEffects>
-              <StatusEffect type="OnAbility" target="Character" interval="1" disabledeltatime="true" targetlimb="Torso">
-                <Conditional he-cannibalskillincrease="gt 0"/>
-                <Affliction identifier="he-cannibalskillincrease" amount="1" />
-              </StatusEffect>
-            </StatusEffects>
-          </CharacterAbilityApplyStatusEffectsToAllies>
-          <CharacterAbilityApplyStatusEffects>
-            <StatusEffects>
-              <StatusEffect type="OnAbility" target="Character" interval="1" disabledeltatime="true" targetlimb="Torso">
-                <Conditional he-cannibalskillincrease="gt 0"/>
-                <Affliction identifier="he-cannibalskillincrease" amount="1" />
-              </StatusEffect>
-            </StatusEffects>
-          </CharacterAbilityApplyStatusEffects>
-        </Abilities>
-      </AbilityGroupEffect>
       <!--Pressure food buff-->
       <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
         <Conditions>

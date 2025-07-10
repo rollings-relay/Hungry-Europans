@@ -293,25 +293,6 @@
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
     </Affliction>
     
-    <!-- Human (Only for cannibals) -->
-    <Affliction name="Increased Skills (Food)"
-      identifier="he-cannibalskillincrease"
-      type="foodbuff"
-      isbuff="true"
-      limbspecific="false"
-      indicatorlimb="Torso"
-      hideiconafterdelay="true"
-      showiconthreshold="0"
-      treatmentthreshold="100"
-      maxstrength="1800"
-      iconcolors="150,255,150;75,255,75;0,255,0"
-      MedicalSkillGain="0.0">
-      <Effect minstrength="0" maxstrength="1800" strengthchange="-1"
-        minskillmultiplier="1.2"
-        maxskillmultiplier="1.2" />
-      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
-    </Affliction>
-    
     <!-- CRAWLER -->
     <Affliction name="Increased Speed (Food)"
       identifier="he-increasedspeed"
