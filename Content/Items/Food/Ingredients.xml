@@ -616,7 +616,6 @@
           <Affliction identifier="he-stuffed" amount="0.75" />
           <Affliction identifier="he-sugarrich" amount="3" />
           <ReduceAffliction type="hunger" amount="0.4" />
-          <ReduceAffliction type="damage" amount="0.1" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         
@@ -644,7 +643,6 @@
           <Affliction identifier="he-stuffed" amount="0.75" />
           <Affliction identifier="he-sugarrich" amount="3" />
           <ReduceAffliction type="hunger" amount="0.4" />
-          <ReduceAffliction type="damage" amount="0.1" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="true" range="200" volume="5.0" selectionmode="Random" />
         </StatusEffect>
         <!-- Prevent using this item continuously by applying the tag "emptyhand" which prevents the StatusEffect that uses the item from triggering again, effectively only allowing it to trigger once per mouse-click -->
@@ -695,7 +693,6 @@
           <Affliction identifier="he-stuffed" amount="0.75" />
           <Affliction identifier="he-sugarrich" amount="3" />
           <ReduceAffliction type="hunger" amount="0.4" />
-          <ReduceAffliction type="damage" amount="0.1" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         
@@ -723,7 +720,6 @@
           <Affliction identifier="he-stuffed" amount="0.75" />
           <Affliction identifier="he-sugarrich" amount="3" />
           <ReduceAffliction type="hunger" amount="0.4" />
-          <ReduceAffliction type="damage" amount="0.1" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="true" range="200" volume="5.0" selectionmode="Random" />
         </StatusEffect>
         <!-- Prevent using this item continuously by applying the tag "emptyhand" which prevents the StatusEffect that uses the item from triggering again, effectively only allowing it to trigger once per mouse-click -->

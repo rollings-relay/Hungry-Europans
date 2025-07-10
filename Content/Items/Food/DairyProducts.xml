@@ -105,7 +105,6 @@
           <Affliction identifier="he-stuffed" amount="0.1" />
           <Affliction identifier="he-calciumrich" amount="8" />
           <Affliction identifier="he-sugarrich" amount="4" />
-          <ReduceAffliction type="damage" amount="0.03" />
           <ReduceAffliction type="hunger" amount="0.1" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
@@ -120,7 +119,6 @@
           <Affliction identifier="he-stuffed" amount="0.1" />
           <Affliction identifier="he-calciumrich" amount="8" />
           <Affliction identifier="he-sugarrich" amount="4" />
-          <ReduceAffliction type="damage" amount="0.03" />
           <ReduceAffliction type="hunger" amount="0.1" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
@@ -236,7 +234,6 @@
           <Affliction identifier="he-stuffed" amount="0.1" />
           <Affliction identifier="he-calciumrich" amount="4" />
           <Affliction identifier="he-sugarrich" amount="8" />
-          <ReduceAffliction type="damage" amount="0.03" />
           <ReduceAffliction type="hunger" amount="0.1" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
@@ -251,7 +248,6 @@
           <Affliction identifier="he-stuffed" amount="0.1" />
           <Affliction identifier="he-calciumrich" amount="4" />
           <Affliction identifier="he-sugarrich" amount="8" />
-          <ReduceAffliction type="damage" amount="0.03" />
           <ReduceAffliction type="hunger" amount="0.1" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
@@ -367,7 +363,6 @@
           <Affliction identifier="he-stuffed" amount="0.1" />
           <Affliction identifier="he-calciumrich" amount="4" />
           <Affliction identifier="he-sugarrich" amount="8" />
-          <ReduceAffliction type="damage" amount="0.03" />
           <ReduceAffliction type="hunger" amount="0.1" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
@@ -382,7 +377,6 @@
           <Affliction identifier="he-stuffed" amount="0.1" />
           <Affliction identifier="he-calciumrich" amount="4" />
           <Affliction identifier="he-sugarrich" amount="8" />
-          <ReduceAffliction type="damage" amount="0.03" />
           <ReduceAffliction type="hunger" amount="0.1" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
@@ -498,7 +492,6 @@
           <Affliction identifier="he-stuffed" amount="0.1" />
           <Affliction identifier="he-calciumrich" amount="4" />
           <Affliction identifier="he-sugarrich" amount="8" />
-          <ReduceAffliction type="damage" amount="0.03" />
           <ReduceAffliction type="hunger" amount="0.1" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
@@ -513,7 +506,6 @@
           <Affliction identifier="he-stuffed" amount="0.1" />
           <Affliction identifier="he-calciumrich" amount="4" />
           <Affliction identifier="he-sugarrich" amount="8" />
-          <ReduceAffliction type="damage" amount="0.03" />
           <ReduceAffliction type="hunger" amount="0.1" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
@@ -580,7 +572,6 @@
         <StatusEffect type="OnSuccess" target="This,UseTarget" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
           <Conditional IsBot="true" />
           <Affliction identifier="he-stuffed" amount="4.98" />
-          <ReduceAffliction type="damage" amount="1.66" />
           <ReduceAffliction type="hunger" amount="13.28" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
@@ -595,7 +586,6 @@
           <Conditional stun="gt 0" />
           <Conditional IsPlayer="true" />
           <Affliction identifier="he-stuffed" amount="0.3" />
-          <ReduceAffliction type="damage" amount="0.1" />
           <ReduceAffliction type="hunger" amount="0.8" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
@@ -606,7 +596,6 @@
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <Affliction identifier="he-stuffed" amount="0.3" />
-          <ReduceAffliction type="damage" amount="0.1" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
@@ -621,7 +610,6 @@
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <Affliction identifier="he-stuffed" amount="0.3" />
-          <ReduceAffliction type="damage" amount="0.1" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         <!-- Poison Effects -->
@@ -718,7 +706,6 @@
         <StatusEffect type="OnSuccess" target="This,UseTarget" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
           <Conditional IsBot="true" />
           <Affliction identifier="he-stuffed" amount="0.51" />
-          <ReduceAffliction type="damage" amount="0.17" />
           <ReduceAffliction type="hunger" amount="1.36" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
@@ -733,7 +720,6 @@
           <Conditional stun="gt 0" />
           <Conditional IsPlayer="true" />
           <Affliction identifier="he-stuffed" amount="0.3" />
-          <ReduceAffliction type="damage" amount="0.1" />
           <ReduceAffliction type="hunger" amount="0.8" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
         </StatusEffect>
@@ -744,7 +730,6 @@
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <Affliction identifier="he-stuffed" amount="0.3" />
-          <ReduceAffliction type="damage" amount="0.1" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
@@ -935,21 +920,18 @@
           <RequiredItem tag="icecreamball" type="contained" targetslot="0" />
           <Affliction identifier="he-stuffed" amount="0.1" />
           <Affliction identifier="he-calciumrich" amount="5" />
-          <ReduceAffliction type="damage" amount="0.075" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <RequiredItem tag="icecreamball" type="contained" targetslot="1" />
           <Affliction identifier="he-stuffed" amount="0.1" />
           <Affliction identifier="he-calciumrich" amount="5" />
-          <ReduceAffliction type="damage" amount="0.075" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <RequiredItem tag="icecreamball" type="contained" targetslot="2" />
           <Affliction identifier="he-stuffed" amount="0.1" />
           <Affliction identifier="he-calciumrich" amount="5" />
-          <ReduceAffliction type="damage" amount="0.075" />
         </StatusEffect>
         <!--Apply base effects-->
         <StatusEffect type="OnUse" target="Character" comparison="And">
@@ -958,7 +940,6 @@
           <Conditional HasStatusTag="neq secondslot" />
           <Conditional HasStatusTag="neq thirdslot" />
           <Affliction identifier="he-stuffed" amount="0.05" />
-          <ReduceAffliction type="damage" amount="0.05" />
         </StatusEffect>
         <!--Play soft eating sound if containing ice cream-->
         <StatusEffect type="OnUse" target="This">

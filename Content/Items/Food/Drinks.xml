@@ -259,7 +259,6 @@
           <Conditional stun="gt 0" />
           <Conditional IsPlayer="true" />
           <Affliction identifier="durationincrease" amount="30" />
-          <ReduceAffliction type="damage" amount="1.2" />
           <ReduceAffliction type="thirst" amount="2.0" />
           <ReduceAffliction identifier="he-dieofthirst" amount="20" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
@@ -283,7 +282,6 @@
         <StatusEffect type="OnUse" target="Character">
           <Conditional InWater="false" />
           <Affliction identifier="durationincrease" amount="30" />
-          <ReduceAffliction type="damage" amount="1.2" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
@@ -570,7 +568,6 @@
           <ReduceAffliction identifier="psychosis" amount="1" />
           <ReduceAffliction identifier="hallucinating" amount="1" />
           <Affliction identifier="drunk" amount="2" />
-          <ReduceAffliction type="damage" amount="0.5" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
@@ -668,7 +665,6 @@
           <ReduceAffliction identifier="he-halucinova" amount="2" />
           <ReduceAffliction identifier="embarrassment" strength="2" />
           <Affliction identifier="drunk" amount="4" />
-          <ReduceAffliction type="damage" amount="1.0" />
           <ReduceAffliction type="burn" amount="1.0" />
           <Affliction identifier="radiationsickness" amount="0.5" />
           <ReduceAffliction type="thirst" amount="0.3" />
@@ -720,7 +716,6 @@
           <ReduceAffliction identifier="he-halucinova" amount="2" />
           <ReduceAffliction identifier="embarrassment" strength="2" />
           <Affliction identifier="applydrunk" amount="4" />
-          <ReduceAffliction type="damage" amount="1.0" />
           <ReduceAffliction type="burn" amount="1.0" />
           <Affliction identifier="radiationsickness" amount="0.5" />
         </StatusEffect>
@@ -829,7 +824,6 @@
           <ReduceAffliction identifier="he-halucinova" amount="33.2" />
           <ReduceAffliction identifier="embarrassment" strength="33.2" />
           <ReduceAffliction identifier="chemaddiction" amount="8.3" />
-          <ReduceAffliction type="damage" amount="3.32" />
           <ReduceAffliction type="thirst" amount="6.64" />
           <ReduceAffliction identifier="he-dieofthirst" amount="200" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
@@ -864,7 +858,6 @@
           <ReduceAffliction identifier="he-halucinova" amount="2.0" />
           <ReduceAffliction identifier="embarrassment" strength="2" />
           <ReduceAffliction identifier="chemaddiction" amount="0.5" />
-          <ReduceAffliction type="damage" amount="0.2" />
           <ReduceAffliction type="thirst" amount="0.4" />
           <ReduceAffliction identifier="he-dieofthirst" amount="20" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
@@ -908,7 +901,6 @@
           <ReduceAffliction identifier="he-halucinova" amount="2.0" />
           <ReduceAffliction identifier="embarrassment" strength="2" />
           <ReduceAffliction identifier="chemaddiction" amount="0.5" />
-          <ReduceAffliction type="damage" amount="0.2" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
@@ -1013,7 +1005,6 @@
           <ReduceAffliction identifier="embarrassment" strength="166" />
           <Affliction identifier="oxygenlow" amount="16.6" />
           <ReduceAffliction identifier="nausea" amount="33.2" />
-          <ReduceAffliction type="damage" amount="4.98" />
           <ReduceAffliction type="thirst" amount="4.98" />
           <ReduceAffliction identifier="he-dieofthirst" amount="200" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
@@ -1040,7 +1031,6 @@
           <ReduceAffliction identifier="embarrassment" strength="10" />
           <Affliction identifier="oxygenlow" amount="1.0" />
           <ReduceAffliction identifier="nausea" amount="2" />
-          <ReduceAffliction type="damage" amount="0.3" />
           <ReduceAffliction type="thirst" amount="0.3" />
           <ReduceAffliction identifier="he-dieofthirst" amount="20" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
@@ -1074,7 +1064,6 @@
           <ReduceAffliction identifier="embarrassment" strength="10" />
           <Affliction identifier="oxygenlow" amount="1.0" />
           <ReduceAffliction identifier="nausea" amount="2" />
-          <ReduceAffliction type="damage" amount="0.3" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional thirst="gt 0.3" />

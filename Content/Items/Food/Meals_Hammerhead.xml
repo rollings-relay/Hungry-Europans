@@ -38,7 +38,6 @@
           <Affliction identifier="ate_omelette" amount="1" />
           <Affliction identifier="he-stuffed" amount="2.0" />
           <ReduceAffliction type="hunger" amount="2.0" />
-          <ReduceAffliction type="damage" amount="0.1" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
 
@@ -58,7 +57,6 @@
           <Affliction identifier="ate_omelette" amount="1" />
           <Affliction identifier="he-stuffed" amount="2.0" />
           <ReduceAffliction type="hunger" amount="2.0" />
-          <ReduceAffliction type="damage" amount="0.1" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork1.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork2.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
@@ -108,7 +106,6 @@
           <Affliction identifier="ate_roast" amount="1" />
           <Affliction identifier="he-stuffed" amount="1.75" />
           <ReduceAffliction type="hunger" amount="1.75" />
-          <ReduceAffliction type="damage" amount="0.15" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
@@ -123,7 +120,6 @@
           <Affliction identifier="ate_roast" amount="1" />
           <Affliction identifier="he-stuffed" amount="1.75" />
           <ReduceAffliction type="hunger" amount="1.75" />
-          <ReduceAffliction type="damage" amount="0.15" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
@@ -166,7 +162,6 @@
           <Affliction identifier="he-proteinrich" amount="25.0" />
           <Affliction identifier="he-stuffed" amount="8" />
           <ReduceAffliction type="hunger" amount="8" />
-          <ReduceAffliction type="damage" amount="0.5" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         
@@ -193,7 +188,6 @@
           <Affliction identifier="he-proteinrich" amount="25.0" />
           <Affliction identifier="he-stuffed" amount="8" />
           <ReduceAffliction type="hunger" amount="8" />
-          <ReduceAffliction type="damage" amount="0.5" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="true" range="200" volume="5.0" selectionmode="Random" />
         </StatusEffect>
         <!-- Prevent using this item continuously by applying the tag "emptyhand" which prevents the StatusEffect that uses the item from triggering again, effectively only allowing it to trigger once per mouse-click -->
@@ -229,7 +223,6 @@
           <Affliction identifier="ate_friedfood" amount="1" />
           <Affliction identifier="he-stuffed" amount="1.5" />
           <ReduceAffliction type="hunger" amount="1.5" />
-          <ReduceAffliction type="damage" amount="0.15" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
@@ -244,7 +237,6 @@
           <Affliction identifier="ate_friedfood" amount="1" />
           <Affliction identifier="he-stuffed" amount="1.5" />
           <ReduceAffliction type="hunger" amount="1.5" />
-          <ReduceAffliction type="damage" amount="0.15" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>

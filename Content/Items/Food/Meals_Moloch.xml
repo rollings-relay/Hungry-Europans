@@ -34,7 +34,6 @@
           <Affliction identifier="he-calciumrich" amount="100.0" />
           <Affliction identifier="he-stuffed" amount="4.0" />
           <ReduceAffliction type="hunger" amount="4.0" />
-          <ReduceAffliction type="damage" amount="0.15" />
           <ReduceAffliction type="mood" amount="1.0" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
@@ -62,7 +61,6 @@
           <Affliction identifier="he-calciumrich" amount="100.0" />
           <Affliction identifier="he-stuffed" amount="4.0" />
           <ReduceAffliction type="hunger" amount="4.0" />
-          <ReduceAffliction type="damage" amount="0.1" />
           <ReduceAffliction type="mood" amount="1.0" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="true" range="200" volume="5.0" selectionmode="Random" />
         </StatusEffect>
@@ -107,7 +105,6 @@
           <Affliction identifier="ate_filet" amount="1" />
           <Affliction identifier="he-stuffed" amount="2.0" />
           <ReduceAffliction type="hunger" amount="2.0" />
-          <ReduceAffliction type="damage" amount="0.1" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
 
@@ -127,7 +124,6 @@
           <Affliction identifier="ate_filet" amount="1" />
           <Affliction identifier="he-stuffed" amount="2.0" />
           <ReduceAffliction type="hunger" amount="2.0" />
-          <ReduceAffliction type="damage" amount="0.1" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork1.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork2.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
