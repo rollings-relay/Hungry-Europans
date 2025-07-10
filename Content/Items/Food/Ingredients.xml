@@ -573,7 +573,7 @@
     </Item>
 
     <!-- JAMS -->
-    <Item name="Bubble Berry Jam" identifier="he-jambubbleberry" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Tasty jam made out of bubble berries. Known to quench a bit of thirst." Tags="smallitem,ingredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" canflipx="false">
+    <Item name="Bubble Berry Jam" identifier="he-jambubbleberry" health="15" category="Misc" subcategory="Ingredients" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="Tasty jam made out of bubble berries. Known to quench a bit of thirst." Tags="smallitem,ingredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" canflipx="false">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -599,45 +599,60 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="216,84,39,50" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="216,84,39,50" depth="0.525" origin="0.5,0.83"  />
       <Body width="39" height="50" density="13" />
-      <Throwable canbepicked="true" characterusable="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" swingwhenusing="true" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnSecondaryUse" target="This" delay="0.01">
-          <Use />
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand,Any" holdangle="10" holdpos="-13,-30" handle1="-10,5" handle2="0,0" aimable="false" msg="ItemMsgPickUpSelect">
+        <!-- EVERYTHING RELATED TO POISONING FOOD IS HANDLED VIA THE POISON EFFECT PRESET ITEMS DEFINED IN - variantof="" AND THEIR CODE IS LOCATED IN - "/Content/Items/#Presets/#ItemPresets.xml" -->
+        
+        <!--////////// BOT EATING \\\\\\\\\\-->
+        <!-- Bots "eat" by holding the food in their hands -->
+        <StatusEffect type="OnActive" target="This,Character" duration="1" condition="-1" stackable="false" comparison="And">
+          <Conditional hunger="gt 1" targetcontainer="true" />
+          <Conditional IsPlayer="false" targetcontainer="true" />
+          <Conditional IsHuman="true" targetcontainer="true" />
+          <Affliction identifier="ate_sweets" amount="1" />
+          <Affliction identifier="he-stuffed" amount="0.75" />
+          <Affliction identifier="he-sugarrich" amount="3" />
+          <ReduceAffliction type="hunger" amount="0.4" />
+          <ReduceAffliction type="damage" amount="0.1" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
-      </Throwable>
-      <Projectile characterusable="false" launchimpulse="0" impulsespread="0.0" sticktocharacters="false" sticktoitems="false" sticktostructures="false" sticktodoors="false">
-        <Attack targetimpulse="3" severlimbsprobability="0.1" itemdamage="1" structuredamage="0" structuresoundtype="StructureSlash">
-          <Affliction identifier="lacerations" strength="4" />
-          <Affliction identifier="blunttrauma" strength="4" />
-          <Affliction identifier="lacerations" strength="4" probability="0.25" />
-          <Affliction identifier="bleeding" strength="4" />
-          <Affliction identifier="bleeding" strength="4" probability="0.5" />
-          <Affliction identifier="stun" strength="0.2" />
-        </Attack>
-        <StatusEffect type="OnImpact" target="UseTarget">
-          <Conditional entitytype="Character" />
-          <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="1000" />
-          <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="1000" />
-          <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="1000" />
-          <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="1000" />
-          <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="1000" />
-          <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="1000" />
+        
+        <!--////////// REGULAR EATING \\\\\\\\\\-->
+        <!-- Use the item when it's held -->
+        <!-- -Condition -->
+        <StatusEffect type="OnSecondaryUse" target="This" Condition="-1" disabledeltatime="true" stackable="false" comparison="And" >
+          <Conditional HasStatusTag="neq emptyhand" />
+          <Conditional InWater="false" />
         </StatusEffect>
-        <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true">
-          <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
-          <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
-          <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
-          <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
-          <Sound file="Content/Sounds/Damage/GlassImpact4.ogg" selectionmode="Random" range="600" />
+        <!-- eating fries "animation" -->
+        <StatusEffect type="OnSecondaryUse" target="This" handle2="45,20" setvalue="true" duration="0.5" stackable="false" comparison="And">
+          <Conditional HasStatusTag="neq emptyhand" />
+          <Conditional InWater="false" />
         </StatusEffect>
-        <!-- remove the bottle if broken and spawn glass fragments, but prevent contained projectile bottle from breaking as well if the bottle drops and shatters instead of being thrown -->
-        <StatusEffect type="OnBroken" target="This">
+        <StatusEffect type="OnSecondaryUse" target="This" handle2="0,0" delay="0.5" duration="0.1" setvalue="true" stackable="false" comparison="And">
+          <Conditional HasStatusTag="eq emptyhand" />
+          <Conditional InWater="false" />
+        </StatusEffect>
+        <!-- health effects -->
+        <StatusEffect type="OnSecondaryUse" target="Character" duration="1" stackable="false" comparison="And">
+          <Conditional HasStatusTag="neq emptyhand" />
+          <Conditional InWater="false" />
+          <Affliction identifier="ate_sweets" amount="1" />
+          <Affliction identifier="he-stuffed" amount="0.75" />
+          <Affliction identifier="he-sugarrich" amount="3" />
+          <ReduceAffliction type="hunger" amount="0.4" />
+          <ReduceAffliction type="damage" amount="0.1" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="true" range="200" volume="5.0" selectionmode="Random" />
+        </StatusEffect>
+        <!-- Prevent using this item continuously by applying the tag "emptyhand" which prevents the StatusEffect that uses the item from triggering again, effectively only allowing it to trigger once per mouse-click -->
+        <StatusEffect type="OnSecondaryUse" target="This,Character" StatusEffecttags="emptyhand" duration="0.5" stackable="false" />
+        <StatusEffect type="OnBroken" target="This" disabledeltatime="true">
           <Remove />
-          <SpawnItem identifier="he-glassfragments" spawnposition="This" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="1.0" count="2" />
+          <SpawnItem identifier="he-emptyjar" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
         </StatusEffect>
-      </Projectile>
+      </Holdable>
     </Item>
 
-    <Item name="Pomegrenade Jam" identifier="he-jampomegrenade" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Tasty jam made out of pomegrenade. Known to be a bit more filling." Tags="smallitem,ingredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" canflipx="false">
+    <Item name="Pomegrenade Jam" identifier="he-jampomegrenade" health="15" category="Misc" subcategory="Ingredients" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="Tasty jam made out of pomegrenade. Known to be a bit more filling." Tags="smallitem,ingredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" canflipx="false">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -663,42 +678,57 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="255,84,39,50" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="255,84,39,50" depth="0.525" origin="0.5,0.83"  />
       <Body width="39" height="50" density="13" />
-      <Throwable canbepicked="true" characterusable="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" swingwhenusing="true" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnSecondaryUse" target="This" delay="0.01">
-          <Use />
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand,Any" holdangle="10" holdpos="-13,-30" handle1="-10,5" handle2="0,0" aimable="false" msg="ItemMsgPickUpSelect">
+        <!-- EVERYTHING RELATED TO POISONING FOOD IS HANDLED VIA THE POISON EFFECT PRESET ITEMS DEFINED IN - variantof="" AND THEIR CODE IS LOCATED IN - "/Content/Items/#Presets/#ItemPresets.xml" -->
+        
+        <!--////////// BOT EATING \\\\\\\\\\-->
+        <!-- Bots "eat" by holding the food in their hands -->
+        <StatusEffect type="OnActive" target="This,Character" duration="1" condition="-1" stackable="false" comparison="And">
+          <Conditional hunger="gt 1" targetcontainer="true" />
+          <Conditional IsPlayer="false" targetcontainer="true" />
+          <Conditional IsHuman="true" targetcontainer="true" />
+          <Affliction identifier="ate_sweets" amount="1" />
+          <Affliction identifier="he-stuffed" amount="0.75" />
+          <Affliction identifier="he-sugarrich" amount="3" />
+          <ReduceAffliction type="hunger" amount="0.4" />
+          <ReduceAffliction type="damage" amount="0.1" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
-      </Throwable>
-      <Projectile characterusable="false" launchimpulse="0" impulsespread="0.0" sticktocharacters="false" sticktoitems="false" sticktostructures="false" sticktodoors="false">
-        <Attack targetimpulse="3" severlimbsprobability="0.1" itemdamage="1" structuredamage="0" structuresoundtype="StructureSlash">
-          <Affliction identifier="lacerations" strength="4" />
-          <Affliction identifier="blunttrauma" strength="4" />
-          <Affliction identifier="lacerations" strength="4" probability="0.25" />
-          <Affliction identifier="bleeding" strength="4" />
-          <Affliction identifier="bleeding" strength="4" probability="0.5" />
-          <Affliction identifier="stun" strength="0.2" />
-        </Attack>
-        <StatusEffect type="OnImpact" target="UseTarget">
-          <Conditional entitytype="Character" />
-          <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="1000" />
-          <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="1000" />
-          <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="1000" />
-          <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="1000" />
-          <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="1000" />
-          <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="1000" />
+        
+        <!--////////// REGULAR EATING \\\\\\\\\\-->
+        <!-- Use the item when it's held -->
+        <!-- -Condition -->
+        <StatusEffect type="OnSecondaryUse" target="This" Condition="-1" disabledeltatime="true" stackable="false" comparison="And" >
+          <Conditional HasStatusTag="neq emptyhand" />
+          <Conditional InWater="false" />
         </StatusEffect>
-        <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true">
-          <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
-          <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
-          <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
-          <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
-          <Sound file="Content/Sounds/Damage/GlassImpact4.ogg" selectionmode="Random" range="600" />
+        <!-- eating fries "animation" -->
+        <StatusEffect type="OnSecondaryUse" target="This" handle2="45,20" setvalue="true" duration="0.5" stackable="false" comparison="And">
+          <Conditional HasStatusTag="neq emptyhand" />
+          <Conditional InWater="false" />
         </StatusEffect>
-        <!-- remove the bottle if broken and spawn glass fragments, but prevent contained projectile bottle from breaking as well if the bottle drops and shatters instead of being thrown -->
-        <StatusEffect type="OnBroken" target="This">
+        <StatusEffect type="OnSecondaryUse" target="This" handle2="0,0" delay="0.5" duration="0.1" setvalue="true" stackable="false" comparison="And">
+          <Conditional HasStatusTag="eq emptyhand" />
+          <Conditional InWater="false" />
+        </StatusEffect>
+        <!-- health effects -->
+        <StatusEffect type="OnSecondaryUse" target="Character" duration="1" stackable="false" comparison="And">
+          <Conditional HasStatusTag="neq emptyhand" />
+          <Conditional InWater="false" />
+          <Affliction identifier="ate_sweets" amount="1" />
+          <Affliction identifier="he-stuffed" amount="0.75" />
+          <Affliction identifier="he-sugarrich" amount="3" />
+          <ReduceAffliction type="hunger" amount="0.4" />
+          <ReduceAffliction type="damage" amount="0.1" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="true" range="200" volume="5.0" selectionmode="Random" />
+        </StatusEffect>
+        <!-- Prevent using this item continuously by applying the tag "emptyhand" which prevents the StatusEffect that uses the item from triggering again, effectively only allowing it to trigger once per mouse-click -->
+        <StatusEffect type="OnSecondaryUse" target="This,Character" StatusEffecttags="emptyhand" duration="0.5" stackable="false" />
+        <StatusEffect type="OnBroken" target="This" disabledeltatime="true">
           <Remove />
-          <SpawnItem identifier="he-glassfragments" spawnposition="This" spawnifcantbecontained="true" SpawnIfInventoryFull="true" condition="1.0" count="2" />
+          <SpawnItem identifier="he-emptyjar" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
         </StatusEffect>
-      </Projectile>
+      </Holdable>
     </Item>
 
     <!-- MISC -->
