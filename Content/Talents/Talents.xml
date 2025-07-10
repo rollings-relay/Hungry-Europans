@@ -384,6 +384,21 @@
       </AbilityGroupEffect>
     </Talent>        
     
+    <Talent name="Preferred Food: Sweets" identifier="he-trait_likes_sweets">
+      <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,385,119,119" origin="0.5,0.5"/>
+      <Description tag="talentdescription.he-moodyeuropan" />
+      <AbilityGroupEffect abilityeffecttype="OnRoundEnd">
+        <Abilities>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+                <Affliction identifier="trait_likes_sweets" amount="1" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupEffect>
+    </Talent>   
     
     <Talent name="Preferred Drink: Beer" identifier="he-trait_likes_beer">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,385,119,119" origin="0.5,0.5"/>
