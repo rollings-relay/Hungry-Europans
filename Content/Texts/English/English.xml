@@ -47,7 +47,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entityname.he-sandwichpgjam>Pomegrenade Jam Sandwich</entityname.he-sandwichpgjam><!--Patch 13-->
 <entitydescription.he-sandwichpgjam>A tasty sandwich with pomegrenade jam.</entitydescription.he-sandwichpgjam><!--Patch 13-->
 <entityname.he-cookedjerky>Jerky</entityname.he-cookedjerky><!--Patch 13-->
-<entitydescription.he-cookedjerky>A few stripes of jerky. A cheap and easy meal to make. It's impossible to tell what it's made of, but the taste is ok. Eating it makes you thirsty and doesn't give you any benefits other than satiating you.</entitydescription.he-cookedjerky><!--Patch 13-->
+<entitydescription.he-cookedjerky>Dried jerky may taste like leather, but it cannot spoil.</entitydescription.he-cookedjerky><!--Patch 13-->
 <!--spineling-->
 <entityname.he-spinelingburger>Burger</entityname.he-spinelingburger><!--Patch 13-->
 <entitydescription.he-spinelingburger>Eating it leaves a stinging sensation.</entitydescription.he-spinelingburger><!--Patch 13-->
@@ -148,7 +148,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-hammerheadburger>Mhhh it's so tasty, you'd like to smash your head in disbelief!</entitydescription.he-hammerheadburger>
 <entityname.he-hammerheadhotdog>Hotdog</entityname.he-hammerheadhotdog>
 <entitydescription.he-hammerheadhotdog>Mhhh it's so tasty, you'd like to smash your head in disbelief!</entitydescription.he-hammerheadhotdog>
-<entityname.he-cookedhammerheadspareribs>Spareribs</entityname.he-cookedhammerheadspareribs>
+<entityname.he-cookedhammerheadspareribs>Spare Ribs</entityname.he-cookedhammerheadspareribs>
 <entitydescription.he-cookedhammerheadspareribs>A delicious meal with a strong taste.</entitydescription.he-cookedhammerheadspareribs>
 <entityname.he-cookedhammerheadnugget>Nugget</entityname.he-cookedhammerheadnugget><!--Patch 13-->
 <entitydescription.he-cookedhammerheadnugget>Mhhh it's so tasty, you'd like to smash your head in disbelief!</entitydescription.he-cookedhammerheadnugget><!--Patch 13-->
@@ -225,7 +225,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-waterhalucinova>Tastes fresh.</entitydescription.he-waterhalucinova><!--Changed as of Patch 15 | Simplified description to just state it tastes fresh-->
 
 <entityname.he-milk>Moloch Milk</entityname.he-milk>
-<entitydescription.he-milk>A bottle of Moloch Milk. Tastes a bit funny. Don't ask how they get milk from a Moloch! May help a bit when you're shit-faced or hungry.</entitydescription.he-milk>
+<entitydescription.he-milk>A bottle of Moloch Milk. Tastes a bit funny. Don't ask how they get milk from a Moloch! May help a bit when you're shit-faced.</entitydescription.he-milk>
 
 <entityname.he-seawaterrum>Water</entityname.he-seawaterrum><!--Changed as of Patch 15 | Previously referred to "Sea Water" instead of just "Water"-->
 <entitydescription.he-seawaterrum>Tastes salty.</entitydescription.he-seawaterrum><!--Changed as of Patch 15 | Previously referred to "Sea Water" instead of just "Water" and simplified the description to just state it tastes salty-->
@@ -266,13 +266,13 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-cuppopnuttea>People claim they didn't get thirsty for quite a while after drinking it.</entitydescription.he-cuppopnuttea><!--Patch 13-->
 
 <entityname.he-colacan>Can of Couwola Cola</entityname.he-colacan><!--Patch 13-->
-<entitydescription.he-colacan>A refreshing can of Couwola Cola. Super refreshing and good for when you're absolutely shit-faced and need to sober up a quickly. Mass-consumption may cause discomfort.</entitydescription.he-colacan><!--Patch 13-->
+<entitydescription.he-colacan>A can of Couwola Cola. Good for when you need to sober up.</entitydescription.he-colacan><!--Patch 13-->
 <entityname.he-colazerocan>Can of Couwola Cola Zero</entityname.he-colazerocan><!--Patch 13-->
-<entitydescription.he-colazerocan>A refreshing can of Couwola Cola Zero. No sugar, but full flavor! Very refreshing and good for when you're absolutely shit-faced and need to sober up a quickly.</entitydescription.he-colazerocan><!--Patch 13-->
+<entitydescription.he-colazerocan>A can of Couwola Cola Zero. No sugar, but full flavor! Good for when you need to sober up.</entitydescription.he-colazerocan><!--Patch 13-->
 <entityname.he-colabottle>Couwola Cola</entityname.he-colabottle><!--Patch 13-->
-<entitydescription.he-colabottle>A bottle of Couwola Cola. Super refreshing and helpful when you're shit-faced. Mass-consumption may cause discomfort.</entitydescription.he-colabottle><!--Patch 13-->
+<entitydescription.he-colabottle>A bottle of Couwola Cola. Good for when you need to sober up.</entitydescription.he-colabottle><!--Patch 13-->
 <entityname.he-colazerobottle>Couwola Cola Zero</entityname.he-colazerobottle><!--Patch 13-->
-<entitydescription.he-colazerobottle>A bottle of Couwola Cola Zero. Zero sugar, but full flavor! Very refreshing and kind of helpful when you're shit-faced.</entitydescription.he-colazerobottle><!--Patch 13-->
+<entitydescription.he-colazerobottle>A bottle of Couwola Cola Zero. Zero sugar, but full flavor! Good for when you need to sober up.</entitydescription.he-colazerobottle><!--Patch 13-->
 <!-- Kegs -->
 <entityname.he-kegempty>Empty Keg</entityname.he-kegempty><!--Patch 10-->
 <entitydescription.he-kegempty>An empty keg used for some recipes. Can be used in water to collect dirty water.</entitydescription.he-kegempty><!--Patch 10-->
@@ -401,7 +401,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-rawhammerheadsausage>Expect the wurst! Spoils if not refrigerated.</entitydescription.he-rawhammerheadsausage>
 <entityname.he-rawhammerheadmeatpatty>Raw Hammerhead Meat Patty</entityname.he-rawhammerheadmeatpatty>
 <entitydescription.he-rawhammerheadmeatpatty>Spoils if not refrigerated.</entitydescription.he-rawhammerheadmeatpatty>
-<entityname.he-rawhammerheadspareribs>Raw Hammerhead Spareribs</entityname.he-rawhammerheadspareribs>
+<entityname.he-rawhammerheadspareribs>Raw Hammerhead Spare Ribs</entityname.he-rawhammerheadspareribs>
 <entitydescription.he-rawhammerheadspareribs>Cut from a massive ripcage. Spoils if not refrigerated.</entitydescription.he-rawhammerheadspareribs>
 <entityname.he-rawhammerheadroast>Raw Hammerhead Roast</entityname.he-rawhammerheadroast>
 <entitydescription.he-rawhammerheadroast>Time to put it in the oven. Spoils if not refrigerated.</entitydescription.he-rawhammerheadroast>
