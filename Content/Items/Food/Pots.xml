@@ -71,7 +71,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1815,121,59,48" depth="0.55" />
       <Body width="58" height="46" density="13.0" />
       <Fabricate suitablefabricators="stove" requiredtime="60" requiresrecipe="false" amount="1" >
-        <RequiredSkill identifier="cooking" level="25" />
+        <RequiredSkill identifier="cooking" level="35" />
         <RequiredItem identifier="he-potwithwater" />
         <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.1"/>
         <RequiredItem identifier="he-rawmolochmeat" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
@@ -176,7 +176,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1815,121,59,48" depth="0.55" />
       <Body width="58" height="46" density="13.0" />
       <Fabricate suitablefabricators="stove" requiredtime="60" requiresrecipe="false" amount="1" >
-        <RequiredSkill identifier="cooking" level="25" />
+        <RequiredSkill identifier="cooking" level="40" />
         <RequiredItem identifier="he-pot" />
         <RequiredItem identifier="he-molochcheesecurd" amount="3"/>
         <RequiredItem identifier="he-bread" amount="1" />
