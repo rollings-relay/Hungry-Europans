@@ -536,9 +536,9 @@
     
     <Item name="Fork" identifier="he-fork" Tags="smallitem,tableware,fork,forkspoonreturn" category="Misc" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" isshootable="true" RequireAimToUse="True">
       <Deconstruct time="3" requireddeconstructor="deconstructor" />
-      <Fabricate suitablefabricators="fabricator" requiredtime="10" amount="10">
-        <RequiredSkill identifier="weapons" level="30" />
-        <RequiredItem identifier="steel" amount="1"/>
+      <Fabricate suitablefabricators="fabricator" requiredtime="5" amount="1">
+        <RequiredSkill identifier="mechanical" level="30" />
+        <RequiredItem identifier="iron" amount="1"/>
       </Fabricate>
       <Fabricate suitablefabricators="sink" requiredtime="20" requiresrecipe="false" amount="1" displayname="clean">
         <RequiredItem tag="cleaningagent" UseCondition="True" MinCondition="0.01" />
@@ -565,9 +565,9 @@
 
     <Item name="Spoon" identifier="he-spoon" Tags="smallitem,tableware,spoon,forkspoonreturn" category="Misc" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" isshootable="true" RequireAimToUse="True">
       <Deconstruct time="3" requireddeconstructor="deconstructor" />
-      <Fabricate suitablefabricators="fabricator" requiredtime="10" amount="10">
-        <RequiredSkill identifier="weapons" level="30" />
-        <RequiredItem identifier="steel" amount="1"/>
+      <Fabricate suitablefabricators="fabricator" requiredtime="5" amount="1">
+        <RequiredSkill identifier="mechanical" level="30" />
+        <RequiredItem identifier="iron" amount="1"/>
       </Fabricate>
       <Fabricate suitablefabricators="sink" requiredtime="20" requiresrecipe="false" amount="1" displayname="clean">
         <RequiredItem tag="cleaningagent" UseCondition="True" MinCondition="0.01" />
