@@ -603,7 +603,7 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="216,84,39,50" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="216,84,39,50" depth="0.525" origin="0.5,0.83"  />
       <Body width="39" height="50" density="13" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand,Any" holdangle="10" holdpos="-13,-30" handle1="-10,5" handle2="0,0" aimable="false" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand,Any" holdangle="20" holdpos="30,-30" handle1="-10,-20" handle2="0,20" aimable="false" msg="ItemMsgPickUpSelect">
         <!-- EVERYTHING RELATED TO POISONING FOOD IS HANDLED VIA THE POISON EFFECT PRESET ITEMS DEFINED IN - variantof="" AND THEIR CODE IS LOCATED IN - "/Content/Items/#Presets/#ItemPresets.xml" -->
         
         <!--////////// BOT EATING \\\\\\\\\\-->
@@ -627,11 +627,11 @@
           <Conditional InWater="false" />
         </StatusEffect>
         <!-- eating fries "animation" -->
-        <StatusEffect type="OnSecondaryUse" target="This" handle2="45,20" setvalue="true" duration="0.5" stackable="false" comparison="And">
+        <StatusEffect type="OnSecondaryUse" target="This" handle2="-20,55" setvalue="true" duration="0.5" stackable="false" comparison="And">
           <Conditional HasStatusTag="neq emptyhand" />
           <Conditional InWater="false" />
         </StatusEffect>
-        <StatusEffect type="OnSecondaryUse" target="This" handle2="0,0" delay="0.5" duration="0.1" setvalue="true" stackable="false" comparison="And">
+        <StatusEffect type="OnSecondaryUse" target="This" handle2="0,20" delay="0.5" duration="0.1" setvalue="true" stackable="false" comparison="And">
           <Conditional HasStatusTag="eq emptyhand" />
           <Conditional InWater="false" />
         </StatusEffect>
@@ -680,7 +680,7 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="255,84,39,50" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="255,84,39,50" depth="0.525" origin="0.5,0.83"  />
       <Body width="39" height="50" density="13" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand,Any" holdangle="10" holdpos="-13,-30" handle1="-10,5" handle2="0,0" aimable="false" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand,Any" holdangle="20" holdpos="30,-30" handle1="-10,-20" handle2="0,20" aimable="false" msg="ItemMsgPickUpSelect">
         <!-- EVERYTHING RELATED TO POISONING FOOD IS HANDLED VIA THE POISON EFFECT PRESET ITEMS DEFINED IN - variantof="" AND THEIR CODE IS LOCATED IN - "/Content/Items/#Presets/#ItemPresets.xml" -->
         
         <!--////////// BOT EATING \\\\\\\\\\-->
@@ -704,11 +704,11 @@
           <Conditional InWater="false" />
         </StatusEffect>
         <!-- eating fries "animation" -->
-        <StatusEffect type="OnSecondaryUse" target="This" handle2="45,20" setvalue="true" duration="0.5" stackable="false" comparison="And">
+        <StatusEffect type="OnSecondaryUse" target="This" handle2="-20,55" setvalue="true" duration="0.5" stackable="false" comparison="And">
           <Conditional HasStatusTag="neq emptyhand" />
           <Conditional InWater="false" />
         </StatusEffect>
-        <StatusEffect type="OnSecondaryUse" target="This" handle2="0,0" delay="0.5" duration="0.1" setvalue="true" stackable="false" comparison="And">
+        <StatusEffect type="OnSecondaryUse" target="This" handle2="0,20" delay="0.5" duration="0.1" setvalue="true" stackable="false" comparison="And">
           <Conditional HasStatusTag="eq emptyhand" />
           <Conditional InWater="false" />
         </StatusEffect>
