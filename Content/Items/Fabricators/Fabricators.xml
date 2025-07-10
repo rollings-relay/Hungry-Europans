@@ -795,6 +795,7 @@
       </Price>
       <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.45" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.797" sourcerect="1975,228,72,66" origin="0.5,0.20" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1975,228,72,66" origin="0.5,0.5" />
       <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.796" sourcerect="1902,228,72,66" alpha="1.0" origin="0.5,0.20" >
         <IsActiveConditional Condition="gt 0.0" />
         <Conditional Voltage="gt 0.5" isActive="true" targetcontainer="true" targetitemcomponent="LightComponent" />
