@@ -1,11 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <prefabs>
 
+  <!-- 
+  Vanilla splatters:
+  -white
+  -black
+  -red
+  -green
+  -blue
+  -brown -->
+
+  
   <fruitsplatter_orange color="175,90,0,200" lifetime="6000" fadeouttime="30">
     <sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="672,416,192,192" origin="0.5,0.5" />
     <sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="672,160,192,192" origin="0.5,0.5" />
   </fruitsplatter_orange>
-
+  
   <fruitsplatter_yellow color="160,160,50,200" lifetime="6000" fadeouttime="30">
     <sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="672,416,192,192" origin="0.5,0.5" />
     <sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="672,160,192,192" origin="0.5,0.5" />
