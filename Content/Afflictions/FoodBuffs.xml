@@ -260,7 +260,7 @@
     
     <!-- Watcher, extra skill gain + thermal vision at the cost of psychosis -->
     <Affliction name="Watcher's sight (Food)"
-      identifier="he-watcherskillgainincrease"
+      identifier="he-watchermindsense"
       type="foodbuff"
       isbuff="true"
       limbspecific="false"
