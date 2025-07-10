@@ -1088,7 +1088,7 @@
   acts as cheap distracting item, makes monsters sick (especially raptors) -->
   <Item name="raptorpom" identifier="raptorpom" category="Misc" health="10" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,distillable,provocative" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" allowasextracargo="true" damagedbymonsters="true" >
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.52" sourcerect="896,512,64,64" origin="0.5,0.5" />
-    <Body radius="28" density="11" />
+    <Body radius="28" density="10" />
     <PreferredContainer primary="plantcontainer"/>
     <PreferredContainer primary="kitchen" secondary="crewcab" />
     <Price baseprice="20" sold="false">
