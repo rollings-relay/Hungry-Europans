@@ -258,8 +258,8 @@
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
     </Affliction>
     
-    <!-- Watcher -->
-    <Affliction name="Increased Skill Gain (Food)"
+    <!-- Watcher, extra skill gain + thermal vision at the cost of psychosis -->
+    <Affliction name="Watcher's sight (Food)"
       identifier="he-watcherskillgainincrease"
       type="foodbuff"
       isbuff="true"
@@ -271,13 +271,25 @@
       maxstrength="1800"
       iconcolors="150,255,150;75,255,75;0,255,0"
       MedicalSkillGain="0.0">
-      <Effect minstrength="0" maxstrength="100" strengthchange="-1" />
-      <Effect minstrength="100" maxstrength="1200" strengthchange="-1"
+      <Effect minstrength="0" maxstrength="100" strengthchange="-1"
         minskillgainmultiplier="1.0"
-        maxskillgainmultiplier="1.25" />
-      <Effect minstrength="1200" maxstrength="1800" strengthchange="-1"
+        maxskillgainmultiplier="1.25" 
+        MinAfflictionOverlayAlphaMultiplier="0"
+        MaxAfflictionOverlayAlphaMultiplier="0.2"/>
+      <Effect minstrength="100" maxstrength="1800" strengthchange="-1"
         minskillgainmultiplier="1.25"
-        maxskillgainmultiplier="1.25" />
+        maxskillgainmultiplier="1.25"
+        MinAfflictionOverlayAlphaMultiplier="0.2"
+        MaxAfflictionOverlayAlphaMultiplier="1"
+        minfacetint="255,255,255,0"
+        maxfacetint="255,100,255,150"
+        ThermalOverlayRange="1500" ThermalOverlayColor="130,70,145,150">
+        <StatusEffect target="Character" targetlimb="Head" >
+          <Affliction identifier="psychosis" amount="1" />
+          <ParticleEmitter particle="muzzleflashpulselaser" particleamount="1" emitinterval="3" scalemin="0.2" scalemax="0.3" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" copyentityangle="false" lifetimemultiplier="1" colormultiplier="50,0,150,255"/>
+        </StatusEffect>        
+      </Effect>
+      <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/HalucinovaOverlayBase.png" />
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="909,0,115,123" color="40,255,20,255" origin="0.5,0.5" />
     </Affliction>
     
