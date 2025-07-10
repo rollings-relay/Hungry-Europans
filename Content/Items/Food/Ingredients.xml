@@ -1,62 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Override>
   <Items>
-    <!-- EASY | NO CREATURE SPECIFIC MEAT | NO BUFFS -->
-    <Item name="Pile of Raw Jerky" identifier="he-rawjerky" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,canspoil,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
-      <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.0" />
-      <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.0" />
-      <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="379,322,51,11" depth="0.6" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/InventoryIcons.Png" sourcerect="44,0,64,60" origin="0.5,0.5" />
-      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="379,322,51,11" depth="0.525" origin="0.5,0.3"  />
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="18" requiresrecipe="false" amount="1">
-        <RequiredSkill identifier="butchery" level="10" />
-        <RequiredItem tag="rawmeatpiece" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
-        <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.1"/>
-        <RequiredItem identifier="he-pepper" UseCondition="True" MinCondition="0.1"/>
-        <RequiredItem identifier="he-sugar" UseCondition="True" MinCondition="0.1"/>
-        <RequiredItem identifier="he-cookingoil" UseCondition="True" MinCondition="0.1"/>
-      </Fabricate>
-      <Deconstruct time="1" requireddeconstructor="deconstructor" />
-      <Body width="51" radius="5" density="11" />
-      <Price baseprice="15" minavailable="4" maxavailable="16" mincondition="0.9" maxcondition="1.0" usecondition="false" sold="false">
-        <Price storeidentifier="merchantoutpost"/>
-        <Price storeidentifier="merchantcity"/>
-        <Price storeidentifier="merchantresearch"/>
-        <Price storeidentifier="merchantmilitary"/>
-        <Price storeidentifier="merchantmine"/>
-        <Price storeidentifier="merchantmedical"/>
-        <Price storeidentifier="merchantbutcher" multiplier="2.0" minavailable="0" maxavailable="32" sold="true" />
-      </Price>
-      <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
-        <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
-        <StatusEffect type="Always" target="This" timeframe="0" interval="2" disabledeltatime="true" setvalue="true">
-          <Conditional HasStatusTag="eq activecooling" targetcontainer="true" />
-          <Conditional HasTag="eq kitchenfabricator" targetcontainer="true" />
-        </StatusEffect>
-        <StatusEffect type="Always" target="This" Condition="-0.5" timeframe="-10.0" disabledeltatime="true" interval="0.9">
-          <Conditional timeframe="gte 10" />
-        </StatusEffect>
-      </GreaterComponent>
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnUse" target="This" Condition="-2.0"/>
-        <StatusEffect type="OnUse" target="Character">
-          <Affliction identifier="deliriuminepoisoning" amount="1.2" probability="0.001" />
-          <Affliction identifier="nausea" amount="1.2" />
-          <Affliction identifier="he-hungryforhumanmeat" amount="0.037" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="true" range="200" volume="5.0" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character">
-          <Conditional hunger="gt 1.5" />
-          <ReduceAffliction type="hunger" amount="1.5" />
-        </StatusEffect>
-        <StatusEffect type="OnBroken" target="This">
-          <Remove />
-        </StatusEffect>
-      </Holdable>
-      <AiTarget sightrange="1000" static="True" />
-    </Item>
-
     <Item name="Salt" identifier="he-salt" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Don't get salty now!" Tags="smallitem,ingredient,condiment" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_shaker" impacttolerance="5.5">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
