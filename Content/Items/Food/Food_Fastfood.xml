@@ -234,7 +234,7 @@
           <Affliction identifier="ate_friedfood" amount="1" />
           <Affliction identifier="he-stuffed" amount="0.75" />
           <ReduceAffliction type="hunger" amount="0.75" />
-          <ReduceAffliction type="damage" amount="0.15" />
+          <ReduceAffliction type="damage" amount="0.1" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         
