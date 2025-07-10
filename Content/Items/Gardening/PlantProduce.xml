@@ -1115,11 +1115,11 @@
         </Explosion>
       </StatusEffect>
       <!-- extra effective against mudraptors TODO: needs testing  -->
-      <StatusEffect type="OnBroken" target="NearbyCharacters" range="150" targets="mudraptor" disabledeltatime="true" oneshot="true">
+      <StatusEffect type="OnBroken" target="NearbyCharacters" range="150" duration="2" stackable="false" targets="mudraptor" disabledeltatime="true" oneshot="true">
         <Conditional group="mudraptor" />
-        <Affliction identifier="organdamage" strength="30" />
+        <Affliction identifier="organdamage" strength="20" dividebylimbcount="true" />
       </StatusEffect>
-      <StatusEffect type="OnSecondaryUse" target="This" tags="decoy" setvalue="true" duration="10"/>
+      <StatusEffect type="OnUse" target="This" tags="decoy" setvalue="true" duration="10"/>
     </Throwable>
     <AiTarget sightrange="1200" static="true" />
   </Item>  
