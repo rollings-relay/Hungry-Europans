@@ -209,7 +209,7 @@
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand,Any" holdangle="90" holdpos="-13,-30" handle1="-10,5" handle2="0,0" aimable="false" msg="ItemMsgPickUpSelect" />
     </Item>
     
-    <!-- PROTOTYPING SIMPLER FOOD. TODO: COPY THIS AND REPLACE ALL FOODS -->
+    <!-- PROTOTYPING SIMPLER FOOD. TODO: COPY THIS AND REPLACE ALL FOODS - FINGERFOOD VERSION -->
     <Item name="Fries" identifier="he-fries" health="25" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,allowinfryer,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />

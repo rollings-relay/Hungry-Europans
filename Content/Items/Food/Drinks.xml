@@ -41,7 +41,8 @@
       </Holdable>
     </Ethanol>
     
-    <!-- TODO: WIP Attempt at reworking ethanol (and other drinks) -->
+    <!-- TODO: WIP Attempt at reworking ethanol (and other drinks) to be closer to the new food method while allowing medical UI to exist. Use ethanol template above -->
+    
     <!-- <Ethanol name="" identifier="ethanol" category="Medical,Material" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,chem,cleaningagent,medical,petfood2" useinhealthinterface="true" scale="0.5" requireaimtouse="true" isshootable="false" impactsoundtag="impact_metal_light">
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
       <PreferredContainer primary="sprayer" amount="1" spawnprobability="1"/>
@@ -2848,7 +2849,7 @@
     <!-- WATER -->
     <!-- WATER -->
     <!-- WATER -->
-    <!-- TODO:  reenable filter requirement in sink? alternatively just make sink degrade if not filtered  -->
+    <!-- TODO:  reenable filter requirement in sink? alternatively just make sink degrade when used if not filtered  -->
     <Item name="Water" identifier="he-water" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Fresh water. Helps a bit if you're feeling stuffed or when you're shit-faced." Tags="smallitem,drinkitem,cleanwater,cleanwaterrefill_common,water,bottle,allowinfryer" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />

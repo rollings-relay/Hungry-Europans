@@ -954,7 +954,6 @@
           <SpawnItem identifier="effect_firestarter" spawnposition="ThisInventory" probability="0.05"/>
         </StatusEffect>
       </ItemComponent>
-      <!-- TODO: improve this light component, not just a random light in a random pos -->
       <LightComponent range="5.0" lightcolor="50,255,50,0" powerconsumption="200" IsOn="true" LightOffset="-61,7" scale="0.8" castshadows="false" allowingameediting="false">
         <sprite texture="Content/Items/Button/button.png" sourcerect="6,24,17,17" depth="0.650" origin="0.5,0.5" alpha="1.0" />
         <IsActive targetitemcomponent="ItemComponent" IsActive="eq True" />
