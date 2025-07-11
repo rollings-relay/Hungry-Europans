@@ -773,9 +773,10 @@
 
 
     <!-- EARTH INGREDIENTS | High value ingredients for delicacies only found in wrecks -->
-    <!-- TODO: Find something to do with canned foods... -->
+    
+    <!-- TODO: Disabled for now. Find something to do with canned foods... -->
     <Item name="Canned Tomatoes" identifier="he-cannedtomatoes" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A rare can of tomatoes back from when supplies were still delivered from earth! High in value, these ingredients are used exclusively for delicacies these days." Tags="smallitem,ingredient,rareingredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_metal_light" impacttolerance="5.5">
-      <PreferredContainer secondary="wreckstoragecab" minamount="1" maxamount="4" spawnprobability="0.1" />
+      <PreferredContainer secondary="wreckstoragecab" minamount="1" maxamount="4" spawnprobability="0.0" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Price baseprice="1500" sold="false" canbespecial="true">
         <Price storeidentifier="merchantoutpost" minavailable="3" maxavailable="10" />
@@ -935,7 +936,7 @@
 
 
     <Item name="Canned Mushrooms" identifier="he-cannedmushrooms" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A rare can of tomatoes back from when supplies were still delivered from earth! High in value, these ingredients are used exclusively for delicacies these days." Tags="smallitem,ingredient,rareingredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_metal_light" impacttolerance="5.5">
-      <PreferredContainer secondary="wreckstoragecab" minamount="1" maxamount="4" spawnprobability="0.1" />
+      <PreferredContainer secondary="wreckstoragecab" minamount="1" maxamount="4" spawnprobability="0.0" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Price baseprice="1500" sold="false" canbespecial="true">
         <Price storeidentifier="merchantoutpost" minavailable="3" maxavailable="10" />
@@ -1089,7 +1090,7 @@
 
     
     <Item name="Canned Potatoes" identifier="he-cannedpotatoes" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A rare can of tomatoes back from when supplies were still delivered from earth! High in value, these ingredients are used exclusively for delicacies these days." Tags="smallitem,ingredient,rareingredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_metal_light" impacttolerance="5.5">
-      <PreferredContainer secondary="wreckstoragecab" minamount="1" maxamount="4" spawnprobability="0.1" />
+      <PreferredContainer secondary="wreckstoragecab" minamount="1" maxamount="4" spawnprobability="0.0" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Price baseprice="1500" sold="false" canbespecial="true">
         <Price storeidentifier="merchantoutpost" minavailable="3" maxavailable="10" />
@@ -1240,10 +1241,9 @@
         </StatusEffect>
       </Projectile>
     </Item>
-
     
     <Item name="Canned Corn" identifier="he-cannedcorn" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A rare can of tomatoes back from when supplies were still delivered from earth! High in value, these ingredients are used exclusively for delicacies these days." Tags="smallitem,ingredient,rareingredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_metal_light" impacttolerance="5.5">
-      <PreferredContainer secondary="wreckstoragecab" minamount="1" maxamount="4" spawnprobability="0.1" />
+      <PreferredContainer secondary="wreckstoragecab" minamount="1" maxamount="4" spawnprobability="0.0" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Price baseprice="1500" sold="false" canbespecial="true">
         <Price storeidentifier="merchantoutpost" minavailable="3" maxavailable="10" />
@@ -1259,7 +1259,7 @@
       </Deconstruct>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="99,15,32,40" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="99,15,32,40" origin="0.5,0.5" />
-      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="68,104,15,30" depth="0.525" origin="0.5,0.7"  />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="99,15,32,40" depth="0.525" origin="0.5,0.7"  />
       <Body width="27" height="35" density="11.5" />
       <Throwable canbepicked="true" characterusable="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnSecondaryUse" target="This" delay="0.01">
@@ -1363,7 +1363,7 @@
       </Deconstruct>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="99,0,32,55" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="99,0,32,55" origin="0.5,0.5" />
-      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,0,32,55" depth="0.525" origin="0.5,0.7"  />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="99,0,32,55" depth="0.525" origin="0.5,0.7"  />
       <Body width="27" height="50" density="11.5" />
       <Throwable canbepicked="true" characterusable="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnSecondaryUse" target="This" delay="0.01">
