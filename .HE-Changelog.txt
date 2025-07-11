@@ -120,10 +120,11 @@ LongTermPlans:
 - Canned food. Canned food from earth, requires can opener or knife to open. Figure out something to do with it.
 	Can Opener: 100% | No injuries
 	Diving Knife: 80% | 10% chance of lacerations
+- Swappable ULD with kitchen counter - swappable with nothing. Allows to make space in the submarine for kitchen	
 - Kuru sickness
 - Meat Chunks cookable and burnable in open fires.
 - More recipes and unlockable recipes by recipe items found or bought.
-- Abyssal meats.
+- Abyssal meats?
 - Plant based talents. Craftable item that makes items grow faster? Special fertilizer?
 - Tier 4 talents for butcher (choice): 1. cannibalism buff with butcher saw. Can directly harvest abyssal meat. | 2. Meat tenderizer hammer (two handed blunt weapon). Will allow meat cleaver to harvest abyssal creature meat after hitting their corpse a few times.
 - Assistant "Tasty target" talent for Chef
