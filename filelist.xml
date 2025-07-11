@@ -80,9 +80,9 @@
   <Text file="%ModDir%/Content/Texts/SimplifiedChinese/SimplifiedChinese.xml" />
   <Text file="%ModDir%/Content/Texts/TraditionalChinese/TraditionalChinese.xml" />
   <Text file="%ModDir%/Content/Texts/Turkish/Turkish.xml" />
-  <Submarine file="%ModDir%/Bulker - Stinger.sub" />
+  <Submarine file="%ModDir%/Content/Submarines/Bulker - Stinger.sub" />
   <OutpostModule file="%ModDir%/#Testkitchen.sub" />
-  <Submarine file="%ModDir%/Bulker - Swordfish.sub" />
+  <Submarine file="%ModDir%/Content/Submarines/Bulker - Swordfish.sub" />
   <Submarine file="%ModDir%/Content/Submarines/Bulker - Abyss Scout.sub" />
   <Submarine file="%ModDir%/Content/Submarines/Bulker - Abyss Carrier.sub" />
   <NPCConversations file="%ModDir%/Content/Texts/English/NpcConversations_English.xml" />
