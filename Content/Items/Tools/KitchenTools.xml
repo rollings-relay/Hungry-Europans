@@ -357,7 +357,7 @@
       <SkillRequirementHint identifier="butchery" level="100"/>
     </Item>
     
-    <!-- TODO: Disabled. Reenable when we actually do something with cans -->
+    <!-- TODO: Disabled. Needs a sprite. Reenable when we actually do something with cans -->
     <Item name="Can Opener" identifier="he-canopener" category="Equipment" Tags="smallitem,mountableweapon,sharptool,canopener" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
       <!-- <PreferredContainer secondary="wreckarmcab,abandonedarmcab" amount="1" spawnprobability="0.25"/>
       <PreferredContainer secondary="abandonedstoragecab" amount="1" spawnprobability="0.05"/>
