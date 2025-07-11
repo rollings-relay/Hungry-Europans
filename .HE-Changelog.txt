@@ -40,6 +40,20 @@ Low:
 //////////////////////
 
 
+Misc TODOs:
+
+- Make tea kettle storable in cafeteria cart
+- Rework alcoholic to reduce and potentially remove the disoriented from being drunk.
+- Change drunkness to not apply disoriented while in water and instead slow the character down
+- Skin for Poutine
+- Ethanol gives some radiation resistance
+- Rework alcohol to invert controls less on lower to mid drunkness like drunknodebuffs and only really get annoying at high drunkness to compensate for high damage resistance.
+- Fix meat spoiling in fabricators.
+- "Constipated" affliction. Caused by eating elastin and prevents you from pooping which will result in constantly increasing organ damage (And/Or custom bowel rupture affliction) until death if not treated.
+- Endworm and Watcher products giving "concealed" affliction to passivy creatures.
+
+
+
 LIST OF FOODS IDEAS:
 
 - Thresher Sauté with Mushrooms: thresher meat + mushroom
@@ -89,28 +103,6 @@ Changelog: TODO: changelog is ultra outdated and I didn't take any notes :^)
 - Made empty cans spawn in or nearby outpost trash cans
 
 
-Misc TODOs:
-
-- Make tea kettle storable in cafeteria cart
-- Rework alcoholic to reduce and potentially remove the disoriented from being drunk.
-- Change drunkness to not apply disoriented while in water and instead slow the character down
-- Skin for Poutine
-- Ethanol gives some radiation resistance
-- Rework alcohol to invert controls less on lower to mid drunkness like drunknodebuffs and only really get annoying at high drunkness to compensate for high damage resistance.
-- Investigate salt shakers dropping shards instead of empty shaker on combined
-- Fix meat spoiling in fabricators.
-- "Constipated" affliction. Caused by eating elastin and prevents you from pooping which will result in constantly increasing organ damage (And/Or custom bowel rupture affliction) until death if not treated.
-- Canned food. Requires can opener, knife or boarding axe to open. Explodes after being in fire for a while.
-	Can Opener: 100% | No injuries
-	Diving Knife: 80% | 10% chance of lacerations
-	Meat Cleaver: 60% | 30% chance of lacerations
-	Boarding Axe: 20% | 50% chance of lacerations
-- Endworm and Watcher products giving "concealed" affliction to passivy creatures.
-
-
-
-
-
 
 Enforced NEEDS:
 - Changes to the lua function. Mainly important for singleplayer or multiplayer with bots:
@@ -125,6 +117,9 @@ NEEDS:
 
 LongTermPlans:
 - Meat Cleaver sharpening + Whetstone - prevents players from harvesting too much meat in one go
+- Canned food. Canned food from earth, requires can opener or knife to open. Figure out something to do with it.
+	Can Opener: 100% | No injuries
+	Diving Knife: 80% | 10% chance of lacerations
 - Kuru sickness
 - Meat Chunks cookable and burnable in open fires.
 - More recipes and unlockable recipes by recipe items found or bought.
