@@ -168,7 +168,7 @@
     
     <Item name="Jar Crate" category="Equipment" subcategory="Container" description="A crate to store and carry your jars. Bottles don't fit." identifier="he-jarcrate" tags="crate,container,kitchen,jarcrate" linkable="true" pickdistance="150" waterproof="false" impacttolerance="0.1" scale="0.5" canflipx="false" isshootable="true" impactsoundtag="impact_plastic_crate">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.684" sourcerect="933,602,90,53" canflipx="false" origin="0.5,0.43" />
-      <ContainedSprite allowedcontainertags="refillstation" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndDrinks.png" sourcerect="0,0,1,1" depth="0.55" origin="0.5,0.5" />
+      <ContainedSprite allowedcontainertags="refillstation" texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="0,0,1,1" depth="0.55" origin="0.5,0.5" />
       <PreferredContainer primary="crateshelf" />
       <Body width="90" height="53" density="14" />
       <Deconstruct time="5">
@@ -192,7 +192,7 @@
     
     <Item name="Liquor Crate" category="Equipment" subcategory="Container" description="A crate to store and carry your bottles. Jars don't fit." identifier="he-liquorcrate" tags="crate,container,kitchen,liquorcrate" linkable="true" pickdistance="150" waterproof="false" impacttolerance="0.1" scale="0.5" canflipx="false" isshootable="true" impactsoundtag="impact_plastic_crate">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.684" sourcerect="933,548,90,53" canflipx="false" origin="0.5,0.43" />
-      <ContainedSprite allowedcontainertags="refillstation" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndDrinks.png" sourcerect="0,0,1,1" depth="0.55" origin="0.5,0.5" />
+      <ContainedSprite allowedcontainertags="refillstation" texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="0,0,1,1" depth="0.55" origin="0.5,0.5" />
       <PreferredContainer primary="crateshelf" />
       <Body width="90" height="53" density="14" />
       <Deconstruct time="5">
@@ -215,7 +215,7 @@
     </Item>
     <Item name="Couwola Cola Crate" category="Equipment" subcategory="Container" description="A crate from Couwola Cola to store and carry your bottles. Jars don't fit." identifier="he-colacrate" tags="crate,container,kitchen,liquorcrate" linkable="true" pickdistance="150" waterproof="false" impacttolerance="0.1" scale="0.5" canflipx="false" isshootable="true" impactsoundtag="impact_plastic_crate">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.684" sourcerect="933,494,90,53" canflipx="false" origin="0.5,0.43" />
-      <ContainedSprite allowedcontainertags="refillstation" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndDrinks.png" sourcerect="0,0,1,1" depth="0.55" origin="0.5,0.5" />
+      <ContainedSprite allowedcontainertags="refillstation" texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="0,0,1,1" depth="0.55" origin="0.5,0.5" />
       <PreferredContainer primary="crateshelf" />
       <Body width="90" height="53" density="14" />
       <Deconstruct time="5">
