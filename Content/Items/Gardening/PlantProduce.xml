@@ -1106,7 +1106,6 @@
         <Remove />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="NearbyCharacters" range="150" targets="crawler,mudraptor,tigerthresher,hammerhead" disabledeltatime="true" oneshot="true">
-        <Affliction identifier="organdamage" strength="10" />
         <Affliction identifier="nausea" strength="50" />
         <Affliction identifier="slow" strength="80" />
         <Affliction identifier="drag" strength="80" />
@@ -1115,11 +1114,16 @@
         </Explosion>
       </StatusEffect>
       <!-- extra effective against mudraptors TODO: needs testing  -->
-      <StatusEffect type="OnBroken" target="NearbyCharacters" range="150" duration="2" stackable="false" targets="mudraptor" disabledeltatime="true" oneshot="true">
+      <StatusEffect type="OnBroken" target="NearbyCharacters" range="150" duration="2" stackable="false" targets="mudraptor" oneshot="true">
         <Conditional group="mudraptor" />
-        <Affliction identifier="organdamage" strength="20" dividebylimbcount="true" />
+        <Affliction identifier="organdamage" strength="20" />
       </StatusEffect>
-      <StatusEffect type="OnUse" target="This" tags="decoy" setvalue="true" duration="10"/>
+      <StatusEffect type="OnBroken" target="NearbyCharacters" range="100" duration="5" stackable="false" oneshot="true">
+        <Affliction identifier="tastytarget" strength="100" />
+      </StatusEffect>
+      <StatusEffect type="OnNotContained" target="This" >
+        <ParticleEmitter particle="acidmistgrenade" anglemin="80" anglemax="100" particlespersecond="3" velocitymin="0" velocitymax="20" scalemin="0.25" scalemax="0.5" scalemultiplier="1,1" lifetimemultiplier="0.35" colormultiplier="255,255,255,255"/>
+      </StatusEffect>
     </Throwable>
     <AiTarget sightrange="1200" static="true" />
   </Item>  
