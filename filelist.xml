@@ -88,6 +88,6 @@
   <NPCConversations file="%ModDir%/Content/Texts/English/NpcConversations_English.xml" />
   <Character file="%ModDir%/Content/Afflictions/CannibalHusk.xml" />
   <Submarine file="%ModDir%/#Testkitchen.sub" />
-  <Submarine file="%ModDir%/Mule (Hungry Europans).sub" />
-  <Submarine file="%ModDir%/Skitter (Hungry Europans).sub" />
+  <Submarine file="%ModDir%/Content/Submarines/Mule (Hungry Europans).sub" />
+  <Submarine file="%ModDir%/Content/Submarines/Skitter (Hungry Europans).sub" />
 </contentpackage>
