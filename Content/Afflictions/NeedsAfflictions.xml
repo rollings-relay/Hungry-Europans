@@ -1290,7 +1290,7 @@
         maxspeedmultiplier="0.8">
         <!-- particles -->
         <StatusEffect target="Character" >
-          <ParticleEmitter particle="acidmist" anglemin="80" anglemax="100" particlespersecond="3" velocitymin="30" velocitymax="50" scalemin="0.1" scalemax="0.2" scalemultiplier="1,0.3" lifetimemultiplier="0.1" colormultiplier="255,255,255,120"/>
+          <ParticleEmitter particle="acidmistgrenade" anglemin="80" anglemax="100" particlespersecond="3" distancemin="0" distancemax="30" velocitymin="0" velocitymax="30" scalemin="0.25" scalemax="0.5" scalemultiplier="1,0.5" lifetimemultiplier="0.25" colormultiplier="255,255,255,255"/>
         </StatusEffect>
         <!-- Increase the bad mood for the character and any nearby characters whithin 3m by 1 every second -->
         <StatusEffect target="Character,NearbyCharacters" range="300" interval="1" disabledeltatime="true" comparison="And">
@@ -1314,7 +1314,7 @@
         maxspeedmultiplier="0.5">
         <!-- particles -->
         <StatusEffect target="Character" >
-          <ParticleEmitter particle="acidmist" anglemin="80" anglemax="100" particlespersecond="3" velocitymin="30" velocitymax="50" scalemin="0.1" scalemax="0.2" scalemultiplier="1,0.3" lifetimemultiplier="0.1" colormultiplier="255,255,255,120"/>
+          <ParticleEmitter particle="acidmistgrenade" anglemin="80" anglemax="100" particlespersecond="3" distancemin="0" distancemax="30" velocitymin="0" velocitymax="30" scalemin="0.25" scalemax="0.5" scalemultiplier="1,0.5" lifetimemultiplier="0.25" colormultiplier="255,255,255,255"/>
         </StatusEffect>
         <!-- Increase the bad mood for the character and any nearby characters whithin 3m by 2 every second -->
         <StatusEffect target="Character,NearbyCharacters" range="300" interval="1" disabledeltatime="true" comparison="And">
