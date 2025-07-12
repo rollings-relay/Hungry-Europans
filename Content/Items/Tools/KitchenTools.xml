@@ -82,7 +82,7 @@
       </Fabricate>
       <Deconstruct time="5">
       </Deconstruct>
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1815,121,59,48" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="70,80,58,48" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1815,121,59,48" depth="0.55" />
       <Body width="58" height="46" density="13.0" />
       <Holdable canbecombined="false" slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect" />

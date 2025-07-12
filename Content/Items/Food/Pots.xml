@@ -9,7 +9,7 @@
       <PreferredContainer primary="kitchen" />
       <PreferredContainer secondary="crewcab" />
       <Deconstruct time="5" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1815,121,59,48" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="129,80,58,48" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1815,121,59,48" depth="0.55" />
       <Body width="58" height="46" density="13.0" />
       <Fabricate suitablefabricators="stove" requiredtime="60" requiresrecipe="false" amount="1" >
