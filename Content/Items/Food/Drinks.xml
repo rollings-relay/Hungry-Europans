@@ -2869,7 +2869,7 @@
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="243,0,21,66" depth="0.525" origin="0.5,0.8"  />
       <Body width="21" height="58" density="15" />
       <SuitableTreatment type="thirst" suitability="90" />      
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" aimpos="35,-15" aimable="false" msg="ItemMsgPickUpSelect" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" >
+      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" holdpos="0,0" holdangle="0" handle1="-5,-10" handle2="-5,-10" aimpos="30,-15" aimangle="0" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- When Used in Health GUI, heals minor burns -->
         <StatusEffect type="OnSuccess" target="This" Condition="-3.0" disabledeltatime="true"/>
@@ -2887,7 +2887,10 @@
         </StatusEffect>     
         
         <!-- Unbottle - RMB+E --> 
-        <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" setvalue="true" oneshot="true">
+        <StatusEffect type="OnUse" target="This" SetTags="opened" holdpos="30,-15" holdangle="0" aimpos="28,26" aimangle="120" aimable="false" swingwhenaiming="true" setvalue="true" oneshot="true" delay="1">
+          <Conditional conditionpercentage="gte 100" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" Condition="10" aimpos="0,0" holdpos="30,-15" holdangle="0" handle1="-5,-10" handle2="-5,-10" aimangle="0" aimable="false" setvalue="true" oneshot="true">
           <Conditional conditionpercentage="gte 100" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBottle.ogg" loop="false" range="200" volume="5.0" />
         </StatusEffect>
@@ -2896,6 +2899,7 @@
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" aimpos="23,23" comparison="And">
           <Conditional conditionpercentage="lt 100" />
           <Conditional InWater="false" />
+          <Conditional HasTag="opened" />
           <ReduceAffliction type="thirst" amount="3.0" />
           <ReduceAffliction identifier="he-dieofthirst" amount="20" />
           <ReduceAffliction identifier="he-stuffed" amount="0.25" />
@@ -2988,7 +2992,7 @@
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="243,0,21,66" depth="0.525" origin="0.5,0.8"  />
       <Body width="21" height="58" density="15" />
       <SuitableTreatment type="thirst" suitability="90" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,26" holdpos="30,-15" holdangle="0" aimangle="120" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" aimpos="28,26" aimangle="120" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <!-- Allow the item to be applied to a bot, but prevent full usage on a player -->
         <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
           <Conditional IsBot="true" />
