@@ -909,7 +909,7 @@
     </Item>
     
     <!-- grills things, overgrilling causes fire -->
-    <Item name="Electric Grill" identifier="he-electricgrill" tags="grill,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="Used for cooking. Needs power." isshootable="true" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
+    <Item name="Electric Grill" identifier="he-electricgrill" tags="grill,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="Used for cooking. Needs power." isshootable="true" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2" canflipx="false">
       <Deconstruct time="10">
         <Item identifier="steel" amount="2"/>
         <Item identifier="aluminium" amount="2"/>
@@ -954,13 +954,9 @@
           <SpawnItem identifier="effect_firestarter" spawnposition="ThisInventory" probability="0.05"/>
         </StatusEffect>
       </ItemComponent>
-      <LightComponent range="5.0" lightcolor="50,255,50,0" powerconsumption="200" IsOn="true" LightOffset="-61,7" scale="0.8" castshadows="false" allowingameediting="false">
-        <sprite texture="Content/Items/Button/button.png" sourcerect="6,24,17,17" depth="0.650" origin="0.5,0.5" alpha="1.0" />
+      <LightComponent range="5.0" lightcolor="50,255,50,50" alphablend="false" powerconsumption="200" IsOn="true" LightOffset="-71.5,-22" scale="0.8" castshadows="false" allowingameediting="false">
+        <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="1004,464,19,23" alpha="1.0" origin="0.5,0.5" />
         <IsActive targetitemcomponent="ItemComponent" IsActive="eq True" />
-      </LightComponent>
-      <LightComponent range="5.0" lightcolor="255,50,50,0" powerconsumption="5" IsOn="true" LightOffset="-61,7" scale="0.8" castshadows="false" allowingameediting="false">
-        <sprite texture="Content/Items/Button/button.png" sourcerect="6,93,17,17" depth="0.650" origin="0.5,0.5" alpha="1.0" />
-        <IsActive targetitemcomponent="ItemComponent" IsActive="eq False" />
       </LightComponent>
       <CustomInterface canbeselected="true" selectkey="Select" allowuioverlap="false">
         <GuiFrame style="ItemUI" relativeoffset="0,0.23" anchor="Center" relativesize="0.1,0.08" allowuioverlap="false" />
