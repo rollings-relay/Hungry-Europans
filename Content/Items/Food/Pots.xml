@@ -111,7 +111,7 @@
       </ItemContainer> -->
     </Item>    
     
-    <Item name="Pot of Miso Soup" identifier="he-potmisosoup" category="Misc" maxstacksize="1" Tags="smallitem,pot,tableware" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="Pot of Seaweed Soup" identifier="he-potseaweedsoup" category="Misc" maxstacksize="1" Tags="smallitem,pot,tableware" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="kitchen" />
       <PreferredContainer secondary="crewcab" />
       <Deconstruct time="5" />
@@ -122,7 +122,8 @@
         <RequiredSkill identifier="cooking" level="25" />
         <RequiredItem identifier="he-potwithwater" />
         <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.1"/>
-        <RequiredItem identifier="he-nori" amount="6" />
+        <RequiredItem identifier="he-nori" amount="8" />
+        <RequiredItem tag="seed" amount="10" />
       </Fabricate>
       <Holdable canbecombined="false" slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect">
         <StatusEffect type="Always" target="This" >
@@ -141,7 +142,7 @@
             <Conditional InWater="false" />
             <RequiredItem items="emptybowl" type="contained" />
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
-            <SpawnItem identifier="he-misosoup" spawnposition="SameInventory" SpawnIfInventoryFull="true" spawnifcantbecontained="true" />
+            <SpawnItem identifier="he-seaweedsoup" spawnposition="SameInventory" SpawnIfInventoryFull="true" spawnifcantbecontained="true" />
           </StatusEffect>
           <StatusEffect type="OnUse" target="Contained" disabledeltatime="true">
             <Conditional InWater="false" targetcontainer="true" />
@@ -357,7 +358,7 @@
       <AiTarget sightrange="1000" static="true" />
     </Item>
 
-    <Item hideinmenus="false" name="Miso Soup" identifier="he-misosoup" variantof="he-poisoneffectpreset_spoon" health="20" category="Misc" subcategory="Food - Crawler" Tags="smallitem,fooditem,spoonfood,soup" description="A soup." maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="false" requireaimtouse="false">
+    <Item hideinmenus="false" name="Seaweed Soup" identifier="he-seaweedsoup" variantof="he-poisoneffectpreset_spoon" health="20" category="Misc" subcategory="Food - Crawler" Tags="smallitem,fooditem,spoonfood,soup" description="A soup." maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="false" requireaimtouse="false">
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
@@ -367,7 +368,7 @@
       <Fabricate suitablefabricators="stove" requiredtime="3" requiresrecipe="false" amount="1" >
         <RequiredSkill identifier="cooking" level="15" />
         <RequiredItem identifier="he-emptybowl" amount="1" />
-        <RequiredItem identifier="he-potmisosoup" UseCondition="True" MinCondition="0.20"/>
+        <RequiredItem identifier="he-potseaweedsoup" UseCondition="True" MinCondition="0.20"/>
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="49" fabricationlimitmin="0" fabricationlimitmax="10" />

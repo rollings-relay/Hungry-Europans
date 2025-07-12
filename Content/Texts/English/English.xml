@@ -1118,10 +1118,10 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entityname.he-bonebroth>Bone Broth</entityname.he-bonebroth>
 <entitydescription.he-bonebroth>Moloch Meat boiled with its bone. The perfect remedy for hangovers.</entitydescription.he-bonebroth>
 
-<entityname.he-potmisosoup>Miso Soup Pot</entityname.he-potmisosoup>
-<entitydescription.he-potmisosoup>A vegetarian soup with nori. Quenches thirst nicely.</entitydescription.he-potmisosoup>
-<entityname.he-misosoup>Miso Soup</entityname.he-misosoup>
-<entitydescription.he-misosoup>A vegetarian soup with nori. Quenches thirst nicely.</entitydescription.he-misosoup>
+<entityname.he-potseaweedsoup>Seaweed Soup Pot</entityname.he-potseaweedsoup>
+<entitydescription.he-potseaweedsoup>A vegetarian soup with boiled nori and seeds. Quenches thirst nicely.</entitydescription.he-potseaweedsoup>
+<entityname.he-seaweedsoup>Seaweed Soup</entityname.he-seaweedsoup>
+<entitydescription.he-seaweedsoup>A vegetarian soup with boiled nori and seeds. Quenches thirst nicely.</entitydescription.he-seaweedsoup>
 
 <entityname.he-potfondue>Fondue Pot</entityname.he-potfondue>
 <entitydescription.he-potfondue>A rich dish, savored by dipping cubes of bread into a pool of melted cheese.</entitydescription.he-potfondue>
