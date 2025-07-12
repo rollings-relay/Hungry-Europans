@@ -78,9 +78,7 @@
       <AiTarget sightrange="1000" static="True" />
     </Item>
 
-    
-    <!-- TODO: ?????????? I JUST COPIED THE HUMAN ONE TO MAKE THE CUTTING BOARD ERROR GO AWAY, I DIDNT ACTUALLY MAKE THIS INTO MEAT -->
-    
+        
     <Item name="Raw husk Filets" identifier="he-rawhuskfilets" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,canspoil,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="178,405,61,13" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="178,405,61,13" origin="0.5,0.5" />
