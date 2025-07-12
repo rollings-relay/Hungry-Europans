@@ -232,7 +232,7 @@
         <RequiredItem identifier="he-potcrawyum" UseCondition="True" MinCondition="0.20"/>
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
-      <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="49" fabricationlimitmin="0" fabricationlimitmax="10" displayname="crawlerfooditem" />
+      <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="49" fabricationlimitmin="0" fabricationlimitmax="10" />
       <Body width="42" height="14" density="12" />
       <SuitableTreatment type="hunger" suitability="80" />
       <!-- <GreaterComponent canbeselected="false" canbepicked="false" allowingameediting="false" timeframe="0" /> -->
@@ -299,7 +299,7 @@
         <RequiredItem identifier="he-potbonebroth" UseCondition="True" MinCondition="0.20"/>
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
-      <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="49" fabricationlimitmin="0" fabricationlimitmax="10" displayname="crawlerfooditem" />
+      <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="49" fabricationlimitmin="0" fabricationlimitmax="10" />
       <Body width="42" height="14" density="12" />
       <SuitableTreatment type="hunger" suitability="80" />
       <!-- <GreaterComponent canbeselected="false" canbepicked="false" allowingameediting="false" timeframe="0" /> -->
@@ -370,7 +370,7 @@
         <RequiredItem identifier="he-potmisosoup" UseCondition="True" MinCondition="0.20"/>
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
-      <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="49" fabricationlimitmin="0" fabricationlimitmax="10" displayname="crawlerfooditem" />
+      <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="49" fabricationlimitmin="0" fabricationlimitmax="10" />
       <Body width="42" height="14" density="12" />
       <SuitableTreatment type="hunger" suitability="80" />
       <!-- <GreaterComponent canbeselected="false" canbepicked="false" allowingameediting="false" timeframe="0" /> -->
@@ -439,7 +439,7 @@
         <RequiredItem identifier="he-potfondue" UseCondition="True" MinCondition="0.20"/>
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
-      <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="49" fabricationlimitmin="0" fabricationlimitmax="10" displayname="crawlerfooditem" />
+      <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="49" fabricationlimitmin="0" fabricationlimitmax="10" />
       <Body width="42" height="14" density="12" />
       <SuitableTreatment type="hunger" suitability="80" />
       <!-- <GreaterComponent canbeselected="false" canbepicked="false" allowingameediting="false" timeframe="0" /> -->
