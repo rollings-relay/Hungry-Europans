@@ -116,9 +116,8 @@
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand+LeftHand" aimpos="26,20" holdangle="270" holdpos="32,28" aimangle="120" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
         <StatusEffect type="OnUse" target="Character">
-          <Affliction identifier="deliriuminepoisoning" probability="0.001" amount="8" />
+          <Affliction identifier="huskinfection" probability="0.05" amount="1" />
           <Affliction identifier="nausea" amount="4" />
-          <Affliction identifier="he-hungryforhumanmeat" amount="0.075" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
@@ -151,7 +150,7 @@
       <Deconstruct time="5" requireddeconstructor="deconstructor" />
       <Fabricate suitablefabricators="oven" requiredtime="20" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="cooking" level="35" />
-        <RequiredItem identifier="he-rawhumanfilets" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
+        <RequiredItem identifier="he-rawhuskfilets" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
       </Fabricate>
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
         <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
@@ -166,9 +165,8 @@
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand+LeftHand" aimpos="26,20" holdangle="270" holdpos="32,28" aimangle="120" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
         <StatusEffect type="OnUse" target="Character">
-          <Affliction identifier="deliriuminepoisoning" probability="0.001" amount="8" />
+          <Affliction identifier="huskinfection" probability="0.01" amount="1" />
           <Affliction identifier="nausea" amount="4" />
-          <Affliction identifier="he-hungryforhumanmeat" amount="0.075" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
