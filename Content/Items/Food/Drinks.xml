@@ -2840,11 +2840,11 @@
     <!-- WATER -->
     
     <Item name="Water" identifier="he-water" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Fresh water. Helps a bit if you're feeling stuffed or when you're shit-faced." Tags="smallitem,drinkitem,cleanwater,cleanwaterrefill_common,water,bottle,allowinfryer" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="False" health="11" >
-      <!-- <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
+      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" minamount="1" maxamount="3" spawnprobability="0.05" />
-      <PreferredContainer primary="kitchen" secondary="crewcab"/> -->
-      <!-- <Price baseprice="10" sold="true">
+      <PreferredContainer primary="kitchen" secondary="crewcab"/>
+      <Price baseprice="10" sold="true">
         <Price storeidentifier="merchantoutpost" multiplier="1.3" minavailable="0" maxavailable="12" />
         <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="6" maxavailable="24" />
       </Price>
@@ -2860,7 +2860,7 @@
       </Fabricate>
       <Fabricate suitablefabricators="sink" displayname="fill" requiredtime="10" requiresrecipe="false" amount="1">
         <RequiredItem tag="cleanwaterrefill_common" amount="1" UseCondition="False" MinCondition="0.0" />
-      </Fabricate> -->
+      </Fabricate>
       <Deconstruct time="2">
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
       </Deconstruct>
@@ -2878,7 +2878,7 @@
           <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="UseTarget" duration="1">
-          <Conditional stun="gte 1" />
+          <Conditional stun="gt 0" />
           <ReduceAffliction type="thirst" amount="3.0" />
           <ReduceAffliction identifier="he-dieofthirst" amount="20" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" loop="false" range="200" volume="5.0" />
@@ -3184,7 +3184,7 @@
           <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="UseTarget" duration="1">
-          <Conditional stun="gte 1" />
+          <Conditional stun="gt 0" />
           <ReduceAffliction type="thirst" amount="3.0" />
           <ReduceAffliction identifier="he-dieofthirst" amount="20" />
           <Affliction identifier="deliriuminepoisoning" amount="1" probability="0.001"/>
@@ -3441,7 +3441,7 @@
           <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="UseTarget" duration="1">
-          <Conditional stun="gte 1" />
+          <Conditional stun="gt 0" />
           <ReduceAffliction type="thirst" amount="3.0" />
           <ReduceAffliction identifier="he-dieofthirst" amount="20" />
           <Affliction identifier="deliriuminepoisoning" amount="1" probability="0.001"/>
@@ -5502,7 +5502,7 @@
         <!-- When Used in Health GUI, heals minor burns -->
         <StatusEffect type="OnSuccess" target="This" Condition="-3.0" disabledeltatime="true"/>
         <StatusEffect type="OnSuccess" target="UseTarget" duration="1">
-          <Conditional stun="gte 1" />
+          <Conditional stun="gt 0" />
           <ReduceAffliction type="thirst" amount="3.0" />
           <ReduceAffliction identifier="he-dieofthirst" amount="20" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" loop="false" range="200" volume="5.0" />
