@@ -640,8 +640,6 @@
         <StatusEffect type="OnSecondaryUse" target="This" delay="0.01">
           <Use />
         </StatusEffect>
-      </Throwable>
-      <Holdable canbepicked="true" characterusable="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" handle1="-12,-3">
         <StatusEffect type="OnActive" target="This" disabledeltatime="true" stackable="false" interval="0.1">
           <Conditional HasStatusTag="pouringbubbleberrytea" />
           <Remove />
@@ -653,7 +651,7 @@
         <StatusEffect type="OnSecondaryUse" target="This" aimpos="35,-10" aimable="true" setvalue="true" interval="0.5">
           <Conditional HasStatusTag="neq pouringbubbleberrytea" />
         </StatusEffect>
-      </Holdable>
+      </Throwable>
       <Projectile characterusable="false" launchimpulse="0" impulsespread="0.0" sticktocharacters="true" sticktoitems="true" sticktostructures="true" sticktodoors="true">
         <Attack targetimpulse="3" severlimbsprobability="0.1" itemdamage="1" structuredamage="0" structuresoundtype="StructureSlash">
           <Affliction identifier="lacerations" strength="1" />
