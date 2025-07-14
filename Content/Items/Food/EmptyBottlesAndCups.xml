@@ -616,7 +616,7 @@
       </Projectile>
     </Item>
 
-    <Item name="Empty Cup" identifier="he-emptycup" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="An empty cup for drinks. Can be thrown or filled with tea." Tags="smallitem,ingredient,emptycup,cup,coffeecup,tableware" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
+    <Item name="Empty Cup" identifier="he-emptycup" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="An empty cup for drinks. Can be thrown or filled with tea." Tags="smallitem,ingredient,emptycup,teacup,cup,coffeecup,tableware" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -636,11 +636,24 @@
         <RequiredItem tag="cleaningagent" UseCondition="True" MinCondition="0.025" />
         <RequiredItem identifier="he-dirtycup" amount="1" UseCondition="False" MinCondition="0.0" />
       </Fabricate>
-      <Throwable canbepicked="true" characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" handle1="-12,-3" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <Throwable canbepicked="true" characterusable="true" slots="Any,RightHand,LeftHand" canBeCombined="false" holdpos="30,-15" holdangle="0" handle1="-12,-3" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect" DisableWhenRangedWeaponEquipped="true">
         <StatusEffect type="OnSecondaryUse" target="This" delay="0.01">
           <Use />
         </StatusEffect>
       </Throwable>
+      <Holdable canbepicked="true" characterusable="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" holdangle="0" handle1="-12,-3">
+        <StatusEffect type="OnActive" target="This" disabledeltatime="true" stackable="false" interval="0.1">
+          <Conditional HasStatusTag="pouringbubbleberrytea" />
+          <Remove />
+          <SpawnItem identifier="he-teaTEST" spawnposition="SameInventory" Equip="true" condition="0.01" />
+        </StatusEffect>
+        <StatusEffect type="OnSecondaryUse" target="This" aimpos="50,-15" aimable="false" setvalue="true" interval="0.5">
+          <Conditional HasStatusTag="pouringbubbleberrytea" />
+        </StatusEffect>
+        <StatusEffect type="OnSecondaryUse" target="This" aimpos="35,-10" aimable="true" setvalue="true" interval="0.5">
+          <Conditional HasStatusTag="neq pouringbubbleberrytea" />
+        </StatusEffect>
+      </Holdable>
       <Projectile characterusable="false" launchimpulse="0" impulsespread="0.0" sticktocharacters="true" sticktoitems="true" sticktostructures="true" sticktodoors="true">
         <Attack targetimpulse="3" severlimbsprobability="0.1" itemdamage="1" structuredamage="0" structuresoundtype="StructureSlash">
           <Affliction identifier="lacerations" strength="1" />
