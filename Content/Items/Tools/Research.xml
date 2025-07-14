@@ -261,29 +261,41 @@
       <!-- TODO: The way trait selection works is insane. Do we really need to spawn items instead of just giving talents directly... -->
       <!-- TODO: add new traits to selector part -->
       <CustomInterface uilabel="Select your preferred food:" drawhudwhenequipped="true">
-        <GuiFrame relativesize="0.2,0.4" anchor="Center" style="DialogBox" hidedragicons="true" />
-        <Button text="Select your preferred food:">
+        <GuiFrame relativesize="0.2,0.6" maxsize="400,800"  anchor="Center" style="DialogBox" hidedragicons="true" />
+        <Button text="seleectpreferredfood">
           <StatusEffect type="OnUse" target="This" tags="" />
         </Button>
-        <TickBox text="Fried Food">
+        <TickBox text="talentname.he-trait_likes_friedfood">
           <StatusEffect type="OnUse" target="This" tags="likefriedfood" duration="0.1" />
         </TickBox>
-        <TickBox text="Burgers">
+        <TickBox text="talentname.he-trait_likes_burgers">
           <StatusEffect type="OnUse" target="This" tags="likeburgers" duration="0.1" />
         </TickBox>
-        <TickBox text="Hotdogs">
+        <TickBox text="talentname.he-trait_likes_hotdogs">
           <StatusEffect type="OnUse" target="This" tags="likehotdogs" duration="0.1" />
         </TickBox>
-        <TickBox text="Filets">
+        <TickBox text="talentname.he-trait_likes_filets">
           <StatusEffect type="OnUse" target="This" tags="likefilets" duration="0.1" />
         </TickBox>
-        <TickBox text="Roast">
+        <TickBox text="talentname.he-trait_likes_roasts">
           <StatusEffect type="OnUse" target="This" tags="likeroast" duration="0.1" />
         </TickBox>
-        <TickBox text="Sandwiches">
+        <TickBox text="talentname.he-trait_likes_sandwiches">
           <StatusEffect type="OnUse" target="This" tags="likesandwiches" duration="0.1" />
         </TickBox>
-        <TickBox text="Randomize (Will pick up to 2 random types)">
+        <TickBox text="talentname.he-trait_likes_omelette">
+          <StatusEffect type="OnUse" target="This" tags="likeomelette" duration="0.1" />
+        </TickBox>
+        <TickBox text="talentname.he-trait_likes_soup">
+          <StatusEffect type="OnUse" target="This" tags="likesoup" duration="0.1" />
+        </TickBox>
+        <TickBox text="talentname.he-trait_likes_salad">
+          <StatusEffect type="OnUse" target="This" tags="likesalad" duration="0.1" />
+        </TickBox>
+        <TickBox text="talentname.he-trait_likes_sweets">
+          <StatusEffect type="OnUse" target="This" tags="likesweets" duration="0.1" />
+        </TickBox>
+        <TickBox text="randomizelikedfood">
           <StatusEffect type="OnUse" target="This" tags="randomizelikedfood" duration="0.1" />
         </TickBox>
         <Button text="Confirm">
@@ -321,6 +333,26 @@
             <SpawnItem identifier="he-like_sandwiches" spawnposition="SameInventory" />
           </StatusEffect>
           
+          <StatusEffect type="OnUse" target="This" comparison="And">
+            <Conditional HasStatusTag="likeomelette"/>
+            <SpawnItem identifier="he-like_omelette" spawnposition="SameInventory" />
+          </StatusEffect>
+          
+          <StatusEffect type="OnUse" target="This" comparison="And">
+            <Conditional HasStatusTag="likesoup"/>
+            <SpawnItem identifier="he-like_soup" spawnposition="SameInventory" />
+          </StatusEffect>
+          
+          <StatusEffect type="OnUse" target="This" comparison="And">
+            <Conditional HasStatusTag="likesalad"/>
+            <SpawnItem identifier="he-like_salad" spawnposition="SameInventory" />
+          </StatusEffect>
+          
+          <StatusEffect type="OnUse" target="This" comparison="And">
+            <Conditional HasStatusTag="likesweets"/>
+            <SpawnItem identifier="he-like_sweets" spawnposition="SameInventory" />
+          </StatusEffect>
+          
           <StatusEffect type="OnUse" target="This" comparison="And" spawnitemrandomly="true">
             <Conditional HasStatusTag="randomizelikedfood"/>
             <SpawnItem identifier="he-like_friedfood" spawnposition="SameInventory" />
@@ -329,6 +361,10 @@
             <SpawnItem identifier="he-like_filets" spawnposition="SameInventory" />
             <SpawnItem identifier="he-like_roasts" spawnposition="SameInventory" />
             <SpawnItem identifier="he-like_sandwiches" spawnposition="SameInventory" />
+            <SpawnItem identifier="he-like_omelette" spawnposition="SameInventory" />
+            <SpawnItem identifier="he-like_soup" spawnposition="SameInventory" />
+            <SpawnItem identifier="he-like_salad" spawnposition="SameInventory" />
+            <SpawnItem identifier="he-like_sweets" spawnposition="SameInventory" />
           </StatusEffect>
           
           <StatusEffect type="OnUse" target="This" delay="0.1" stackable="false">
@@ -352,8 +388,8 @@
           <Remove />
         </StatusEffect>
       </Wearable>
-      <CustomInterface uilabel="Select your preferred drink:" drawhudwhenequipped="true">
-        <GuiFrame relativesize="0.2,0.4" anchor="Center" style="DialogBox" hidedragicons="true" />
+      <CustomInterface uilabel="seleectpreferreddrink" drawhudwhenequipped="true">
+        <GuiFrame relativesize="0.3,0.8" maxsize="400,400" anchor="Center" style="DialogBox" hidedragicons="true" />
         <TickBox text="Beer">
           <StatusEffect type="OnUse" target="This" tags="likebeer" duration="0.1" />
         </TickBox>
@@ -579,6 +615,23 @@
           <Conditional hasspecifiertag="female"/>
           <Affliction identifier="trait_likes_salad" amount="1" />
           <GiveTalentInfo giverandom="false" talentidentifiers="he-trait_likes_salad" />
+        </StatusEffect>
+        <StatusEffect type="Always" target="This" delay="0.1" stackable="false">
+          <Remove />
+        </StatusEffect>
+      </Wearable>
+    </Item>
+    
+    <Item hideinmenus="true" name="Trait: Likes Sweets" identifier="he-like_sweets" description="" category="Hidden" maxstacksize="1" Tags="smallitem" scale="0.5" impactsoundtag="impact_metal_light">
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,67,56,56" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Injector.png" sourcerect="0,0,36,66" depth="0.6" origin="0.5,0.5" />
+      <Body width="35" height="65" density="10.2" />
+      <Wearable slots="Any,RightHand,LeftHand,Bag,OuterClothes,InnerClothes,Head,Headset,HealthInterface" aimpos="-26,-48" holdpos="30,-15" holdangle="0" aimangle="300" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+        <StatusEffect type="Always" target="Character" comparison="Or" oneshot="true" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+          <Conditional hasspecifiertag="male"/>
+          <Conditional hasspecifiertag="female"/>
+          <Affliction identifier="trait_likes_sweets" amount="1" />
+          <GiveTalentInfo giverandom="false" talentidentifiers="he-trait_likes_sweets" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" delay="0.1" stackable="false">
           <Remove />

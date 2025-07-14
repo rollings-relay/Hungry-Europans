@@ -1271,11 +1271,16 @@ SEARCH FOR THE FOLLOWING:                                                       
 
 <!-- TRAITS -->
 
+<talentname.he-sleepyeuropan>Sleepy Europan</talentname.he-sleepyeuropan>
+<talentdescription.he-sleepyeuropan>Make sure to take a rest in a bed from time to time.</talentdescription.he-sleepyeuropan>
+
 <talentname.he-moodyeuropan>Moody Europan</talentname.he-moodyeuropan>
 <talentdescription.he-moodyeuropan>Keep your stress low by enjoying foods and drinks you like.</talentdescription.he-moodyeuropan>
 
-<talentname.he-sleepyeuropan>Sleepy Europan</talentname.he-sleepyeuropan>
-<talentdescription.he-sleepyeuropan>Make sure to take a rest in a bed from time to time.</talentdescription.he-sleepyeuropan>
+<seleectpreferredfood>Select your preferred food:</seleectpreferredfood>
+<seleectpreferreddrink>Select your preferred drink:</seleectpreferreddrink>
+<randomizelikedfood>Randomize (Will pick 2 random foods)</randomizelikedfood>
+<randomizelikeddrink>Randomize (Will pick 1 random drink)</randomizelikeddrink>
 
 <talentname.he-trait_likes_friedfood>Likes Fried Food</talentname.he-trait_likes_friedfood>
 <talentdescription.he-trait_likes_burgers>You like eating Fried Food.</talentdescription.he-trait_likes_burgers>
@@ -1296,8 +1301,8 @@ SEARCH FOR THE FOLLOWING:                                                       
 <talentname.he-trait_likes_soup>Likes Soup</talentname.he-trait_likes_soup>
 <talentdescription.he-trait_likes_salad>You like eating Salad.</talentdescription.he-trait_likes_salad>
 <talentname.he-trait_likes_salad>Likes Salad</talentname.he-trait_likes_salad>
-<talentdescription.he-trait_likes_salad>You like eating Sweets.</talentdescription.he-trait_likes_salad>
-<talentname.he-trait_likes_salad>Likes Sweets</talentname.he-trait_likes_salad>
+<talentdescription.he-trait_likes_sweets>You like eating Sweets.</talentdescription.he-trait_likes_sweets>
+<talentname.he-trait_likes_sweets>Likes Sweets</talentname.he-trait_likes_sweets>
 
 <talentname.he-trait_likes_beer>Likes Beer</talentname.he-trait_likes_beer>
 <talentdescription.he-trait_likes_beer>You like drinking Beer.</talentdescription.he-trait_likes_beer>
