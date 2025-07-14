@@ -468,8 +468,6 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-rawspinelingmeatpatty>Spoils if not refrigerated.</entitydescription.he-rawspinelingmeatpatty><!--Patch 13-->
 <entityname.he-rawspinelingnuggets>Pile of Raw Spineling Nuggets</entityname.he-rawspinelingnuggets><!--Patch 13-->
 <entitydescription.he-rawspinelingnuggets>A pile of raw nuggets made from spineling meat. Put it in a fryer.</entitydescription.he-rawspinelingnuggets><!--Patch 13-->
-<entityname.he-rawspinelingslices>Raw Spineling Slices</entityname.he-rawspinelingslices>
-<entitydescription.he-rawspinelingslices>Spoils if not refrigerated.</entitydescription.he-rawspinelingslices>
 
 <entityname.he-rawjerky>Jerky (Raw)</entityname.he-rawjerky><!--Patch 13-->
 <entitydescription.he-rawjerky>A pile of raw jerky. Cheap and easy to make. It's impossible to tell what it's made of. Put it in an oven.</entitydescription.he-rawjerky><!--Patch 13-->
@@ -1184,14 +1182,14 @@ SEARCH FOR THE FOLLOWING:                                                       
 
 <!-- other ingredients -->
 <entityname.he-rawsausage>Raw Sausage</entityname.he-rawsausage>
-<entitydescription.he-rawsausage>Expect the wurst! Spoils if not refrigerated.</entitydescription.he-rawsausage>
+<entitydescription.he-rawsausage>Expect the wurst! Grill it or boil it. Spoils if not refrigerated.</entitydescription.he-rawsausage>
 <entityname.he-sausage>Cooked Sausage</entityname.he-sausage>
 <entitydescription.he-sausage>Expect the wurst!</entitydescription.he-sausage>
 <entityname.he-burnedsausage>Burnt Sausage</entityname.he-burnedsausage>
 <entitydescription.he-burnedsausage>Cooked to incineration.</entitydescription.he-burnedsausage>
 
 <entityname.he-rawendwormsausage>Raw Endworm Sausage</entityname.he-rawendwormsausage>
-<entitydescription.he-rawendwormsausage>Expect the endwurst! Spoils if not refrigerated.</entitydescription.he-rawendwormsausage>
+<entitydescription.he-rawendwormsausage>Expect the endwurst! Grill it or boil it. Spoils if not refrigerated.</entitydescription.he-rawendwormsausage>
 <entityname.he-endwormsausage>Endworm Sausage</entityname.he-endwormsausage>
 <entitydescription.he-endwormsausage>Expect the endwurst!</entitydescription.he-endwormsausage>
 <entityname.he-burnedendwormsausage>Burnt Sausage</entityname.he-burnedendwormsausage>
@@ -1203,6 +1201,13 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-meatpatty>Seared to perfection.</entitydescription.he-meatpatty>
 <entityname.he-burnedmeatpatty>Burnt Meat Patty</entityname.he-burnedmeatpatty>
 <entitydescription.he-burnedmeatpatty>Cooked to incineration.</entitydescription.he-burnedmeatpatty>
+
+<entityname.he-rawspinelingslices>Raw Spineling Slices</entityname.he-rawspinelingslices>
+<entitydescription.he-rawspinelingslices>Chopped up Spineling. Grill it or sear it. Spoils if not refrigerated.</entitydescription.he-rawspinelingslices>
+<entityname.he-spinelingslices>Cooked Spineling Slices</entityname.he-spinelingslices>
+<entitydescription.he-spinelingslices>Cooked up Spineling. Spoils if not refrigerated.</entitydescription.he-spinelingslices>
+<entityname.he-burnedspinelingslices>Burnt Spineling Slices</entityname.he-burnedspinelingslices>
+<entitydescription.he-burnedspinelingslices>Cooked to incineration.</entitydescription.he-burnedspinelingslices>
 
 <entityname.he-proteinalgaecake>Protein Algae Cake</entityname.he-proteinalgaecake>
 <entitydescription.he-proteinalgaecake>There is way more algae than protein in these. You could say the cake is a lie.</entitydescription.he-proteinalgaecake>

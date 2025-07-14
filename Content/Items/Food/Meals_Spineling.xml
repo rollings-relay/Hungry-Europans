@@ -3,7 +3,7 @@
   <Items>
     <!-- MEAT -->
     <!--Spineling-->
-    <Item HideInMenus="false" name="Kebab" identifier="he-cookedspinelingkebab" variantof="he-poisoneffectpreset_regular" health="20" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,petfood1,petfood2,petfood3" spritecolor="140,86,38,255" inventoryiconcolor="140,86,38,255" containercolor="140,86,38,255" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+    <Item HideInMenus="false" name="Kebab" identifier="he-cookedspinelingkebab" variantof="he-poisoneffectpreset_regular" health="20" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
@@ -11,8 +11,10 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="364,1,99,25" depth="0.6" origin="0.5,0.5" />
       <Fabricate suitablefabricators="cuttingboard" requiredtime="15" requiresrecipe="false" amount="1" >
         <RequiredSkill identifier="cooking" level="25" />
-        <RequiredItem identifier="he-spinelingslices" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
+        <RequiredItem identifier="he-spinelingslices" amount="4" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
         <RequiredItem identifier="spinelingspikeloot" amount="1" />
+        <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.05"/>
+        <RequiredItem identifier="he-pepper" UseCondition="True" MinCondition="0.05"/>
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="61" radius="18" density="12" />
