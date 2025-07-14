@@ -51,9 +51,10 @@
           <Affliction identifier="he-stomachache" strength="6" probability="0.75" />
         </StatusEffect>
       </PeriodicEffect>
-      <!-- TODO: Sprite -->
+      <!-- TODO: Worm Infection Sprite -->
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
+    
     <Affliction
       name="Tapeworm Infection"
       identifier="tapeworminfection"
@@ -118,9 +119,10 @@
           <ReduceAffliction identifier="applymorbusinepoisoning" strength="1.25" />
         </StatusEffect>
       </Effect>
-      <!-- TODO: Sprite -->
+      <!-- TODO: Tapeworm Sprite -->
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
+    
     <!-- APPLY INCREMENTAL STUN OVER TIME -->
     <Affliction
       identifier="applyincrementalstun"
