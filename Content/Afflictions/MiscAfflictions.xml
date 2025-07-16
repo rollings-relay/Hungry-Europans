@@ -1087,25 +1087,25 @@
           <Conditional IsLocalPlayer="true" />
           <Conditional he-reaperstribute="gte 60" />
           <Conditional he-reaperstribute="lt 70" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/ReapersTribute/ReapersTribute.ogg" volume="1.4" dontmuffle="true" duckvolume="false" loop="true" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/ReapersTribute/ReapersTribute.ogg" volume="1.2" dontmuffle="true" duckvolume="false" loop="true" />
         </StatusEffect>
         <StatusEffect type="Always" target="Character" collapseeffectstrength="0.022" LowPassMultiplier="0.7" comparison="And" multiplyafflictionsbymaxvitality="true">
           <Conditional IsLocalPlayer="true" />
           <Conditional he-reaperstribute="gte 70" />
           <Conditional he-reaperstribute="lt 80" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/ReapersTribute/ReapersTribute.ogg" volume="1.8" dontmuffle="true" duckvolume="false" loop="true" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/ReapersTribute/ReapersTribute.ogg" volume="1.4" dontmuffle="true" duckvolume="false" loop="true" />
         </StatusEffect>
         <StatusEffect type="Always" target="Character" collapseeffectstrength="0.024" LowPassMultiplier="0.8" comparison="And" multiplyafflictionsbymaxvitality="true">
           <Conditional IsLocalPlayer="true" />
           <Conditional he-reaperstribute="gte 80" />
           <Conditional he-reaperstribute="lt 90" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/ReapersTribute/ReapersTribute.ogg" volume="2.2" dontmuffle="true" duckvolume="false" loop="true" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/ReapersTribute/ReapersTribute.ogg" volume="1.6" dontmuffle="true" duckvolume="false" loop="true" />
         </StatusEffect>
         <StatusEffect type="Always" target="Character" collapseeffectstrength="0.026" LowPassMultiplier="0.9" comparison="And" multiplyafflictionsbymaxvitality="true">
           <Conditional IsLocalPlayer="true" />
           <Conditional he-reaperstribute="gte 90" />
           <Conditional he-reaperstribute="lt 99" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/ReapersTribute/ReapersTribute.ogg" volume="2.6" dontmuffle="true" duckvolume="false" loop="true" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/ReapersTribute/ReapersTribute.ogg" volume="1.8" dontmuffle="true" duckvolume="false" loop="true" />
         </StatusEffect>
       </Effect>
       <Effect minstrength="99" 
@@ -1117,7 +1117,7 @@
         <StatusEffect type="Always" target="Character" comparison="And">
           <Conditional IsLocalPlayer="true" />
           <Conditional he-reaperstribute="gte 99" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/ReapersTribute/ReapersTribute.ogg" volume="3.0" dontmuffle="true" duckvolume="false" loop="true" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/ReapersTribute/ReapersTribute.ogg" volume="2" dontmuffle="true" duckvolume="false" loop="true" />
         </StatusEffect>
         <StatusEffect type="Always" target="Character" collapseeffectstrength="0.1" LowPassMultiplier="1.0" comparison="And" multiplyafflictionsbymaxvitality="true">
           <Conditional he-reaperstribute="gte 99" />
