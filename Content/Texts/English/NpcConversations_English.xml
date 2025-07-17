@@ -122,13 +122,14 @@ AllOWEDJOBS include jobs
 <!-- medium -->
 <Conversation line="I feel hungry..." speaker="0" flags="hungrymedium">
 	<Conversation line="" speaker="0"/>
+	<Conversation line="Don't worry, I'm not letting you starve." speaker="1" allowedjobs="medicaldoctor" />
 	<Conversation line="You're right, I'm craving some nuggets right now." speaker="1" flags="likesfriedfood">
 		<Conversation line="I only see you eating fast-food, at this rate, you'll get rounder than Jupiter." speaker="2"/>
 	</Conversation>
-	<Conversation line="A juicy burger, with thick moloch cheese slices..." speaker="1" flags="likesburgers" >
+	<Conversation line="A juicy burger, with thick moloch cheese slices..." speaker="1" flags="likesburger" >
 		<Conversation line="The idea of milking a moloch scares me..." speaker="2"/>
 	</Conversation>
-	<Conversation line="I could gulp down a hotdog in one bite." speaker="1" flags="likeshotdogs" />
+	<Conversation line="I could gulp down a hotdog in one bite." speaker="1" flags="likeshotdog" />
 </Conversation>
 
 <Conversation line="I'm so hungry, I could eat a barracuda..." speaker="0" flags="hungrymedium">
@@ -148,10 +149,9 @@ AllOWEDJOBS include jobs
 
 <Conversation line="I really want to grab a bite right now..." speaker="0" flags="hungrymedium">
 	<Conversation line="" speaker="0"/>
-  <Conversation line="Why you want to bite people?" speaker="1" speakertag="brokenenglish" />
-	<Conversation line="Have you tried a bubbleberry jam sandwich? They are delish." speaker="1" flags="likessandwiches" />
+  <Conversation line="Why you want bite people?" speaker="1" speakertag="brokenenglish" />
+	<Conversation line="Have you tried a bubbleberry jam sandwich? They are delicious." speaker="1" flags="likessandwich" />
 	<Conversation line="A good omelette. Orange boy eggs have an unparalleled crunch." speaker="1" flags="likesomelette" />
-	<Conversation line="A good omelette. Orange boy eggs have an unparalleled crunch." speaker="1" flags="likesroast" />
 	<Conversation line="Thick, roasted mudraptor slices are my comfort food." speaker="1" flags="likesroast" >
     <Conversation line="It's certainly easier to be comfortable around roasted raptors..." speaker="0" />    
   </Conversation>

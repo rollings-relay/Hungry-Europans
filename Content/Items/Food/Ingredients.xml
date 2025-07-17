@@ -612,7 +612,7 @@
           <Conditional hunger="gt 1" targetcontainer="true" />
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
-          <Affliction identifier="ate_sweets" amount="1" />
+          <Affliction identifier="ate_sweet" amount="1" />
           <Affliction identifier="he-stuffed" amount="0.75" />
           <Affliction identifier="he-sugarrich" amount="3" />
           <ReduceAffliction type="hunger" amount="0.4" />
@@ -639,7 +639,7 @@
         <StatusEffect type="OnSecondaryUse" target="Character" duration="1" stackable="false" comparison="And">
           <Conditional HasStatusTag="neq emptyhand" />
           <Conditional InWater="false" />
-          <Affliction identifier="ate_sweets" amount="1" />
+          <Affliction identifier="ate_sweet" amount="1" />
           <Affliction identifier="he-stuffed" amount="0.75" />
           <Affliction identifier="he-sugarrich" amount="3" />
           <ReduceAffliction type="hunger" amount="0.4" />
@@ -689,7 +689,7 @@
           <Conditional hunger="gt 1" targetcontainer="true" />
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
-          <Affliction identifier="ate_sweets" amount="1" />
+          <Affliction identifier="ate_sweet" amount="1" />
           <Affliction identifier="he-stuffed" amount="0.75" />
           <Affliction identifier="he-sugarrich" amount="3" />
           <ReduceAffliction type="hunger" amount="0.4" />
@@ -716,7 +716,7 @@
         <StatusEffect type="OnSecondaryUse" target="Character" duration="1" stackable="false" comparison="And">
           <Conditional HasStatusTag="neq emptyhand" />
           <Conditional InWater="false" />
-          <Affliction identifier="ate_sweets" amount="1" />
+          <Affliction identifier="ate_sweet" amount="1" />
           <Affliction identifier="he-stuffed" amount="0.75" />
           <Affliction identifier="he-sugarrich" amount="3" />
           <ReduceAffliction type="hunger" amount="0.4" />

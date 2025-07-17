@@ -265,7 +265,7 @@
         <Button text="seleectpreferredfood">
           <StatusEffect type="OnUse" target="This" tags="" />
         </Button>
-        <TickBox text="talentname.he-trait_likes_friedfood">
+        <TickBox text="talentname.he-trait_likes_friedfoods">
           <StatusEffect type="OnUse" target="This" tags="likefriedfood" duration="0.1" />
         </TickBox>
         <TickBox text="talentname.he-trait_likes_burgers">
@@ -460,8 +460,8 @@
         <StatusEffect type="Always" target="Character" comparison="Or" oneshot="true" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
           <Conditional hasspecifiertag="male"/>
           <Conditional hasspecifiertag="female"/>
-          <Affliction identifier="trait_likes_friedfood" amount="1" />
-          <GiveTalentInfo giverandom="false" talentidentifiers="he-trait_likes_friedfood" />
+          <Affliction identifier="trait_likes_friedfoods" amount="1" />
+          <GiveTalentInfo giverandom="false" talentidentifiers="he-trait_likes_friedfoods" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" delay="0.1" stackable="false">
           <Remove />
