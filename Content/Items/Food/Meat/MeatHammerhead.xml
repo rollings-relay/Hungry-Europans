@@ -92,7 +92,7 @@
         <Price storeidentifier="merchantbutcher" multiplier="2.0" minavailable="0" maxavailable="16" sold="true" />
       </Price>
       <Deconstruct time="10" requireddeconstructor="deconstructor">
-        <Item identifier="alienblood" amount="2" />
+        <!-- <Item identifier="alienblood" amount="0" /> -->
       </Deconstruct>
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
         <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
