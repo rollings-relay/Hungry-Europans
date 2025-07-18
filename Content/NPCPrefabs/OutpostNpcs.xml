@@ -29,7 +29,6 @@
           <Item identifier="divingmask">
             <Item identifier="oxygentank"/>
           </Item>
-          <Item identifier="he-antistarve"/>
         </ItemSet>
         <ItemSet commonness="0.5">
           <Item identifier="he-chefsuniform2" equip="true"/>
@@ -40,7 +39,6 @@
           <Item identifier="divingmask">
             <Item identifier="oxygentank"/>
           </Item>
-          <Item identifier="he-antistarve"/>
         </ItemSet>
       </npc>
     </npcset>

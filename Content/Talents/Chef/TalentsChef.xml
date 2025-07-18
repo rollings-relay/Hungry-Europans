@@ -1031,8 +1031,6 @@
       <Description tag="talentdescription.he-delicacies">
         <Replace tag="[itemname1]" value="entityname.he-cookedhammerheadspawnpickled" color="gui.orange"/>
         <Replace tag="[itemname2]" value="entityname.he-molochsushi" color="gui.orange"/>
-        <!--<Replace tag="[itemname3]" value="entityname.he-antistarve" color="gui.orange"/>
-        <Replace tag="[itemname4]" value="entityname.he-antistarve" color="gui.orange"/>-->
       </Description>
       <AddedRecipe itemidentifier="he-cookedhammerheadspawnpickled"/>
       <AddedRecipe itemidentifier="he-molochsushi"/>
@@ -1130,7 +1128,6 @@
         <Replace tag="[amount]" value="35" color="gui.green"/>
       </Description>
       <Description tag="talentdescription.he-lifesaver">
-        <!--<Replace tag="[itemname1]" value="entityname.he-antistarve" color="gui.orange"/>-->
         <Replace tag="[skill]" value="skillname.medical" color="gui.orange"/>
         <Replace tag="[amount]" value="20" color="gui.green"/>
       </Description>
@@ -1139,7 +1136,6 @@
           <CharacterAbilityGiveStat stattype="MedicalSkillBonus" value="20"/>
         </Abilities>
       </AbilityGroupEffect>
-      <!--<AddedRecipe itemidentifier="he-antistarve"/>	-->
     </Talent>
 
   <!--Damage against Mudraptors talent-->
@@ -1232,23 +1228,6 @@
       </AbilityGroupEffect>
     </Talent>
 
-  <!--Adds Anti-Starve - currently unused/obsolete-->
-  <!--<Override>
-    <Talent identifier="he-lifesaver">
-      <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="905,905,119,119" origin="0.5,0.5"/>
-      <Description tag="talentdescription.he-lifesaver">
-        <Replace tag="[itemname1]" value="entityname.he-antistarve" color="gui.orange"/>
-        <Replace tag="[skill]" value="skillname.medical" color="gui.orange"/>
-        <Replace tag="[amount]" value="20" color="gui.green"/>
-      </Description>
-      <AbilityGroupEffect abilityeffecttype="None">
-        <Abilities>
-          <CharacterAbilityGiveStat stattype="MedicalSkillBonus" value="20"/>
-        </Abilities>
-      </AbilityGroupEffect>
-      <AddedRecipe itemidentifier="he-antistarve"/>
-    </Talent>
-  -->
 
 </Talents>
 </Override>
