@@ -1233,7 +1233,8 @@
 
 
 
-  <!-- TODO: WIP GRADUATION TALENT, make it a starter quest type where you have to reach milestones to unlock extra skill/recipes... -->
+  <!-- TODO: WIP GRADUATION TALENT, make it a starter quest type where you have to reach milestones to unlock extra skill/recipes... 
+             I don't like this being a carbon copy of assistant graduation-->
   <Talent identifier="parttimejobmechanic" trackedstat="parttimemechanic_weld_counter" trackedmax="100">
     <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="3,2" sheetelementsize="128,128"/>
     <Description tag="talentdescription.machinemaniac">
