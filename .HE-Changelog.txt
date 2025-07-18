@@ -39,7 +39,6 @@ Low:
 //////////////////////
 //////////////////////
 
-
 [hr]XX/XX/2025
 
 
@@ -53,6 +52,7 @@ Low:
 [*] Food buffs reworked: buffs are no longer tied to species (example: mudraptor => damage resistance). Food buffs are more minor and depend on the recipe of the meal. More complex meals give more buffs.
 [*] Most foods no longer stack to avoid accidentally eating the 2nd item in the stack after finishing the first one. Use lunchboxes to carry extra food.
 [*] Integrated: "Tiredness" and "Mood" from NEEDS. These are optional and can each be toggled via an item at vending machines or forced via a separately available "Enforcer" patch
+[*] (TODO) Added: New optional affliction "Hygiene" which is enabled with the "Filthy Europan" item
 [*] Added: Traits. You can select a preferred food and drink that will help improve your Mood when consumed
 
 [/List]
@@ -84,10 +84,19 @@ Low:
 [b]Other Changes:[/b]
 
 [List]
-[*] xxxxx
-[*] xxxxxx
-[*] xxxxxxx
-
+[*] Buffed some of the weaker Chef talents.
+[*] Machinery and planter pots use placement restrictions: cannot place these items in too close proximity to other items, can only be placed on the ground
+[*] (TODO) Changed: All food and drink items now support "Tiredness" and "Mood" values
+[*] "Bladder", "Need to defecate", "Stomach Ache" and "Alcohol Withdrawal" can now cause your mood to worsen (Only with "Mood" enabled)
+[*] "Drunk" can now improve your mood (Only with "Mood" enabled)
+[*] "Drunk" can now make you tired (Only with "Tiredness" enabled)
+[*] "Cafeteria Cart" is no longer attachable. Its inventory is accessed by using the "Action" keybind (Default "E") to bring it more in line with other 
+[*] New output for "Hydroponic Planter" to calculate the seconds until the next produce. Works exactly like the "Gardening Sprinkler"
+[*] Rescaled burgers and hotdogs. They felt a bit oversized previously
+[*] Deconstructing meat no longer gives Alien blood
+[*] Made empty cans spawn in or nearby outpost trash cans
+[*] Removed "Starvation Conciousness Regainer" since you can just feed someone unconcious or use adrenaline
+[*] Removed the override for "Adrenaline" since the vanilla game now cures stun with it by default
 [/List]
 
 [b]Fixes:[/b] 
@@ -103,6 +112,7 @@ Low:
 
 Misc TODOs:
 
+- Find a way to use lower condition meat instead of letting it rot. Maybe throw it out the depth charge tube as decoy? 
 - Make tea kettle storable in cafeteria cart
 - Rework alcoholic to reduce and potentially remove the disoriented from being drunk.
 - Change drunkness to not apply disoriented while in water and instead slow the character down
@@ -127,22 +137,6 @@ LIST OF FOODS IDEAS:
 - Gravy (water, flour, salt, pepper, broth?)
 
 
-
-Changelog: TODO: changelog is ultra outdated and I didn't take any notes :^)
-
-
-[*] Added: New output for "Hydroponic Planter" to calculate the seconds until the next produce. Works exactly like the "Gardening Sprinkler"
-[*] (TODO) Added: New optional affliction "Hygiene" which is enabled with the "Filthy Europan" item
-[*] Changed: "Bladder", "Need to defecate", "Stomach Ache" and "Alcohol Withdrawal" can now cause your mood to worsen (Only with "Mood" enabled)
-[*] Changed: "Drunk" can now improve your mood (Only with "Mood" enabled)
-[*] Changed: "Drunk" can now make you tired (Only with "Tiredness" enabled)
-[*] Changed: "Cafeteria Cart" is no longer attachable. Its inventory is accessed by using the "Action" keybind (Default "E") to bring it more in line with other modded items
-[*] (TODO) Changed: All food and drink items now support "Tiredness" and "Mood" values
-[*] Rescaled burgers and hotdogs. They felt a bit oversized previously
-[*] Severely reduced amount of alien blood gained from deconstructing meat
-[*] Removed the override for "Adrenaline" since the vanilla game now cures stun with it by default
-[*] Disabled "Starvation Conciousness Regainer" from spawning purchasing and crafting since you can just feed someone unconcious with regular food and drinks to help them out
-[*] Made empty cans spawn in or nearby outpost trash cans
 
 
 
@@ -171,6 +165,13 @@ LongTermPlans:
 - Tier 4 talents for butcher (choice): 1. cannibalism buff with butcher saw. Can directly harvest abyssal meat. | 2. Meat tenderizer hammer (two handed blunt weapon). Will allow meat cleaver to harvest abyssal creature meat after hitting their corpse a few times.
 - Assistant "Tasty target" talent for Chef
 - Unique Couwola location with cola bottle plant and a locked, run down old part of the station and questline to obtain access to it and grab special bottles for the Couwola Cola collector to obtain his Limited Edition Exosuit.
+
+
+
+
+
+
+
 
 
 Here's my current list of what I want to add this month before pushing the content to the original Hungry Europans:
