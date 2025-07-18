@@ -1229,5 +1229,98 @@
     </Talent>
 
 
+
+
+
+
+  <!-- TODO: WIP GRADUATION TALENT, make it a starter quest type where you have to reach milestones to unlock extra skill/recipes... -->
+  <Talent identifier="parttimejobmechanic" trackedstat="parttimemechanic_weld_counter" trackedmax="100">
+    <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="3,2" sheetelementsize="128,128"/>
+    <Description tag="talentdescription.machinemaniac">
+      <Replace tag="[bonus]" value="80" color="gui.green"/>
+      <Replace tag="[amount]" value="3" color="gui.orange"/>
+    </Description>
+    <Description tag="talentdescription.machinemaniac.30">
+      <Replace tag="[requirement]" value="12" color="gui.green"/>
+      <Replace tag="[amount]" value="10" color="gui.green"/>
+      <Replace tag="[skill]" value="stattypenames.mechanicalskillbonus" color="gui.orange"/>
+      <Replace tag="[xpamount]" value="500" color="gui.green"/>
+    </Description>
+    <Description tag="talentdescription.machinemaniac.50">
+      <Replace tag="[requirement]" value="20" color="gui.green"/>
+      <Replace tag="[level]" value="1" color="gui.green"/>
+    </Description>
+    <Description tag="talentdescription.machinemaniac.100">
+      <Replace tag="[requirement]" value="40" color="gui.green"/>
+      <Replace tag="[amount]" value="50" color="gui.green"/>
+    </Description>
+
+    <!-- When you reach a target objective, reset these so the effect only applies once -->
+    <AbilityGroupEffect abilityeffecttype="None">
+      <Abilities>
+        <CharacterAbilityGivePermanentStat statidentifier="parttimemechanic_repair_check" value="1" maxvalue="1" setvalue="true" />
+        <CharacterAbilityGivePermanentStat statidentifier="parttimemechanic_weld_check" value="1" maxvalue="1" setvalue="true" />
+      </Abilities>
+    </AbilityGroupEffect> 
+    
+    <!-- +1 to weld counter -->
+    <AbilityGroupEffect abilityeffecttype="OnRepairedOutsideLeak">
+      <Abilities>
+        <CharacterAbilityGivePermanentStat statidentifier="parttimemechanic_weld_counter" value="1" removeondeath="false" />
+      </Abilities>
+    </AbilityGroupEffect>
+
+    <!-- +1 to repair counter -->
+    <AbilityGroupEffect abilityeffecttype="OnRepairComplete">
+      <Conditions>
+        <AbilityConditionItem tags="fabricator,door,engine,oxygengenerator,pump,turretammosource,deconstructor,medicalfabricator,ductblock,kitchenfabricator"/>
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityGivePermanentStat statidentifier="parttimemechanic_repair_counter" value="1" removeondeath="false" />
+      </Abilities>
+    </AbilityGroupEffect>        
+
+    <!-- reward for X leaks welded -->
+    <AbilityGroupEffect abilityeffecttype="OnRepairedOutsideLeak">
+      <Conditions>
+        <AbilityConditionHasPermanentStat statidentifier="parttimemechanic_weld_check" min="1"/>
+        <AbilityConditionHasPermanentStat statidentifier="parttimemechanic_weld_counter" min="20"/>
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityGiveExperience amount="500"/>
+        <CharacterAbilityGivePermanentStat stattype="MechanicalSkillBonus" statidentifier="starterquest" value="10" setvalue="true" removeondeath="false" />
+        <CharacterAbilityResetPermanentStat statidentifier="parttimemechanic_weld_check" />
+      </Abilities>
+    </AbilityGroupEffect>
+
+    <!-- reward for X items repaired welded -->
+    <AbilityGroupEffect abilityeffecttype="OnRepairComplete">
+      <Conditions>
+        <AbilityConditionHasPermanentStat statidentifier="parttimemechanic_repair_check" min="1"/>
+        <AbilityConditionHasPermanentStat statidentifier="parttimemechanic_repair_counter" min="10"/>
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityGiveExperience amount="500"/>
+        <CharacterAbilityGivePermanentStat stattype="MechanicalSkillBonus" statidentifier="machinemaniac" value="10" setvalue="true" removeondeath="false" />
+        <CharacterAbilityResetPermanentStat statidentifier="parttimemechanic_repair_check" />
+      </Abilities>
+    </AbilityGroupEffect>
+
+  </Talent>
+
+
+<!--   
+    <AbilityGroupEffect abilityeffecttype="OnGainSkillPoint">
+      <Conditions>
+        <AbilityConditionSkill skillidentifier="mechanical" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityGivePermanentStat statidentifier="parttimemechanic_counter" value="1" removeondeath="false" />
+      </Abilities>
+    </AbilityGroupEffect> -->
+
+
+
+
 </Talents>
 </Override>
