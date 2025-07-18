@@ -40,6 +40,67 @@ Low:
 //////////////////////
 
 
+[hr]XX/XX/2025
+
+
+[b]MAJOR Changes:[/b]
+
+[List]
+[*] Rework of almost all meat related recipes to make use of all kitchen equipment. For example burgers and hotdogs will now be put together on the cutting board while the meat is cooked seperately in the oven or the stove with either a pan or cooking pot.
+[*] A lot more kitchen equipment added. The kitchen counter has a power outlet (like a junction box) to help power them.
+[*] Cutting board needs to be manually operated to function.
+[*] Burgers, Hotdogs, MREs and other fast foods no longer have a (species) attribute. This was done to reduce the amount of item bloat in fabricators and medical UI. Fast food no longer gives food buffs. Expect error messages when loading an old save as those items have been deleted
+[*] Food buffs reworked: buffs are no longer tied to species (example: mudraptor => damage resistance). Food buffs are more minor and depend on the recipe of the meal. More complex meals give more buffs.
+[*] Most foods no longer stack to avoid accidentally eating the 2nd item in the stack after finishing the first one. Use lunchboxes to carry extra food.
+[*] Integrated: "Tiredness" and "Mood" from NEEDS. These are optional and can each be toggled via an item at vending machines or forced via a separately available "Enforcer" patch
+[*] Added: Traits. You can select a preferred food and drink that will help improve your Mood when consumed
+
+[/List]
+
+[b]New:[/b]
+
+[List]
+[*] Added: New tableware items including: Fork, Spoon, Cups, Plates, Bowls and their dirty variants
+[*] Added: "Sink" kitchen item, now separated from the kitchen counter. Used to refill bottles and clean tableware
+[*] Added: "Pan" item. Required for cooking some recipes on the stove and can be used as a melee weapon
+[*] Added: "Pot" item. Required for cooking some recipes on the stove
+[*] Added: "Electric Grill". Used to cook multiple meats simultaneously
+[*] Added: "Flour". Crafted from 30 seeds and "Sulphuric Acid"
+[*] Added: "Dough". Used to make Bread, Buns and Pizza
+[*] Added: "Pizza" + "Pizza Slice"
+[*] Added: "Omelette" 
+[*] Added xxx food
+[*] Added xxx food
+[*] Added xxx food
+[*] (WIP) Added: "Coffee". Reduces your tiredness if you have it enabled and helps to sober up. Can give you a caffeine rush
+[*] (WIP) Added: "Hot Chocolate". Increases your tiredness if you have it enabled, but also increases your mood and helps to sober up
+[*] Added xxx drink
+[*] Added xxx drink
+[*] Added xxx drink
+[*] Added NPC conversations, some related to food traits, being hungry, thirsty...
+[/List]
+
+
+[b]Other Changes:[/b]
+
+[List]
+[*] xxxxx
+[*] xxxxxx
+[*] xxxxxxx
+
+[/List]
+
+[b]Fixes:[/b] 
+
+[List]
+[*] Fixed "Pomegrenade Jam" recipe having a wrong identifier for pomegrenades, causing performance issues when trying to craft it
+[*] Fixed Refrigerators not being fireproof
+[*] Fixed: "Internal Burns" had wrong damage values and thus wouldn't actually cause any damage
+[*] Fixed: Puking from "Stomach Ache" didn't decrease the duration of some food buffs
+[/List]
+
+
+
 Misc TODOs:
 
 - Make tea kettle storable in cafeteria cart
@@ -69,38 +130,19 @@ LIST OF FOODS IDEAS:
 
 Changelog: TODO: changelog is ultra outdated and I didn't take any notes :^)
 
-- Fixed "Pomegrenade Jam" recipe having a wrong identifier for pomegrenades, causing performance issues when trying to craft it
-- Fixed Refrigerators not being fireproof
-- Added: "Sink" item. Now separated from the kitchen counter, it will allow you to refill bottles and clean dishes
-- Added: "Pan" item. Required for cooking some recipes on the stove and can be used as a melee weapon
-- Added: "Pot" item. Required for cooking some recipes on the stove
-- Added: New tableware items including: Fork, Spoon, Cups, Plates, Bowls and their dirty variants
-- Added: "Flour". Crafted from 30 seeds and "Sulphuric Acid"
-- (TODO) Added: New ingredient "Dough" which is now used to make Bread, Buns and Pizza
-- Added: New food item "Omelette" of every monster egg type (Crawler, Mudraptor, Thresher)
-- Added: New food item "Pizza" + "Pizza Slice"
-- (WIP) Added: New drinks "Coffee". Reduces your tiredness if you have it enabled and helps to sober up. Can give you a caffeine rush
-- (WIP) Added: New drinks "Hot Chocolate". Increases your tiredness if you have it enabled, but also increases your mood and helps to sober up
-- Added: New output for "Hydroponic Planter" to calculate the seconds until the next produce. Works exactly like the "Gardening Sprinkler"
-- (TODO) Added: New optional affliction "Hygiene" which is enabled with the "Filthy Europan" item
-- Changed: Regular Food is no longer stackable. Snacks can still be stacked to some extend
-- Changed: "Bladder", "Need to defecate", "Stomach Ache" and "Alcohol Withdrawal" can now cause your mood to worsen (Only with "Mood" enabled)
-- Changed: "Drunk" can now improve your mood (Only with "Mood" enabled)
-- Changed: "Drunk" can now make you tired (Only with "Tiredness" enabled)
-- Changed: "Coalition Premium" beer will now give a temporary buff that decreases the power usage of the turret you're operating by up to 50%
-- Changed: "Jovian Force" beer will now give a temporary buff that increases the fire rate of the turret you're operating by up to 50%
-- Changed: "Cafeteria Cart" is no longer attachable. Its inventory is accessed by using the "Action" keybind (Default "E") to bring it more in line with other modded items
-- (TODO) Changed: All food and drink items now support "Tiredness" and "Mood" values
-- Fixed: "Internal Burns" had wrong damage values and thus wouldn't actually cause any damage
-- Fixed: Puking from "Stomach Ache" didn't decrease the duration of some food buffs
-- Integrated: "Tiredness" and "Mood" from NEEDS. These are optional and can each be toggled via an item at vending machines or forced via a separately available "Enforcer" patch
-- (WIP) Added "Electric Grill". Used to cook multiple meats simultaneously
-- (TODO) Rework of almost all meat related recipes. For example burgers and hotdogs will now be put together on the cutting board while the meat is cooked seperately on the stove with either a pan or cooking pot
-- Rescaled burgers and hotdogs. They felt a bit oversized previously
-- Severely reduced amount of alien blood gained from deconstructing meat
-- Removed the override for "Adrenaline" since the vanilla game now cures stun with it by default
-- Disabled "Starvation Conciousness Regainer" from spawning purchasing and crafting since you can just feed someone unconcious with regular food and drinks to help them out
-- Made empty cans spawn in or nearby outpost trash cans
+
+[*] Added: New output for "Hydroponic Planter" to calculate the seconds until the next produce. Works exactly like the "Gardening Sprinkler"
+[*] (TODO) Added: New optional affliction "Hygiene" which is enabled with the "Filthy Europan" item
+[*] Changed: "Bladder", "Need to defecate", "Stomach Ache" and "Alcohol Withdrawal" can now cause your mood to worsen (Only with "Mood" enabled)
+[*] Changed: "Drunk" can now improve your mood (Only with "Mood" enabled)
+[*] Changed: "Drunk" can now make you tired (Only with "Tiredness" enabled)
+[*] Changed: "Cafeteria Cart" is no longer attachable. Its inventory is accessed by using the "Action" keybind (Default "E") to bring it more in line with other modded items
+[*] (TODO) Changed: All food and drink items now support "Tiredness" and "Mood" values
+[*] Rescaled burgers and hotdogs. They felt a bit oversized previously
+[*] Severely reduced amount of alien blood gained from deconstructing meat
+[*] Removed the override for "Adrenaline" since the vanilla game now cures stun with it by default
+[*] Disabled "Starvation Conciousness Regainer" from spawning purchasing and crafting since you can just feed someone unconcious with regular food and drinks to help them out
+[*] Made empty cans spawn in or nearby outpost trash cans
 
 
 
