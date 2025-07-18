@@ -758,16 +758,16 @@
           <CharacterAbilityApplyStatusEffectsToAllies range="1000">
             <StatusEffects>
               <StatusEffect type="OnAbility" target="Character" interval="1" disabledeltatime="true" targetlimb="Torso">
-                <Conditional he-watcherskillgainincrease="gt 0"/>
-                <Affliction identifier="he-watcherskillgainincrease" amount="1" />
+                <Conditional he-watchermindsense="gt 0"/>
+                <Affliction identifier="he-watchermindsense" amount="1" />
               </StatusEffect>
             </StatusEffects>
           </CharacterAbilityApplyStatusEffectsToAllies>
           <CharacterAbilityApplyStatusEffects>
             <StatusEffects>
               <StatusEffect type="OnAbility" target="Character" interval="1" disabledeltatime="true" targetlimb="Torso">
-                <Conditional he-watcherskillgainincrease="gt 0"/>
-                <Affliction identifier="he-watcherskillgainincrease" amount="1" />
+                <Conditional he-watchermindsense="gt 0"/>
+                <Affliction identifier="he-watchermindsense" amount="1" />
               </StatusEffect>
             </StatusEffects>
           </CharacterAbilityApplyStatusEffects>
