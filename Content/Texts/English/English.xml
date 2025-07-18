@@ -649,7 +649,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <!-- Talent trees -->
 <talenttree.butcher>Butcher</talenttree.butcher><!--Patch 13-->
 <talenttree.entertainer>Entertainer</talenttree.entertainer><!--Patch 13-->
-<talenttree.chef>Chef</talenttree.chef><!--Patch 13-->
+<talenttree.chef>Cook</talenttree.chef><!--Patch 13-->
 <!-- Talents -->
 <talentname.he-hungryeuropan>Hungry Europan</talentname.he-hungryeuropan>
 <talentdescription.he-hungryeuropan>You're a hungry europan and need to eat and drink regularly.</talentdescription.he-hungryeuropan>
