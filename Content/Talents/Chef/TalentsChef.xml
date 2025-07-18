@@ -929,14 +929,15 @@
       </AbilityGroupEffect>
     </Talent>
 
+
   <!--Graduation Ceremony reskinned-->
     <Talent identifier="he-workpromotion">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="6,2" sheetelementsize="128,128"/>
       <Description tag="talentdescription.unlockapprenticeshiptalents"/>
-      <Description tag="talentdescription.unlockrecipe">
+      <!-- <Description tag="talentdescription.unlockrecipe">
         <Replace tag="[itemname]" value="entityname.ceremonialsword" color="gui.orange"/>
       </Description>
-      <AddedRecipe itemidentifier="ceremonialsword"/>
+      <AddedRecipe itemidentifier="ceremonialsword"/> -->
       <AbilityGroupEffect abilityeffecttype="None">
         <Conditions>
           <AbilityConditionHasPermanentStat statidentifier="workpromotion" min="1" invert="true"/>
@@ -946,6 +947,89 @@
           <CharacterAbilityGivePermanentStat statidentifier="workpromotion" value="1" />
         </Abilities>
       </AbilityGroupEffect>
+        
+      <!-- ATTEMPT TO MAKE THE TALENT UNLOCK CERTAIN ITEMS BASED ON CLASS INSTEAD OF GIVING A FULL TALENT TREE -->
+<!--       <AbilityGroupEffect abilityeffecttype="None">
+        <Conditions>
+          <AbilityConditionHasTalent identifier="apprenticeship_captain" />
+          <AbilityConditionHasPermanentStat statidentifier="workpromotion" min="1" invert="true"/>
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" unlockrecipe="revolver" oneshot="true" />
+              <StatusEffect type="OnAbility" target="Character" unlockrecipe="revolverround" oneshot="true"/>
+              <StatusEffect type="OnAbility" target="Character" unlockrecipe="cigar" oneshot="true"/>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+          <CharacterAbilityGivePermanentStat statidentifier="workpromotion" value="1" />
+        </Abilities>
+      </AbilityGroupEffect>
+      
+      <AbilityGroupEffect abilityeffecttype="None">
+        <Conditions>
+          <AbilityConditionHasTalent identifier="apprenticeship_doctor" />
+          <AbilityConditionHasPermanentStat statidentifier="workpromotion" min="1" invert="true"/>
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" unlockrecipe="autoinjectorheadset" oneshot="true" />
+              <StatusEffect type="OnAbility" target="Character" unlockrecipe="pressurestabilizer" oneshot="true"/>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+          <CharacterAbilityGivePermanentStat statidentifier="workpromotion" value="1" />
+        </Abilities>
+      </AbilityGroupEffect>
+      
+      <AbilityGroupEffect abilityeffecttype="None">
+        <Conditions>
+          <AbilityConditionHasTalent identifier="apprenticeship_security" />
+          <AbilityConditionHasPermanentStat statidentifier="workpromotion" min="1" invert="true"/>
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" unlockrecipe="shotgun" oneshot="true" />
+              <StatusEffect type="OnAbility" target="Character" unlockrecipe="shotgunshell" oneshot="true"/>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+          <CharacterAbilityGivePermanentStat statidentifier="workpromotion" value="1" />
+        </Abilities>
+      </AbilityGroupEffect>
+      
+      <AbilityGroupEffect abilityeffecttype="None">
+        <Conditions>
+          <AbilityConditionHasTalent identifier="apprenticeship_engineer" />
+          <AbilityConditionHasPermanentStat statidentifier="workpromotion" min="1" invert="true"/>
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" unlockrecipe="reactorpda" oneshot="true" />
+              <StatusEffect type="OnAbility" target="Character" unlockrecipe="cargoscooter" oneshot="true"/>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+          <CharacterAbilityGivePermanentStat statidentifier="workpromotion" value="1" />
+        </Abilities>
+      </AbilityGroupEffect>
+      
+      <AbilityGroupEffect abilityeffecttype="None">
+        <Conditions>
+          <AbilityConditionHasTalent identifier="apprenticeship_mechanic" />
+          <AbilityConditionHasPermanentStat statidentifier="workpromotion" min="1" invert="true"/>
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" unlockrecipe="safetyharness" oneshot="true" />
+              <StatusEffect type="OnAbility" target="Character" unlockrecipe="repairpack" oneshot="true"/>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+          <CharacterAbilityGivePermanentStat statidentifier="workpromotion" value="1" />
+        </Abilities>
+      </AbilityGroupEffect> -->
+      
     </Talent>
 
   <!-- Reskinned Family - Currently Unused-->
