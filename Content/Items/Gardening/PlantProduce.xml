@@ -1085,7 +1085,7 @@
   </Item>
 
   <!-- RAPTOR BAIT (pom x raptorbane)
-  acts as cheap distracting item, makes monsters sick (especially raptors) -->
+  acts as cheap distracting item, tags monsters with "tastytarget" which makes them attack eachother, deals extra damage to raptors -->
   <Item name="raptorpom" identifier="raptorpom" category="Misc" health="10" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,distillable,provocative" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" allowasextracargo="true" damagedbymonsters="true" >
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.52" sourcerect="896,512,64,64" origin="0.5,0.5" />
     <Body radius="28" density="10" />
@@ -1113,7 +1113,7 @@
           <Affliction identifier="nausea" strength="10" />
         </Explosion>
       </StatusEffect>
-      <!-- extra effective against mudraptors TODO: needs testing  -->
+      <!-- extra effective against mudraptors  -->
       <StatusEffect type="OnBroken" target="NearbyCharacters" range="150" duration="2" stackable="false" targets="mudraptor" oneshot="true">
         <Conditional group="mudraptor" />
         <Affliction identifier="organdamage" strength="20" />

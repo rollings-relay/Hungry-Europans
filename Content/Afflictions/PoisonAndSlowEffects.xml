@@ -118,7 +118,6 @@
           <ReduceAffliction identifier="applymorbusinepoisoning" strength="1.25" />
         </StatusEffect>
       </Effect>
-      <!-- TODO: Tapeworm Sprite -->
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
     </Affliction>
     
