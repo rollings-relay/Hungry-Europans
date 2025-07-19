@@ -488,7 +488,7 @@
           <Conditional paralysis="lt 99" />
           <Conditional slowparalysis="lt 99" />
           <Conditional stun="gte 0.5" />
-          <Affliction identifier="he-passout" amount="40" />
+          <Affliction identifier="he-passout" amount="100" />
         </StatusEffect>
       </Effect>
       <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="128,640,128,128" color="195,177,60,255" origin="0,0" />
@@ -1148,23 +1148,25 @@
       <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/PassOutOverlay.png" />
     </Affliction>
     
-    <Affliction identifier="he-passout" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="true" healableinmedicalclinic="false" MedicalSkillGain="0.0">
-      <Effect minstrength="0" maxstrength="100" strengthchange="0" interval="0.5">
-        <!-- Sound loop to make it harder to hear. Disabled as it might be too annoying 
-        <StatusEffect type="Always" target="Character" CheckConditionalAlways="true" stackable="false">
-          <Conditional IsLocalPlayer="true" />
-          <Conditional he-passout="eq 100" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Stun/UnconciousMuffle.ogg" volume="20" loop="true" duckvolume="false" />
-        </StatusEffect>
-        -->
-        <StatusEffect type="Always" target="Character" comparison="And" interval="0.1" multiplyafflictionsbymaxvitality="true" stackable="false">
-          <Conditional stun="lte 0.5" />
-          <Conditional he-passout="gte 1" />
-          <Affliction identifier="he-passout" strength="-1000" />
-        </StatusEffect>
+    <Affliction identifier="he-passout" showiconthreshold="0" showinhealthscannerthreshold="0" maxstrength="100" afflictionoverlayalphaislinear="true" healableinmedicalclinic="false" MedicalSkillGain="0.0">
+      <!-- Adjust strengthchange to ramp up the overlay. Stun applies 100 passout per second, so at -50 it ramps up at 50 per second (2 second to blackout) 
+           There are 3 stages, first one for not passing out on small stuns, second one for blacking out, and last one for 100% opacity overlay (relying on -strength change alone will keep the overlay at 98%, not fully opaque) -->
+      <Effect minstrength="0" maxstrength="50" strengthchange="-80" MinAfflictionOverlayAlphaMultiplier="0" MaxAfflictionOverlayAlphaMultiplier="0.5">
+      </Effect>
+      <Effect minstrength="50" maxstrength="99" strengthchange="-50" MinAfflictionOverlayAlphaMultiplier="0.5" MaxAfflictionOverlayAlphaMultiplier="1">
         <StatusEffect type="Always" target="Character" LowPassMultiplier="0.0" setvalue="true" disabledeltatime="true">
           <Conditional he-passout="gte 1" />
         </StatusEffect>
+      </Effect>
+      <Effect minstrength="99" maxstrength="100" strengthchange="0" MinAfflictionOverlayAlphaMultiplier="1" MaxAfflictionOverlayAlphaMultiplier="1">
+        <StatusEffect type="Always" target="Character" LowPassMultiplier="0.0" setvalue="true" disabledeltatime="true">
+          <Conditional he-passout="gte 1" />
+        </StatusEffect>
+        <StatusEffect type="Always" target="Character" comparison="And" interval="0.1" multiplyafflictionsbymaxvitality="true" disabledeltatime="true" >
+          <Conditional stun="lte 0.5" />
+          <Conditional he-passout="gte 1" />
+          <Affliction identifier="he-passout" strength="-1" />
+        </StatusEffect>          
       </Effect>
       <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/PassOutOverlay.png" />
     </Affliction>
