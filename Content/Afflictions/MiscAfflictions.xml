@@ -737,7 +737,6 @@
       <icon texture="Content/UI/CommandUIAtlas.png" sourcerect="896,896,128,128" origin="0,0" />
     </Affliction>
     
-    <!-- TODO: make an an icon for this, compatibility with igniteables? -->
     <Affliction
       name="Tobacco addiction"
       identifier="he-tobaccoaddiction"
@@ -769,7 +768,7 @@
           <Affliction identifier="oxygenlow" amount="10" />
         </StatusEffect>  
       </Effect>
-      <icon texture="Content/UI/CommandUIAtlas.png" sourcerect="384,512,128,128" color="255,255,255,255" origin="0,0"/>
+      <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="512,384,128,128" color="255,255,255,255" origin="0,0"/>
     </Affliction>
 
  <!-- geneticextraction made by UberPendragon (aka hUbert 2) -->
