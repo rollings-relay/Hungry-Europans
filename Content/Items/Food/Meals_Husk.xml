@@ -102,6 +102,7 @@
           <Conditional IsHuman="true" targetcontainer="true" />
           <Affliction identifier="he-disguisedashusk" amount="70.0" />
           <Affliction identifier="he-stuffed" amount="1.0" />
+          <Affliction identifier="huskinfection" amount="1" probability="0.01" />
           <ReduceAffliction type="hunger" amount="1.0" />
           <ReduceAffliction type="mood" amount="1.0" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
@@ -120,6 +121,7 @@
           <Conditional InWater="false" />
           <Affliction identifier="he-disguisedashusk" amount="70.0" />
           <Affliction identifier="he-stuffed" amount="1.0" />
+          <Affliction identifier="huskinfection" amount="1" probability="0.01" />
           <ReduceAffliction type="hunger" amount="1.0" />
           <ReduceAffliction type="mood" amount="1.0" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
