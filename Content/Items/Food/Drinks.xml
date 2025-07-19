@@ -244,7 +244,7 @@
         
         <StatusEffect type="OnImpact" target="This">
           <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="fruitsplatter1" decalsize="1.0" />
-          <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+          <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
           <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -273,7 +273,7 @@
         </Button>
         <Button text="interaction.breakbottle">
           <StatusEffect type="OnUse" target="This">
-            <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+            <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
             <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -434,7 +434,7 @@
         
         <StatusEffect type="OnImpact" target="This">
           <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="fruitsplatter1" decalsize="1.0" />
-          <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+          <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
           <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -464,7 +464,7 @@
         </Button>
         <Button text="interaction.breakbottle">
           <StatusEffect type="OnUse" target="This">
-            <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+            <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
             <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -554,7 +554,7 @@
         
         <StatusEffect type="OnImpact" target="This">
           <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="fruitsplatter1" decalsize="1.0" />
-          <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+          <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
           <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -583,7 +583,7 @@
         </Button>
         <Button text="interaction.breakbottle">
           <StatusEffect type="OnUse" target="This">
-            <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+            <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
             <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -674,7 +674,7 @@
                 
         <StatusEffect type="OnImpact" target="This">
           <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="fruitsplatter1" decalsize="1.0" />
-          <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+          <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
           <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -703,7 +703,7 @@
         </Button>
         <Button text="interaction.breakbottle">
           <StatusEffect type="OnUse" target="This">
-            <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+            <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
             <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -788,7 +788,7 @@
         
         <StatusEffect type="OnImpact" target="This">
           <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="fruitsplatter1" decalsize="1.0" />
-          <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+          <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
           <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -817,7 +817,7 @@
         </Button>
         <Button text="interaction.breakbottle">
           <StatusEffect type="OnUse" target="This">
-            <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+            <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
             <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -899,7 +899,7 @@
         
         <StatusEffect type="OnImpact" target="This">
           <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="fruitsplatter1" decalsize="1.0" />
-          <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+          <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
           <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -928,7 +928,7 @@
         </Button>
         <Button text="interaction.breakbottle">
           <StatusEffect type="OnUse" target="This">
-            <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+            <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
             <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -1017,7 +1017,7 @@
         
         <StatusEffect type="OnImpact" target="This">
           <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="fruitsplatter1" decalsize="1.0" />
-          <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+          <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
           <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -1046,7 +1046,7 @@
         </Button>
         <Button text="interaction.breakbottle">
           <StatusEffect type="OnUse" target="This">
-            <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+            <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
             <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -1133,7 +1133,7 @@
         
         <StatusEffect type="OnImpact" target="This">
           <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="fruitsplatter1" decalsize="1.0" />
-          <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+          <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
           <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -1162,7 +1162,7 @@
         </Button>
         <Button text="interaction.breakbottle">
           <StatusEffect type="OnUse" target="This">
-            <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+            <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
             <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -1246,7 +1246,7 @@
         
         <StatusEffect type="OnImpact" target="This">
           <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="fruitsplatter1" decalsize="1.0" />
-          <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+          <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
           <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -1275,7 +1275,7 @@
         </Button>
         <Button text="interaction.breakbottle">
           <StatusEffect type="OnUse" target="This">
-            <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+            <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
             <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -1336,7 +1336,7 @@
         
         <StatusEffect type="OnImpact" target="This">
           <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="fruitsplatter1" decalsize="1.0" />
-          <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+          <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
           <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -1647,7 +1647,7 @@
         </StatusEffect>    
         
         <StatusEffect type="OnImpact" target="This">
-          <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+          <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
           <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -1676,7 +1676,7 @@
         </Button>
         <Button text="interaction.breakbottle">
           <StatusEffect type="OnUse" target="This">
-            <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+            <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
             <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -1754,7 +1754,7 @@
         </StatusEffect>   
         
         <StatusEffect type="OnImpact" target="This">
-          <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+          <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
           <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -1783,7 +1783,7 @@
         </Button>
         <Button text="interaction.breakbottle">
           <StatusEffect type="OnUse" target="This">
-            <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+            <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
             <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -1872,7 +1872,7 @@
         </StatusEffect>   
         
         <StatusEffect type="OnImpact" target="This">
-          <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+          <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
           <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -1901,7 +1901,7 @@
         </Button>
         <Button text="interaction.breakbottle">
           <StatusEffect type="OnUse" target="This">
-            <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+            <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
             <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -1997,7 +1997,7 @@
         </StatusEffect>
         
         <StatusEffect type="OnImpact" target="This">
-          <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+          <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
           <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -2022,7 +2022,7 @@
         </Button>
         <Button text="interaction.breakbottle">
           <StatusEffect type="OnUse" target="This">
-            <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+            <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
             <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -2069,7 +2069,7 @@
         </Button>
         <Button text="interaction.breakbottle">
           <StatusEffect type="OnUse" target="This">
-            <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+            <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
             <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -2116,7 +2116,7 @@
         </Button>
         <Button text="interaction.breakbottle">
           <StatusEffect type="OnUse" target="This">
-            <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+            <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
             <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -2163,7 +2163,7 @@
         </Button>
         <Button text="interaction.breakbottle">
           <StatusEffect type="OnUse" target="This">
-            <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+            <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
             <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -2210,7 +2210,7 @@
         </Button>
         <Button text="interaction.breakbottle">
           <StatusEffect type="OnUse" target="This">
-            <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+            <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
             <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -2304,7 +2304,7 @@
         </StatusEffect>
         
         <StatusEffect type="OnImpact" target="This">
-          <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+          <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
           <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -2329,7 +2329,7 @@
         </Button>
         <Button text="interaction.breakbottle">
           <StatusEffect type="OnUse" target="This">
-            <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+            <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
             <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -2365,7 +2365,7 @@
         </Button>
         <Button text="interaction.breakbottle">
           <StatusEffect type="OnUse" target="This">
-            <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+            <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
             <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -2401,7 +2401,7 @@
         </Button>
         <Button text="interaction.breakbottle">
           <StatusEffect type="OnUse" target="This">
-            <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+            <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
             <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -2437,7 +2437,7 @@
         </Button>
         <Button text="interaction.breakbottle">
           <StatusEffect type="OnUse" target="This">
-            <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+            <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
             <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -2473,7 +2473,7 @@
         </Button>
         <Button text="interaction.breakbottle">
           <StatusEffect type="OnUse" target="This">
-            <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+            <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
             <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -2558,7 +2558,7 @@
         </StatusEffect>
         
         <StatusEffect type="OnImpact" target="This">
-          <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+          <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
           <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -2583,7 +2583,7 @@
         </Button>
         <Button text="interaction.breakbottle">
           <StatusEffect type="OnUse" target="This">
-            <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+            <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
             <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -2615,7 +2615,7 @@
         </Button>
         <Button text="interaction.breakbottle">
           <StatusEffect type="OnUse" target="This">
-            <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+            <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
             <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -2647,7 +2647,7 @@
         </Button>
         <Button text="interaction.breakbottle">
           <StatusEffect type="OnUse" target="This">
-            <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+            <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
             <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -2679,7 +2679,7 @@
         </Button>
         <Button text="interaction.breakbottle">
           <StatusEffect type="OnUse" target="This">
-            <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+            <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
             <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -2711,7 +2711,7 @@
         </Button>
         <Button text="interaction.breakbottle">
           <StatusEffect type="OnUse" target="This">
-            <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+            <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
             <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -2971,7 +2971,7 @@
           <Affliction identifier="fillbladder" amount="1.0" />
         </StatusEffect>
         <StatusEffect type="OnImpact" target="This">
-          <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+          <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
           <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -3219,7 +3219,7 @@
           <Affliction identifier="fillbladder" amount="1.0" />
         </StatusEffect>
         <StatusEffect type="OnImpact" target="This">
-          <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+          <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
           <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -3477,7 +3477,7 @@
           <Affliction identifier="fillbladder" amount="1.5" />
         </StatusEffect>
         <StatusEffect type="OnImpact" target="This">
-          <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+          <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
           <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -3730,7 +3730,7 @@
           <Affliction identifier="fillbladder" amount="1.5" />
         </StatusEffect>
         <StatusEffect type="OnImpact" target="This">
-          <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+          <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
           <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -3976,7 +3976,7 @@
           <ReduceAffliction type="sleep" amount="1.25" />
         </StatusEffect>
         <StatusEffect type="OnImpact" target="This">
-          <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+          <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
           <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -4176,7 +4176,7 @@
           <Affliction identifier="fillbladder" amount="1.0" />
         </StatusEffect>
         <StatusEffect type="OnImpact" target="This">
-          <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+          <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
           <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -4368,7 +4368,7 @@
           <Affliction identifier="fillbladder" amount="1.0" />
         </StatusEffect>
         <StatusEffect type="OnImpact" target="This">
-          <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+          <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
           <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -4472,7 +4472,7 @@
         </StatusEffect>
         
         <StatusEffect type="OnImpact" target="This">
-          <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+          <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
           <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -4497,7 +4497,7 @@
         </Button>
         <Button text="interaction.breakbottle">
           <StatusEffect type="OnUse" target="This">
-            <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+            <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
             <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
             <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -4589,7 +4589,7 @@
         </StatusEffect>
         
         <StatusEffect type="OnImpact" target="This">
-          <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+          <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
           <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -4624,7 +4624,7 @@
           <ParticleEmitter particle="FleshSmoke" anglemin="90" anglemax="90" distancemin="7" distancemax="7" scalemin="0.1" scalemax="0.2" scalemultiplier="1,1" particlespersecond="2.0" colormultiplier="255,255,255,150" copyentityangle="True" />
         </StatusEffect>
         <StatusEffect type="OnImpact" target="This">
-          <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+          <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
           <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
