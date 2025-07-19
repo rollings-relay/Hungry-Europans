@@ -117,7 +117,7 @@
         <Replace tag="[skillname]" value="skillname.medical" color="gui.orange"/>
       </Description>
       <Description tag="talentdescription.gainmedicalitemeffectiveness">
-        <Replace tag="[amount]" value="15" color="gui.green"/>
+        <Replace tag="[amount]" value="10" color="gui.green"/>
       </Description>
       <Description tag="talentdescription.poisonsincreased">
         <Replace tag="[amount]" value="50" color="gui.green"/>
@@ -125,7 +125,7 @@
       <AbilityGroupEffect abilityeffecttype="None">
         <Abilities>
           <CharacterAbilityGiveStat stattype="MedicalSkillBonus" value="10"/>
-          <CharacterAbilityGiveStat stattype="MedicalItemApplyingMultiplier" value="0.15"/>
+          <CharacterAbilityGiveStat stattype="MedicalItemApplyingMultiplier" value="0.10"/>
           <CharacterAbilityGiveStat stattype="PoisonMultiplier" value="0.5"/>
         </Abilities>
       </AbilityGroupEffect>
