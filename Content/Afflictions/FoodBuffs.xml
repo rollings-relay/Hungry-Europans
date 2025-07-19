@@ -238,7 +238,7 @@
       description="Ugh... you reek of husk infected flesh! Husks will probably accept you as one of their own."
       type="foodbuff"
       isbuff="true"
-      limbspecific="true"
+      limbspecific="false"
       showiconthreshold="0"
       showinhealthscannerthreshold="0"
       maxstrength="1800"
