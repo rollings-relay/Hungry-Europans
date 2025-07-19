@@ -6,7 +6,21 @@
     <!--OVERRIDES-->
     <!--OVERRIDES-->
     
-    <Ethanol name="Ethanol (New method)" identifier="ethanolTEST" category="Medical,Material" scale="0.5" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,chem,cleaningagent,medical,petfood2" impactsoundtag="impact_metal_light" useinhealthinterface="true" requireaimtouse="true" isshootable="False" health="11">
+    <Ethanol name="" identifier="ethanol" category="Medical,Material" scale="0.5" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,chem,cleaningagent,medical,petfood2" impactsoundtag="impact_metal_light" useinhealthinterface="true" requireaimtouse="true" isshootable="False" health="11">
+      <PreferredContainer primary="sprayer" amount="1" spawnprobability="1"/>
+      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.2" />
+      <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="2" spawnprobability="0.3" />
+      <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.5" notcampaign="true"/>
+      <PreferredContainer primary="medfabcab" secondary="medcab"/>
+      <Price baseprice="60" minavailable="6" >
+        <Price storeidentifier="merchantoutpost" />
+        <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="8" />
+        <Price storeidentifier="merchantresearch" multiplier="0.9" minavailable="10" />
+        <Price storeidentifier="merchantmilitary" multiplier="1.1" />
+        <Price storeidentifier="merchantmine" multiplier="1.1" />
+        <Price storeidentifier="merchantclown" minavailable="0" maxavailable="2" />
+      </Price>
+      <Fabricate suitablefabricators="vendingmachine" requiredtime="1" requiredmoney="80" fabricationlimitmin="5" fabricationlimitmax="10"/>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="256,768,64,64" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="435,452,30,57" depth="0.6" origin="0.5,0.5" />
       <Body width="30" height="55" density="20" />
@@ -40,158 +54,6 @@
           <Remove />
         </StatusEffect>
       </Holdable>
-    </Ethanol>
-    
-    <!-- TODO: WIP Attempt at reworking ethanol (and other drinks) to be closer to the new food method while allowing medical UI to exist. Use ethanol template above -->
-    
-    <!-- <Ethanol name="" identifier="ethanol" category="Medical,Material" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,chem,cleaningagent,medical,petfood2" scale="0.5" requireaimtouse="true" isshootable="false" impactsoundtag="impact_metal_light">
-      <Upgrade gameversion="0.10.0.0" scale="0.5" />
-      <PreferredContainer primary="sprayer" amount="1" spawnprobability="1"/>
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.2" />
-      <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="2" spawnprobability="0.3" />
-      <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.5" notcampaign="true"/>
-      <PreferredContainer primary="medfabcab" secondary="medcab"/>
-      <Price baseprice="60" minavailable="6" >
-        <Price storeidentifier="merchantoutpost" />
-        <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="8" />
-        <Price storeidentifier="merchantresearch" multiplier="0.9" minavailable="10" />
-        <Price storeidentifier="merchantmilitary" multiplier="1.1" />
-        <Price storeidentifier="merchantmine" multiplier="1.1" />
-        <Price storeidentifier="merchantclown" minavailable="0" maxavailable="2" />
-      </Price>
-      <Fabricate suitablefabricators="vendingmachine" requiredtime="1" requiredmoney="80" fabricationlimitmin="5" fabricationlimitmax="10"/>
-      <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="256,768,64,64" origin="0.5,0.5" />
-      <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="435,452,30,57" depth="0.6" origin="0.5,0.5" />
-      <ContainedSprite allowedcontainertags="table" texture="Content/Items/Medical/Medicines.png" sourcerect="435,452,30,57" depth="0.525" origin="0.5,0.8"  />
-      <Body width="30" height="55" density="20" />
-      <SuitableTreatment type="embarrassment" suitability="50" />
-      <SuitableTreatment type="infection" suitability="1" />
-      <SuitableTreatment type="burn" suitability ="-3" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="32,28" holdangle="30" aimangle="120" aimable="false" msg="ItemMsgPickUpSelect">
-   
-        <StatusEffect type="OnSuccess" target="Limb" duration="10">
-          <ReduceAffliction identifier="infection" amount="0.8" />
-          <Affliction identifier="burn" amount="0.15" /> 
-          <Sound file="Content/Items/Medical/ITEM_liquid.ogg" range="500" />
-        </StatusEffect>
-        
-        <StatusEffect type="OnUse" target="This" Condition="-30.0">
-          <Conditional InWater="false" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This,Character">
-          <Conditional InWater="false" />
-          <Affliction identifier="psychosisresistance" amount="150" />
-          <Affliction identifier="applydrunk" amount="20.0" />
-          <Affliction identifier="he-internalburn" amount="15" />
-          <ReduceAffliction identifier="psychosis" amount="20.0" />
-          <ReduceAffliction identifier="hallucinating" amount="20.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And">
-          <Conditional bladder="gte 0.01" />
-          <Conditional InWater="false" />
-          <Affliction identifier="fillbladder" amount="3.0" />
-        </StatusEffect>        
-        <StatusEffect type="OnBroken" target="This">
-          <Remove />
-        </StatusEffect>
-      </Holdable>
-      <AiTarget sightrange="1000" static="true" />
-    </Ethanol>   -->  
-    
-    <Ethanol name="" identifier="ethanol" category="Medical,Material" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,chem,cleaningagent,medical,petfood2" scale="0.5" requireaimtouse="true" isshootable="true" impactsoundtag="impact_metal_light">
-      <Upgrade gameversion="0.10.0.0" scale="0.5" />
-      <PreferredContainer primary="sprayer" amount="1" spawnprobability="1"/>
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.2" />
-      <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="2" spawnprobability="0.3" />
-      <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.5" notcampaign="true"/>
-      <PreferredContainer primary="medfabcab" secondary="medcab"/>
-      <Price baseprice="60" minavailable="6" >
-        <Price storeidentifier="merchantoutpost" />
-        <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="8" />
-        <Price storeidentifier="merchantresearch" multiplier="0.9" minavailable="10" />
-        <Price storeidentifier="merchantmilitary" multiplier="1.1" />
-        <Price storeidentifier="merchantmine" multiplier="1.1" />
-        <Price storeidentifier="merchantclown" minavailable="0" maxavailable="2" />
-      </Price>
-      <Fabricate suitablefabricators="vendingmachine" requiredtime="1" requiredmoney="80" fabricationlimitmin="5" fabricationlimitmax="10"/>
-      <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="256,768,64,64" origin="0.5,0.5" />
-      <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="435,452,30,57" depth="0.6" origin="0.5,0.5" />
-      <ContainedSprite allowedcontainertags="table" texture="Content/Items/Medical/Medicines.png" sourcerect="435,452,30,57" depth="0.525" origin="0.5,0.8"  />
-      <Body width="30" height="55" density="20" />
-      <SuitableTreatment type="embarrassment" suitability="50" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="32,28" holdangle="30" aimangle="120" aimable="false" msg="ItemMsgPickUpSelect">
-        <!-- Allow the item to be applied to a bot, but prevent full usage on a player -->
-        <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
-          <Conditional IsBot="true" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
-          <Conditional IsBot="true" />
-          <Affliction identifier="drunk" amount="66.0" />
-          <ReduceAffliction identifier="psychosis" amount="66.0" />
-          <ReduceAffliction identifier="hallucinating" amount="66.0" />
-          <Affliction identifier="he-internalburn" amount="49.5" />
-          <Affliction identifier="psychosisresistance" amount="495" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="3.3" comparison="And" multiplyafflictionsbymaxvitality="true">
-          <Conditional IsBot="true" />
-          <Conditional bladder="gte 0.01" />
-          <Affliction identifier="fillbladder" amount="3.0" />
-        </StatusEffect>
-        <!-- Allow the item to be applied to a player fully, if the player is not in water and unconcious/stunned -->
-        <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
-          <Conditional InWater="false" />
-          <Conditional stun="gt 0" />
-          <Conditional IsPlayer="true" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="3.3" comparison="And" multiplyafflictionsbymaxvitality="true">
-          <Conditional InWater="false" />
-          <Conditional stun="gt 0" />
-          <Conditional IsPlayer="true" />
-          <Affliction identifier="drunk" amount="20.0" />
-          <ReduceAffliction identifier="psychosis" amount="20.0" />
-          <ReduceAffliction identifier="hallucinating" amount="20.0" />
-          <Affliction identifier="he-internalburn" amount="15" />
-          <Affliction identifier="psychosisresistance" amount="150" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="3.3" comparison="And" multiplyafflictionsbymaxvitality="true">
-          <Conditional InWater="false" />
-          <Conditional stun="gt 0" />
-          <Conditional IsPlayer="true" />
-          <Conditional bladder="gte 0.01" />
-          <Affliction identifier="fillbladder" amount="3.0" />
-        </StatusEffect>
-        <!-- Regular drinking -->
-        <StatusEffect type="OnUse" target="This" Condition="-30.0">
-          <Conditional InWater="false" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character">
-          <Conditional InWater="false" />
-          <Affliction identifier="he-internalburn" amount="15" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character">
-          <Conditional InWater="false" />
-          <Affliction identifier="applydrunk" amount="20.0" />
-          <ReduceAffliction identifier="psychosis" amount="20.0" />
-          <ReduceAffliction identifier="hallucinating" amount="20.0" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character">
-          <Conditional InWater="false" />
-          <Affliction identifier="psychosisresistance" amount="150" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And">
-          <Conditional bladder="gte 0.01" />
-          <Conditional InWater="false" />
-          <Affliction identifier="fillbladder" amount="3.0" />
-        </StatusEffect>
-        <StatusEffect type="OnBroken" target="This">
-          <Remove />
-        </StatusEffect>
-      </Holdable>
-      <AiTarget sightrange="1000" static="true" />
     </Ethanol>
 
     <TonicLiquid name="Tonic" identifier="tonicliquid" category="Medical,Material" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" Tags="smallitem,chem,medical,drinkitem,can" description="" scale="0.5" impactsoundtag="impact_aluminiumcan_full" useinhealthinterface="true" requireaimtouse="true" isshootable="False" health="11" >
