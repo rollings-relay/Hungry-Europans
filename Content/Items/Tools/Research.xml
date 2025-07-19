@@ -283,13 +283,13 @@
         <TickBox text="talentname.he-trait_likes_sandwiches">
           <StatusEffect type="OnUse" target="This" tags="likesandwiches" duration="0.1" />
         </TickBox>
-        <TickBox text="talentname.he-trait_likes_omelette">
+        <TickBox text="talentname.he-trait_likes_omelettes">
           <StatusEffect type="OnUse" target="This" tags="likeomelette" duration="0.1" />
         </TickBox>
-        <TickBox text="talentname.he-trait_likes_soup">
+        <TickBox text="talentname.he-trait_likes_soups">
           <StatusEffect type="OnUse" target="This" tags="likesoup" duration="0.1" />
         </TickBox>
-        <TickBox text="talentname.he-trait_likes_salad">
+        <TickBox text="talentname.he-trait_likes_salads">
           <StatusEffect type="OnUse" target="This" tags="likesalad" duration="0.1" />
         </TickBox>
         <TickBox text="talentname.he-trait_likes_sweets">
@@ -579,8 +579,8 @@
         <StatusEffect type="Always" target="Character" comparison="Or" oneshot="true" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
           <Conditional hasspecifiertag="male"/>
           <Conditional hasspecifiertag="female"/>
-          <Affliction identifier="trait_likes_omelette" amount="1" />
-          <GiveTalentInfo giverandom="false" talentidentifiers="he-trait_likes_omelette" />
+          <Affliction identifier="trait_likes_omelettes" amount="1" />
+          <GiveTalentInfo giverandom="false" talentidentifiers="he-trait_likes_omelettes" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" delay="0.1" stackable="false">
           <Remove />
@@ -596,8 +596,8 @@
         <StatusEffect type="Always" target="Character" comparison="Or" oneshot="true" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
           <Conditional hasspecifiertag="male"/>
           <Conditional hasspecifiertag="female"/>
-          <Affliction identifier="trait_likes_soup" amount="1" />
-          <GiveTalentInfo giverandom="false" talentidentifiers="he-trait_likes_soup" />
+          <Affliction identifier="trait_likes_soups" amount="1" />
+          <GiveTalentInfo giverandom="false" talentidentifiers="he-trait_likes_soups" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" delay="0.1" stackable="false">
           <Remove />
@@ -613,8 +613,8 @@
         <StatusEffect type="Always" target="Character" comparison="Or" oneshot="true" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
           <Conditional hasspecifiertag="male"/>
           <Conditional hasspecifiertag="female"/>
-          <Affliction identifier="trait_likes_salad" amount="1" />
-          <GiveTalentInfo giverandom="false" talentidentifiers="he-trait_likes_salad" />
+          <Affliction identifier="trait_likes_salads" amount="1" />
+          <GiveTalentInfo giverandom="false" talentidentifiers="he-trait_likes_salads" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" delay="0.1" stackable="false">
           <Remove />

@@ -336,7 +336,7 @@
       </AbilityGroupEffect>
     </Talent>
     
-    <Talent name="Preferred Food: Omelette" identifier="he-trait_likes_omelette">
+    <Talent name="Preferred Food: Omelette" identifier="he-trait_likes_omelettes">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="119,623,119,119" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-moodyeuropan" />
       <AbilityGroupEffect abilityeffecttype="OnRoundEnd">
@@ -344,7 +344,7 @@
           <CharacterAbilityApplyStatusEffects>
             <StatusEffects>
               <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
-                <Affliction identifier="trait_likes_omelette" amount="1" />
+                <Affliction identifier="trait_likes_omelettes" amount="1" />
               </StatusEffect>
             </StatusEffects>
           </CharacterAbilityApplyStatusEffects>
@@ -352,7 +352,7 @@
       </AbilityGroupEffect>
     </Talent>
     
-    <Talent name="Preferred Food: Soup" identifier="he-trait_likes_soup">
+    <Talent name="Preferred Food: Soup" identifier="he-trait_likes_soups">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="119,623,119,119" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-moodyeuropan" />
       <AbilityGroupEffect abilityeffecttype="OnRoundEnd">
@@ -360,7 +360,7 @@
           <CharacterAbilityApplyStatusEffects>
             <StatusEffects>
               <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
-                <Affliction identifier="trait_likes_soup" amount="1" />
+                <Affliction identifier="trait_likes_soups" amount="1" />
               </StatusEffect>
             </StatusEffects>
           </CharacterAbilityApplyStatusEffects>
@@ -368,7 +368,7 @@
       </AbilityGroupEffect>
     </Talent>    
     
-    <Talent name="Preferred Food: Salad" identifier="he-trait_likes_salad">
+    <Talent name="Preferred Food: Salad" identifier="he-trait_likes_salads">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="119,623,119,119" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-moodyeuropan" />
       <AbilityGroupEffect abilityeffecttype="OnRoundEnd">
@@ -376,7 +376,7 @@
           <CharacterAbilityApplyStatusEffects>
             <StatusEffects>
               <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
-                <Affliction identifier="trait_likes_salad" amount="1" />
+                <Affliction identifier="trait_likes_salads" amount="1" />
               </StatusEffect>
             </StatusEffects>
           </CharacterAbilityApplyStatusEffects>

@@ -96,7 +96,7 @@
     <Affliction name="" identifier="ate_omelette" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="-1" resistancefor="ate_omelette" minresistance="0" maxresistance="0" multiplybymaxvitality="true">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
-          <Conditional trait_likes_omelette="gt 0" />
+          <Conditional trait_likes_omelettes="gt 0" />
           <ReduceAffliction identifier="mood" amount="1.0" />
         </StatusEffect> 
       </Effect>
@@ -108,7 +108,7 @@
     <Affliction name="" identifier="ate_soup" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="-1" resistancefor="ate_soup" minresistance="0" maxresistance="0" multiplybymaxvitality="true">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
-          <Conditional trait_likes_soup="gt 0" />
+          <Conditional trait_likes_soups="gt 0" />
           <ReduceAffliction identifier="mood" amount="1.0" />
         </StatusEffect> 
       </Effect>
@@ -120,7 +120,7 @@
     <Affliction name="" identifier="ate_salad" description="" type="trait" limbspecific="false" indicatorlimb="Head" maxstrength="1" affectmachines="false" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="1" strengthchange="-1" resistancefor="ate_salad" minresistance="0" maxresistance="0" multiplybymaxvitality="true">
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
-          <Conditional trait_likes_salad="gt 0" />
+          <Conditional trait_likes_salads="gt 0" />
           <ReduceAffliction identifier="mood" amount="1.0" />
         </StatusEffect> 
       </Effect>
