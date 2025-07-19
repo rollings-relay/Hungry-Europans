@@ -1210,14 +1210,11 @@
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="2,1" sheetelementsize="128,128"/>
       <Description tag="talentdescription.he-dietarypreferencebase">
         <Replace tag="[amount]" value="35" color="gui.green"/>
-      </Description>
-      <Description tag="talentdescription.he-lifesaver">
-        <Replace tag="[skill]" value="skillname.medical" color="gui.orange"/>
-        <Replace tag="[amount]" value="20" color="gui.green"/>
+        <Replace tag="[percent]" value="100" color="gui.green"/>
       </Description>
       <AbilityGroupEffect abilityeffecttype="None">
         <Abilities>
-          <CharacterAbilityGiveStat stattype="MedicalSkillBonus" value="20"/>
+          <CharacterAbilityGiveResistance resistanceid="foodbuff" multiplier="2"/>
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
