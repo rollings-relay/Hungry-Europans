@@ -14,7 +14,7 @@
       <Fabricate suitablefabricators="cuttingboard" requiredtime="48" requiresrecipe="false" amount="1" displayname="hammerheadfooditem">
         <RequiredSkill identifier="cooking" level="50" />
         <RequiredItem identifier="he-preparedhammerheadroast" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
-        <RequiredItem tag="omelette" UseCondition="True" mincondition="0.25" />
+        <RequiredItem tag="omelette" UseCondition="True" mincondition="0.5" />
         <RequiredItem identifier="he-seaweedstrip" amount="1" />
         <RequiredItem identifier="he-emptyplate" amount="1" />
       </Fabricate>
