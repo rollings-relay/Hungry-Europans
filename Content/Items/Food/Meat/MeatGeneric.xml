@@ -63,21 +63,15 @@
       </GreaterComponent>
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <!-- When using (eating) the item, reduce the condition by 4 per second -->
-        <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
+        <StatusEffect type="OnUse" target="This" Condition="-8.0"/>
         <!-- When using (eating) the item, apply the afflictions psychosis, nausea, craving for human meat and spill to the character and play an eating sound effect -->
         <StatusEffect type="OnUse" target="Character">
-          <Affliction identifier="psychosis" probability="0.001" amount="20" />
+          <ReduceAffliction type="hunger" amount="0.25" />
           <Affliction identifier="nausea" amount="4" />
-          <Affliction identifier="he-hungryforhumanmeat" amount="0.037" />
           <Affliction identifier="worminfection" amount="1" probability="0.02" />
           <Affliction identifier="tapeworminfection" amount="1" probability="0.02" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
-        </StatusEffect>
-        <!-- When using (eating) the item, reduce the character's hunger by 0.25 per second, if the character's hunger is above 0.25 -->
-        <StatusEffect type="OnUse" target="Character">
-          <Conditional hunger="gt 0.25" />
-          <ReduceAffliction type="hunger" amount="0.25" />
         </StatusEffect>
         <!-- When the item's condition reaches 0 (item breaks), remove the item -->
         <StatusEffect type="OnBroken" target="This">
@@ -88,7 +82,7 @@
       <AiTarget sightrange="1000" static="True" />
     </Item>
 
-    <Item name="Meat Patty" identifier="he-meatpatty" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,allowongrill,canspoil,petfood1,petfood2,petfood3" spritecolor="108,108,108,255" inventoryiconcolor="108,108,108,255" containercolor="108,108,108,255" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
+    <Item name="Meat Patty (cooked)" identifier="he-meatpatty" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,allowongrill,canspoil,petfood1,petfood2,petfood3" spritecolor="108,108,108,255" inventoryiconcolor="108,108,108,255" containercolor="108,108,108,255" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,458,35,8" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="279,459,31,17" origin="0.5,0.5" />
@@ -128,14 +122,11 @@
       <!-- MemoryComponent hosts the MaxValueLength attribute which we use to track the time by adjusting its value via StatusEffects each second -->
       <MemoryComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" string="" MaxValueLength="0" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
+        <StatusEffect type="OnUse" target="This" Condition="-8.0"/>
         <StatusEffect type="OnUse" target="Character">
+          <ReduceAffliction type="hunger" amount="0.25" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character">
-          <Conditional hunger="gt 0.25" />
-          <ReduceAffliction type="hunger" amount="0.25" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
@@ -178,14 +169,12 @@
       <!-- MemoryComponent hosts the MaxValueLength attribute which we use to track the time by adjusting its value via StatusEffects each second -->
       <MemoryComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" string="" MaxValueLength="0" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
+        <StatusEffect type="OnUse" target="This" Condition="-8.0"/>
         <StatusEffect type="OnUse" target="Character">
+          <ReduceAffliction type="hunger" amount="0.20" />
+          <Affliction identifier="nausea" amount="3" probability="0.25" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character">
-          <Conditional hunger="gt 0.25" />
-          <ReduceAffliction type="hunger" amount="0.25" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character">
           <Conditional thirst="gt 0" />
@@ -246,20 +235,14 @@
         </StatusEffect>
       </GreaterComponent>
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
+        <StatusEffect type="OnUse" target="This" Condition="-8.0"/>
         <StatusEffect type="OnUse" target="Character">
-          <Affliction identifier="psychosis" probability="0.001" amount="20" />
-          <Affliction identifier="hallucinating" amount="6" />
-          <Affliction identifier="nausea" amount="3" />
-          <Affliction identifier="he-hungryforhumanmeat" amount="0.037" />
+          <ReduceAffliction type="hunger" amount="0.25" />
+          <Affliction identifier="nausea" amount="3" probability="0.25" />
           <Affliction identifier="worminfection" amount="1" probability="0.02" />
           <Affliction identifier="tapeworminfection" amount="1" probability="0.02" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character">
-          <Conditional hunger="gt 0.25" />
-          <ReduceAffliction type="hunger" amount="0.25" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
@@ -268,7 +251,7 @@
       <AiTarget sightrange="1000" static="True" />
     </Item>
 
-    <Item name="Sausage" identifier="he-sausage" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,allowongrill,canspoil,fingerfood,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true" spritecolor="255,255,255,255" inventoryiconcolor="255,255,255,255" containercolor="255,255,255,255">
+    <Item name="Sausage (cooked)" identifier="he-sausage" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,allowongrill,canspoil,fingerfood,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true" spritecolor="255,255,255,255" inventoryiconcolor="255,255,255,255" containercolor="255,255,255,255">
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,444,67,14" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,444,67,14" origin="0.5,0.5" />
@@ -303,14 +286,11 @@
       </ItemComponent>
       <MemoryComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" string="" MaxValueLength="0" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
+        <StatusEffect type="OnUse" target="This" Condition="-8.0"/>
         <StatusEffect type="OnUse" target="Character">
+          <ReduceAffliction type="hunger" amount="0.25" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character">
-          <Conditional hunger="gt 0.25" />
-          <ReduceAffliction type="hunger" amount="0.25" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
@@ -340,14 +320,12 @@
       </ItemComponent>
       <MemoryComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" string="" MaxValueLength="0" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
+        <StatusEffect type="OnUse" target="This" Condition="-8.0"/>
         <StatusEffect type="OnUse" target="Character">
+          <ReduceAffliction type="hunger" amount="0.20" />
+          <Affliction identifier="nausea" amount="3" probability="0.25" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character">
-          <Conditional hunger="gt 0.25" />
-          <ReduceAffliction type="hunger" amount="0.25" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character">
           <Conditional thirst="gt 0" />
@@ -419,21 +397,16 @@
       </GreaterComponent>
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <!-- When using (eating) the item, reduce the condition by 4 per second -->
-        <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
+        <StatusEffect type="OnUse" target="This" Condition="-8.0"/>
         <!-- When using (eating) the item, apply the afflictions deliriumine poisoning, nausea, craving for human meat and spill to the character and play an eating sound effect -->
         <StatusEffect type="OnUse" target="Character">
+          <ReduceAffliction type="hunger" amount="0.25" />
           <Affliction identifier="deliriuminepoisoning" probability="0.001" amount="8" />
-          <Affliction identifier="nausea" amount="4" />
-          <Affliction identifier="he-hungryforhumanmeat" amount="0.075" />
+          <Affliction identifier="nausea" amount="4" probability="0.5" />
           <Affliction identifier="worminfection" amount="1" probability="0.02" />
           <Affliction identifier="tapeworminfection" amount="1" probability="0.02" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
-        </StatusEffect>
-        <!-- When using (eating) the item, reduce the character's hunger by 0.25 per second, if the character's hunger is above 0.25 -->
-        <StatusEffect type="OnUse" target="Character">
-          <Conditional hunger="gt 0.25" />
-          <ReduceAffliction type="hunger" amount="0.25" />
         </StatusEffect>
         <!-- When the item's condition reaches 0 (item breaks), remove the item -->
         <StatusEffect type="OnBroken" target="This">
@@ -485,19 +458,14 @@
         </StatusEffect>
       </GreaterComponent>
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
+        <StatusEffect type="OnUse" target="This" Condition="-8.0"/>
         <StatusEffect type="OnUse" target="Character">
-          <Affliction identifier="psychosis" probability="0.001" amount="20" />
-          <Affliction identifier="nausea" amount="4" />
-          <Affliction identifier="he-hungryforhumanmeat" amount="0.037" />
+          <ReduceAffliction type="hunger" amount="0.25" />
+          <Affliction identifier="nausea" amount="4" probability="0.5" />
           <Affliction identifier="worminfection" amount="1" probability="0.05" />
           <Affliction identifier="tapeworminfection" amount="1" probability="0.05" />
           <Affliction identifier="spill" amount="1000" probability="0.005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character">
-          <Conditional hunger="gt 0.25" />
-          <ReduceAffliction type="hunger" amount="0.25" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
