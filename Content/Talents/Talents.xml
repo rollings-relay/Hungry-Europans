@@ -23,7 +23,7 @@
         </Abilities>
       </AbilityGroupInterval>
     </Talent>
-    <!-- todo: sleepy talent icon -->
+    
     <Talent name="Sleepy Europan" identifier="he-sleepyeuropan">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,504,119,119" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-sleepyeuropan" />
@@ -40,7 +40,7 @@
         </Abilities>
       </AbilityGroupInterval>
     </Talent>
-    <!-- todo: moody talent icon -->
+    
     <Talent name="Moody Europan" identifier="he-moodyeuropan">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="119,504,119,119" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-moodyeuropan" />
