@@ -77,6 +77,7 @@ Low:
 [*] Added xxx drink
 [*] Added xxx drink
 [*] Added xxx drink
+[*] Added Moloch Milking Tool
 [*] Added NPC conversations, some related to food traits, being hungry, thirsty...
 [/List]
 
