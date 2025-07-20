@@ -258,8 +258,10 @@
       </Wearable>
       
       
-      <!-- TODO: The way trait selection works is insane. Do we really need to spawn items instead of just giving talents directly... -->
-      <!-- TODO: add new traits to selector part -->
+      <!-- TODO: Do we really need to spawn items instead of just giving talents directly?
+                 There's also the issue of people picking all the traits at once, not sure how to fix this. Would it be better to use an event instead?
+                 This works so it's whatever-->
+      
       <CustomInterface uilabel="Select your preferred food:" drawhudwhenequipped="true">
         <GuiFrame relativesize="0.2,0.6" maxsize="400,800"  anchor="Center" style="DialogBox" hidedragicons="true" />
         <Button text="seleectpreferredfood">
