@@ -18,14 +18,15 @@
       </Fabricate>
       <Deconstruct time="1" />
       <Body width="81" radius="27" density="12" />
+      <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
         <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
-        <StatusEffect type="Always" target="This" timeframe="0" interval="2" disabledeltatime="true" setvalue="true">
+        <StatusEffect type="Always" target="This" timeframe="40" interval="2" disabledeltatime="true" setvalue="true">
           <Conditional HasStatusTag="eq activecooling" targetcontainer="true" />
           <Conditional HasTag="eq kitchenfabricator" targetcontainer="true" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" Condition="-2.0" timeframe="-10" disabledeltatime="true" interval="0.9">
-          <Conditional timeframe="gte 10" />
+          <Conditional timeframe="gte 50" />
         </StatusEffect>
       </GreaterComponent>
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
@@ -52,14 +53,15 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="1,79,108,55" depth="0.6" origin="0.5,0.5" />
       <Deconstruct time="1" />
       <Body width="81" radius="27" density="12" />
+      <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
         <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
-        <StatusEffect type="Always" target="This" timeframe="0" interval="2" disabledeltatime="true" setvalue="true">
+        <StatusEffect type="Always" target="This" timeframe="40" interval="2" disabledeltatime="true" setvalue="true">
           <Conditional HasStatusTag="eq activecooling" targetcontainer="true" />
           <Conditional HasTag="eq kitchenfabricator" targetcontainer="true" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" Condition="-2.0" timeframe="-10" disabledeltatime="true" interval="0.9">
-          <Conditional timeframe="gte 10" />
+          <Conditional timeframe="gte 50" />
         </StatusEffect>
       </GreaterComponent>
       <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="RightHand+LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
@@ -84,14 +86,15 @@
       <Deconstruct time="1" />
       <Body radius="13" density="10.5" />
       <SuitableTreatment type="hunger" suitability="10" />
+      <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
         <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
-        <StatusEffect type="Always" target="This" timeframe="0" interval="2" disabledeltatime="true" setvalue="true">
+        <StatusEffect type="Always" target="This" timeframe="40" interval="2" disabledeltatime="true" setvalue="true">
           <Conditional HasStatusTag="eq activecooling" targetcontainer="true" />
           <Conditional HasTag="eq kitchenfabricator" targetcontainer="true" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" Condition="-2.0" timeframe="-10" disabledeltatime="true" interval="0.9">
-          <Conditional timeframe="gte 10" />
+          <Conditional timeframe="gte 50" />
         </StatusEffect>
       </GreaterComponent>
       <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
@@ -147,14 +150,15 @@
       </Fabricate>
       <Deconstruct time="1" />
       <Body width="81" radius="27" density="12" />
+      <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
         <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
-        <StatusEffect type="Always" target="This" timeframe="0" interval="2" disabledeltatime="true" setvalue="true">
+        <StatusEffect type="Always" target="This" timeframe="40" interval="2" disabledeltatime="true" setvalue="true">
           <Conditional HasStatusTag="eq activecooling" targetcontainer="true" />
           <Conditional HasTag="eq kitchenfabricator" targetcontainer="true" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" Condition="-2.0" timeframe="-10" disabledeltatime="true" interval="0.9">
-          <Conditional timeframe="gte 10" />
+          <Conditional timeframe="gte 50" />
         </StatusEffect>
       </GreaterComponent>
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
@@ -181,14 +185,15 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="1,135,108,55" depth="0.6" origin="0.5,0.5" />
       <Deconstruct time="1" />
       <Body width="81" radius="27" density="12" />
+      <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
         <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
-        <StatusEffect type="Always" target="This" timeframe="0" interval="2" disabledeltatime="true" setvalue="true">
+        <StatusEffect type="Always" target="This" timeframe="40" interval="2" disabledeltatime="true" setvalue="true">
           <Conditional HasStatusTag="eq activecooling" targetcontainer="true" />
           <Conditional HasTag="eq kitchenfabricator" targetcontainer="true" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" Condition="-2.0" timeframe="-10" disabledeltatime="true" interval="0.9">
-          <Conditional timeframe="gte 10" />
+          <Conditional timeframe="gte 50" />
         </StatusEffect>
       </GreaterComponent>
       <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="RightHand+LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
@@ -213,14 +218,15 @@
       <Deconstruct time="1" />
       <Body radius="13" density="10.5" />
       <SuitableTreatment type="hunger" suitability="10" />
+      <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
         <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
-        <StatusEffect type="Always" target="This" timeframe="0" interval="2" disabledeltatime="true" setvalue="true">
+        <StatusEffect type="Always" target="This" timeframe="40" interval="2" disabledeltatime="true" setvalue="true">
           <Conditional HasStatusTag="eq activecooling" targetcontainer="true" />
           <Conditional HasTag="eq kitchenfabricator" targetcontainer="true" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" Condition="-2.0" timeframe="-10" disabledeltatime="true" interval="0.9">
-          <Conditional timeframe="gte 10" />
+          <Conditional timeframe="gte 50" />
         </StatusEffect>
       </GreaterComponent>
       <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
@@ -276,14 +282,15 @@
       </Fabricate>
       <Deconstruct time="1" />
       <Body width="81" radius="27" density="12" />
+      <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
         <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
-        <StatusEffect type="Always" target="This" timeframe="0" interval="2" disabledeltatime="true" setvalue="true">
+        <StatusEffect type="Always" target="This" timeframe="40" interval="2" disabledeltatime="true" setvalue="true">
           <Conditional HasStatusTag="eq activecooling" targetcontainer="true" />
           <Conditional HasTag="eq kitchenfabricator" targetcontainer="true" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" Condition="-2.0" timeframe="-10" disabledeltatime="true" interval="0.9">
-          <Conditional timeframe="gte 10" />
+          <Conditional timeframe="gte 50" />
         </StatusEffect>
       </GreaterComponent>
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
@@ -310,14 +317,15 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="110,79,108,55" depth="0.6" origin="0.5,0.5" />
       <Deconstruct time="1" />
       <Body width="81" radius="27" density="12" />
+      <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
         <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
-        <StatusEffect type="Always" target="This" timeframe="0" interval="2" disabledeltatime="true" setvalue="true">
+        <StatusEffect type="Always" target="This" timeframe="40" interval="2" disabledeltatime="true" setvalue="true">
           <Conditional HasStatusTag="eq activecooling" targetcontainer="true" />
           <Conditional HasTag="eq kitchenfabricator" targetcontainer="true" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" Condition="-2.0" timeframe="-10" disabledeltatime="true" interval="0.9">
-          <Conditional timeframe="gte 10" />
+          <Conditional timeframe="gte 50" />
         </StatusEffect>
       </GreaterComponent>
       <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="RightHand+LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
@@ -342,14 +350,15 @@
       <Deconstruct time="1" />
       <Body radius="13" density="10.5" />
       <SuitableTreatment type="hunger" suitability="10" />
+      <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
         <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
-        <StatusEffect type="Always" target="This" timeframe="0" interval="2" disabledeltatime="true" setvalue="true">
+        <StatusEffect type="Always" target="This" timeframe="40" interval="2" disabledeltatime="true" setvalue="true">
           <Conditional HasStatusTag="eq activecooling" targetcontainer="true" />
           <Conditional HasTag="eq kitchenfabricator" targetcontainer="true" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" Condition="-2.0" timeframe="-10" disabledeltatime="true" interval="0.9">
-          <Conditional timeframe="gte 10" />
+          <Conditional timeframe="gte 50" />
         </StatusEffect>
       </GreaterComponent>
       <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
@@ -405,14 +414,15 @@
       </Fabricate>
       <Deconstruct time="1" />
       <Body width="81" radius="27" density="12" />
+      <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
         <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
-        <StatusEffect type="Always" target="This" timeframe="0" interval="2" disabledeltatime="true" setvalue="true">
+        <StatusEffect type="Always" target="This" timeframe="40" interval="2" disabledeltatime="true" setvalue="true">
           <Conditional HasStatusTag="eq activecooling" targetcontainer="true" />
           <Conditional HasTag="eq kitchenfabricator" targetcontainer="true" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" Condition="-2.0" timeframe="-10" disabledeltatime="true" interval="0.9">
-          <Conditional timeframe="gte 10" />
+          <Conditional timeframe="gte 50" />
         </StatusEffect>
       </GreaterComponent>
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
@@ -439,14 +449,15 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="110,135,108,55" depth="0.6" origin="0.5,0.5" />
       <Deconstruct time="1" />
       <Body width="81" radius="27" density="12" />
+      <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
         <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
-        <StatusEffect type="Always" target="This" timeframe="0" interval="2" disabledeltatime="true" setvalue="true">
+        <StatusEffect type="Always" target="This" timeframe="40" interval="2" disabledeltatime="true" setvalue="true">
           <Conditional HasStatusTag="eq activecooling" targetcontainer="true" />
           <Conditional HasTag="eq kitchenfabricator" targetcontainer="true" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" Condition="-2.0" timeframe="-10" disabledeltatime="true" interval="0.9">
-          <Conditional timeframe="gte 10" />
+          <Conditional timeframe="gte 50" />
         </StatusEffect>
       </GreaterComponent>
       <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="RightHand+LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
@@ -471,14 +482,15 @@
       <Deconstruct time="1" />
       <Body radius="13" density="10.5" />
       <SuitableTreatment type="hunger" suitability="10" />
+      <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
         <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
-        <StatusEffect type="Always" target="This" timeframe="0" interval="2" disabledeltatime="true" setvalue="true">
+        <StatusEffect type="Always" target="This" timeframe="40" interval="2" disabledeltatime="true" setvalue="true">
           <Conditional HasStatusTag="eq activecooling" targetcontainer="true" />
           <Conditional HasTag="eq kitchenfabricator" targetcontainer="true" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" Condition="-2.0" timeframe="-10" disabledeltatime="true" interval="0.9">
-          <Conditional timeframe="gte 10" />
+          <Conditional timeframe="gte 50" />
         </StatusEffect>
       </GreaterComponent>
       <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
