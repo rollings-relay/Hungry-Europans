@@ -440,14 +440,11 @@
       <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnUse" target="This" Condition="-2.0"/>
         <StatusEffect type="OnUse" target="Character">
+          <ReduceAffliction type="hunger" amount="1.5" />
+          <Affliction identifier="applystomachache" strength="0.25" probability="0.5" />
           <Affliction identifier="deliriuminepoisoning" amount="1.2" probability="0.001" />
           <Affliction identifier="nausea" amount="1.2" />
-          <Affliction identifier="he-hungryforhumanmeat" amount="0.037" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="true" range="200" volume="5.0" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character">
-          <Conditional hunger="gt 1.5" />
-          <ReduceAffliction type="hunger" amount="1.5" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />

@@ -470,7 +470,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-rawspinelingnuggets>A pile of raw nuggets made from spineling meat. Put it in a fryer.</entitydescription.he-rawspinelingnuggets><!--Patch 13-->
 
 <entityname.he-rawjerky>Jerky (Raw)</entityname.he-rawjerky><!--Patch 13-->
-<entitydescription.he-rawjerky>A pile of raw jerky. Cheap and easy to make. It's impossible to tell what it's made of. Put it in an oven.</entitydescription.he-rawjerky><!--Patch 13-->
+<entitydescription.he-rawjerky>A pile of raw jerky. It's impossible to tell what it's made of. Put it in an oven.</entitydescription.he-rawjerky><!--Patch 13-->
 <entityname.he-salt>Salt</entityname.he-salt>
 <entitydescription.he-salt>Don't get salty now!</entitydescription.he-salt>
 <entityname.he-pepper>Pepper</entityname.he-pepper>
