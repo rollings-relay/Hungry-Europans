@@ -72,6 +72,7 @@
       </Fabricate>
       <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.46" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="324,1,370,355" depth="0.797" origin="0.5,0.5" />
+      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="324,1,370,355" depth="0.8" origin="0.5,0.5" />
       <DecorativeSprite name="background shake" texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="324,1,370,355" depth="0.796" origin="0.5,0.5" offset="3,3" offsetanim="Noise" offsetanimspeed="3" comparison="and" >
         <AnimationConditional Voltage="gt 0.5" targetitemcomponent="Fabricator" />
         <IsActiveConditional IsActive="True" targetitemcomponent="Fabricator" />
@@ -130,7 +131,7 @@
           <Affliction identifier="burn" strength="5" />
         </StatusEffect>
       </Repairable>
-      <ItemContainer selectkey="Select" capacity="1" canbeselected="true" hideitems="true" slotsperrow="3" uilabel="" allowuioverlap="true">
+      <ItemContainer selectkey="Select" capacity="1" canbeselected="true" hideitems="true" itempos="190,-190" slotsperrow="3" uilabel="" allowuioverlap="true"  iteminterval="5,-2" itemsperrow="10" containedspritedepths="0.794,0.999,0.999,0.999,0.999,0.999,0.999,0.999,0.999,0.999,0.999" >
         <SlotIcon slotindex="1" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="407,0,85,85" origin="0.5,0.5" />
         <SlotIcon slotindex="2" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="173,67,42,67" origin="0.5,0.5" />
         <Containable items="distilleringredient" />
