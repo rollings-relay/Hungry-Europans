@@ -1138,6 +1138,8 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entityname.he-molochefort>Molochefort</entityname.he-molochefort>
 <entitydescription.he-molochefort>Someone once thought it would be a good idea to taste Moloch cheese half-eaten by bacteria; the result was surprisingly tasty. Boosts your immune system.</entitydescription.he-molochefort>
 
+<entityname.he-sauerkraut>Sauerkraut</entityname.he-sauerkraut>
+<entitydescription.he-sauerkraut>Sausages and fermented raptor's bane. Best enjoyed with a beer and some yodeling.</entitydescription.he-sauerkraut>
 
 <forcesay.eatingsound>*Om nom nom...*</forcesay.eatingsound>
 <forcesay.eatingsound>*Gulp...*</forcesay.eatingsound>
