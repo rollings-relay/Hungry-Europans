@@ -220,7 +220,7 @@
 
 
     <!--SOUP BOWLS-->
-    <Item hideinmenus="false" name="Craw Yum!" identifier="he-crawyumsoup" variantof="he-poisoneffectpreset_spoon" health="20" category="Misc" subcategory="Food - Crawler" Tags="smallitem,fooditem,spoonfood,soup" description="A soup." maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="false" requireaimtouse="false">
+    <Item hideinmenus="false" name="Craw Yum!" identifier="he-crawyumsoup" variantof="he-poisoneffectpreset_spoon" health="20" category="Misc" subcategory="Soups" Tags="smallitem,fooditem,spoonfood,soup" description="A soup." maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="false" requireaimtouse="false">
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
@@ -287,7 +287,7 @@
       <AiTarget sightrange="1000" static="true" />
     </Item>
     
-    <Item hideinmenus="false" name="Bone Broth" identifier="he-bonebroth" variantof="he-poisoneffectpreset_spoon" health="20" category="Misc" subcategory="Food - Crawler" Tags="smallitem,fooditem,spoonfood,soup" description="A soup." maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="false" requireaimtouse="false">
+    <Item hideinmenus="false" name="Bone Broth" identifier="he-bonebroth" variantof="he-poisoneffectpreset_spoon" health="20" category="Misc" subcategory="Soups" Tags="smallitem,fooditem,spoonfood,soup" description="A soup." maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="false" requireaimtouse="false">
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
@@ -358,7 +358,7 @@
       <AiTarget sightrange="1000" static="true" />
     </Item>
 
-    <Item hideinmenus="false" name="Seaweed Soup" identifier="he-seaweedsoup" variantof="he-poisoneffectpreset_spoon" health="20" category="Misc" subcategory="Food - Crawler" Tags="smallitem,fooditem,spoonfood,soup" description="A soup." maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="false" requireaimtouse="false">
+    <Item hideinmenus="false" name="Seaweed Soup" identifier="he-seaweedsoup" variantof="he-poisoneffectpreset_spoon" health="20" category="Misc" subcategory="Soups" Tags="smallitem,fooditem,spoonfood,soup" description="A soup." maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="false" requireaimtouse="false">
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
@@ -427,7 +427,7 @@
       <AiTarget sightrange="1000" static="true" />
     </Item>
 
-    <Item hideinmenus="false" name="Fondue" identifier="he-fondue" variantof="he-poisoneffectpreset_spoon" health="10" category="Misc" subcategory="Food - Crawler" Tags="smallitem,fooditem,spoonfood,soup" description="A soup." maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="false" requireaimtouse="false">
+    <Item hideinmenus="false" name="Fondue" identifier="he-fondue" variantof="he-poisoneffectpreset_spoon" health="10" category="Misc" subcategory="Soups" Tags="smallitem,fooditem,spoonfood,soup" description="A soup." maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="false" requireaimtouse="false">
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
