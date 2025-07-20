@@ -202,7 +202,6 @@
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand,Any" holdangle="90" holdpos="-13,-30" handle1="-10,5" handle2="0,0" aimable="false" msg="ItemMsgPickUpSelect" />
     </Item>
     
-    <!-- PROTOTYPING SIMPLER FOOD. TODO: COPY THIS AND REPLACE ALL FOODS - FINGERFOOD VERSION -->
     <Item name="Fries" identifier="he-fries" health="25" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,allowinfryer,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
@@ -268,25 +267,28 @@
       </ItemContainer>
     </Item>
     
-    <!-- TODO: POUTINE SPRITE, holdpos, reenable PreferredContainer+Fabricate -->
-    <Item name="Poutine" identifier="he-poutine" health="25" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
-      <!-- <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
+    <Item hideinmenus="false" name="Poutine" identifier="he-poutine" variantof="he-poisoneffectpreset_fork" health="25" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+      <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
-      <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
-      <PreferredContainer primary="kitchen" secondary="table,crewcab"/> -->
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="123,92,41,16" depth="0.6" origin="0.5,0.5" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="173,96,27,41" origin="0.5,0.5" />
-      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="123,92,41,16" depth="0.525" origin="0.5,0.05"  />
-      <!-- <Fabricate suitablefabricators="oven" requiredtime="15" requiresrecipe="false" amount="1">
+      <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="927,30,68,29" depth="0.6" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="927,30,68,29" origin="0.5,0.5" />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="927,30,68,29" depth="0.525" origin="0.5,0.05"  />
+      <Fabricate suitablefabricators="oven" requiredtime="15" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="cooking" level="20" />
         <RequiredItem identifier="he-molochcheeseslice" amount="2"/>
         <RequiredItem identifier="he-fries" />
+        <RequiredItem identifier="he-seaweedstrip" />
+        <!-- TODO: replace ketchup with gravy once it's added -->
         <RequiredItem identifier="he-ketchup" UseCondition="True" MinCondition="0.2"/>
-      </Fabricate> -->
-      <Deconstruct time="1" requireddeconstructor="deconstructor"/>
-      <Body width="38" height="13" density="5" />
+        <RequiredItem identifier="he-emptyplate" amount="1" />
+      </Fabricate>
+      <Deconstruct time="4" requireddeconstructor="deconstructor">
+        <Item identifier="he-dirtyplate" amount="1" />
+      </Deconstruct>
+      <Body width="60" radius="10" density="11" />
       <SuitableTreatment type="hunger" suitability="20" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand,Any" holdangle="90" holdpos="-13,-30" handle1="-10,5" handle2="0,0" aimable="false" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="LeftHand,RightHand" holdangle="0" holdpos="36,-20" handle1="0,-18" handle2="0,-18" aimable="false" msg="ItemMsgPickUpSelect">
         <!-- EVERYTHING RELATED TO POISONING FOOD IS HANDLED VIA THE POISON EFFECT PRESET ITEMS DEFINED IN - variantof="" AND THEIR CODE IS LOCATED IN - "/Content/Items/#Presets/#ItemPresets.xml" -->
         
         <!--////////// BOT EATING \\\\\\\\\\-->
@@ -301,44 +303,39 @@
           <ReduceAffliction type="hunger" amount="1" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
-        
+
         <!--////////// REGULAR EATING \\\\\\\\\\-->
-        <!-- Use the item when it's held -->
-        <!-- -Condition -->
-        <StatusEffect type="OnSecondaryUse" target="This" Condition="-1" disabledeltatime="true" stackable="false" comparison="And" >
-          <Conditional HasStatusTag="neq emptyhand" />
+        <!-- Use the item when it's held and the fork in the other hand is used (indicated by applying a "usingfork" tag on the character which this item checks for) -->
+        <StatusEffect type="OnActive" target="This" Condition="-1.0" disabledeltatime="true" stackable="false" comparison="And">
+          <Conditional HasStatusTag="usingfork" targetcontainer="true" />
+          <Conditional HasStatusTag="neq emptyfork" targetcontainer="true" />
           <Conditional InWater="false" />
         </StatusEffect>
-        <!-- eating fries "animation" -->
-        <StatusEffect type="OnSecondaryUse" target="This" handle2="45,20" setvalue="true" duration="0.5" stackable="false" comparison="And">
-          <Conditional HasStatusTag="neq emptyhand" />
-          <Conditional InWater="false" />
-        </StatusEffect>
-        <StatusEffect type="OnSecondaryUse" target="This" handle2="0,0" delay="0.5" duration="0.1" setvalue="true" stackable="false" comparison="And">
-          <Conditional HasStatusTag="eq emptyhand" />
-          <Conditional InWater="false" />
-        </StatusEffect>
-        <!-- health effects -->
-        <StatusEffect type="OnSecondaryUse" target="Character" duration="1" stackable="false" comparison="And">
-          <Conditional HasStatusTag="neq emptyhand" />
+        <StatusEffect type="OnSecondaryUse" target="Character" disabledeltatime="true" stackable="false" comparison="And">
+          <Conditional HasStatusTag="usingfork" />
+          <Conditional HasStatusTag="neq emptyfork"/>
           <Conditional InWater="false" />
           <Affliction identifier="he-fatrich" amount="15.0" />
           <Affliction identifier="ate_friedfood" amount="1" />
           <Affliction identifier="he-stuffed" amount="1" />
           <ReduceAffliction type="hunger" amount="1" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="true" range="200" volume="5.0" selectionmode="Random" />
+          <Affliction identifier="spill" amount="1000" probability="0.0005" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork1.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork2.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork3.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork4.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork5.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
         </StatusEffect>
-        <!-- Prevent using this item continuously by applying the tag "emptyhand" which prevents the StatusEffect that uses the item from triggering again, effectively only allowing it to trigger once per mouse-click -->
-        <StatusEffect type="OnSecondaryUse" target="This,Character" StatusEffecttags="emptyhand" duration="0.5" stackable="false" />
+        <!-- Prevent using this item continuously by applying the tag "emptyfork" which prevents the StatusEffect that uses the item from triggering again, effectively only allowing it to trigger once per mouse-click -->
+        <StatusEffect type="OnActive" target="Character" tags="emptyfork" interval="0.1" duration="0.2">
+          <Conditional HasStatusTag="usingfork" />
+        </StatusEffect>
         <StatusEffect type="OnBroken" target="This" disabledeltatime="true">
           <Remove />
+          <SpawnItem identifier="he-dirtyplate" spawnposition="SameInventory" spawnifcantbecontained="true" />
         </StatusEffect>
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
-      <!-- Poison Container -->
-      <ItemContainer capacity="11" maxstacksize="1" hideitems="true" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="false" ShowContainedStateIndicator="false" removecontaineditemsondeconstruct="true">
-        <Containable items="poison,ethanol,huskeggsbasic,huskeggs,paralyxis" />
-      </ItemContainer>
     </Item>
     
     <Item hideinmenus="false" name="Pizza" identifier="he-pizza" variantof="he-poisoneffectpreset_regular" health="100" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_softitem">
