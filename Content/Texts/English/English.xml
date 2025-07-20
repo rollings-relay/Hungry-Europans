@@ -1147,6 +1147,8 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entityname.he-preparedmolochsteak>Seared Moloch Steak</entityname.he-preparedmolochsteak>
 <entitydescription.he-preparedmolochsteak>Moloch steak, seared with the largest pan you have. Spoils if not refrigerated.</entitydescription.he-preparedmolochsteak>
 
+<entityname.he-rawoffal>Raw Offal</entityname.he-rawoffal>
+<entitydescription.he-rawoffal>Small bits and pieces of organ meats. Spoils if not refrigerated.</entitydescription.he-rawoffal>
 
 
 <forcesay.eatingsound>*Om nom nom...*</forcesay.eatingsound>
