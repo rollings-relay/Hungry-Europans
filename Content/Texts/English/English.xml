@@ -73,7 +73,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-watcherhotdog>The taste leaves you staring holes into the air.</entitydescription.he-watcherhotdog><!--Patch 13-->
 <entityname.he-cookedwatchernugget>Nugget</entityname.he-cookedwatchernugget><!--Patch 13-->
 <entitydescription.he-cookedwatchernugget>The taste leaves you staring holes into the air.</entitydescription.he-cookedwatchernugget><!--Patch 13-->
-<entityname.he-cookedwatchersteak>Steak</entityname.he-cookedwatchersteak><!--Patch 13-->
+<entityname.he-cookedwatchersteak>Cooked Watcher Steak</entityname.he-cookedwatchersteak><!--Patch 13-->
 <entitydescription.he-cookedwatchersteak>The taste leaves you staring holes into the air.</entitydescription.he-cookedwatchersteak><!--Patch 13-->
 <!--moloch-->
 <entityname.he-molochburger>Burger</entityname.he-molochburger><!--Patch 13-->
@@ -81,9 +81,9 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entityname.he-molochhotdog>Hotdog</entityname.he-molochhotdog><!--Patch 13-->
 <entitydescription.he-molochhotdog>The taste makes you feel resilient</entitydescription.he-molochhotdog><!--Patch 13-->
 <entityname.he-cookedmolochnugget>Nugget</entityname.he-cookedmolochnugget><!--Patch 13-->
-<entitydescription.he-cookedmolochnugget>The taste makes you feel resilient</entitydescription.he-cookedmolochnugget><!--Patch 13-->
-<entityname.he-cookedmolochsteak>Moloch Tartare</entityname.he-cookedmolochsteak><!--Patch 13-->
-<entitydescription.he-cookedmolochsteak>Ground Moloch meat served raw with a cracked egg on top.</entitydescription.he-cookedmolochsteak><!--Patch 13-->
+<entitydescription.he-cookedmolochnugget>The taste makes you feel resilient</entitydescription.he-cookedmolochnugget><!--Patch 13--><entityname.he-cookedmolochsteak>Moloch Steak and Fries</entityname.he-cookedmolochsteak><!--Patch 18-->
+<entitydescription.he-cookedmolochsteak>A chewy Moloch steak and its fries, a roadhouse classic.</entitydescription.he-cookedmolochsteak><!--Patch 18-->
+
 <entityname.he-molochsushi>Moloch Sushi</entityname.he-molochsushi><!--Patch 13-->
 <entitydescription.he-molochsushi>Seasoned Moloch bits rolled in a leaf of Nori.</entitydescription.he-molochsushi><!--Patch 13-->
 <!--crawler-->
@@ -1140,6 +1140,13 @@ SEARCH FOR THE FOLLOWING:                                                       
 
 <entityname.he-sauerkraut>Sauerkraut</entityname.he-sauerkraut>
 <entitydescription.he-sauerkraut>Sausages and fermented raptor's bane. Best enjoyed with a beer and some yodeling.</entitydescription.he-sauerkraut>
+
+<entityname.he-molochtartare>Moloch Tartare</entityname.he-molochtartare><!--Patch 18-->
+<entitydescription.he-molochtartare>Ground Moloch meat served raw with a cracked egg on top.</entitydescription.he-molochtartare><!--Patch 18-->
+
+
+
+
 
 <forcesay.eatingsound>*Om nom nom...*</forcesay.eatingsound>
 <forcesay.eatingsound>*Gulp...*</forcesay.eatingsound>
