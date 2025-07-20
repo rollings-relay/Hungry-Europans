@@ -191,7 +191,7 @@
           <Conditional mass="lt 10" />
           <Conditional he-butchered="lt 100"/>
           <Affliction identifier="he-butchered" strength="10" />
-          <SpawnItem identifier="he-rawoffal" spawnposition="SameInventory" SpawnIfInventoryFull="true" probability="0.25" />
+          <SpawnItem identifier="he-rawoffal" spawnposition="SameInventory" SpawnIfInventoryFull="true" probability="0.35" />
         </StatusEffect> 
         
         <!--crawler
