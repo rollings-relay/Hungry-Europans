@@ -606,8 +606,8 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-fryer>Used for frying stuff. Needs power.</entitydescription.he-fryer><!--Patch 10-->
 <entityname.he-electricgrill>Electric Grill</entityname.he-electricgrill><!--Patch 10-->
 <entitydescription.he-electricgrill>Used for grilling meat. Needs power.</entitydescription.he-electricgrill><!--Patch 10-->
-<entityname.he-distiller>Distiller</entityname.he-distiller><!--Patch 10-->
-<entitydescription.he-distiller>Used to distill ethanol from sugar and sea yeast shrooms. Needs power.</entitydescription.he-distiller><!--Patch 10-->
+<entityname.he-distiller>Disti-Fermenter</entityname.he-distiller><!--Patch 10-->
+<entitydescription.he-distiller>Can be used to either distill ethanol or ferment foods. Needs power.</entitydescription.he-distiller><!--Patch 10-->
 <entityname.he-brewkettle>Brewing Kettle</entityname.he-brewkettle><!--Patch 10-->
 <entitydescription.he-brewkettle>Used to brew kegs of almost any kind of beverage. Needs power.</entitydescription.he-brewkettle><!--Patch 10-->
 <entityname.he-bottleprinter>Bottle Printer</entityname.he-bottleprinter><!--Patch 10-->
@@ -1128,6 +1128,16 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-mrepacket>Open it up to get 2 MRE rations.</entitydescription.he-mrepacket>
 <entityname.he-mreration>MRE - Dehydrated Ration</entityname.he-mreration>
 <entitydescription.he-mreration>A ready-to-eat meal of uncertain composition that does not spoil. Just pour water in and enjoy the moist gruel.</entitydescription.he-mreration>
+
+<entityname.he-fermentedraptorbane>Fermented Raptor's Bane</entityname.he-fermentedraptorbane>
+<entitydescription.he-fermentedraptorbane>When fermented, Raptor's Bane breaks apart and loses its toxicity, making it edible. If you can withstand its uniquely sour taste that is. </entitydescription.he-fermentedraptorbane>
+
+<entityname.he-fermentedsaltbulb>Fermented Salt Bulb</entityname.he-fermentedsaltbulb>
+<entitydescription.he-fermentedsaltbulb>Bacteria decomposes Salt Bulbs in the right environment, extracting all its deadly saltiness and giving it a subtle touch of acidity.</entitydescription.he-fermentedsaltbulb>
+
+<entityname.he-molochefort>Molochefort</entityname.he-molochefort>
+<entitydescription.he-molochefort>Someone once thought it would be a good idea to taste Moloch cheese half-eaten by bacteria; the result was surprisingly tasty. Boosts your immune system.</entitydescription.he-molochefort>
+
 
 <forcesay.eatingsound>*Om nom nom...*</forcesay.eatingsound>
 <forcesay.eatingsound>*Gulp...*</forcesay.eatingsound>

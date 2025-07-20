@@ -73,20 +73,24 @@
       <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.46" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="324,1,370,355" depth="0.797" origin="0.5,0.5" />
       <DecorativeSprite name="background shake" texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="324,1,370,355" depth="0.796" origin="0.5,0.5" offset="3,3" offsetanim="Noise" offsetanimspeed="3" comparison="and" >
-        <AnimationConditional Voltage="gt 0.5" targetitemcomponent="Deconstructor" />
-        <IsActiveConditional IsActive="True" targetitemcomponent="Deconstructor" />
+        <AnimationConditional Voltage="gt 0.5" targetitemcomponent="Fabricator" />
+        <IsActiveConditional IsActive="True" targetitemcomponent="Fabricator" />
       </DecorativeSprite>
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="324,357,370,355" depth="0.795" origin="0.5,0.5" maxcondition="80" fadein="true" />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="324,713,370,355" depth="0.794" origin="0.5,0.5" maxcondition="0" fadein="false" />
-      <Deconstructor canbeselected="true" showoutput="false" powerconsumption="250.0" deconstructitemssimultaneously="true" msg="ItemMsgInteractSelect" activatebuttontext="researchstation.invalidinput" infotext="distiller.empty" infoareawidth="0.7">
-        <GuiFrame relativesize="0.25,0.3" style="ItemUI" anchor="Center" />
+      
+      <Fabricator selectkey="Select" canbeselected="true" powerconsumption="250.0" msg="ItemMsgInteractSelect">
+        <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
         <poweronsound file="Content/Items/PowerOnLight3.ogg" range="600" loop="false" />
         <StatusEffect type="OnActive" targettype="This" offset="-60,-40">
           <sound file="%ModDir:2954998725%/Content/Sounds/Items/Fabricators/Distiller.ogg" type="OnActive" range="600.0" loop="true" volume="5.0" />          
           <ParticleEmitter particle="steamspray" particlespersecond="20" anglemin="75" anglemax="105" scalemin="0.5" scalemax="1" velocitymin="50" velocitymax="100" highqualitycollisiondetection="true" />
         </StatusEffect>
+        <StatusEffect type="OnActive" targettype="Contained" targets="yeastshroom,slimebacteria" condition="-0.2" >
+        </StatusEffect>
         <StatusEffect type="InWater" target="This" condition="-0.5" />
-      </Deconstructor>
+      </Fabricator>
+      
       <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
         <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
         <RequiredSkill identifier="electrical" level="55" />
@@ -126,16 +130,20 @@
           <Affliction identifier="burn" strength="5" />
         </StatusEffect>
       </Repairable>
-      <ItemContainer selectkey="Select" capacity="1" canbeselected="true" hideitems="true" slotsperrow="2" uilabel="" allowuioverlap="true">
-        <!-- <SlotIcon slotindex="1" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="492,0,85,85" origin="0.5,0.5" /> -->
+      <ItemContainer selectkey="Select" capacity="1" canbeselected="true" hideitems="true" slotsperrow="3" uilabel="" allowuioverlap="true">
+        <SlotIcon slotindex="1" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="407,0,85,85" origin="0.5,0.5" />
+        <SlotIcon slotindex="2" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="173,67,42,67" origin="0.5,0.5" />
         <Containable items="distilleringredient" />
-        <SubContainer capacity="1" maxstacksize="1">
-          <Containable items="distilleradditive,yeastshroom" />
+        <SubContainer capacity="1" maxstacksize="1" >
+          <Containable items="yeastshroom,slimebacteria" />
+        </SubContainer>
+        <SubContainer capacity="1" maxstacksize="1" >
+          <Containable items="emptyjar" />
         </SubContainer>
       </ItemContainer>
-      <ItemContainer selectkey="Select" capacity="3" canbeselected="true" hideitems="true" slotsperrow="3" uilabel="" allowuioverlap="true">
-        <Containable items="smallitem" />
+      <ItemContainer selectkey="Select" capacity="1" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="" allowuioverlap="true">      
       </ItemContainer>
+      
     </Item>
     
     <!-- Brews kegs of various liquids  -->

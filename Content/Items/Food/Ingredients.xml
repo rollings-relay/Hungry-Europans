@@ -147,9 +147,6 @@
         <Price storeidentifier="merchantmedical"/>
       </Price>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
-      <Deconstruct time="60" requireddeconstructor="distiller">
-        <Item identifier="ethanol" amount="4" requiredotheritem="yeastshroom" activatebuttontext="distiller.distill" infotext="distiller.ethanol" infotextonotheritemmissing="distiller.missingitem.yeastshroom" />
-      </Deconstruct>
       <Fabricate suitablefabricators="stove" requiredtime="40" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="cooking" level="30" />
         <RequiredItem tag="sugary" amount="2" />
