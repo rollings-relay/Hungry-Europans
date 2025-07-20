@@ -175,7 +175,6 @@
           <ParticleEmitter particle="steamspray" particleamount="5" velocitymin="20" velocitymax="50" distancemin="0" distancemax="10" anglemin="40" anglemax="130" scalemin="0.75" scalemax="1.25" colormultiplier="255,255,255,255" lifetimemultiplier="1" />
         </StatusEffect>
         <StatusEffect type="InWater" target="This" condition="-0.5" />
-        <StatusEffect type="OnContaining" targettype="Contained" targets="canspoil" condition="0.05" />
         <StatusEffect type="OnActive" targettype="This" condition="-0.05">
           <Conditional Voltage="gt 0.5" />
         </StatusEffect>
@@ -399,7 +398,6 @@
           <sound file="%ModDir:2954998725%/Content/Sounds/Items/Fabricators/CookingPot.ogg" type="OnActive" range="500.0" loop="true" volume="5.0" />
           <poweronsound file="Content/Items/PowerOnLight1.ogg" range="600" loop="false" />
         <StatusEffect type="InWater" target="This" condition="-0.5" />
-        <StatusEffect type="OnContaining" targettype="Contained" targets="canspoil" condition="0.05" />
         <StatusEffect type="OnActive" targettype="This" condition="-0.05" />
       </Fabricator>
       <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
@@ -617,7 +615,6 @@
           <!--<ParticleEmitter particle="fleshsmoke" particlespersecond="2" scalemin="1" scalemax="2" angle="270" distance="-30" />-->
           <sound file="%ModDir:2954998725%/Content/Sounds/Items/Fabricators/CookingPot.ogg" type="OnActive" range="500.0" loop="true" volume="5.0" />
         </StatusEffect>
-        <StatusEffect type="OnContaining" targettype="Contained" targets="canspoil" condition="0.05" />
         <StatusEffect type="OnActive" targettype="This" condition="-0.05">
           <Conditional Voltage="gt 0.5" />
         </StatusEffect>
@@ -718,7 +715,6 @@
         <StatusEffect type="OnActive" targettype="This" IsOn="false">
           <Conditional attached="false" targetitemcomponentname="Holdable"/>
         </StatusEffect>
-        <StatusEffect type="OnContaining" targettype="Contained" targets="canspoil" condition="0.05" />
         <StatusEffect type="OnActive" targettype="This" condition="-0.05">
           <Conditional Voltage="gt 0.5" />
         </StatusEffect>
