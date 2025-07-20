@@ -71,9 +71,17 @@
         <RequiredItem identifier="fpgacircuit" amount="2"/>
       </Fabricate>
       <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.46" />
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="324,1,370,355" depth="0.797" origin="0.5,0.5" />
-      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="324,1,370,355" depth="0.8" origin="0.5,0.5" />
-      <DecorativeSprite name="background shake" texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="324,1,370,355" depth="0.796" origin="0.5,0.5" offset="3,3" offsetanim="Noise" offsetanimspeed="3" comparison="and" >
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="324,1,370,355" depth="0.791" origin="0.5,0.5" />
+      <DecorativeSprite name="background shake" texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="324,1,370,355" depth="0.790" origin="0.5,0.5" offset="1,1" offsetanim="Noise" offsetanimspeed="3" comparison="and" >
+        <AnimationConditional Voltage="gt 0.5" targetitemcomponent="Fabricator" />
+        <IsActiveConditional IsActive="True" targetitemcomponent="Fabricator" />
+      </DecorativeSprite>
+      <DecorativeSprite name="background wall" texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="325,1069,91,82" depth="0.799" origin="0.3,0.2" />
+      <DecorativeSprite name="bubbles left" texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="417,1069,98,98" depth="0.792" origin="0.5,0.5" offset="-17,-20" comparison="and" rotationspeed="-300" >
+        <AnimationConditional Voltage="gt 0.5" targetitemcomponent="Fabricator" />
+        <IsActiveConditional IsActive="True" targetitemcomponent="Fabricator" />
+      </DecorativeSprite>
+      <DecorativeSprite name="bubbles right" texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="417,1069,98,98" depth="0.792" origin="0.5,0.5" offset="40,-20" comparison="and" rotationspeed="300" >
         <AnimationConditional Voltage="gt 0.5" targetitemcomponent="Fabricator" />
         <IsActiveConditional IsActive="True" targetitemcomponent="Fabricator" />
       </DecorativeSprite>
@@ -131,7 +139,7 @@
           <Affliction identifier="burn" strength="5" />
         </StatusEffect>
       </Repairable>
-      <ItemContainer selectkey="Select" capacity="1" canbeselected="true" hideitems="true" itempos="190,-190" slotsperrow="3" uilabel="" allowuioverlap="true"  iteminterval="5,-2" itemsperrow="10" containedspritedepths="0.794,0.999,0.999,0.999,0.999,0.999,0.999,0.999,0.999,0.999,0.999" >
+      <ItemContainer selectkey="Select" capacity="1" canbeselected="true" hideitems="true" itempos="180,-200" iteminterval="40,1" itemrotation="0" itemsperrow="2" containedspritedepths="0.797,0.798,0.799,0.799,0.799,0.799,0.799,0.799,0.799,0.799,0.799,0.799,0.799,0.799,0.799,0.799" slotsperrow="3" uilabel="" allowuioverlap="true">
         <SlotIcon slotindex="1" texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="407,0,85,85" origin="0.5,0.5" />
         <SlotIcon slotindex="2" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="173,67,42,67" origin="0.5,0.5" />
         <Containable items="distilleringredient" />
