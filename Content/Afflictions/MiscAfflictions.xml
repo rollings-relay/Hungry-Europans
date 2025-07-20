@@ -1148,7 +1148,7 @@
       <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/PassOutOverlay.png" />
     </Affliction>
     
-    <Affliction identifier="he-passout" showiconthreshold="0" showinhealthscannerthreshold="0" maxstrength="100" afflictionoverlayalphaislinear="true" healableinmedicalclinic="false" MedicalSkillGain="0.0">
+    <Affliction identifier="he-passout" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="true" healableinmedicalclinic="false" MedicalSkillGain="0.0">
       <!-- Adjust strengthchange to ramp up the overlay. Stun applies 100 passout per second, so at -50 it ramps up at 50 per second (2 second to blackout) 
            There are 3 stages, first one for not passing out on small stuns, second one for blacking out, and last one for 100% opacity overlay (relying on -strength change alone will keep the overlay at 98%, not fully opaque) -->
       <Effect minstrength="0" maxstrength="50" strengthchange="-80" MinAfflictionOverlayAlphaMultiplier="0" MaxAfflictionOverlayAlphaMultiplier="0.5">
