@@ -610,15 +610,15 @@
       <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.46" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1886,84,162,35" depth="0.796" origin="0.47,0.86" />
       <!-- DecorativeSprite to display the pan when it is contained -->
-      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1753,105,76,10" origin="0.47,1" depth="0.794" comparison="And">
+      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1753,105,76,10" origin="0.69,0.9" depth="0.793" comparison="And">
         <IsActiveConditional HasTag="pan" targetcontaineditem="true" />
       </DecorativeSprite>
       <!-- DecorativeSprite to display the pot when it is contained -->
-      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1725,121,162,35" origin="0.47,1" depth="0.795" comparison="And">
+      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1725,121,162,50" origin="0.47,0.95" depth="0.795" comparison="And">
         <IsActiveConditional HasTag="pot" targetcontaineditem="true" />
       </DecorativeSprite>
       <!-- DecorativeSprite to display the kettle when it is contained -->
-      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,426,81,85" origin="0.6,1" depth="0.793" comparison="And">
+      <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,426,81,85" origin="0.65,0.99" depth="0.794" comparison="And">
         <IsActiveConditional HasTag="kettle" targetcontaineditem="true" />
       </DecorativeSprite>
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1886,137,162,35" depth="0.795" origin="0.47,0.86" maxcondition="80" fadein="true" />
@@ -643,8 +643,8 @@
           <SpawnItem identifier="effect_firestarter" spawnposition="ThisInventory" Probability="0.05"/>
         </StatusEffect>
       </Fabricator>
-      <LightComponent LightColor="200,120,80,180" LightOffset="5,5" flicker="0.3" flickerspeed="0.5" IsOn="true" powerconsumption="1" range="1" castshadows="false" allowingameediting="false" canbeselected="false" comparison="And" scale="0.7">
-        <Sprite texture="Content/Items/Electricity/SignalComp.png" depth="0.685" sourcerect="483,820,225,18" origin="0.5,0.5" />
+      <LightComponent LightColor="200,120,80,180" LightOffset="0,0" flicker="0.3" flickerspeed="0.5" IsOn="true" powerconsumption="1" range="1" castshadows="false" allowingameediting="false" canbeselected="false" comparison="And" scale="1.0">
+        <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.792" sourcerect="1723,56,162,35" origin="0.47,0.86" />
         <IsActiveConditional isActive="true" targetitemcomponent="Fabricator" />
       </LightComponent>
       <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
