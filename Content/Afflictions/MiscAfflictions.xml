@@ -1168,6 +1168,17 @@
           <Affliction identifier="he-passout" strength="-1" />
         </StatusEffect>          
       </Effect>
+      <PeriodicEffect minstrength="99" maxstrength="100" mininterval="5" maxinterval="8">
+        <StatusEffect target="Character" duration="2">
+          <ReduceAffliction identifier="he-passout" strength="90" />
+          <Sound file="Content/Sounds/HeartbeatDiastole1.ogg" range="200" frequencymultiplier="0.75" volume="2" selectionmode="random" />
+          <Sound file="Content/Sounds/HeartbeatDiastole2.ogg" range="200" frequencymultiplier="0.75" volume="2" selectionmode="random" />   
+          <Sound file="Content/Sounds/HeartbeatDiastole3.ogg" range="200" frequencymultiplier="0.75" volume="2" selectionmode="random" />   
+          <Sound file="Content/Sounds/HeartbeatSystole1.ogg" range="200" frequencymultiplier="0.75" volume="2" selectionmode="random" />
+          <Sound file="Content/Sounds/HeartbeatSystole2.ogg" range="200" frequencymultiplier="0.75" volume="2" selectionmode="random" />   
+          <Sound file="Content/Sounds/HeartbeatSystole3.ogg" range="200" frequencymultiplier="0.75" volume="2" selectionmode="random" />   
+        </StatusEffect>
+      </PeriodicEffect>
       <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/PassOutOverlay.png" />
     </Affliction>
     
