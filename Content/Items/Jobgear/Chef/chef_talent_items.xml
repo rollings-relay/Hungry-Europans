@@ -76,18 +76,15 @@
       <CustomInterface canbeselected="true" drawhudwhenequipped="false">
         <GuiFrame style="ItemUI" absoluteoffset="0,-100" anchor="Center" relativesize="0.15,0.12"/>
         <TickBox text="interaction.onoff">
-          <StatusEffect type="OnUse" target="This" IsOn="true">
-            <Conditional IsOn="false" targetitemcomponent="LightComponent" />
-          </StatusEffect>
-          <StatusEffect type="OnSecondaryUse" target="This" IsOn="false" >
-            <Conditional IsOn="true" targetitemcomponent="LightComponent" />
-          </StatusEffect>
+          <StatusEffect type="OnUse" target="This" StatusEffectTags="sprinkleractive" duration="0.1" stackable="false" />
+          <StatusEffect type="OnSecondaryUse" target="This" StatusEffectTags="sprinklerinactive" duration="0.1" />
         </TickBox>
         <TextBox text="Set Cooldown" propertyname="capacity" targetitemcomponent="PowerContainer" maxtextlength="3" />
       </CustomInterface>
       <!-- Keg Not Empty -->
       <LightComponent range="0.0" lightcolor="100,255,50,111" flicker="0.1" flickerspeed="0.5" IsOn="false" castshadows="false" alphablend="false" allowingameediting="false" powerconsumption="50">
         <sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="106,1234,105,251" depth="0.1" origin="0.5,0.5" alpha="1.0" />
+        <IsActiveConditional hasstatustag="sprinkleractive"/>
         <IsActiveConditional targetcontaineditem="true" conditionpercentage="gt 0"/>
         <StatusEffect type="OnActive" target="This" interval="1" Charge="-1" disabledeltatime="true" >
           <Conditional chargepercentage="gt 0" targetitemcomponent="PowerContainer"/>
@@ -96,6 +93,7 @@
       <!-- Keg <20% -->
       <LightComponent range="0.0" lightcolor="255,0,0,111" blinkfrequency="1" pulseamount="0.0" pulsefrequency="0" flicker="0.1" flickerspeed="0.5" IsOn="false" castshadows="false" alphablend="false" allowingameediting="false" powerconsumption="5">
         <sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="106,1234,105,251" depth="0.1" origin="0.5,0.5" alpha="1.0" />
+        <IsActiveConditional hasstatustag="sprinkleractive"/>
         <IsActiveConditional targetcontaineditem="true" conditionpercentage="lte 20"/>
       </LightComponent>
       
