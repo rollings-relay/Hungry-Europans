@@ -313,7 +313,7 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,386,42,67" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,386,42,67" depth="0.525" origin="0.5,0.84"  />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="43,386,42,67" depth="0.6" maxcondition="99" />
-      <Fabricate suitablefabricators="distiller" requiredtime="60" amount="1">
+      <Fabricate suitablefabricators="distiller" requiredtime="160" amount="1">
         <RequiredSkill identifier="cooking" level="50" />
         <RequiredItem identifier="raptorbane" amount="3" />
         <RequiredItem identifier="slimebacteria" amount="1" MinCondition="0.0" UseCondition="True" />
@@ -382,7 +382,7 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,386,42,67" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,386,42,67" depth="0.525" origin="0.5,0.84"  />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="43,386,42,67" depth="0.6" maxcondition="99" />
-      <Fabricate suitablefabricators="distiller" requiredtime="60" amount="1">
+      <Fabricate suitablefabricators="distiller" requiredtime="160" amount="1">
         <RequiredSkill identifier="cooking" level="50" />
         <RequiredItem identifier="saltbulb" amount="3" />
         <RequiredItem identifier="slimebacteria" amount="1" MinCondition="0.0" UseCondition="True" />
