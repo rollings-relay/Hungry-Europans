@@ -6,7 +6,7 @@
     <!--OVERRIDES-->
     <!--OVERRIDES-->
     
-    <Ethanol name="" identifier="ethanol" category="Medical,Material" scale="0.5" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,chem,cleaningagent,medical,petfood2" impactsoundtag="impact_metal_light" useinhealthinterface="true" requireaimtouse="true" isshootable="False" health="11">
+    <Ethanol name="" identifier="ethanol" category="Medical,Material" scale="0.5" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,chem,cleaningagent,distilleringredient,medical,petfood2" impactsoundtag="impact_metal_light" useinhealthinterface="true" requireaimtouse="true" isshootable="False" health="11">
       <PreferredContainer primary="sprayer" amount="1" spawnprobability="1"/>
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.2" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="2" spawnprobability="0.3" />

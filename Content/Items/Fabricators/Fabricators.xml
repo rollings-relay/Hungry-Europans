@@ -147,7 +147,7 @@
           <Containable items="yeastshroom,slimebacteria" />
         </SubContainer>
         <SubContainer capacity="1" maxstacksize="1" >
-          <Containable items="emptyjar" />
+          <Containable items="emptyjar,emptybottle,emptyshaker" />
         </SubContainer>
       </ItemContainer>
       <ItemContainer selectkey="Select" capacity="1" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="" allowuioverlap="true">      
