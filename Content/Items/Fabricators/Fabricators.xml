@@ -92,7 +92,7 @@
         <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
         <poweronsound file="Content/Items/PowerOnLight3.ogg" range="600" loop="false" />
         <StatusEffect type="OnActive" targettype="This" offset="-60,-40">
-          <sound file="%ModDir:2954998725%/Content/Sounds/Items/Fabricators/Distiller.ogg" type="OnActive" range="600.0" loop="true" volume="5.0" />          
+          <sound file="%ModDir:2954998725%/Content/Sounds/Items/Fabricators/Distiller.ogg" type="OnActive" range="600.0" loop="true" volume="8.0" />
           <ParticleEmitter particle="steamspray" particlespersecond="20" anglemin="75" anglemax="105" scalemin="0.5" scalemax="1" velocitymin="50" velocitymax="100" highqualitycollisiondetection="true" />
         </StatusEffect>
         <StatusEffect type="OnActive" targettype="Contained" targets="yeastshroom,slimebacteria" condition="-0.2" >
