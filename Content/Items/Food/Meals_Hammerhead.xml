@@ -11,7 +11,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="582,0,68,29" depth="0.6" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="582,0,68,29" depth="0.525" origin="0.5,0.65" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="582,0,68,29" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="48" requiresrecipe="false" amount="1" displayname="hammerheadfooditem">
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="48" requiresrecipe="false" amount="1" >
         <RequiredSkill identifier="cooking" level="50" />
         <RequiredItem identifier="he-preparedhammerheadroast" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
         <RequiredItem tag="omelette" UseCondition="True" mincondition="0.5" />
@@ -21,7 +21,7 @@
       <Deconstruct time="4" requireddeconstructor="deconstructor">
         <Item identifier="he-dirtyplate" amount="1" />
       </Deconstruct>
-      <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="345" fabricationlimitmin="0" fabricationlimitmax="10" displayname="hammerheadfooditem" />
+      <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="225" fabricationlimitmin="0" fabricationlimitmax="7" />
       <Body width="60" radius="10" density="11" />
       <SuitableTreatment type="hunger" suitability="90" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="LeftHand,RightHand" holdangle="0" holdpos="36,-20" handle1="0,-18" handle2="0,-18" aimable="false" msg="ItemMsgPickUpSelect">
