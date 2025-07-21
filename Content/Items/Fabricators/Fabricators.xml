@@ -644,7 +644,7 @@
         </StatusEffect>
       </Fabricator>
       <LightComponent LightColor="200,120,80,180" LightOffset="0,0" flicker="0.3" flickerspeed="0.5" IsOn="true" powerconsumption="1" range="1" castshadows="false" allowingameediting="false" canbeselected="false" comparison="And" scale="1.0">
-        <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.792" sourcerect="1723,56,162,35" origin="0.47,0.86" />
+        <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.792" sourcerect="1723,81,162,6" origin="0.47,0.85" />
         <IsActiveConditional isActive="true" targetitemcomponent="Fabricator" />
       </LightComponent>
       <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
