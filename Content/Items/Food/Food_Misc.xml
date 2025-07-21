@@ -11,7 +11,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="202,469,54,18" depth="0.6" origin="0.5,0.5" />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="207,490,49,23" depth="0.6" maxcondition="99" />
       <InventoryIcon texture="Content/Items/InventoryIconAtlas2.png" sourcerect="0,768,64,64" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="vendingmachinefood,cafeteria" requiredtime="3" requiredmoney="29" fabricationlimitmin="0" fabricationlimitmax="10" />
+      <Fabricate suitablefabricators="vendingmachinefood,cafeteria" requiredtime="3" requiredmoney="29" fabricationlimitmin="0" fabricationlimitmax="7" />
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="47" radius="13" density="9" />
       <SuitableTreatment type="hunger" suitability="25" />
@@ -58,7 +58,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="109,164,40,42" depth="0.6" origin="0.5,0.5" />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="110,150,28,13" depth="0.6" maxcondition="99" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="109,164,40,42" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="vendingmachinefood,cafeteria" requiredtime="3" requiredmoney="39" fabricationlimitmin="0" fabricationlimitmax="10" />
+      <Fabricate suitablefabricators="vendingmachinefood,cafeteria" requiredtime="3" requiredmoney="39" fabricationlimitmin="0" fabricationlimitmax="7" />
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="35" height="36" density="9.4" />
       <SuitableTreatment type="hunger" suitability="25" />
@@ -108,7 +108,7 @@
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,207,48,67" depth="0.525" origin="0.5,0.85"  />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="49,207,48,67" depth="0.6" maxcondition="99" />
       <!--<InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,207,48,67" origin="0.5,0.5" />-->
-      <Fabricate suitablefabricators="vendingmachinefood,cafeteria" requiredtime="3" requiredmoney="19" fabricationlimitmin="0" fabricationlimitmax="10" />
+      <Fabricate suitablefabricators="vendingmachinefood,cafeteria" requiredtime="3" requiredmoney="19" fabricationlimitmin="0" fabricationlimitmax="7" />
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="46" height="64" density="9" />
       <SuitableTreatment type="hunger" suitability="20" />
@@ -166,7 +166,7 @@
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="99,207,48,67" depth="0.525" origin="0.5,0.85"  />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="148,207,48,67" depth="0.6" maxcondition="99" />
       <!--<InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,207,48,67" origin="0.5,0.5" />-->
-      <Fabricate suitablefabricators="vendingmachinefood,cafeteria" requiredtime="3" requiredmoney="19" fabricationlimitmin="0" fabricationlimitmax="10" />
+      <Fabricate suitablefabricators="vendingmachinefood,cafeteria" requiredtime="3" requiredmoney="19" fabricationlimitmin="0" fabricationlimitmax="7" />
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="46" height="64" density="9" />
       <SuitableTreatment type="hunger" suitability="20" />
@@ -524,7 +524,7 @@
         <Price storeidentifier="merchantmilitary" minavailable="5" maxavailable="20" sold="true" />
         <Price storeidentifier="merchantmine" minavailable="1" maxavailable="10" sold="true" />
       </Price>
-      <Fabricate suitablefabricators="vendingmachinefood" requiredtime="3" requiredmoney="125" fabricationlimitmin="0" fabricationlimitmax="10" />
+      <Fabricate suitablefabricators="vendingmachinefood" requiredtime="3" requiredmoney="125" fabricationlimitmin="0" fabricationlimitmax="7" />
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,139,47,67" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,139,47,67" origin="0.5,0.5" />

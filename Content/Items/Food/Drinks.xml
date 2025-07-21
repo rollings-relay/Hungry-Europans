@@ -175,7 +175,7 @@
         <Price storeidentifier="merchantmilitary" multiplier="1.1" sold="false" />
         <Price storeidentifier="merchantmine" multiplier="1.1" sold="false" />
       </Price>
-      <Fabricate suitablefabricators="piratestore" requiredtime="3" requiredmoney="175" fabricationlimitmin="0" fabricationlimitmax="10" />
+      <Fabricate suitablefabricators="piratestore" requiredtime="3" requiredmoney="175" fabricationlimitmin="0" fabricationlimitmax="7" />
       <Fabricate suitablefabricators="refillstation" displayname="fill" requiredtime="5" requiresrecipe="false" amount="1">
         <RequiredItem identifier="he-kegrum" UseCondition="True" MinCondition="0.05"/>
         <RequiredItem tag="emptybottlerum" Amount="1"/>
@@ -362,7 +362,7 @@
       <Price baseprice="299" sold="true">
         <Price storeidentifier="merchantnightclub" multiplier="2.0" minavailable="0" maxavailable="5" sold="true" />
       </Price>
-      <Fabricate suitablefabricators="piratestore" requiredtime="3" requiredmoney="299" fabricationlimitmin="0" fabricationlimitmax="10" />
+      <Fabricate suitablefabricators="piratestore" requiredtime="3" requiredmoney="299" fabricationlimitmin="0" fabricationlimitmax="7" />
       <Fabricate suitablefabricators="refillstation" displayname="fill" requiredtime="5" requiresrecipe="false" amount="1">
         <RequiredItem identifier="he-kegpiraterum" UseCondition="True" MinCondition="0.05"/>
         <RequiredItem tag="emptybottlerum" Amount="1"/>

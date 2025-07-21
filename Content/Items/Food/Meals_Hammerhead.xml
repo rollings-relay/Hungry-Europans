@@ -90,7 +90,7 @@
         <RequiredItem identifier="he-cookingoil" UseCondition="True" MinCondition="0.1"/>
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
-      <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="300" fabricationlimitmin="0" fabricationlimitmax="10" displayname="hammerheadfooditem" />
+      <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="80" fabricationlimitmin="0" fabricationlimitmax="7" displayname="hammerheadfooditem" />
       <Body width="61" radius="18" density="12" />
       <SuitableTreatment type="hunger" suitability="95" />
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
