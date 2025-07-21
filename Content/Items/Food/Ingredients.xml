@@ -52,7 +52,7 @@
           <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="1000" />
         </StatusEffect>
         <StatusEffect type="OnImpact" target="This" >
-          <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+          <ParticleEmitter particle="whiteshards" colormultiplier="255,255,255,180" anglemin="0" anglemax="360" particleamount="4" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
           <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -117,7 +117,7 @@
           <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="1000" />
         </StatusEffect>
         <StatusEffect type="OnImpact" target="This" >
-          <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+          <ParticleEmitter particle="whiteshards" colormultiplier="255,255,255,180" anglemin="0" anglemax="360" particleamount="4" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
           <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
