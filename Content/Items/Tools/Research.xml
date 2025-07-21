@@ -14,6 +14,12 @@
           <Conditional hasspecifiertag="male"/>
           <Conditional hasspecifiertag="female"/>
         </StatusEffect>
+        <StatusEffect type="OnUse" target="This,Character" comparison="And">
+          <Conditional skillrequirement="true" cooking="lt 5" />
+          <Conditional skillrequirement="true" butchery="lt 5" />
+          <GiveSkill skillidentifier="cooking" amount="5" triggertalents="false" />
+          <GiveSkill skillidentifier="butchery" amount="5" triggertalents="false" />
+        </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional ishuman="true" />
           <Conditional hasspecifiertag="male"/>
