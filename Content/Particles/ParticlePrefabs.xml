@@ -265,4 +265,62 @@
       texture="Content/Particles/ParticleAtlas.png"
       sourcerect="224,96,32,32" />
   </whiteshards>
+
+  <whitechunks
+    lifetime="3"
+    angularvelocitymin="-500"
+    angularvelocitymax="500"
+    startrotationmin="0"
+    startrotationmax="360"
+    rotatetodirection="False"
+    drag="0"
+    waterdrag="0.3"
+    velocitychange="0,-8"
+    velocitychangewater="0,-1"
+    collisionradius="10"
+    usecollision="True"
+    deleteoncollision="True"
+    friction="0.5"
+    restitution="0.5"
+    startsizemin="0.8,0.8"
+    startsizemax="1,1"
+    sizechangemin="-0.5,-0.5"
+    sizechangemax="-0.5,-0.5"
+    growtime="0"
+    startcolor="255,255,255,255"
+    endcolor="100,50,0,0"
+    drawtarget="Both"
+    blendstate="AlphaBlend"
+    animduration="1"
+    loopanim="True"
+    startdelaymin="0"
+    startdelaymax="0"
+    drawontop="False"
+    lifetimemin="0"
+    middlecolor="255,255,255,255"
+    usemiddlecolor="False"
+    priority="0">
+    <sprite
+      texture="Content/Particles/ParticleAtlas.png"
+      sourcerect="0,64,32,32" />
+    <sprite
+      texture="Content/Particles/ParticleAtlas.png"
+      sourcerect="32,64,32,32" />
+    <sprite
+      texture="Content/Particles/ParticleAtlas.png"
+      sourcerect="64,64,32,32" />
+    <sprite
+      texture="Content/Particles/ParticleAtlas.png"
+      sourcerect="96,64,32,32" />
+    <sprite
+      texture="Content/Particles/ParticleAtlas.png"
+      sourcerect="128,64,32,32" />
+    <sprite
+      texture="Content/Particles/ParticleAtlas.png"
+      sourcerect="160,64,48,32" />
+    <sprite
+      texture="Content/Particles/ParticleAtlas.png"
+      sourcerect="208,64,48,32" />
+  </whitechunks>
+  
 </prefabs>
