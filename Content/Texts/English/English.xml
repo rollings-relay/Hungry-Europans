@@ -970,9 +970,13 @@ SEARCH FOR THE FOLLOWING:                                                       
 
 
 
-<!-- HUBERT ADDITIONS UNDER THIS -->
-<!-- HUBERT ADDITIONS UNDER THIS -->
-<!-- HUBERT ADDITIONS UNDER THIS
+<!-- NEW ADDITIONS UNDER THIS -->
+<!-- NEW ADDITIONS UNDER THIS -->
+<!-- NEW ADDITIONS UNDER THIS -->
+<!-- NEW ADDITIONS UNDER THIS -->
+<!-- NEW ADDITIONS UNDER THIS -->
+<!-- NEW ADDITIONS UNDER THIS -->
+<!-- NEW ADDITIONS UNDER THIS
 
  TODO: sort this text in proper places when done  -->
 
@@ -1156,6 +1160,8 @@ SEARCH FOR THE FOLLOWING:                                                       
 <forcesay.eatingsound>*Hmmmf...*</forcesay.eatingsound>
 
 <displayname.boil>[itemname] (Boil)</displayname.boil>
+
+<interaction.emptypot>Empty the pot</interaction.emptypot>
 
 <!-- Tools -->
 <entityname.he-spoon>Spoon</entityname.he-spoon>
