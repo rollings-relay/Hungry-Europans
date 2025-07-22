@@ -16,7 +16,7 @@
   <!-- VANILLA PLANTS -->
   <!-- VANILLA PLANTS -->
   
-  <Item name="Pomegrenade" identifier="creepingorange" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,fooditem,sugary,petfood1,petfood2,petfood3,distilleringredient" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="True" requireaimtouse="true" isshootable="true" >
+  <Item name="Pomegrenade" identifier="creepingorange" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,fooditem,sugary,petfood1,petfood2,petfood3,distilleringredient" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="True" requireaimtouse="true" isshootable="true" health="10">
     <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.52" sourcerect="971,649,43,55" origin="0.5,0.5" />
     <Body radius="30" density="5" />
     <Price baseprice="20" sold="false">
@@ -40,25 +40,18 @@
     <Holdable characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="23,20" holdangle="0" holdpos="20,-30" aimangle="0" msg="ItemMsgPickUpSelect" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" >
       <!-- TODO: fix eating without aiming for throwable if devs allow us to https://github.com/FakeFishGames/Barotrauma/discussions/16166 
       in the meantime, change the holdpos (this is dumb) -->
-      <StatusEffect type="OnUse" target="This" condition="-8" statuseffecttags="iseating" duration="0.1" stackable="false" />
+      
+      <StatusEffect type="OnUse" target="This" condition="-1" statuseffecttags="iseating" duration="0.1" stackable="false" />
       <StatusEffect type="OnUse" target="Character">
         <Affliction identifier="he-stuffed" amount="0.1" />
-        <ReduceAffliction type="damage" amount="0.1" />
+        <ReduceAffliction type="hunger" amount="0.8" />
+        <ReduceAffliction type="thirst" amount="0.8" />
+        <Affliction identifier="fillbladder" amount="0.8" />
+        <Affliction identifier="he-vitaminrich" amount="5.0" />
         <ParticleEmitter particle="fruitchunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="230,255,255,255" />
         <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
       </StatusEffect>
-      <StatusEffect type="OnUse" target="Character">
-        <Conditional hunger="gt 0.8" />
-        <ReduceAffliction type="hunger" amount="0.8" />
-      </StatusEffect>
-      <StatusEffect type="OnUse" target="Character">
-        <Conditional thirst="gt 0.8" />
-        <ReduceAffliction type="thirst" amount="0.8" />
-      </StatusEffect>
-      <StatusEffect type="OnUse" target="Character">
-        <Conditional bladder="gte 0.01" />
-        <Affliction identifier="fillbladder" amount="0.8" />
-      </StatusEffect>
+      
       <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="True" />
       <StatusEffect type="OnFire" target="This" tags="onfire" setvalue="true" interval="0.1" duration="0.2" />
       <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="8" stackable="false" CheckConditionalAlways="true">
@@ -78,7 +71,7 @@
     <PreferredContainer primary="plantcontainer"/>
   </Item>
   
-  <Item name="Tobacco Bud" identifier="tobaccobud" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,tobaccoingredient" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true">
+  <Item name="Tobacco Bud" identifier="tobaccobud" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,tobaccoingredient" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true" health="10">
     <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.52" sourcerect="904,646,56,61" origin="0.5,0.5" />
     <Body radius="30" density="9" waterdragcoefficient="20"/>
     <Price baseprice="40" sold="false">
@@ -117,7 +110,7 @@
     <PreferredContainer primary="plantcontainer"/>
   </Item>
   
-  <Item name="Salt Bulb" identifier="saltbulb" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,salty,explodesinwater,distilleringredient" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true">
+  <Item name="Salt Bulb" identifier="saltbulb" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,salty,explodesinwater,distilleringredient" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true" health="10">
     <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.52" sourcerect="968,712,49,55" origin="0.5,0.5" />
     <Body radius="30" density="9" />
     <Price baseprice="65" sold="false">
@@ -142,7 +135,7 @@
       <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="8" stackable="false" CheckConditionalAlways="true">
         <Conditional HasStatusTag="onfire" />
       </StatusEffect>
-      <StatusEffect type="InWater" target="This" Condition="-20.0">
+      <StatusEffect type="InWater" target="This" Condition="-2.0">
         <sound file="Content/Items/Tools/FlareLoop.ogg" range="600.0" loop="true" frequencymultiplier="2" />
         <ParticleEmitter particle="risingbubbles" particlespersecond="20" scalemin="0.5" scalemax="0.8" distancemin="-10" distancemax="10" anglemin="-10" anglemax="10" velocitymin="0" velocitymax="10" copyentityangle="false" colormultiplier="255,255,255,255" lifetimemultiplier="0.25" />
         <ParticleEmitter particle="bubbles" particlespersecond="5" scalemin="0.25" scalemax="0.5" distancemin="-10" distancemax="10" anglemin="0" anglemax="360" velocitymin="0" velocitymax="10" copyentityangle="false" colormultiplier="255,255,255,255" lifetimemultiplier="1" /> 
@@ -170,7 +163,7 @@
     <PreferredContainer primary="plantcontainer"/>
   </Item>
   
-  <Item name="Raptor Bane" identifier="raptorbane" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,petfood1,petfood2,petfood3,distilleringredient" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true">
+  <Item name="Raptor Bane" identifier="raptorbane" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,petfood1,petfood2,petfood3,distilleringredient" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true" health="10">
     <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.52" sourcerect="971,777,44,50" origin="0.5,0.5" />
     <Body radius="30" density="9" waterdragcoefficient="10"/>
     <Price baseprice="40" sold="false">
@@ -212,7 +205,7 @@
   <!-- SEPARATED BANANA AND SEED INTO TWO ITEMS
   bananas used to be both a fruit AND a seed
   Added "bananaseed" as a seed, needed for crossbreeding -->
-  <Item name="Banana" identifier="banana" category="Misc" subcategory="Food" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,plantitem,bananaseed,fooditem,sugary,ingredient,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True">
+  <Item name="Banana" identifier="banana" category="Misc" subcategory="Food" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,plantitem,bananaseed,fooditem,sugary,ingredient,petfood1,petfood2,petfood3" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True" health="10">
     <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.04" />
     <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.04" />
     <PreferredContainer primary="seedbag" amount="1" spawnposition="0.03" />
@@ -239,64 +232,43 @@
       <Item identifier="bananagunseed" commonness="3" requiredotheritem="saltbulb" outconditionmin="1" outconditionmax="1" activatebuttontext="researchstation.crossbreed" infotext="researchstation.crossbreed.infotext" infotextonotheritemmissing="researchstation.crossbreed.missingitem" />
     </Deconstruct>
     <Body radius="15" density="12" />
-    <SuitableTreatment type="hunger" suitability="20" />
     <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" handle1="-15,-15" aimpos="32,28" holdpos="30,-15" holdangle="0" aimangle="90" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+    
       <!-- Allow the item to be applied to a bot, but prevent full usage on a player -->
       <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
         <Conditional IsBot="true" />
       </StatusEffect>
-      <StatusEffect type="OnSuccess" target="This,UseTarget" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
+      <StatusEffect type="OnSuccess" target="This,UseTarget" duration="10" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
         <Conditional IsBot="true" />
-        <Affliction identifier="he-stuffed" amount="1.66" />
-        <Affliction identifier="strengthen" amount="3.32" />
-        <ReduceAffliction type="nausea" amount="4.15" />
-        <ReduceAffliction type="opiatewithdrawal" amount="4.15" />
-        <ReduceAffliction identifier="hunger" amount="11.62" />
-        <ReduceAffliction identifier="he-starvation" amount="200" />
-        <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
-      </StatusEffect>
-      <!-- Allow the item to be applied to a player fully, if the player is not in water and unconcious/stunned -->
-      <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
-        <Conditional InWater="false" />
         <Conditional stun="gt 0" />
-        <Conditional IsPlayer="true" />
-      </StatusEffect>
-      <StatusEffect type="OnSuccess" target="This,UseTarget" duration="8.3" comparison="And" multiplyafflictionsbymaxvitality="true">
-        <Conditional InWater="false" />
-        <Conditional stun="gt 0" />
-        <Conditional IsPlayer="true" />
-        <Affliction identifier="he-stuffed" amount="0.2" />
+        <ReduceAffliction type="hunger" amount="0.8" />
+        <Affliction identifier="he-stuffed" amount="0.8" />
         <Affliction identifier="strengthen" amount="0.4" />
         <ReduceAffliction type="nausea" amount="0.5" />
         <ReduceAffliction type="opiatewithdrawal" amount="0.5" />
-        <ReduceAffliction identifier="hunger" amount="1.4" />
-        <ReduceAffliction identifier="he-starvation" amount="20" />
+        <Affliction identifier="he-vitaminrich" amount="5.0" />
+        <Affliction identifier="spill" amount="1000" probability="0.0005" />
         <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
       </StatusEffect>
+      
       <!-- Regular eating -->
-      <StatusEffect type="OnSecondaryUse" target="This" Condition="99" setvalue="True" comparison="And">
-        <Conditional Condition="equals 100" />
-        <Conditional InWater="false" />
-        <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
-      </StatusEffect>
-      <StatusEffect type="OnUse" target="This" Condition="-12.0">
-        <Conditional InWater="false" />
-      </StatusEffect>
-      <StatusEffect type="OnUse" target="Character" comparison="And">
-        <Conditional InWater="false" />
-        <Affliction identifier="he-stuffed" amount="0.2" />
+      <StatusEffect type="OnUse" target="This" condition="-1" statuseffecttags="iseating" duration="0.1" stackable="false" />
+      <StatusEffect type="OnUse" target="Character">
+        <ReduceAffliction type="hunger" amount="0.8" />
+        <Affliction identifier="he-stuffed" amount="0.8" />
         <Affliction identifier="strengthen" amount="0.4" />
         <ReduceAffliction type="nausea" amount="0.5" />
         <ReduceAffliction type="opiatewithdrawal" amount="0.5" />
         <Affliction identifier="spill" amount="1000" probability="0.0005" />
+        <ParticleEmitter particle="whitechunks" particlespersecond="3" scalemin="0.2" scalemax="0.35" distancemin="10" distancemax="15" anglemin="95" anglemax="95" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="230,220,180,255" />
         <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
-        <ParticleEmitter particle="fruitchunks" particlespersecond="3" scalemin="0.2" scalemax="0.35" distancemin="10" distancemax="15" anglemin="95" anglemax="95" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="150,255,200,255" />
       </StatusEffect>
-      <StatusEffect type="OnUse" target="Character" comparison="And">
+      
+      <StatusEffect type="OnSecondaryUse" target="This" Condition="99" setvalue="True" comparison="And">
+        <Conditional Condition="equals 100" />
         <Conditional InWater="false" />
-        <Conditional hunger="gt 1.4" />
-        <ReduceAffliction type="hunger" amount="1.4" />
-      </StatusEffect>
+        <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
+      </StatusEffect>       
       <StatusEffect type="OnBroken" target="This">
         <SpawnItem identifier="bananapeel" spawnposition="SameInventory"/>
         <Remove />
@@ -310,7 +282,7 @@
   <!-- NEW PLANTS -->
   <!-- NEW PLANTS -->
   <!-- NEW PLANTS -->
-  <Item name="Bubbleberries" identifier="bubbleberries" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,fooditem,sugary,petfood1,petfood2,petfood3" description="Very tasty and juicy." cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="True" requireaimtouse="true" isshootable="true" >
+  <Item name="Bubbleberries" identifier="bubbleberries" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,fooditem,sugary,petfood1,petfood2,petfood3" description="Very tasty and juicy." cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="True" requireaimtouse="true" isshootable="true" health="10">
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.52" sourcerect="183,0,54,48" origin="0.5,0.5" />
     <Body radius="30" density="5" />
     <Price baseprice="40" sold="false">
@@ -327,25 +299,17 @@
     <Holdable characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="23,20" holdangle="0" holdpos="20,-30" aimangle="0" msg="ItemMsgPickUpSelect" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" >
       <!-- TODO: fix eating without aiming for throwable if devs allow us to https://github.com/FakeFishGames/Barotrauma/discussions/16166 
       in the meantime, change the holdpos (this is dumb) -->
-      <StatusEffect type="OnUse" target="This" condition="-8" statuseffecttags="iseating" duration="0.1" stackable="false" />
+      
+      <StatusEffect type="OnUse" target="This" condition="-1" statuseffecttags="iseating" duration="0.1" stackable="false" />
       <StatusEffect type="OnUse" target="Character">
-        <Affliction identifier="he-stuffed" amount="0.1" />
-        <ReduceAffliction type="damage" amount="0.1" />
-        <ParticleEmitter particle="fruitchunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="230,255,255,255" />
+        <ReduceAffliction type="hunger" amount="0.8" />
+        <ReduceAffliction type="thirst" amount="0.8" />
+        <Affliction identifier="fillbladder" amount="0.8" />
+        <Affliction identifier="he-vitaminrich" amount="5.0" />
+        <ParticleEmitter particle="whitechunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="255,180,0,255" />
         <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
       </StatusEffect>
-      <StatusEffect type="OnUse" target="Character">
-        <Conditional hunger="gt 0.8" />
-        <ReduceAffliction type="hunger" amount="0.8" />
-      </StatusEffect>
-      <StatusEffect type="OnUse" target="Character">
-        <Conditional thirst="gt 0.8" />
-        <ReduceAffliction type="thirst" amount="0.8" />
-      </StatusEffect>
-      <StatusEffect type="OnUse" target="Character">
-        <Conditional bladder="gte 0.01" />
-        <Affliction identifier="fillbladder" amount="0.8" />
-      </StatusEffect>
+      
       <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="True" />
       <StatusEffect type="OnFire" target="This" tags="onfire" setvalue="true" interval="0.1" duration="0.2" />
       <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="8" stackable="false" CheckConditionalAlways="true">
@@ -365,7 +329,7 @@
     <PreferredContainer primary="plantcontainer"/>
   </Item>
   
-  <Item name="Popnut" identifier="popnut" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,waterreactivesize,fooditem,petfood1,petfood2,petfood3" description="Kids love to play with them. Needs to be put in water to pop it open and be able to consume it." cargocontaineridentifier="metalcrate" scale="0.25" impactsoundtag="impact_soft" damagedbyexplosions="false" allowasextracargo="True">
+  <Item name="Popnut" identifier="popnut" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,waterreactivesize,fooditem,petfood1,petfood2,petfood3" description="Kids love to play with them. Needs to be put in water to pop it open and be able to consume it." cargocontaineridentifier="metalcrate" scale="0.25" impactsoundtag="impact_soft" damagedbyexplosions="false" allowasextracargo="True" >
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.52" sourcerect="0,0,46,46" origin="0.5,0.5" />
     <Body radius="30" density="2.8" />
     <Price baseprice="50" sold="false">
@@ -414,7 +378,7 @@
     <PreferredContainer primary="plantcontainer"/>
   </Item>
   
-  <Item name="Popped Popnut" identifier="popnutpopped" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,fooditem,sugary,petfood1,petfood2,petfood3" description="It's popped open, ready to be consumed. Used in some recipes." cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" damagedbyexplosions="false" allowasextracargo="True" requireaimtouse="true" isshootable="true" >
+  <Item name="Popped Popnut" identifier="popnutpopped" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,fooditem,sugary,petfood1,petfood2,petfood3" description="It's popped open, ready to be consumed. Used in some recipes." cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" damagedbyexplosions="false" allowasextracargo="True" requireaimtouse="true" isshootable="true" health="10">
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.52" sourcerect="46,0,46,51" origin="0.5,0.5" />
     <Body radius="30" density="2" />
     <Price baseprice="50" sold="false">
@@ -430,25 +394,14 @@
     <Holdable characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="23,20" holdangle="0" holdpos="20,-30" aimangle="0" msg="ItemMsgPickUpSelect" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" >
       <!-- TODO: fix eating without aiming for throwable if devs allow us to https://github.com/FakeFishGames/Barotrauma/discussions/16166 
       in the meantime, change the holdpos (this is dumb) -->
-      <StatusEffect type="OnUse" target="This" condition="-8" statuseffecttags="iseating" duration="0.1" stackable="false" />
+      
+      <StatusEffect type="OnUse" target="This" condition="-1" statuseffecttags="iseating" duration="0.1" stackable="false" />
       <StatusEffect type="OnUse" target="Character">
-        <Affliction identifier="he-stuffed" amount="0.1" />
-        <ReduceAffliction type="damage" amount="0.1" />
-        <ParticleEmitter particle="fruitchunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="230,255,255,255" />
-        <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingCrunchy.ogg" loop="True" range="300" volume="5.0" frequencymultiplier="1.5" />
+        <ReduceAffliction type="hunger" amount="1" />
+        <ParticleEmitter particle="whitechunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="255,150,110,255" />
+        <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingCrunchy.ogg" loop="True" range="200" volume="5.0" />
       </StatusEffect>
-      <StatusEffect type="OnUse" target="Character">
-        <Conditional hunger="gt 0.8" />
-        <ReduceAffliction type="hunger" amount="0.8" />
-      </StatusEffect>
-      <StatusEffect type="OnUse" target="Character">
-        <Conditional thirst="gt 1.8" />
-        <ReduceAffliction type="thirst" amount="1.8" />
-      </StatusEffect>
-      <StatusEffect type="OnUse" target="Character">
-        <Conditional bladder="gte 0.01" />
-        <Affliction identifier="fillbladder" amount="1.8" />
-      </StatusEffect>
+      
       <StatusEffect type="OnFire" target="This" tags="onfire" setvalue="true" interval="0.1" duration="0.2" />
       <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="8" stackable="false" CheckConditionalAlways="true">
         <Conditional HasStatusTag="onfire" />
@@ -476,7 +429,7 @@
   <!-- MUTATED VARIANTS -->
   <!-- MUTATED VARIANTS -->
   <!-- MUTATED VARIANTS -->
-  <Item name="Mutated Pomegrenade" identifier="badcreepingorange" descriptionidentifier="creepingorange" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,mutatedplant,sugary,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true" requireaimtouse="true" isshootable="true" >
+  <Item name="Mutated Pomegrenade" identifier="badcreepingorange" descriptionidentifier="creepingorange" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,mutatedplant,sugary,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true" requireaimtouse="true" isshootable="true" health="10">
     <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.52" sourcerect="971,835,43,55" origin="0.5,0.5" />
     <Body radius="30" density="9" />
     <Deconstruct time="7">
@@ -486,25 +439,19 @@
     <Holdable characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="23,20" holdangle="0" holdpos="20,-30" aimangle="0" msg="ItemMsgPickUpSelect" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" >
       <!-- TODO: fix eating without aiming for throwable if devs allow us to https://github.com/FakeFishGames/Barotrauma/discussions/16166 
       in the meantime, change the holdpos (this is dumb) -->
-      <StatusEffect type="OnUse" target="This" condition="-8" statuseffecttags="iseating" duration="0.1" stackable="false" />
+      
+      <StatusEffect type="OnUse" target="This" condition="-1" statuseffecttags="iseating" duration="0.1" stackable="false" />
       <StatusEffect type="OnUse" target="Character">
         <Affliction identifier="he-stuffed" amount="0.1" />
-        <ReduceAffliction type="damage" amount="0.1" />
+        <ReduceAffliction type="hunger" amount="2" />
+        <ReduceAffliction type="thirst" amount="2" />
+        <Affliction identifier="fillbladder" amount="2" />
+        <Affliction identifier="haste" amount="20" />
+        <Affliction identifier="he-vitaminrich" amount="8.0" />
         <ParticleEmitter particle="fruitchunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="230,255,255,255" />
         <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
       </StatusEffect>
-      <StatusEffect type="OnUse" target="Character">
-        <Conditional hunger="gt 1.3" />
-        <ReduceAffliction type="hunger" amount="1.3" />
-      </StatusEffect>
-      <StatusEffect type="OnUse" target="Character">
-        <Conditional thirst="gt 0.8" />
-        <ReduceAffliction type="thirst" amount="0.8" />
-      </StatusEffect>
-      <StatusEffect type="OnUse" target="Character">
-        <Conditional bladder="gte 0.01" />
-        <Affliction identifier="fillbladder" amount="0.8" />
-      </StatusEffect>
+      
       <StatusEffect type="OnNotContained" target="This" Scale="0.05">
         <sound file="Content/Sounds/Damage/Gore1.ogg" selectionmode="Random" range="500" volume="0.5" />
         <sound file="Content/Sounds/Damage/Gore2.ogg" selectionmode="Random" range="500" volume="0.5" />
@@ -542,7 +489,7 @@
     <PreferredContainer primary="plantcontainer"/>
   </Item>
   
-  <Item name="Mutated Tobacco Bud" identifier="badtobaccobud" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,mutatedplant,petfood1,petfood2,petfood3,tobaccoingredient" description="A mutated variant of the tobacco bud. Fragile, but strong in flavour and smell." cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true">
+  <Item name="Mutated Tobacco Bud" identifier="badtobaccobud" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,mutatedplant,petfood1,petfood2,petfood3,tobaccoingredient" description="A mutated variant of the tobacco bud. Fragile, but strong in flavour and smell." cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true" health="10">
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.52" sourcerect="0,51,47,56" origin="0.5,0.5" />
     <Body radius="30" density="9"/>
     <Deconstruct time="7">
@@ -589,7 +536,7 @@
     <PreferredContainer primary="plantcontainer"/>
   </Item>
   
-  <Item name="Mutated Salt Bulb" identifier="badsaltbulb" descriptionidentifier="saltbulb" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,mutatedplant,salty,explodesinwater,distilleringredient,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true">
+  <Item name="Mutated Salt Bulb" identifier="badsaltbulb" descriptionidentifier="saltbulb" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,mutatedplant,salty,explodesinwater,distilleringredient,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true" health="10">
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.52" sourcerect="0,107,51,57" origin="0.5,0.5" />
     <Body radius="30" density="9" />
     <Deconstruct time="7">
@@ -629,21 +576,22 @@
       <StatusEffect type="OnFire" target="This" tags="onfire" setvalue="true" interval="0.1" duration="0.2" />
       <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="8" stackable="false" CheckConditionalAlways="true">
         <Conditional HasStatusTag="onfire" />
-      </StatusEffect>
+      </StatusEffect>      
+
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
-        <Conditional HasStatusTag="onfire" />
-        <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="fruitsplatter1" decalsize="1.0" />
         <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" />
         <ParticleEmitter particle="fruitchunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" />
+        <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="fruitsplatter1" decalsize="1.0" />
         <Remove />
       </StatusEffect>
-      <StatusEffect type="OnBroken" target="This" Condition="-100.0">
+      
+      <!-- explosion in air -->
+      <StatusEffect type="OnBroken" target="This" Condition="-100.0" comparison="And">
+        <Conditional Scale="gte 0.75" />
         <Conditional InWater="false" />
         <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" range="4000" selectionmode="Random" />
         <sound file="Content/Items/Weapons/ExplosionSmall2.ogg" range="4000" selectionmode="Random" />
         <sound file="Content/Items/Weapons/ExplosionSmall3.ogg" range="4000" selectionmode="Random" />
-        <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" />
-        <ParticleEmitter particle="fruitchunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" />
         <Explosion range="250.0" ballastfloradamage="250" structuredamage="100" itemdamage="250" force="10" severlimbsprobability="0.25" decal="explosion" decalsize="1.0" penetration="0.5">
           <Affliction identifier="burn" strength="30" />
           <Affliction identifier="stun" strength="5" />
@@ -652,7 +600,10 @@
         <Fire size="5.0" />
         <Remove />
       </StatusEffect>
-      <StatusEffect type="OnBroken" target="This" Condition="-100.0">
+      
+      <!-- bigger explosion in water -->
+      <StatusEffect type="OnBroken" target="This" Condition="-100.0" comparison="And" >
+        <Conditional Scale="gte 0.75" />
         <Conditional InWater="true" />
         <sound file="Content/Items/Weapons/ExplosionMedium1.ogg" range="4000" selectionmode="Random" />
         <sound file="Content/Items/Weapons/ExplosionMedium2.ogg" range="4000" selectionmode="Random" />
@@ -669,7 +620,7 @@
     <PreferredContainer primary="plantcontainer"/>
   </Item>
   
-  <Item name="Mutated Raptor Bane" identifier="badraptorbane" descriptionidentifier="raptorbane" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,mutatedplant,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true">
+  <Item name="Mutated Raptor Bane" identifier="badraptorbane" descriptionidentifier="raptorbane" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,mutatedplant,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true" health="10">
     <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.52" sourcerect="907,838,44,50" origin="0.5,0.5" />
     <Body radius="30" density="9"/>
     <Deconstruct time="7">
@@ -706,7 +657,7 @@
     <PreferredContainer primary="plantcontainer"/>
   </Item>
   
-  <Item name="Mutated Bubbleberries" identifier="badbubbleberries" descriptionidentifier="bubbleberries" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,mutatedplant,fooditem,sugary,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true" requireaimtouse="true" isshootable="true" >
+  <Item name="Mutated Bubbleberries" identifier="badbubbleberries" descriptionidentifier="bubbleberries" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,mutatedplant,fooditem,sugary,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true" requireaimtouse="true" isshootable="true" health="10">
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.52" sourcerect="237,0,54,48" origin="0.5,0.5" />
     <Body radius="30" density="9" />
     <Deconstruct time="7">
@@ -716,25 +667,18 @@
     <Holdable characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="23,20" holdangle="0" holdpos="20,-30" aimangle="0" msg="ItemMsgPickUpSelect" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" >
       <!-- TODO: fix eating without aiming for throwable if devs allow us to https://github.com/FakeFishGames/Barotrauma/discussions/16166 
       in the meantime, change the holdpos (this is dumb) -->
-      <StatusEffect type="OnUse" target="This" condition="-8" statuseffecttags="iseating" duration="0.1" stackable="false" />
+      
+      <StatusEffect type="OnUse" target="This" condition="-1" statuseffecttags="iseating" duration="0.1" stackable="false" />
       <StatusEffect type="OnUse" target="Character">
         <Affliction identifier="he-stuffed" amount="0.1" />
-        <ReduceAffliction type="damage" amount="0.1" />
+        <ReduceAffliction type="hunger" amount="2" />
+        <ReduceAffliction type="thirst" amount="2" />
+        <Affliction identifier="fillbladder" amount="2" />
+        <Affliction identifier="he-vitaminrich" amount="25.0" />
         <ParticleEmitter particle="fruitchunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="230,255,255,255" />
         <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
       </StatusEffect>
-      <StatusEffect type="OnUse" target="Character">
-        <Conditional hunger="gt 0.8" />
-        <ReduceAffliction type="hunger" amount="0.8" />
-      </StatusEffect>
-      <StatusEffect type="OnUse" target="Character">
-        <Conditional thirst="gt 0.8" />
-        <ReduceAffliction type="thirst" amount="0.8" />
-      </StatusEffect>
-      <StatusEffect type="OnUse" target="Character">
-        <Conditional bladder="gte 0.01" />
-        <Affliction identifier="fillbladder" amount="0.8" />
-      </StatusEffect>
+      
       <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="True" />
       <StatusEffect type="OnFire" target="This" tags="onfire" setvalue="true" interval="0.1" duration="0.2" />
       <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="8" stackable="false" CheckConditionalAlways="true">
@@ -795,7 +739,7 @@
     <PreferredContainer primary="plantcontainer"/>
   </Item>
   
-  <Item name="Popped Mutated Popnut" identifier="badpopnutpopped" descriptionidentifier="popnut" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,mutatedplant,waterreactivesize,fooditem,sugary,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" damagedbyexplosions="false" allowasextracargo="true" requireaimtouse="true" isshootable="true" >
+  <Item name="Popped Mutated Popnut" identifier="badpopnutpopped" descriptionidentifier="popnut" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,mutatedplant,waterreactivesize,fooditem,sugary,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" damagedbyexplosions="false" allowasextracargo="true" requireaimtouse="true" isshootable="true" health="10" >
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.52" sourcerect="137,0,46,51" origin="0.5,0.5" />
     <Body radius="30" density="2" />
     <Deconstruct time="7">
@@ -804,25 +748,15 @@
     <Holdable characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="23,20" holdangle="0" holdpos="20,-30" aimangle="0" msg="ItemMsgPickUpSelect" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" >
       <!-- TODO: fix eating without aiming for throwable if devs allow us to https://github.com/FakeFishGames/Barotrauma/discussions/16166 
       in the meantime, change the holdpos (this is dumb) -->
-      <StatusEffect type="OnUse" target="This" condition="-8" statuseffecttags="iseating" duration="0.1" stackable="false" />
+      
+      <StatusEffect type="OnUse" target="This" condition="-1" statuseffecttags="iseating" duration="0.1" stackable="false" />
       <StatusEffect type="OnUse" target="Character">
-        <Affliction identifier="he-stuffed" amount="0.1" />
-        <ReduceAffliction type="damage" amount="0.1" />
-        <ParticleEmitter particle="fruitchunks" particlespersecond="2" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="230,180,180,255" />
-        <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingCrunchy.ogg" loop="True" range="300" volume="5.0" frequencymultiplier="1.5" />
+        <ReduceAffliction type="hunger" amount="2.5" />
+        <Affliction identifier="he-stuffed" amount="2.5" />
+        <ParticleEmitter particle="whitechunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="220,205,100,255" />
+        <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingCrunchy.ogg" loop="True" range="200" volume="5.0" />
       </StatusEffect>
-      <StatusEffect type="OnUse" target="Character">
-        <Conditional hunger="gt 1.6" />
-        <ReduceAffliction type="hunger" amount="1.6" />
-      </StatusEffect>
-      <StatusEffect type="OnUse" target="Character">
-        <Conditional thirst="gt 3.6" />
-        <ReduceAffliction type="thirst" amount="3.6" />
-      </StatusEffect>
-      <StatusEffect type="OnUse" target="Character">
-        <Conditional bladder="gte 0.01" />
-        <Affliction identifier="fillbladder" amount="3.6" />
-      </StatusEffect>
+      
       <StatusEffect type="InWater" target="This" Scale="0.03">
         <sound file="Content/Sounds/Damage/Gore1.ogg" selectionmode="Random" range="500" volume="0.5" />
         <sound file="Content/Sounds/Damage/Gore2.ogg" selectionmode="Random" range="500" volume="0.5" />
@@ -917,7 +851,7 @@
 
   <!-- POMACCO (pom x tobacco)
   heals a little, but gives you tobacco addicition -->
-  <Item name="pomacco" identifier="pomacco" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,petfood1,petfood2,petfood3,distilleringredient,tobaccoingredient" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" allowasextracargo="true" requireaimtouse="true" isshootable="true" >
+  <Item name="pomacco" identifier="pomacco" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,petfood1,petfood2,petfood3,distilleringredient,tobaccoingredient" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" allowasextracargo="true" requireaimtouse="true" isshootable="true" health="10">
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.52" sourcerect="960,576,64,64" origin="0.5,0.5" />
     <Body radius="28" density="9" />
     <PreferredContainer primary="plantcontainer"/>
@@ -930,27 +864,17 @@
     <Holdable characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="23,20" holdangle="0" holdpos="20,-30" aimangle="0" msg="ItemMsgPickUpSelect" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" >
       <!-- TODO: fix eating without aiming for throwable if devs allow us to https://github.com/FakeFishGames/Barotrauma/discussions/16166 
       in the meantime, change the holdpos (this is dumb) -->
-      <StatusEffect type="OnUse" target="This" condition="-8" statuseffecttags="iseating" duration="0.1" stackable="false" />
+      
+      <StatusEffect type="OnUse" target="This" condition="-1" statuseffecttags="iseating" duration="0.1" stackable="false" />
       <StatusEffect type="OnUse" target="Character">
         <Affliction identifier="he-tobaccoaddiction" amount="1.5" />
-        <ReduceAffliction type="psychosis" amount="0.5" />
-        <Affliction identifier="he-stuffed" amount="0.1" />
-        <ReduceAffliction type="damage" amount="0.1" />
-        <ParticleEmitter particle="fruitchunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="180,255,255,255" />
+        <ReduceAffliction type="psychosis" amount="1.5" />
+        <ReduceAffliction type="hunger" amount="0.4" />
+        <ReduceAffliction identifier="he-stomachache" amount="1.5" />
+        <ParticleEmitter particle="fruitchunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="230,255,255,255" />
         <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
       </StatusEffect>
-      <StatusEffect type="OnUse" target="Character">
-        <Conditional hunger="gt 0.8" />
-        <ReduceAffliction type="hunger" amount="0.8" />
-      </StatusEffect>
-      <StatusEffect type="OnUse" target="Character">
-        <Conditional thirst="gt 0.8" />
-        <ReduceAffliction type="thirst" amount="0.8" />
-      </StatusEffect>
-      <StatusEffect type="OnUse" target="Character">
-        <Conditional bladder="gte 0.01" />
-        <Affliction identifier="fillbladder" amount="0.8" />
-      </StatusEffect>
+      
       <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="True" />
       <StatusEffect type="OnFire" target="This" tags="onfire" setvalue="true" interval="0.1" duration="0.2" />
       <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="8" stackable="false" CheckConditionalAlways="true">
@@ -972,7 +896,7 @@
   
   <!-- SALTGRENADE (saltvine x pom)
   cures small amounts of bloodloss and organ damage, but hates water -->
-  <Item name="saltgrenade" identifier="saltgrenade" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,fooditem,salty,petfood1,petfood2,petfood3,distilleringredient" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" allowasextracargo="true" requireaimtouse="true" isshootable="true" >
+  <Item name="saltgrenade" identifier="saltgrenade" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,fooditem,salty,petfood1,petfood2,petfood3,distilleringredient" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" allowasextracargo="true" requireaimtouse="true" isshootable="true" health="10">
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.52" sourcerect="896,576,64,64" origin="0.5,0.5" />
     <Body radius="28" density="9" />
     <PreferredContainer primary="plantcontainer"/>
@@ -985,27 +909,17 @@
     </Deconstruct>    
     <Holdable characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="23,20" holdangle="0" holdpos="20,-30" aimangle="0" msg="ItemMsgPickUpSelect" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" >
       <!-- TODO: fix eating without aiming for throwable if devs allow us to https://github.com/FakeFishGames/Barotrauma/discussions/16166 
-      in the meantime, change the holdpos (this is dumb) -->
-      <StatusEffect type="OnUse" target="This" condition="-8" statuseffecttags="iseating" duration="0.1" stackable="false" />
+      in the meantime, change the holdpos (this is dumb) -->            
+ 
+      <StatusEffect type="OnUse" target="This" condition="-1" statuseffecttags="iseating" duration="0.1" stackable="false" />
       <StatusEffect type="OnUse" target="Character">
-        <Affliction identifier="he-stuffed" amount="0.1" />
+        <ReduceAffliction type="hunger" amount="0.4" />
         <ReduceAffliction type="damage" amount="0.12" />
-        <ReduceAffliction type="bloodloss" amount="0.1" />
+        <ReduceAffliction type="bloodloss" amount="0.5" />
         <ParticleEmitter particle="fruitchunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="230,255,255,255" />
         <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
       </StatusEffect>
-      <StatusEffect type="OnUse" target="Character">
-        <Conditional hunger="gt 0.8" />
-        <ReduceAffliction type="hunger" amount="0.8" />
-      </StatusEffect>
-      <StatusEffect type="OnUse" target="Character">
-        <Conditional thirst="gt 0.8" />
-        <ReduceAffliction type="thirst" amount="0.8" />
-      </StatusEffect>
-      <StatusEffect type="OnUse" target="Character">
-        <Conditional bladder="gte 0.01" />
-        <Affliction identifier="fillbladder" amount="0.8" />
-      </StatusEffect>
+      
       <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="True" />
       <StatusEffect type="OnFire" target="This" tags="onfire" setvalue="true" interval="0.1" duration="0.2" />
       <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="8" stackable="false" CheckConditionalAlways="true">
@@ -1041,7 +955,7 @@
 
   <!-- RAPTOR'S NIP (tobacco x raptorbane)
   enhances physical performance at the cost of your sanity -->
-  <Item name="raptorbacco" identifier="raptorbacco" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,petfood1,petfood2,petfood3,distilleringredient,tobaccoingredient" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" allowasextracargo="true" requireaimtouse="true" isshootable="true" >
+  <Item name="raptorbacco" identifier="raptorbacco" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,petfood1,petfood2,petfood3,distilleringredient,tobaccoingredient" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" allowasextracargo="true" requireaimtouse="true" isshootable="true" health="10" >
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.52" sourcerect="960,512,64,64" origin="0.5,0.5" />
     <Body radius="28" density="9" />
     <PreferredContainer primary="plantcontainer"/>
@@ -1055,17 +969,19 @@
     <Holdable characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="23,20" holdangle="0" holdpos="20,-30" aimangle="0" msg="ItemMsgPickUpSelect" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" >
       <!-- TODO: fix eating without aiming for throwable if devs allow us to https://github.com/FakeFishGames/Barotrauma/discussions/16166 
       in the meantime, change the holdpos (this is dumb) -->
-      <StatusEffect type="OnUse" target="This" condition="-8" statuseffecttags="iseating" duration="0.1" stackable="false" />
+      
+      <StatusEffect type="OnUse" target="This" condition="-1" statuseffecttags="iseating" duration="0.1" stackable="false" />
       <StatusEffect type="OnUse" target="Character">
         <Affliction identifier="strengthen" amount="8" />
         <Affliction identifier="haste" amount="8" />
         <Affliction identifier="hallucinating" amount="5" />
         <Affliction identifier="chemaddiction" amount="0.4" />
         <Affliction identifier="he-tobaccoaddiction" amount="1.5" />
-        <ParticleEmitter particle="fruitchunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="230,255,255,255" />
+        <ParticleEmitter particle="whitechunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="200,140,200,255" />
         <Sound file="Content/Items/Medical/ITEM_eatingBiteQuick.ogg" range="250" loop="false" selectionmode="random" volume="1" />
         <Sound file="Content/Items/Medical/ITEM_eatingLoop.ogg" range="250" loop="false" selectionmode="random" volume="1"/>
       </StatusEffect>
+      
       <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="True" />
       <StatusEffect type="OnFire" target="This" tags="onfire" setvalue="true" interval="0.1" duration="0.2" />
       <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="8" stackable="false" CheckConditionalAlways="true">
