@@ -36,30 +36,31 @@
           <SpawnItem identifier="he-dirtypot" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
         </StatusEffect>
       </Holdable>
-      <CustomInterface canbeselected="false" drawhudwhenequipped="true">
-        <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
-        <Button text="interaction.refill">
-          <StatusEffect type="OnUse" target="This" condition="-10" disabledeltatime="true">
-            <Conditional InWater="false" />
-            <RequiredItem items="emptybowl" type="contained" />
-            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
-            <SpawnItem identifier="he-crawyumsoup" spawnposition="SameInventory" SpawnIfInventoryFull="true" spawnifcantbecontained="true" />
-          </StatusEffect>
-          <StatusEffect type="OnUse" target="Contained" disabledeltatime="true">
-            <Conditional InWater="false" targetcontainer="true" />
-            <Remove />
-          </StatusEffect>
-        </Button>
-        <Button text="interaction.emptypot">
-          <StatusEffect type="OnUse" target="This">
-            <Conditional InWater="false" />
-            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" />
-            <SpawnItem identifier="he-pot" spawnposition="SameInventory" SpawnIfInventoryFull="true" spawnifcantbecontained="true" />
-            <Remove />
-          </StatusEffect>
-        </Button>
-      </CustomInterface>
-      <!-- TODO: currently using fabricator. Are we using the insert bowl method instead? -->
+      <!-- TODO: currently using fabricator. Put bowl inside to refill instead? The pot is 2-handed and bowl can't go inside player inventory, so it doesnt work. Commented out for now. -->
+      <!-- <CustomInterface canbeselected="false" drawhudwhenequipped="true"> -->
+        <!-- <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/> -->
+        <!-- <Button text="interaction.refill"> -->
+          <!-- <StatusEffect type="OnUse" target="This" condition="-10" disabledeltatime="true"> -->
+            <!-- <Conditional InWater="false" /> -->
+            <!-- <RequiredItem items="emptybowl" type="contained" /> -->
+            <!-- <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" /> -->
+            <!-- <SpawnItem identifier="he-crawyumsoup" spawnposition="SameInventory" SpawnIfInventoryFull="true" spawnifcantbecontained="true" /> -->
+          <!-- </StatusEffect> -->
+          <!-- <StatusEffect type="OnUse" target="Contained" disabledeltatime="true"> -->
+            <!-- <Conditional InWater="false" targetcontainer="true" /> -->
+            <!-- <Remove /> -->
+          <!-- </StatusEffect> -->
+        <!-- </Button> -->
+        <!-- <Button text="interaction.emptypot"> -->
+          <!-- <StatusEffect type="OnUse" target="This"> -->
+            <!-- <Conditional InWater="false" /> -->
+            <!-- <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/WaterSplash.ogg" volume="1.2" range="300" /> -->
+            <!-- <SpawnItem identifier="he-pot" spawnposition="SameInventory" SpawnIfInventoryFull="true" spawnifcantbecontained="true" /> -->
+            <!-- <Remove /> -->
+          <!-- </StatusEffect> -->
+        <!-- </Button> -->
+      <!-- </CustomInterface> -->
+      <!-- TODO: currently using fabricator. Put bowl inside to refill instead? The pot is 2-handed and bowl can't go inside player inventory, so it doesnt work. Commented out for now. -->
       <!-- <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true">
         <Containable items="emptybowl" />
       </ItemContainer> -->
@@ -95,7 +96,8 @@
           <SpawnItem identifier="he-dirtypot" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
         </StatusEffect>
       </Holdable>
-      <CustomInterface canbeselected="false" drawhudwhenequipped="true">
+      <!-- TODO: currently using fabricator. Put bowl inside to refill instead? The pot is 2-handed and bowl can't go inside player inventory, so it doesnt work. Commented out for now. -->
+      <!-- <CustomInterface canbeselected="false" drawhudwhenequipped="true">
         <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
         <Button text="interaction.refill">
           <StatusEffect type="OnUse" target="This" condition="-10" disabledeltatime="true">
@@ -117,8 +119,7 @@
             <Remove />
           </StatusEffect>
         </Button>
-      </CustomInterface>
-      <!-- TODO: currently using fabricator. Are we using the insert bowl method instead? -->
+      </CustomInterface> -->
       <!-- <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true">
         <Containable items="emptybowl" />
       </ItemContainer> -->
@@ -154,7 +155,8 @@
           <SpawnItem identifier="he-dirtypot" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
         </StatusEffect>
       </Holdable>
-      <CustomInterface canbeselected="false" drawhudwhenequipped="true">
+      <!-- TODO: currently using fabricator. Put bowl inside to refill instead? The pot is 2-handed and bowl can't go inside player inventory, so it doesnt work. Commented out for now. -->
+      <!-- <CustomInterface canbeselected="false" drawhudwhenequipped="true">
         <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
         <Button text="interaction.refill">
           <StatusEffect type="OnUse" target="This" condition="-10" disabledeltatime="true">
@@ -176,8 +178,7 @@
             <Remove />
           </StatusEffect>
         </Button>
-      </CustomInterface>
-      <!-- TODO: currently using fabricator. Are we using the insert bowl method instead? -->
+      </CustomInterface> -->
       <!-- <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true">
         <Containable items="emptybowl" />
       </ItemContainer> -->
@@ -213,7 +214,8 @@
           <SpawnItem identifier="he-dirtypot" spawnposition="SameInventory" spawnifcantbecontained="true" spawnifinventoryfull="true" />
         </StatusEffect>
       </Holdable>
-      <CustomInterface canbeselected="false" drawhudwhenequipped="true">
+      <!-- TODO: currently using fabricator. Put bowl inside to refill instead? The pot is 2-handed and bowl can't go inside player inventory, so it doesnt work. Commented out for now. -->
+      <!-- <CustomInterface canbeselected="false" drawhudwhenequipped="true">
         <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
         <Button text="interaction.refill">
           <StatusEffect type="OnUse" target="This" condition="-10" disabledeltatime="true">
@@ -235,8 +237,7 @@
             <Remove />
           </StatusEffect>
         </Button>
-      </CustomInterface>
-      <!-- TODO: currently using fabricator. Are we using the insert bowl method instead? -->
+      </CustomInterface> -->
       <!-- <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" hideitems="true">
         <Containable items="emptybowl" />
       </ItemContainer> -->
