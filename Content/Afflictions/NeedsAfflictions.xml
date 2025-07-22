@@ -440,7 +440,12 @@
         maxscreenblur="3.0"
         minradialdistort="0.0"
         maxradialdistort="1.0"
-        strengthchange="0" />
+        strengthchange="0" >        
+        <StatusEffect target="Character" >
+          <Conditional thirst="lt 100" />
+          <ReduceAffliction identifier="he-dieofthirst" strength="20" />
+        </StatusEffect>        
+        </Effect>
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="256,128,128,128" origin="0,0" />
     </Affliction>
 
