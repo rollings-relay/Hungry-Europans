@@ -104,6 +104,9 @@
       <PreferredContainer secondary="crewcab" />
       <PreferredContainer primary="wreckcrewcab,abandonedcrewcab,outpostcrewcab,beaconcrewcab" amount="1" spawnprobability="0.02" />
       <Deconstruct time="5" />
+      <Fabricate suitablefabricators="sink" requiredtime="2" requiresrecipe="false" amount="1" displayname="empty">
+        <RequiredItem tag="fullpot" amount="1" UseCondition="False" MinCondition="0.0" />
+      </Fabricate>
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1815,121,59,48" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1815,121,59,48" depth="0.55" />
       <Body width="58" height="46" density="13.0" />
@@ -606,6 +609,9 @@
       <Deconstruct time="2">
         <!-- <Item identifier="he-glassfragments" amount="1" outcondition="0.5"/> -->
       </Deconstruct>
+      <Fabricate suitablefabricators="sink" requiredtime="2" requiresrecipe="false" amount="1" displayname="empty">
+        <RequiredItem tag="foodplate" amount="1" UseCondition="False" MinCondition="0.0" />
+      </Fabricate>
       <Throwable canbepicked="true" characterusable="true" canBeCombined="false" slots="LeftHand,RightHand" holdpos="30,-15" holdangle="0" handle1="0,-3" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnSecondaryUse" target="This" delay="0.01">
           <Use />
@@ -663,6 +669,9 @@
       <Deconstruct time="2">
         <!-- <Item identifier="he-glassfragments" amount="1" outcondition="0.5"/> -->
       </Deconstruct>
+      <Fabricate suitablefabricators="sink" requiredtime="2" requiresrecipe="false" amount="1" displayname="empty">
+        <RequiredItem tag="foodbowl" amount="1" UseCondition="False" MinCondition="0.0" />
+      </Fabricate>
       <Throwable canbepicked="true" characterusable="true" canBeCombined="false" slots="LeftHand,RightHand" holdpos="30,-15" holdangle="0" handle1="0,-3" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnSecondaryUse" target="This" delay="0.01">
           <Use />
