@@ -97,7 +97,7 @@
         </StatusEffect>
         <StatusEffect type="OnActive" targettype="Contained" targets="yeastshroom,slimebacteria" condition="-0.2" >
         </StatusEffect>
-        <StatusEffect type="InWater" target="This" condition="-0.5" />
+        <StatusEffect type="InWater" target="This" condition="-1" interval="2" disabledeltatime="true" />
       </Fabricator>
       
       <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
@@ -191,7 +191,7 @@
           <sound file="Content/Items/Reactor/ReactorTemperatureBoostDown.ogg" range="300.0" frequencymultiplier="0.7"/>
           <ParticleEmitter particle="steamspray" particleamount="5" velocitymin="20" velocitymax="50" distancemin="0" distancemax="10" anglemin="40" anglemax="130" scalemin="0.75" scalemax="1.25" colormultiplier="255,255,255,255" lifetimemultiplier="1" />
         </StatusEffect>
-        <StatusEffect type="InWater" target="This" condition="-0.5" />
+        <StatusEffect type="InWater" target="This" condition="-1" interval="2" disabledeltatime="true" />
         <StatusEffect type="OnActive" targettype="This" condition="-0.05">
           <Conditional Voltage="gt 0.5" />
         </StatusEffect>
@@ -286,7 +286,7 @@
           <sound file="%ModDir:2954998725%/Content/Sounds/Items/Fabricators/BottlePrinter.ogg" type="OnActive" range="400.0" loop="true" volume="0.8" />
         </StatusEffect>
         <poweronsound file="Content/Items/PowerOnLight3.ogg" range="600" loop="false" />
-        <StatusEffect type="InWater" target="This" condition="-0.5" />
+        <StatusEffect type="InWater" target="This" condition="-1" interval="2" disabledeltatime="true" />
       </Deconstructor>
       <LightComponent LightColor="200,200,80,180" LightOffset="5,100" flicker="0.3" flickerspeed="0.5" IsOn="true" powerconsumption="1" range="20" castshadows="false" allowingameediting="false" canbeselected="false" comparison="And">
         <!-- <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.685" sourcerect="492,301,85,168" origin="0.5,0.5" /> -->
@@ -414,7 +414,7 @@
         <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
           <sound file="%ModDir:2954998725%/Content/Sounds/Items/Fabricators/CookingPot.ogg" type="OnActive" range="500.0" loop="true" volume="5.0" />
           <poweronsound file="Content/Items/PowerOnLight1.ogg" range="600" loop="false" />
-        <StatusEffect type="InWater" target="This" condition="-0.5" />
+        <StatusEffect type="InWater" target="This" condition="-1" interval="2" disabledeltatime="true" />
         <StatusEffect type="OnActive" targettype="This" condition="-0.05" />
       </Fabricator>
       <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
@@ -627,7 +627,7 @@
       <Fabricator selectkey="Select" canbeselected="true" powerconsumption="150.0" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
         <poweronsound file="Content/Items/PowerOnLight1.ogg" range="600" loop="false" />
-        <StatusEffect type="InWater" target="This" condition="-0.5" />
+        <StatusEffect type="InWater" target="This" condition="-1" interval="2" disabledeltatime="true" />
         <StatusEffect type="OnActive" target="This">
           <!--<ParticleEmitter particle="fleshsmoke" particlespersecond="2" scalemin="1" scalemax="2" angle="270" distance="-30" />-->
           <sound file="%ModDir:2954998725%/Content/Sounds/Items/Fabricators/CookingPot.ogg" type="OnActive" range="500.0" loop="true" volume="5.0" />
@@ -728,7 +728,7 @@
         <StatusEffect type="OnActive" targettype="This">
           <sound file="%ModDir:2954998725%/Content/Sounds/Items/Fabricators/Oven.ogg" type="OnActive" range="500.0" loop="true" volume="5.0" />
         </StatusEffect>
-        <StatusEffect type="InWater" target="This" condition="-0.5" />
+        <StatusEffect type="InWater" target="This" condition="-1" interval="2" disabledeltatime="true" />
         <StatusEffect type="OnActive" targettype="This" IsOn="false">
           <Conditional attached="false" targetitemcomponentname="Holdable"/>
         </StatusEffect>
@@ -818,7 +818,7 @@
       <Body width="72" height="66" density="30" />
       <LightComponent lightcolor="255,255,255,0" flicker="0.3" flickerspeed="1.0" range="15" powerconsumption="200.0" selectkey="Select" canbeselected="false" allowingameediting="false" msg="ItemMsgInteractSelect">
         <sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.025" sourcerect="1902,228,72,66" alpha="1.0" origin="0.5,0.20" />
-        <StatusEffect type="InWater" target="This" condition="-0.5" />
+        <StatusEffect type="InWater" target="This" condition="-1" interval="2" disabledeltatime="true" />
         <StatusEffect type="OnActive" target="This" comparison="And">
           <RequiredItem identifier="he-cookingoil" type="Contained" />
           <RequiredItem tag="allowinfryer" type="Contained" />
@@ -945,7 +945,7 @@
       <BrokenSprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" sourcerect="1887,1242,160,56" depth="0.795" origin="0.5,0.44" maxcondition="80" fadein="true" />
       <BrokenSprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" sourcerect="1887,1299,160,56" depth="0.794" origin="0.5,0.44" maxcondition="0" fadein="false" />
       <ItemComponent>
-        <StatusEffect type="InWater" target="This" condition="-0.5" />
+        <StatusEffect type="InWater" target="This" condition="-1" interval="2" disabledeltatime="true" />
         <StatusEffect type="OnActive" target="This">
           <Conditional HasTag="allowongrill" targetcontaineditem="true" />
           <!--<ParticleEmitter particle="fleshsmoke" particlespersecond="2" scalemin="1" scalemax="2" angle="270" distance="-30" />-->
@@ -1058,7 +1058,7 @@
       </Price>
       <Fabricator selectkey="Select" canbeselected="true" powerconsumption="100.0" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
-        <StatusEffect type="InWater" target="This" condition="-0.5" />
+        <StatusEffect type="InWater" target="This" condition="-1" interval="2" disabledeltatime="true" />
         <!-- <StatusEffect type="OnActive" target="This">
           <Conditional voltage="gt 0.1" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/coffee_brew.ogg" loop="true" range="500" volume="4" />
