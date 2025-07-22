@@ -3,6 +3,7 @@
   <Items>
   
     <!-- Soups allow you to use lower condition meat than normal -->
+    <!-- TODO: Soups inventory icon (so that it doesn't look like a regular bowl) -->
     
     <!-- SOUPS -->
     <Item name="Pot of Craw Yum" identifier="he-potcrawyum" category="Misc" maxstacksize="1" Tags="smallitem,pot,tableware" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
