@@ -91,4 +91,5 @@
   <Submarine file="%ModDir%/Content/Submarines/Mule (Hungry Europans).sub" />
   <Submarine file="%ModDir%/Content/Submarines/Volga (Hungry Europans).sub" />
   <Submarine file="%ModDir%/#Testkitchen.sub" />
+  <UpgradeModules file="%Moddir%/Content/upgrademodules.xml" />
 </contentpackage>

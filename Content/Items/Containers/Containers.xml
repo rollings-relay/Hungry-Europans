@@ -920,5 +920,47 @@
       </ItemContainer>
     </Item>
     
+  
+  <!-- //// SWAPPABLES  //// -->
+  <!-- //// SWAPPABLES  //// -->
+  <!-- //// SWAPPABLES  //// -->
+  
+  <!-- OVERRIDE to Make ULD swappable -->
+  <Item name="" identifier="unitloaddevice" tags="cargocontainer,utilitypoint" linkable="true" pickdistance="150" scale="0.5" waterproof="true" allowedupgrades="utilitypoint" >
+    <Sprite texture="Content/Items/Containers/UnitLoadDevice.png" depth="0.8" sourcerect="0,0,567,446" origin="0.5,0.5" />
+    <DecorativeSprite texture="Content/Items/Containers/UnitLoadDevice.png" depth="0.85" sourcerect="0,457,567,446" origin="0.5,0.5" />
+    <UpgradePreviewSprite scale="2" texture="Content/UI/InventoryUIAtlas.png" sourcerect="447,280,44,44" origin="0.5,0.5" />
+    <ItemContainer capacity="12" maxstacksize="1" canbeselected="true" hideitems="false" itempos="120,-364" iteminterval="150,80" itemsperrow="3" slotsperrow="4" msg="ItemMsgInteractSelect" containedspritedepths="0.81,0.82,0.81,0.82,0.81,0.82,0.81,0.82,0.81,0.82,0.81,0.82">
+      <GuiFrame relativesize="0.25,0.3" anchor="Center" style="ItemUI" />
+      <Containable items="crate" />
+    </ItemContainer>
+    <SwappableItem price="3000" replacementonuninstall="emptylargedevice" origin="200,150" swapidentifier="largedevice">
+      <SchematicSprite texture="Content/Items/Containers/UnitLoadDevice.png" sourcerect="0,0,567,446" />
+    </SwappableItem>
+  </Item>
+
+  <!-- Swappable Junction Box to power your items -->
+  <Item name="" identifier="junctionboxswappable" nameidentifier="junctionbox" descriptionidentifier="junctionbox" tags="junctionbox,utilitypoint" category="Electrical,Machine" variantof="junctionbox" hideinmenus="true" >
+    <DecorativeSprite texture="Content/Map/FinsA.png" sourcerect="1120,0,192,192" depth="0.85" origin="0.5,0.5" />
+    <SwappableItem price="1600" replacementonuninstall="emptylargedevice" origin="0,0" swapidentifier="largedevice">
+      <SchematicSprite texture="Content/Items/Electricity/signalcomp.png" sourcerect="264,1,110,176" scale="0.25" />
+    </SwappableItem>  
+  </Item> 
+  
+  <!-- Empty hardpoint for ULD/JB -->
+  <Item name="" identifier="emptylargedevice" nameidentifier="loosepanel" descriptionidentifier="loosepanel" tags="hidden,utilitypoint" scale="0.7" allowedupgrades="utilitypoint" >
+    <sprite texture="Content/Items/Containers/containers.png" sourcerect="1,545,112,110" depth="0.8" origin="0.5,0.5" canflipx="false"/>
+    <DecorativeSprite texture="Content/Map/FinsA.png" sourcerect="1120,0,192,192" depth="0.85" origin="0.5,0.5" />
+    <UpgradePreviewSprite scale="2" texture="Content/UI/InventoryUIAtlas.png" sourcerect="447,280,44,44" origin="0.5,0.5" />
+    <trigger x="25" y="-25" width="60" height="60" />
+    <ItemContainer capacity="3" slotsperrow="3" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
+      <GuiFrame relativesize="0.27,0.2" anchor="Center" style="ItemUI" />
+      <Containable items="smallitem,mediumitem" />
+    </ItemContainer>
+    <SwappableItem canbebought="false" origin="0,0" swapidentifier="largedevice">
+      <SchematicSprite texture="Content/Items/Containers/containers.png" sourcerect="1,545,112,110" scale="0.25" />
+    </SwappableItem>
+  </Item>
+    
   </Items>
 </Override>
