@@ -23,7 +23,13 @@
       <Holdable canbecombined="false" slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect">
         <StatusEffect type="Always" target="This" >
           <Conditional condition="gt 10" />
-          <ParticleEmitter particle="weldsmoke" particlespersecond="3" scalemin="0.15" scalemax="0.25" anglemin="80" anglemax="100" velocitymin="0" velocitymax="10" lifetimemultiplier="0.5" colormultiplier="255,255,255,150"/>
+          <ParticleEmitter particle="weldsmoke" particlespersecond="3" scalemin="0.15" scalemax="0.25" anglemin="0" anglemax="0" velocitymin="0" velocitymax="0" distancemin="-10" distancemax="10" lifetimemultiplier="0.5" colormultiplier="255,255,255,150"/>
+        </StatusEffect>
+        <StatusEffect type="OnImpact" target="This" condition="-20" disabledeltatime="true" offset="0,10">
+          <Conditional condition="gt 21" />
+          <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
+          <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
+          <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,120" anglemin="80" anglemax="100" particleamount="3" velocitymin="100" velocitymax="200" scalemin="0.35" scalemax="0.6" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
@@ -76,7 +82,13 @@
       <Holdable canbecombined="false" slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect">
         <StatusEffect type="Always" target="This" >
           <Conditional condition="gt 10" />
-          <ParticleEmitter particle="weldsmoke" particlespersecond="3" scalemin="0.15" scalemax="0.25" anglemin="80" anglemax="100" velocitymin="0" velocitymax="10" lifetimemultiplier="0.5" colormultiplier="255,255,255,150"/>
+          <ParticleEmitter particle="weldsmoke" particlespersecond="3" scalemin="0.15" scalemax="0.25" anglemin="0" anglemax="0" velocitymin="0" velocitymax="0" distancemin="-10" distancemax="10" lifetimemultiplier="0.5" colormultiplier="255,255,255,150"/>
+        </StatusEffect>
+        <StatusEffect type="OnImpact" target="This" condition="-20" disabledeltatime="true" offset="0,10">    
+          <Conditional condition="gt 21" />    
+          <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
+          <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
+          <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,120" anglemin="80" anglemax="100" particleamount="3" velocitymin="100" velocitymax="200" scalemin="0.35" scalemax="0.6" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
@@ -112,7 +124,7 @@
       </ItemContainer> -->
     </Item>    
     
-    <Item name="Pot of Seaweed Soup" identifier="he-potseaweedsoup" category="Misc" maxstacksize="1" Tags="smallitem,pot,tableware" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="Pot of Seaweed Soup" identifier="he-potseaweedsoup" category="Misc" maxstacksize="1" Tags="smallitem,pot,tableware" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" impacttolerance="1">
       <PreferredContainer primary="kitchen" />
       <PreferredContainer secondary="crewcab" />
       <Deconstruct time="5" />
@@ -127,9 +139,15 @@
         <RequiredItem tag="seed" amount="10" />
       </Fabricate>
       <Holdable canbecombined="false" slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="Always" target="This" >
+        <StatusEffect type="Always" target="This" offset="0,15">
           <Conditional condition="gt 10" />
-          <ParticleEmitter particle="weldsmoke" particlespersecond="3" scalemin="0.15" scalemax="0.25" anglemin="80" anglemax="100" velocitymin="0" velocitymax="10" lifetimemultiplier="0.5" colormultiplier="255,255,255,150"/>
+          <ParticleEmitter particle="weldsmoke" particlespersecond="3" scalemin="0.15" scalemax="0.25" anglemin="0" anglemax="0" velocitymin="0" velocitymax="0" distancemin="-10" distancemax="10" lifetimemultiplier="0.5" colormultiplier="255,255,255,150"/>
+        </StatusEffect>
+        <StatusEffect type="OnImpact" target="This" condition="-20" disabledeltatime="true" offset="0,10">
+          <Conditional condition="gt 21" />
+          <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
+          <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
+          <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,120" anglemin="80" anglemax="100" particleamount="3" velocitymin="100" velocitymax="200" scalemin="0.35" scalemax="0.6" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
@@ -182,7 +200,13 @@
       <Holdable canbecombined="false" slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect">
         <StatusEffect type="Always" target="This" >
           <Conditional condition="gt 10" />
-          <ParticleEmitter particle="weldsmoke" particlespersecond="3" scalemin="0.15" scalemax="0.25" anglemin="80" anglemax="100" velocitymin="0" velocitymax="10" lifetimemultiplier="0.5" colormultiplier="255,255,255,150"/>
+          <ParticleEmitter particle="weldsmoke" particlespersecond="3" scalemin="0.15" scalemax="0.25" anglemin="0" anglemax="0" velocitymin="0" velocitymax="0" distancemin="-10" distancemax="10" lifetimemultiplier="0.5" colormultiplier="255,255,255,150"/>
+        </StatusEffect>
+        <StatusEffect type="OnImpact" target="This" condition="-20" disabledeltatime="true" offset="0,10">
+          <Conditional condition="gt 21" />
+          <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
+          <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
+          <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,120" anglemin="80" anglemax="100" particleamount="3" velocitymin="100" velocitymax="200" scalemin="0.35" scalemax="0.6" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
