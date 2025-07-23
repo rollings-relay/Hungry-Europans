@@ -503,7 +503,7 @@
       <Item identifier="carbon" amount="4" />
       <Item identifier="tobaccovineseed" />
     </Deconstruct>
-    <LightComponent LightColor="167,169,255,255" Flicker="0.4" FlickerSpeed="0.1" range="200" castshadows="true" IsOn="false">
+    <LightComponent LightColor="167,169,255,255" Flicker="0.4" FlickerSpeed="0.1" range="150" castshadows="true" IsOn="false">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" sourcerect="0,51,47,56" origin="0.5,0.5" alpha="0.2" />
       <StatusEffect type="OnContained" targettype="This" IsOn="true">
         <Conditional IsOn="eq false" targetitemcomponent="LightComponent" />
@@ -764,15 +764,20 @@
         <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingCrunchy.ogg" loop="True" range="200" volume="5.0" />
       </StatusEffect>
       
-      <StatusEffect type="OnNotContained" target="This" tags="notcontained" duration="0.1" CheckConditionalAlways="true" />
-      <StatusEffect type="InWater" target="This" Scale="0.03">
-        <Conditional HasStatusTag="eq notcontained" />
+      <StatusEffect type="InWater" target="This" Scale="0.015" >
+        <Conditional Scale="lt 0.60" />
         <sound file="Content/Sounds/Damage/Gore1.ogg" selectionmode="Random" range="500" volume="0.5" />
         <sound file="Content/Sounds/Damage/Gore2.ogg" selectionmode="Random" range="500" volume="0.5" />
         <sound file="Content/Sounds/Damage/Gore3.ogg" selectionmode="Random" range="500" volume="0.5" />
         <sound file="Content/Sounds/Damage/Gore4.ogg" selectionmode="Random" range="500" volume="0.5" />
       </StatusEffect>
-      <StatusEffect type="OnNotContained" target="This" Condition="0.0" setvalue="true">
+      <StatusEffect type="InWater" target="This" Scale="0.015">
+          <Conditional Scale="gte 0.60" />
+          <ParticleEmitter particle="weldsmoke" particlespersecond="8" scalemin="1" scalemax="2" anglemin="-60" anglemax="210" velocitymin="5" velocitymax="15" distancemin="5" distancemax="15" lifetimemultiplier="0.25" colormultiplier="255,255,255,150"/>
+          <ParticleEmitter particle="bubbles" particlespersecond="8" scalemin="0.5" scalemax="0.5" anglemin="-60" anglemax="210" velocitymin="0" velocitymax="50" lifetimemultiplier="0.25" colormultiplier="255,255,255,150"/>
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/KettleWhistle.ogg" range="500.0" loop="true" volume="1.0" frequencymultiplier="0.5" dontmuffle="true" />
+      </StatusEffect>
+      <StatusEffect type="InWater" target="This" Condition="0.0" setvalue="true">
         <Conditional Scale="gte 0.75" />
         <Explosion range="500.0" ballastfloradamage="2000" structuredamage="10" itemdamage="1000" force="15" severlimbsprobability="0.5" decal="explosion" decalsize="3.0" penetration="0.25">
           <Affliction identifier="burn" strength="70" />
