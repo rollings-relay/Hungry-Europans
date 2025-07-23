@@ -190,9 +190,12 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.popnutpopped>It's popped open, ready to be consumed. Used in some recipes.</entitydescription.popnutpopped><!--Patch 10-->
 <entityname.badpopnutpopped>Popped Mutated Popnut</entityname.badpopnutpopped><!--Patch 10-->
 <entitydescription.badpopnutpopped>It's popped open, ready to be consumed. Used in some recipes. Might be dangerous to leave it in the water.</entitydescription.badpopnutpopped><!--Patch 10-->
-<entityname.badpopnut>Mutated Popnut</entityname.badpopnut><!--Patch 10-->
-<entityname.badtobaccobud>Mutated Tobacco Bud</entityname.badtobaccobud><!--Patch 10-->
-<entityname.badsaltbulb>Mutated Salt Bulb</entityname.badsaltbulb><!--Patch 10-->
+<entityname.badpopnut>Mutated Popnut</entityname.badpopnut><!--Patch 18-->
+<entitydescription.badpopnut>Mutated Popnut</entitydescription.badpopnut><!--Patch 18-->
+<entityname.badtobaccobud>Mutated Tobacco Bud</entityname.badtobaccobud><!--Patch 18-->
+<entitydescription.badtobaccobud>A mutated variant of a tobacco bud, growing a gelatinous eye-like protrusion full of psychoactive elements.</entitydescription.badtobaccobud><!--Patch 18-->
+<entityname.badsaltbulb>Mutated Salt Bulb</entityname.badsaltbulb><!--Patch 18-->
+<entitydescription.badsaltbulb>A mutated variant of a salt bulb. Highly unstable.</entitydescription.badsaltbulb><!--Patch 18-->
 <!-- SEEDS -->
 <entityname.bubbleberryvineseed>Bubbleberry Vine Seed</entityname.bubbleberryvineseed><!--Changed as of Patch 11 | Identifier changed. Previous identifier <entityname.he-bubbleberryvineseed>-->
 <entitydescription.bubbleberryvineseed>Plant it in a planter to grow bubbleberries.</entitydescription.bubbleberryvineseed><!--Changed as of Patch 11 | Identifier changed. Previous identifier <entityname.he-bubbleberryvineseed>-->

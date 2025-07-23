@@ -114,7 +114,7 @@
         <RequiredItem identifier="tobaccobud" Amount="1"/>
       </Fabricate>
       <Fabricate suitablefabricators="cuttingboard" requiredtime="5" requiresrecipe="false" amount="5">
-        <RequiredSkill identifier="cooking" level="10" />
+        <RequiredSkill identifier="cooking" level="15" />
         <RequiredItem identifier="badtobaccobud" Amount="1"/>
       </Fabricate>
       <Growable name="tobaccovineseed" growthspeed="777.065" pickingtime="3" maximumvines="4" maxhealth="400" hardiness="0.15" floodtolerance="0.5" seedrate="0" productrate="0.022" flowerquantity="2" baseflowerscale="0.25" LeafProbability="0.55" baseleafscale="0.75" leaftint="226,95,85,255" vinescale="0.25" vinetint="226,95,85,255" flowertint="48,122,245,255" GrowthWeights="1,0,0,0">
@@ -169,7 +169,7 @@
         <RequiredItem identifier="saltbulb" Amount="1"/>
       </Fabricate>
       <Fabricate suitablefabricators="cuttingboard" requiredtime="5" requiresrecipe="false" amount="5">
-        <RequiredSkill identifier="cooking" level="10" />
+        <RequiredSkill identifier="cooking" level="15" />
         <RequiredItem identifier="badsaltbulb" Amount="1"/>
       </Fabricate>
       <Growable name="saltvineseed" growthspeed="777.076" pickingtime="3" maximumvines="3" maxhealth="375" hardiness="0.162" floodtolerance="0.2" seedrate="0" productrate="0.022" flowerquantity="1" LeafProbability="0.55" baseflowerscale="0.40" vinescale="0.25" vinetint="135,187,61,255" flowertint="240,180,17,255" GrowthWeights="1,0,0,0">

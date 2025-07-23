@@ -3,12 +3,12 @@
 
   <!-- 
   Vanilla splatters:
-  -white
-  -black
-  -red
-  -green
-  -blue
-  -brown -->
+  -fruitsplatter_white
+  -fruitsplatter_black
+  -fruitsplatter_red
+  -fruitsplatter_green
+  -fruitsplatter_blue
+  -fruitsplatter_brown -->
 
   
   <fruitsplatter_orange color="175,90,0,200" lifetime="6000" fadeouttime="30">
