@@ -934,7 +934,7 @@
       <StatusEffect type="OnFire" target="This" condition="0" setvalue="true" delay="8" stackable="false" CheckConditionalAlways="true">
         <Conditional HasStatusTag="onfire" />
       </StatusEffect>
-      <StatusEffect type="InWater" target="This" Condition="-20.0">
+      <StatusEffect type="InWater" target="This" Condition="-1.0">
         <sound file="Content/Items/Tools/FlareLoop.ogg" range="600.0" loop="true" frequencymultiplier="2" />
         <ParticleEmitter particle="risingbubbles" particlespersecond="20" scalemin="0.5" scalemax="0.8" distancemin="-10" distancemax="10" anglemin="-10" anglemax="10" velocitymin="0" velocitymax="10" copyentityangle="false" colormultiplier="255,255,255,255" lifetimemultiplier="0.25" />
         <ParticleEmitter particle="bubbles" particlespersecond="5" scalemin="0.25" scalemax="0.5" distancemin="-10" distancemax="10" anglemin="0" anglemax="360" velocitymin="0" velocitymax="10" copyentityangle="false" colormultiplier="255,255,255,255" lifetimemultiplier="1" /> 
