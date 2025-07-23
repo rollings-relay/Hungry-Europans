@@ -773,93 +773,35 @@
         <RequiredItem identifier="tin" />
         <RequiredItem identifier="alienblood" />
       </Fabricate>
-      <Deconstruct time="10">
-        <Item identifier="ethanol" mincondition="0.9" />
+      <Deconstruct time="5">
+        <Item identifier="tin" mincondition="0.0" />
       </Deconstruct>
       <Holdable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="3.5" aimpos="26,24" holdpos="30,-15" holdangle="0" aimangle="120" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
-        <!-- Allow the item to be applied to a bot, but prevent full usage on a player -->
-        <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
-          <Conditional IsBot="true" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
-          <Conditional IsBot="true" />
-          <Affliction identifier="organdamage" amount="62.5" />
-          <Affliction identifier="he-stomachache" amount="65.625" />
-          <Affliction identifier="he-drankredpaint" amount="62.5" />
-          <ReduceAffliction type="thirst" amount="12.5" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" delay="10" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
-          <Conditional IsBot="true" />
-          <Affliction identifier="organdamage" amount="62.5" />
-          <Affliction identifier="he-stomachache" amount="65.625" />
-          <Affliction identifier="he-drankredpaint" amount="62.5" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" comparison="And" multiplyafflictionsbymaxvitality="true">
-          <Conditional IsBot="true" />
-          <Conditional bladder="gte 0.01" />
-          <Affliction identifier="fillbladder" amount="3.0" />
-        </StatusEffect>
-        <!-- Allow the item to be applied to a player fully, if the player is not in water and unconcious/stunned -->
-        <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
-          <Conditional InWater="false" />
-          <Conditional stun="gt 0" />
-          <Conditional IsPlayer="true" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" comparison="And" multiplyafflictionsbymaxvitality="true">
-          <Conditional InWater="false" />
-          <Conditional stun="gt 0" />
-          <Conditional IsPlayer="true" />
-          <ReduceAffliction type="thirst" amount="1.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" delay="10" duration="12.5" comparison="And" multiplyafflictionsbymaxvitality="true">
-          <Conditional InWater="false" />
-          <Conditional stun="gt 0" />
-          <Conditional IsPlayer="true" />
-          <Affliction identifier="he-stomachache" strength="5.25" />
-          <Affliction identifier="organdamage" amount="5.0" />
-          <Affliction identifier="he-drankredpaint" amount="5.0" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" comparison="And" multiplyafflictionsbymaxvitality="true">
-          <Conditional InWater="false" />
-          <Conditional stun="gt 0" />
-          <Conditional IsPlayer="true" />
-          <Conditional bladder="gte 0.01" />
-          <Affliction identifier="fillbladder" amount="3.0" />
-        </StatusEffect>
+      
         <!-- Regular drinking -->
-        <StatusEffect type="OnUse" target="This" Condition="-8.0">
+        <StatusEffect type="OnUse" target="This" Condition="-20.0">
           <Conditional InWater="false" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/Spray.ogg" loop="true" range="200" volume="3.0" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And">
-          <Conditional InWater="false" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
-        </StatusEffect>
         <StatusEffect type="OnUse" target="Character" delay="10" comparison="And">
           <Conditional InWater="false" />
-          <Affliction identifier="he-stomachache" strength="5.25" />
-          <Affliction identifier="organdamage" amount="5.0" />
-          <Affliction identifier="he-drankredpaint" amount="5.0" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And">
-          <Conditional thirst="gt 1.0" />
-          <Conditional InWater="false" />
+          <Affliction identifier="he-stomachache" strength="5.0" />
+          <Affliction identifier="he-drankpaint" amount="10.0" />
           <ReduceAffliction type="thirst" amount="1.0" />
+          <Affliction identifier="fillbladder" amount="1.0" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And">
-          <Conditional bladder="gte 0.01" />
-          <Conditional InWater="false" />
-          <Affliction identifier="fillbladder" amount="3.0" />
-        </StatusEffect>
-        <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true">
-          <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="fruitsplatter_red" decalsize="1.0" />
-          <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" colormultiplier="128,0,0,255" />
-        </StatusEffect>
-        <StatusEffect type="OnFire" target="This" Condition="-50.0" />
-        <StatusEffect type="OnBroken" target="This" Condition="-100.0">
-          <Remove />
+          
+        <StatusEffect type="OnFire" target="This" Condition="-10.0" statuseffecttags="onfire" duration="1" stackable="false" />
+        <StatusEffect type="OnBroken" target="This" delay="1" stackable="false">
+          <Conditional HasStatusTag="onfire" />
+          <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" range="2000" />
+          <sound file="Content/Items/Weapons/ExplosionDebris1.ogg" range="2000" />
+          <Explosion range="150.0" force="3" debris="true" >
+            <Affliction identifier="burn" strength="25" />
+            <Affliction identifier="stun" strength="5" />
+          </Explosion> 
+          <Remove /> 
         </StatusEffect>
       </Holdable>
     </redpaint>
@@ -883,93 +825,35 @@
         <RequiredItem identifier="tin" />
         <RequiredItem identifier="copper" />
       </Fabricate>
-      <Deconstruct time="10">
-        <Item identifier="ethanol" mincondition="0.9" />
+      <Deconstruct time="5">
+        <Item identifier="tin" mincondition="0.0" />
       </Deconstruct>
       <Holdable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="3.5" aimpos="26,24" holdpos="30,-15" holdangle="0" aimangle="120" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
-        <!-- Allow the item to be applied to a bot, but prevent full usage on a player -->
-        <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
-          <Conditional IsBot="true" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
-          <Conditional IsBot="true" />
-          <Affliction identifier="organdamage" amount="62.5" />
-          <Affliction identifier="he-stomachache" amount="65.625" />
-          <Affliction identifier="he-drankgreenpaint" amount="62.5" />
-          <ReduceAffliction type="thirst" amount="12.5" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" delay="10" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
-          <Conditional IsBot="true" />
-          <Affliction identifier="organdamage" amount="62.5" />
-          <Affliction identifier="he-stomachache" amount="65.625" />
-          <Affliction identifier="he-drankgreenpaint" amount="62.5" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" comparison="And" multiplyafflictionsbymaxvitality="true">
-          <Conditional IsBot="true" />
-          <Conditional bladder="gte 0.01" />
-          <Affliction identifier="fillbladder" amount="3.0" />
-        </StatusEffect>
-        <!-- Allow the item to be applied to a player fully, if the player is not in water and unconcious/stunned -->
-        <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
-          <Conditional InWater="false" />
-          <Conditional stun="gt 0" />
-          <Conditional IsPlayer="true" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" comparison="And" multiplyafflictionsbymaxvitality="true">
-          <Conditional InWater="false" />
-          <Conditional stun="gt 0" />
-          <Conditional IsPlayer="true" />
-          <ReduceAffliction type="thirst" amount="1.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" delay="10" duration="12.5" comparison="And" multiplyafflictionsbymaxvitality="true">
-          <Conditional InWater="false" />
-          <Conditional stun="gt 0" />
-          <Conditional IsPlayer="true" />
-          <Affliction identifier="he-stomachache" strength="5.25" />
-          <Affliction identifier="organdamage" amount="5.0" />
-          <Affliction identifier="he-drankgreenpaint" amount="5.0" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" comparison="And" multiplyafflictionsbymaxvitality="true">
-          <Conditional InWater="false" />
-          <Conditional stun="gt 0" />
-          <Conditional IsPlayer="true" />
-          <Conditional bladder="gte 0.01" />
-          <Affliction identifier="fillbladder" amount="3.0" />
-        </StatusEffect>
+      
         <!-- Regular drinking -->
-        <StatusEffect type="OnUse" target="This" Condition="-8.0">
+        <StatusEffect type="OnUse" target="This" Condition="-20.0">
           <Conditional InWater="false" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/Spray.ogg" loop="true" range="200" volume="3.0" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And">
-          <Conditional InWater="false" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
-        </StatusEffect>
         <StatusEffect type="OnUse" target="Character" delay="10" comparison="And">
           <Conditional InWater="false" />
-          <Affliction identifier="he-stomachache" strength="5.25" />
-          <Affliction identifier="organdamage" amount="5.0" />
-          <Affliction identifier="he-drankgreenpaint" amount="5.0" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And">
-          <Conditional thirst="gt 1.0" />
-          <Conditional InWater="false" />
+          <Affliction identifier="he-stomachache" strength="5.0" />
+          <Affliction identifier="he-drankpaint" amount="10.0" />
           <ReduceAffliction type="thirst" amount="1.0" />
+          <Affliction identifier="fillbladder" amount="1.0" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And">
-          <Conditional bladder="gte 0.01" />
-          <Conditional InWater="false" />
-          <Affliction identifier="fillbladder" amount="3.0" />
-        </StatusEffect>
-        <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true">
-          <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="fruitsplatter_green" decalsize="1.0" />
-          <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" colormultiplier="0,128,0,255" />
-        </StatusEffect>
-        <StatusEffect type="OnFire" target="This" Condition="-50.0" />
-        <StatusEffect type="OnBroken" target="This" Condition="-100.0">
-          <Remove />
+          
+        <StatusEffect type="OnFire" target="This" Condition="-10.0" statuseffecttags="onfire" duration="1" stackable="false" />
+        <StatusEffect type="OnBroken" target="This" delay="1" stackable="false">
+          <Conditional HasStatusTag="onfire" />
+          <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" range="2000" />
+          <sound file="Content/Items/Weapons/ExplosionDebris1.ogg" range="2000" />
+          <Explosion range="150.0" force="3" debris="true" >
+            <Affliction identifier="burn" strength="25" />
+            <Affliction identifier="stun" strength="5" />
+          </Explosion> 
+          <Remove /> 
         </StatusEffect>
       </Holdable>
     </greenpaint>
@@ -993,93 +877,35 @@
         <RequiredItem identifier="tin" />
         <RequiredItem identifier="zinc" />
       </Fabricate>
-      <Deconstruct time="10">
-        <Item identifier="ethanol" mincondition="0.9" />
+      <Deconstruct time="5">
+        <Item identifier="tin" mincondition="0.0" />
       </Deconstruct>
       <Holdable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="3.5" aimpos="26,24" holdpos="30,-15" holdangle="0" aimangle="120" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
-        <!-- Allow the item to be applied to a bot, but prevent full usage on a player -->
-        <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
-          <Conditional IsBot="true" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
-          <Conditional IsBot="true" />
-          <Affliction identifier="organdamage" amount="62.5" />
-          <Affliction identifier="he-stomachache" amount="65.625" />
-          <Affliction identifier="he-drankbluepaint" amount="62.5" />
-          <ReduceAffliction type="thirst" amount="12.5" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" delay="10" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
-          <Conditional IsBot="true" />
-          <Affliction identifier="organdamage" amount="62.5" />
-          <Affliction identifier="he-stomachache" amount="65.625" />
-          <Affliction identifier="he-drankbluepaint" amount="62.5" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" comparison="And" multiplyafflictionsbymaxvitality="true">
-          <Conditional IsBot="true" />
-          <Conditional bladder="gte 0.01" />
-          <Affliction identifier="fillbladder" amount="3.0" />
-        </StatusEffect>
-        <!-- Allow the item to be applied to a player fully, if the player is not in water and unconcious/stunned -->
-        <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
-          <Conditional InWater="false" />
-          <Conditional stun="gt 0" />
-          <Conditional IsPlayer="true" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" comparison="And" multiplyafflictionsbymaxvitality="true">
-          <Conditional InWater="false" />
-          <Conditional stun="gt 0" />
-          <Conditional IsPlayer="true" />
-          <ReduceAffliction type="thirst" amount="1.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" delay="10" duration="12.5" comparison="And" multiplyafflictionsbymaxvitality="true">
-          <Conditional InWater="false" />
-          <Conditional stun="gt 0" />
-          <Conditional IsPlayer="true" />
-          <Affliction identifier="he-stomachache" strength="5.25" />
-          <Affliction identifier="organdamage" amount="5.0" />
-          <Affliction identifier="he-drankbluepaint" amount="5.0" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" comparison="And" multiplyafflictionsbymaxvitality="true">
-          <Conditional InWater="false" />
-          <Conditional stun="gt 0" />
-          <Conditional IsPlayer="true" />
-          <Conditional bladder="gte 0.01" />
-          <Affliction identifier="fillbladder" amount="3.0" />
-        </StatusEffect>
+      
         <!-- Regular drinking -->
-        <StatusEffect type="OnUse" target="This" Condition="-8.0">
+        <StatusEffect type="OnUse" target="This" Condition="-20.0">
           <Conditional InWater="false" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/Spray.ogg" loop="true" range="200" volume="3.0" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And">
-          <Conditional InWater="false" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
-        </StatusEffect>
         <StatusEffect type="OnUse" target="Character" delay="10" comparison="And">
           <Conditional InWater="false" />
-          <Affliction identifier="he-stomachache" strength="5.25" />
-          <Affliction identifier="organdamage" amount="5.0" />
-          <Affliction identifier="he-drankbluepaint" amount="5.0" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And">
-          <Conditional thirst="gt 1.0" />
-          <Conditional InWater="false" />
+          <Affliction identifier="he-stomachache" strength="5.0" />
+          <Affliction identifier="he-drankpaint" amount="10.0" />
           <ReduceAffliction type="thirst" amount="1.0" />
+          <Affliction identifier="fillbladder" amount="1.0" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And">
-          <Conditional bladder="gte 0.01" />
-          <Conditional InWater="false" />
-          <Affliction identifier="fillbladder" amount="3.0" />
-        </StatusEffect>
-        <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true">
-          <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="fruitsplatter_blue" decalsize="1.0" />
-          <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" colormultiplier="0,0,128,255" />
-        </StatusEffect>
-        <StatusEffect type="OnFire" target="This" Condition="-50.0" />
-        <StatusEffect type="OnBroken" target="This" Condition="-100.0">
-          <Remove />
+          
+        <StatusEffect type="OnFire" target="This" Condition="-10.0" statuseffecttags="onfire" duration="1" stackable="false" />
+        <StatusEffect type="OnBroken" target="This" delay="1" stackable="false">
+          <Conditional HasStatusTag="onfire" />
+          <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" range="2000" />
+          <sound file="Content/Items/Weapons/ExplosionDebris1.ogg" range="2000" />
+          <Explosion range="150.0" force="3" debris="true" >
+            <Affliction identifier="burn" strength="25" />
+            <Affliction identifier="stun" strength="5" />
+          </Explosion> 
+          <Remove /> 
         </StatusEffect>
       </Holdable>
     </bluepaint>
@@ -1103,93 +929,35 @@
         <RequiredItem identifier="tin" />
         <RequiredItem identifier="zinc" />
       </Fabricate>
-      <Deconstruct time="10">
-        <Item identifier="ethanol" mincondition="0.9" />
+      <Deconstruct time="5">
+        <Item identifier="tin" mincondition="0.0" />
       </Deconstruct>
       <Holdable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="3.5" aimpos="26,24" holdpos="30,-15" holdangle="0" aimangle="120" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
-        <!-- Allow the item to be applied to a bot, but prevent full usage on a player -->
-        <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
-          <Conditional IsBot="true" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
-          <Conditional IsBot="true" />
-          <Affliction identifier="organdamage" amount="62.5" />
-          <Affliction identifier="he-stomachache" amount="65.625" />
-          <Affliction identifier="he-drankblackpaint" amount="62.5" />
-          <ReduceAffliction type="thirst" amount="12.5" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" delay="10" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
-          <Conditional IsBot="true" />
-          <Affliction identifier="organdamage" amount="62.5" />
-          <Affliction identifier="he-stomachache" amount="65.625" />
-          <Affliction identifier="he-drankblackpaint" amount="62.5" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" comparison="And" multiplyafflictionsbymaxvitality="true">
-          <Conditional IsBot="true" />
-          <Conditional bladder="gte 0.01" />
-          <Affliction identifier="fillbladder" amount="3.0" />
-        </StatusEffect>
-        <!-- Allow the item to be applied to a player fully, if the player is not in water and unconcious/stunned -->
-        <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
-          <Conditional InWater="false" />
-          <Conditional stun="gt 0" />
-          <Conditional IsPlayer="true" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" comparison="And" multiplyafflictionsbymaxvitality="true">
-          <Conditional InWater="false" />
-          <Conditional stun="gt 0" />
-          <Conditional IsPlayer="true" />
-          <ReduceAffliction type="thirst" amount="1.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" delay="10" duration="12.5" comparison="And" multiplyafflictionsbymaxvitality="true">
-          <Conditional InWater="false" />
-          <Conditional stun="gt 0" />
-          <Conditional IsPlayer="true" />
-          <Affliction identifier="he-stomachache" strength="5.25" />
-          <Affliction identifier="organdamage" amount="5.0" />
-          <Affliction identifier="he-drankblackpaint" amount="5.0" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" comparison="And" multiplyafflictionsbymaxvitality="true">
-          <Conditional InWater="false" />
-          <Conditional stun="gt 0" />
-          <Conditional IsPlayer="true" />
-          <Conditional bladder="gte 0.01" />
-          <Affliction identifier="fillbladder" amount="3.0" />
-        </StatusEffect>
+      
         <!-- Regular drinking -->
-        <StatusEffect type="OnUse" target="This" Condition="-8.0">
+        <StatusEffect type="OnUse" target="This" Condition="-20.0">
           <Conditional InWater="false" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/Spray.ogg" loop="true" range="200" volume="3.0" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And">
-          <Conditional InWater="false" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
-        </StatusEffect>
         <StatusEffect type="OnUse" target="Character" delay="10" comparison="And">
           <Conditional InWater="false" />
-          <Affliction identifier="he-stomachache" strength="5.25" />
-          <Affliction identifier="organdamage" amount="5.0" />
-          <Affliction identifier="he-drankblackpaint" amount="5.0" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And">
-          <Conditional thirst="gt 1.0" />
-          <Conditional InWater="false" />
+          <Affliction identifier="he-stomachache" strength="5.0" />
+          <Affliction identifier="he-drankpaint" amount="10.0" />
           <ReduceAffliction type="thirst" amount="1.0" />
+          <Affliction identifier="fillbladder" amount="1.0" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And">
-          <Conditional bladder="gte 0.01" />
-          <Conditional InWater="false" />
-          <Affliction identifier="fillbladder" amount="3.0" />
-        </StatusEffect>
-        <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true">
-          <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="fruitsplatter_black" decalsize="1.0" />
-          <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" colormultiplier="20,20,20,255" />
-        </StatusEffect>
-        <StatusEffect type="OnFire" target="This" Condition="-50.0" />
-        <StatusEffect type="OnBroken" target="This" Condition="-100.0">
-          <Remove />
+          
+        <StatusEffect type="OnFire" target="This" Condition="-10.0" statuseffecttags="onfire" duration="1" stackable="false" />
+        <StatusEffect type="OnBroken" target="This" delay="1" stackable="false">
+          <Conditional HasStatusTag="onfire" />
+          <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" range="2000" />
+          <sound file="Content/Items/Weapons/ExplosionDebris1.ogg" range="2000" />
+          <Explosion range="150.0" force="3" debris="true" >
+            <Affliction identifier="burn" strength="25" />
+            <Affliction identifier="stun" strength="5" />
+          </Explosion> 
+          <Remove /> 
         </StatusEffect>
       </Holdable>
     </blackpaint>
@@ -1213,93 +981,35 @@
         <RequiredItem identifier="tin" />
         <RequiredItem identifier="zinc" />
       </Fabricate>
-      <Deconstruct time="10">
-        <Item identifier="ethanol" mincondition="0.9" />
+      <Deconstruct time="5">
+        <Item identifier="tin" mincondition="0.0" />
       </Deconstruct>
       <Holdable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="3.5" aimpos="26,24" holdpos="30,-15" holdangle="0" aimangle="120" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
-        <!-- Allow the item to be applied to a bot, but prevent full usage on a player -->
-        <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
-          <Conditional IsBot="true" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
-          <Conditional IsBot="true" />
-          <Affliction identifier="organdamage" amount="62.5" />
-          <Affliction identifier="he-stomachache" amount="65.625" />
-          <Affliction identifier="he-drankwhitepaint" amount="62.5" />
-          <ReduceAffliction type="thirst" amount="12.5" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" delay="10" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
-          <Conditional IsBot="true" />
-          <Affliction identifier="organdamage" amount="62.5" />
-          <Affliction identifier="he-stomachache" amount="65.625" />
-          <Affliction identifier="he-drankwhitepaint" amount="62.5" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" comparison="And" multiplyafflictionsbymaxvitality="true">
-          <Conditional IsBot="true" />
-          <Conditional bladder="gte 0.01" />
-          <Affliction identifier="fillbladder" amount="3.0" />
-        </StatusEffect>
-        <!-- Allow the item to be applied to a player fully, if the player is not in water and unconcious/stunned -->
-        <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
-          <Conditional InWater="false" />
-          <Conditional stun="gt 0" />
-          <Conditional IsPlayer="true" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" comparison="And" multiplyafflictionsbymaxvitality="true">
-          <Conditional InWater="false" />
-          <Conditional stun="gt 0" />
-          <Conditional IsPlayer="true" />
-          <ReduceAffliction type="thirst" amount="1.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" delay="10" duration="12.5" comparison="And" multiplyafflictionsbymaxvitality="true">
-          <Conditional InWater="false" />
-          <Conditional stun="gt 0" />
-          <Conditional IsPlayer="true" />
-          <Affliction identifier="he-stomachache" strength="5.25" />
-          <Affliction identifier="organdamage" amount="5.0" />
-          <Affliction identifier="he-drankwhitepaint" amount="5.0" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="12.5" comparison="And" multiplyafflictionsbymaxvitality="true">
-          <Conditional InWater="false" />
-          <Conditional stun="gt 0" />
-          <Conditional IsPlayer="true" />
-          <Conditional bladder="gte 0.01" />
-          <Affliction identifier="fillbladder" amount="3.0" />
-        </StatusEffect>
+      
         <!-- Regular drinking -->
-        <StatusEffect type="OnUse" target="This" Condition="-8.0">
+        <StatusEffect type="OnUse" target="This" Condition="-20.0">
           <Conditional InWater="false" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/Spray.ogg" loop="true" range="200" volume="3.0" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And">
-          <Conditional InWater="false" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
-        </StatusEffect>
         <StatusEffect type="OnUse" target="Character" delay="10" comparison="And">
           <Conditional InWater="false" />
-          <Affliction identifier="he-stomachache" strength="5.25" />
-          <Affliction identifier="organdamage" amount="5.0" />
-          <Affliction identifier="he-drankwhitepaint" amount="5.0" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And">
-          <Conditional thirst="gt 1.0" />
-          <Conditional InWater="false" />
+          <Affliction identifier="he-stomachache" strength="5.0" />
+          <Affliction identifier="he-drankpaint" amount="10.0" />
           <ReduceAffliction type="thirst" amount="1.0" />
+          <Affliction identifier="fillbladder" amount="1.0" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And">
-          <Conditional bladder="gte 0.01" />
-          <Conditional InWater="false" />
-          <Affliction identifier="fillbladder" amount="3.0" />
-        </StatusEffect>
-        <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true">
-          <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="fruitsplatter_white" decalsize="1.0" />
-          <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" />
-        </StatusEffect>
-        <StatusEffect type="OnFire" target="This" Condition="-50.0" />
-        <StatusEffect type="OnBroken" target="This" Condition="-100.0">
-          <Remove />
+          
+        <StatusEffect type="OnFire" target="This" Condition="-10.0" statuseffecttags="onfire" duration="1" stackable="false" />
+        <StatusEffect type="OnBroken" target="This" delay="1" stackable="false">
+          <Conditional HasStatusTag="onfire" />
+          <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" range="2000" />
+          <sound file="Content/Items/Weapons/ExplosionDebris1.ogg" range="2000" />
+          <Explosion range="150.0" force="3" debris="true" >
+            <Affliction identifier="burn" strength="25" />
+            <Affliction identifier="stun" strength="5" />
+          </Explosion> 
+          <Remove /> 
         </StatusEffect>
       </Holdable>
     </whitepaint>
