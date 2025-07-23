@@ -1126,6 +1126,7 @@
       </Effect>
       <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/ReapersTributeOverlay.png" />
     </Affliction>    
+    
     <Affliction identifier="he-passoutreaper" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="true" healableinmedicalclinic="false" MedicalSkillGain="0.0">
       <Effect minstrength="0" maxstrength="100" strengthchange="0" interval="0.5">
         <StatusEffect type="Always" target="Character" comparison="And" delay="10" disabledeltatime="true" stackable="false">
@@ -1151,9 +1152,9 @@
     <Affliction identifier="he-passout" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="true" healableinmedicalclinic="false" MedicalSkillGain="0.0">
       <!-- Adjust strengthchange to ramp up the overlay. Stun applies 100 passout per second, so at -50 it ramps up at 50 per second (2 second to blackout) 
            There are 3 stages, first one for not passing out on small stuns, second one for blacking out, and last one for 100% opacity overlay (relying on -strength change alone will keep the overlay at 98%, not fully opaque) -->
-      <Effect minstrength="0" maxstrength="50" strengthchange="-80" MinAfflictionOverlayAlphaMultiplier="0" MaxAfflictionOverlayAlphaMultiplier="0.5">
+      <Effect minstrength="0" maxstrength="40" strengthchange="-80" MinAfflictionOverlayAlphaMultiplier="0" MaxAfflictionOverlayAlphaMultiplier="0.5">
       </Effect>
-      <Effect minstrength="50" maxstrength="99" strengthchange="-50" MinAfflictionOverlayAlphaMultiplier="0.5" MaxAfflictionOverlayAlphaMultiplier="1">
+      <Effect minstrength="40" maxstrength="99" strengthchange="-50" MinAfflictionOverlayAlphaMultiplier="0.5" MaxAfflictionOverlayAlphaMultiplier="1">
         <StatusEffect type="Always" target="Character" LowPassMultiplier="0.0" setvalue="true" disabledeltatime="true">
           <Conditional he-passout="gte 1" />
         </StatusEffect>
@@ -1169,8 +1170,11 @@
         </StatusEffect>          
       </Effect>
       <PeriodicEffect minstrength="99" maxstrength="100" mininterval="15" maxinterval="25">
-        <StatusEffect target="Character" duration="2">
-          <ReduceAffliction identifier="he-passout" strength="90" />
+        <StatusEffect target="Character" duration="3">
+          <ReduceAffliction identifier="he-passout" strength="70" />
+        </StatusEffect>
+        <StatusEffect target="Character" duration="5">
+          <ReduceAffliction identifier="he-passout" strength="30" />
         </StatusEffect>
       </PeriodicEffect>
       <AfflictionOverlay texture="%ModDir:2954998725%/Content/UI/PassOutOverlay.png" />
