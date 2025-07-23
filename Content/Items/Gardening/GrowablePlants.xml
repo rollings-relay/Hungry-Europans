@@ -329,11 +329,11 @@
       </Deconstruct>
       <Fabricate suitablefabricators="cuttingboard" requiredtime="5" requiresrecipe="false" amount="3">
         <RequiredSkill identifier="cooking" level="10" />
-        <RequiredItem identifier="popnut" Amount="1"/>
+        <RequiredItem identifier="popnutpopped" Amount="1"/>
       </Fabricate>
       <Fabricate suitablefabricators="cuttingboard" requiredtime="5" requiresrecipe="false" amount="5">
         <RequiredSkill identifier="cooking" level="15" />
-        <RequiredItem identifier="badpopnut" Amount="1"/>
+        <RequiredItem identifier="badpopnutpopped" Amount="1"/>
       </Fabricate>
       <Growable name="popnutvineseed" growthspeed="777.070" pickingtime="3" maximumvines="3" maxhealth="400" hardiness="0.15" floodtolerance="0.4" seedrate="0" productrate="0.022" flowertint="255,54,0,255" flowerquantity="1" baseflowerscale="0.65" baseleafscale="0.75" LeafProbability="0.55" vinescale="0.25" vinetint="222,86,145,255" GrowthWeights="1,0,0,0">
         <ProducedItem identifier="popnut" probability="0.6" />

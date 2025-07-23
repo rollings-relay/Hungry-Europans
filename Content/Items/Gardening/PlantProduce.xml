@@ -424,9 +424,6 @@
       </StatusEffect>
     </Holdable>
     <AiTarget sightrange="1000" static="True" />
-    <ItemContainer capacity="1" maxstacksize="1" keepopenwhenequipped="false" movableframe="false" spawnwithid="popnutvineseed" ShowContainedStateIndicator="false">
-      <Containable items="popnutvineseed" />
-    </ItemContainer>
     <PreferredContainer primary="plantcontainer"/>
   </Item>
 
@@ -803,9 +800,6 @@
         <Remove />
       </StatusEffect>
     </Holdable>
-    <ItemContainer capacity="1" maxstacksize="3" keepopenwhenequipped="false" movableframe="false" spawnwithid="popnutvineseed,popnutvineseed,popnutvineseed" ShowContainedStateIndicator="false">
-      <Containable items="popnutvineseed" />
-    </ItemContainer>
     <AiTarget sightrange="1000" static="true" />
     <PreferredContainer primary="plantcontainer"/>
   </Item>
