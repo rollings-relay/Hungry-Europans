@@ -98,7 +98,7 @@
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
         <Conditional HasStatusTag="neq iseating" />
         <Explosion showEffects="false" decal="fruitsplatter_purpledesat" decalsize="1.0" />
-        <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" />
+        <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" colormultiplier="120,105,70,255"/>
         <ParticleEmitter particle="whitechunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" colormultiplier="120,105,70,255"/>
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
@@ -188,7 +188,7 @@
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
         <Conditional HasStatusTag="neq iseating" />
         <Explosion showEffects="false" decal="fruitsplatter_orange" decalsize="1.0" />
-        <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" />
+        <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" colormultiplier="200,75,20,255"/>
         <ParticleEmitter particle="whitechunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" colormultiplier="200,75,20,255"/>
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
@@ -467,7 +467,7 @@
       <StatusEffect type="OnNotContained" target="This" Condition="0.0" setvalue="true">
         <Conditional Scale="gte 0.75" />
         <sound file="Content/Sounds/Damage/Limbslash2.ogg" range="1000" />
-        <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" />
+        <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" colormultiplier="245,195,30,255"/>
         <ParticleEmitter particle="whitechunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" colormultiplier="245,195,30,255" />
         <Explosion range="50.0" force="3.0">
           <Affliction identifier="burn" strength="50" />
