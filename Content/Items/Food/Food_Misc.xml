@@ -677,7 +677,7 @@
       <Fabricate suitablefabricators="cuttingboard" requiredtime="10" requiresrecipe="false" amount="1" >
         <RequiredSkill identifier="cooking" level="25" />
         <RequiredItem identifier="he-sausage" amount="2" MinCondition="0.25" />
-        <RequiredItem identifier="he-fermentedraptorbane" amount="1" />
+        <RequiredItem identifier="he-fermentedcabbage" amount="1" />
         <RequiredItem identifier="he-emptyplate" amount="1" />
       </Fabricate>
       <Deconstruct time="4" requireddeconstructor="deconstructor">

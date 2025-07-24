@@ -146,7 +146,7 @@
         <SubContainer capacity="1" maxstacksize="1" >
           <Containable items="yeastshroom,slimebacteria" />
         </SubContainer>
-        <SubContainer capacity="1" maxstacksize="1" >
+        <SubContainer capacity="1" maxstacksize="8" >
           <Containable items="emptyjar,emptybottle,emptyshaker" />
         </SubContainer>
       </ItemContainer>

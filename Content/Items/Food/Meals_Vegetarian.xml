@@ -273,38 +273,81 @@
           <Conditional stun="gt 0" />
           <Conditional trait_likes_omelettes="gt 0" />
           <ReduceAffliction identifier="mood" amount="2.0" />
-        </StatusEffect>
-
-        <!--////////// REGULAR EATING \\\\\\\\\\-->
-        <StatusEffect type="OnUse" target="This" Condition="-4.0" stackable="false" comparison="And">
-          <Conditional InWater="false" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" stackable="false" comparison="And">
-          <Conditional InWater="false" />
-          <Affliction identifier="he-stuffed" amount="7.5" />
-          <Affliction identifier="spill" amount="1000" probability="0.0005" />
+        
+    <!-- FERMENTED FOODS -->
+    <!-- WIP fermented Cabbage  TODO: sprite -->
+    <Item hideinmenus="false" name="Fermented Cabbage" identifier="he-fermentedcabbage" variantof="he-poisoneffectpreset_regular" category="Misc" subcategory="Food - Hammerhead" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,delicacy,jar,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="True" requireaimtouse="True" health="10">
+     <!--  <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
+      <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" /> -->
+      <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
+      <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,386,42,67" depth="0.6" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,386,42,67" origin="0.5,0.5" />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,386,42,67" depth="0.525" origin="0.5,0.84"  />
+      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="43,386,42,67" depth="0.6" maxcondition="99" />
+      <Fabricate suitablefabricators="distiller" requiredtime="140" amount="1">
+        <RequiredSkill identifier="cooking" level="35" />
+        <RequiredItem tag="plantleaf" amount="3" />
+        <RequiredItem identifier="slimebacteria" amount="1" MinCondition="0.0" UseCondition="True" />
+        <RequiredItem identifier="he-emptyjar" amount="1"/>
+      </Fabricate>
+      <Deconstruct time="1" requireddeconstructor="deconstructor"/>
+      <Body width="42" height="67" density="12" />
+      <SuitableTreatment type="hunger" suitability="20" />
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand,Any" holdangle="20" holdpos="30,-30" handle1="-10,-20" handle2="0,20" aimable="false" msg="ItemMsgPickUpSelect">
+        <!-- EVERYTHING RELATED TO POISONING FOOD IS HANDLED VIA THE POISON EFFECT PRESET ITEMS DEFINED IN - variantof="" AND THEIR CODE IS LOCATED IN - "/Content/Items/#Presets/#ItemPresets.xml" -->
+        
+        <!--////////// BOT EATING \\\\\\\\\\-->
+        <!-- Bots "eat" by holding the food in their hands -->
+        <StatusEffect type="OnActive" target="This,Character" duration="1" condition="-1" stackable="false" comparison="And">
+          <Conditional hunger="gt 1" targetcontainer="true" />
+          <Conditional IsPlayer="false" targetcontainer="true" />
+          <Conditional IsHuman="true" targetcontainer="true" />
+          <Affliction identifier="he-fiberrich" amount="12.0" />
+          <Affliction identifier="he-stuffed" amount="1.5" />
+          <Affliction identifier="ate_salad" amount="1" />
+          <ReduceAffliction type="hunger" amount="1.5" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And" stackable="false">
+        
+        <!--////////// REGULAR EATING \\\\\\\\\\-->
+        <!-- Use the item when it's held -->
+        <!-- -Condition -->
+        <StatusEffect type="OnSecondaryUse" target="This" Condition="-1" disabledeltatime="true" stackable="false" comparison="And" >
+          <Conditional HasStatusTag="neq emptyhand" />
           <Conditional InWater="false" />
-          <Conditional hunger="gt 0.5" />
-          <ReduceAffliction type="hunger" amount="0.5" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And" stackable="false">
+        <!-- eating fries "animation" -->
+        <StatusEffect type="OnSecondaryUse" target="This" handle2="-20,55" setvalue="true" duration="0.5" stackable="false" comparison="And">
+          <Conditional HasStatusTag="neq emptyhand" />
           <Conditional InWater="false" />
-          <Conditional trait_likes_omelettes="gt 0" />
-          <ReduceAffliction identifier="mood" amount="2.0" />
         </StatusEffect>
-        <StatusEffect type="OnBroken" target="This">
+        <StatusEffect type="OnSecondaryUse" target="This" handle2="0,20" delay="0.5" duration="0.1" setvalue="true" stackable="false" comparison="And">
+          <Conditional HasStatusTag="eq emptyhand" />
+          <Conditional InWater="false" />
+        </StatusEffect>
+        <!-- health effects -->
+        <StatusEffect type="OnSecondaryUse" target="Character" duration="1" stackable="false" comparison="And">
+          <Conditional HasStatusTag="neq emptyhand" />
+          <Conditional InWater="false" />
+          <Affliction identifier="he-fiberrich" amount="12.0" />
+          <Affliction identifier="he-stuffed" amount="1.5" />
+          <Affliction identifier="ate_salad" amount="1" />
+          <ReduceAffliction type="hunger" amount="1.5" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="true" range="200" volume="5.0" selectionmode="Random" />
+        </StatusEffect>
+        <!-- Prevent using this item continuously by applying the tag "emptyhand" which prevents the StatusEffect that uses the item from triggering again, effectively only allowing it to trigger once per mouse-click -->
+        <StatusEffect type="OnSecondaryUse" target="This,Character" StatusEffecttags="emptyhand" duration="0.5" stackable="false" />
+        <StatusEffect type="OnBroken" target="This" disabledeltatime="true">
           <Remove />
+          <SpawnItem identifier="he-emptyjar" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" Equip="true" />
         </StatusEffect>
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
     </Item>
     
-    
     <!-- WIP fermented Raptors Bane TODO: sprite -->
-    <Item hideinmenus="false" name="Fermented Raptor's Bane" identifier="he-fermentedraptorbane" variantof="he-poisoneffectpreset_regular" health="3" category="Misc" subcategory="Food - Hammerhead" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,delicacy,jar,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="True" requireaimtouse="True">
+    <Item hideinmenus="false" name="Fermented Raptor's Bane" identifier="he-fermentedraptorbane" variantof="he-poisoneffectpreset_regular" category="Misc" subcategory="Food - Hammerhead" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,delicacy,jar,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="True" requireaimtouse="True" health="3" >
      <!--  <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" /> -->
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
@@ -331,7 +374,7 @@
           <Conditional hunger="gt 1" targetcontainer="true" />
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
-          <Affliction identifier="he-fiberrich" amount="25.0" />
+          <Affliction identifier="he-fiberrich" amount="35.0" />
           <Affliction identifier="he-stuffed" amount="8" />
           <ReduceAffliction type="hunger" amount="8" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
@@ -357,7 +400,7 @@
         <StatusEffect type="OnSecondaryUse" target="Character" duration="1" stackable="false" comparison="And">
           <Conditional HasStatusTag="neq emptyhand" />
           <Conditional InWater="false" />
-          <Affliction identifier="he-fiberrich" amount="25.0" />
+          <Affliction identifier="he-fiberrich" amount="35.0" />
           <Affliction identifier="he-stuffed" amount="8" />
           <ReduceAffliction type="hunger" amount="8" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="true" range="200" volume="5.0" selectionmode="Random" />
@@ -373,7 +416,7 @@
     </Item>
 
     <!-- WIP fermented Salt Bulb TODO: sprite -->
-    <Item hideinmenus="false" name="Fermented Salt Bulb" identifier="he-fermentedsaltbulb" variantof="he-poisoneffectpreset_regular" health="3" category="Misc" subcategory="Food - Hammerhead" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,delicacy,jar,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="True" requireaimtouse="True">
+    <Item hideinmenus="false" name="Fermented Salt Bulb" identifier="he-fermentedsaltbulb" variantof="he-poisoneffectpreset_regular" category="Misc" subcategory="Food - Hammerhead" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,delicacy,jar,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="True" requireaimtouse="True" health="3" >
      <!--  <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" /> -->
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
@@ -400,7 +443,7 @@
           <Conditional hunger="gt 1" targetcontainer="true" />
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
-          <Affliction identifier="he-fiberrich" amount="25.0" />
+          <Affliction identifier="he-fiberrich" amount="35.0" />
           <Affliction identifier="he-stuffed" amount="8" />
           <ReduceAffliction type="hunger" amount="8" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
@@ -426,7 +469,7 @@
         <StatusEffect type="OnSecondaryUse" target="Character" duration="1" stackable="false" comparison="And">
           <Conditional HasStatusTag="neq emptyhand" />
           <Conditional InWater="false" />
-          <Affliction identifier="he-fiberrich" amount="25.0" />
+          <Affliction identifier="he-fiberrich" amount="35.0" />
           <Affliction identifier="he-stuffed" amount="8" />
           <ReduceAffliction type="hunger" amount="8" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="true" range="200" volume="5.0" selectionmode="Random" />
