@@ -5,7 +5,7 @@
     <Item name="Glass Fragments" identifier="he-glassfragments" category="Misc" subcategory="Ingredients" maxstacksize="20" cargocontaineridentifier="metalcrate" description="Shattered glass. Can be obtained through smashing bottles or crafting them from quartz at a fabricator. Used for crafting at a fabricator or bottle printer." Tags="smallitem,ingredient,glassfragments" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_glassfragments" isshootable="true" requireaimtouse="true">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
-      <PreferredContainer primary="kitchen" secondary="locker"/>
+      <PreferredContainer primary="bottleprinter" secondary="kitchen,locker"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="291,1,62,14" depth="0.6" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="291,1,62,14" depth="0.525" origin="0.5,0.3"  />
       <Body width="62" height="7" density="13" />
