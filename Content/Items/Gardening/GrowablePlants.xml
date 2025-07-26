@@ -7,10 +7,10 @@
 <!-- 
   BIG LIST OF EXPLAINING, OVERRIDES AND TODOs:
   
-  RULES FOR AQUATIC PLANTS:  
+  RULES FOR PLANTS:  
   There are FRUITS and there are SEEDS. Make sure every fruit (product) has a seed (separate banana from seed)
-  There are RAW aquatic plants, and there are aquatic plant FRUITS (product version with less yield)
-  Deconstructing FRUITS (and aquatic plants) gives SEEDS (random% chance?)
+  Aquatic Plants grow in HYDROPONICS, require salt water and fertilizer
+  You can get SEEDS using from a FRUIT using the cutting board
   FRUITS (only natural ones) can be be cross-bred to make SEEDS at the research station
   
   Researchstation capacity increased, can take every item - OVERRIDE
