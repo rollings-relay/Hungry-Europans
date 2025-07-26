@@ -824,7 +824,7 @@
         <RequiredItem tag="milk" UseCondition="True" MinCondition="0.099"/>
         <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.05"/>
         <RequiredItem identifier="he-sugar" UseCondition="True" MinCondition="0.1"/>
-        <RequiredItem identifier="he-flour" UseCondition="True" MinCondition="0.25"/>
+        <RequiredItem identifier="he-flour" UseCondition="True" MinCondition="0.2"/>
         <RequiredItem tag="smallegg" amount="1" description="fabricationdescription.smallegg" header="fabricationheader.smallegg" />
       </Fabricate>
       <Deconstruct time="1" />

@@ -383,7 +383,7 @@
       </Price>
       <Fabricate suitablefabricators="cuttingboard" requiredtime="38" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="cooking" level="20" />
-        <RequiredItem tag="seed" amount="30" />
+        <RequiredItem tag="seed" amount="20" />
         <RequiredItem identifier="sulphuricacid" amount="1" />
         <RequiredItem identifier="he-emptybowl" amount="1" MinCondition="0" usecondition="true" />
       </Fabricate>
@@ -418,7 +418,7 @@
       <Fabricate suitablefabricators="cuttingboard" requiredtime="22" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="cooking" level="25" />
         <RequiredItem tag="cleanwater" mincondition="0.98" UseCondition="true" />
-        <RequiredItem identifier="he-flour" amount="1" />
+        <RequiredItem identifier="he-flour" mincondition="0.5" UseCondition="true" />
         <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.1"/>
         <RequiredItem identifier="he-sugar" UseCondition="True" MinCondition="0.25"/>
         <RequiredItem identifier="yeastshroom" amount="1"/>
