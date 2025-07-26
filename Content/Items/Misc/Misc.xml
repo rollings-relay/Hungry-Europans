@@ -1229,7 +1229,7 @@
         </StatusEffect>
         <StatusEffect type="OnSecondaryUse" target="Character">
           <Affliction identifier="psychosisresistance" amount="15" />
-          <Affliction identifier="tobaccoaddiction" amount="4" />
+          <Affliction identifier="he-tobaccoaddiction" amount="4" />
           <ReduceAffliction identifier="psychosis" amount="5" />
           <ReduceAffliction identifier="hallucinating" amount="10" />
           <RequiredItem items="pipetobacco" type="Contained" />
@@ -1267,7 +1267,7 @@
         </StatusEffect>
         <StatusEffect tags="medical" type="OnSecondaryUse" target="Character">
           <Affliction identifier="psychosisresistance" amount="20" />
-          <Affliction identifier="tobaccoaddiction" amount="4" />
+          <Affliction identifier="he-tobaccoaddiction" amount="4" />
           <ReduceAffliction identifier="psychosis" amount="6" />
           <ReduceAffliction identifier="hallucinating" amount="10" />
           <!-- LEGACY: Reaper's tax is here (for now) only in order to not break existing saves -->
