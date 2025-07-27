@@ -1283,7 +1283,7 @@
       <!--<ContainedSprite allowedcontainertags="liquorshelf" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="201,0,21,66" depth="0.55" origin="0.5,0.42" />-->
       <Body width="20" height="56" density="12" />
       <SuitableTreatment type="embarrassment" suitability="50" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="-5,-30" aimpos="12,5" aimable="false" swingwhenaiming="true" swingamount="3,2" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- When used in Health GUI -->
         <StatusEffect type="OnSuccess" target="This" Condition="-2.0" disabledeltatime="true">
@@ -1303,19 +1303,15 @@
         </StatusEffect>
                         
         <!-- Regular drinking RMB after unbottle --> 
-        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" aimpos="28,24" >
+        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" >
           <Affliction identifier="psychosisresistance" amount="3" />
           <Affliction identifier="applydrunk" amount="1" />
           <ReduceAffliction identifier="nausea" amount="1" />
           <ReduceAffliction identifier="embarrassment" strength="0.25" />
           <ReduceAffliction type="thirst" amount="1.5" />
           <Affliction identifier="fillbladder" amount="2.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
-        </StatusEffect>              
-        <!-- <StatusEffect type="OnSecondaryUse" target="Character" disabledeltatime="true" >
-          <Conditional trait_likes_rum="gt 0" />
-          <Affliction identifier="drank_rum" amount="1" />
-        </StatusEffect>  --> 
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurping.ogg" loop="true" range="200" volume="3.0" />
+        </StatusEffect>
         
         <StatusEffect type="OnImpact" target="This">
           <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="fruitsplatter1" decalsize="1.0" />
