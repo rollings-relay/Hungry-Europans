@@ -58,6 +58,7 @@
       texture="Content/Particles/ParticleAtlas.png"
       sourcerect="224,96,32,32" />
   </waterdropshort>
+  
   <colagoosplash
     startsizemin="0.5,0.5"
     startsizemax="1,1"
@@ -111,6 +112,7 @@
       rows="8"
       origin="0.3,0.5" />
   </colagoosplash>
+  
   <colabubbles
     startsizemin="0.6,0.6"
     startsizemax="1,1"
@@ -322,5 +324,44 @@
       texture="Content/Particles/ParticleAtlas.png"
       sourcerect="208,64,48,32" />
   </whitechunks>
+  
+  <jarlid
+    lifetime="5"
+    angularvelocitymin="-100"
+    angularvelocitymax="100"
+    startrotationmin="0"
+    startrotationmax="0"
+    rotatetodirection="False"
+    drag="0"
+    waterdrag="0.3"
+    velocitychange="0,-8"
+    velocitychangewater="0,-1"
+    collisionradius="5"
+    usecollision="True"
+    deleteoncollision="True"
+    friction="0.5"
+    restitution="0.5"
+    startsizemin="1,1"
+    startsizemax="1,1"
+    sizechangemin="0,0"
+    sizechangemax="0,0"
+    growtime="0"
+    startcolor="255,255,255,255"
+    endcolor="255,255,255,255"
+    drawtarget="Both"
+    blendstate="AlphaBlend"
+    animduration="1"
+    loopanim="True"
+    startdelaymin="0"
+    startdelaymax="0"
+    drawontop="False"
+    lifetimemin="0"
+    middlecolor="255,255,255,255"
+    usemiddlecolor="False"
+    priority="0">
+    <sprite
+      texture="%ModDir:2954998725%/Content/Items/Food/Jars.png"
+      sourcerect="5,1,32,4" />
+  </jarlid>
   
 </prefabs>
