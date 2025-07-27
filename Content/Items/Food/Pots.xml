@@ -3,7 +3,6 @@
   <Items>
   
     <!-- Soups allow you to use lower condition meat than normal -->
-    <!-- TODO: Soups inventory icon (so that it doesn't look like a regular bowl) -->
     
     <!-- SOUPS -->
     <Item name="Pot of Craw Yum" identifier="he-potcrawyum" category="Misc" maxstacksize="1" Tags="smallitem,pot,fullpot,tableware" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
@@ -458,7 +457,7 @@
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/Bowls.png" sourcerect="0,216,72,72" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/Bowls.png" sourcerect="216,0,72,72" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="342,0,45,20" depth="0.6" origin="0.5,0.5" />
       <Fabricate suitablefabricators="stove" requiredtime="3" requiresrecipe="false" amount="1" >
         <RequiredSkill identifier="cooking" level="15" />
