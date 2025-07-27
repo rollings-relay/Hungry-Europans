@@ -107,10 +107,10 @@
         <RequiredItem tag="hose" amount="1" />
         <RequiredItem tag="waterfilter" UseCondition="True" MinCondition="0.2" />
       </Fabricate> -->
-      <Fabricate suitablefabricators="stove" requiredtime="600" requiresrecipe="false" amount="1">
+      <!-- <Fabricate suitablefabricators="stove" requiredtime="600" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="cooking" level="10" />
         <RequiredItem identifier="he-kegseawater" amount="1" />
-      </Fabricate>
+      </Fabricate> -->
       <Holdable canBeCombined="true" removeOnCombined="false" pickkey="Select" slots="RightHand+LeftHand" holdpos="40,-40" holdangle="3" aimpos="65,-10" handle1="0,53" handle2="0,53" aimable="false" characterusable="true" msg="ItemMsgPickUpSelect" PickingTime="0">
         <!-- Revert position if not emptying -->
         <StatusEffect type="OnActive" target="This" holdpos="40,-40" holdangle="3" aimpos="65,-10" aimangle="0" setvalue="true" >
