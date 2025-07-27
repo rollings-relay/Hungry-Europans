@@ -62,7 +62,8 @@
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="35" height="36" density="9.4" />
       <SuitableTreatment type="hunger" suitability="25" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="32,15" holdangle="270" holdpos="0,0" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="35,-35" holdangle="270" handle1="10,-10" holdpos="0,0" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      
         <!--////////// BOT EATING \\\\\\\\\\-->
         <!-- Bots "eat" by holding the food in their hands -->
         <StatusEffect type="OnActive" target="This,Character" duration="1" condition="-1" stackable="false" comparison="And">
@@ -77,17 +78,23 @@
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         
-        <!--////////// REGULAR EATING \\\\\\\\\\-->
-        <StatusEffect type="OnUse" target="This" Condition="-1">
+        <!--////////// REGULAR EATING \\\\\\\\\\-->        
+        <StatusEffect type="OnUse" target="This" comparison="And" oneshot="true">
           <Conditional InWater="false" />
+          <Conditional ConditionPercentage="equals 100" />
+          <Sound file="%ModDir%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And">
+        <StatusEffect type="OnUse" target="This" aimpos="22,15" setvalue="true">
+          <Conditional condition="lt 15" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This, Character" condition="-1" comparison="And" >
           <Conditional InWater="false" />
           <Affliction identifier="he-proteinrich" amount="5.0" />
           <Affliction identifier="he-stuffed" amount="0.75" />
           <ReduceAffliction type="hunger" amount="0.75" />
           <ReduceAffliction type="burn" amount="0.25" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
+          <ParticleEmitter particle="whitechunks" particlespersecond="2" scalemin="0.15" scalemax="0.2" distancemin="0" distancemax="5" anglemin="200" anglemax="340" velocitymin="10" velocitymax="15" copyentityangle="true" colormultiplier="20,150,50,255" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
