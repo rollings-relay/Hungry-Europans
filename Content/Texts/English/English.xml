@@ -559,7 +559,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entityname.punchgun>Punch-Gun</entityname.punchgun><!--Patch 13-->
 <entitydescription.punchgun>Literally throwing punches!</entitydescription.punchgun><!--Patch 13-->
 <entityname.he-toilet>Toilet</entityname.he-toilet><!--Patch 13-->
-<entitydescription.he-toilet>Relief yourself or get rid of something by flushing it down.</entitydescription.he-toilet><!--Patch 13-->
+<entitydescription.he-toilet>Relieve yourself or get rid of something by flushing it down.</entitydescription.he-toilet><!--Patch 13-->
 <entityname.he-outposttoilet>Toilet</entityname.he-outposttoilet><!--Patch 16-->
 <entitydescription.he-outposttoilet>Variant of the toilet to be used on outpost modules that can't be picked up and moved by the player.</entitydescription.he-outposttoilet><!--Patch 16-->
 <entityname.he-cafeteriatable>Cafeteria Table</entityname.he-cafeteriatable><!--Patch 13-->
