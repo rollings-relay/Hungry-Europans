@@ -1167,8 +1167,8 @@
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
-      <Price baseprice="333" sold="true">
-        <Price storeidentifier="merchantnightclub" multiplier="2.0" minavailable="0" maxavailable="3" sold="true" />
+      <Price baseprice="123" sold="true">
+        <Price storeidentifier="merchantnightclub" multiplier="0.5" minavailable="0" maxavailable="3" sold="true" />
       </Price>
       <Fabricate suitablefabricators="vendingmachinedrinks,piratestore,cafeteria" requiredtime="3" requiredmoney="666" fabricationlimitmin="0" fabricationlimitmax="3" />
       <Fabricate suitablefabricators="refillstation" displayname="fill" requiredtime="5" requiresrecipe="false" amount="1">

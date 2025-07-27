@@ -61,7 +61,7 @@
     <!-- Bagpipe item - created by Draconis13 for Hungry Europans -->
     <Item name="Bagpipes" identifier="bagpipes" category="Misc" Tags="mediumitem,instrument" scale="0.5" description="An ancient instrument from earth consisting of an inflatable bladder, a mouthpiece and several metal pipes that produce haunting melodies." price="300" isshootable="true">
       <Upgrade gameversion="0.9.2.0" scale="0.5"/>
-      <Price baseprice="80">
+      <Price baseprice="120">
         <Price storeidentifier="merchantoutpost" minavailable="1"/>
         <Price storeidentifier="merchantcity" minavailable="1"/>
         <Price storeidentifier="merchantresearch" sold="false" />
