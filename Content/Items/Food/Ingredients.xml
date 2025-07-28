@@ -19,7 +19,7 @@
       <Deconstruct time="1" requireddeconstructor="deconstructor">
         <Item identifier="he-glassfragments" amount="1" outcondition="0.5"/>
       </Deconstruct>
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="18" requiresrecipe="false" amount="1">
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="14" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="cooking" level="20" />
         <RequiredItem identifier="saltbulb" amount="1" />
         <RequiredItem tag="emptyshaker" amount="1" />
@@ -192,7 +192,7 @@
       <Deconstruct time="2" requireddeconstructor="deconstructor">
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
       </Deconstruct>
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="18" requiresrecipe="false" amount="1">
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="14" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="cooking" level="25" />
         <RequiredItem identifier="creepingorange" amount="2" />
         <RequiredItem identifier="he-sugar" UseCondition="True" MinCondition="0.5" />
@@ -320,7 +320,7 @@
       <Deconstruct time="2" requireddeconstructor="deconstructor">
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
       </Deconstruct>
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="28" requiresrecipe="false" amount="1">
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="22" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="cooking" level="25" />
         <RequiredItem tag="seed" amount="12" />
         <RequiredItem tag="emptybottle" amount="1" />
@@ -381,7 +381,7 @@
         <Price storeidentifier="merchantmine"/>
         <Price storeidentifier="merchantmedical"/>
       </Price>
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="38" requiresrecipe="false" amount="1">
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="28" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="cooking" level="20" />
         <RequiredItem tag="seed" amount="20" />
         <RequiredItem identifier="sulphuricacid" amount="1" />
@@ -451,7 +451,7 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,367,45,57" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,367,45,57" depth="0.525" origin="0.5,0.85"  />
       <Body width="45" height="57" density="11" />
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="32" requiresrecipe="false" amount="1">
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="22" requiresrecipe="false" amount="1">
         <RequiredItem tag="cleanwater" UseCondition="True" MinCondition="0.99" />
         <RequiredItem identifier="bubbleberryleaf" amount="5" />
       </Fabricate>
@@ -483,7 +483,7 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="46,367,45,57" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="46,367,45,57" depth="0.525" origin="0.5,0.85"  />
       <Body width="45" height="57" density="11" />
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="32" requiresrecipe="false" amount="1">
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="22" requiresrecipe="false" amount="1">
         <RequiredItem tag="cleanwater" UseCondition="True" MinCondition="0.99" />
         <RequiredItem identifier="popnutleaf" amount="5" />
       </Fabricate>
@@ -514,7 +514,7 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,309,45,57" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,309,45,57" depth="0.525" origin="0.5,0.85"  />
       <Body width="45" height="57" density="11" />
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="32" requiresrecipe="false" amount="1">
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="22" requiresrecipe="false" amount="1">
         <RequiredItem tag="cleanwater" UseCondition="True" MinCondition="0.99" />
         <RequiredItem identifier="tobaccobud" amount="4" />
       </Fabricate>

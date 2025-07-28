@@ -545,7 +545,7 @@
     <Item name="Moloch Cheese Curd" identifier="he-molochcheesecurd" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Slowly turns into cheese. A full block of cheese will yield 18 cheese slices." Tags="smallitem,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="1,1,39,21" depth="0.6" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="16" requiresrecipe="false" amount="1" outcondition="0.0">
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="12" requiresrecipe="false" amount="1" outcondition="0.0">
         <RequiredSkill identifier="cooking" level="30" />
         <RequiredItem tag="milk" />
         <RequiredItem tag="milk" />
@@ -691,7 +691,7 @@
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="41,5,38,3" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/InventoryIcons.Png" sourcerect="0,59,36,20" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="16" requiresrecipe="false" amount="18">
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="3" requiresrecipe="false" amount="18">
         <RequiredSkill identifier="cooking" level="10" />
         <RequiredItem identifier="he-molochcheese" amount="1"/>
       </Fabricate>

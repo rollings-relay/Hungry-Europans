@@ -11,7 +11,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="582,0,68,29" depth="0.6" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="582,0,68,29" depth="0.525" origin="0.5,0.65" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="582,0,68,29" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="48" requiresrecipe="false" amount="1" >
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="18" requiresrecipe="false" amount="1" >
         <RequiredSkill identifier="cooking" level="50" />
         <RequiredItem identifier="he-preparedhammerheadroast" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
         <RequiredItem tag="omelette" UseCondition="True" mincondition="0.5" />

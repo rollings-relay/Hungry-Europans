@@ -66,7 +66,7 @@
         <Price storeidentifier="merchantbutcher" multiplier="2.0" minavailable="0" maxavailable="32" sold="true" />
       </Price>
       <Deconstruct time="3" requireddeconstructor="deconstructor" />
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="16" requiresrecipe="false" amount="4">
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="13" requiresrecipe="false" amount="4">
         <RequiredSkill identifier="butchery" level="30" />
         <RequiredItem identifier="he-mudraptormeatchunk" Amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
       </Fabricate>
@@ -118,7 +118,7 @@
         <Price storeidentifier="merchantbutcher" multiplier="2.0" minavailable="0" maxavailable="16" sold="true" />
       </Price>
       <Deconstruct time="5" requireddeconstructor="deconstructor" />
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="16" requiresrecipe="false" amount="1">
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="13" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="butchery" level="35" />
         <RequiredItem identifier="he-mudraptormeatchunk" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
         <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.1"/>
