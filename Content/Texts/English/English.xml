@@ -31,6 +31,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <displayname.huskfooditem>[itemname] (Husk)</displayname.huskfooditem><!--Patch 13-->
 <displayname.watcherfooditem>[itemname] (Watcher)</displayname.watcherfooditem><!--Patch 13-->
 <displayname.alternative>[itemname] (Alternative)</displayname.alternative><!--Patch 13-->
+
 <!-- Food Items -->
 <entityname.he-proteinbar1>Protein Bar</entityname.he-proteinbar1>
 <entitydescription.he-proteinbar1>A somewhat tasty protein bar. Helps to speed up the healing process a bit.</entitydescription.he-proteinbar1>
@@ -52,97 +53,85 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-sandwichpgjam>A tasty sandwich with pomegrenade jam.</entitydescription.he-sandwichpgjam><!--Patch 13-->
 <entityname.he-cookedjerky>Jerky</entityname.he-cookedjerky><!--Patch 13-->
 <entitydescription.he-cookedjerky>Dried jerky may taste like leather, but it cannot spoil.</entitydescription.he-cookedjerky><!--Patch 13-->
+
 <!--spineling-->
-<entityname.he-spinelingburger>Burger</entityname.he-spinelingburger><!--Patch 13-->
-<entitydescription.he-spinelingburger>Eating it leaves a stinging sensation.</entitydescription.he-spinelingburger><!--Patch 13-->
-<entityname.he-spinelinghotdog>Hotdog</entityname.he-spinelinghotdog><!--Patch 13-->
-<entitydescription.he-spinelinghotdog>Eating it leaves a stinging sensation.</entitydescription.he-spinelinghotdog><!--Patch 13-->
-<entityname.he-cookedspinelingnugget>Nugget</entityname.he-cookedspinelingnugget><!--Patch 13-->
-<entitydescription.he-cookedspinelingnugget>Eating it leaves a stinging sensation.</entitydescription.he-cookedspinelingnugget><!--Patch 13-->
+<entityname.he-spinelingmeatchunk>Spineling Meat Chunk</entityname.he-spinelingmeatchunk><!--Patch 13-->
+<entitydescription.he-spinelingmeatchunk>A piece of spineling meat. Spoils if not refrigerated.</entitydescription.he-spinelingmeatchunk><!--Patch 13-->
+<entityname.he-rawspinelingmeat>Raw Spineling Meat</entityname.he-rawspinelingmeat><!--Patch 13-->
+<entitydescription.he-rawspinelingmeat>Spoils if not refrigerated.</entitydescription.he-rawspinelingmeat><!--Patch 13-->
+<entityname.he-rawspinelingsteak>Raw Spineling Steak</entityname.he-rawspinelingsteak><!--Patch 13-->
+<entitydescription.he-rawspinelingsteak>Spoils if not refrigerated.</entitydescription.he-rawspinelingsteak><!--Patch 13-->
 <entityname.he-cookedspinelingkebab>Spineling Kebab</entityname.he-cookedspinelingkebab><!--Patch 13-->
 <entitydescription.he-cookedspinelingkebab>Eating it leaves a stinging sensation.</entitydescription.he-cookedspinelingkebab><!--Patch 13-->
-<!--husk-->
-<entityname.he-huskburger>Burger</entityname.he-huskburger><!--Patch 13-->
-<entitydescription.he-huskburger>Got a prickly taste to it.</entitydescription.he-huskburger><!--Patch 13-->
-<entityname.he-huskhotdog>Hotdog</entityname.he-huskhotdog><!--Patch 13-->
-<entitydescription.he-huskhotdog>Got a prickly taste to it.</entitydescription.he-huskhotdog><!--Patch 13-->
-<entityname.he-cookedhusknugget>Nugget</entityname.he-cookedhusknugget><!--Patch 13-->
-<entitydescription.he-cookedhusknugget>Got a prickly taste to it.</entitydescription.he-cookedhusknugget><!--Patch 13-->
-<entityname.he-cookedhuskfilet>Cooked Filet</entityname.he-cookedhuskfilet><!--Patch 13-->
-<entitydescription.he-cookedhuskfilet>Got a prickly taste to it.</entitydescription.he-cookedhuskfilet><!--Patch 13-->
-<!--watcher-->
-<entityname.he-watcherburger>Burger</entityname.he-watcherburger><!--Patch 13-->
-<entitydescription.he-watcherburger>The taste leaves you staring holes into the air.</entitydescription.he-watcherburger><!--Patch 13-->
-<entityname.he-watcherhotdog>Hotdog</entityname.he-watcherhotdog><!--Patch 13-->
-<entitydescription.he-watcherhotdog>The taste leaves you staring holes into the air.</entitydescription.he-watcherhotdog><!--Patch 13-->
 
+<!--husk-->
+<entityname.he-huskmeatchunk>Husk Meat Chunk</entityname.he-huskmeatchunk><!--Patch 13-->
+<entitydescription.he-huskmeatchunk>A piece of meat cut from a husk. Spoils if not refrigerated.</entitydescription.he-huskmeatchunk><!--Patch 13-->
+<entityname.he-rawhuskmeat>Raw Husk Meat</entityname.he-rawhuskmeat><!--Patch 13-->
+<entitydescription.he-rawhuskmeat>Spoils if not refrigerated.</entitydescription.he-rawhuskmeat><!--Patch 13-->
+<entitydescription.he-cookedhuskfilet>Got a prickly taste to it.</entitydescription.he-cookedhuskfilet><!--Patch 13-->
+
+<!--watcher-->
+<entityname.he-watchermeatchunk>Watcher Meat Chunk</entityname.he-watchermeatchunk><!--Patch 13-->
+<entitydescription.he-watchermeatchunk>A piece of watcher meat. Spoils if not refrigerated.</entitydescription.he-watchermeatchunk><!--Patch 13-->
+<entityname.he-rawwatchermeat>Raw Watcher Meat</entityname.he-rawwatchermeat><!--Patch 13-->
+<entitydescription.he-rawwatchermeat>Spoils if not refrigerated.</entitydescription.he-rawwatchermeat><!--Patch 13-->
+<entityname.he-rawwatchersteak>Raw Watcher Steak</entityname.he-rawwatchersteak><!--Patch 13-->
+<entitydescription.he-rawwatchersteak>Spoils if not refrigerated.</entitydescription.he-rawwatchersteak><!--Patch 13-->
 <entityname.he-preparedwatchersteak>Prepared Watcher Steaks</entityname.he-preparedwatchersteak><!--Patch 18-->
 <entitydescription.he-preparedwatchersteak>The taste leaves you staring holes into the air.</entitydescription.he-preparedwatchersteak><!--Patch 18-->
 <entityname.he-cookedwatchersteak>Watcher's Graze Plate</entityname.he-cookedwatchersteak><!--Patch 18-->
 <entitydescription.he-cookedwatchersteak>An ink-black watcher steak and vegetables for color. Eat it slowly, or go insane.</entitydescription.he-cookedwatchersteak><!--Patch 18-->
-<!--moloch-->
-<entityname.he-molochburger>Burger</entityname.he-molochburger><!--Patch 13-->
-<entitydescription.he-molochburger>The taste makes you feel resilient.</entitydescription.he-molochburger><!--Patch 13-->
-<entityname.he-molochhotdog>Hotdog</entityname.he-molochhotdog><!--Patch 13-->
-<entitydescription.he-molochhotdog>The taste makes you feel resilient</entitydescription.he-molochhotdog><!--Patch 13-->
-<entityname.he-cookedmolochnugget>Nugget</entityname.he-cookedmolochnugget><!--Patch 13-->
-<entitydescription.he-cookedmolochnugget>The taste makes you feel resilient</entitydescription.he-cookedmolochnugget><!--Patch 13-->
 
+<!--moloch-->
+<entityname.he-molochmeatchunk>Moloch Meat Chunk</entityname.he-molochmeatchunk><!--Patch 13-->
+<entitydescription.he-molochmeatchunk>A piece of moloch meat. Spoils if not refrigerated.</entitydescription.he-molochmeatchunk><!--Patch 13-->
+<entityname.he-rawmolochmeat>Raw Moloch Meat</entityname.he-rawmolochmeat><!--Patch 13-->
+<entitydescription.he-rawmolochmeat>Spoils if not refrigerated.</entitydescription.he-rawmolochmeat><!--Patch 13-->
+<entityname.he-rawmolochsteak>Raw Moloch Steak</entityname.he-rawmolochsteak><!--Patch 13-->
+<entitydescription.he-rawmolochsteak>Spoils if not refrigerated.</entitydescription.he-rawmolochsteak><!--Patch 13-->
 <entityname.he-cookedmolochsteak>Moloch Steak and Fries</entityname.he-cookedmolochsteak><!--Patch 18-->
 <entitydescription.he-cookedmolochsteak>A chewy Moloch steak and its fries, a roadhouse classic.</entitydescription.he-cookedmolochsteak><!--Patch 18-->
 <entityname.he-molochsushi>Moloch Sushi</entityname.he-molochsushi><!--Patch 13-->
 <entitydescription.he-molochsushi>Seasoned Moloch bits rolled in a leaf of Nori.</entitydescription.he-molochsushi><!--Patch 13-->
 
 <!--crawler-->
-<entityname.he-madnessmealcrawler>Meal of Madness - Crawler</entityname.he-madnessmealcrawler><!--Patch 13-->
-<entitydescription.he-madnessmealcrawler>Content:\n - 1x Crawler Burger\n - 8x Crawler Nuggets\n - 1x Can of Couwola Cola\n - 1x Random Toy</entitydescription.he-madnessmealcrawler><!--Patch 13-->
-<entityname.he-mrecrawler>MRE - Crawler</entityname.he-mrecrawler><!--Patch 13-->
-<entitydescription.he-mrecrawler>Menu: Crawler. Open it up to get 2 rations.</entitydescription.he-mrecrawler><!--Patch 13-->
-<entityname.he-mrecrawlerration>MRE - Crawler</entityname.he-mrecrawlerration><!--Patch 13-->
-<entitydescription.he-mrecrawlerration>Menu: Crawler. A very filling meal, ready-to-eat. Just pour water in it and enjoy.</entitydescription.he-mrecrawlerration><!--Patch 13-->
-<entityname.he-crawlerburger>Burger</entityname.he-crawlerburger>
-<entitydescription.he-crawlerburger>A somewhat tasty burger.</entitydescription.he-crawlerburger>
-<entityname.he-crawlerhotdog>Hotdog</entityname.he-crawlerhotdog>
-<entitydescription.he-crawlerhotdog>A somewhat tasty hotdog.</entitydescription.he-crawlerhotdog>
 <entityname.he-cookedcrawlerfilet>Cooked Filet</entityname.he-cookedcrawlerfilet>
 <entitydescription.he-cookedcrawlerfilet>The taste is awful, but that's not unusual on Europa.</entitydescription.he-cookedcrawlerfilet>
-<entityname.he-cookedcrawlernugget>Nugget</entityname.he-cookedcrawlernugget><!--Patch 13-->
-<entitydescription.he-cookedcrawlernugget>The taste is awful, but that's not unusual on Europa.</entitydescription.he-cookedcrawlernugget><!--Patch 13-->
-<entityname.he-nuggetpackcrawler>Pack of Crawler Nuggets</entityname.he-nuggetpackcrawler><!--Patch 13-->
-<entitydescription.he-nuggetpackcrawler>A pack of 8x crawler nuggets.</entitydescription.he-nuggetpackcrawler><!--Patch 13-->
+<entityname.he-crawlermeatchunk>Crawler Half</entityname.he-crawlermeatchunk>
+<entitydescription.he-crawlermeatchunk>A Crawler cut in half. Spoils if not refrigerated.</entitydescription.he-crawlermeatchunk>
+<entityname.he-crawlermeatchunkspecial>Crawler Meat Chunk</entityname.he-crawlermeatchunkspecial>
+<entitydescription.he-crawlermeatchunkspecial>A chunk of Crawler meat.</entitydescription.he-crawlermeatchunkspecial>
+<entityname.he-rawcrawlermeat>Raw Crawler Meat</entityname.he-rawcrawlermeat>
+<entitydescription.he-rawcrawlermeat>Spoils if not refrigerated.</entitydescription.he-rawcrawlermeat>
+
 <!--human-->
 <entityname.he-cookedhumanfilet>Cooked Filet</entityname.he-cookedhumanfilet>
 <entitydescription.he-cookedhumanfilet>Tastes like pork, a little bit more bitter, stronger.</entitydescription.he-cookedhumanfilet>
-<entityname.he-humanburger>Burger</entityname.he-humanburger>
-<entitydescription.he-humanburger>Has a slight bitter taste to it.</entitydescription.he-humanburger>
-<entityname.he-humanhotdog>Hotdog</entityname.he-humanhotdog>
-<entitydescription.he-humanhotdog>Has a slight bitter taste to it.</entitydescription.he-humanhotdog>
-<entityname.he-cookedhumannugget>Nugget</entityname.he-cookedhumannugget><!--Patch 13-->
-<entitydescription.he-cookedhumannugget>Has a slight bitter taste to it.</entitydescription.he-cookedhumannugget><!--Patch 13-->
+
 <!--mudraptor-->
-<entityname.he-madnessmealmudraptor>Meal of Madness - Mudraptor</entityname.he-madnessmealmudraptor><!--Patch 13-->
-<entitydescription.he-madnessmealmudraptor>Content:\n - 1x Mudraptor Burger\n - 8x Mudraptor Nuggets\n - 1x Can of Couwola Cola\n - 1x Random Toy</entitydescription.he-madnessmealmudraptor><!--Patch 13-->
-<entityname.he-mremudraptor>MRE - Mudraptor</entityname.he-mremudraptor><!--Patch 13-->
-<entitydescription.he-mremudraptor>Menu: Mudraptor. Open it up to get 2 rations.</entitydescription.he-mremudraptor><!--Patch 13-->
-<entityname.he-mremudraptorration>MRE - Mudraptor</entityname.he-mremudraptorration><!--Patch 13-->
-<entitydescription.he-mremudraptorration>Menu: Mudraptor. A very filling meal, ready-to-eat. Just pour water in it and enjoy.</entitydescription.he-mremudraptorration><!--Patch 13-->
+<entityname.he-mudraptormeatchunk>Mudraptor Meat Chunk</entityname.he-mudraptormeatchunk>
+<entitydescription.he-mudraptormeatchunk>A nice chunk of meat cut from a Mudraptor. Spoils if not refrigerated.</entitydescription.he-mudraptormeatchunk>
+<entityname.he-rawmudraptormeat>Raw Mudraptor Meat</entityname.he-rawmudraptormeat>
+<entitydescription.he-rawmudraptormeat>Spoils if not refrigerated.</entitydescription.he-rawmudraptormeat>
+<entityname.he-rawmudraptorroast>Raw Mudraptor Roast</entityname.he-rawmudraptorroast>
+<entitydescription.he-rawmudraptorroast>Time to put it in the oven! Spoils if not refrigerated.</entitydescription.he-rawmudraptorroast><!--Patch 13-->
 <entityname.he-preparedmudraptorroast>Prepared Mudraptor Roast</entityname.he-preparedmudraptorroast>
 <entitydescription.he-preparedmudraptorroast>A big slice of Mudraptor roast.</entitydescription.he-preparedmudraptorroast>
 <entityname.he-cookedmudraptorroast>Cold Raptor Roast</entityname.he-cookedmudraptorroast>
 <entitydescription.he-cookedmudraptorroast>Cold Mudraptor roast slices with a side of popnut and bubbleberry salad.</entitydescription.he-cookedmudraptorroast>
-<entityname.he-mudraptorburger>Burger</entityname.he-mudraptorburger>
-<entitydescription.he-mudraptorburger>Tastes like chicken.</entitydescription.he-mudraptorburger>
-<entityname.he-mudraptorhotdog>Hotdog</entityname.he-mudraptorhotdog>
-<entitydescription.he-mudraptorhotdog>Tastes like chicken.</entitydescription.he-mudraptorhotdog>
-<entityname.he-cookedmudraptornugget>Nugget</entityname.he-cookedmudraptornugget><!--Patch 13-->
-<entitydescription.he-cookedmudraptornugget>Tastes like chicken.</entitydescription.he-cookedmudraptornugget><!--Patch 13-->
-<entityname.he-nuggetpackmudraptor>Pack of Mudraptor Nuggets</entityname.he-nuggetpackmudraptor><!--Patch 13-->
-<entitydescription.he-nuggetpackmudraptor>A pack of 8x mudraptor nuggets.</entitydescription.he-nuggetpackmudraptor><!--Patch 13-->
+
 <!--hammerhead-->
-<entityname.he-mrehammerhead>MRE - Hammerhead</entityname.he-mrehammerhead><!--Patch 13-->
-<entitydescription.he-mrehammerhead>Menu: Hammerhead. Open it up to get 2 rations.</entitydescription.he-mrehammerhead><!--Patch 13-->
-<entityname.he-mrehammerheadration>MRE - Hammerhead</entityname.he-mrehammerheadration><!--Patch 13-->
-<entitydescription.he-mrehammerheadration>Menu: Hammerhead. A very filling meal, ready-to-eat. Just pour water in it and enjoy.</entitydescription.he-mrehammerheadration><!--Patch 13-->
+<entityname.he-hammerheadmeatchunk>Hammerhead Meat Chunk</entityname.he-hammerheadmeatchunk>
+<entitydescription.he-hammerheadmeatchunk>A nice chunk of meat cut from a Hammerhead. Spoils if not refrigerated.</entitydescription.he-hammerheadmeatchunk>
+<entityname.he-rawhammerheadmeat>Raw Hammerhead Meat</entityname.he-rawhammerheadmeat>
+<entitydescription.he-rawhammerheadmeat>Spoils if not refrigerated.</entitydescription.he-rawhammerheadmeat>
+<entityname.he-rawhammerheadspareribs>Raw Hammerhead Spare Ribs</entityname.he-rawhammerheadspareribs>
+<entitydescription.he-rawhammerheadspareribs>Cut from a massive ribcage. Spoils if not refrigerated.</entitydescription.he-rawhammerheadspareribs>
+<entityname.he-rawhammerheadroast>Raw Hammerhead Roast</entityname.he-rawhammerheadroast>
+<entitydescription.he-rawhammerheadroast>Time to put it in the oven. Spoils if not refrigerated.</entitydescription.he-rawhammerheadroast>
+<entityname.he-hammerheadspawnmeatchunk>Hammerhead Spawn</entityname.he-hammerheadspawnmeatchunk>
+<entitydescription.he-hammerheadspawnmeatchunk>A Hammerhead baby. Spoils if not refrigerated.</entitydescription.he-hammerheadspawnmeatchunk><!--Patch 13-->
 <entityname.he-preparedhammerheadroast>Prepared Hammerhead Roast</entityname.he-preparedhammerheadroast>
 <entitydescription.he-preparedhammerheadroast>A big slice of Hammerhead roast.</entitydescription.he-preparedhammerheadroast>
 <entityname.he-cookedhammerheadroast>Hammer And Omelette</entityname.he-cookedhammerheadroast>
@@ -151,44 +140,38 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-cookedhammerheadspawnpickled>A delicacy.</entitydescription.he-cookedhammerheadspawnpickled>
 <entityname.he-cookedhammerheadspawnfried>Fried Hammerhead Spawn</entityname.he-cookedhammerheadspawnfried>
 <entitydescription.he-cookedhammerheadspawnfried>Expensive fast food.</entitydescription.he-cookedhammerheadspawnfried>
-<entityname.he-hammerheadburger>Burger</entityname.he-hammerheadburger>
-<entitydescription.he-hammerheadburger>Mhhh it's so tasty, you'd like to smash your head in disbelief!</entitydescription.he-hammerheadburger>
-<entityname.he-hammerheadhotdog>Hotdog</entityname.he-hammerheadhotdog>
-<entitydescription.he-hammerheadhotdog>Mhhh it's so tasty, you'd like to smash your head in disbelief!</entitydescription.he-hammerheadhotdog>
 <entityname.he-cookedhammerheadspareribs>Spare Ribs</entityname.he-cookedhammerheadspareribs>
-<entitydescription.he-cookedhammerheadspareribs>A delicious meal with a strong taste.</entitydescription.he-cookedhammerheadspareribs>
-<entityname.he-cookedhammerheadnugget>Nugget</entityname.he-cookedhammerheadnugget><!--Patch 13-->
-<entitydescription.he-cookedhammerheadnugget>Mhhh it's so tasty, you'd like to smash your head in disbelief!</entitydescription.he-cookedhammerheadnugget><!--Patch 13-->
-<entityname.he-nuggetpackhammerhead>Pack of Hammerhead Nuggets</entityname.he-nuggetpackhammerhead><!--Patch 13-->
-<entitydescription.he-nuggetpackhammerhead>A pack of 8x hammerhead nuggets.</entitydescription.he-nuggetpackhammerhead><!--Patch 13-->
+<entitydescription.he-cookedhammerheadspareribs>A delicious meal with a strong taste.</entitydescription.he-cookedhammerheadspareribs><!--Patch 13-->
+
 <!--tresher-->
-<entityname.he-mrethresher>MRE - Thresher</entityname.he-mrethresher><!--Patch 13-->
-<entitydescription.he-mrethresher>Menu: Thresher. Open it up to get 2 rations.</entitydescription.he-mrethresher><!--Patch 13-->
-<entityname.he-mrethresherration>MRE - Thresher</entityname.he-mrethresherration><!--Patch 13-->
-<entitydescription.he-mrethresherration>Menu: Thresher. A very filling meal, ready-to-eat. Just pour water in it and enjoy.</entitydescription.he-mrethresherration><!--Patch 13-->
+<entityname.he-threshermeatchunk>Thresher Meat Chunk</entityname.he-threshermeatchunk>
+<entitydescription.he-threshermeatchunk>A piece of meat cut from a Thresher. Spoils if not refrigerated.</entitydescription.he-threshermeatchunk>
+<entityname.he-rawthreshermeat>Raw Thresher Meat</entityname.he-rawthreshermeat>
+<entitydescription.he-rawthreshermeat>Spoils if not refrigerated.</entitydescription.he-rawthreshermeat>
 <entityname.he-cookedthresherfilet>Thresher Filet with Fries</entityname.he-cookedthresherfilet><!--Patch 18-->
 <entitydescription.he-cookedthresherfilet>A thresher filet, served with fries.</entitydescription.he-cookedthresherfilet><!--Patch 18-->
-<entityname.he-thresherburger>Burger</entityname.he-thresherburger>
-<entitydescription.he-thresherburger>The taste leaves you breathless.</entitydescription.he-thresherburger>
-<entityname.he-thresherhotdog>Hotdog</entityname.he-thresherhotdog>
-<entitydescription.he-thresherhotdog>The taste leaves you breathless.</entitydescription.he-thresherhotdog>
-<entityname.he-cookedthreshernugget>Nugget</entityname.he-cookedthreshernugget><!--Patch 13-->
-<entitydescription.he-cookedthreshernugget>The taste leaves you breathless.</entitydescription.he-cookedthreshernugget><!--Patch 13-->
-<entityname.he-nuggetpackthresher>Pack of Thresher Nuggets</entityname.he-nuggetpackthresher><!--Patch 13-->
-<entitydescription.he-nuggetpackthresher>A pack of 8x thresher nuggets.</entitydescription.he-nuggetpackthresher><!--Patch 13-->
+
 <!--endworm-->
+<entityname.he-endwormmeatchunk>Endworm Meat Chunk</entityname.he-endwormmeatchunk>
+<entitydescription.he-endwormmeatchunk>A fat chunk of meat from an Endworm. Spoils if not refrigerated.</entitydescription.he-endwormmeatchunk>
+<entityname.he-rawendwormmeat>Raw Endworm Meat</entityname.he-rawendwormmeat>
+<entitydescription.he-rawendwormmeat>Spoils if not refrigerated.</entitydescription.he-rawendwormmeat>
+<entityname.he-humanmeatchunk>Human Meat</entityname.he-humanmeatchunk>
+<entitydescription.he-humanmeatchunk>Parts of a human. Spoils if not refrigerated.</entitydescription.he-humanmeatchunk>
+<entityname.he-rawhumanmeat>Raw Human Meat</entityname.he-rawhumanmeat>
+<entitydescription.he-rawhumanmeat>Spoils if not refrigerated.</entitydescription.he-rawhumanmeat>
 <entityname.he-endwormhotdog>Hotdog</entityname.he-endwormhotdog>
 <entitydescription.he-endwormhotdog>Abandon your religion and prepare for culinary annihilation.</entitydescription.he-endwormhotdog>
-<entityname.he-endwormburger>Burger</entityname.he-endwormburger>
-<entitydescription.he-endwormburger>The taste is insane!</entitydescription.he-endwormburger>
-<entityname.he-cookedendwormnugget>Nugget</entityname.he-cookedendwormnugget><!--Patch 13-->
-<entitydescription.he-cookedendwormnugget>The taste is insane!</entitydescription.he-cookedendwormnugget><!--Patch 13-->
+
+
 <!--plants-->
 <entityname.bubbleberries>Bubbleberries</entityname.bubbleberries><!--Patch 10-->
 <entitydescription.bubbleberries>Very tasty and juicy.</entitydescription.bubbleberries><!--Patch 10-->
 <entityname.badbubbleberries>Mutated Bubbleberries</entityname.badbubbleberries><!--Patch 10-->
 <entityname.popnut>Popnut</entityname.popnut><!--Patch 10-->
-<entitydescription.popnut>Kids love to play with them. Needs to be put in water to pop it open and be able to consume it.</entitydescription.popnut><!--Patch 10-->
+<entitydescription.popnut>Kids love to play with them. Needs to be put in water to pop it open and be able to consume it.</entitydescription.popnut>
+
+<!--Patch 10-->
 <entityname.popnutpopped>Popped Popnut</entityname.popnutpopped><!--Patch 10-->
 <entitydescription.popnutpopped>It's popped open, ready to be consumed. Used in some recipes.</entitydescription.popnutpopped><!--Patch 10-->
 <entityname.badpopnutpopped>Popped Mutated Popnut</entityname.badpopnutpopped><!--Patch 10-->
@@ -199,11 +182,13 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.badtobaccobud>A mutated variant of a tobacco bud, growing a gelatinous eye-like protrusion full of psychoactive elements.</entitydescription.badtobaccobud><!--Patch 18-->
 <entityname.badsaltbulb>Mutated Salt Bulb</entityname.badsaltbulb><!--Patch 18-->
 <entitydescription.badsaltbulb>A mutated variant of a salt bulb. Highly unstable.</entitydescription.badsaltbulb><!--Patch 18-->
+
 <!-- SEEDS -->
 <entityname.bubbleberryvineseed>Bubbleberry Vine Seed</entityname.bubbleberryvineseed><!--Changed as of Patch 11 | Identifier changed. Previous identifier <entityname.he-bubbleberryvineseed>-->
 <entitydescription.bubbleberryvineseed>Plant it in a planter to grow bubbleberries.</entitydescription.bubbleberryvineseed><!--Changed as of Patch 11 | Identifier changed. Previous identifier <entityname.he-bubbleberryvineseed>-->
 <entityname.popnutvineseed>Popnut Vine Seed</entityname.popnutvineseed><!--Changed as of Patch 11 | Identifier changed. Previous identifier <entityname.he-popnutvineseed>-->
 <entitydescription.popnutvineseed>Plant it in a planter to grow Popnuts.</entitydescription.popnutvineseed><!--Changed as of Patch 11 | Identifier changed. Previous identifier <entityname.he-popnutvineseed>-->
+
 <!-- Drinks -->
 <entityname.he-energydrink1>Energy Drink</entityname.he-energydrink1>
 <entitydescription.he-energydrink1>A refreshing energy drink. Good for when you're absolutely shit-faced and need to sober up a bit.</entitydescription.he-energydrink1>
@@ -358,126 +343,9 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-emptyshaker2>An empty shaker ready to be filled with salt! Can be thrown.</entitydescription.he-emptyshaker2><!--Patch 11-->
 <entityname.he-emptycup2>Empty Cup</entityname.he-emptycup2><!--Patch 13-->
 <entitydescription.he-emptycup2>An empty cup for drinks. Can be thrown or filled with tea.</entitydescription.he-emptycup2><!--Patch 13-->
-<entityname.he-endwormmeatchunk>Endworm Meat Chunk</entityname.he-endwormmeatchunk>
-<entitydescription.he-endwormmeatchunk>A fat chunk of meat from an Endworm. Spoils if not refrigerated.</entitydescription.he-endwormmeatchunk>
-<entityname.he-rawendwormmeat>Raw Endworm Meat</entityname.he-rawendwormmeat>
-<entitydescription.he-rawendwormmeat>Spoils if not refrigerated.</entitydescription.he-rawendwormmeat>
-<entityname.he-rawendwormmeatpatty>Raw Endworm Meat Patty</entityname.he-rawendwormmeatpatty>
-<entitydescription.he-rawendwormmeatpatty>Spoils if not refrigerated.</entitydescription.he-rawendwormmeatpatty>
-<entityname.he-humanmeatchunk>Human Meat</entityname.he-humanmeatchunk>
-<entitydescription.he-humanmeatchunk>Parts of a human. Spoils if not refrigerated.</entitydescription.he-humanmeatchunk>
-<entityname.he-rawhumanmeat>Raw Human Meat</entityname.he-rawhumanmeat>
-<entitydescription.he-rawhumanmeat>Spoils if not refrigerated.</entitydescription.he-rawhumanmeat>
-<entityname.he-rawhumansausage>Raw Human Sausage</entityname.he-rawhumansausage>
-<entitydescription.he-rawhumansausage>Expect the wurst! Spoils if not refrigerated.</entitydescription.he-rawhumansausage>
-<entityname.he-rawhumanmeatpatty>Raw Human Meat Patty</entityname.he-rawhumanmeatpatty>
-<entitydescription.he-rawhumanmeatpatty>Spoils if not refrigerated.</entitydescription.he-rawhumanmeatpatty>
-<entityname.he-rawhumannuggets>Pile of Raw Human Nuggets</entityname.he-rawhumannuggets><!--Patch 13-->
-<entitydescription.he-rawhumannuggets>A pile of raw nuggets made from human meat. Put it in a fryer.</entitydescription.he-rawhumannuggets><!--Patch 13-->
 
-<entityname.he-crawlermeatchunk>Crawler Half</entityname.he-crawlermeatchunk>
-<entitydescription.he-crawlermeatchunk>A Crawler cut in half. Spoils if not refrigerated.</entitydescription.he-crawlermeatchunk>
-<entityname.he-crawlermeatchunkspecial>Crawler Meat Chunk</entityname.he-crawlermeatchunkspecial>
-<entitydescription.he-crawlermeatchunkspecial>A chunk of Crawler meat.</entitydescription.he-crawlermeatchunkspecial>
-<entityname.he-rawcrawlermeat>Raw Crawler Meat</entityname.he-rawcrawlermeat>
-<entitydescription.he-rawcrawlermeat>Spoils if not refrigerated.</entitydescription.he-rawcrawlermeat>
-<entityname.he-rawcrawlersausage>Raw Crawler Sausage</entityname.he-rawcrawlersausage>
-<entitydescription.he-rawcrawlersausage>Expect the wurst! Spoils if not refrigerated.</entitydescription.he-rawcrawlersausage>
-<entityname.he-rawcrawlermeatpatty>Raw Crawler Meat Patty</entityname.he-rawcrawlermeatpatty>
-<entitydescription.he-rawcrawlermeatpatty>Spoils if not refrigerated.</entitydescription.he-rawcrawlermeatpatty>
-<entityname.he-rawcrawlernuggets>Pile of Raw Crawler Nuggets</entityname.he-rawcrawlernuggets><!--Patch 13-->
-<entitydescription.he-rawcrawlernuggets>A pile of raw nuggets made from crawler meat. Put it in a fryer.</entitydescription.he-rawcrawlernuggets><!--Patch 13-->
 
-<entityname.he-mudraptormeatchunk>Mudraptor Meat Chunk</entityname.he-mudraptormeatchunk>
-<entitydescription.he-mudraptormeatchunk>A nice chunk of meat cut from a Mudraptor. Spoils if not refrigerated.</entitydescription.he-mudraptormeatchunk>
-<entityname.he-rawmudraptormeat>Raw Mudraptor Meat</entityname.he-rawmudraptormeat>
-<entitydescription.he-rawmudraptormeat>Spoils if not refrigerated.</entitydescription.he-rawmudraptormeat>
-<entityname.he-rawmudraptorsausage>Raw Mudraptor Sausage</entityname.he-rawmudraptorsausage>
-<entitydescription.he-rawmudraptorsausage>Expect the wurst! Spoils if not refrigerated.</entitydescription.he-rawmudraptorsausage>
-<entityname.he-rawmudraptormeatpatty>Raw Mudraptor Meat Patty</entityname.he-rawmudraptormeatpatty>
-<entitydescription.he-rawmudraptormeatpatty>Spoils if not refrigerated.</entitydescription.he-rawmudraptormeatpatty>
-<entityname.he-rawmudraptorroast>Raw Mudraptor Roast</entityname.he-rawmudraptorroast>
-<entitydescription.he-rawmudraptorroast>Time to put it in the oven! Spoils if not refrigerated.</entitydescription.he-rawmudraptorroast>
-<entityname.he-rawmudraptornuggets>Pile of Raw Mudraptor Nuggets</entityname.he-rawmudraptornuggets><!--Patch 13-->
-<entitydescription.he-rawmudraptornuggets>A pile of raw nuggets made from mudraptor meat. Put it in a fryer.</entitydescription.he-rawmudraptornuggets><!--Patch 13-->
 
-<entityname.he-hammerheadmeatchunk>Hammerhead Meat Chunk</entityname.he-hammerheadmeatchunk>
-<entitydescription.he-hammerheadmeatchunk>A nice chunk of meat cut from a Hammerhead. Spoils if not refrigerated.</entitydescription.he-hammerheadmeatchunk>
-<entityname.he-rawhammerheadmeat>Raw Hammerhead Meat</entityname.he-rawhammerheadmeat>
-<entitydescription.he-rawhammerheadmeat>Spoils if not refrigerated.</entitydescription.he-rawhammerheadmeat>
-<entityname.he-rawhammerheadsausage>Raw Hammerhead Sausage</entityname.he-rawhammerheadsausage>
-<entitydescription.he-rawhammerheadsausage>Expect the wurst! Spoils if not refrigerated.</entitydescription.he-rawhammerheadsausage>
-<entityname.he-rawhammerheadmeatpatty>Raw Hammerhead Meat Patty</entityname.he-rawhammerheadmeatpatty>
-<entitydescription.he-rawhammerheadmeatpatty>Spoils if not refrigerated.</entitydescription.he-rawhammerheadmeatpatty>
-<entityname.he-rawhammerheadspareribs>Raw Hammerhead Spare Ribs</entityname.he-rawhammerheadspareribs>
-<entitydescription.he-rawhammerheadspareribs>Cut from a massive ribcage. Spoils if not refrigerated.</entitydescription.he-rawhammerheadspareribs>
-<entityname.he-rawhammerheadroast>Raw Hammerhead Roast</entityname.he-rawhammerheadroast>
-<entitydescription.he-rawhammerheadroast>Time to put it in the oven. Spoils if not refrigerated.</entitydescription.he-rawhammerheadroast>
-<entityname.he-hammerheadspawnmeatchunk>Hammerhead Spawn</entityname.he-hammerheadspawnmeatchunk>
-<entitydescription.he-hammerheadspawnmeatchunk>A Hammerhead baby. Spoils if not refrigerated.</entitydescription.he-hammerheadspawnmeatchunk>
-<entityname.he-rawhammerheadnuggets>Pile of Raw Hammerhead Nuggets</entityname.he-rawhammerheadnuggets><!--Patch 13-->
-<entitydescription.he-rawhammerheadnuggets>A pile of raw nuggets made from hammerhead meat. Put it in a fryer.</entitydescription.he-rawhammerheadnuggets><!--Patch 13-->
-
-<entityname.he-threshermeatchunk>Thresher Meat Chunk</entityname.he-threshermeatchunk>
-<entitydescription.he-threshermeatchunk>A piece of meat cut from a Thresher. Spoils if not refrigerated.</entitydescription.he-threshermeatchunk>
-<entityname.he-rawthreshermeat>Raw Thresher Meat</entityname.he-rawthreshermeat>
-<entitydescription.he-rawthreshermeat>Spoils if not refrigerated.</entitydescription.he-rawthreshermeat>
-<entityname.he-rawthreshersausage>Raw Thresher Sausage</entityname.he-rawthreshersausage>
-<entitydescription.he-rawthreshersausage>Expect the wurst! Spoils if not refrigerated.</entitydescription.he-rawthreshersausage>
-<entityname.he-rawthreshermeatpatty>Raw Thresher Meat Patty</entityname.he-rawthreshermeatpatty>
-<entitydescription.he-rawthreshermeatpatty>Spoils if not refrigerated.</entitydescription.he-rawthreshermeatpatty>
-<entityname.he-rawthreshernuggets>Pile of Raw Thresher Nuggets</entityname.he-rawthreshernuggets><!--Patch 13-->
-<entitydescription.he-rawthreshernuggets>A pile of raw nuggets made from thresher meat. Put it in a fryer.</entitydescription.he-rawthreshernuggets><!--Patch 13-->
-
-<entityname.he-huskmeatchunk>Husk Meat Chunk</entityname.he-huskmeatchunk><!--Patch 13-->
-<entitydescription.he-huskmeatchunk>A piece of meat cut from a husk. Spoils if not refrigerated.</entitydescription.he-huskmeatchunk><!--Patch 13-->
-<entityname.he-rawhuskmeat>Raw Husk Meat</entityname.he-rawhuskmeat><!--Patch 13-->
-<entitydescription.he-rawhuskmeat>Spoils if not refrigerated.</entitydescription.he-rawhuskmeat><!--Patch 13-->
-<entityname.he-rawhusksausage>Raw Husk Sausage</entityname.he-rawhusksausage><!--Patch 13-->
-<entitydescription.he-rawhusksausage>Expect the wurst! Spoils if not refrigerated.</entitydescription.he-rawhusksausage><!--Patch 13-->
-<entityname.he-rawhuskmeatpatty>Raw Husk Meat Patty</entityname.he-rawhuskmeatpatty><!--Patch 13-->
-<entitydescription.he-rawhuskmeatpatty>Spoils if not refrigerated.</entitydescription.he-rawhuskmeatpatty><!--Patch 13-->
-<entityname.he-rawhusknuggets>Pile of Raw Husk Nuggets</entityname.he-rawhusknuggets><!--Patch 13-->
-<entitydescription.he-rawhusknuggets>A pile of raw nuggets made from husk meat. Put it in a fryer.</entitydescription.he-rawhusknuggets><!--Patch 13-->
-
-<entityname.he-watchermeatchunk>Watcher Meat Chunk</entityname.he-watchermeatchunk><!--Patch 13-->
-<entitydescription.he-watchermeatchunk>A piece of watcher meat. Spoils if not refrigerated.</entitydescription.he-watchermeatchunk><!--Patch 13-->
-<entityname.he-rawwatchermeat>Raw Watcher Meat</entityname.he-rawwatchermeat><!--Patch 13-->
-<entitydescription.he-rawwatchermeat>Spoils if not refrigerated.</entitydescription.he-rawwatchermeat><!--Patch 13-->
-<entityname.he-rawwatchersteak>Raw Watcher Steak</entityname.he-rawwatchersteak><!--Patch 13-->
-<entitydescription.he-rawwatchersteak>Spoils if not refrigerated.</entitydescription.he-rawwatchersteak><!--Patch 13-->
-<entityname.he-rawwatchersausage>Raw Watcher Sausage</entityname.he-rawwatchersausage><!--Patch 13-->
-<entitydescription.he-rawwatchersausage>Expect the wurst! Spoils if not refrigerated.</entitydescription.he-rawwatchersausage><!--Patch 13-->
-<entityname.he-rawwatchermeatpatty>Raw Watcher Meat Patty</entityname.he-rawwatchermeatpatty><!--Patch 13-->
-<entitydescription.he-rawwatchermeatpatty>Spoils if not refrigerated.</entitydescription.he-rawwatchermeatpatty><!--Patch 13-->
-<entityname.he-rawwatchernuggets>Pile of Raw Watcher Nuggets</entityname.he-rawwatchernuggets><!--Patch 13-->
-<entitydescription.he-rawwatchernuggets>A pile of raw nuggets made from watcher meat. Put it in a fryer.</entitydescription.he-rawwatchernuggets><!--Patch 13-->
-
-<entityname.he-molochmeatchunk>Moloch Meat Chunk</entityname.he-molochmeatchunk><!--Patch 13-->
-<entitydescription.he-molochmeatchunk>A piece of moloch meat. Spoils if not refrigerated.</entitydescription.he-molochmeatchunk><!--Patch 13-->
-<entityname.he-rawmolochmeat>Raw Moloch Meat</entityname.he-rawmolochmeat><!--Patch 13-->
-<entitydescription.he-rawmolochmeat>Spoils if not refrigerated.</entitydescription.he-rawmolochmeat><!--Patch 13-->
-<entityname.he-rawmolochsteak>Raw Moloch Steak</entityname.he-rawmolochsteak><!--Patch 13-->
-<entitydescription.he-rawmolochsteak>Spoils if not refrigerated.</entitydescription.he-rawmolochsteak><!--Patch 13-->
-<entityname.he-rawmolochsausage>Raw Moloch Sausage</entityname.he-rawmolochsausage><!--Patch 13-->
-<entitydescription.he-rawmolochsausage>Expect the wurst! Spoils if not refrigerated.</entitydescription.he-rawmolochsausage><!--Patch 13-->
-<entityname.he-rawmolochmeatpatty>Raw Moloch Meat Patty</entityname.he-rawmolochmeatpatty><!--Patch 13-->
-<entitydescription.he-rawmolochmeatpatty>Spoils if not refrigerated.</entitydescription.he-rawmolochmeatpatty><!--Patch 13-->
-<entityname.he-rawmolochnuggets>Pile of Raw Moloch Nuggets</entityname.he-rawmolochnuggets><!--Patch 13-->
-<entitydescription.he-rawmolochnuggets>A pile of raw nuggets made from moloch meat. Put it in a fryer.</entitydescription.he-rawmolochnuggets><!--Patch 13-->
-
-<entityname.he-spinelingmeatchunk>Spineling Meat Chunk</entityname.he-spinelingmeatchunk><!--Patch 13-->
-<entitydescription.he-spinelingmeatchunk>A piece of spineling meat. Spoils if not refrigerated.</entitydescription.he-spinelingmeatchunk><!--Patch 13-->
-<entityname.he-rawspinelingmeat>Raw Spineling Meat</entityname.he-rawspinelingmeat><!--Patch 13-->
-<entitydescription.he-rawspinelingmeat>Spoils if not refrigerated.</entitydescription.he-rawspinelingmeat><!--Patch 13-->
-<entityname.he-rawspinelingsteak>Raw Spineling Steak</entityname.he-rawspinelingsteak><!--Patch 13-->
-<entitydescription.he-rawspinelingsteak>Spoils if not refrigerated.</entitydescription.he-rawspinelingsteak><!--Patch 13-->
-<entityname.he-rawspinelingsausage>Raw Spineling Sausage</entityname.he-rawspinelingsausage><!--Patch 13-->
-<entitydescription.he-rawspinelingsausage>Expect the wurst! Spoils if not refrigerated.</entitydescription.he-rawspinelingsausage><!--Patch 13-->
-<entityname.he-rawspinelingmeatpatty>Raw Spineling Meat Patty</entityname.he-rawspinelingmeatpatty><!--Patch 13-->
-<entitydescription.he-rawspinelingmeatpatty>Spoils if not refrigerated.</entitydescription.he-rawspinelingmeatpatty><!--Patch 13-->
-<entityname.he-rawspinelingnuggets>Pile of Raw Spineling Nuggets</entityname.he-rawspinelingnuggets><!--Patch 13-->
-<entitydescription.he-rawspinelingnuggets>A pile of raw nuggets made from spineling meat. Put it in a fryer.</entitydescription.he-rawspinelingnuggets><!--Patch 13-->
 
 <entityname.he-rawjerky>Jerky (Raw)</entityname.he-rawjerky><!--Patch 13-->
 <entitydescription.he-rawjerky>A pile of raw jerky. It's impossible to tell what it's made of. Put it in an oven.</entitydescription.he-rawjerky><!--Patch 13-->
@@ -507,6 +375,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-seaweedstrip>Sea weed pressed and sliced into strips. Let it dry into Nori.</entitydescription.he-seaweedstrip><!--Patch 13-->
 <entityname.he-nori>Nori</entityname.he-nori><!--Patch 13-->
 <entitydescription.he-nori>Dried and prepared sea weed used for sushi.</entitydescription.he-nori><!--Patch 13-->
+
 <!-- Dairy Products -->
 <entityname.he-icecreambasemilky>Box of Milky Ice Cream Base</entityname.he-icecreambasemilky><!--Patch 13-->
 <entitydescription.he-icecreambasemilky>The base for Milky Ice Cream. Store it in a refrigerated container to make edible ice cream.</entitydescription.he-icecreambasemilky><!--Patch 13-->
@@ -540,6 +409,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-molochcheeseslice>A slice of moloch cheese.</entitydescription.he-molochcheeseslice><!--Patch 13-->
 <entityname.he-wafflecone>Waffle Cone</entityname.he-wafflecone><!--Patch 13-->
 <entitydescription.he-wafflecone>A cone shaped waffle for ice cream. Contained ice cream will melt if not contained within a refrigerated container.</entitydescription.he-wafflecone><!--Patch 13-->
+
 <!-- Tools -->
 <entityname.he-enableneeds>Enable Hungry Europan</entityname.he-enableneeds>
 <entitydescription.he-enableneeds>[RMB+E] Enables the hunger and thirst afflictions for the user, causing them to have to eat and drink regularly. This is completely optional and is NOT required to gain buffs from eating or drinking. Warning: Can't be disabled for your current character once it is enabled. DO NOT USE WHEN PLAYING WITH 'NEEDS' BY 'LeDoux'!</entitydescription.he-enableneeds>
@@ -555,9 +425,11 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-genesaw>Can extract a random gene from a corpse.</entitydescription.he-genesaw>
 <entityname.extractedgene>Extracted Gene</entityname.extractedgene>
 <entitydescription.extractedgene>An unidentified extracted gene.</entitydescription.extractedgene>
+
 <!-- Medical -->
 <entityname.he-antistarve>Starvation Conciousness Regainer</entityname.he-antistarve>
 <entitydescription.he-antistarve>Used to wake up a patient that lost conciousness due to starvation or thirst.</entitydescription.he-antistarve>
+
 <!-- Misc -->
 <entityname.punchgun>Punch-Gun</entityname.punchgun><!--Patch 13-->
 <entitydescription.punchgun>Literally throwing punches!</entitydescription.punchgun><!--Patch 13-->
@@ -583,6 +455,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-emptycancolazero>An empty aluminium can. Can be deconstructed into aluminium or thrown around.</entitydescription.he-emptycancolazero><!--Patch 13-->
 <entityname.he-couwolaexosuit>Limited Edition Couwola Cola Exosuit</entityname.he-couwolaexosuit><!--Patch 13-->
 <entitydescription.he-couwolaexosuit>A limited edition Exosuit produced by Couwola Cola. It is more fuel efficient and allows the wearer to breath oxygen from their surroundings while only using the oxygen tanks when needed.</entitydescription.he-couwolaexosuit><!--Patch 13-->
+
 <!-- Gear -->
 <entityname.he-chefscap1>Chef's Hat</entityname.he-chefscap1>
 <entitydescription.he-chefscap1>Show them whose kitchen this is!</entitydescription.he-chefscap1>
@@ -598,6 +471,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-chefscapmaster1>Only for the kitchen elite!</entitydescription.he-chefscapmaster1>
 <entityname.he-chefsuniformmaster1>Master Chef's Uniform</entityname.he-chefsuniformmaster1>
 <entitydescription.he-chefsuniformmaster1>Worn by the master chefs!</entitydescription.he-chefsuniformmaster1>
+
 <!-- Fabricators and Containers -->
 <entityname.he-kitchencounter>Kitchen Counter</entityname.he-kitchencounter><!--Changed as of Patch 10-->
 <entitydescription.he-kitchencounter>Can store up to 18 different small or medium items. Has built-in power outlets for all your kitchen devices.</entitydescription.he-kitchencounter><!--Changed -->
@@ -650,16 +524,20 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-teakettle>Used to refill cups with tea. Requires to be brewed on a stove with a tea mix contained in it.</entitydescription.he-teakettle><!--Patch 13-->
 <entityname.he-sprinkler>Gardening Sprinkler</entityname.he-sprinkler><!--Patch 14-->
 <entitydescription.he-sprinkler>Automatically waters nearby plants within a 1m range horizontally below the sprinkler every 15 minutes. Needs power.</entitydescription.he-sprinkler><!--Patch 14-->
+
 <!-- Skills -->
 <skillname.cooking>Cooking</skillname.cooking>
 <skillname.butchery>Butchery</skillname.butchery>
+
 <!-- Jobs -->
 <jobname.he-chef>Chef</jobname.he-chef>
 <jobdescription.he-chef>The chef is responsible for butchering creatures and preparing meals to eat for the crew to ensure that everyone is saturated and happy.</jobdescription.he-chef>
+
 <!-- Talent trees -->
 <talenttree.butcher>Butcher</talenttree.butcher><!--Patch 13-->
 <talenttree.entertainer>Entertainer</talenttree.entertainer><!--Patch 13-->
 <talenttree.chef>Cook</talenttree.chef><!--Patch 13-->
+
 <!-- Talents -->
 <talentname.he-hungryeuropan>Hungry Europan</talentname.he-hungryeuropan>
 <talentdescription.he-hungryeuropan>You're a hungry europan and need to eat and drink regularly.</talentdescription.he-hungryeuropan>
@@ -1246,6 +1124,9 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-pizza>A flat base of dough, a good dose of cheese, flakes of meat and most important of all, sweet sliced fruit to honor the old earthian recipe. Cut yourself a piece!</entitydescription.he-pizza>
 <entityname.he-pizzaslice>Pizza Slice</entityname.he-pizzaslice>
 <entitydescription.he-pizzaslice>Kowabunga!</entitydescription.he-pizzaslice>
+
+<entityname.he-madnessmeal>Meal of Madness</entityname.he-madnessmeal>
+<entitydescription.he-madnessmeal>Contents:\n - 1x Burger\n - 8x Nuggets\n - 1x Can of Couwola Cola\n - 1x Random Toy</entitydescription.he-madnessmeal>
 
 <!-- other ingredients -->
 <entityname.he-rawsausage>Raw Sausage</entityname.he-rawsausage>
