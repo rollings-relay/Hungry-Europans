@@ -76,9 +76,9 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entityname.he-watcherhotdog>Hotdog</entityname.he-watcherhotdog><!--Patch 13-->
 <entitydescription.he-watcherhotdog>The taste leaves you staring holes into the air.</entitydescription.he-watcherhotdog><!--Patch 13-->
 <entityname.he-cookedwatchernugget>Nugget</entityname.he-cookedwatchernugget><!--Patch 13-->
-<entitydescription.he-cookedwatchernugget>The taste leaves you staring holes into the air.</entitydescription.he-cookedwatchernugget><!--Patch 13-->
-<entityname.he-cookedwatchersteak>Cooked Watcher Steak</entityname.he-cookedwatchersteak><!--Patch 13-->
-<entitydescription.he-cookedwatchersteak>The taste leaves you staring holes into the air.</entitydescription.he-cookedwatchersteak><!--Patch 13-->
+<entitydescription.he-cookedwatchernugget>The taste leaves you staring holes into the air.</entitydescription.he-cookedwatchernugget><!--Patch 18-->
+<entityname.he-cookedwatchersteak>Cooked Watcher Steak</entityname.he-cookedwatchersteak><!--Patch 18-->
+<entitydescription.he-cookedwatchersteak>The taste leaves you staring holes into the air.</entitydescription.he-cookedwatchersteak><!--Patch 18-->
 <!--moloch-->
 <entityname.he-molochburger>Burger</entityname.he-molochburger><!--Patch 13-->
 <entitydescription.he-molochburger>The taste makes you feel resilient.</entitydescription.he-molochburger><!--Patch 13-->
@@ -163,8 +163,8 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-mrethresher>Menu: Thresher. Open it up to get 2 rations.</entitydescription.he-mrethresher><!--Patch 13-->
 <entityname.he-mrethresherration>MRE - Thresher</entityname.he-mrethresherration><!--Patch 13-->
 <entitydescription.he-mrethresherration>Menu: Thresher. A very filling meal, ready-to-eat. Just pour water in it and enjoy.</entitydescription.he-mrethresherration><!--Patch 13-->
-<entityname.he-cookedthresherfilet>Cooked Filet</entityname.he-cookedthresherfilet>
-<entitydescription.he-cookedthresherfilet>It's flabby and a bit slimey.</entitydescription.he-cookedthresherfilet>
+<entityname.he-cookedthresherfilet>Thresher Filet with Fries</entityname.he-cookedthresherfilet><!--Patch 18-->
+<entitydescription.he-cookedthresherfilet>A thresher filet, served with fries.</entitydescription.he-cookedthresherfilet><!--Patch 18-->
 <entityname.he-thresherburger>Burger</entityname.he-thresherburger>
 <entitydescription.he-thresherburger>The taste leaves you breathless.</entitydescription.he-thresherburger>
 <entityname.he-thresherhotdog>Hotdog</entityname.he-thresherhotdog>

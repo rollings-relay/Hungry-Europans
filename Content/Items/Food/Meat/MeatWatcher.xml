@@ -101,7 +101,7 @@
       <AiTarget sightrange="1000" static="True" />
     </Item>
 
-    <Item name="Raw Watcher Steaks" identifier="he-rawwatchersteaks" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,canspoil,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
+    <Item name="Raw Watcher Steak" identifier="he-rawwatchersteak" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,canspoil,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="513,146,93,25" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="513,146,93,25" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="513,146,93,25" depth="0.525" origin="0.5,0.5"  />
@@ -155,7 +155,7 @@
       <AiTarget sightrange="1000" static="True" />
     </Item>
 
-    <Item name="Watcher Steaks" identifier="he-preparedwatchersteaks" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,canspoil,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
+    <Item name="Watcher Steak" identifier="he-preparedwatchersteak" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,canspoil,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="513,120,93,25" depth="0.6" origin="0.5,0.5" />
       <!--<InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="513,120,93,25" origin="0.5,0.5" />-->
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="513,120,93,25" depth="0.525" origin="0.5,0.65"  />
@@ -172,7 +172,7 @@
       <Deconstruct time="5" requireddeconstructor="deconstructor" />
       <Fabricate suitablefabricators="oven" requiredtime="20" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="cooking" level="50" />
-        <RequiredItem identifier="he-rawwatchersteaks" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
+        <RequiredItem identifier="he-rawwatchersteak" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
       </Fabricate>
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand+LeftHand" aimpos="26,20" holdangle="270" holdpos="32,28" aimangle="120" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
