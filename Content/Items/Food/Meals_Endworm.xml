@@ -8,7 +8,7 @@
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="True"/>
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="10" requiresrecipe="false" amount="1" displayname="endwormfooditem">
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="10" requiresrecipe="true" hideifnorecipe="true" amount="1" displayname="endwormfooditem">
         <RequiredSkill identifier="cooking" level="20" />
         <RequiredItem identifier="he-endwormsausage" amount="1" />
         <RequiredItem identifier="he-ketchup" UseCondition="True" MinCondition="0.125"/>

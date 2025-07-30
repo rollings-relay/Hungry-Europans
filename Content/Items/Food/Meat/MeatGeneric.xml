@@ -254,9 +254,9 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,444,67,14" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,444,67,14" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,444,67,14" depth="0.525" origin="0.5,0.3"  />
-      <Fabricate suitablefabricators="stove" requiredtime="100" requiresrecipe="false" amount="1">
+      <Fabricate suitablefabricators="stove" requiredtime="100" requiresrecipe="false" amount="3">
         <RequiredSkill identifier="cooking" level="20" />
-        <RequiredItem identifier="he-rawsausage" amount="1" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
+        <RequiredItem identifier="he-rawsausage" amount="3" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
         <RequiredItem tag="waterpot" UseCondition="True" MinCondition="0.06175"/>
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor" />
