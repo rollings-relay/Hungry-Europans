@@ -1765,7 +1765,7 @@
       </CustomInterface>
     </Item>
 
-    <!-- TODO: how to buy couwola radiant? -->
+    <!-- Rare couwola radiant, obtained by looting or a quest -->
     <Item name="Couwola Cola Radiant" identifier="he-colaradiantbottle" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-colacrate" description="A bottle of the rare Couwola Cola radiant. Feeling Overcharged! Very refreshing and helpful when you're shit-faced. Enriched with fulgurium" Tags="smallitem,drinkitem,bottle,colaradiant,colafuel3" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="False" health="11" >
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="wreckcrewcab,abandonedcrewcab" amount="1" spawnprobability="0.01" />
