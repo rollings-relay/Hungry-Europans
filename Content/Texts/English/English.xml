@@ -75,21 +75,24 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-watcherburger>The taste leaves you staring holes into the air.</entitydescription.he-watcherburger><!--Patch 13-->
 <entityname.he-watcherhotdog>Hotdog</entityname.he-watcherhotdog><!--Patch 13-->
 <entitydescription.he-watcherhotdog>The taste leaves you staring holes into the air.</entitydescription.he-watcherhotdog><!--Patch 13-->
-<entityname.he-cookedwatchernugget>Nugget</entityname.he-cookedwatchernugget><!--Patch 13-->
-<entitydescription.he-cookedwatchernugget>The taste leaves you staring holes into the air.</entitydescription.he-cookedwatchernugget><!--Patch 18-->
-<entityname.he-cookedwatchersteak>Cooked Watcher Steak</entityname.he-cookedwatchersteak><!--Patch 18-->
-<entitydescription.he-cookedwatchersteak>The taste leaves you staring holes into the air.</entitydescription.he-cookedwatchersteak><!--Patch 18-->
+
+<entityname.he-preparedwatchersteak>Prepared Watcher Steaks</entityname.he-preparedwatchersteak><!--Patch 18-->
+<entitydescription.he-preparedwatchersteak>The taste leaves you staring holes into the air.</entitydescription.he-preparedwatchersteak><!--Patch 18-->
+<entityname.he-cookedwatchersteak>Watcher's Graze Plate</entityname.he-cookedwatchersteak><!--Patch 18-->
+<entitydescription.he-cookedwatchersteak>An ink-black watcher steak and vegetables for color. Eat it slowly, or go insane.</entitydescription.he-cookedwatchersteak><!--Patch 18-->
 <!--moloch-->
 <entityname.he-molochburger>Burger</entityname.he-molochburger><!--Patch 13-->
 <entitydescription.he-molochburger>The taste makes you feel resilient.</entitydescription.he-molochburger><!--Patch 13-->
 <entityname.he-molochhotdog>Hotdog</entityname.he-molochhotdog><!--Patch 13-->
 <entitydescription.he-molochhotdog>The taste makes you feel resilient</entitydescription.he-molochhotdog><!--Patch 13-->
 <entityname.he-cookedmolochnugget>Nugget</entityname.he-cookedmolochnugget><!--Patch 13-->
-<entitydescription.he-cookedmolochnugget>The taste makes you feel resilient</entitydescription.he-cookedmolochnugget><!--Patch 13--><entityname.he-cookedmolochsteak>Moloch Steak and Fries</entityname.he-cookedmolochsteak><!--Patch 18-->
-<entitydescription.he-cookedmolochsteak>A chewy Moloch steak and its fries, a roadhouse classic.</entitydescription.he-cookedmolochsteak><!--Patch 18-->
+<entitydescription.he-cookedmolochnugget>The taste makes you feel resilient</entitydescription.he-cookedmolochnugget><!--Patch 13-->
 
+<entityname.he-cookedmolochsteak>Moloch Steak and Fries</entityname.he-cookedmolochsteak><!--Patch 18-->
+<entitydescription.he-cookedmolochsteak>A chewy Moloch steak and its fries, a roadhouse classic.</entitydescription.he-cookedmolochsteak><!--Patch 18-->
 <entityname.he-molochsushi>Moloch Sushi</entityname.he-molochsushi><!--Patch 13-->
 <entitydescription.he-molochsushi>Seasoned Moloch bits rolled in a leaf of Nori.</entitydescription.he-molochsushi><!--Patch 13-->
+
 <!--crawler-->
 <entityname.he-madnessmealcrawler>Meal of Madness - Crawler</entityname.he-madnessmealcrawler><!--Patch 13-->
 <entitydescription.he-madnessmealcrawler>Content:\n - 1x Crawler Burger\n - 8x Crawler Nuggets\n - 1x Can of Couwola Cola\n - 1x Random Toy</entitydescription.he-madnessmealcrawler><!--Patch 13-->
