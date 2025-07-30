@@ -1162,7 +1162,7 @@
         <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
         <StatusEffect type="InWater" target="This" condition="-1" interval="2" disabledeltatime="true" />
         <StatusEffect type="OnActive" target="This" >
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/coffee_start.ogg" loop="true" range="500" volume="2" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Fabricators/blender_loop.ogg" loop="true" range="500" volume="2" />
         </StatusEffect>
       </Fabricator>
       <LightComponent LightColor="0,255,0,200" IsOn="true" powerconsumption="5" range="3" castshadows="false" alphablend="true" allowingameediting="false" canbeselected="false" comparison="And" LightOffset="0,-40">
