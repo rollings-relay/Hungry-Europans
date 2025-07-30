@@ -1165,6 +1165,15 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entityname.he-rawoffal>Raw Offal</entityname.he-rawoffal>
 <entitydescription.he-rawoffal>Small bits and pieces of organ meats. Spoils if not refrigerated.</entitydescription.he-rawoffal>
 
+<entityname.he-blender>Blender</entityname.he-blender>
+<entitydescription.he-blender>A blender that can be used for juices and smoothies. Requires Power.</entitydescription.he-blender>
+
+<entityname.he-emptyglass>Empty Glass</entityname.he-emptyglass>
+<entitydescription.he-emptyglass>Stay hydrated.</entitydescription.he-emptyglass>
+<entityname.he-waterglass>Water Glass</entityname.he-waterglass>
+<entitydescription.he-waterglass>A glass of fresh water.</entitydescription.he-waterglass>
+<entityname.he-pomberryjuiceglass>Glass of Pom-Berry Juice</entityname.he-pomberryjuiceglass>
+<entitydescription.he-pomberryjuiceglass>A glass of fresh Pomegrenade-Bubbleberry juice.</entitydescription.he-pomberryjuiceglass>
 
 <forcesay.eatingsound>*Om nom nom...*</forcesay.eatingsound>
 <forcesay.eatingsound>*Gulp...*</forcesay.eatingsound>
