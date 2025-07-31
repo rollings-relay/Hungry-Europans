@@ -39,7 +39,7 @@
 <!-- 
 NEW GROWABLE HEALTH PARAMETERS
 
-GrowthSpeed  (1 vine per 10/Growthspeed seconds; all of our plants have 3 to 4 vines)
+GrowthSpeed  (1 vine every 10/Growthspeed seconds; all of our plants have 3 to 4 vines)
 "How fast the plant grows. Value of 1 means a vine attempts to grow every 10 seconds while 2 and 0.5 mean every 5 and 20 seconds respectively."
 
 MaximumVines 
