@@ -20,20 +20,48 @@
   TODO: increase grow rate by 2x, you will be planting more
   TODO: decrease plant health in general, watering is more active
   
-  TODO: adjust sprites rect (currently using 32/64 grids) and adjust body size to match sprite
+  TODO: adjust crossbreed seed sprites rect, they are offset and too small
   
   TODO: change Fabricate recipes should use tags? (example: pipetobacco should use tobaccoingredient tag instead of just tobaccobud )
   
-  TODO: PLANT TEXTURES: recolor leaves, flowers to match new fruits, mix and match for hybrids, make new leaves/flowers.....
+  TODO: CUSTOM/CROSSBREED PLANT TEXTURES: recolor leaves, flowers to match new fruits, mix and match for hybrids, make new leaves/flowers.....
 
   GrowthWeights can be used in growable to determine the preferred direction of branches (plants use a square grid)
   we prefer smaller plants that grow up to not fill the entire room
-  GrowthWeights="up,left,down,right"   
+  GrowthWeights="up,left,down,right" 
   
  -->
 
   <!-- TODO: VERY IMPORTANT REDUCE TESTING GROWTH SPEED; find and replace 777 with 0
               readjust growth parameters completely-->
+
+
+<!-- 
+NEW GROWABLE HEALTH PARAMETERS
+
+GrowthSpeed  (1 vine per 10/Growthspeed seconds; all of our plants have 3 to 4 vines)
+"How fast the plant grows. Value of 1 means a vine attempts to grow every 10 seconds while 2 and 0.5 mean every 5 and 20 seconds respectively."
+
+MaximumVines 
+"Maximum number of vine tiles the plant can grow."
+
+Maxwater                                       
+"How much water the plant can hold. Affects how long the plant can survive without water."
+
+WaterUsedPerSecond 
+"How much water the plant consumes passively per second."
+
+ExtraWaterUsedPerSecondWhileFlooded            
+"How much extra water the plant uses per second while it is submerged in a flooded hull."
+
+FireVulnerability
+"How much water is lost due to fires every 10 seconds."
+
+ProductSpawnChance 
+"How often a product item is produced on growth ticks (every 10 seconds without a multiplier). 0.01 means 1% chance."
+
+ -->
+
 
   <!-- ///// VANILLA ///// -->
   <!-- ///// VANILLA ///// -->
