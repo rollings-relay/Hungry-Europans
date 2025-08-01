@@ -23,14 +23,11 @@
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand+LeftHand" aimpos="26,20" holdangle="270" holdpos="32,28" aimangle="120" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
         <StatusEffect type="OnUse" target="Character">
-          <Affliction identifier="huskinfection" amount="0.75" />
+          <ReduceAffliction type="hunger" amount="0.5" />
+          <Affliction identifier="huskinfection" amount="1" />
           <Affliction identifier="he-stuffed" amount="4" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character">
-          <Conditional hunger="gt 2" />
-          <ReduceAffliction type="hunger" amount="2" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
@@ -64,14 +61,11 @@
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
         <StatusEffect type="OnUse" target="Character">
+          <ReduceAffliction type="hunger" amount="0.5" />
           <Affliction identifier="huskinfection" amount="0.5" />
           <Affliction identifier="he-stuffed" amount="1" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character">
-          <Conditional hunger="gt 0.5" />
-          <ReduceAffliction type="hunger" amount="0.5" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
@@ -117,14 +111,11 @@
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand+LeftHand" aimpos="26,20" holdangle="270" holdpos="32,28" aimangle="120" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
         <StatusEffect type="OnUse" target="Character">
+          <ReduceAffliction type="hunger" amount="0.5" />
           <Affliction identifier="huskinfection" probability="0.05" amount="1" />
           <Affliction identifier="nausea" amount="4" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character">
-          <Conditional hunger="gt 0.5" />
-          <ReduceAffliction type="hunger" amount="0.5" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
@@ -149,9 +140,10 @@
         <Price storeidentifier="merchantbutcher" multiplier="2.0" minavailable="0" maxavailable="16" sold="true" />
       </Price>
       <Deconstruct time="5" requireddeconstructor="deconstructor" />
-      <Fabricate suitablefabricators="oven" requiredtime="20" requiresrecipe="false" amount="1">
+      <Fabricate suitablefabricators="stove" requiredtime="30" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="cooking" level="35" />
         <RequiredItem identifier="he-rawhuskfilets" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
+        <RequiredItem tag="waterpot" UseCondition="True" MinCondition="0.06175"/>
       </Fabricate>
       <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
       <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
@@ -167,14 +159,11 @@
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand+LeftHand" aimpos="26,20" holdangle="270" holdpos="32,28" aimangle="120" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
         <StatusEffect type="OnUse" target="Character">
+          <ReduceAffliction type="hunger" amount="0.5" />
           <Affliction identifier="huskinfection" probability="0.01" amount="1" />
-          <Affliction identifier="nausea" amount="4" />
+          <Affliction identifier="nausea" amount="2" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character">
-          <Conditional hunger="gt 0.5" />
-          <ReduceAffliction type="hunger" amount="0.5" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />

@@ -69,7 +69,8 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-huskmeatchunk>A piece of meat cut from a husk. Spoils if not refrigerated.</entitydescription.he-huskmeatchunk><!--Patch 13-->
 <entityname.he-rawhuskmeat>Raw Husk Meat</entityname.he-rawhuskmeat><!--Patch 13-->
 <entitydescription.he-rawhuskmeat>Spoils if not refrigerated.</entitydescription.he-rawhuskmeat><!--Patch 13-->
-<entitydescription.he-cookedhuskfilet>Got a prickly taste to it.</entitydescription.he-cookedhuskfilet><!--Patch 13-->
+<entityname.he-cookedhuskfilet>Husk Lump and Omelette</entityname.he-cookedhuskfilet><!--Patch 18-->
+<entitydescription.he-cookedhuskfilet>A boiled lump of husk meat and omelette on the side. Safe to eat.</entitydescription.he-cookedhuskfilet><!--Patch 18-->
 
 <!--watcher-->
 <entityname.he-watchermeatchunk>Watcher Meat Chunk</entityname.he-watchermeatchunk><!--Patch 13-->
@@ -1207,11 +1208,11 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entityname.he-preparedthresherfilets>Prepared Thresher Filets</entityname.he-preparedthresherfilets>
 <entitydescription.he-preparedthresherfilets>Thresher filets, roasted in an oven.</entitydescription.he-preparedthresherfilets>
 
-<entityname.he-rawhuskfilets>Raw Husk Filets</entityname.he-rawhuskfilets>
-<entitydescription.he-rawhuskfilets>Slices of Husk meat. Spoils if not refrigerated.</entitydescription.he-rawhuskfilets>
+<entityname.he-rawhuskfilets>Raw Husk Lump</entityname.he-rawhuskfilets>
+<entitydescription.he-rawhuskfilets>Select Husk morsels, does not include stingers. Spoils if not refrigerated.</entitydescription.he-rawhuskfilets>
 
-<entityname.he-preparedhuskfilets>Prepared Husk Filets</entityname.he-preparedhuskfilets>
-<entitydescription.he-preparedhuskfilets>Husk filets, roasted in an oven.</entitydescription.he-preparedhuskfilets>
+<entityname.he-preparedhuskfilets>Prepared Husk Lump</entityname.he-preparedhuskfilets>
+<entitydescription.he-preparedhuskfilets>Boil until it stops wriggling.</entitydescription.he-preparedhuskfilets>
 
 
 

@@ -16,25 +16,15 @@
   Researchstation capacity increased, can take every item - OVERRIDE
   
   ADD BIG PLANTERS SWAPPABLE WITH ULD?
-  TODO: increase produce rate by 3-4x, there are way less planters now
-  TODO: increase grow rate by 2x, you will be planting more
-  TODO: decrease plant health in general, watering is more active
-  
-  TODO: adjust crossbreed seed sprites rect, they are offset and too small
-  
+    
   TODO: change Fabricate recipes should use tags? (example: pipetobacco should use tobaccoingredient tag instead of just tobaccobud )
   
   TODO: CUSTOM/CROSSBREED PLANT TEXTURES: recolor leaves, flowers to match new fruits, mix and match for hybrids, make new leaves/flowers.....
 
   GrowthWeights can be used in growable to determine the preferred direction of branches (plants use a square grid)
   we prefer smaller plants that grow up to not fill the entire room
-  GrowthWeights="up,left,down,right" 
-  
+  GrowthWeights="up,left,down,right"   
  -->
-
-  <!-- TODO: VERY IMPORTANT REDUCE TESTING GROWTH SPEED; find and replace 777 with 0
-              readjust growth parameters completely-->
-
 
 <!-- 
 NEW GROWABLE HEALTH PARAMETERS
@@ -475,7 +465,6 @@ ProductSpawnChance
       <Price baseprice="30" sold="false" >
       </Price>
       <Deconstruct time="2" requireddeconstructor="deconstructor"/>
-      <!-- TODO: adjust growth and sprites -->
       <Growable name="pomaccoseed" GrowthSpeed="0.020" pickingtime="3" maximumvines="4" Maxwater="400" WaterUsedPerSecond="0.27" FireVulnerability="10" ExtraWaterUsedPerSecondWhileFlooded="1.2" seedrate="0" ProductSpawnChance="0.024" flowerquantity="2" leafprobability="0.50" flowertint="255,54,200,255" leaftint="255,150,100,255" vinetint="244,172,132,255" baseflowerscale="0.35" vinescale="0.25" GrowthWeights="1,0,0,0">
         <ProducedItem identifier="pomacco" probability="0.98" />
         <ProducedItem identifier="badcreepingorange" probability="0.02"/>
@@ -528,7 +517,6 @@ ProductSpawnChance
       <Price baseprice="30" sold="false" >
       </Price>
       <Deconstruct time="2" requireddeconstructor="deconstructor"/>
-      <!-- TODO: adjust growth and sprites -->
       <Growable name="saltgrenadeseed" GrowthSpeed="0.026" pickingtime="3" maximumvines="4" Maxwater="400" WaterUsedPerSecond="0.34" FireVulnerability="10" ExtraWaterUsedPerSecondWhileFlooded="1.2" seedrate="0" ProductSpawnChance="0.024" flowerquantity="2" leafprobability="0.50" flowertint="255,180,0,255" leaftint="255,150,100,255" vinetint="210,240,132,255" baseflowerscale="0.35" vinescale="0.25" GrowthWeights="1,0,0,0">
         <ProducedItem identifier="creepingorange" probability="0.50" />
         <ProducedItem identifier="saltgrenade" probability="0.50"/>
@@ -581,7 +569,6 @@ ProductSpawnChance
       <Price baseprice="30" sold="false" >
       </Price>
       <Deconstruct time="2" requireddeconstructor="deconstructor"/>
-      <!-- TODO: adjust growth and sprites -->
       <Growable name="raptorpomseed" GrowthSpeed="0.024" pickingtime="3" maximumvines="4" Maxwater="400" WaterUsedPerSecond="0.35" FireVulnerability="10" ExtraWaterUsedPerSecondWhileFlooded="1.2" seedrate="0" ProductSpawnChance="0.024" flowerquantity="2" leafprobability="0.50" flowertint="255,45,50,255" leaftint="140,146,56,255" vinetint="200,160,100,255" baseflowerscale="0.50" vinescale="0.25" GrowthWeights="1,0,0,0" >
         <ProducedItem identifier="raptorpom" probability="0.70" />
         <ProducedItem identifier="badraptorbane" probability="0.30"></ProducedItem>
@@ -634,7 +621,6 @@ ProductSpawnChance
       <Price baseprice="30" sold="false" >
       </Price>
       <Deconstruct time="2" requireddeconstructor="deconstructor"/>
-      <!-- TODO: adjust growth and sprites -->
       <Growable name="raptorbaccoseed" GrowthSpeed="0.023" pickingtime="3" maximumvines="4" Maxwater="425" WaterUsedPerSecond="0.33" FireVulnerability="10" ExtraWaterUsedPerSecondWhileFlooded="1.2" seedrate="0" ProductSpawnChance="0.024" flowerquantity="2" leafprobability="0.50" flowertint="148,85,120,255" leaftint="182,120,70,255" vinetint="235,130,112,255" baseflowerscale="0.40" vinescale="0.25" GrowthWeights="1,0,0,0" >
         <ProducedItem identifier="raptorbacco" probability="0.85" />
         <ProducedItem identifier="badraptorbane" probability="0.15"></ProducedItem>
