@@ -64,8 +64,8 @@
     
     <!-- CHAIRS -->
     <Item name="Cafeteria Chair" identifier="he-cafeteriachair" tags="largeitem,chair" width="149" height="219" scale="0.5" noninteractable="false" category="Misc" pickdistance="150" canflipy="false" canflipx="true" isshootable="true" GrabWhenSelected="false">
-      <sprite texture="%ModDir:2954998725%/Content/Items/Misc/CafeteriaAssets.png" sourcerect="0,172,149,219" depth="0.524" premultiplyalpha="false" origin="0.5,0.56" />
-      <Body width="149" height="219" density="25" />
+      <sprite texture="%ModDir:2954998725%/Content/Items/Misc/CafeteriaAssets.png" sourcerect="0,172,149,219" depth="0.524" premultiplyalpha="false" origin="0.5,0.5" />
+      <Body width="149" height="200" density="25" />
       <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="mechanical" level="30" />
         <RequiredItem identifier="aluminium" amount="2" />
@@ -78,11 +78,11 @@
         <Item identifier="plastic" amount="1" outcondition="0.5"/>
       </Deconstruct>
       <Controller selectkey="Select" UserPos="-10,30" direction="Left" hidehud="false" canbeselected="true" issecondaryitem="true" drawuserbehind="false">
-        <limbposition limb="Head" position="82,64" />
-        <limbposition limb="Torso" position="80,-6" />
-        <limbposition limb="Waist" position="73,-59" />
-        <limbposition limb="RightFoot" position="-10,-184" />
-        <limbposition limb="LeftFoot" position="-10,-184" />
+        <limbposition limb="Head" position="92,64" />
+        <limbposition limb="Torso" position="90,-6" />
+        <limbposition limb="Waist" position="85,-59" />
+        <limbposition limb="RightFoot" position="-10,-180" />
+        <limbposition limb="LeftFoot" position="-10,-180" />
         <limbposition limb="RightHand" position="40,-74" allowusinglimb="true" />
         <limbposition limb="LeftHand" position="40,-74" allowusinglimb="true" />
       </Controller>
