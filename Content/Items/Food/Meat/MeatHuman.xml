@@ -23,6 +23,7 @@
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand+LeftHand" aimpos="26,20" holdangle="270" holdpos="32,28" aimangle="120" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
         <StatusEffect type="OnUse" target="Character">
+          <ReduceAffliction type="hunger" amount="2" />
           <Affliction identifier="he-cannibalism" amount="0.75" />
           <ReduceAffliction identifier="he-hungryforhumanmeat" amount="3" />
           <Affliction identifier="he-stuffed" amount="4" />
@@ -38,10 +39,6 @@
           <Conditional he-cannibalism="gte 20" />
           <ReduceAffliction identifier="psychosis" amount="4" />
           <ReduceAffliction identifier="nausea" amount="4" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character">
-          <Conditional hunger="gt 2" />
-          <ReduceAffliction type="hunger" amount="2" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
@@ -75,6 +72,7 @@
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
         <StatusEffect type="OnUse" target="Character">
+          <ReduceAffliction type="hunger" amount="0.5" />
           <Affliction identifier="he-cannibalism" amount="0.5" />
           <Affliction identifier="he-stuffed" amount="1" />
           <ReduceAffliction identifier="he-hungryforhumanmeat" amount="0.75" />
@@ -90,10 +88,6 @@
           <Conditional he-cannibalism="gte 20" />
           <ReduceAffliction identifier="psychosis" amount="1" />
           <ReduceAffliction identifier="nausea" amount="1" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character">
-          <Conditional hunger="gt 0.5" />
-          <ReduceAffliction type="hunger" amount="0.5" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
@@ -138,15 +132,12 @@
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand+LeftHand" aimpos="26,20" holdangle="270" holdpos="32,28" aimangle="120" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
         <StatusEffect type="OnUse" target="Character">
+          <ReduceAffliction type="hunger" amount="0.5" />
           <Affliction identifier="deliriuminepoisoning" probability="0.001" amount="8" />
           <Affliction identifier="nausea" amount="4" />
           <Affliction identifier="he-hungryforhumanmeat" amount="0.075" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character">
-          <Conditional hunger="gt 0.5" />
-          <ReduceAffliction type="hunger" amount="0.5" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
@@ -188,15 +179,11 @@
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand+LeftHand" aimpos="26,20" holdangle="270" holdpos="32,28" aimangle="120" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
         <StatusEffect type="OnUse" target="Character">
-          <Affliction identifier="deliriuminepoisoning" probability="0.001" amount="8" />
-          <Affliction identifier="nausea" amount="4" />
+          <ReduceAffliction type="hunger" amount="0.5" />
+          <Affliction identifier="nausea" amount="1" />
           <Affliction identifier="he-hungryforhumanmeat" amount="0.075" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character">
-          <Conditional hunger="gt 0.5" />
-          <ReduceAffliction type="hunger" amount="0.5" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />

@@ -64,7 +64,7 @@
         <!-- When using (eating) the item, apply the afflictions psychosis, nausea, craving for human meat and spill to the character and play an eating sound effect -->
         <StatusEffect type="OnUse" target="Character">
           <ReduceAffliction type="hunger" amount="0.25" />
-          <Affliction identifier="nausea" amount="4" />
+          <Affliction identifier="nausea" amount="2" />
           <Affliction identifier="worminfection" amount="1" probability="0.02" />
           <Affliction identifier="tapeworminfection" amount="1" probability="0.02" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
@@ -393,7 +393,7 @@
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <!-- When using (eating) the item, reduce the condition by 4 per second -->
         <StatusEffect type="OnUse" target="This" Condition="-8.0"/>
-        <!-- When using (eating) the item, apply the afflictions deliriumine poisoning, nausea, craving for human meat and spill to the character and play an eating sound effect -->
+        <!-- When using (eating) the item, apply the afflictions deliriumine poisoning, nausea, and spill to the character and play an eating sound effect -->
         <StatusEffect type="OnUse" target="Character">
           <ReduceAffliction type="hunger" amount="0.25" />
           <Affliction identifier="deliriuminepoisoning" probability="0.001" amount="8" />

@@ -34,17 +34,13 @@
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand+LeftHand" aimpos="26,20" holdangle="270" holdpos="32,28" aimangle="120" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
         <StatusEffect type="OnUse" target="Character">
+          <ReduceAffliction type="hunger" amount="3" />
           <Affliction identifier="deliriuminepoisoning" probability="0.001" amount="8" />
           <Affliction identifier="nausea" amount="4" />
-          <Affliction identifier="he-hungryforhumanmeat" amount="0.3" />
           <Affliction identifier="worminfection" amount="1" probability="0.01" />
           <Affliction identifier="tapeworminfection" amount="1" probability="0.01" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character">
-          <Conditional hunger="gt 3" />
-          <ReduceAffliction type="hunger" amount="3" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
@@ -104,20 +100,15 @@
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <!-- When using (eating) the item, reduce the condition by 4 per second -->
         <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
-        <!-- When using (eating) the item, apply the afflictions deliriumine poisoning, nausea, craving for human meat and spill to the character and play an eating sound effect -->
+        <!-- When using (eating) the item, apply the afflictions deliriumine poisoning, nausea, and spill to the character and play an eating sound effect -->
         <StatusEffect type="OnUse" target="Character">
+          <ReduceAffliction type="hunger" amount="0.25" />
           <Affliction identifier="deliriuminepoisoning" probability="0.001" amount="8" />
-          <Affliction identifier="nausea" amount="4" />
-          <Affliction identifier="he-hungryforhumanmeat" amount="0.075" />
+          <Affliction identifier="nausea" amount="2" />
           <Affliction identifier="worminfection" amount="1" probability="0.01" />
           <Affliction identifier="tapeworminfection" amount="1" probability="0.01" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
-        </StatusEffect>
-        <!-- When using (eating) the item, reduce the character's hunger by 0.25 per second, if the character's hunger is above 0.25 -->
-        <StatusEffect type="OnUse" target="Character">
-          <Conditional hunger="gt 0.25" />
-          <ReduceAffliction type="hunger" amount="0.25" />
         </StatusEffect>
         <!-- When the item's condition reaches 0 (item breaks), remove the item -->
         <StatusEffect type="OnBroken" target="This">
@@ -181,18 +172,13 @@
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <!-- When using (eating) the item, reduce the condition by 4 per second -->
         <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
-        <!-- When using (eating) the item, apply the afflictions deliriumine poisoning, nausea, craving for human meat and spill to the character and play an eating sound effect -->
+        <!-- When using (eating) the item, apply the afflictions deliriumine poisoning, nausea, and spill to the character and play an eating sound effect -->
         <StatusEffect type="OnUse" target="Character">
-          <Affliction identifier="deliriuminepoisoning" probability="0.001" amount="8" />
-          <Affliction identifier="nausea" amount="4" />
+          <ReduceAffliction type="hunger" amount="0.25" />
+          <Affliction identifier="nausea" amount="1" />
           <Affliction identifier="he-hungryforhumanmeat" amount="0.075" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
-        </StatusEffect>
-        <!-- When using (eating) the item, reduce the character's hunger by 0.25 per second, if the character's hunger is above 0.25 -->
-        <StatusEffect type="OnUse" target="Character">
-          <Conditional hunger="gt 0.25" />
-          <ReduceAffliction type="hunger" amount="0.25" />
         </StatusEffect>
         <!-- When the item's condition reaches 0 (item breaks), remove the item -->
         <StatusEffect type="OnBroken" target="This">
@@ -239,12 +225,10 @@
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
         <StatusEffect type="OnUse" target="Character">
+          <ReduceAffliction type="hunger" amount="0.20" />
+          <Affliction identifier="nausea" amount="4" probability="0.25" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character">
-          <Conditional hunger="gt 0.25" />
-          <ReduceAffliction type="hunger" amount="0.25" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character">
           <Conditional thirst="gt 0" />

@@ -113,7 +113,7 @@
         <StatusEffect type="OnUse" target="Character">
           <ReduceAffliction type="hunger" amount="0.5" />
           <Affliction identifier="huskinfection" probability="0.05" amount="1" />
-          <Affliction identifier="nausea" amount="4" />
+          <Affliction identifier="nausea" amount="2" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
@@ -161,7 +161,7 @@
         <StatusEffect type="OnUse" target="Character">
           <ReduceAffliction type="hunger" amount="0.5" />
           <Affliction identifier="huskinfection" probability="0.01" amount="1" />
-          <Affliction identifier="nausea" amount="2" />
+          <Affliction identifier="nausea" amount="1" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
