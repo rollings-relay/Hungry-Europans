@@ -180,6 +180,8 @@
           <Conditional attached="false" targetitemcomponentname="Holdable" />
           <DropContainedItems />
         </StatusEffect>
+        <StatValue stattype="WalkingSpeed" value="-0.5" />
+        <StatValue stattype="SwimmingSpeed" value="-0.7" />
       </Holdable>
       <ItemContainer selectkey="Action" capacity="0" itemsperrow="0" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.25,0.15" absoluteoffset="0,0.15" anchor="BottomCenter" style="ItemUI" />
