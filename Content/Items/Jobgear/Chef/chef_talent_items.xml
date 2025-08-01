@@ -17,7 +17,7 @@
         <RequiredItem identifier="plastic" amount="3"/>
       </Fabricate>    
       <!--PowerContainer charge used to keep track of time to only water every 15min. Multiply by 100 and check for >99% because charge rate drops near 100%-->
-      <PowerContainer capacity="900" charge="900" maxrechargespeed="0" rechargespeed="0" canbeselected="false">
+      <PowerContainer capacity="600" charge="600" maxrechargespeed="0" rechargespeed="0" canbeselected="false">
         <StatusEffect type="OnNotContained" target="This" >
           <Conditional chargepercentage="0" />
           <Use />
