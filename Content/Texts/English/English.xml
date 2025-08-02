@@ -109,8 +109,6 @@ SEARCH FOR THE FOLLOWING:                                                       
 <!--human-->
 <entityname.he-cookedhumanfilet>Cannibal's platter</entityname.he-cookedhumanfilet>
 <entitydescription.he-cookedhumanfilet>A meal of choice, made for and from starving sailors.</entitydescription.he-cookedhumanfilet>
-<entityname.he-cookedhumanlimbs>Boiled Human Limbs</entityname.he-cookedhumanlimbs>
-<entitydescription.he-cookedhumanlimbs>Make sure these are not your own crew...</entitydescription.he-cookedhumanlimbs>
 
 <!--mudraptor-->
 <entityname.he-mudraptormeatchunk>Mudraptor Meat Chunk</entityname.he-mudraptormeatchunk>
@@ -372,6 +370,8 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-jambubbleberry>Tasty jam made out of bubbleberries. Known to quench a bit of thirst.</entitydescription.he-jambubbleberry><!--Patch 10-->
 <entityname.he-jampomegrenade>Pomegrenade Jam</entityname.he-jampomegrenade><!--Patch 13-->
 <entitydescription.he-jampomegrenade>Tasty jam made out of pomegrenade. Known to be slightly more filling.</entitydescription.he-jampomegrenade><!--Patch 13-->
+<entityname.he-bubbleberryleaf>Bubbleberry Leaf</entityname.he-bubbleberryleaf><!--Patch 13-->
+<entitydescription.he-bubbleberryleaf>Can be used to make tea.</entitydescription.he-bubbleberryleaf><!--Patch 13-->
 <entityname.he-seaweedstrip>Sea Weed Strips</entityname.he-seaweedstrip><!--Patch 13-->
 <entitydescription.he-seaweedstrip>Sea weed pressed and sliced into strips. Let it dry into Nori.</entitydescription.he-seaweedstrip><!--Patch 13-->
 <entityname.he-nori>Nori</entityname.he-nori><!--Patch 13-->
@@ -878,11 +878,6 @@ SEARCH FOR THE FOLLOWING:                                                       
 <researchstation.crossbreed.missingitem>Invalid combination. Try another plant.</researchstation.crossbreed.missingitem>
 
 <!-- fruits and plants -->
-<entityname.popnutleaf>Popnut Leaf</entityname.popnutleaf>
-<entitydescription.popnutleaf>Can be used to make tea.</entitydescription.popnutleaf>
-<entityname.bubbleberryleaf>Bubbleberry Leaf</entityname.bubbleberryleaf>
-<entitydescription.bananaseed>Can be used to make tea.</entitydescription.bananaseed>
-
 <entityname.bananaseed>Banana Slice</entityname.bananaseed>
 <entitydescription.bananaseed>A slice of a regular, plain europan banana. Can be planted.</entitydescription.bananaseed>
 
