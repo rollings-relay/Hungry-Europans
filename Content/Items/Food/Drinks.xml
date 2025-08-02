@@ -259,7 +259,7 @@
         </StatusEffect>
       </Holdable>
       <Powered currpowerconsumption="0" IsOn="false">
-        <StatusEffect type="OnActive" target="This" condition="-40" disabledeltatime="false" offset="0,-15" >
+        <StatusEffect type="OnActive" target="This" condition="-5" disabledeltatime="false" offset="0,-15" >
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" loop="true" />
           <ParticleEmitter particle="waterdrop" velocitymin="0.0" velocitymax="10.0" particlespersecond="50" colormultiplier="190,175,105,255"/>
         </StatusEffect>
@@ -448,7 +448,7 @@
       </Holdable>
       
       <Powered currpowerconsumption="0" IsOn="false">
-        <StatusEffect type="OnActive" target="This" condition="-40" disabledeltatime="false" offset="0,-15" >
+        <StatusEffect type="OnActive" target="This" condition="-5" disabledeltatime="false" offset="0,-15" >
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" loop="true" />
           <ParticleEmitter particle="waterdrop" velocitymin="0.0" velocitymax="10.0" particlespersecond="50" colormultiplier="125,140,55,255"/>
         </StatusEffect>
@@ -565,7 +565,7 @@
         </StatusEffect>
       </Holdable>
       <Powered currpowerconsumption="0" IsOn="false">
-        <StatusEffect type="OnActive" target="This" condition="-40" disabledeltatime="false" offset="0,-15" >
+        <StatusEffect type="OnActive" target="This" condition="-5" disabledeltatime="false" offset="0,-15" >
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" loop="true" />
           <ParticleEmitter particle="waterdrop" velocitymin="0.0" velocitymax="10.0" particlespersecond="50" colormultiplier="230,100,60,255"/>
         </StatusEffect>
@@ -683,7 +683,7 @@
         </StatusEffect>
       </Holdable>
       <Powered currpowerconsumption="0" IsOn="false">
-        <StatusEffect type="OnActive" target="This" condition="-40" disabledeltatime="false" offset="0,-15" >
+        <StatusEffect type="OnActive" target="This" condition="-5" disabledeltatime="false" offset="0,-15" >
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" loop="true" />
           <ParticleEmitter particle="waterdrop" velocitymin="0.0" velocitymax="10.0" particlespersecond="50" colormultiplier="20,90,45,255"/>
         </StatusEffect>
@@ -795,7 +795,7 @@
         </StatusEffect>
       </Holdable>
       <Powered currpowerconsumption="0" IsOn="false">
-        <StatusEffect type="OnActive" target="This" condition="-40" disabledeltatime="false" offset="0,-15" >
+        <StatusEffect type="OnActive" target="This" condition="-5" disabledeltatime="false" offset="0,-15" >
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" loop="true" />
           <ParticleEmitter particle="waterdrop" velocitymin="0.0" velocitymax="10.0" particlespersecond="50" colormultiplier="200,130,60,255"/>
         </StatusEffect>
@@ -904,7 +904,7 @@
         </StatusEffect>
       </Holdable>
       <Powered currpowerconsumption="0" IsOn="false">
-        <StatusEffect type="OnActive" target="This" condition="-40" disabledeltatime="false" offset="0,-15" >
+        <StatusEffect type="OnActive" target="This" condition="-5" disabledeltatime="false" offset="0,-15" >
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" loop="true" />
           <ParticleEmitter particle="waterdrop" velocitymin="0.0" velocitymax="10.0" particlespersecond="50" colormultiplier="200,130,60,255"/>
         </StatusEffect>
@@ -1020,7 +1020,7 @@
         </StatusEffect>
       </Holdable>
       <Powered currpowerconsumption="0" IsOn="false">
-        <StatusEffect type="OnActive" target="This" condition="-40" disabledeltatime="false" offset="0,-15" >
+        <StatusEffect type="OnActive" target="This" condition="-5" disabledeltatime="false" offset="0,-15" >
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" loop="true" />
           <ParticleEmitter particle="waterdrop" velocitymin="0.0" velocitymax="10.0" particlespersecond="50" colormultiplier="20,180,125,255"/>
         </StatusEffect>
@@ -1134,7 +1134,7 @@
         </StatusEffect>
       </Holdable>
       <Powered currpowerconsumption="0" IsOn="false">
-        <StatusEffect type="OnActive" target="This" condition="-40" disabledeltatime="false" offset="0,-15" >
+        <StatusEffect type="OnActive" target="This" condition="-5" disabledeltatime="false" offset="0,-15" >
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" loop="true" />
           <ParticleEmitter particle="waterdrop" velocitymin="0.0" velocitymax="10.0" particlespersecond="50" colormultiplier="180,70,60,255"/>
         </StatusEffect>
@@ -1245,7 +1245,7 @@
         </StatusEffect>
       </Holdable>
       <Powered currpowerconsumption="0" IsOn="false">
-        <StatusEffect type="OnActive" target="This" condition="-40" disabledeltatime="false" offset="0,-15" >
+        <StatusEffect type="OnActive" target="This" condition="-5" disabledeltatime="false" offset="0,-15" >
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" loop="true" />
           <ParticleEmitter particle="waterdrop" velocitymin="0.0" velocitymax="10.0" particlespersecond="50" colormultiplier="155,80,175,255"/>
         </StatusEffect>
@@ -1329,7 +1329,7 @@
         </StatusEffect>
       </Holdable>
       <Powered currpowerconsumption="0" IsOn="false">
-        <StatusEffect type="OnActive" target="This" condition="-40" disabledeltatime="false" offset="0,-15" >
+        <StatusEffect type="OnActive" target="This" condition="-5" disabledeltatime="false" offset="0,-15" >
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" loop="true" />
           <ParticleEmitter particle="waterdrop" velocitymin="0.0" velocitymax="10.0" particlespersecond="50" />
         </StatusEffect>
@@ -1632,7 +1632,7 @@
         </StatusEffect>
       </Holdable>
       <Powered currpowerconsumption="0" IsOn="false">
-        <StatusEffect type="OnActive" target="This" condition="-40" disabledeltatime="false" offset="0,-15" >
+        <StatusEffect type="OnActive" target="This" condition="-5" disabledeltatime="false" offset="0,-15" >
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" loop="true" />
           <ParticleEmitter particle="waterdrop" velocitymin="0.0" velocitymax="10.0" particlespersecond="50" />
         </StatusEffect>
@@ -1737,7 +1737,7 @@
         </StatusEffect>
       </Holdable>
       <Powered currpowerconsumption="0" IsOn="false">
-        <StatusEffect type="OnActive" target="This" condition="-40" disabledeltatime="false" offset="0,-15" >
+        <StatusEffect type="OnActive" target="This" condition="-5" disabledeltatime="false" offset="0,-15" >
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" loop="true" />
           <ParticleEmitter particle="waterdrop" velocitymin="0.0" velocitymax="10.0" particlespersecond="50" />
         </StatusEffect>
@@ -1853,7 +1853,7 @@
         </StatusEffect>
       </Holdable>
       <Powered currpowerconsumption="0" IsOn="false">
-        <StatusEffect type="OnActive" target="This" condition="-40" disabledeltatime="false" offset="0,-15" >
+        <StatusEffect type="OnActive" target="This" condition="-5" disabledeltatime="false" offset="0,-15" >
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" loop="true" />
           <ParticleEmitter particle="waterdrop" velocitymin="0.0" velocitymax="10.0" particlespersecond="50" />
         </StatusEffect>
@@ -2837,7 +2837,7 @@
     <!-- TEA -->
     <!-- TEA -->
     <!-- TEA -->
-    <Item name="Cup of Bubbleberry Tea" identifier="he-cupbubbleberrytea" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="It's said to be very soothing on your mind, helping you calm down and relax. Apparently also very effective to get alcohol out of your system." Tags="smallitem,drinkitem,teacup,cup" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="False" health="11" >
+    <Item name="Cup of Bubbleberry Tea" identifier="he-cupbubbleberrytea" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="It's said to be very soothing on your mind, helping you calm down and relax. Apparently also very effective to get alcohol out of your system." Tags="smallitem,drinkitem,teacup,cup" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="True" health="10" >
       <PreferredContainer secondary="abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -3059,7 +3059,7 @@
         </StatusEffect>
         <!--General effects-->
         <StatusEffect type="InWater" target="This" Condition="0" setvalue="true" />
-        <StatusEffect type="OnUse" target="This" Condition="-12.5">
+        <StatusEffect type="OnUse" target="This" Condition="-1">
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurping.ogg" loop="true" range="200" volume="2.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
@@ -3085,7 +3085,7 @@
         </StatusEffect>
       </Holdable>
       <Powered currpowerconsumption="0" IsOn="false">
-        <StatusEffect type="OnActive" target="This" condition="-40" disabledeltatime="false" offset="0,-15" >
+        <StatusEffect type="OnActive" target="This" condition="-10" disabledeltatime="false" offset="0,-15" >
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" loop="true" />
           <ParticleEmitter particle="waterdrop" velocitymin="0.0" velocitymax="10.0" particlespersecond="50" />
         </StatusEffect>
@@ -3101,7 +3101,7 @@
       </CustomInterface>
     </Item>
     
-    <Item name="Cup of Popnut Tea" identifier="he-cuppopnuttea" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,teacup,cup" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="False" health="11" >
+    <Item name="Cup of Popnut Tea" identifier="he-cuppopnuttea" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,teacup,cup" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="True" health="10" >
       <PreferredContainer secondary="abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -3305,7 +3305,7 @@
         </StatusEffect>
         <!--General effects-->
         <StatusEffect type="InWater" target="This" Condition="0" setvalue="true" />
-        <StatusEffect type="OnUse" target="This" Condition="-12.5">
+        <StatusEffect type="OnUse" target="This" Condition="-1">
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurping.ogg" loop="true" range="200" volume="2.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
@@ -3331,7 +3331,7 @@
         </StatusEffect>
       </Holdable>
       <Powered currpowerconsumption="0" IsOn="false">
-        <StatusEffect type="OnActive" target="This" condition="-40" disabledeltatime="false" offset="0,-15" >
+        <StatusEffect type="OnActive" target="This" condition="-10" disabledeltatime="false" offset="0,-15" >
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" loop="true" />
           <ParticleEmitter particle="waterdrop" velocitymin="0.0" velocitymax="10.0" particlespersecond="50" />
         </StatusEffect>
@@ -3351,7 +3351,7 @@
     <!-- COFFEE -->
     <!-- COFFEE -->
     <!-- TODO: holy fucking shit how many statuseffects does coffee have???? -->
-    <Item name="Cup of Coffee" identifier="he-cupcoffee" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeecup,cupofcoffee,cup" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="False" health="11" >
+    <Item name="Cup of Coffee" identifier="he-cupcoffee" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeecup,cupofcoffee,cup" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="True" health="10" >
       <PreferredContainer secondary="abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -3559,7 +3559,7 @@
         </StatusEffect>
         <!--General effects-->
         <StatusEffect type="InWater" target="This" Condition="0" setvalue="true" />
-        <StatusEffect type="OnUse" target="This" Condition="-12.5">
+        <StatusEffect type="OnUse" target="This" Condition="-1">
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurping.ogg" loop="true" range="200" volume="2.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
@@ -3588,7 +3588,7 @@
         </StatusEffect>
       </Holdable>
       <Powered currpowerconsumption="0" IsOn="false">
-        <StatusEffect type="OnActive" target="This" condition="-40" disabledeltatime="false" offset="0,-15" >
+        <StatusEffect type="OnActive" target="This" condition="-10" disabledeltatime="false" offset="0,-15" >
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" loop="true" />
           <ParticleEmitter particle="waterdrop" velocitymin="0.0" velocitymax="10.0" particlespersecond="50" />
         </StatusEffect>
@@ -3604,7 +3604,7 @@
       </CustomInterface>
     </Item>
     
-    <Item name="Cup of Coffee" identifier="he-mugcoffee" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeemug,coffeecup,mug" scale="0.4" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="False" health="167" >
+    <Item name="Mug of Coffee" identifier="he-mugcoffee" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeemug,coffeecup,mug" scale="0.4" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="True" health="10" >
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -3839,7 +3839,7 @@
         </StatusEffect>
       </Holdable>
       <Powered currpowerconsumption="0" IsOn="false">
-        <StatusEffect type="OnActive" target="This" condition="-40" disabledeltatime="false" offset="0,-15" >
+        <StatusEffect type="OnActive" target="This" condition="-5" disabledeltatime="false" offset="0,-15" >
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" loop="true" />
           <ParticleEmitter particle="waterdrop" velocitymin="0.0" velocitymax="10.0" particlespersecond="50" />
         </StatusEffect>
@@ -3855,7 +3855,7 @@
       </CustomInterface>
     </Item>
     
-    <Item name="Coffee-to-go" identifier="he-coffeetogo" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeecup,cup" scale="0.5" impactsoundtag="impact_soft" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="False" health="167" >
+    <Item name="Coffee-to-go" identifier="he-coffeetogo" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeecup,cup" scale="0.5" impactsoundtag="impact_soft" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="True" health="10" >
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -4058,7 +4058,7 @@
         </StatusEffect>
         <!--General effects-->
         <StatusEffect type="InWater" target="This" Condition="0" setvalue="true" />
-        <StatusEffect type="OnUse" target="This" Condition="-12.5">
+        <StatusEffect type="OnUse" target="This" Condition="-1">
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurping.ogg" loop="true" range="200" volume="2.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
@@ -4082,7 +4082,7 @@
         </StatusEffect>
       </Holdable>
       <Powered currpowerconsumption="0" IsOn="false">
-        <StatusEffect type="OnActive" target="This" condition="-40" disabledeltatime="false" offset="0,-15" >
+        <StatusEffect type="OnActive" target="This" condition="-10" disabledeltatime="false" offset="0,-15" >
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" loop="true" />
           <ParticleEmitter particle="waterdrop" velocitymin="0.0" velocitymax="10.0" particlespersecond="50" />
         </StatusEffect>
@@ -4101,7 +4101,7 @@
     <!-- HOT CHOCOLATE -->
     <!-- HOT CHOCOLATE -->
     <!-- HOT CHOCOLATE -->
-    <Item name="Cup of Hot Chocolate" identifier="he-cuphotchocolate" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeecup,cupofchocolate,cup" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="False" health="11" >
+    <Item name="Cup of Hot Chocolate" identifier="he-cuphotchocolate" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeecup,cupofchocolate,cup" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="True" health="10" >
       <PreferredContainer secondary="abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -4255,7 +4255,7 @@
           <ParticleEmitter particle="FleshSmoke" anglemin="90" anglemax="90" distancemin="7" distancemax="7" scalemin="0.1" scalemax="0.2" scalemultiplier="1,1" particlespersecond="2.0" colormultiplier="255,255,255,150" copyentityangle="True" />
         </StatusEffect>
         <StatusEffect type="InWater" target="This" Condition="0" setvalue="true" />
-        <StatusEffect type="OnUse" target="This" Condition="-12.5">
+        <StatusEffect type="OnUse" target="This" Condition="-1">
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurping.ogg" loop="true" range="200" volume="2.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
@@ -4281,7 +4281,7 @@
         </StatusEffect>
       </Holdable>
       <Powered currpowerconsumption="0" IsOn="false">
-        <StatusEffect type="OnActive" target="This" condition="-40" disabledeltatime="false" offset="0,-15" >
+        <StatusEffect type="OnActive" target="This" condition="-10" disabledeltatime="false" offset="0,-15" >
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" loop="true" />
           <ParticleEmitter particle="waterdrop" velocitymin="0.0" velocitymax="10.0" particlespersecond="50" colormultiplier="85,50,0,255"/>
         </StatusEffect>
@@ -4297,7 +4297,7 @@
       </CustomInterface>
     </Item>
     
-    <Item name="Cup of Hot Chocolate" identifier="he-mughotchocolate" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeemug,coffeecup,mug" scale="0.4" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="False" health="167" >
+    <Item name="Mug of Hot Chocolate" identifier="he-mughotchocolate" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeemug,coffeecup,mug" scale="0.4" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="True" health="10" >
       <PreferredContainer secondary="abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -4445,7 +4445,7 @@
           <ParticleEmitter particle="FleshSmoke" anglemin="90" anglemax="90" distancemin="7" distancemax="7" scalemin="0.1" scalemax="0.2" scalemultiplier="1,1" particlespersecond="2.0" colormultiplier="255,255,255,150" copyentityangle="True" />
         </StatusEffect>
         <StatusEffect type="InWater" target="This" Condition="0" setvalue="true" />
-        <StatusEffect type="OnUse" target="This" Condition="-12.5">
+        <StatusEffect type="OnUse" target="This" Condition="-1">
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurping.ogg" loop="true" range="200" volume="2.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
@@ -4471,7 +4471,7 @@
         </StatusEffect>
       </Holdable>
       <Powered currpowerconsumption="0" IsOn="false">
-        <StatusEffect type="OnActive" target="This" condition="-40" disabledeltatime="false" offset="0,-15" >
+        <StatusEffect type="OnActive" target="This" condition="-10" disabledeltatime="false" offset="0,-15" >
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" loop="true" />
           <ParticleEmitter particle="waterdrop" velocitymin="0.0" velocitymax="10.0" particlespersecond="50" />
         </StatusEffect>
@@ -4569,7 +4569,7 @@
         </StatusEffect>
       </Holdable>      
       <Powered currpowerconsumption="0" IsOn="false">
-        <StatusEffect type="OnActive" target="This" condition="-40" disabledeltatime="false" offset="0,-15" >
+        <StatusEffect type="OnActive" target="This" condition="-5" disabledeltatime="false" offset="0,-15" >
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" loop="true" />
           <ParticleEmitter particle="waterdrop" velocitymin="0.0" velocitymax="10.0" particlespersecond="50" />
         </StatusEffect>
@@ -4723,7 +4723,7 @@
         </StatusEffect>
       </Holdable>
       <Powered currpowerconsumption="0" IsOn="false">
-        <StatusEffect type="OnActive" target="This" condition="-40" disabledeltatime="false" offset="0,-15" >
+        <StatusEffect type="OnActive" target="This" condition="-10" disabledeltatime="false" offset="0,-15" >
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" loop="true" />
           <ParticleEmitter particle="waterdrop" velocitymin="0.0" velocitymax="10.0" particlespersecond="50" />
         </StatusEffect>
