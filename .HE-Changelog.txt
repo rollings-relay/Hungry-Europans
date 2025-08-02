@@ -91,6 +91,7 @@ Low:
 [*] Kitchen equipment sprites were changed to align with the counter when placed in-game. Old equipment might be offset as a result. 
 [*] Machinery and planter pots use placement restrictions: cannot place these items in too close proximity to other items, can only be placed on the ground
 [*] Plants are smaller and grow faster, but require more active watering and are more vulnerable to both flooding and fire
+[*] Watering can needs to be refilled in a sink or by inserting a bottle of water
 [*] "Bladder", "Need to defecate", "Stomach Ache" and "Alcohol Withdrawal" can now cause your mood to worsen (Only with "Mood" enabled)
 [*] "Drunk" can now improve your mood (Only with "Mood" enabled)
 [*] "Drunk" can now make you tired (Only with "Tiredness" enabled)
