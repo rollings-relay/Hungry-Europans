@@ -3810,7 +3810,7 @@
         </StatusEffect>
         <!--General effects-->
         <StatusEffect type="InWater" target="This" Condition="0" setvalue="true" />
-        <StatusEffect type="OnUse" target="This" Condition="-12.5">
+        <StatusEffect type="OnUse" target="This" Condition="-1">
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurping.ogg" loop="true" range="200" volume="2.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
@@ -3839,7 +3839,7 @@
         </StatusEffect>
       </Holdable>
       <Powered currpowerconsumption="0" IsOn="false">
-        <StatusEffect type="OnActive" target="This" condition="-5" disabledeltatime="false" offset="0,-15" >
+        <StatusEffect type="OnActive" target="This" condition="-10" disabledeltatime="false" offset="0,-15" >
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="3" range="300" loop="true" />
           <ParticleEmitter particle="waterdrop" velocitymin="0.0" velocitymax="10.0" particlespersecond="50" />
         </StatusEffect>
