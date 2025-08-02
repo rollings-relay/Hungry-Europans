@@ -55,6 +55,7 @@ Low:
 [*] (TODO) Added: New optional affliction "Hygiene" which is enabled with the "Filthy Europan" item
 [*] Added: Traits. You can select a preferred food and drink that will help improve your Mood when consumed
 [*] Unit Load Devices can be swapped to make empty space for your kitchen.
+[*] A lot of new text requiring translation. Will work on making translation easier
 
 [/List]
 
@@ -73,6 +74,7 @@ Low:
 [*] Added: Soups and soup pots 
 [*] Added: Various meals 
 [*] Added: New distiller recipes for fermented foods, distiller should have more uses
+[*] Added: Plant genetics and crossbreeding. Cross two fruits at a research station to obtain special seeds! 
 [*] (WIP) Added: "Coffee". Reduces your tiredness if you have it enabled and helps to sober up. Can give you a caffeine rush
 [*] (WIP) Added: "Hot Chocolate". Increases your tiredness if you have it enabled, but also increases your mood and helps to sober up
 [*] Added Moloch Milking Tool
