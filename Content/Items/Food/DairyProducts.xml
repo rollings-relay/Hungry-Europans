@@ -813,6 +813,7 @@
     </Item>
 
     <!--WAFFLES-->
+    <!-- TODO: simplify eating ice cream a bit, merge some statuseffects somehow -->
     <Item name="Waffle Cone" identifier="he-wafflecone" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A cone shaped waffle for ice cream. Contained ice cream will melt if not contained within a refrigerated container." Tags="smallitem,fooditem,wafflecone,petfood1,petfood2,petfood3" showcontentsintooltip="true" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
@@ -836,6 +837,7 @@
           <Conditional HasStatusTag="neq firstslot" />
           <Conditional HasStatusTag="neq secondslot" />
           <Conditional HasStatusTag="neq thirdslot" />
+          <ParticleEmitter particle="whitechunks" particlespersecond="2" scalemin="0.15" scalemax="0.2" distancemin="0" distancemax="5" anglemin="200" anglemax="340" velocitymin="10" velocitymax="15" copyentityangle="true" colormultiplier="180,130,100,255" />
         </StatusEffect>
         <!--Reduce condition by 1 once if ice cream is contained to make the waffle non-stackable-->
         <StatusEffect type="OnContaining" target="this" condition="-1" comparison="And" oneshot="true" disabledeltatime="true">
