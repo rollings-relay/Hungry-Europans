@@ -97,8 +97,8 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-molochsushi>Seasoned Moloch bits rolled in a leaf of Nori.</entitydescription.he-molochsushi><!--Patch 13-->
 
 <!--crawler-->
-<entityname.he-cookedcrawlerfilet>Cooked Filet</entityname.he-cookedcrawlerfilet>
-<entitydescription.he-cookedcrawlerfilet>The taste is awful, but that's not unusual on Europa.</entitydescription.he-cookedcrawlerfilet>
+<entityname.he-cookedcrawlerfilet>Crawler Brisket</entityname.he-cookedcrawlerfilet>
+<entitydescription.he-cookedcrawlerfilet>Despite being the tastiest part of a crawler, it's still quite awful and chewy.</entitydescription.he-cookedcrawlerfilet>
 <entityname.he-crawlermeatchunk>Crawler Half</entityname.he-crawlermeatchunk>
 <entitydescription.he-crawlermeatchunk>A Crawler cut in half. Spoils if not refrigerated.</entitydescription.he-crawlermeatchunk>
 <entityname.he-crawlermeatchunkspecial>Crawler Meat Chunk</entityname.he-crawlermeatchunkspecial>
