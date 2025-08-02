@@ -54,6 +54,7 @@ Low:
 [*] Integrated: "Tiredness" and "Mood" from NEEDS. These are optional and can each be toggled via an item at vending machines or forced via a separately available "Enforcer" patch
 [*] (TODO) Added: New optional affliction "Hygiene" which is enabled with the "Filthy Europan" item
 [*] Added: Traits. You can select a preferred food and drink that will help improve your Mood when consumed
+[*] Unit Load Devices can be swapped to make empty space for your kitchen.
 
 [/List]
 
@@ -65,37 +66,39 @@ Low:
 [*] Added: "Pan" item. Required for cooking some recipes on the stove and can be used as a melee weapon
 [*] Added: "Pot" item. Required for cooking some recipes on the stove
 [*] Added: "Electric Grill". Used to cook multiple meats simultaneously
-[*] Added: "Flour". Crafted from 30 seeds and "Sulphuric Acid"
+[*] Added: "Flour". Crafted from seeds and sulphuric acid
 [*] Added: "Dough". Used to make Bread, Buns and Pizza
 [*] Added: "Pizza" + "Pizza Slice"
 [*] Added: "Omelette" 
-[*] Added xxx food
-[*] Added xxx food
-[*] Added xxx food
+[*] Added: Soups and soup pots 
+[*] Added: Various meals 
+[*] Added: New distiller recipes for fermented foods, distiller should have more uses
 [*] (WIP) Added: "Coffee". Reduces your tiredness if you have it enabled and helps to sober up. Can give you a caffeine rush
 [*] (WIP) Added: "Hot Chocolate". Increases your tiredness if you have it enabled, but also increases your mood and helps to sober up
-[*] Added xxx drink
-[*] Added xxx drink
-[*] Added xxx drink
 [*] Added Moloch Milking Tool
 [*] Added NPC conversations, some related to food traits, being hungry, thirsty...
+[*] Added 2 submarines with kitchen, courtesy of NotWendy
 [/List]
 
 
 [b]Other Changes:[/b]
 
 [List]
+[*] Some food and drink items need to be eaten in a specific way (opening bottles, opening jars, eating with fork/spoon...)
 [*] Buffed some of the weaker Chef talents.
+[*] Kitchen equipment sprites were changed to align with the counter when placed in-game. Old equipment might be offset as a result. 
 [*] Machinery and planter pots use placement restrictions: cannot place these items in too close proximity to other items, can only be placed on the ground
-[*] (TODO) Changed: All food and drink items now support "Tiredness" and "Mood" values
+[*] Plants are smaller and grow faster, but require more active watering and are more vulnerable to both flooding and fire
 [*] "Bladder", "Need to defecate", "Stomach Ache" and "Alcohol Withdrawal" can now cause your mood to worsen (Only with "Mood" enabled)
 [*] "Drunk" can now improve your mood (Only with "Mood" enabled)
 [*] "Drunk" can now make you tired (Only with "Tiredness" enabled)
 [*] "Cafeteria Cart" is no longer attachable. Its inventory is accessed by using the "Action" keybind (Default "E") to bring it more in line with other 
-[*] New output for "Hydroponic Planter" to calculate the seconds until the next produce. Works exactly like the "Gardening Sprinkler"
+[*] New output for "Hydroponic Planter" to calculate the seconds until the next produce.
+[*] Garden Sprinkler cycle rate can be set manually
 [*] Rescaled burgers and hotdogs. They felt a bit oversized previously
 [*] Deconstructing meat no longer gives Alien blood
 [*] Made empty cans spawn in or nearby outpost trash cans
+[*] "Hungry Europan" syringe gives you a starter 5 Cooking 5 Butchery
 [*] Removed "Starvation Conciousness Regainer" since you can just feed someone unconcious or use adrenaline
 [*] Removed the override for "Adrenaline" since the vanilla game now cures stun with it by default
 [/List]
@@ -110,6 +113,17 @@ Low:
 [/List]
 
 
+[b]KNOWN BUGS:[/b] 
+[*] Errors for missing/deleted items. Just save once and the errors will go away.
+[*] Damage multipliers (like steroids) result in less meat being harvested on corpses
+[*] Not being able to wash off Hygiene affliction by going in the water without clothes
+[*] Sprites of items inside items inside tables break and do not match their real position in the inventory 	
+[*] Not being able to wash off Hygiene affliction by going in the water without clothes
+
+
+//////////////////////
+//////////////////////
+//////////////////////
 
 Misc TODOs:
 
@@ -128,7 +142,7 @@ Misc TODOs:
 
 LIST OF FOODS IDEAS:
 
-- Thresher Sauté with Mushrooms: thresher meat + mushroom
+- Sauté with Mushrooms: meat + mushroom
 - Cake + Cake Slice
 - Pasta + pasta recipes?
 - Chewing gum. Made from elastin. Reduces effects of hunger and prevents it from increasing.
@@ -154,10 +168,10 @@ NEEDS:
 
 LongTermPlans:
 - Meat Cleaver sharpening + Whetstone - prevents players from harvesting too much meat in one go
+- Blender and juices
 - Canned food. Canned food from earth, requires can opener or knife to open. Figure out something to do with it.
 	Can Opener: 100% | No injuries
-	Diving Knife: 80% | 10% chance of lacerations
-- Swappable ULD with kitchen counter - swappable with nothing. Allows to make space in the submarine for kitchen	
+	Diving Knife: 80% | 10% chance of lacerations	
 - Kuru sickness
 - Meat Chunks cookable and burnable in open fires.
 - More recipes and unlockable recipes by recipe items found or bought.
@@ -170,12 +184,6 @@ LongTermPlans:
 
 
 
-
-
-
-
-
-Here's my current list of what I want to add this month before pushing the content to the original Hungry Europans:
 
 
 BACKUP OF OLD POISON EFFECTS:
