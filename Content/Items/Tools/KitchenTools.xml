@@ -185,6 +185,14 @@
           <Affliction identifier="he-butchered" strength="5" />
         </StatusEffect>
         
+        <!-- TODO: meat cleaver suffers from a NASTY bug, damage multiplier will reduce the amount of total meat harvested 
+                  https://github.com/FakeFishGames/Barotrauma/discussions/16309
+                  
+                  More "butchered" gets applied with damage buffs, you reach 100 butchered faster which stops you from harvesting more meat
+                  
+                  If the bug does not get fixed, apply butchered over a 0.1s duration and multiply meat harvested by 10x
+                  -->
+        
         <!--offal 
         % chance of dropped by all non-husk, non alien, non-machine enemies under 10 mass (such as hatchlings) -->
         <StatusEffect type="OnSuccess" target="UseTarget" comparison="And" spawnitemrandomly="false" multiplyafflictionsbymaxvitality="false">
@@ -341,9 +349,9 @@
         
         <!-- CORPSE REMOVAL 
         removes corpse at 100 butchered
-        TODO: do not remove the corpse, and instead display error message? bugged? https://github.com/FakeFishGames/Barotrauma/discussions/16161 Make sure to remove particles/sound if that happens -->
+        TODO: do not remove the corpse, and instead display requireditem message about having reached maximum (bugged?) https://github.com/FakeFishGames/Barotrauma/discussions/16161 Make sure to remove particles/sound if that happens -->
         <StatusEffect type="OnUse" target="UseTarget" comparison="And">
-          <!-- <RequiredItems items="nomeatleft" type="Equipped" msg="itemmsgnomeatleft" /> -->
+          <!-- <RequiredItem items="nomeatleft" type="Equipped" msg="itemmsgnomeatleft" /> -->
           <Conditional isdead="true"/>
           <Conditional he-butchered="eq 100"/>
           <Conditional mass="lt 1000"/>
@@ -787,7 +795,7 @@
       <Body width="157" height="59" density="40" />
       <Holdable slots="Any,RightHand+LeftHand" controlpose="true" aimpos="50,-20" handle1="-59,-10" handle2="15,17" msg="ItemMsgPickUpSelect" />
       <RepairTool range="10" barrelpos="32,10" combatpriority="0" targetforce="10" HitItems="false" >
-        <!-- <RequiredItems identifier="he-emptybottle" type="Contained" msg="ItemMsgWeldingFuelRequired" /> -->
+        <!-- <RequiredItem identifier="he-emptybottle" type="Contained" msg="ItemMsgWeldingFuelRequired" /> -->
         <RequiredSkill identifier="medical" level="50" />
         <!-- applies milkextraction, more effective with high medical skill -->
         <StatusEffect type="OnSuccess" targettype="Usetarget" multiplyafflictionsbymaxvitality="true" comparison="and">
