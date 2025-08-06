@@ -1270,6 +1270,22 @@ SEARCH FOR THE FOLLOWING:                                                       
 <talentdescription.he-trait_likes_cola>You like drinking Cola.</talentdescription.he-trait_likes_cola>
 
 
+<eventtext.he-hirechef.freechef>Oh hello! You're from that submarine that just docked, aren't you? You don't happen to be in need of a new chef? I'm looking for work, but I'm not needed on this station.</eventtext.he-hirechef.freechef>
+<eventtext.he-hirechef.expensivechef>Hey, you're from that submarine that just docked, right? This shithole of a station just terminated my contract, and I'm looking for a crew.</eventtext.he-hirechef.expensivechef>
+<eventtext.he-hirechef.howmuch>We could use a cook. How much are you asking?</eventtext.he-hirechef.howmuch>
+<eventtext.he-hirechef.joinfree>I'll join your crew for free! Just get me out of this hole, all I need are kitchen tools and I'll start cooking.</eventtext.he-hirechef.joinfree>
+<eventtext.he-hirechef.joinexpensive>A mere 1250mk. That should cover my gambling debts and any future drinking expenses.</eventtext.he-hirechef.joinexpensive>
+<eventtext.he-hirechef.welcome>"Welcome on board."</eventtext.he-hirechef.welcome>
+<eventtext.he-hirechef.thinkaboutit>"I'll think about it."</eventtext.he-hirechef.thinkaboutit>
+<eventtext.he-hirechef.chefhired>Great, I'll get my knives sharpened!</eventtext.he-hirechef.chefhired>
+<eventtext.he-hirechef.givemoney>Give 1250mk</eventtext.he-hirechef.givemoney>
+<eventtext.he-hirechef.nomoney>Sorry but I don't work for free. Feel free to come back when you can afford my services.</eventtext.he-hirechef.nomoney>
+<eventtext.he-hirechef.nothiring>"We're not currently hiring."</eventtext.he-hirechef.nothiring>
+<eventtext.he-hirechef.changeyourmind>Really now? Man I was hoping to finally get away from this place... Well, I'm here if you change your mind.</eventtext.he-hirechef.changeyourmind>
+<eventtext.he-hirechef.nokitchen>"This submarine doesn't have a kitchen."</eventtext.he-hirechef.nokitchen>
+<eventtext.he-hirechef.buykitchen>Too bad. See if you can check the store, they might have the basics: a cutting board, a sink...</eventtext.he-hirechef.buykitchen>
+<eventtext.he-hirechef.nevermind>"Nevermind."</eventtext.he-hirechef.nevermind>
+
 
 
 <!-- HUBERT ADDITIONS ABOVE THIS --> 
