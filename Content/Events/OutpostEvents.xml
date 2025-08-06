@@ -11,242 +11,93 @@
         <StatusEffect target="This" noninteractable="false" setvalue="true" />
       </StatusEffectAction>
     </ScriptedEvent>
+    
     <ScriptedEvent identifier="he-hirechef">
+      <TagAction criteria="jobidentifier:chef" team="team1" tag="playerchef" ContinueIfNoTargetsFound="true" />
+      <!-- do not trigger the event if you already have a chef on your crew -->
+      <CountTargetsAction targettag="playerchef" MinAmount="1" >
+        <Success>
+          <Goto name="end" />
+        </Success>
+      </CountTargetsAction>
       <SpawnAction npcsetidentifier="he-hirablenpcs" npcidentifier="regularchef" targettag="hirablechef" spawnlocation="Outpost" spawnpointtype="Path" targetmoduletags="crewmodule" />
       <TagAction criteria="player" tag="player" />
-      <RNGAction chance="0.7">
-        <Success>
-          <RNGAction chance="0.6">
-            <!--Price: High-->
-            <Success>
-              <ConversationAction speakertag="hirablechef" invokertag="hc_player" text="Oh hello! You're from that submarine that just docked, aren't you? You don't happen to be in need of a new chef, are you? I'm looking for work, but I'm not needed on this station." dialogtype="mission">
-                <Option text="Yes we're in need of a new chef! How much do we pay you to join us?">
-                  <Label name="hire_high" />
-                  <ConversationAction targettag="hc_player" text="I'll join your crew for 3500MK." waitforinteraction="false" dialogtype="mission">
-                    <Option text="Alright, here you go... welcome onboard!">
-                      <CheckMoneyAction targettag="hc_player" amount="3500">
-                        <Success>
-                          <ConversationAction targettag="hc_player" text="Oh thank you so much! I'll see you on board!" waitforinteraction="false" dialogtype="mission"/>
-                          <MoneyAction targettag="hc_player" amount="-3500" />
-                          <NPCChangeTeamAction npctag="hirablechef" teamtag="Team1" addtocrew="true" />
-                          <ClearTagAction tag="hc_player" />
-                          <GoTo name="end" />
-                        </Success>
-                        <Failure>
-                          <ConversationAction targettag="hc_player" text="I'm sorry, but it seems like you don't have the money on you. Feel free to come back when you do." waitforinteraction="false" dialogtype="mission"/>
-                          <ClearTagAction tag="hc_player" />
-                          <GoTo name="restart_high" />
-                        </Failure>
-                      </CheckMoneyAction>
-                    </Option>
-                    <Option text="I'm sorry, but that's too high of a price for us.">
-                      <ConversationAction targettag="hc_player" text="Ok. Feel free to come back if you change your mind!" waitforinteraction="false" dialogtype="mission"/>
-                      <ClearTagAction tag="hc_player" />
-                      <GoTo name="restart_high" />
-                    </Option>
-                    <Interrupt>
-                      <GoTo name="restart_high" />
-                    </Interrupt>
-                  </ConversationAction>
-                </Option>
-                <Option text="No, we're currently not looking to hire a chef. Best of luck to you!">
-                  <ConversationAction targettag="hc_player" text="Oh ok... Well, I'll be here if you happen to change your mind." waitforinteraction="false" dialogtype="mission"/>
-                  <ClearTagAction tag="hc_player" />
-                  <GoTo name="restart_high" />
-                </Option>
-                <Interrupt>
-                  <GoTo name="restart_high" />
-                </Interrupt>
-              </ConversationAction>
-            </Success>
-            <!--Price: Medium-->
-            <Failure>
-              <ConversationAction speakertag="hirablechef" invokertag="hc_player" text="Oh hello! You're from that submarine that just docked, aren't you? You don't happen to be in need of a new chef, are you? I'm looking for work, but I'm not needed on this station." dialogtype="mission">
-                <Option text="Yes we're in need of a new chef! How much do we pay you to join us?">
-                  <Label name="hire_medium" />
-                  <ConversationAction targettag="hc_player" text="I'll join your crew for 2500MK." waitforinteraction="false" dialogtype="mission">
-                    <Option text="Alright, here you go... welcome onboard!">
-                      <CheckMoneyAction targettag="hc_player" amount="2500">
-                        <Success>
-                          <ConversationAction targettag="hc_player" text="Oh thank you so much! I'll see you on board!" waitforinteraction="false" dialogtype="mission"/>
-                          <MoneyAction targettag="hc_player" amount="-2500" />
-                          <NPCChangeTeamAction npctag="hirablechef" teamtag="Team1" addtocrew="true" />
-                          <ClearTagAction tag="hc_player" />
-                          <GoTo name="end" />
-                        </Success>
-                        <Failure>
-                          <ConversationAction targettag="hc_player" text="I'm sorry, but it seems like you don't have the money on you. Feel free to come back when you do." waitforinteraction="false" dialogtype="mission"/>
-                          <ClearTagAction tag="hc_player" />
-                          <GoTo name="restart_medium" />
-                        </Failure>
-                      </CheckMoneyAction>
-                    </Option>
-                    <Option text="I'm sorry, but that's too high of a price for us.">
-                      <ConversationAction targettag="hc_player" text="Ok. Feel free to come back if you change your mind!" waitforinteraction="false" dialogtype="mission"/>
-                      <ClearTagAction tag="hc_player" />
-                      <GoTo name="restart_medium" />
-                    </Option>
-                    <Interrupt>
-                      <GoTo name="restart_medium" />
-                    </Interrupt>
-                  </ConversationAction>
-                </Option>
-                <Option text="No, we're currently not looking to hire a chef. Best of luck to you!">
-                  <ConversationAction targettag="hc_player" text="Oh ok... Well, I'll be here if you happen to change your mind." waitforinteraction="false" dialogtype="mission"/>
-                  <ClearTagAction tag="hc_player" />
-                  <GoTo name="restart_medium" />
-                </Option>
-                <Interrupt>
-                  <GoTo name="restart_medium" />
-                </Interrupt>
-              </ConversationAction>
-            </Failure>
-          </RNGAction>
-        </Success>
-        <Failure>
-          <RNGAction chance="0.5">
-            <!--Price: Low-->
-            <Success>
-              <ConversationAction speakertag="hirablechef" invokertag="hc_player" text="Oh hello! You're from that submarine that just docked, aren't you? You don't happen to be in need of a new chef, are you? I'm looking for work, but I'm not needed on this station." dialogtype="mission">
-                <Option text="Yes we're in need of a new chef! How much do we pay you to join us?">
-                  <Label name="hire_low" />
-                  <ConversationAction targettag="hc_player" text="I'll join your crew for 1250MK." waitforinteraction="false" dialogtype="mission">
-                    <Option text="Alright, here you go... welcome onboard!">
-                      <CheckMoneyAction targettag="hc_player" amount="1250">
-                        <Success>
-                          <ConversationAction targettag="hc_player" text="Oh thank you so much! I'll see you on board!" waitforinteraction="false" dialogtype="mission"/>
-                          <MoneyAction targettag="hc_player" amount="-1250" />
-                          <NPCChangeTeamAction npctag="hirablechef" teamtag="Team1" addtocrew="true" />
-                          <ClearTagAction tag="hc_player" />
-                          <GoTo name="end" />
-                        </Success>
-                        <Failure>
-                          <ConversationAction targettag="hc_player" text="I'm sorry, but it seems like you don't have the money on you. Feel free to come back when you do." waitforinteraction="false" dialogtype="mission"/>
-                          <ClearTagAction tag="hc_player" />
-                          <GoTo name="restart_low" />
-                        </Failure>
-                      </CheckMoneyAction>
-                    </Option>
-                    <Option text="I'm sorry, but that's too high of a price for us.">
-                      <ConversationAction targettag="hc_player" text="Ok. Feel free to come back if you change your mind!" waitforinteraction="false" dialogtype="mission"/>
-                      <ClearTagAction tag="hc_player" />
-                      <GoTo name="restart_low" />
-                    </Option>
-                    <Interrupt>
-                      <GoTo name="restart_low" />
-                    </Interrupt>
-                  </ConversationAction>
-                </Option>
-                <Option text="No, we're currently not looking to hire a chef. Best of luck to you!">
-                  <ConversationAction targettag="hc_player" text="Oh ok... Well, I'll be here if you happen to change your mind." waitforinteraction="false" dialogtype="mission"/>
-                  <ClearTagAction tag="hc_player" />
-                  <GoTo name="restart_low" />
-                </Option>
-                <Interrupt>
-                  <GoTo name="restart_low" />
-                </Interrupt>
-              </ConversationAction>
-            </Success>
-            <!--Price: Free-->
-            <Failure>
-              <ConversationAction speakertag="hirablechef" invokertag="hc_player" text="Oh hello! You're from that submarine that just docked, aren't you? You don't happen to be in need of a new chef, are you? I'm looking for work, but I can't find any on this shithole of a station." dialogtype="mission">
-                <Option text="Yes we're in need of a new chef! How much do we pay you to join us?">
-                  <Label name="hire_free" />
-                  <ConversationAction targettag="hc_player" text="I'll join your crew for free! Just get me out of this shithole and provide me the goods to cook whenever you can." waitforinteraction="false" dialogtype="mission">
-                    <Option text="Alright, yes we can do that. Welcome onboard!">
-                      <ConversationAction targettag="hc_player" text="Oh thank you so much! I'll see you on board!" waitforinteraction="false" dialogtype="mission"/>
-                      <NPCChangeTeamAction npctag="hirablechef" teamtag="Team1" addtocrew="true" />
-                      <ClearTagAction tag="hc_player" />
-                      <GoTo name="end" />
-                    </Option>
-                    <Option text="Actually, now that I think about it, we don't need a chef currently.">
-                      <ConversationAction targettag="hc_player" text="Really now? Man I was hoping to finally get away from this place... Well, I'm here if you change your mind!" waitforinteraction="false" dialogtype="mission"/>
-                      <ClearTagAction tag="hc_player" />
-                      <GoTo name="restart_free" />
-                    </Option>
-                    <Interrupt>
-                      <GoTo name="restart_free" />
-                    </Interrupt>
-                  </ConversationAction>
-                </Option>
-                <Option text="No, we're currently not looking to hire a chef. Best of luck to you!">
-                  <ConversationAction targettag="hc_player" text="Oh ok... Well, I'll be here if you happen to change your mind." waitforinteraction="false" dialogtype="mission"/>
-                  <ClearTagAction tag="hc_player" />
-                  <GoTo name="restart_free" />
-                </Option>
-                <Interrupt>
-                  <GoTo name="restart_free" />
-                </Interrupt>
-              </ConversationAction>
-            </Failure>
-          </RNGAction>
-        </Failure>
-      </RNGAction>
-      <!--restart with high price-->
-      <Label name="restart_high" />
-      <ConversationAction speakertag="hirablechef" invokertag="hc_player" text="Hey there! Have you changed your mind?" waitforinteraction="true" dialogtype="mission">
-        <Option text="Yes, how much was it to hire you?">
-          <GoTo name="hire_high" />
-        </Option>
-        <Option text="It's still a no.">
-          <ConversationAction targettag="hc_player" text="Fine. Well, I'll be here if you change your mind at some point." waitforinteraction="false" dialogtype="mission"/>
-          <ClearTagAction tag="hc_player" />
-          <GoTo name="restart_high" />
-        </Option>
-        <Interrupt>
-          <GoTo name="restart_high" />
-        </Interrupt>
-      </ConversationAction>
-      <!--restart with medium price-->
-      <Label name="restart_medium" />
-      <ConversationAction speakertag="hirablechef" invokertag="hc_player" text="Hey there! Have you changed your mind?" waitforinteraction="true" dialogtype="mission">
-        <Option text="Yes, how much was it to hire you?">
-          <GoTo name="hire_medium" />
-        </Option>
-        <Option text="It's still a no.">
-          <ConversationAction targettag="hc_player" text="Fine. Well, I'll be here if you change your mind at some point." waitforinteraction="false" dialogtype="mission"/>
-          <ClearTagAction tag="hc_player" />
-          <GoTo name="restart_medium" />
-        </Option>
-        <Interrupt>
-          <GoTo name="restart_medium" />
-        </Interrupt>
-      </ConversationAction>
-      <!--restart with low price-->
-      <Label name="restart_low" />
-      <ConversationAction speakertag="hirablechef" invokertag="hc_player" text="Hey there! Have you changed your mind?" waitforinteraction="true" dialogtype="mission">
-        <Option text="Yes, how much was it to hire you?">
-          <GoTo name="hire_low" />
-        </Option>
-        <Option text="It's still a no.">
-          <ConversationAction targettag="hc_player" text="Fine. Well, I'll be here if you change your mind at some point." waitforinteraction="false" dialogtype="mission"/>
-          <ClearTagAction tag="hc_player" />
-          <GoTo name="restart_low" />
-        </Option>
-        <Interrupt>
-          <GoTo name="restart_low" />
-        </Interrupt>
-      </ConversationAction>
-      <!--restart with free price-->
-      <Label name="restart_free" />
-      <ConversationAction speakertag="hirablechef" invokertag="hc_player" text="Hey there! Have you changed your mind?" waitforinteraction="true" dialogtype="mission">
-        <Option text="Yes, how much was it to hire you?">
-          <GoTo name="hire_free" />
-        </Option>
-        <Option text="It's still a no.">
-          <ConversationAction targettag="hc_player" text="Fine. Well, I'll be here if you change your mind at some point." waitforinteraction="false" dialogtype="mission"/>
-          <ClearTagAction tag="hc_player" />
-          <GoTo name="restart_free" />
-        </Option>
-        <Interrupt>
-          <GoTo name="restart_free" />
-        </Interrupt>
-      </ConversationAction>
+        <RNGAction chance="0.5">        
+          <!--Free chef-->
+          <Success>
+            <Label name="restart_free" />
+            <ClearTagAction tag="hc_player" />
+            <WaitAction time="1" />
+            <ConversationAction speakertag="hirablechef" invokertag="hc_player" text="eventtext.he-hirechef.freechef">
+              <Option text="eventtext.he-hirechef.howmuch">
+                <ConversationAction targettag="hc_player" text="eventtext.he-hirechef.joinfree" waitforinteraction="false">
+                  <Option text="eventtext.he-hirechef.welcome">
+                    <ConversationAction targettag="hc_player" text="eventtext.he-hirechef.chefhired" waitforinteraction="false"/>
+                    <NPCChangeTeamAction npctag="hirablechef" teamtag="Team1" addtocrew="true" />
+                    <GoTo name="end" />
+                  </Option>
+                  <Option text="eventtext.he-hirechef.thinkaboutit">
+                    <ConversationAction targettag="hc_player" text="eventtext.he-hirechef.changeyourmind" waitforinteraction="false"/>
+                    <GoTo name="restart_free" />
+                  </Option>
+                </ConversationAction>
+              </Option>
+              <Option text="eventtext.he-hirechef.nothiring">
+                <ConversationAction targettag="hc_player" text="eventtext.he-hirechef.changeyourmind" waitforinteraction="false"/>
+                <GoTo name="restart_free" />
+              </Option>
+              <Option text="eventtext.he-hirechef.nokitchen">
+                <ConversationAction targettag="hc_player" text="eventtext.he-hirechef.buykitchen" waitforinteraction="false"/>
+                <GoTo name="restart_free" />
+              </Option>
+            </ConversationAction>
+          </Success>          
+          <!--Expensive chef-->
+          <Failure>
+            <Label name="restart_expensive" />
+            <ClearTagAction tag="hc_player" />
+            <WaitAction time="1" />
+            <ConversationAction speakertag="hirablechef" invokertag="hc_player" text="eventtext.he-hirechef.expensivechef">
+              <Option text="eventtext.he-hirechef.howmuch">
+                <ConversationAction targettag="hc_player" text="eventtext.he-hirechef.joinexpensive" waitforinteraction="false">
+                  <Option text="eventtext.he-hirechef.welcome">
+                    <CheckMoneyAction targettag="hc_player" amount="1250">
+                      <Success>
+                        <MoneyAction targettag="hc_player" amount="-1250" />
+                        <ConversationAction targettag="hc_player" text="eventtext.he-hirechef.chefhired" waitforinteraction="false"/>
+                        <NPCChangeTeamAction npctag="hirablechef" teamtag="Team1" addtocrew="true" />
+                        <GoTo name="end" />
+                      </Success>
+                      <Failure>
+                        <ConversationAction targettag="hc_player" text="eventtext.he-hirechef.nomoney" waitforinteraction="false"/>
+                        <GoTo name="restart_expensive" />
+                      </Failure>
+                    </CheckMoneyAction>
+                  </Option>
+                  <Option text="eventtext.he-hirechef.thinkaboutit">
+                    <ConversationAction targettag="hc_player" text="eventtext.he-hirechef.changeyourmind" waitforinteraction="false"/>
+                    <GoTo name="restart_expensive" />
+                  </Option>
+                </ConversationAction>
+              </Option>
+              <Option text="eventtext.he-hirechef.nothiring">
+                <ConversationAction targettag="hc_player" text="eventtext.he-hirechef.changeyourmind" waitforinteraction="false"/>
+                <GoTo name="restart_expensive" />
+              </Option>
+              <Option text="eventtext.he-hirechef.nokitchen">
+                <ConversationAction targettag="hc_player" text="eventtext.he-hirechef.buykitchen" waitforinteraction="false"/>
+                <GoTo name="restart_expensive" />
+              </Option>
+            </ConversationAction>       
+          </Failure>
+        </RNGAction>
       <!--end the event-->
       <Label name="end" />
-    </ScriptedEvent>
+    </ScriptedEvent>    
   </EventPrefabs>
+  
   <!-- EVENT TRIGGERS -->
+  <!-- I added chef as hireable in DE locations, do we need to trigger the hireable chef event? Disable event if DE is enabled (how?) -->
   <EventSet identifier="he-outpostevent.hirechef" leveltype="outpost" locationtype="outpost,settlement,colony,city" allowatstart="true" minleveldifficulty="0" maxleveldifficulty="100" chooserandom="false" ignorecooldown="true" additive="true" SelectAlways="true">
     <ScriptedEvent identifier="he-hirechef" commonness="50" probability="0.5"/>
   </EventSet>
