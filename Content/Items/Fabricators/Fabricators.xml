@@ -478,15 +478,19 @@
       <!-- DecorativeSprite to display the lower half of the sink behind objects -->
       <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="612,456,135,94" depth="0.801" origin="0.5,-0.45" />
       <Body width="80" height="164" density="15" />
-      <Deconstruct time="10">
-        <Item identifier="steel" amount="2" />
-      </Deconstruct>
+      <Price baseprice="250" sold="true">
+        <Price storeidentifier="merchantoutpost" multiplier="1.2" minavailable="1" maxavailable="1" />
+        <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="1" />
+      </Price>
       <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="false">
         <RequiredSkill identifier="mechanical" level="30" />
         <RequiredItem identifier="steel" amount="6" /><!--150-->
         <RequiredItem identifier="plastic" amount="3" /><!--45x3-->
         <RequiredItem identifier="fpgacircuit" amount="2" /><!--80x2-->
       </Fabricate>
+      <Deconstruct time="10">
+        <Item identifier="steel" amount="2" />
+      </Deconstruct>
       <Fabricator selectkey="Select" canbeselected="true" powerconsumption="0.0" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
         <StatusEffect type="OnActive" target="This" targetitemcomponent="ItemComponent" IsActive="true" setvalue="true">
@@ -557,8 +561,8 @@
         <IsActiveConditional IsActive="True" targetitemcomponent="Fabricator" />
       </DecorativeSprite>
       <Price baseprice="99" sold="true">
-        <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="1" />
-        <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="3" />
+        <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="1" maxavailable="1" />
+        <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="2" maxavailable="2" />
       </Price>
       <Deconstruct time="5">
         <Item identifier="plastic" amount="1" />
