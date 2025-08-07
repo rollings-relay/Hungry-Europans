@@ -293,8 +293,8 @@
       <PreferredContainer secondary="abandonedcrewcab,piratecrewcab" minamount="1" maxamount="1" spawnprobability="0.00" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.00" notcampaign="true" notpvp="true"/>
       <PreferredContainer primary="medfabcab" secondary="medcab"/>
-      <Price baseprice="60" sold="true">
-        <Price storeidentifier="merchantclown" minavailable="0" maxavailable="3" sold="true">
+      <Price baseprice="60" sold="false">
+        <Price storeidentifier="merchantclown" minavailable="0" maxavailable="3" sold="false">
           <Reputation faction="clowns" min="30"/>
         </Price>
         <Price storeidentifier="merchantnightclub" minavailable="20" sold="false" />
