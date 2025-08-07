@@ -61,12 +61,9 @@ ProductSpawnChance
       <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="830,636,31,30" origin="0.5,0.5" />
       <PreferredContainer primary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.1" />
       <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.3" />
-      <Price baseprice="30">
-        <Price storeidentifier="merchantoutpost" sold="false" />
-        <Price storeidentifier="merchantcity" multiplier="1.2" minavailable="1" />
-        <Price storeidentifier="merchantresearch" multiplier="0.9" minavailable="2" />
-        <Price storeidentifier="merchantmilitary" sold="false" multiplier="1.2" />
-        <Price storeidentifier="merchantmine" sold="false" multiplier="0.75" />
+      <Price baseprice="33" >
+        <Price storeidentifier="merchantresearch" minavailable="0" maxavailable="3" multiplier="1" sold="true"/>
+        <Price storeidentifier="merchantcity" minavailable="0" maxavailable="3" multiplier="1" sold="true"/>
       </Price>
       <Deconstruct time="5">
       </Deconstruct>
@@ -116,12 +113,9 @@ ProductSpawnChance
       <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="863,636,30,31" origin="0.5,0.5" />
       <PreferredContainer primary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.1" />
       <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.3" />
-      <Price baseprice="30">
-        <Price storeidentifier="merchantoutpost" sold="false" />
-        <Price storeidentifier="merchantcity" multiplier="1.2" minavailable="1" />
-        <Price storeidentifier="merchantresearch" multiplier="0.9" minavailable="2" />
-        <Price storeidentifier="merchantmilitary" sold="false" multiplier="1.2" />
-        <Price storeidentifier="merchantmine" sold="false" multiplier="0.75" />
+      <Price baseprice="33" >
+        <Price storeidentifier="merchantresearch" minavailable="0" maxavailable="3" multiplier="1" sold="true"/>
+        <Price storeidentifier="merchantcity" minavailable="0" maxavailable="3" multiplier="1" sold="true"/>
       </Price>
       <Deconstruct time="5">
       </Deconstruct>
@@ -171,12 +165,9 @@ ProductSpawnChance
       <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="829,666,33,35" origin="0.5,0.5" />
       <PreferredContainer primary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.1" />
       <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.3" />
-      <Price baseprice="30">
-        <Price storeidentifier="merchantoutpost" sold="false" />
-        <Price storeidentifier="merchantcity" multiplier="1.2" minavailable="1" />
-        <Price storeidentifier="merchantresearch" multiplier="0.9" minavailable="2" />
-        <Price storeidentifier="merchantmilitary" sold="false" multiplier="1.2" />
-        <Price storeidentifier="merchantmine" sold="false" multiplier="0.75" />
+      <Price baseprice="33" >
+        <Price storeidentifier="merchantresearch" minavailable="0" maxavailable="3" multiplier="1" sold="true"/>
+        <Price storeidentifier="merchantcity" minavailable="0" maxavailable="3" multiplier="1" sold="true"/>
       </Price>
       <Deconstruct time="5">
       </Deconstruct>
@@ -226,12 +217,9 @@ ProductSpawnChance
       <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="863,668,30,33" origin="0.5,0.5" />
       <PreferredContainer primary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.1" />
       <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.3" />
-      <Price baseprice="30">
-        <Price storeidentifier="merchantoutpost" sold="false" />
-        <Price storeidentifier="merchantcity" multiplier="1.2" minavailable="1" />
-        <Price storeidentifier="merchantresearch" multiplier="0.9" minavailable="2" />
-        <Price storeidentifier="merchantmilitary" sold="false" multiplier="1.2" />
-        <Price storeidentifier="merchantmine" sold="false" multiplier="0.75" />
+      <Price baseprice="33" >
+        <Price storeidentifier="merchantresearch" minavailable="0" maxavailable="3" multiplier="1" sold="true"/>
+        <Price storeidentifier="merchantcity" minavailable="0" maxavailable="3" multiplier="1" sold="true"/>
       </Price>
       <Deconstruct time="5">
       </Deconstruct>
@@ -281,12 +269,9 @@ ProductSpawnChance
       <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.2" sourcerect="0,164,25,29" origin="0.5,0.5" />
       <PreferredContainer primary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.05" />
       <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.1" />
-      <Price baseprice="50">
-        <Price storeidentifier="merchantoutpost" sold="false" />
-        <Price storeidentifier="merchantcity" multiplier="1.2" minavailable="1" />
-        <Price storeidentifier="merchantresearch" multiplier="0.9" minavailable="2" />
-        <Price storeidentifier="merchantmilitary" sold="false" multiplier="1.2" />
-        <Price storeidentifier="merchantmine" sold="false" multiplier="0.75" />
+      <Price baseprice="33" >
+        <Price storeidentifier="merchantresearch" minavailable="0" maxavailable="3" multiplier="1" sold="true"/>
+        <Price storeidentifier="merchantcity" minavailable="0" maxavailable="3" multiplier="1" sold="true"/>
       </Price>
       <Deconstruct time="5">
       </Deconstruct>
@@ -334,12 +319,9 @@ ProductSpawnChance
       <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.2" sourcerect="25,164,19,18" origin="0.5,0.5" />
       <PreferredContainer primary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.05" />
       <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.1" />
-      <Price baseprice="50">
-        <Price storeidentifier="merchantoutpost" sold="false" />
-        <Price storeidentifier="merchantcity" multiplier="1.2" minavailable="1" />
-        <Price storeidentifier="merchantresearch" multiplier="0.9" minavailable="2" />
-        <Price storeidentifier="merchantmilitary" sold="false" multiplier="1.2" />
-        <Price storeidentifier="merchantmine" sold="false" multiplier="0.75" />
+      <Price baseprice="33" >
+        <Price storeidentifier="merchantresearch" minavailable="0" maxavailable="3" multiplier="1" sold="true"/>
+        <Price storeidentifier="merchantcity" minavailable="0" maxavailable="3" multiplier="1" sold="true"/>
       </Price>
       <Deconstruct time="5">
       </Deconstruct>
@@ -388,15 +370,9 @@ ProductSpawnChance
     <Item name="bananaseed" identifier="bananaseed" category="Misc" Tags="smallitem,seed,plantitem,bananaseed" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="240,220,140,255" isshootable="true" requireaimtouse="true">
       <sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.2" sourcerect="866,706,28,29" origin="0.5,0.5" />
       <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.03" />
-      <Price baseprice="30" canbespecial="false">
-        <Price storeidentifier="merchantoutpost" sold="false" />
-        <Price storeidentifier="merchantcity" sold="false"/>
-        <Price storeidentifier="merchantresearch" sold="false" />
-        <Price storeidentifier="merchantmilitary" sold="false" />
-        <Price storeidentifier="merchantmine" sold="false" />
-        <Price storeidentifier="merchantclown" minavailable="1" maxavailable="2" sold="true">
-          <Reputation faction="clowns" min="50"/>
-        </Price>
+      <Price baseprice="33" >
+        <Price storeidentifier="merchantresearch" minavailable="0" maxavailable="3" multiplier="1" sold="true"/>
+        <Price storeidentifier="merchantcity" minavailable="0" maxavailable="3" multiplier="1" sold="true"/>
       </Price>
       <Deconstruct time="2">
       </Deconstruct>
@@ -462,7 +438,7 @@ ProductSpawnChance
       <sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.2" sourcerect="830,636,31,30" origin="0.5,0.5" />
       <PreferredContainer primary="wreckstoragecab,abandonedstoragecab,piratestoragecab" amount="1" spawnprobability="0.0" />
       <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.0" />
-      <Price baseprice="30" sold="false" >
+      <Price baseprice="10" sold="false">
       </Price>
       <Deconstruct time="2" requireddeconstructor="deconstructor"/>
       <Growable name="pomaccoseed" GrowthSpeed="0.020" pickingtime="3" maximumvines="4" Maxwater="400" WaterUsedPerSecond="0.27" FireVulnerability="10" ExtraWaterUsedPerSecondWhileFlooded="1.2" seedrate="0" ProductSpawnChance="0.024" flowerquantity="2" leafprobability="0.50" flowertint="255,54,200,255" leaftint="255,150,100,255" vinetint="244,172,132,255" baseflowerscale="0.35" vinescale="0.25" GrowthWeights="1,0,0,0">
@@ -514,7 +490,7 @@ ProductSpawnChance
       <sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.2" sourcerect="829,666,33,35" origin="0.5,0.5" />
       <PreferredContainer primary="wreckstoragecab,abandonedstoragecab,piratestoragecab" amount="1" spawnprobability="0.0" />
       <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.0" />
-      <Price baseprice="30" sold="false" >
+      <Price baseprice="10" sold="false">
       </Price>
       <Deconstruct time="2" requireddeconstructor="deconstructor"/>
       <Growable name="saltgrenadeseed" GrowthSpeed="0.026" pickingtime="3" maximumvines="4" Maxwater="400" WaterUsedPerSecond="0.34" FireVulnerability="10" ExtraWaterUsedPerSecondWhileFlooded="1.2" seedrate="0" ProductSpawnChance="0.024" flowerquantity="2" leafprobability="0.50" flowertint="255,180,0,255" leaftint="255,150,100,255" vinetint="210,240,132,255" baseflowerscale="0.35" vinescale="0.25" GrowthWeights="1,0,0,0">
@@ -566,7 +542,7 @@ ProductSpawnChance
       <sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.2" sourcerect="830,636,31,30" origin="0.5,0.5" />
       <PreferredContainer primary="wreckstoragecab,abandonedstoragecab,piratestoragecab" amount="1" spawnprobability="0.0" />
       <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.0" />
-      <Price baseprice="30" sold="false" >
+      <Price baseprice="10" sold="false">
       </Price>
       <Deconstruct time="2" requireddeconstructor="deconstructor"/>
       <Growable name="raptorpomseed" GrowthSpeed="0.024" pickingtime="3" maximumvines="4" Maxwater="400" WaterUsedPerSecond="0.35" FireVulnerability="10" ExtraWaterUsedPerSecondWhileFlooded="1.2" seedrate="0" ProductSpawnChance="0.024" flowerquantity="2" leafprobability="0.50" flowertint="255,45,50,255" leaftint="140,146,56,255" vinetint="200,160,100,255" baseflowerscale="0.50" vinescale="0.25" GrowthWeights="1,0,0,0" >
@@ -618,7 +594,7 @@ ProductSpawnChance
       <sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.2" sourcerect="830,636,31,30" origin="0.5,0.5" />
       <PreferredContainer primary="wreckstoragecab,abandonedstoragecab,piratestoragecab" amount="1" spawnprobability="0.0" />
       <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.0" />
-      <Price baseprice="30" sold="false" >
+      <Price baseprice="10" sold="false">
       </Price>
       <Deconstruct time="2" requireddeconstructor="deconstructor"/>
       <Growable name="raptorbaccoseed" GrowthSpeed="0.023" pickingtime="3" maximumvines="4" Maxwater="425" WaterUsedPerSecond="0.33" FireVulnerability="10" ExtraWaterUsedPerSecondWhileFlooded="1.2" seedrate="0" ProductSpawnChance="0.024" flowerquantity="2" leafprobability="0.50" flowertint="148,85,120,255" leaftint="182,120,70,255" vinetint="235,130,112,255" baseflowerscale="0.40" vinescale="0.25" GrowthWeights="1,0,0,0" >
@@ -669,7 +645,7 @@ ProductSpawnChance
     <Item name="bananacigarseed" identifier="bananacigarseed" category="Misc" Tags="smallitem,seed,plantitem,bananaseed" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="220,200,240,255" isshootable="true" requireaimtouse="true">
       <sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.2" sourcerect="866,706,28,29" origin="0.5,0.5" />
       <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.03" />
-      <Price baseprice="30" canbespecial="false" sold="false">
+      <Price baseprice="10" sold="false">
       </Price>
       <Deconstruct time="2" requireddeconstructor="deconstructor"/>   
       <Growable name="bananacigarseed" GrowthSpeed="0.032" pickingtime="3" maximumvines="4" Maxwater="380" WaterUsedPerSecond="0.34" FireVulnerability="10" ExtraWaterUsedPerSecondWhileFlooded="1.2" seedrate="0" ProductSpawnChance="0.014" flowerquantity="2" leafprobability="0.50" flowertint="148,85,180,255" leaftint="240,180,180,255" vinetint="65,152,45,255" baseflowerscale="0.40" vinescale="0.25" GrowthWeights="1,0,0,0" >    
@@ -727,7 +703,7 @@ ProductSpawnChance
     <Item name="bananagunseed" identifier="bananagunseed" category="Misc" Tags="smallitem,seed,plantitem,bananaseed" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="220,200,100,255" isshootable="true" requireaimtouse="true">
       <sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.2" sourcerect="866,706,28,29" origin="0.5,0.5" />
       <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.03" />
-      <Price baseprice="30" sold="false">
+      <Price baseprice="10" sold="false">
       </Price>
       <Deconstruct time="2" requireddeconstructor="deconstructor"/> 
       <Growable name="bananagunseed" GrowthSpeed="0.033" pickingtime="3" maximumvines="4" Maxwater="350" WaterUsedPerSecond="0.28" FireVulnerability="10" ExtraWaterUsedPerSecondWhileFlooded="1.2" seedrate="0" ProductSpawnChance="0.014" flowerquantity="2" leafprobability="0.50" flowertint="170,100,120,255" leaftint="240,180,180,255" vinetint="90,152,50,255" baseflowerscale="0.40" vinescale="0.25" GrowthWeights="1,0,0,0" >      

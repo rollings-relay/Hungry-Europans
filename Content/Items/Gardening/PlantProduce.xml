@@ -20,12 +20,9 @@
   <Item name="Pomegrenade" identifier="creepingorange" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,fooditem,sugary,petfood1,petfood2,petfood3,distilleringredient" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="True" requireaimtouse="true" isshootable="true" health="10">
     <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.52" sourcerect="971,649,43,55" origin="0.5,0.5" />
     <Body radius="30" density="5" />
-    <Price baseprice="20" sold="false">
-      <Price storeidentifier="merchantoutpost" />
-      <Price storeidentifier="merchantcity" multiplier="1.2" />
-      <Price storeidentifier="merchantresearch" multiplier="1.1" />
-      <Price storeidentifier="merchantmilitary" multiplier="0.8" />
-      <Price storeidentifier="merchantmine" multiplier="0.75" />
+    <Price baseprice="27" >
+      <Price storeidentifier="merchantcity" minavailable="0" maxavailable="3" multiplier="1" sold="true"/>
+      <Price storeidentifier="merchantbutcher" minavailable="8" maxavailable="15" multiplier="1" sold="true" />
     </Price>
     <Fabricate suitablefabricators="vendingmachine" requiredtime="1" requiredmoney="30" fabricationlimitmin="3" fabricationlimitmax="5"/>
     <Deconstruct time="5" chooserandom="true" >
@@ -72,12 +69,9 @@
   <Item name="Tobacco Bud" identifier="tobaccobud" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,tobaccoingredient" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true" health="10">
     <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.52" sourcerect="904,646,56,61" origin="0.5,0.5" />
     <Body radius="30" density="9" waterdragcoefficient="20"/>
-    <Price baseprice="40" sold="false">
-      <Price storeidentifier="merchantoutpost" />
-      <Price storeidentifier="merchantcity" multiplier="1.2" />
-      <Price storeidentifier="merchantresearch" multiplier="1.1" />
-      <Price storeidentifier="merchantmilitary" multiplier="0.8" />
-      <Price storeidentifier="merchantmine" multiplier="0.75" />
+    <Price baseprice="32" >
+      <Price storeidentifier="merchantcity" minavailable="0" maxavailable="3" multiplier="1" sold="true"/>
+      <Price storeidentifier="merchantbutcher" minavailable="8" maxavailable="15" multiplier="1" sold="true" />
     </Price>
     <Deconstruct time="5" chooserandom="true" >
       <Item identifier="carbon" mincondition="0.5" />
@@ -110,12 +104,9 @@
   <Item name="Salt Bulb" identifier="saltbulb" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,salty,explodesinwater,distilleringredient" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true" health="10">
     <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.52" sourcerect="968,712,49,55" origin="0.5,0.5" />
     <Body radius="30" density="9" />
-    <Price baseprice="65" sold="false">
-      <Price storeidentifier="merchantoutpost" />
-      <Price storeidentifier="merchantcity" multiplier="1.2" />
-      <Price storeidentifier="merchantresearch" multiplier="1.1" />
-      <Price storeidentifier="merchantmilitary" multiplier="0.8" />
-      <Price storeidentifier="merchantmine" multiplier="0.75" />
+    <Price baseprice="65" >
+      <Price storeidentifier="merchantcity" minavailable="0" maxavailable="3" multiplier="1" sold="true"/>
+      <Price storeidentifier="merchantbutcher" minavailable="8" maxavailable="15" multiplier="1" sold="true" />
     </Price>
     <Deconstruct time="5" chooserandom="true" >
       <Item identifier="sodium" mincondition="0.5" />
@@ -162,12 +153,9 @@
   <Item name="Raptor Bane" identifier="raptorbane" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,petfood1,petfood2,petfood3,distilleringredient" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="true" health="10">
     <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.52" sourcerect="971,777,44,50" origin="0.5,0.5" />
     <Body radius="30" density="9" waterdragcoefficient="10"/>
-    <Price baseprice="40" sold="false">
-      <Price storeidentifier="merchantoutpost" />
-      <Price storeidentifier="merchantcity" multiplier="1.2" />
-      <Price storeidentifier="merchantresearch" multiplier="1.1" />
-      <Price storeidentifier="merchantmilitary" multiplier="0.8" />
-      <Price storeidentifier="merchantmine" multiplier="0.75" />
+    <Price baseprice="42" >
+      <Price storeidentifier="merchantcity" minavailable="0" maxavailable="3" multiplier="1" sold="true"/>
+      <Price storeidentifier="merchantbutcher" minavailable="8" maxavailable="15" multiplier="1" sold="true" />
     </Price>
     <Deconstruct time="5" chooserandom="true" >
       <Item identifier="carbon" mincondition="0.5" />
@@ -208,14 +196,11 @@
     <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,330,52,55" origin="0.5,0.5" />
     <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,330,52,55" depth="0.525" origin="0.5,0.7"  />
     <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="53,313,47,72" depth="0.52" maxcondition="99" />
-    <Price baseprice="50" canbespecial="false">
-      <Price storeidentifier="merchantoutpost" sold="false" />
-      <Price storeidentifier="merchantcity" sold="false"/>
-      <Price storeidentifier="merchantresearch" sold="false" />
-      <Price storeidentifier="merchantmilitary" sold="false" />
-      <Price storeidentifier="merchantmine" sold="false" />
+    <Price baseprice="51" >
+      <Price storeidentifier="merchantcity" minavailable="0" maxavailable="3" multiplier="1" sold="true"/>
+      <Price storeidentifier="merchantbutcher" minavailable="8" maxavailable="15" multiplier="1" sold="true" />
       <Price storeidentifier="merchantclown" minavailable="3" maxavailable="5" sold="true">
-        <Reputation faction="clowns" min="50"/>
+        <Reputation faction="clowns" min="25"/>
       </Price>
     </Price>
     <Deconstruct time="5" chooserandom="true" >
@@ -290,12 +275,9 @@
   <Item name="Bubbleberries" identifier="bubbleberries" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,fooditem,sugary,petfood1,petfood2,petfood3" description="Very tasty and juicy." cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="8" damagedbyexplosions="false" allowasextracargo="True" requireaimtouse="true" isshootable="true" health="10">
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.52" sourcerect="183,0,54,48" origin="0.5,0.5" />
     <Body radius="30" density="5" />
-    <Price baseprice="40" sold="false">
-      <Price storeidentifier="merchantoutpost" />
-      <Price storeidentifier="merchantcity" multiplier="1.2" />
-      <Price storeidentifier="merchantresearch" multiplier="1.1" />
-      <Price storeidentifier="merchantmilitary" multiplier="0.8" />
-      <Price storeidentifier="merchantmine" multiplier="0.75" />
+    <Price baseprice="39" >
+      <Price storeidentifier="merchantcity" minavailable="0" maxavailable="3" multiplier="1" sold="true"/>
+      <Price storeidentifier="merchantbutcher" minavailable="8" maxavailable="15" multiplier="1" sold="true" />
     </Price>
     <Deconstruct time="5" chooserandom="true" >
       <Item identifier="carbon" mincondition="0.5" />
@@ -334,12 +316,9 @@
   <Item name="Popnut" identifier="popnut" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,waterreactivesize,fooditem,petfood1,petfood2,petfood3" description="Kids love to play with them. Needs to be put in water to pop it open and be able to consume it." cargocontaineridentifier="metalcrate" scale="0.25" impactsoundtag="impact_soft" damagedbyexplosions="false" allowasextracargo="True" >
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.52" sourcerect="0,0,46,46" origin="0.5,0.5" />
     <Body radius="30" density="2.8" />
-    <Price baseprice="50" sold="false">
-      <Price storeidentifier="merchantoutpost" />
-      <Price storeidentifier="merchantcity" multiplier="1.2" />
-      <Price storeidentifier="merchantresearch" multiplier="1.1" />
-      <Price storeidentifier="merchantmilitary" multiplier="0.8" />
-      <Price storeidentifier="merchantmine" multiplier="0.75" />
+    <Price baseprice="47" >
+      <Price storeidentifier="merchantcity" minavailable="0" maxavailable="3" multiplier="1" sold="true"/>
+      <Price storeidentifier="merchantbutcher" minavailable="8" maxavailable="15" multiplier="1" sold="true" />
     </Price>
     <Deconstruct time="5" chooserandom="true" >
       <Item identifier="carbon" mincondition="0.5" />
@@ -382,13 +361,6 @@
   <Item name="Popped Popnut" identifier="popnutpopped" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,fooditem,sugary,petfood1,petfood2,petfood3" description="It's popped open, ready to be consumed. Used in some recipes." cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" damagedbyexplosions="false" allowasextracargo="True" requireaimtouse="true" isshootable="true" health="10">
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.52" sourcerect="46,0,46,51" origin="0.5,0.5" />
     <Body radius="30" density="2" />
-    <Price baseprice="50" sold="false">
-      <Price storeidentifier="merchantoutpost" />
-      <Price storeidentifier="merchantcity" multiplier="1.2" />
-      <Price storeidentifier="merchantresearch" multiplier="1.1" />
-      <Price storeidentifier="merchantmilitary" multiplier="0.8" />
-      <Price storeidentifier="merchantmine" multiplier="0.75" />
-    </Price>
     <Deconstruct time="5" chooserandom="true" >
       <Item identifier="carbon" mincondition="0.5" />
     </Deconstruct>
@@ -790,7 +762,7 @@
     <Body radius="28" density="15" />
     <PreferredContainer primary="reactorcab"/>
     <PreferredContainer secondary="nucleargun" minamount="1" maxamount="1" spawnprobability="1"/>
-    <Price baseprice="150" displaynonempty="true">
+    <Price baseprice="150" sold="false" >
     </Price>
     <Deconstruct time="15" chooserandom="true">
       <Item identifier="uranium" mincondition="0.95" />
@@ -1028,7 +1000,7 @@
     <Body radius="28" density="15" />
     <PreferredContainer primary="plantcontainer"/>
     <PreferredContainer primary="kitchen" secondary="crewcab" />
-    <Price baseprice="150" displaynonempty="true">
+    <Price baseprice="20" sold="false" >
     </Price>
     <Deconstruct time="5" chooserandom="true">
       <Item identifier="potassium" mincondition="0.95" />
@@ -1072,7 +1044,7 @@
     <Body radius="28" density="15" />
     <PreferredContainer primary="plantcontainer"/>
     <PreferredContainer primary="kitchen" secondary="crewcab" />
-    <Price baseprice="150" displaynonempty="true">
+    <Price baseprice="20" sold="false" >
     </Price>
     <Deconstruct time="5" chooserandom="true">
       <Item identifier="potassium" mincondition="0.95" />
@@ -1145,13 +1117,11 @@
   <Item name="Bubbleberry Leaf" identifier="bubbleberryleaf" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,plantleaf,distilleringredient" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" damagedbyexplosions="false" allowasextracargo="True">
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.52" sourcerect="389,0,61,52" origin="0.5,0.5" />
     <Body radius="30" density="5" />
-    <!--<Price baseprice="40" sold="false">
-      <Price storeidentifier="merchantoutpost" />
-      <Price storeidentifier="merchantcity" multiplier="1.2" />
-      <Price storeidentifier="merchantresearch" multiplier="1.1" />
-      <Price storeidentifier="merchantmilitary" multiplier="0.8" />
-      <Price storeidentifier="merchantmine" multiplier="0.75" />
-    </Price>-->
+    <Price baseprice="20" >
+      <Price storeidentifier="merchantoutpost" minavailable="0" maxavailable="5" multiplier="1" sold="true" />
+      <Price storeidentifier="merchantcity" minavailable="5" maxavailable="10" multiplier="1" sold="true"/>
+      <Price storeidentifier="merchantbutcher" minavailable="10" maxavailable="20" multiplier="1" sold="true" />
+    </Price>
     <Deconstruct time="1">
       <Item identifier="carbon" mincondition="0.2" />
     </Deconstruct>
@@ -1170,13 +1140,11 @@
   <Item name="Popnut Leaf" identifier="popnutleaf" category="Material" subcategory="Plants" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,plantitem,plantleaf,distilleringredient" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" damagedbyexplosions="false" allowasextracargo="True">
     <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Gardening.png" depth="0.52" sourcerect="451,0,61,52" origin="0.5,0.5" />
     <Body radius="30" density="5" />
-    <!--<Price baseprice="40" sold="false">
-      <Price storeidentifier="merchantoutpost" />
-      <Price storeidentifier="merchantcity" multiplier="1.2" />
-      <Price storeidentifier="merchantresearch" multiplier="1.1" />
-      <Price storeidentifier="merchantmilitary" multiplier="0.8" />
-      <Price storeidentifier="merchantmine" multiplier="0.75" />
-    </Price>-->
+    <Price baseprice="20" >
+      <Price storeidentifier="merchantoutpost" minavailable="0" maxavailable="5" multiplier="1" sold="true" />
+      <Price storeidentifier="merchantcity" minavailable="5" maxavailable="10" multiplier="1" sold="true"/>
+      <Price storeidentifier="merchantbutcher" minavailable="10" maxavailable="20" multiplier="1" sold="true" />
+    </Price>
     <Deconstruct time="1">
       <Item identifier="carbon" mincondition="0.2" />
     </Deconstruct>
@@ -1203,12 +1171,10 @@
     <LightComponent lightcolor="139,211,197,100" range="100" powerconsumption="0" flicker="0.0" flickerspeed="0.5" pulsefrequency="0.4" pulseamount="0" ison="true" drawbehindsubs="true">
       <LightTexture texture="Content/Lights/pointlight_rays.png" origin="0.5,0.5" />
     </LightComponent>
-    <Price baseprice="65">
-      <Price storeidentifier="merchantoutpost" multiplier="1.3" minavailable="0" />
-      <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="0" />
-      <Price storeidentifier="merchantresearch" multiplier="0.9" minavailable="3" />
-      <Price storeidentifier="merchantmilitary" sold="false" />
-      <Price storeidentifier="merchantmine" sold="false" multiplier="0.9" />
+    <Price baseprice="20" >
+      <Price storeidentifier="merchantresearch" minavailable="4" maxavailable="7" multiplier="1" sold="true"/>
+      <Price storeidentifier="merchantcity" minavailable="5" maxavailable="10" multiplier="1" sold="true"/>
+      <Price storeidentifier="merchantbutcher" minavailable="10" maxavailable="20" multiplier="1" sold="true" />
     </Price>
     <Deconstruct time="5" />
     <InventoryIcon texture="%ModDir:2954998725%/Content/Items/InventoryIcons.Png" sourcerect="0,80,69,67" origin="0.5,0.5" />

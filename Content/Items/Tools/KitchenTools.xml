@@ -763,14 +763,6 @@
 
     <!-- Milking tool, original item and sprites by WorkingJoe https://steamcommunity.com/profiles/76561198295265148 -->
     <Item name="Milking Tool" identifier="he-milkingtool" Description="" category="Equipment" Tags="mediumitem,tool,mountableweapon,milkingtool" cargocontaineridentifier="metalcrate" Scale="0.5" impactsoundtag="impact_metal_light" hideconditionbar="true">
-      <Price baseprice="500" soldeverywhere="false" minavailable="1" maxavailable="2">
-        <Price locationtype="outpost" multiplier="1" sold="false" />
-        <Price locationtype="city" multiplier="1" sold="true" maxavailable="1" />
-        <Price locationtype="research" multiplier="1" sold="false" maxavailable="1" />
-        <Price locationtype="military" multiplier="1" sold="false" />
-        <Price locationtype="mine" multiplier="1" sold="false" />
-        <Price locationtype="hydroponics" multiplier="1" sold="true" minavailable="1" maxavailable="2" />
-      </Price>
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Tools/MolochMilkItems.png" sourcerect="96,133,64,64" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/MolochMilkItems.png" sourcerect="0,0,155,55" depth="0.55" origin="0.5,0.5" />
       <!-- TODO: remove this jank if one day we can apply effects to both target and item (see below)
