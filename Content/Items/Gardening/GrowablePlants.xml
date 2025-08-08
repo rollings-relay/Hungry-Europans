@@ -410,15 +410,11 @@ ProductSpawnChance
       <Body radius="15" density="12" />
       <Holdable canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="24,18" holdpos="25,-25" holdangle="0" aimangle="25" aimable="false" swingwhenusing="True" swingamount="7,7" swingspeed="0.5" msg="ItemMsgPickUpSelect">
         <!-- Regular eating -->
-        <StatusEffect type="OnUse" target="This" Condition="-100.0">
+        <StatusEffect type="OnUse" target="This,Character" Condition="-100.0">
           <Conditional InWater="false" />
+          <ReduceAffliction type="hunger" amount="1" />
           <ParticleEmitter particle="fruitchunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="100,255,100,255" />
-          <Sound file="Content/Items/Medical/ITEM_eatingBiteQuick.ogg" range="250" loop="false" volume="2" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And">
-          <Conditional InWater="false" />
-          <Conditional hunger="gt 1.4" />
-          <ReduceAffliction type="hunger" amount="1.4" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
@@ -683,15 +679,10 @@ ProductSpawnChance
       <Body radius="15" density="12" />
       <Holdable canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="24,18" holdpos="25,-25" holdangle="0" aimangle="25" aimable="false" swingwhenusing="True" swingamount="7,7" swingspeed="0.5" msg="ItemMsgPickUpSelect">
         <!-- Regular eating -->
-        <StatusEffect type="OnUse" target="This" Condition="-100.0">
+        <StatusEffect type="OnUse" target="This,Character" Condition="-100.0">
           <Conditional InWater="false" />
-          <ParticleEmitter particle="fruitchunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="100,255,100,255" />
-          <Sound file="Content/Items/Medical/ITEM_eatingBiteQuick.ogg" range="250" loop="false" volume="2" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And">
-          <Conditional InWater="false" />
-          <Conditional hunger="gt 1.4" />
-          <ReduceAffliction type="hunger" amount="1.4" />
+          <ReduceAffliction type="hunger" amount="1" />
+          <ParticleEmitter particle="fruitchunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="100,255,100,255" />          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
@@ -741,15 +732,11 @@ ProductSpawnChance
       <Body radius="15" density="12" />
       <Holdable canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="24,18" holdpos="25,-25" holdangle="0" aimangle="25" aimable="false" swingwhenusing="True" swingamount="7,7" swingspeed="0.5" msg="ItemMsgPickUpSelect">
         <!-- Regular eating -->
-        <StatusEffect type="OnUse" target="This" Condition="-100.0">
+        <StatusEffect type="OnUse" target="This,Character" Condition="-100.0">
           <Conditional InWater="false" />
-          <ParticleEmitter particle="fruitchunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="100,255,100,255" />
-          <Sound file="Content/Items/Medical/ITEM_eatingBiteQuick.ogg" range="250" loop="false" volume="2" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And">
-          <Conditional InWater="false" />
-          <Conditional hunger="gt 1.4" />
-          <ReduceAffliction type="hunger" amount="1.4" />
+          <ReduceAffliction type="hunger" amount="1" />
+          <ParticleEmitter particle="fruitchunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="5" distancemax="15" anglemin="180" anglemax="180" velocitymin="0" velocitymax="10" copyentityangle="true" colormultiplier="100,255,100,255" /> 
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />

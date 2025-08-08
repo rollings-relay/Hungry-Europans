@@ -98,10 +98,6 @@
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="Character">
-          <Conditional hunger="gt 1" />
-          <ReduceAffliction type="hunger" amount="1" />
-        </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
         </StatusEffect>

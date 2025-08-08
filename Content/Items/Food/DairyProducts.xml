@@ -543,7 +543,7 @@
     </Item>
 
     <!--CHEESE-->
-    <Item name="Moloch Cheese Curd" identifier="he-molochcheesecurd" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Slowly turns into cheese. A full block of cheese will yield 18 cheese slices." Tags="smallitem,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True">
+    <Item name="Moloch Cheese Curd" identifier="he-molochcheesecurd" category="Misc" maxstacksize="8" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Slowly turns into cheese. A full block of cheese will yield 18 cheese slices." Tags="smallitem,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="1,1,39,21" depth="0.6" origin="0.5,0.5" />
       <Fabricate suitablefabricators="cuttingboard" requiredtime="12" requiresrecipe="false" amount="1" outcondition="0.0">
@@ -569,7 +569,7 @@
       </Holdable>
     </Item>
 
-    <Item name="Moloch Cheese" identifier="he-molochcheese" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Cheese made from moloch milk. Can be cut into 18 cheese slices." Tags="smallitem,fooditem,distilleringredient,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True" health="15">
+    <Item name="Moloch Cheese" identifier="he-molochcheese" category="Misc" maxstacksize="8" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Cheese made from moloch milk. Can be cut into 18 cheese slices." Tags="smallitem,fooditem,distilleringredient,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True" health="15">
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
@@ -625,7 +625,7 @@
     </Item>
 
     <!-- WIP blue moloch cheese TODO: sprite  -->
-    <Item name="MolocheFort" identifier="he-molochefort" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Cheese made from moloch milk. Can be cut into 18 cheese slices." Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True" health="15">
+    <Item name="MolocheFort" identifier="he-molochefort" category="Misc" maxstacksize="8" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Cheese made from moloch milk. Can be cut into 18 cheese slices." Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True" health="15">
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
@@ -687,7 +687,7 @@
       </ItemContainer>
     </Item>
 
-    <Item name="Slice of Moloch Cheese" identifier="he-molochcheeseslice" category="Misc" maxstacksize="8" cargocontaineridentifier="metalcrate" description="A slice of moloch cheese." Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True" health="5">
+    <Item name="Slice of Moloch Cheese" identifier="he-molochcheeseslice" category="Misc" maxstacksize="32" cargocontaineridentifier="metalcrate" description="A slice of moloch cheese." Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True" health="5">
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
@@ -776,19 +776,16 @@
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <RequiredItem tag="icecreamball" type="contained" targetslot="0" />
-          <Conditional hunger="gt 0.4" />
           <ReduceAffliction type="hunger" amount="0.4" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <RequiredItem tag="icecreamball" type="contained" targetslot="1" />
-          <Conditional hunger="gt 0.4" />
           <ReduceAffliction type="hunger" amount="0.4" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <RequiredItem tag="icecreamball" type="contained" targetslot="2" />
-          <Conditional hunger="gt 0.4" />
           <ReduceAffliction type="hunger" amount="0.4" />
         </StatusEffect>
         <!--Increase damage resistance affliction if milky ice cream ball is contained-->
@@ -852,7 +849,6 @@
           <Conditional HasStatusTag="neq firstslot" />
           <Conditional HasStatusTag="neq secondslot" />
           <Conditional HasStatusTag="neq thirdslot" />
-          <Conditional hunger="gt 0.1" />
           <ReduceAffliction type="hunger" amount="0.1" />
         </StatusEffect>
         <!--Use up contained ice cream from top to bottom-->
