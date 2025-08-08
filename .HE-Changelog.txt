@@ -120,6 +120,7 @@ Low:
 [*] Errors for missing/deleted items. Just save once and the errors will go away.
 [*] Damage multipliers (like steroids) result in less meat being harvested on corpses
 [*] Not being able to wash off Hygiene affliction by going in the water without clothes
+[*] Cleaning stacked bowls/plates in the sink will delete any contained bowl/plate
 [*] Sprites of items inside items inside tables break and do not match their real position in the inventory 	
 [*] Not being able to wash off Hygiene affliction by going in the water without clothes
 
