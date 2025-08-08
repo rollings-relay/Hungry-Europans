@@ -547,11 +547,12 @@
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="41,1,39,21" depth="0.61" origin="0.5,0.5" />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="1,1,39,21" depth="0.6" origin="0.5,0.5" maxcondition="99" fadein="true" />
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="12" requiresrecipe="false" amount="1" outcondition="0.0">
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="1,1,39,21" origin="0.5,0.5" />
+      <Fabricate suitablefabricators="stove" requiredtime="90" requiresrecipe="false" amount="1" outcondition="0.0">
         <RequiredSkill identifier="cooking" level="30" />
         <RequiredItem tag="milk" />
         <RequiredItem tag="milk" />
-        <RequiredItem identifier="slimebacteria" amount="1"/>
+        <RequiredItem identifier="he-pot" amount="1" MinCondition="0" usecondition="true" />
       </Fabricate>
       <Deconstruct time="1" />
       <Body width="39" radius="21" density="10.5" />
