@@ -236,11 +236,8 @@
           <Affliction identifier="applydrunk" amount="3" />
           <ReduceAffliction type="thirst" amount="1.5" />
           <Affliction identifier="fillbladder" amount="2.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
-        </StatusEffect>              
-        <StatusEffect type="OnSecondaryUse" target="Character" disabledeltatime="true" >
-          <Conditional trait_likes_rum="gt 0" />
           <Affliction identifier="drank_rum" amount="1" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
         </StatusEffect>
         
         <StatusEffect type="OnImpact" target="This">
@@ -424,11 +421,8 @@
           <Affliction identifier="radiationsickness" amount="0.5" />
           <ReduceAffliction type="thirst" amount="1.5" />
           <Affliction identifier="fillbladder" amount="2.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
-        </StatusEffect>              
-        <StatusEffect type="OnSecondaryUse" target="Character" disabledeltatime="true" >
-          <Conditional trait_likes_rum="gt 0" />
           <Affliction identifier="drank_rum" amount="1" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
         </StatusEffect>
         
         <StatusEffect type="OnImpact" target="This">
@@ -542,11 +536,8 @@
           <ReduceAffliction identifier="chemaddiction" amount="0.5" />
           <ReduceAffliction type="thirst" amount="1.5" />
           <Affliction identifier="fillbladder" amount="2.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
-        </StatusEffect>              
-        <StatusEffect type="OnSecondaryUse" target="Character" disabledeltatime="true" >
-          <Conditional trait_likes_whiskey="gt 0" />
           <Affliction identifier="drank_whiskey" amount="1" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
         </StatusEffect>
         
         <StatusEffect type="OnImpact" target="This">
@@ -660,12 +651,9 @@
           <ReduceAffliction identifier="nausea" amount="2" />
           <ReduceAffliction type="thirst" amount="1.5" />
           <Affliction identifier="fillbladder" amount="2.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
-        </StatusEffect>              
-        <StatusEffect type="OnSecondaryUse" target="Character" disabledeltatime="true" >
-          <Conditional trait_likes_whiskey="gt 0" />
           <Affliction identifier="drank_whiskey" amount="1" />
-        </StatusEffect>    
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
+        </StatusEffect>
                 
         <StatusEffect type="OnImpact" target="This">
           <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="fruitsplatter1" decalsize="1.0" />
@@ -772,12 +760,9 @@
           <ReduceAffliction identifier="embarrassment" strength="0.25" />
           <ReduceAffliction type="thirst" amount="1.5" />
           <Affliction identifier="fillbladder" amount="2.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
-        </StatusEffect>              
-        <StatusEffect type="OnSecondaryUse" target="Character" disabledeltatime="true" >
-          <Conditional trait_likes_beer="gt 0" />
           <Affliction identifier="drank_beer" amount="1" />
-        </StatusEffect>    
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
+        </StatusEffect>
         
         <StatusEffect type="OnImpact" target="This">
           <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="fruitsplatter1" decalsize="1.0" />
@@ -881,12 +866,9 @@
           <ReduceAffliction identifier="embarrassment" strength="0.25" />
           <ReduceAffliction type="thirst" amount="1.5" />
           <Affliction identifier="fillbladder" amount="2.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
-        </StatusEffect>              
-        <StatusEffect type="OnSecondaryUse" target="Character" disabledeltatime="true" >
-          <Conditional trait_likes_beer="gt 0" />
           <Affliction identifier="drank_beer" amount="1" />
-        </StatusEffect>    
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
+        </StatusEffect>
         
         <StatusEffect type="OnImpact" target="This">
           <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="fruitsplatter1" decalsize="1.0" />
@@ -997,12 +979,9 @@
           <ReduceAffliction identifier="embarrassment" strength="0.25" />
           <ReduceAffliction type="thirst" amount="1.5" />
           <Affliction identifier="fillbladder" amount="2.0" />
+          <Affliction identifier="drank_beer" amount="1" />          
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
-        </StatusEffect>              
-        <StatusEffect type="OnSecondaryUse" target="Character" disabledeltatime="true" >
-          <Conditional trait_likes_beer="gt 0" />
-          <Affliction identifier="drank_beer" amount="1" />
-        </StatusEffect> 
+        </StatusEffect>  
         
         <StatusEffect type="OnImpact" target="This">
           <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="fruitsplatter1" decalsize="1.0" />
@@ -1111,12 +1090,9 @@
           <ReduceAffliction identifier="embarrassment" strength="0.25" />
           <ReduceAffliction type="thirst" amount="1.5" />
           <Affliction identifier="fillbladder" amount="2.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
-        </StatusEffect>              
-        <StatusEffect type="OnSecondaryUse" target="Character" disabledeltatime="true" >
-          <Conditional trait_likes_beer="gt 0" />
           <Affliction identifier="drank_beer" amount="1" />
-        </StatusEffect> 
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
+        </StatusEffect>  
         
         <StatusEffect type="OnImpact" target="This">
           <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="fruitsplatter1" decalsize="1.0" />
@@ -1222,12 +1198,9 @@
           <ReduceAffliction identifier="embarrassment" strength="0.25" />
           <ReduceAffliction type="thirst" amount="1.5" />
           <Affliction identifier="fillbladder" amount="2.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
-        </StatusEffect>              
-        <StatusEffect type="OnSecondaryUse" target="Character" disabledeltatime="true" >
-          <Conditional trait_likes_beer="gt 0" />
           <Affliction identifier="drank_beer" amount="1" />
-        </StatusEffect> 
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
+        </StatusEffect>  
         
         <StatusEffect type="OnImpact" target="This">
           <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="fruitsplatter1" decalsize="1.0" />
@@ -1397,11 +1370,8 @@
           <Affliction identifier="haste" amount="12.0" />
           <ReduceAffliction type="thirst" amount="1.5" />
           <Affliction identifier="fillbladder" amount="2.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
-        </StatusEffect>  
-        <StatusEffect type="OnSecondaryUse" target="Character" disabledeltatime="true" >
-          <Conditional trait_likes_cola="gt 0" />
           <Affliction identifier="drank_cola" amount="1" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
         </StatusEffect>         
         
         <StatusEffect type="OnBroken" target="This">
@@ -1466,12 +1436,9 @@
           <Affliction identifier="haste" amount="12.0" />
           <ReduceAffliction type="thirst" amount="1.5" />
           <Affliction identifier="fillbladder" amount="2.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
-        </StatusEffect>
-        <StatusEffect type="OnSecondaryUse" target="Character" disabledeltatime="true" >
-          <Conditional trait_likes_cola="gt 0" />
           <Affliction identifier="drank_cola" amount="1" />
-        </StatusEffect>            
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
+        </StatusEffect>          
        
         <StatusEffect type="OnBroken" target="This">
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/CanCrush1.ogg" range="350" volume="3" selectionmode="Random" />
@@ -1535,12 +1502,9 @@
           <Affliction identifier="haste" amount="12.0" />
           <ReduceAffliction type="thirst" amount="1.5" />
           <Affliction identifier="fillbladder" amount="2.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
-        </StatusEffect>
-        <StatusEffect type="OnSecondaryUse" target="Character" disabledeltatime="true" >
-          <Conditional trait_likes_cola="gt 0" />
           <Affliction identifier="drank_cola" amount="1" />
-        </StatusEffect>   
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
+        </StatusEffect> 
         
         <StatusEffect type="OnBroken" target="This">
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/CanCrush1.ogg" range="350" volume="3" selectionmode="Random" />
@@ -1610,12 +1574,9 @@
           <Affliction identifier="haste" amount="12.0" />
           <ReduceAffliction type="thirst" amount="1.5" />
           <Affliction identifier="fillbladder" amount="2.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
-        </StatusEffect> 
-        <StatusEffect type="OnSecondaryUse" target="Character" disabledeltatime="true" >
-          <Conditional trait_likes_cola="gt 0" />
           <Affliction identifier="drank_cola" amount="1" />
-        </StatusEffect>    
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
+        </StatusEffect>   
         
         <StatusEffect type="OnImpact" target="This">
           <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
@@ -1715,11 +1676,8 @@
           <Affliction identifier="haste" amount="12.0" />
           <ReduceAffliction type="thirst" amount="1.5" />
           <Affliction identifier="fillbladder" amount="2.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
-        </StatusEffect>  
-        <StatusEffect type="OnSecondaryUse" target="Character" disabledeltatime="true" >
-          <Conditional trait_likes_cola="gt 0" />
           <Affliction identifier="drank_cola" amount="1" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
         </StatusEffect>   
         
         <StatusEffect type="OnImpact" target="This">
@@ -1831,12 +1789,9 @@
           <Affliction identifier="he-giveradianttalent" amount="8.0" />
           <ReduceAffliction type="thirst" amount="1.5" />
           <Affliction identifier="fillbladder" amount="2.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
-        </StatusEffect> 
-        <StatusEffect type="OnSecondaryUse" target="Character" disabledeltatime="true" >
-          <Conditional trait_likes_cola="gt 0" />
           <Affliction identifier="drank_cola" amount="1" />
-        </StatusEffect>   
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
+        </StatusEffect>  
         
         <StatusEffect type="OnImpact" target="This">
           <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
@@ -2837,6 +2792,9 @@
     <!-- TEA -->
     <!-- TEA -->
     <!-- TEA -->
+    
+    <!-- TODO: add drank_tea somewhere in this mess -->
+    
     <Item name="Cup of Bubbleberry Tea" identifier="he-cupbubbleberrytea" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="It's said to be very soothing on your mind, helping you calm down and relax. Apparently also very effective to get alcohol out of your system." Tags="smallitem,drinkitem,teacup,cup" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="True" health="10" >
       <PreferredContainer secondary="abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
