@@ -9,13 +9,14 @@
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.08" />
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="202,469,54,18" depth="0.6" origin="0.5,0.5" />
-      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="207,490,49,23" depth="0.6" maxcondition="99" />
+      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="207,490,49,23" depth="0.6" maxcondition="99.99" />
       <InventoryIcon texture="Content/Items/InventoryIconAtlas2.png" sourcerect="0,768,64,64" origin="0.5,0.5" />
       <Fabricate suitablefabricators="vendingmachinefood,cafeteria" requiredtime="3" requiredmoney="29" fabricationlimitmin="0" fabricationlimitmax="7" />
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="47" radius="13" density="9" />
       <SuitableTreatment type="hunger" suitability="25" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="32,15" holdangle="270" holdpos="0,0" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="35,-35" holdangle="270" holdpos="0,0" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      
         <!--////////// BOT EATING \\\\\\\\\\-->
         <!-- Bots "eat" by holding the food in their hands -->
         <StatusEffect type="OnActive" target="This,Character" duration="1" condition="-1" stackable="false" comparison="And">
@@ -25,20 +26,24 @@
           <Affliction identifier="he-proteinrich" amount="8.0" />
           <Affliction identifier="he-stuffed" amount="0.75" />
           <ReduceAffliction type="hunger" amount="0.75" />
-          <ReduceAffliction type="burn" amount="0.2" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         
-        <!--////////// REGULAR EATING \\\\\\\\\\-->
-        <StatusEffect type="OnUse" target="This" Condition="-1">
+        <!--////////// REGULAR EATING \\\\\\\\\\-->        
+        <StatusEffect type="OnUse" target="This" comparison="And" oneshot="true">
           <Conditional InWater="false" />
+          <Conditional ConditionPercentage="equals 100" />
+          <Sound file="%ModDir%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And">
+        <StatusEffect type="OnUse" target="This" aimpos="28,15" setvalue="true">
+          <Conditional Condition="lt 10" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This,Character" condition="-1" comparison="And">
           <Conditional InWater="false" />
           <Affliction identifier="he-proteinrich" amount="8.0" />
           <Affliction identifier="he-stuffed" amount="0.75" />
           <ReduceAffliction type="hunger" amount="0.75" />
-          <ReduceAffliction type="burn" amount="0.2" />
+          <ParticleEmitter particle="whitechunks" particlespersecond="2" scalemin="0.15" scalemax="0.2" distancemin="0" distancemax="5" anglemin="200" anglemax="340" velocitymin="10" velocitymax="15" copyentityangle="true" colormultiplier="120,80,30,255" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
@@ -56,7 +61,7 @@
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.08" />
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="109,164,40,42" depth="0.6" origin="0.5,0.5" />
-      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="110,150,28,13" depth="0.6" maxcondition="99" />
+      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="110,150,28,13" depth="0.6" maxcondition="99.99" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="109,164,40,42" origin="0.5,0.5" />
       <Fabricate suitablefabricators="vendingmachinefood,cafeteria" requiredtime="3" requiredmoney="39" fabricationlimitmin="0" fabricationlimitmax="7" />
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
@@ -73,7 +78,6 @@
           <Affliction identifier="he-proteinrich" amount="8.0" />
           <Affliction identifier="he-stuffed" amount="0.75" />
           <ReduceAffliction type="hunger" amount="0.75" />
-          <ReduceAffliction type="burn" amount="0.25" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
@@ -85,14 +89,13 @@
           <Sound file="%ModDir%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This" aimpos="22,15" setvalue="true">
-          <Conditional condition="lt 15" />
+          <Conditional Condition="lt 15" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This, Character" condition="-1" comparison="And" >
           <Conditional InWater="false" />
           <Affliction identifier="he-proteinrich" amount="8.0" />
           <Affliction identifier="he-stuffed" amount="0.75" />
           <ReduceAffliction type="hunger" amount="0.75" />
-          <ReduceAffliction type="burn" amount="0.25" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <ParticleEmitter particle="whitechunks" particlespersecond="2" scalemin="0.15" scalemax="0.2" distancemin="0" distancemax="5" anglemin="200" anglemax="340" velocitymin="10" velocitymax="15" copyentityangle="true" colormultiplier="20,150,50,255" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
@@ -105,7 +108,7 @@
     </Item>
 
     <!-- CHIPS -->
-    <Item name="Bag of Pomegrenade Chips" identifier="he-chips1" health="15" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="Dried pomegrenade chips. A popular little snack to watch the annual 'DUNWICE FACE-OFF' to." Tags="smallitem,fooditem" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True">
+    <Item name="Bag of Pomegrenade Chips" identifier="he-chips1" health="11" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="Dried pomegrenade chips. A popular little snack to watch the annual 'DUNWICE FACE-OFF' to." Tags="smallitem,fooditem,fingerfood" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.04" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.04" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.08" />
@@ -113,13 +116,19 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,207,48,67" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,207,48,67" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,207,48,67" depth="0.525" origin="0.5,0.85"  />
-      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="49,207,48,67" depth="0.6" maxcondition="99" />
+      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="49,207,48,67" depth="0.6" maxcondition="99.99" />
       <!--<InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,207,48,67" origin="0.5,0.5" />-->
       <Fabricate suitablefabricators="vendingmachinefood,cafeteria" requiredtime="3" requiredmoney="19" fabricationlimitmin="0" fabricationlimitmax="7" />
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="46" height="64" density="9" />
       <SuitableTreatment type="hunger" suitability="20" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="32,28" holdpos="30,-15" holdangle="0" aimangle="120" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand,Any" holdangle="20" holdpos="30,-30" handle1="-10,-20" handle2="0,20" aimable="false" msg="ItemMsgPickUpSelect">
+        <!-- EVERYTHING RELATED TO POISONING FOOD IS HANDLED VIA THE POISON EFFECT PRESET ITEMS DEFINED IN - variantof="" AND THEIR CODE IS LOCATED IN - "/Content/Items/#Presets/#ItemPresets.xml" -->
+        <StatusEffect type="OnUse" target="This" Condition="14" aimangle="120" setvalue="true" oneshot="true">
+          <Conditional condition="gte 15" />
+          <Sound file="%ModDir%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
+        </StatusEffect>
+        
         <!--////////// BOT EATING \\\\\\\\\\-->
         <!-- Bots "eat" by holding the food in their hands -->
         <StatusEffect type="OnActive" target="This,Character" duration="1" condition="-1" stackable="false" comparison="And">
@@ -129,41 +138,63 @@
           <Affliction identifier="ate_friedfood" amount="1" />
           <Affliction identifier="he-stuffed" amount="0.75" />
           <ReduceAffliction type="hunger" amount="0.75" />
-          <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         
         <!--////////// REGULAR EATING \\\\\\\\\\-->
-        <StatusEffect type="OnUse" target="This" comparison="And" oneshot="true">
-          <Conditional InWater="false" />
-          <Conditional ConditionPercentage="equals 100" />
+        <!-- Use the item when it's held -->
+        <!-- -Condition -->
+        
+        <!-- open the bag, make sure condition conditionals work -->
+        <StatusEffect type="OnUse" target="This" Condition="-0.1" disabledeltatime="true" oneshot="true" offset="0,20">
+          <Conditional Condition="gte 11" />
           <Sound file="%ModDir%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" Condition="-1.0">
+        </StatusEffect>        
+        
+        <StatusEffect type="OnSecondaryUse" target="This" Condition="-1" disabledeltatime="true" stackable="false" comparison="And" >
+          <Conditional HasStatusTag="neq emptyhand" />
           <Conditional InWater="false" />
-          <ParticleEmitter particle="fruitchunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="-10" distancemax="-15" anglemin="250" anglemax="290" velocitymin="0" velocitymax="10" copyentityangle="true" />
+          <Conditional Condition="lt 11" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And">
+        <!-- eating fries "animation" -->
+        <StatusEffect type="OnSecondaryUse" target="This" handle2="-20,55" setvalue="true" duration="0.5" stackable="false" comparison="And">
+          <Conditional HasStatusTag="neq emptyhand" />
           <Conditional InWater="false" />
+          <Conditional Condition="lt 11" />
+          <ParticleEmitter particle="fruitchunks" particlespersecond="4" scalemin="0.2" scalemax="0.35" distancemin="-10" distancemax="-15" anglemin="250" anglemax="290" velocitymin="0" velocitymax="10" copyentityangle="true" />
+        </StatusEffect>
+        <StatusEffect type="OnSecondaryUse" target="This" handle2="0,20" delay="0.5" duration="0.1" setvalue="true" stackable="false" comparison="And">
+          <Conditional HasStatusTag="eq emptyhand" />
+          <Conditional InWater="false" />
+          <Conditional Condition="lt 11" />
+        </StatusEffect>
+        <!-- health effects -->
+        <StatusEffect type="OnSecondaryUse" target="This,Character" duration="1" stackable="false" comparison="And">
+          <Conditional HasStatusTag="neq emptyhand" />
+          <Conditional InWater="false" />
+          <Conditional Condition="lt 11" />
           <Affliction identifier="ate_friedfood" amount="1" />
           <Affliction identifier="he-stuffed" amount="0.75" />
           <ReduceAffliction type="hunger" amount="0.75" />
-          <Affliction identifier="spill" amount="1000" probability="0.0005" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingCrunchy.ogg" loop="True" range="200" volume="4.0" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingCrunchy.ogg" loop="true" range="200" volume="5.0" selectionmode="Random" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And">
+        <StatusEffect type="OnSecondaryUse" target="This,Character" duration="1" stackable="false" comparison="And">
+          <Conditional HasStatusTag="neq emptyhand" />
           <Conditional InWater="false" />
+          <Conditional Condition="lt 11" />
           <Conditional thirst="gt 0.1" />
           <Affliction identifier="thirst" amount="0.2" />
-        </StatusEffect>
-        <StatusEffect type="OnBroken" target="This">
+        </StatusEffect> 
+        <!-- Prevent using this item continuously by applying the tag "emptyhand" which prevents the StatusEffect that uses the item from triggering again, effectively only allowing it to trigger once per mouse-click -->
+        <StatusEffect type="OnSecondaryUse" target="This,Character" StatusEffecttags="emptyhand" duration="0.5" stackable="false" />
+        <StatusEffect type="OnBroken" target="This" delay="0.3" disabledeltatime="true" oneshot="true">
           <Remove />
         </StatusEffect>
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
     </Item>
 
-    <Item name="Bag of Mutated Pomegrenade Chips" identifier="he-chips2" health="15" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="Dried mutated pomegrenade chips. A popular little snack. It is said to speed up the healing of burns a bit." Tags="smallitem,fooditem" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True">
+    <Item name="Bag of Mutated Pomegrenade Chips" identifier="he-chips2" health="11" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="Dried mutated pomegrenade chips. A popular little snack. It is said to speed up the healing of burns a bit." Tags="smallitem,fooditem,fingerfood" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.04" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.04" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.08" />
@@ -171,13 +202,19 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="99,207,48,67" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="99,207,48,67" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="99,207,48,67" depth="0.525" origin="0.5,0.85"  />
-      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="148,207,48,67" depth="0.6" maxcondition="99" />
+      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="148,207,48,67" depth="0.6" maxcondition="99.99" />
       <!--<InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,207,48,67" origin="0.5,0.5" />-->
       <Fabricate suitablefabricators="vendingmachinefood,cafeteria" requiredtime="3" requiredmoney="19" fabricationlimitmin="0" fabricationlimitmax="7" />
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="46" height="64" density="9" />
       <SuitableTreatment type="hunger" suitability="20" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="32,28" holdpos="30,-15" holdangle="0" aimangle="120" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand,Any" holdangle="20" holdpos="30,-30" handle1="-10,-20" handle2="0,20" aimable="false" msg="ItemMsgPickUpSelect">
+        <!-- EVERYTHING RELATED TO POISONING FOOD IS HANDLED VIA THE POISON EFFECT PRESET ITEMS DEFINED IN - variantof="" AND THEIR CODE IS LOCATED IN - "/Content/Items/#Presets/#ItemPresets.xml" -->
+        <StatusEffect type="OnUse" target="This" Condition="14" aimangle="120" setvalue="true" oneshot="true">
+          <Conditional condition="gte 15" />
+          <Sound file="%ModDir%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
+        </StatusEffect>
+        
         <!--////////// BOT EATING \\\\\\\\\\-->
         <!-- Bots "eat" by holding the food in their hands -->
         <StatusEffect type="OnActive" target="This,Character" duration="1" condition="-1" stackable="false" comparison="And">
@@ -187,36 +224,58 @@
           <Affliction identifier="ate_friedfood" amount="1" />
           <Affliction identifier="he-stuffed" amount="0.75" />
           <ReduceAffliction type="hunger" amount="0.75" />
-          <ReduceAffliction type="burn" amount="0.15" />
-          <Affliction identifier="spill" amount="1000" probability="0.0005" />
+          <ReduceAffliction type="burn" amount="0.25" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         
         <!--////////// REGULAR EATING \\\\\\\\\\-->
-        <StatusEffect type="OnUse" target="This" comparison="And" oneshot="true">
-          <Conditional InWater="false" />
-          <Conditional ConditionPercentage="equals 100" />
+        <!-- Use the item when it's held -->
+        <!-- -Condition -->
+        
+        <!-- open the bag, make sure condition conditionals work -->
+        <StatusEffect type="OnUse" target="This" Condition="-0.1" disabledeltatime="true" oneshot="true" offset="0,20">
+          <Conditional Condition="gte 11" />
           <Sound file="%ModDir%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" Condition="-1.0">
+        </StatusEffect>        
+        
+        <StatusEffect type="OnSecondaryUse" target="This" Condition="-1" disabledeltatime="true" stackable="false" comparison="And" >
+          <Conditional HasStatusTag="neq emptyhand" />
           <Conditional InWater="false" />
-          <ParticleEmitter particle="fruitchunks" particlespersecond="5" scalemin="0.2" scalemax="0.35" distancemin="-10" distancemax="-15" anglemin="250" anglemax="290" velocitymin="0" velocitymax="10" copyentityangle="true" />
+          <Conditional Condition="lt 11" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And">
+        <!-- eating fries "animation" -->
+        <StatusEffect type="OnSecondaryUse" target="This" handle2="-20,55" setvalue="true" duration="0.5" stackable="false" comparison="And">
+          <Conditional HasStatusTag="neq emptyhand" />
           <Conditional InWater="false" />
+          <Conditional Condition="lt 11" />
+          <ParticleEmitter particle="fruitchunks" particlespersecond="4" scalemin="0.2" scalemax="0.35" distancemin="-10" distancemax="-15" anglemin="250" anglemax="290" velocitymin="0" velocitymax="10" copyentityangle="true" />
+        </StatusEffect>
+        <StatusEffect type="OnSecondaryUse" target="This" handle2="0,20" delay="0.5" duration="0.1" setvalue="true" stackable="false" comparison="And">
+          <Conditional HasStatusTag="eq emptyhand" />
+          <Conditional InWater="false" />
+          <Conditional Condition="lt 11" />
+        </StatusEffect>
+        <!-- health effects -->
+        <StatusEffect type="OnSecondaryUse" target="This,Character" duration="1" stackable="false" comparison="And">
+          <Conditional HasStatusTag="neq emptyhand" />
+          <Conditional InWater="false" />
+          <Conditional Condition="lt 11" />
           <Affliction identifier="ate_friedfood" amount="1" />
           <Affliction identifier="he-stuffed" amount="0.75" />
           <ReduceAffliction type="hunger" amount="0.75" />
-          <ReduceAffliction type="burn" amount="0.15" />
-          <Affliction identifier="spill" amount="1000" probability="0.0005" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingCrunchy.ogg" loop="True" range="200" volume="4.0" />
+          <ReduceAffliction type="burn" amount="0.25" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingCrunchy.ogg" loop="true" range="200" volume="5.0" selectionmode="Random" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And">
+        <StatusEffect type="OnSecondaryUse" target="This,Character" duration="1" stackable="false" comparison="And">
+          <Conditional HasStatusTag="neq emptyhand" />
           <Conditional InWater="false" />
+          <Conditional Condition="lt 11" />
           <Conditional thirst="gt 0.1" />
           <Affliction identifier="thirst" amount="0.2" />
-        </StatusEffect>
-        <StatusEffect type="OnBroken" target="This">
+        </StatusEffect> 
+        <!-- Prevent using this item continuously by applying the tag "emptyhand" which prevents the StatusEffect that uses the item from triggering again, effectively only allowing it to trigger once per mouse-click -->
+        <StatusEffect type="OnSecondaryUse" target="This,Character" StatusEffecttags="emptyhand" duration="0.5" stackable="false" />
+        <StatusEffect type="OnBroken" target="This" delay="0.3" disabledeltatime="true" oneshot="true">
           <Remove />
         </StatusEffect>
       </Holdable>
