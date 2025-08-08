@@ -543,7 +543,7 @@
     </Item>
 
     <!--CHEESE-->
-    <Item name="Moloch Cheese Curd" identifier="he-molochcheesecurd" category="Misc" maxstacksize="8" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Slowly turns into cheese. A full block of cheese will yield 18 cheese slices." Tags="smallitem,fooditem" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True">
+    <Item name="Moloch Cheese Curd" identifier="he-molochcheesecurd" category="Misc" maxstacksize="8" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Slowly turns into cheese." Tags="smallitem,fooditem,cheese" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="1,1,39,21" depth="0.6" origin="0.5,0.5" />
       <Fabricate suitablefabricators="cuttingboard" requiredtime="12" requiresrecipe="false" amount="1" outcondition="0.0">
@@ -569,7 +569,7 @@
       </Holdable>
     </Item>
 
-    <Item name="Moloch Cheese" identifier="he-molochcheese" category="Misc" maxstacksize="8" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Cheese made from moloch milk. Can be cut into 18 cheese slices." Tags="smallitem,fooditem,distilleringredient,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True" health="15">
+    <Item name="Moloch Cheese" identifier="he-molochcheese" category="Misc" maxstacksize="8" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Cheese made from moloch milk. Can be cut into 18 cheese slices." Tags="smallitem,fooditem,cheese,distilleringredient,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True" health="15">
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
@@ -594,7 +594,7 @@
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
           <Affliction identifier="he-stuffed" amount="2" />
-          <Affliction identifier="he-calciumrich" amount="8" />
+          <Affliction identifier="he-calciumrich" amount="14" />
           <ReduceAffliction type="hunger" amount="1" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
@@ -607,7 +607,7 @@
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <Affliction identifier="he-stuffed" amount="2" />
-          <Affliction identifier="he-calciumrich" amount="8" />
+          <Affliction identifier="he-calciumrich" amount="14" />
           <ReduceAffliction type="hunger" amount="1" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
@@ -625,7 +625,7 @@
     </Item>
 
     <!-- WIP blue moloch cheese TODO: sprite  -->
-    <Item name="MolocheFort" identifier="he-molochefort" category="Misc" maxstacksize="8" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Cheese made from moloch milk. Can be cut into 18 cheese slices." Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True" health="15">
+    <Item name="MolocheFort" identifier="he-molochefort" category="Misc" maxstacksize="8" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Cheese made from moloch milk. Can be cut into 18 cheese slices." Tags="smallitem,fooditem,cheese,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True" health="15">
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
@@ -643,7 +643,7 @@
       <Deconstruct time="1" />
       <Fabricate suitablefabricators="distiller" requiredtime="180" amount="3">
         <RequiredSkill identifier="cooking" level="50" />
-        <RequiredItem identifier="he-molochcheese" amount="3"/>
+        <RequiredItem identifier="he-molochcheese" amount="3" />
         <RequiredItem identifier="slimebacteria" amount="1" MinCondition="0.0" UseCondition="True" />
       </Fabricate>
       <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
@@ -655,7 +655,7 @@
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
           <Affliction identifier="he-stuffed" amount="2" />
-          <Affliction identifier="he-calciumrich" amount="10" />
+          <Affliction identifier="he-calciumrich" amount="20" />
           <Affliction identifier="huskinfectionresistance" amount="20" />
           <ReduceAffliction type="hunger" amount="1" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
@@ -669,7 +669,7 @@
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <Affliction identifier="he-stuffed" amount="2" />
-          <Affliction identifier="he-calciumrich" amount="10" />
+          <Affliction identifier="he-calciumrich" amount="20" />
           <Affliction identifier="huskinfectionresistance" amount="20" />
           <ReduceAffliction type="hunger" amount="1" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
@@ -710,7 +710,7 @@
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
           <Affliction identifier="he-stuffed" amount="1" />
-          <Affliction identifier="he-calciumrich" amount="4" />
+          <Affliction identifier="he-calciumrich" amount="7" />
           <ReduceAffliction type="hunger" amount="0.5" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
@@ -723,7 +723,7 @@
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <Affliction identifier="he-stuffed" amount="1" />
-          <Affliction identifier="he-calciumrich" amount="4" />
+          <Affliction identifier="he-calciumrich" amount="7" />
           <ReduceAffliction type="hunger" amount="0.5" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
