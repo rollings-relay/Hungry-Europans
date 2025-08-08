@@ -403,9 +403,9 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entityname.he-icecreamballbubbleberry>Ball of Bubble Berry Ice Cream</entityname.he-icecreamballbubbleberry><!--Patch 13-->
 <entitydescription.he-icecreamballbubbleberry>A scoop of Bubble Berry Ice Cream. Tastes kind of similar to what chocolate tasted like back on earth. Apparently reduces a bit of pain, makes more resilient and quenches thirst a little bit.</entitydescription.he-icecreamballbubbleberry><!--Patch 13-->
 <entityname.he-molochcheesecurd>Moloch Cheese Curd</entityname.he-molochcheesecurd><!--Patch 13-->
-<entitydescription.he-molochcheesecurd>Slowly turns into cheese. A full block of cheese will yield 18 cheese slices.</entitydescription.he-molochcheesecurd><!--Patch 13-->
+<entitydescription.he-molochcheesecurd>Slowly turns into cheese.</entitydescription.he-molochcheesecurd><!--Patch 13-->
 <entityname.he-molochcheese>Moloch Cheese</entityname.he-molochcheese><!--Patch 13-->
-<entitydescription.he-molochcheese>Cheese made from moloch milk. Can be cut into 18 cheese slices.</entitydescription.he-molochcheese><!--Patch 13-->
+<entitydescription.he-molochcheese>Cheese made from moloch milk. Can be cut into cheese slices.</entitydescription.he-molochcheese><!--Patch 13-->
 <entityname.he-molochcheeseslice>Slice of Moloch Cheese</entityname.he-molochcheeseslice><!--Patch 13-->
 <entitydescription.he-molochcheeseslice>A slice of moloch cheese.</entitydescription.he-molochcheeseslice><!--Patch 13-->
 <entityname.he-wafflecone>Waffle Cone</entityname.he-wafflecone><!--Patch 13-->
