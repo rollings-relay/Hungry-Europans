@@ -640,7 +640,9 @@
         <StatusEffect type="OnSecondaryUse" target="This" delay="0.01">
           <Use />
         </StatusEffect>
-        <StatusEffect type="OnActive" target="This" disabledeltatime="true" stackable="false" interval="0.1">
+        
+        <!-- TEA TEST REWORK STUFF TODO: finish this -->
+        <!-- <StatusEffect type="OnActive" target="This" disabledeltatime="true" stackable="false" interval="0.1">
           <Conditional HasStatusTag="pouringbubbleberrytea" />
           <Remove />
           <SpawnItem identifier="he-teaTEST" spawnposition="SameInventory" Equip="true" condition="0.01" />
@@ -650,7 +652,8 @@
         </StatusEffect>
         <StatusEffect type="OnSecondaryUse" target="This" aimpos="35,-10" aimable="true" setvalue="true" interval="0.5">
           <Conditional HasStatusTag="neq pouringbubbleberrytea" />
-        </StatusEffect>
+        </StatusEffect> -->
+        
       </Throwable>
       <Projectile characterusable="false" launchimpulse="0" impulsespread="0.0" sticktocharacters="true" sticktoitems="true" sticktostructures="true" sticktodoors="true">
         <Attack targetimpulse="3" severlimbsprobability="0.1" itemdamage="1" structuredamage="0" structuresoundtype="StructureSlash">
