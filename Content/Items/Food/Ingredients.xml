@@ -3,7 +3,7 @@
   <Items>
   
     <!-- CONDIMENTS -->
-    <Item name="Salt" identifier="he-salt" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Don't get salty now!" Tags="smallitem,ingredient,condiment" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_shaker" impacttolerance="5.5">
+    <Item name="Salt" identifier="he-salt" category="Misc" subcategory="Ingredients" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="Don't get salty now!" Tags="smallitem,ingredient,condiment" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_shaker" impacttolerance="5.5">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -68,7 +68,7 @@
       </Projectile>
     </Item>
 
-    <Item name="Synthetic Pepper" identifier="he-pepper" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Pepper be prepared!" Tags="smallitem,ingredient,condiment" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_shaker" impacttolerance="5.5">
+    <Item name="Synthetic Pepper" identifier="he-pepper" category="Misc" subcategory="Ingredients" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="Pepper be prepared!" Tags="smallitem,ingredient,condiment" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_shaker" impacttolerance="5.5">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.1" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="2" spawnprobability="0.1" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.08" notcampaign="true"/>
@@ -133,7 +133,7 @@
       </Projectile>
     </Item>
 
-    <Item name="Sugar" identifier="he-sugar" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Oh so sweet!" Tags="smallitem,ingredient,distilleringredient,powderbag" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" impacttolerance="5.5" canflipx="false">
+    <Item name="Sugar" identifier="he-sugar" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Oh so sweet!" Tags="smallitem,ingredient,distilleringredient,powderbag" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" impacttolerance="5.5" canflipx="false">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -176,7 +176,7 @@
       </Projectile>
     </Item>
 
-    <Item name="Ketchup" identifier="he-ketchup" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,ingredient,condiment" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true" canflipx="false">
+    <Item name="Ketchup" identifier="he-ketchup" category="Misc" subcategory="Ingredients" maxstacksize="8" maxstacksizecharacterinventory="1"  cargocontaineridentifier="metalcrate" description="" Tags="smallitem,ingredient,condiment" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" isshootable="true" requireaimtouse="true" canflipx="false">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -240,7 +240,7 @@
       </Projectile>
     </Item>
 
-    <Item name="Vinegar" identifier="he-vinegar" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,ingredient,condiment" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
+    <Item name="Vinegar" identifier="he-vinegar" category="Misc" subcategory="Ingredients" maxstacksize="8" maxstacksizecharacterinventory="1"  cargocontaineridentifier="metalcrate" description="" Tags="smallitem,ingredient,condiment" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -304,7 +304,7 @@
       </Projectile>
     </Item>
 
-    <Item name="Cooking Oil" identifier="he-cookingoil" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,ingredient,cookingoil,oil,condiment" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
+    <Item name="Cooking Oil" identifier="he-cookingoil" category="Misc" subcategory="Ingredients" maxstacksize="8" maxstacksizecharacterinventory="1"  cargocontaineridentifier="metalcrate" description="" Tags="smallitem,ingredient,cookingoil,oil,condiment" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -368,7 +368,7 @@
     </Item>
 
     <!-- FLOUR -->
-    <Item name="Flour" identifier="he-flour" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Baking Bad." Tags="smallitem,ingredient,powderbag" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" canflipx="false">
+    <Item name="Flour" identifier="he-flour" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Baking Bad." Tags="smallitem,ingredient,powderbag" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" canflipx="false">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.1" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="2" spawnprobability="0.1" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.08" notcampaign="true"/>
@@ -411,7 +411,7 @@
       </Projectile>
     </Item>
 
-    <Item name="Dough" identifier="he-dough" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Baking Bad." Tags="smallitem,ingredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" canflipx="false">
+    <Item name="Dough" identifier="he-dough" category="Misc" subcategory="Ingredients" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Baking Bad." Tags="smallitem,ingredient" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" canflipx="false">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.1" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="2" spawnprobability="0.1" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -446,7 +446,7 @@
     </Item>
 
     <!-- BEVERAGE MIX -->
-    <Item name="Bubbleberry Tea Mix" identifier="he-teamixbubbleberry" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" tags="smallitem,mix,teamix" description="" scale="0.5" impactsoundtag="impact_soft" canflipx="false">
+    <Item name="Bubbleberry Tea Mix" identifier="he-teamixbubbleberry" category="Misc" subcategory="Ingredients" maxstacksize="8" maxstacksizecharacterinventory="1" tags="smallitem,mix,teamix" description="" scale="0.5" impactsoundtag="impact_soft" canflipx="false">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,367,45,57" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,367,45,57" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,367,45,57" depth="0.525" origin="0.5,0.85"  />
@@ -478,7 +478,7 @@
       </Projectile>-->
     </Item>
 
-    <Item name="Popnut Tea Mix" identifier="he-teamixpopnut" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" tags="smallitem,mix,teamix" description="" scale="0.5" impactsoundtag="impact_soft" canflipx="false">
+    <Item name="Popnut Tea Mix" identifier="he-teamixpopnut" category="Misc" subcategory="Ingredients" maxstacksize="8" maxstacksizecharacterinventory="1" tags="smallitem,mix,teamix" description="" scale="0.5" impactsoundtag="impact_soft" canflipx="false">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="46,367,45,57" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="46,367,45,57" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="46,367,45,57" depth="0.525" origin="0.5,0.85"  />
@@ -509,7 +509,7 @@
       </Projectile>
     </Item>
 
-    <Item name="Coffee Mix" identifier="he-coffeemix" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" tags="smallitem,mix,coffeemix" description="" scale="0.5" impactsoundtag="impact_soft" canflipx="false">
+    <Item name="Coffee Mix" identifier="he-coffeemix" category="Misc" subcategory="Ingredients" maxstacksize="8" maxstacksizecharacterinventory="1" tags="smallitem,mix,coffeemix" description="" scale="0.5" impactsoundtag="impact_soft" canflipx="false">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,309,45,57" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,309,45,57" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,309,45,57" depth="0.525" origin="0.5,0.85"  />
@@ -540,7 +540,7 @@
       </Projectile>
     </Item>
 
-    <Item name="Chocolate Mix" identifier="he-chocolatemix" category="Misc" subcategory="Ingredients" maxstacksize="32" maxstacksizecharacterinventory="8" tags="smallitem,mix,chocolatemix" description="" scale="0.5" impactsoundtag="impact_soft" canflipx="false">
+    <Item name="Chocolate Mix" identifier="he-chocolatemix" category="Misc" subcategory="Ingredients" maxstacksize="8" maxstacksizecharacterinventory="1" tags="smallitem,mix,chocolatemix" description="" scale="0.5" impactsoundtag="impact_soft" canflipx="false">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,309,45,57" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,309,45,57" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="0,309,45,57" depth="0.525" origin="0.5,0.85"  />
