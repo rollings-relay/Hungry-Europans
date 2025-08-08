@@ -108,7 +108,7 @@
           <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
           <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" comparison="And" >
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" >
           <Conditional stun="gt 0" />
           <Conditional IsBot="true" />
           <Affliction identifier="durationincrease" amount="30" />
@@ -192,7 +192,7 @@
           <ReduceAffliction identifier="infection" amount="1.5" />
           <Affliction identifier="burn" amount="0.15" /> 
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" comparison="And" >
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" >
           <Conditional IsBot="true" />
           <Conditional stun="gt 0" />
           <Affliction identifier="he-internalburn" amount="2" />
@@ -352,7 +352,7 @@
           <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
           <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" comparison="And" >
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" >
           <Conditional IsBot="true" />
           <Conditional stun="gt 0" />
           <ReduceAffliction identifier="drunk" amount="1.5" />
@@ -678,7 +678,7 @@
           <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
           <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" comparison="And" >
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" >
           <Conditional IsBot="true" />
           <Conditional stun="gt 0" />
           <Affliction identifier="drunk" amount="3.0" />
@@ -789,7 +789,7 @@
           <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
           <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" comparison="And" >
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" >
           <Conditional IsBot="true" />
           <Conditional stun="gt 0" />
           <Affliction identifier="psychosisresistance" amount="3" />
@@ -895,7 +895,7 @@
           <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
           <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" comparison="And" >
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" >
           <Conditional IsBot="true" />
           <Conditional stun="gt 0" />
           <Affliction identifier="psychosisresistance" amount="3" />
@@ -1004,7 +1004,7 @@
           <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
           <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" comparison="And" >
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" >
           <Conditional IsBot="true" />
           <Conditional stun="gt 0" />
           <Affliction identifier="psychosisresistance" amount="3" />
@@ -1117,7 +1117,7 @@
           <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
           <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" comparison="And" >
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" >
           <Conditional IsBot="true" />
           <Conditional stun="gt 0" />
           <Affliction identifier="psychosisresistance" amount="3" />
@@ -1225,7 +1225,7 @@
           <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
           <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" comparison="And" >
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" >
           <Conditional IsBot="true" />
           <Conditional stun="gt 0" />
           <Affliction identifier="psychosisresistance" amount="3" />
@@ -1320,7 +1320,7 @@
           <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
           <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" comparison="And" >
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" >
           <Conditional IsBot="true" />
           <Conditional stun="gt 0" />
           <Affliction identifier="psychosisresistance" amount="3" />
@@ -1401,7 +1401,7 @@
           <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
           <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" comparison="And" >
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" >
           <Conditional IsBot="true" />
           <Conditional stun="gt 0" />
           <ReduceAffliction identifier="drunk" amount="1.5" />
@@ -1467,7 +1467,7 @@
           <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
           <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" comparison="And" >
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" >
           <Conditional IsBot="true" />
           <Conditional stun="gt 0" />
           <ReduceAffliction identifier="drunk" amount="1.5" />
@@ -1538,7 +1538,7 @@
           <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
           <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" comparison="And" >
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" >
           <Conditional IsBot="true" />
           <Conditional stun="gt 0" />
           <ReduceAffliction identifier="drunk" amount="1.5" />
@@ -1640,7 +1640,7 @@
           <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
           <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" comparison="And" >
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" >
           <Conditional IsBot="true" />
           <Conditional stun="gt 0" />
           <ReduceAffliction identifier="drunk" amount="1.5" />
@@ -1749,7 +1749,7 @@
           <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
           <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" comparison="And" >
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" >
           <Conditional IsBot="true" />
           <Conditional stun="gt 0" />
           <Affliction identifier="applystomachache" strength="0.25" />
