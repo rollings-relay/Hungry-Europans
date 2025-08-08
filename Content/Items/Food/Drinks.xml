@@ -1874,7 +1874,7 @@
           <ReduceAffliction identifier="drunknodebuffs" amount="0.5" />
           <ReduceAffliction identifier="hallucinating" amount="0.1" />
           <ReduceAffliction identifier="he-halucinova" amount="0.1" />
-          <Affliction identifier="he-sugarrich" amount="3.0" />
+          <Affliction identifier="he-sugarrich" amount="15.0" />
           <Affliction identifier="fillbladder" amount="3.0" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
         </StatusEffect>
@@ -3360,7 +3360,7 @@
           <ReduceAffliction identifier="drunk" amount="5.0" />
           <ReduceAffliction identifier="drunknodebuffs" amount="5.0" />
           <Affliction identifier="fillbladder" amount="3.0" />
-          <Affliction identifier="he-sugarrich" amount="6.0" />
+          <Affliction identifier="he-sugarrich" amount="12.0" />
           <Affliction identifier="ate_sweet" amount="1" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurping.ogg" loop="true" range="200" volume="2.0" />
         </StatusEffect>
@@ -3468,7 +3468,7 @@
           <ReduceAffliction identifier="drunk" amount="5.0" />
           <ReduceAffliction identifier="drunknodebuffs" amount="5.0" />
           <Affliction identifier="fillbladder" amount="3.0" />
-          <Affliction identifier="he-sugarrich" amount="6.0" />
+          <Affliction identifier="he-sugarrich" amount="12.0" />
           <Affliction identifier="ate_sweet" amount="1" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurping.ogg" loop="true" range="200" volume="2.0" />
         </StatusEffect>
