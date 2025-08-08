@@ -2872,7 +2872,7 @@
         
         <StatusEffect type="InWater" target="This" Condition="0" setvalue="true" />        
         <StatusEffect type="OnImpact" target="This">
-          <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+          <ParticleEmitter particle="whitegoosplash" colormultiplier="190,115,115,200" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
           <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -2981,7 +2981,7 @@
         
         <StatusEffect type="InWater" target="This" Condition="0" setvalue="true" />        
         <StatusEffect type="OnImpact" target="This">
-          <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+          <ParticleEmitter particle="whitegoosplash" colormultiplier="190,150,115,200" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
           <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -3090,7 +3090,7 @@
         
         <StatusEffect type="InWater" target="This" Condition="0" setvalue="true" />        
         <StatusEffect type="OnImpact" target="This">
-          <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+          <ParticleEmitter particle="whitegoosplash" colormultiplier="100,50,50,200" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
           <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -3196,7 +3196,7 @@
         <StatusEffect type="OnImpact" target="This" condition="-10" disabledeltatime="true" offset="0,5">
           <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
           <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
-          <ParticleEmitter particle="whitegoosplash" colormultiplier="100,50,50,220" anglemin="80" anglemax="100" particleamount="3" velocitymin="100" velocitymax="200" scalemin="0.35" scalemax="0.6" />
+          <ParticleEmitter particle="whitegoosplash" colormultiplier="100,50,50,200" anglemin="80" anglemax="100" particleamount="3" velocitymin="100" velocitymax="200" scalemin="0.35" scalemax="0.6" />
           <Remove />
           <SpawnItem identifier="he-dirtymug" spawnposition="This" />
         </StatusEffect>
@@ -3295,7 +3295,7 @@
         <StatusEffect type="OnImpact" target="This" condition="-10" disabledeltatime="true" offset="0,5">
           <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
           <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
-          <ParticleEmitter particle="whitegoosplash" colormultiplier="100,50,50,220" anglemin="80" anglemax="100" particleamount="3" velocitymin="100" velocitymax="200" scalemin="0.35" scalemax="0.6" />
+          <ParticleEmitter particle="whitegoosplash" colormultiplier="100,50,50,200" anglemin="80" anglemax="100" particleamount="3" velocitymin="100" velocitymax="200" scalemin="0.35" scalemax="0.6" />
           <Remove />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
@@ -3402,7 +3402,7 @@
         
         <StatusEffect type="InWater" target="This" Condition="0" setvalue="true" />        
         <StatusEffect type="OnImpact" target="This">
-          <ParticleEmitter particle="whitegoosplash" colormultiplier="255,255,255,100" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
+          <ParticleEmitter particle="whitegoosplash" colormultiplier="100,50,50,200" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1" />
           <Sound file="Content/Sounds/Damage/GlassImpact1.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" selectionmode="Random" range="600" />
           <Sound file="Content/Sounds/Damage/GlassImpact3.ogg" selectionmode="Random" range="600" />
@@ -3512,7 +3512,7 @@
         <StatusEffect type="OnImpact" target="This" condition="-10" disabledeltatime="true" offset="0,5">
           <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
           <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
-          <ParticleEmitter particle="whitegoosplash" colormultiplier="100,50,50,220" anglemin="80" anglemax="100" particleamount="3" velocitymin="100" velocitymax="200" scalemin="0.35" scalemax="0.6" />
+          <ParticleEmitter particle="whitegoosplash" colormultiplier="100,50,50,200" anglemin="80" anglemax="100" particleamount="3" velocitymin="100" velocitymax="200" scalemin="0.35" scalemax="0.6" />
           <Remove />
           <SpawnItem identifier="he-dirtymug" spawnposition="This" />
         </StatusEffect>
