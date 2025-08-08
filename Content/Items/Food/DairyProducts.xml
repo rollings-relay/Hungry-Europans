@@ -879,43 +879,6 @@
           <RequiredItem identifier="he-icecreamballmilky" type="contained" targetslot="2" />
           <Affliction identifier="he-calciumrich" amount="3" />
         </StatusEffect>
-        <!--Decrease thirst when eating depending on the type of ice cream contained, only if needs are enabled-->
-        <StatusEffect type="OnUse" target="Character" comparison="And">
-          <Conditional InWater="false" />
-          <RequiredItem identifier="he-icecreamballpopnut" type="contained" targetslot="0" />
-          <Conditional thirst="gt 1" />
-          <ReduceAffliction type="thirst" amount="1" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And">
-          <Conditional InWater="false" />
-          <RequiredItem identifier="he-icecreamballpopnut" type="contained" targetslot="1" />
-          <Conditional thirst="gt 1" />
-          <ReduceAffliction type="thirst" amount="1" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And">
-          <Conditional InWater="false" />
-          <RequiredItem identifier="he-icecreamballpopnut" type="contained" targetslot="2" />
-          <Conditional thirst="gt 1" />
-          <ReduceAffliction type="thirst" amount="1" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And">
-          <Conditional InWater="false" />
-          <RequiredItem identifier="he-icecreamballbubbleberry" type="contained" targetslot="0" />
-          <Conditional thirst="gt 0.4" />
-          <ReduceAffliction type="thirst" amount="0.4" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And">
-          <Conditional InWater="false" />
-          <RequiredItem identifier="he-icecreamballbubbleberry" type="contained" targetslot="1" />
-          <Conditional thirst="gt 0.4" />
-          <ReduceAffliction type="thirst" amount="0.4" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And">
-          <Conditional InWater="false" />
-          <RequiredItem identifier="he-icecreamballbubbleberry" type="contained" targetslot="2" />
-          <Conditional thirst="gt 0.4" />
-          <ReduceAffliction type="thirst" amount="0.4" />
-        </StatusEffect>
         <!--Increase stuffed and damage resistance while decreasing damage, if ice cream is contained-->
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
