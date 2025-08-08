@@ -108,7 +108,7 @@
           <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
           <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
         </StatusEffect>
-        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" Condition="-2.0" >
+        <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" comparison="And" >
           <Conditional stun="gt 0" />
           <Conditional IsBot="true" />
           <Affliction identifier="durationincrease" amount="30" />
