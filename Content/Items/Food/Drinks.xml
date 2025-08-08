@@ -116,7 +116,7 @@
         </StatusEffect>
                 
         <!-- Regular drinking RMB after unbottle --> 
-        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" aimpos="28,24" >
+        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" aimpos="22,23" >
           <Conditional condition="lt 11" />
           <Affliction identifier="durationincrease" amount="30" />
           <ReduceAffliction type="thirst" amount="2.0" />
@@ -138,24 +138,6 @@
       </Holdable>
       
     </TonicLiquid>
-
-    <!--DISABLE NATURAL SPAWNING OF VANILLA ITEM AND CONVERT EXISTING VANILLA ITEM TO MODDED ITEM-->
-    <EnergyDrink name="" identifier="energydrink" category="Medical,Material" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,chem,medical" scale="0.5" impactsoundtag="impact_metal_light">
-      <Upgrade gameversion="0.10.0.0" scale="0.5" />
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="0" spawnprobability="0.0" />
-      <PreferredContainer secondary="abandonedcrewcab" maxamount="0" spawnprobability="0.0" />
-      <PreferredContainer primary="crewcab"/>
-      <InventoryIcon texture="Content/Items/InventoryIconAtlas2.png" sourcerect="64,768,64,64" origin="0.5,0.5" />
-      <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="315,452,30,57" depth="0.6" origin="0.5,0.5" />
-      <Body width="35" height="65" density="10.2" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="32,28" holdangle="30" aimangle="120" aimable="false" msg="ItemMsgPickUpSelect">
-        <!--REMOVE THE ITEM AND REPLACE WITH THE MODDED VARIANT-->
-        <StatusEffect type="Always" target="This" interval="1">
-          <SpawnAction identifier="he-energydrink1" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
-          <Remove />
-        </StatusEffect>
-      </Holdable>
-    </EnergyDrink>
 
     <!--ADJUSTED ITEM TO APPLY EFFECTS WHILE DRINKING, GET DESTROYED ON IMPACT AND SPAWN EMPTY BOTTLE IF EMPTY-->
     <Rum name="Rum" identifier="rum" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="A strong alcoholic beverage. |Alcoholic Beverage |Decrease Psychosis |Decrease Hallucinations |Decrease Husk Infection (If below 90%) |Heal Damage |Increase Psychosis Resistance" Tags="smallitem,drinkitem,alcoholitem,bottle" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="False" health="11" >
@@ -339,6 +321,25 @@
     <Item name="" nameidentifier="beerbottle" identifier="beerbottle2" variantof="beerbottle1">
       <Sprite texture="Content/Map/Outposts/Art/AdminResidentAssets.png" sourcerect="856,0,21,63" depth="0.6" origin="0.5,0.5" />
     </Item>
+
+    <!--DISABLE NATURAL SPAWNING OF VANILLA ITEM AND CONVERT EXISTING VANILLA ITEM TO MODDED ITEM-->
+    <EnergyDrink name="" identifier="energydrink" category="Medical,Material" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,chem,medical" scale="0.5" impactsoundtag="impact_metal_light" spritecolor="255,0,255,255" >
+      <Upgrade gameversion="0.10.0.0" scale="0.5" />
+      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="0" spawnprobability="0.0" />
+      <PreferredContainer secondary="abandonedcrewcab" maxamount="0" spawnprobability="0.0" />
+      <PreferredContainer primary="crewcab"/>
+      <InventoryIcon texture="Content/Items/InventoryIconAtlas2.png" sourcerect="64,768,64,64" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="315,452,30,57" depth="0.6" origin="0.5,0.5" />
+      <Body width="35" height="65" density="10.2" />
+      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="32,28" holdangle="30" aimangle="120" aimable="false" msg="ItemMsgPickUpSelect">
+        <!--REMOVE THE ITEM AND REPLACE WITH THE MODDED VARIANT-->
+        <StatusEffect type="Always" target="This" interval="1">
+          <SpawnAction identifier="he-energydrink1" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          <Remove />
+        </StatusEffect>
+      </Holdable>
+    </EnergyDrink>
+ 
    
     <!--END OF OVERRIDES-->
     <!--END OF OVERRIDES-->
@@ -1362,7 +1363,7 @@
         </StatusEffect>
                 
         <!-- Regular drinking RMB after unbottle --> 
-        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" aimpos="28,24" >
+        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" aimpos="22,23" >
           <Conditional condition="lt 11" />
           <ReduceAffliction identifier="drunk" amount="1.5" />
           <ReduceAffliction identifier="drunknodebuffs" amount="1.5" />
@@ -1428,7 +1429,7 @@
         </StatusEffect>
                 
         <!-- Regular drinking RMB after unbottle --> 
-        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" aimpos="28,24" >
+        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" aimpos="22,23" >
           <Conditional condition="lt 11" />
           <ReduceAffliction identifier="drunk" amount="1.5" />
           <ReduceAffliction identifier="drunknodebuffs" amount="1.5" />
@@ -1494,7 +1495,7 @@
         </StatusEffect>
                 
         <!-- Regular drinking RMB after unbottle --> 
-        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" aimpos="28,24" >
+        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" aimpos="22,23" >
           <Conditional condition="lt 11" />
           <ReduceAffliction identifier="drunk" amount="1.5" />
           <ReduceAffliction identifier="drunknodebuffs" amount="1.5" />
