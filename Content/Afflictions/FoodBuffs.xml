@@ -377,7 +377,7 @@
     
     <Affliction name="Caffeine Rush"
       identifier="caffeinated"
-      description="You don't get thirsty."
+      description=""
       type="buff"
       isbuff="true"
       limbspecific="false"
