@@ -101,6 +101,10 @@
       <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- When used in Health GUI -->
+        <StatusEffect type="OnSuccess" target="This" Condition="-2.0" disabledeltatime="true">
+          <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
+          <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
+        </StatusEffect>
         <StatusEffect type="OnSuccess" target="This,UseTarget" duration="1" Condition="-2.0" >
           <Conditional stun="gt 0" />
           <Conditional IsBot="true" />
@@ -2034,6 +2038,16 @@
           <ReduceAffliction identifier="burn" amount="0.5" />
         </StatusEffect>
         
+        <!--////////// BOT DRINKING \\\\\\\\\\-->
+        <!-- Bots "drink" by holding the food in their hands -->
+        <StatusEffect type="OnActive" target="This,Character" duration="1" condition="-1" stackable="false" comparison="And">
+          <Conditional thirst="gt 1" targetcontainer="true" />
+          <Conditional IsPlayer="false" targetcontainer="true" />
+          <Conditional IsHuman="true" targetcontainer="true" />
+          <ReduceAffliction type="thirst" amount="3.0" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
+        </StatusEffect>
+                
         <!-- Unbottle - RMB+E --> 
         <StatusEffect type="OnUse" target="This" SetTags="opened" holdpos="30,-15" holdangle="0" aimpos="28,26" aimangle="120" aimable="false" swingwhenaiming="true" setvalue="true" oneshot="true" delay="1">
           <Conditional conditionpercentage="gte 100" />
@@ -2042,7 +2056,7 @@
           <Conditional conditionpercentage="gte 100" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBottle.ogg" loop="false" range="200" volume="5.0" />
         </StatusEffect>
-                
+
         <!-- Regular drinking - RMB --> 
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" aimpos="23,23" comparison="And">
           <Conditional conditionpercentage="lt 100" />
@@ -2341,6 +2355,16 @@
           <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
         </StatusEffect>
         
+        <!--////////// BOT DRINKING \\\\\\\\\\-->
+        <!-- Bots "drink" by holding the food in their hands -->
+        <StatusEffect type="OnActive" target="This,Character" duration="1" condition="-1" stackable="false" comparison="And">
+          <Conditional thirst="gt 1" targetcontainer="true" />
+          <Conditional IsPlayer="false" targetcontainer="true" />
+          <Conditional IsHuman="true" targetcontainer="true" />
+          <ReduceAffliction type="thirst" amount="3.0" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
+        </StatusEffect>
+                
         <!-- Unbottle - RMB+E --> 
         <StatusEffect type="OnUse" target="This" SetTags="opened" holdpos="30,-15" holdangle="0" aimpos="28,26" aimangle="120" aimable="false" swingwhenaiming="true" setvalue="true" oneshot="true" delay="1">
           <Conditional conditionpercentage="gte 100" />
@@ -2593,6 +2617,16 @@
           <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
         </StatusEffect>
         
+        <!--////////// BOT DRINKING \\\\\\\\\\-->
+        <!-- Bots "drink" by holding the food in their hands -->
+        <StatusEffect type="OnActive" target="This,Character" duration="1" condition="-1" stackable="false" comparison="And">
+          <Conditional thirst="gt 1" targetcontainer="true" />
+          <Conditional IsPlayer="false" targetcontainer="true" />
+          <Conditional IsHuman="true" targetcontainer="true" />
+          <ReduceAffliction type="thirst" amount="3.0" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
+        </StatusEffect>
+                
         <!-- Unbottle - RMB+E --> 
         <StatusEffect type="OnUse" target="This" SetTags="opened" holdpos="30,-15" holdangle="0" aimpos="28,26" aimangle="120" aimable="false" swingwhenaiming="true" setvalue="true" oneshot="true" delay="1">
           <Conditional conditionpercentage="gte 100" />
@@ -3585,6 +3619,16 @@
           <ReduceAffliction identifier="burn" amount="0.5" />
         </StatusEffect>
         
+        <!--////////// BOT DRINKING \\\\\\\\\\-->
+        <!-- Bots "drink" by holding the food in their hands -->
+        <StatusEffect type="OnActive" target="This,Character" duration="1" condition="-1" stackable="false" comparison="And">
+          <Conditional thirst="gt 1" targetcontainer="true" />
+          <Conditional IsPlayer="false" targetcontainer="true" />
+          <Conditional IsHuman="true" targetcontainer="true" />
+          <ReduceAffliction type="thirst" amount="3.0" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
+        </StatusEffect>
+                
         <!-- Unbottle - RMB+E --> 
         <StatusEffect type="OnUse" target="This" SetTags="opened" holdpos="30,-15" holdangle="0" aimpos="28,26" aimangle="120" aimable="false" swingwhenaiming="true" setvalue="true" oneshot="true" delay="1">
           <Conditional conditionpercentage="gte 100" />
