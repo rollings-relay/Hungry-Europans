@@ -2,6 +2,8 @@
 <Override>
   <Afflictions>
   
+  <!-- TODO: Can I delete backwards afflictions yet? -->
+  
     <Affliction name="Well Hydrated" identifier="wellhydrated" description="" type="buff" limbspecific="false" indicatorlimb="Torso" maxstrength="1" affectmachines="true" showiconthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false" iconcolors="0,100,100,255;0,100,100,255">
       <Effect minstrength="0" maxstrength="1" strengthchange="-1000">
         <StatValue stattype="MeleeAttackMultiplier" value="+0.10" />
