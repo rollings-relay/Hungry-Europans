@@ -545,7 +545,8 @@
     <!--CHEESE-->
     <Item name="Moloch Cheese Curd" identifier="he-molochcheesecurd" category="Misc" maxstacksize="8" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Slowly turns into cheese." Tags="smallitem,fooditem,cheese" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True">
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="1,1,39,21" depth="0.6" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="41,1,39,21" depth="0.61" origin="0.5,0.5" />
+      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="1,1,39,21" depth="0.6" origin="0.5,0.5" maxcondition="99" fadein="true" />
       <Fabricate suitablefabricators="cuttingboard" requiredtime="12" requiresrecipe="false" amount="1" outcondition="0.0">
         <RequiredSkill identifier="cooking" level="30" />
         <RequiredItem tag="milk" />
