@@ -77,7 +77,7 @@ Low:
 [*] (WIP) Added: "Hot Chocolate". Increases your tiredness if you have it enabled, but also increases your mood and helps to sober up
 [*] Added Moloch Milking Tool
 [*] Added NPC conversations, some related to food traits, being hungry, thirsty...
-[*] Added 2 submarines with kitchen, courtesy of NotWendy
+[*] Added 3 submarines with kitchen, courtesy of NotWendy
 [/List]
 
 
