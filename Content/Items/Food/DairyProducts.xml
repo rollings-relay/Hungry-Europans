@@ -632,7 +632,7 @@
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="41,1,39,21" depth="0.6" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DairyProducts.png" sourcerect="81,1,39,21" depth="0.6" origin="0.5,0.5" />
       <Body width="39" height="21" density="10.5" />
       <SuitableTreatment type="hunger" suitability="15" />
       <Price baseprice="320" sold="false" >
