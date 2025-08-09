@@ -37,7 +37,7 @@ Low:
 //////////////////////
 //////////////////////
 
-[hr]XX/XX/2025
+[hr]09/08/2025
 
 
 [b]MAJOR Changes:[/b]
@@ -114,7 +114,8 @@ Low:
 [/List]
 
 
-[b]KNOWN BUGS:[/b] 
+[b]KNOWN BUGS/ISSUES:[/b] 
+[*] Bot support is iffy. Bots can't heal hunger/thirst without losing health (vanilla issue), so it's not advised giving bots NEEDS
 [*] Errors for missing/deleted items. Just save once and the errors will go away.
 [*] Damage multipliers (like steroids) result in less meat being harvested on corpses
 [*] Not being able to wash off Hygiene affliction by going in the water without clothes
