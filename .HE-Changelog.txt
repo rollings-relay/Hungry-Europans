@@ -50,7 +50,7 @@ Low:
 [*] Food buffs reworked: buffs are no longer tied to species (example: mudraptor => damage resistance). Food buffs are more minor and depend on the recipe of the meal. More complex meals give more buffs.
 [*] Most foods no longer stack to avoid accidentally eating the 2nd item in the stack after finishing the first one. Use lunchboxes to carry extra food.
 [*] Integrated: "Tiredness" and "Mood" from NEEDS. These are optional and can each be toggled via an item at vending machines or forced via a separately available "Enforcer" patch
-[*] (TODO) Added: New optional affliction "Hygiene" which is enabled with the "Filthy Europan" item
+[*] Added: New optional affliction "Hygiene" which is enabled with the "Filthy Europan" item (partially bugged, is removed too easily)
 [*] Added: Traits. You can select a preferred food and drink that will help improve your Mood when consumed
 [*] Unit Load Devices can be swapped to make empty space for your kitchen.
 [*] A lot of new text requiring translation. The English file is a mess though, will work on making translation easier in the future
