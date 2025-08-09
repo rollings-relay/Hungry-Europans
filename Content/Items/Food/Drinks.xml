@@ -35,11 +35,15 @@
       <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- When used in Health GUI -->
-        <StatusEffect type="OnSuccess" target="This" Condition="-2.0" disabledeltatime="true"/>
+        <StatusEffect type="OnSuccess" target="This" setvalue="true" oneshot="true" aimpos="28,24" aimangle="120" /> 
+        <StatusEffect type="OnSuccess" target="This" Condition="-2.0" disabledeltatime="true" >
+          <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
+          <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
+        </StatusEffect>
         <StatusEffect type="OnSuccess" target="Limb" duration="10">
+          <Conditional infection="gt 0" />
           <ReduceAffliction identifier="infection" amount="0.4" />
           <Affliction identifier="burn" amount="0.15" /> 
-          <Sound file="Content/Items/Medical/ITEM_liquid.ogg" range="200" />
         </StatusEffect>        
         
         <!-- Unbottle --> 
@@ -49,7 +53,7 @@
         </StatusEffect>
                 
         <!-- Regular drinking RMB after unbottle --> 
-        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-2.0" aimpos="32,28" >
+        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-2.0" aimpos="28,24" >
           <Conditional condition="lt 11" />
           <Affliction identifier="he-internalburn" amount="8" />
           <Affliction identifier="psychosisresistance" amount="80" />
@@ -59,6 +63,9 @@
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/CanCrush1.ogg" range="350" volume="3" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/CanCrush2.ogg" range="350" volume="3" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/CanCrush3.ogg" range="350" volume="3" selectionmode="Random" />
           <Remove />
         </StatusEffect>
       </Holdable>
