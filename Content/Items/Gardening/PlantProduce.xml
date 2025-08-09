@@ -213,30 +213,14 @@
     </Deconstruct>
     <Body radius="15" density="12" />
     <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" handle1="-15,-15" aimpos="32,28" holdpos="30,-15" holdangle="0" aimangle="90" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
-    
-      <!-- Allow the item to be applied to a bot, but prevent full usage on a player -->
-      <StatusEffect type="OnSuccess" target="This,UseTarget" condition="0" setvalue="true" comparison="And">
-        <Conditional IsBot="true" />
-      </StatusEffect>
-      <StatusEffect type="OnSuccess" target="This,UseTarget" duration="10" comparison="And" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
-        <Conditional IsBot="true" />
-        <Conditional stun="gt 0" />
-        <ReduceAffliction type="hunger" amount="0.8" />
-        <Affliction identifier="he-stuffed" amount="0.8" />
-        <Affliction identifier="strengthen" amount="0.4" />
-        <ReduceAffliction type="nausea" amount="0.5" />
-        <ReduceAffliction type="opiatewithdrawal" amount="0.5" />
-        <Affliction identifier="he-vitaminrich" amount="5.0" />
-        <Affliction identifier="spill" amount="1000" probability="0.0005" />
-        <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Swallow1.ogg" volume="8.0" range="300" loop="false" />
-      </StatusEffect>
-      
+          
       <!-- Regular eating -->
       <StatusEffect type="OnUse" target="This" condition="-1" statuseffecttags="iseating" duration="0.1" stackable="false" />
       <StatusEffect type="OnUse" target="Character">
         <ReduceAffliction type="hunger" amount="0.8" />
         <Affliction identifier="he-stuffed" amount="0.8" />
         <Affliction identifier="strengthen" amount="0.4" />
+        <Affliction identifier="he-vitaminrich" amount="5.0" />
         <ReduceAffliction type="nausea" amount="0.5" />
         <ReduceAffliction type="opiatewithdrawal" amount="0.5" />
         <Affliction identifier="spill" amount="1000" probability="0.0005" />
