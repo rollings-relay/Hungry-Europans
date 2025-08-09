@@ -274,21 +274,13 @@
           <SpawnItem identifier="he-huskmeatchunk" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
         </StatusEffect>
         <!--spineling
-        regular meat on all spinelings, % chance of extra spike on smaller spinelings-->
+        regular meat on all spinelings -->
         <StatusEffect type="OnSuccess" target="UseTarget" comparison="And" multiplyafflictionsbymaxvitality="false">
           <Conditional group="spineling" />
           <Conditional isdead="true"/>       
           <Conditional he-butchered="lt 100"/>
-          <Conditional speciesname="neq spineling" />
           <Affliction identifier="he-butchered" strength="25" />
           <SpawnItem identifier="he-spinelingmeatchunk" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="UseTarget" comparison="And" multiplyafflictionsbymaxvitality="false" spawnitemrandomly="false">
-          <Conditional group="spineling" />
-          <Conditional isdead="true"/>
-          <Conditional mass="lt 50" />   
-          <Conditional he-butchered="lt 100"/>
-          <SpawnItem identifier="spinelingspikeloot" spawnposition="SameInventory" SpawnIfInventoryFull="true" probability="0.25" />
         </StatusEffect>
         <!--thresher
         regular meat on all threshers above 10 mass-->
