@@ -626,7 +626,6 @@
       </ItemContainer>
     </Item>
 
-    <!-- WIP blue moloch cheese TODO: sprite  -->
     <Item name="MolocheFort" identifier="he-molochefort" category="Misc" maxstacksize="8" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="Cheese made from moloch milk. Can be cut into 18 cheese slices." Tags="smallitem,fooditem,cheese,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True" health="15">
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />

@@ -734,7 +734,6 @@
       </CustomInterface>
     </Item>
     
-    <!-- WIP Sauerkraut TODO: sprite -->
     <Item hideinmenus="false" name="Sauerkraut" identifier="he-sauerkraut" variantof="he-poisoneffectpreset_fork" health="25" category="Misc" subcategory="Food - Crawler" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,forkfood,foodplate,gourmetfood,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="false" requireaimtouse="false">
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="582,60,68,29" depth="0.6" origin="0.5,0.5" />
