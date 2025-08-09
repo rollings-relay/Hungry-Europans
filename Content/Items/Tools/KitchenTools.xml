@@ -200,7 +200,7 @@
           <Conditional isdead="true"/>
           <Conditional group="neq husk" />
           <Conditional group="neq ancientalien" />
-          <Conditional mass="lt 10" />
+          <Conditional mass="lte 10" />
           <Conditional he-butchered="lt 100"/>
           <Affliction identifier="he-butchered" strength="10" />
           <SpawnItem identifier="he-rawoffal" spawnposition="SameInventory" SpawnIfInventoryFull="true" probability="0.35" />
@@ -347,6 +347,29 @@
           <SpawnItem identifier="he-rawoffal" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
         </StatusEffect>
         
+        <!-- COMPATIBILITY meat
+        Spawns a single offal for any creature not vanilla. PRONE TO ISSUES IF DEVS ADD MORE CREATURES TODO: ALWAYS CHECK FOR NEW VANILLA CREATURE GROUPS
+        There's a list of all current BTC creature groups below for future reference -->
+        <StatusEffect type="OnSuccess" target="UseTarget" comparison="And" multiplyafflictionsbymaxvitality="true" >
+          <Conditional isdead="true"/>
+          <Conditional mass="gt 10" />
+          <Conditional he-butchered="lt 100"/>
+          <Conditional group="neq human" />
+          <Conditional group="neq husk" />
+          <Conditional group="neq ancientalien" />
+          <Conditional group="neq crawler" />
+          <Conditional group="neq mudraptor" />
+          <Conditional group="neq hammerhead" />
+          <Conditional group="neq spineling" />
+          <Conditional group="neq thresher" />
+          <Conditional group="neq watcher" />
+          <Conditional group="neq moloch" />
+          <Conditional group="neq abyss" />
+          <Conditional group="neq mantis" />
+          <Affliction identifier="he-butchered" strength="200" />
+          <SpawnItem identifier="he-rawoffal" spawnposition="SameInventory" SpawnIfInventoryFull="true" />
+        </StatusEffect>
+        
         <!-- CORPSE REMOVAL 
         removes corpse at 100 butchered, don't remove huge corpses because it looks weird
         TODO: do not remove the corpse, and instead display requireditem message about having reached maximum (bugged?) https://github.com/FakeFishGames/Barotrauma/discussions/16161 Make sure to remove particles/sound if that happens -->
@@ -371,6 +394,32 @@
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
       <SkillRequirementHint identifier="butchery" level="100"/>
     </Item>
+    
+<!--
+     FOR CLEAVER PURPOSES
+    LIST OF BTC CREATURE GROUPS SO FAR (excluding mechanical):     
+        
+    scavenger
+    void
+    thalamus
+    jelly
+    epicentrum
+    shrimp
+    icecrab
+    hermit
+    hullfish
+    icewhale
+    shellworm
+    anomaly
+    mantis (?)
+    preywhale
+    seasnek
+    urchin
+    stones
+
+    clowns
+    pirates -->
+        
     
     <!-- TODO: Disabled. Needs a sprite. Reenable when we actually do something with cans -->
     <Item name="Can Opener" identifier="he-canopener" category="Equipment" Tags="smallitem,mountableweapon,sharptool,canopener" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
