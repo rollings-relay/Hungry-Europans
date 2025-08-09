@@ -51,6 +51,7 @@
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
+          <SpawnItem identifier="spinelingspikeloot" spawnposition="SameInventory" SpawnIfInventoryFull="true" probability="0.25" />
         </StatusEffect>
       </Holdable>
       <AiTarget sightrange="1000" static="true" />
