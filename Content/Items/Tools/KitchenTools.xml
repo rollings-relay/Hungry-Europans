@@ -346,6 +346,7 @@
           <Conditional isdead="true"/>
           <Conditional mass="gt 10" />
           <Conditional he-butchered="lt 100"/>
+          <Conditional IsMachine="false" />
           <Conditional group="neq human" />
           <Conditional group="neq husk" />
           <Conditional group="neq ancientalien" />
