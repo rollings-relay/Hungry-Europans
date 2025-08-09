@@ -206,7 +206,7 @@
       <Holdable slots="Any,RightHand,LeftHand" aimpos="-26,-48" holdpos="30,-15" holdangle="0" aimangle="300" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnUse" target="This" Condition="-100.0" setvalue="true" />
         <StatusEffect type="OnUse" target="Character">
-          <GiveTalentInfo giverandom="false" talentidentifiers="he-specialeuropan" />
+          <GiveTalentInfo giverandom="false" talentidentifiers="he-filthyeuropan" />
           <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">

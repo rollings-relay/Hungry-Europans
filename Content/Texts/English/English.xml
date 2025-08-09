@@ -543,8 +543,8 @@ SEARCH FOR THE FOLLOWING:                                                       
 <talentname.he-hungryeuropan>Hungry Europan</talentname.he-hungryeuropan>
 <talentdescription.he-hungryeuropan>You're a hungry europan and need to eat and drink regularly.</talentdescription.he-hungryeuropan>
 
-<talentname.he-specialeuropan>Filthy Europan</talentname.he-specialeuropan><!--Patch 13-->
-<talentdescription.he-specialeuropan>You're a special europan and need to urinate and defecate regularly, depending on what you eat and drink.</talentdescription.he-specialeuropan><!--Patch 13-->
+<talentname.he-filthyeuropan>Filthy Europan</talentname.he-filthyeuropan><!--Patch 13-->
+<talentdescription.he-filthyeuropan>You're a special europan and need to urinate and defecate regularly, depending on what you eat and drink.</talentdescription.he-filthyeuropan><!--Patch 13-->
 
 <talentname.he-poacher>Poacher</talentname.he-poacher>
 <talentdescription.he-poacher>Gain an additional [xpbonus]% bonus XP and [moneybonus]% bonus marks in [missiontype1] and [missiontype2] missions.</talentdescription.he-poacher>

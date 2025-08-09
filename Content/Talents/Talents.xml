@@ -165,9 +165,9 @@
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
-    <Talent identifier="he-specialeuropan">
+    <Talent identifier="he-filthyeuropan">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="119,385,119,119" origin="0.5,0.5"/>
-      <Description tag="talentdescription.he-specialeuropan" />
+      <Description tag="talentdescription.he-filthyeuropan" />
       <AbilityGroupInterval interval="1.0">
         <Abilities>
           <CharacterAbilityApplyStatusEffects>

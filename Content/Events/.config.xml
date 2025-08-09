@@ -47,7 +47,7 @@
           <StatusEffectAction targettag="player">
             <StatusEffect target="This">
               <Conditional bladder="lte 0" />
-              <GiveTalentInfo talentidentifiers="he-specialeuropan" />
+              <GiveTalentInfo talentidentifiers="he-filthyeuropan" />
             </StatusEffect>
           </StatusEffectAction>
         </Success>
