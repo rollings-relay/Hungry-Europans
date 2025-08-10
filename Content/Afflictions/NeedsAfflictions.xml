@@ -1089,8 +1089,9 @@
         strengthchange="0"
         minspeedmultiplier="1.0"
         maxspeedmultiplier="0.8">
-        <StatusEffect target="Character" interval="1" disabledeltatime="true">
+        <StatusEffect target="Character" interval="1" disabledeltatime="true" comparison="And">
           <Conditional IsPlayer="true" />
+          <Conditional mood="gt 0" />
           <Affliction identifier="mood" amount="0.1" />
         </StatusEffect>
         <StatusEffect target="Character" interval="5" disabledeltatime="true">
@@ -1103,8 +1104,9 @@
         strengthchange="0"
         minspeedmultiplier="0.8"
         maxspeedmultiplier="0.5">
-        <StatusEffect target="Character" interval="1" disabledeltatime="true">
+        <StatusEffect target="Character" interval="1" disabledeltatime="true" comparison="And">
           <Conditional IsPlayer="true" />
+          <Conditional mood="gt 0" />
           <Affliction identifier="mood" amount="0.2" />
         </StatusEffect>
         <StatusEffect target="Character" interval="5" disabledeltatime="true">
@@ -1185,8 +1187,9 @@
         strengthchange="0"
         minspeedmultiplier="1.0"
         maxspeedmultiplier="0.8">
-        <StatusEffect target="Character" interval="1" disabledeltatime="true">
+        <StatusEffect target="Character" interval="1" disabledeltatime="true" comparison="And">
           <Conditional IsPlayer="true" />
+          <Conditional mood="gt 0" />
           <Affliction identifier="mood" amount="0.1" />
         </StatusEffect>
         <StatusEffect target="Character" interval="5" disabledeltatime="true">
@@ -1199,8 +1202,9 @@
         strengthchange="0"
         minspeedmultiplier="0.8"
         maxspeedmultiplier="0.5">
-        <StatusEffect target="Character" interval="1" disabledeltatime="true">
+        <StatusEffect target="Character" interval="1" disabledeltatime="true" comparison="And">
           <Conditional IsPlayer="true" />
+          <Conditional mood="gt 0" />
           <Affliction identifier="mood" amount="0.2" />
         </StatusEffect>
         <StatusEffect target="Character" interval="5" disabledeltatime="true">
@@ -1303,7 +1307,7 @@
         <StatusEffect target="Character,NearbyCharacters" range="300" interval="1" disabledeltatime="true" comparison="And">
           <Conditional IsPlayer="true" />
           <Conditional mood="gt 0" />
-          <Affliction identifier="mood" amount="1.0" />
+          <Affliction identifier="mood" amount="0.5" />
         </StatusEffect>
         <!-- TODO: BUGGED, RequireEmpty="true" does not work if the inventory is... empty https://github.com/FakeFishGames/Barotrauma/discussions/16238 -->
         <!-- Reduce the hygiene each second if the character is in water -->
@@ -1327,7 +1331,7 @@
         <StatusEffect target="Character,NearbyCharacters" range="300" interval="1" disabledeltatime="true" comparison="And">
           <Conditional IsPlayer="true" />
           <Conditional mood="gt 0" />
-          <Affliction identifier="mood" amount="2.0" />
+          <Affliction identifier="mood" amount="1.0" />
         </StatusEffect>
         <!-- TODO: BUGGED, RequireEmpty="true" does not work if the inventory is... empty https://github.com/FakeFishGames/Barotrauma/discussions/16238 -->
         <!-- Reduce the hygiene each second if the character is in water -->
