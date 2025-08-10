@@ -9,7 +9,7 @@
     <!--OVERRIDES-->
     <!--OVERRIDES-->
     
-    <Ethanol name="" identifier="ethanol" category="Medical,Material" scale="0.5" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,chem,cleaningagent,distilleringredient,medical,petfood2" impactsoundtag="impact_metal_light" useinhealthinterface="true" requireaimtouse="true" isshootable="False" health="11">
+    <Ethanol name="" identifier="ethanol" category="Medical,Material" scale="0.5" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,chem,cleaningagent,distilleringredient,medical,petfood2" impactsoundtag="impact_metal_light" useinhealthinterface="true" requireaimtouse="true" isshootable="True" health="11">
       <PreferredContainer primary="sprayer" amount="1" spawnprobability="1"/>
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.2" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="2" spawnprobability="0.3" />
@@ -76,7 +76,7 @@
       </Holdable>
     </Ethanol>
 
-    <TonicLiquid name="Tonic" identifier="tonicliquid" category="Medical,Material" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" Tags="smallitem,chem,medical,drinkitem,can" description="" scale="0.5" impactsoundtag="impact_aluminiumcan_full" useinhealthinterface="false" requireaimtouse="true" isshootable="False" health="11" >
+    <TonicLiquid name="Tonic" identifier="tonicliquid" category="Medical,Material" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" Tags="smallitem,chem,medical,drinkitem,can" description="" scale="0.5" impactsoundtag="impact_aluminiumcan_full" useinhealthinterface="false" requireaimtouse="true" isshootable="True" health="11" >
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
       <PreferredContainer primary="medfabcab" secondary="medcontainer"/>
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="1" maxamount="2" spawnprobability="0.1" />
@@ -150,7 +150,7 @@
       
     </TonicLiquid>
 
-    <Item name="Energy Drink" identifier="energydrink" category="Misc" subcategory="Drinks" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A refreshing energy drink. Good for when you're absolutely shit-faced and need to sober up a bit." Tags="smallitem,drinkitem" scale="0.5" impactsoundtag="impact_aluminiumcan_full" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="False" health="11"  canflipx="false">
+    <Item name="Energy Drink" identifier="energydrink" category="Misc" subcategory="Drinks" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A refreshing energy drink. Good for when you're absolutely shit-faced and need to sober up a bit." Tags="smallitem,drinkitem" scale="0.5" impactsoundtag="impact_aluminiumcan_full" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="True" health="11"  canflipx="false">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0.1" />
@@ -206,7 +206,7 @@
 
 
     <!--ADJUSTED ITEM TO APPLY EFFECTS WHILE DRINKING, GET DESTROYED ON IMPACT AND SPAWN EMPTY BOTTLE IF EMPTY-->
-    <Rum name="Rum" identifier="rum" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="A strong alcoholic beverage. |Alcoholic Beverage |Decrease Psychosis |Decrease Hallucinations |Decrease Husk Infection (If below 90%) |Heal Damage |Increase Psychosis Resistance" Tags="smallitem,drinkitem,alcoholitem,bottle" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="False" health="11" >
+    <Rum name="Rum" identifier="rum" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="A strong alcoholic beverage. |Alcoholic Beverage |Decrease Psychosis |Decrease Hallucinations |Decrease Husk Infection (If below 90%) |Heal Damage |Increase Psychosis Resistance" Tags="smallitem,drinkitem,alcoholitem,bottle" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="True" health="11" >
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -389,7 +389,7 @@
     <!-- ALCOHOLS -->
     <!-- ALCOHOLS -->
     <!-- ALCOHOLS -->
-    <Rum name="Pirate Rum" identifier="he-rum" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="A very strong rum enriched with uranium for extra spice. |Alcoholic Beverage |Decrease Psychosis |Decrease Hallucinations |Decrease Husk Infection (If below 90%) |Healing Properties |Increase Psychosis Resistance |Increase Radiation Sickness (Slightly)" Tags="smallitem,drinkitem,alcoholitem,bottle" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="False" health="11" >
+    <Rum name="Pirate Rum" identifier="he-rum" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="A very strong rum enriched with uranium for extra spice. |Alcoholic Beverage |Decrease Psychosis |Decrease Hallucinations |Decrease Husk Infection (If below 90%) |Healing Properties |Increase Psychosis Resistance |Increase Radiation Sickness (Slightly)" Tags="smallitem,drinkitem,alcoholitem,bottle" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="True" health="11" >
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -503,7 +503,7 @@
       </CustomInterface>
     </Rum>
     
-    <Item name="Doc's Whiskey" identifier="he-whiskey" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Doctor Michael's original whiskey. Approved by Doctors europa-wide. |Alcoholic Beverage |Reduce Hallucinations |Reduce Halucinova Effects |Reduce Chem Addiction |Increase Psychosis Resistance |Slight Healing Properties" Tags="smallitem,drinkitem,alcoholitem,bottle" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="False" health="11" >
+    <Item name="Doc's Whiskey" identifier="he-whiskey" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Doctor Michael's original whiskey. Approved by Doctors europa-wide. |Alcoholic Beverage |Reduce Hallucinations |Reduce Halucinova Effects |Reduce Chem Addiction |Increase Psychosis Resistance |Slight Healing Properties" Tags="smallitem,drinkitem,alcoholitem,bottle" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="True" health="11" >
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -601,7 +601,7 @@
       </CustomInterface>
     </Item>
     
-    <Item name="Halucinova" identifier="he-halucinova" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Keep away from &quot;Sadashi Kira&quot; at all cost! |Alcoholic Beverage |Increase Hallucinations | Slight Healing Properties" Tags="smallitem,drinkitem,alcoholitem,bottle" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="False" health="11" >
+    <Item name="Halucinova" identifier="he-halucinova" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Keep away from &quot;Sadashi Kira&quot; at all cost! |Alcoholic Beverage |Increase Hallucinations | Slight Healing Properties" Tags="smallitem,drinkitem,alcoholitem,bottle" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="True" health="11" >
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -706,7 +706,7 @@
     <!--BEERS-->
     <!--BEERS-->
     <!--BEERS-->
-    <Item name="Coalition Premium" identifier="he-beercoalitionpremium" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="A popular beer amongst coalition station inhabitants. |Alcoholic Beverage |Increase Psychosis Resistance" Tags="smallitem,drinkitem,alcoholitem,bottle" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="False" health="11" >
+    <Item name="Coalition Premium" identifier="he-beercoalitionpremium" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="A popular beer amongst coalition station inhabitants. |Alcoholic Beverage |Increase Psychosis Resistance" Tags="smallitem,drinkitem,alcoholitem,bottle" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="True" health="11" >
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -800,7 +800,7 @@
       </CustomInterface>
     </Item>
     
-    <Item name="Jovian Force" identifier="he-beerjovianforce" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="A beer most popular amongst the Separatists. |Alcoholic Beverage |Increase Psychosis Resistance" Tags="smallitem,drinkitem,alcoholitem,bottle" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="False" health="11" >
+    <Item name="Jovian Force" identifier="he-beerjovianforce" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="A beer most popular amongst the Separatists. |Alcoholic Beverage |Increase Psychosis Resistance" Tags="smallitem,drinkitem,alcoholitem,bottle" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="True" health="11" >
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -894,7 +894,7 @@
       </CustomInterface>
     </Item>
 
-    <Item name="Liquid Ascension" identifier="he-beerliquidascension" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="A popular beer amongst members of the church of husk on their way to ascension! |Alcoholic Beverage |Increase Psychosis Resistance |Increase Pressure Immunity |Oxygen Not Included |May contain traces of husk parasites" Tags="smallitem,drinkitem,alcoholitem,bottle" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="False" health="11" >
+    <Item name="Liquid Ascension" identifier="he-beerliquidascension" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="A popular beer amongst members of the church of husk on their way to ascension! |Alcoholic Beverage |Increase Psychosis Resistance |Increase Pressure Immunity |Oxygen Not Included |May contain traces of husk parasites" Tags="smallitem,drinkitem,alcoholitem,bottle" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="True" health="11" >
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -993,7 +993,7 @@
       </CustomInterface>
     </Item>
 
-    <Item name="Clown Juice" identifier="he-beerclownjuice" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="A popular beer amongst pranksters. Praise the honkmother! |Alcoholic Beverage |Increase Psychosis Resistance" Tags="smallitem,drinkitem,alcoholitem,bottle" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="False" health="11" >
+    <Item name="Clown Juice" identifier="he-beerclownjuice" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="A popular beer amongst pranksters. Praise the honkmother! |Alcoholic Beverage |Increase Psychosis Resistance" Tags="smallitem,drinkitem,alcoholitem,bottle" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="True" health="11" >
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -1091,7 +1091,7 @@
       </CustomInterface>
     </Item>
 
-    <Item name="Reaper's Tribute" identifier="he-beerreaperstribute" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="A strong beer to pay tribute to the reaper. |Alcoholic Beverage |Clear Reaper's Tax |Clears your mind of embarrassment |Increase Psychosis Resistance" Tags="smallitem,drinkitem,alcoholitem,bottle" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="False" health="11" >
+    <Item name="Reaper's Tribute" identifier="he-beerreaperstribute" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="A strong beer to pay tribute to the reaper. |Alcoholic Beverage |Clear Reaper's Tax |Clears your mind of embarrassment |Increase Psychosis Resistance" Tags="smallitem,drinkitem,alcoholitem,bottle" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="True" health="11" >
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -1186,7 +1186,7 @@
       </CustomInterface>
     </Item>
 
-    <Item name="Fishtail Cocktail" identifier="he-fishtailcocktail" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem" scale="0.5" impactsoundtag="impact_soft" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="False" health="11" >
+    <Item name="Fishtail Cocktail" identifier="he-fishtailcocktail" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem" scale="0.5" impactsoundtag="impact_soft" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="True" health="11" >
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer primary="kitchen" secondary="crewcab"/>
@@ -1245,7 +1245,7 @@
     <!-- SODAS -->
     <!-- SODAS -->
     
-    <Item name="Can of Couwola Cola" identifier="he-colacan" category="Misc" subcategory="Drinks" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A refreshing can of Couwola Cola. Super refreshing and good for when you're absolutely shit-faced and need to sober up a quickly. Mass-consumption may cause discomfort." Tags="smallitem,drinkitem,cola,colafuel1" scale="0.5" impactsoundtag="impact_aluminiumcan_full" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="False" health="11"  canflipx="false">
+    <Item name="Can of Couwola Cola" identifier="he-colacan" category="Misc" subcategory="Drinks" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A refreshing can of Couwola Cola. Super refreshing and good for when you're absolutely shit-faced and need to sober up a quickly. Mass-consumption may cause discomfort." Tags="smallitem,drinkitem,cola,colafuel1" scale="0.5" impactsoundtag="impact_aluminiumcan_full" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="True" health="11"  canflipx="false">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0.1" />
@@ -1299,7 +1299,7 @@
       </Holdable>
     </Item>
 
-    <Item name="Can of Couwola Cola Zero" identifier="he-colazerocan" category="Misc" subcategory="Drinks" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A refreshing can of Couwola Cola Zero. No sugar, but full flavor! Very refreshing and good for when you're absolutely shit-faced and need to sober up a quickly." Tags="smallitem,drinkitem,colazero,colafuel2" scale="0.5" impactsoundtag="impact_aluminiumcan_full" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="False" health="11"  canflipx="false">
+    <Item name="Can of Couwola Cola Zero" identifier="he-colazerocan" category="Misc" subcategory="Drinks" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" description="A refreshing can of Couwola Cola Zero. No sugar, but full flavor! Very refreshing and good for when you're absolutely shit-faced and need to sober up a quickly." Tags="smallitem,drinkitem,colazero,colafuel2" scale="0.5" impactsoundtag="impact_aluminiumcan_full" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="True" health="11"  canflipx="false">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0.1" />
@@ -1353,7 +1353,7 @@
       </Holdable>
     </Item>
 
-    <Item name="Couwola Cola" identifier="he-colabottle" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-colacrate" description="A bottle of Couwola Cola. Super refreshing and helpful when you're shit-faced. Mass-consumption may cause discomfort." Tags="smallitem,drinkitem,bottle,cola,colafuel1" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="False" health="11" >
+    <Item name="Couwola Cola" identifier="he-colabottle" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-colacrate" description="A bottle of Couwola Cola. Super refreshing and helpful when you're shit-faced. Mass-consumption may cause discomfort." Tags="smallitem,drinkitem,bottle,cola,colafuel1" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="True" health="11" >
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0" />
@@ -1443,7 +1443,7 @@
       </CustomInterface>
     </Item>
 
-    <Item name="Couwola Cola Zero" identifier="he-colazerobottle" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-colacrate" description="A bottle of Couwola Cola Zero. Zero sugar, but full flavor! Very refreshing and kind of helpful when you're shit-faced." Tags="smallitem,drinkitem,bottle,colazero,colafuel2" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="False" health="11" >
+    <Item name="Couwola Cola Zero" identifier="he-colazerobottle" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-colacrate" description="A bottle of Couwola Cola Zero. Zero sugar, but full flavor! Very refreshing and kind of helpful when you're shit-faced." Tags="smallitem,drinkitem,bottle,colazero,colafuel2" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="True" health="11" >
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0" />
@@ -1534,7 +1534,7 @@
     </Item>
 
     <!-- Rare couwola radiant, obtained by looting or a quest -->
-    <Item name="Couwola Cola Radiant" identifier="he-colaradiantbottle" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-colacrate" description="A bottle of the rare Couwola Cola radiant. Feeling Overcharged! Very refreshing and helpful when you're shit-faced. Enriched with fulgurium" Tags="smallitem,drinkitem,bottle,colaradiant,colafuel3" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="False" health="11" >
+    <Item name="Couwola Cola Radiant" identifier="he-colaradiantbottle" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-colacrate" description="A bottle of the rare Couwola Cola radiant. Feeling Overcharged! Very refreshing and helpful when you're shit-faced. Enriched with fulgurium" Tags="smallitem,drinkitem,bottle,colaradiant,colafuel3" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="True" health="11" >
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="wreckcrewcab,abandonedcrewcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0" />
@@ -1637,7 +1637,7 @@
     <!-- JUICES -->
     
     <!-- WIP glass of juice -->
-    <Item name="Glass of PomBerry Juice" identifier="he-pomberryjuiceglass" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="A glass of fresh water." Tags="smallitem,drinkitem,cleanwater,water,glass,fullglass,allowinfryer" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="False" health="4" >
+    <Item name="Glass of PomBerry Juice" identifier="he-pomberryjuiceglass" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="A glass of fresh water." Tags="smallitem,drinkitem,cleanwater,water,glass,fullglass,allowinfryer" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="True" health="4" >
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="56,272,17,34" depth="0.499" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="56,272,17,34" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="56,272,17,34" depth="0.525" origin="0.5,0.7"  />
@@ -1717,7 +1717,7 @@
     <!-- WATER -->
         
     <!-- WIP glass of water TODO: reenable fabrication -->
-    <Item name="Water (glass)" identifier="he-waterglass" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="A glass of fresh water." Tags="smallitem,drinkitem,cleanwater,water,glass,fullglass,allowinfryer" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="False" health="4" >
+    <Item name="Water (glass)" identifier="he-waterglass" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="A glass of fresh water." Tags="smallitem,drinkitem,cleanwater,water,glass,fullglass,allowinfryer" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="True" health="4" >
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="20,272,17,34" depth="0.499" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="20,272,17,34" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="20,272,17,34" depth="0.525" origin="0.5,0.7"  />
@@ -1778,7 +1778,7 @@
       </ItemComponent>
     </Item>
     
-    <Item name="Water Bottle" identifier="he-water" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Fresh water. Helps a bit if you're feeling stuffed or when you're shit-faced." Tags="smallitem,drinkitem,cleanwater,cleanwaterrefill_common,water,bottle,allowinfryer" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="False" health="11" >
+    <Item name="Water Bottle" identifier="he-water" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Fresh water. Helps a bit if you're feeling stuffed or when you're shit-faced." Tags="smallitem,drinkitem,cleanwater,cleanwaterrefill_common,water,bottle,allowinfryer" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="True" health="11" >
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" minamount="1" maxamount="3" spawnprobability="0.05" />
@@ -2135,7 +2135,7 @@
     <!-- SALT WATER -->
     <!-- SALT WATER -->
     <!-- SALT WATER -->    
-    <Item name="Water" identifier="he-seawater" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Tastes salty." Tags="smallitem,drinkitem,dirtywaterregular,seawater,water,bottle,seawaterrefill_common,allowinfryer" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="False" health="11" >
+    <Item name="Water" identifier="he-seawater" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Tastes salty." Tags="smallitem,drinkitem,dirtywaterregular,seawater,water,bottle,seawaterrefill_common,allowinfryer" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="True" health="11" >
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0" />
       <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0" />
@@ -2432,7 +2432,7 @@
     <!-- TOILET WATER -->
     <!-- TOILET WATER -->
     <!-- TOILET WATER -->        
-    <Item name="Water" identifier="he-toiletwater" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Tastes funny." Tags="smallitem,drinkitem,dirtywaterregular,toiletwater,seawater,water,bottle,allowinfryer" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="False" health="11" >
+    <Item name="Water" identifier="he-toiletwater" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="Tastes funny." Tags="smallitem,drinkitem,dirtywaterregular,toiletwater,seawater,water,bottle,allowinfryer" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="True" health="11" >
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0" />
       <PreferredContainer secondary="crewcab" minamount="0" maxamount="8" spawnprobability="0" />
@@ -2707,7 +2707,7 @@
     <!-- TEA -->
     <!-- TEA -->
         
-    <Item name="Cup of Bubbleberry Tea" identifier="he-cupbubbleberrytea" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="It's said to be very soothing on your mind, helping you calm down and relax. Apparently also very effective to get alcohol out of your system." Tags="smallitem,drinkitem,teacup,cup" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="2" useinhealthinterface="false" requireaimtouse="true" isshootable="false" health="10" >
+    <Item name="Cup of Bubbleberry Tea" identifier="he-cupbubbleberrytea" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="It's said to be very soothing on your mind, helping you calm down and relax. Apparently also very effective to get alcohol out of your system." Tags="smallitem,drinkitem,teacup,cup" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="2" useinhealthinterface="false" requireaimtouse="true" isshootable="True" health="10" >
       <PreferredContainer secondary="abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -2807,7 +2807,7 @@
       </CustomInterface>
     </Item>
     
-    <Item name="Cup of Popnut Tea" identifier="he-cuppopnuttea" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,teacup,cup" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="2" useinhealthinterface="false" requireaimtouse="true" isshootable="false" health="10" >
+    <Item name="Cup of Popnut Tea" identifier="he-cuppopnuttea" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,teacup,cup" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="2" useinhealthinterface="false" requireaimtouse="true" isshootable="True" health="10" >
       <PreferredContainer secondary="abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -2910,7 +2910,7 @@
     <!-- COFFEE -->
     <!-- COFFEE -->
     <!-- COFFEE -->
-    <Item name="Cup of Coffee" identifier="he-cupcoffee" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeecup,cupofcoffee,cup" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="2" useinhealthinterface="false" requireaimtouse="true" isshootable="false" health="10" >
+    <Item name="Cup of Coffee" identifier="he-cupcoffee" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeecup,cupofcoffee,cup" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="2" useinhealthinterface="false" requireaimtouse="true" isshootable="True" health="10" >
       <PreferredContainer secondary="abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -3007,7 +3007,7 @@
       </CustomInterface>
     </Item>
     
-    <Item name="Mug of Coffee" identifier="he-mugcoffee" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeemug,coffeecup,mug" scale="0.4" impactsoundtag="impact_bottle_glass" impacttolerance="2" useinhealthinterface="false" requireaimtouse="true" isshootable="false" health="10" >
+    <Item name="Mug of Coffee" identifier="he-mugcoffee" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeemug,coffeecup,mug" scale="0.4" impactsoundtag="impact_bottle_glass" impacttolerance="2" useinhealthinterface="false" requireaimtouse="true" isshootable="True" health="10" >
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -3100,7 +3100,7 @@
       </CustomInterface>
     </Item>
     
-    <Item name="Coffee-to-go" identifier="he-coffeetogo" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeecup,cup" scale="0.5" impactsoundtag="impact_soft" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="false" health="10" >
+    <Item name="Coffee-to-go" identifier="he-coffeetogo" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeecup,cup" scale="0.5" impactsoundtag="impact_soft" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="True" health="10" >
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -3191,7 +3191,7 @@
     <!-- HOT CHOCOLATE -->
     <!-- HOT CHOCOLATE -->
     <!-- HOT CHOCOLATE -->
-    <Item name="Cup of Hot Chocolate" identifier="he-cuphotchocolate" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeecup,cupofchocolate,cup" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="2" useinhealthinterface="false" requireaimtouse="true" isshootable="false" health="10" >
+    <Item name="Cup of Hot Chocolate" identifier="he-cuphotchocolate" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeecup,cupofchocolate,cup" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="2" useinhealthinterface="false" requireaimtouse="true" isshootable="True" health="10" >
       <PreferredContainer secondary="abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -3292,7 +3292,7 @@
       </CustomInterface>
     </Item>
     
-    <Item name="Mug of Hot Chocolate" identifier="he-mughotchocolate" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeemug,coffeecup,mug" scale="0.4" impactsoundtag="impact_bottle_glass" impacttolerance="2" useinhealthinterface="false" requireaimtouse="true" isshootable="false" health="10" >
+    <Item name="Mug of Hot Chocolate" identifier="he-mughotchocolate" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeemug,coffeecup,mug" scale="0.4" impactsoundtag="impact_bottle_glass" impacttolerance="2" useinhealthinterface="false" requireaimtouse="true" isshootable="True" health="10" >
       <PreferredContainer secondary="abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -3389,7 +3389,7 @@
       </CustomInterface>
     </Item>
 
-    <Item name="Moloch Milk" identifier="he-milk" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="A bottle of Moloch Milk. Tastes a bit funny. Don't ask how they get milk from a Moloch! May help a bit when you're shit-faced." Tags="smallitem,drinkitem,bottle,milk" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="False" health="11" >
+    <Item name="Moloch Milk" identifier="he-milk" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="he-liquorcrate" description="A bottle of Moloch Milk. Tastes a bit funny. Don't ask how they get milk from a Moloch! May help a bit when you're shit-faced." Tags="smallitem,drinkitem,bottle,milk" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="5.5" useinhealthinterface="true" requireaimtouse="true" isshootable="True" health="11" >
       <PreferredContainer secondary="abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -3503,7 +3503,7 @@
     <!-- NEW TEA TEST, DISABLED AND HIDDEN FOR NOW -->
     <!-- NEW TEA TEST, DISABLED AND HIDDEN FOR NOW -->
     <!-- NEW TEA TEST, DISABLED AND HIDDEN FOR NOW -->
-    <Item name="Cup of Test Tea" identifier="he-teaTEST" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="PROTOTYPE FOR POURING TEA. IF YOU SEE THIS ITEM, REPORT IT" Tags="smallitem,drinkitem,teacup,cup" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="2" useinhealthinterface="false" requireaimtouse="true" isshootable="False" health="8" hideinmenus="true" >
+    <Item name="Cup of Test Tea" identifier="he-teaTEST" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="PROTOTYPE FOR POURING TEA. IF YOU SEE THIS ITEM, REPORT IT" Tags="smallitem,drinkitem,teacup,cup" scale="0.5" impactsoundtag="impact_bottle_glass" impacttolerance="2" useinhealthinterface="false" requireaimtouse="true" isshootable="True" health="8" hideinmenus="true" >
       <!--<PreferredContainer secondary="abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
