@@ -105,7 +105,7 @@
     </Item>
 
     <Item name="Toilet" identifier="he-toilet" tags="toilet" description="Relief yourself or get rid of something by flushing it down." type="Controller" width="152" height="240" scale="0.5" noninteractable="false" category="Misc" pickdistance="150" isshootable="true" requireaimtosecondaryuse="true" canflipy="false" GrabWhenSelected="false">
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Misc/Toilet.png" sourcerect="0,0,182,154" depth="0.556" premultiplyalpha="false" origin="0.46,0.6" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Misc/Toilet.png" sourcerect="0,12,183,154" depth="0.556" premultiplyalpha="false" origin="0.46,0.5" />
       <Price baseprice="580" sold="true">
         <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="1" />
         <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="3" />
@@ -174,7 +174,7 @@
         </StatusEffect>
       </Controller>
       <Body width="182" height="135" density="16" />
-      <Holdable canbepicked="true" selectkey="Select" pickkey="Aim" slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" attachable="true" aimable="true">
+      <Holdable canbepicked="true" selectkey="Select" pickkey="Aim" slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" attachable="true" AttachesToFloor="true" aimable="true">
         <RequiredItem items="wrench" type="Equipped" />
         <StatusEffect target="This" type="Always">
           <Conditional attached="false" targetitemcomponentname="Holdable" />
@@ -259,8 +259,8 @@
     </Item>
 
     <Item name="Toilet" nameidentifier="he-toilet" descriptionidentifier="he-outposttoilet" identifier="he-outposttoilet" tags="toilet" description="Variant of the toilet to be used on outpost modules that can't be picked up and moved by the player." type="Controller" width="152" height="240" scale="0.5" noninteractable="false" category="Misc" pickdistance="150" isshootable="true" requireaimtosecondaryuse="true" canflipy="false" GrabWhenSelected="false">
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Misc/ToiletOutpost.png" sourcerect="0,0,182,154" origin="0.5,0.5" />
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Misc/Toilet.png" sourcerect="0,0,182,154" depth="0.556" premultiplyalpha="false" origin="0.46,0.6" />
+      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Misc/ToiletOutpost.png" sourcerect="0,12,183,154" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Misc/Toilet.png" sourcerect="0,12,183,154" depth="0.556" premultiplyalpha="false" origin="0.46,0.6" />
       <Controller UserPos="-20,0" direction="Left" hidehud="false" AllowSelectingWhenSelectedByBot="true" AllowSelectingWhenSelectedByOther="false" canbeselected="true" selectkey="Select" drawuserbehind="false">
         <limbposition limb="Head" position="-5,-20" />
         <limbposition limb="Torso" position="50,48" />
@@ -333,21 +333,17 @@
         <Button text="interaction.flushtoilet">
           <StatusEffect type="OnUse" target="Contained" disabledeltatime="true" comparison="And">
             <Conditional HasStatusTag="neq flushing" targetcontainer="true" />
-            <Conditional attached="true" targetcontainer="true" />
             <Remove />
           </StatusEffect>
           <StatusEffect type="OnUse" target="This" condition="-4" stackable="false" comparison="And">
-            <Conditional attached="true" />
             <Conditional HasStatusTag="neq flushing" />
           </StatusEffect>
           <StatusEffect type="OnUse" target="This" condition="0" delay="0.2" setvalue="true" stackable="false" comparison="And">
-            <Conditional attached="true" />
             <Conditional HasStatusTag="neq flushing" />
             <RequiredItem items="crowbar,mediumitem" type="Contained" />
             <Sound file="Content/Sounds/Damage/StructureCrunch2.ogg" range="600" volume="3.0"/>
           </StatusEffect>
           <StatusEffect type="OnUse" target="This" condition="0" delay="0.2" setvalue="true" stackable="false" comparison="And">
-            <Conditional attached="true" />
             <Conditional HasStatusTag="neq flushing" />
             <RequiredItem items="saltbulb" type="Contained" />
             <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" range="2000" selectionmode="Random" />
@@ -359,7 +355,6 @@
             </Explosion>
           </StatusEffect>
           <StatusEffect type="OnUse" target="This" condition="0" delay="0.2" setvalue="true" stackable="false" comparison="And">
-            <Conditional attached="true" />
             <Conditional HasStatusTag="neq flushing" />
             <RequiredItem items="badsaltbulb" type="Contained" />
             <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" range="4000" />
@@ -373,7 +368,6 @@
           </StatusEffect>
           <StatusEffect type="OnUse" target="This" duration="10" tags="flushing" setvalue="true" stackable="false" comparison="And">
             <Conditional HasStatusTag="neq flushing" />
-            <Conditional attached="true" />
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Misc/ToiletFlush.ogg" loop="true" range="500" />
           </StatusEffect>
         </Button>
