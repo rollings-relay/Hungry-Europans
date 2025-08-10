@@ -32,7 +32,7 @@
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="256,768,64,64" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="435,452,30,57" depth="0.6" origin="0.5,0.5" />
       <Body width="30" height="55" density="20" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- When used in Health GUI -->
         <StatusEffect type="OnSuccess" target="This" setvalue="true" oneshot="true" aimpos="28,24" aimangle="120" settags="opened" holdpos="30,-15" holdangle="0" /> 
@@ -113,7 +113,7 @@
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="493,389,18,46" depth="0.6" maxcondition="99" />
       <Body width="18" height="43" density="11" waterdragcoefficient="1" />
       <SuitableTreatment type="thirst" suitability="75" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         
         <!-- Unbottle --> 
         <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
@@ -165,7 +165,7 @@
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="493,433,18,46" depth="0.6" maxcondition="99" />
       <Body width="18" height="43" density="11" />
       <SuitableTreatment type="thirst" suitability="70" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Unbottle --> 
         <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
@@ -236,7 +236,7 @@
       <SuitableTreatment type="thirst" suitability="25" />
       <SuitableTreatment type="embarrassment" suitability="70" />
       <SuitableTreatment type="huskinfection" suitability="30" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- When used in Health GUI -->
         <StatusEffect type="OnSuccess" target="This" setvalue="true" oneshot="true" aimpos="26,26" aimangle="120" settags="opened" holdpos="30,-15" holdangle="0" /> 
@@ -342,7 +342,7 @@
       <SuitableTreatment type="psychosis" suitability="12" />
       <Body width="20" height="63" density="20" />
       <!-- characterusable="false" because the "Use" action is triggered via a status effect when the bottle is empty, can't be done just by hitting E -->
-      <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" characterusable="false" aimpos="32,28" holdangle="30" aimangle="120" aimable="false" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" characterusable="false" aimpos="32,28" holdangle="30" aimangle="120" aimable="false" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnSecondaryUse" target="This" Condition="-30.0"/>
         <StatusEffect type="OnSecondaryUse" target="This">
           <Conditional Condition="gte 99" />
@@ -412,7 +412,7 @@
       <SuitableTreatment type="thirst" suitability="25" />
       <SuitableTreatment type="embarrassment" suitability="80" />
       <SuitableTreatment type="huskinfection" suitability="60" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- When used in Health GUI -->
         <StatusEffect type="OnSuccess" target="This" setvalue="true" oneshot="true" aimpos="26,26" aimangle="120" holdpos="30,-15" settags="opened" holdangle="0" /> 
@@ -527,7 +527,7 @@
       <SuitableTreatment type="thirst" suitability="25" />
       <SuitableTreatment type="embarrassment" suitability="80" />
       <SuitableTreatment type="chemaddiction" suitability="50" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         
         <!-- Unbottle -->
         <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
@@ -631,7 +631,7 @@
       <Body width="27" height="66" density="15" />
       <SuitableTreatment type="thirst" suitability="25" />
       <SuitableTreatment type="embarrassment" suitability="100" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         
         <!-- Unbottle --> 
         <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
@@ -729,7 +729,7 @@
       <Body width="17" height="63" density="15" />
       <SuitableTreatment type="thirst" suitability="30" />
       <SuitableTreatment type="embarrassment" suitability="50" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Unbottle --> 
         <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
@@ -823,7 +823,7 @@
       <Body width="17" height="63" density="15" />
       <SuitableTreatment type="thirst" suitability="30" />
       <SuitableTreatment type="embarrassment" suitability="50" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Unbottle --> 
         <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
@@ -920,7 +920,7 @@
       <Body width="17" height="63" density="15" />
       <SuitableTreatment type="thirst" suitability="30" />
       <SuitableTreatment type="embarrassment" suitability="50" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Unbottle --> 
         <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
@@ -1019,7 +1019,7 @@
       <Body width="17" height="63" density="15" />
       <SuitableTreatment type="thirst" suitability="30" />
       <SuitableTreatment type="embarrassment" suitability="50" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Unbottle --> 
         <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
@@ -1114,7 +1114,7 @@
       <Body width="17" height="63" density="15" />
       <SuitableTreatment type="thirst" suitability="30" />
       <SuitableTreatment type="embarrassment" suitability="100" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Unbottle --> 
         <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
@@ -1196,7 +1196,7 @@
       <!--<ContainedSprite allowedcontainertags="liquorshelf" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="201,0,21,66" depth="0.55" origin="0.5,0.42" />-->
       <Body width="20" height="56" density="12" />
       <SuitableTreatment type="embarrassment" suitability="50" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="-5,-30" aimpos="12,5" aimable="false" swingwhenaiming="true" swingamount="3,2" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="-5,-30" aimpos="12,5" aimable="false" swingwhenaiming="true" swingamount="3,2" swingspeed="0.2" msg="ItemMsgPickUpSelect">
               
         <!-- Regular drinking RMB --> 
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" >
@@ -1260,7 +1260,7 @@
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="342,20,18,46" depth="0.6" maxcondition="99" />
       <Body width="18" height="43" density="11" />
       <SuitableTreatment type="thirst" suitability="100" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Unbottle -->
         <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
@@ -1314,7 +1314,7 @@
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="304,20,18,46" depth="0.6" maxcondition="99" />
       <Body width="18" height="43" density="11" />
       <SuitableTreatment type="thirst" suitability="95" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Unbottle -->
         <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
@@ -1373,7 +1373,7 @@
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="458,66,16,66" depth="0.6" maxcondition="99" />
       <Body width="16" height="62" density="15" />
       <SuitableTreatment type="thirst" suitability="100" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Unbottle --> 
         <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
@@ -1463,7 +1463,7 @@
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="422,66,16,66" depth="0.6" maxcondition="99" />
       <Body width="16" height="62" density="15" />
       <SuitableTreatment type="thirst" suitability="95" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Unbottle --> 
         <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
@@ -1560,7 +1560,7 @@
       <Body width="16" height="62" density="15" />
       <SuitableTreatment type="thirst" suitability="95" />
       <LightComponent range="70.0" lightcolor="255,37,92,150" IsOn="true" flicker="0.2" flickerspeed="0.3" castshadows="false" alphablend="false" allowingameediting="false" powerconsumption="0" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Unbottle -->
         <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
@@ -1659,7 +1659,7 @@
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
       </Deconstruct>
       <SuitableTreatment type="thirst" suitability="90" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Regular drinking - RMB --> 
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
@@ -1730,7 +1730,7 @@
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
       </Deconstruct>
       <SuitableTreatment type="thirst" suitability="90" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" holdpos="20,-10" holdangle="0" handle1="-5,-10" aimpos="23,23" aimangle="90" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Regular drinking - RMB --> 
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
@@ -1809,7 +1809,7 @@
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="243,0,21,66" depth="0.525" origin="0.5,0.8"  />
       <Body width="21" height="58" density="15" />
       <SuitableTreatment type="thirst" suitability="90" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" holdpos="0,0" holdangle="0" handle1="-5,-10" handle2="-5,-10" aimpos="30,-15" aimangle="0" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" holdpos="0,0" holdangle="0" handle1="-5,-10" handle2="-5,-10" aimpos="30,-15" aimangle="0" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- When Used in Health GUI, heals minor burns -->
         <StatusEffect type="OnSuccess" target="This" setvalue="true" oneshot="true" aimpos="28,26" aimangle="120" settags="opened" holdpos="30,-15" holdangle="0" /> 
@@ -2152,7 +2152,7 @@
       <Deconstruct time="2">
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
       </Deconstruct>
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" holdpos="0,0" holdangle="0" handle1="-5,-10" handle2="-5,-10" aimpos="30,-15" aimangle="0" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" holdpos="0,0" holdangle="0" handle1="-5,-10" handle2="-5,-10" aimpos="30,-15" aimangle="0" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <StatusEffect type="InWater" target="This" Condition="100" setvalue="True">
           <Conditional condition="lt 100" />
@@ -2445,7 +2445,7 @@
       <Deconstruct time="2">
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
       </Deconstruct>
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" holdpos="0,0" holdangle="0" handle1="-5,-10" handle2="-5,-10" aimpos="30,-15" aimangle="0" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" holdpos="0,0" holdangle="0" handle1="-5,-10" handle2="-5,-10" aimpos="30,-15" aimangle="0" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- When Used in Health GUI, heals minor burns -->
         <StatusEffect type="OnSuccess" target="This" setvalue="true" oneshot="true" aimpos="28,26" aimangle="120" settags="opened" holdpos="30,-15" holdangle="0" /> 
@@ -2721,7 +2721,7 @@
       <SuitableTreatment type="thirst" suitability="70" />
       <!--GreaterComponent used to measure time passed since the item was created-->
       <GreaterComponent TimeFrame="0" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="23,8" holdpos="30,-15" holdangle="0" handle1="-20,-5" aimangle="30" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="23,8" holdpos="30,-15" holdangle="0" handle1="-20,-5" aimangle="30" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         
         <!-- Regular drinking - RMB -->
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
@@ -2821,7 +2821,7 @@
       <SuitableTreatment type="thirst" suitability="70" />
       <!--GreaterComponent used to measure time passed since the item was created-->
       <GreaterComponent TimeFrame="0" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="23,8" holdpos="30,-15" holdangle="0" handle1="-20,-5" aimangle="30" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="23,8" holdpos="30,-15" holdangle="0" handle1="-20,-5" aimangle="30" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Regular drinking - RMB -->
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
@@ -2928,7 +2928,7 @@
       <SuitableTreatment type="thirst" suitability="70" />
       <!--GreaterComponent used to measure time passed since the item was created-->
       <GreaterComponent TimeFrame="0" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="23,8" holdpos="30,-15" holdangle="0" handle1="-20,-5" aimangle="30" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="23,8" holdpos="30,-15" holdangle="0" handle1="-20,-5" aimangle="30" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Regular drinking - RMB -->
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
@@ -3023,7 +3023,7 @@
       <SuitableTreatment type="thirst" suitability="70" />
       <!--GreaterComponent used to measure time passed since the item was created-->
       <GreaterComponent TimeFrame="0" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="23,8" holdpos="30,-15" holdangle="0" handle1="-20,-5" aimangle="30" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="23,8" holdpos="30,-15" holdangle="0" handle1="-20,-5" aimangle="30" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Regular drinking - RMB -->
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
@@ -3100,7 +3100,7 @@
       </CustomInterface>
     </Item>
     
-    <Item name="Coffee-to-go" identifier="he-coffeetogo" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeecup,cup" scale="0.5" impactsoundtag="impact_soft" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="True" health="10" >
+    <Item name="Coffee-to-go" identifier="he-coffeetogo" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeecup,cup" scale="0.5" impactsoundtag="impact_soft" impacttolerance="5.5" useinhealthinterface="false" requireaimtouse="true" isshootable="True" health="11" >
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
@@ -3113,12 +3113,21 @@
       <SuitableTreatment type="thirst" suitability="70" />
       <!--GreaterComponent used to measure time passed since the item was created-->
       <GreaterComponent TimeFrame="0" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="RightHand,LeftHand,Any" aimpos="23,8" holdpos="30,-15" holdangle="0" handle1="0,-5" aimangle="30" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="RightHand,LeftHand,Any" aimpos="30,-15" holdpos="30,-15" holdangle="0" handle1="0,-5" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+        <!-- Unbottle -->
+        <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
+          <Conditional condition="gte 11" />
+          <Conditional HasTag="neq opened" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenCan.ogg" loop="false" range="200" volume="1.5" />
+        </StatusEffect>
+        <!-- Apply new aimpos, aimangle and "opened" tag after a delay to avoid accidentally taking a sip instantly when opening the bottle -->
+        <StatusEffect type="OnUse" target="This" aimpos="23,8" holdpos="30,-15" holdangle="0" handle1="0,-5" aimangle="30" settags="opened" delay="0.5" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
 
         <!-- Regular drinking - RMB -->
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
           <Conditional InWater="false" />
           <Conditional timeframe="lt 180" />
+          <Conditional HasTag="opened" />
           <ReduceAffliction type="thirst" amount="3.0" />
           <Affliction identifier="fillbladder" amount="3.0" />
           <Affliction identifier="caffeinated" amount="50" />
@@ -3128,35 +3137,42 @@
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
           <Conditional InWater="false" />
           <Conditional timeframe="gte 180" />
+          <Conditional HasTag="opened" />
           <ReduceAffliction type="thirst" amount="3.0" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Slurping.ogg" loop="true" range="200" volume="2.0" />
         </StatusEffect>
 
         <!-- Regular drinking -->
         <!--Increase time to simulate tea cooling off-->
-        <StatusEffect type="Always" target="This" timeframe="1">
+        <StatusEffect type="Always" target="This" timeframe="1" comparison="And">
           <Conditional timeframe="lte 180" />
+          <Conditional HasTag="opened" />
         </StatusEffect>
         <!--Particles while tea is hot-->
-        <StatusEffect type="OnNotContained" target="This" stackable="false">
+        <StatusEffect type="OnNotContained" target="This" stackable="false" comparison="And">
           <Conditional timeframe="lt 180" />
+          <Conditional HasTag="opened" />
           <ParticleEmitter particle="FleshSmoke" anglemin="90" anglemax="90" distancemin="7" distancemax="7" scalemin="0.1" scalemax="0.2" scalemultiplier="1,1" particlespersecond="1.2" colormultiplier="255,255,255,150" copyentityangle="True" />
         </StatusEffect>
-        <StatusEffect type="OnActive" target="This" stackable="false">
+        <StatusEffect type="OnActive" target="This" stackable="false" comparison="And">
           <Conditional timeframe="lt 180" />
+          <Conditional HasTag="opened" />
           <ParticleEmitter particle="FleshSmoke" anglemin="90" anglemax="90" distancemin="7" distancemax="7" scalemin="0.1" scalemax="0.2" scalemultiplier="1,1" particlespersecond="1.2" colormultiplier="255,255,255,150" copyentityangle="True" />
         </StatusEffect>
         <!--Double the steam particles and apply burn when drinking tea too early-->
         <StatusEffect type="OnSecondaryUse" target="This,Character" targetlimb="head" comparison="And">
           <Conditional timeframe="lte 40" />
+          <Conditional HasTag="opened" />
           <Affliction identifier="burn" amount="0.8" />
         </StatusEffect>
-        <StatusEffect type="OnNotContained" target="This" stackable="false">
+        <StatusEffect type="OnNotContained" target="This" stackable="false" comparison="And">
           <Conditional timeframe="lte 40" />
+          <Conditional HasTag="opened" />
           <ParticleEmitter particle="FleshSmoke" anglemin="90" anglemax="90" distancemin="7" distancemax="7" scalemin="0.1" scalemax="0.2" scalemultiplier="1,1" particlespersecond="2.0" colormultiplier="255,255,255,150" copyentityangle="True" />
         </StatusEffect>
-        <StatusEffect type="OnActive" target="This" stackable="false">
+        <StatusEffect type="OnActive" target="This" stackable="false" comparison="And">
           <Conditional timeframe="lte 40" />
+          <Conditional HasTag="opened" />
           <ParticleEmitter particle="FleshSmoke" anglemin="90" anglemax="90" distancemin="7" distancemax="7" scalemin="0.1" scalemax="0.2" scalemultiplier="1,1" particlespersecond="2.0" colormultiplier="255,255,255,150" copyentityangle="True" />
         </StatusEffect>
         
@@ -3209,7 +3225,7 @@
       <SuitableTreatment type="thirst" suitability="70" />
       <!--GreaterComponent used to measure time passed since the item was created-->
       <GreaterComponent TimeFrame="0" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="23,8" holdpos="30,-15" holdangle="0" handle1="-20,-5" aimangle="30" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="23,8" holdpos="30,-15" holdangle="0" handle1="-20,-5" aimangle="30" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Regular drinking - RMB -->
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
@@ -3308,7 +3324,7 @@
       <SuitableTreatment type="thirst" suitability="70" />
       <!--GreaterComponent used to measure time passed since the item was created-->
       <GreaterComponent TimeFrame="0" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="23,8" holdpos="30,-15" holdangle="0" handle1="-20,-5" aimangle="30" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="23,8" holdpos="30,-15" holdangle="0" handle1="-20,-5" aimangle="30" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Regular drinking - RMB -->
         <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
@@ -3409,7 +3425,7 @@
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="222,0,21,66" depth="0.6" maxcondition="99" />
       <Body width="21" height="58" density="15" />
       <SuitableTreatment type="thirst" suitability="90" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" holdpos="0,0" holdangle="0" handle1="-5,-10" handle2="-5,-10" aimpos="30,-15" aimangle="0" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" holdpos="0,0" holdangle="0" handle1="-5,-10" handle2="-5,-10" aimpos="30,-15" aimangle="0" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- When Used in Health GUI, heals minor burns -->
         <StatusEffect type="OnSuccess" target="This" setvalue="true" oneshot="true" aimpos="28,26" aimangle="120" holdpos="30,-15" holdangle="0" /> 
@@ -3516,7 +3532,7 @@
       <SuitableTreatment type="thirst" suitability="70" />
       <!--GreaterComponent used to measure time passed since the item was created-->
       <GreaterComponent TimeFrame="0" />
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="RightHand,LeftHand" aimpos="23,8" holdpos="30,-15" holdangle="0" handle1="-20,-5" aimangle="30" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="RightHand,LeftHand" aimpos="23,8" holdpos="30,-15" holdangle="0" handle1="-20,-5" aimangle="30" aimable="false" swingwhenaiming="true" swingamount="3,3" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <!-- if nearby kettle is pouring, reduce condition of its contained bubblebery tea mix -->
         <StatusEffect type="OnActive" target="NearbyItems" targets="activebubbleberryteamix" range="50" condition="-2">
           <Conditional HasStatusTag="pouring" targetcontainer="true" />
