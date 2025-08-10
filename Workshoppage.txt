@@ -1,0 +1,98 @@
+[h1]A foods and drinks Mod for casual play and roleplay[/h1]
+
+[h1]Load Order:[/h1]
+- If you're playing with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2532991202]DynamicEuropa[/url], it is important to put Hungry Europans [u][b]ABOVE[/b][/u] [b]DynamicEuropa[/b] in your load order!
+
+- If you're playing with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2776270649]Neurotrauma[/url], it is important to put Hungry Europans [u][b]ABOVE[/b][/u] [b]Neurotrauma[/b] in your load order!
+
+
+[h1]Features:[/h1]
+[list]
+
+[*][b]Chef Job:[/b]
+Hire a chef on your journey to cook all sorts of meals! This brand new job comes with a complete Talent tree and kit.
+
+[*][b]Meals and Drinks:[/b]
+Lots of meals and drinks of all sorts, to stave off hunger or thirst, or have a little roleplay fun.
+Food and drinks also provide buffs based on the ingredients, with more complex foods giving more buffs.
+You can buy meals in outposts. Check out the cafeterias, but remember that the best food is home-made!
+
+[*][b]Optional Hunger & Thirst:[/b]
+You can enable Hunger and Thirst by using an item called "Hungry Europan" found in vending machines. Your character will have to eat and drink regularly to stay alive. [u]Hunger and Thirst CAN NOT be forced onto other players! You can only apply the item with the afflictions to yourself! Hunger and Thirst can't be disabled for your current character once enabled until you create a new one![/u]
+
+[*][b]Optional NEEDS:[/b]
+You can also enable extra needs for your character: get dirty, get sleepy, relieve yourself on a toilet and manage your mood by eating the foods you like!
+
+[*][b]Butchery:[/b]
+Kill the monsters of Europa and harvest their meat by using a [b]Meat Cleaver[/b] on their corpse. The higher your Butchery skill, the higher your chance of getting any meat and the faster you collect the meat.
+Don't want to cook with it? Keep it and sell it at an outpost. Some meat may give you a good amount of money.
+
+[*][b]Tools, Crafting Stations and Containers:[/b]
+You can buy or craft various cooking appliances that you can install on your submarine.
+It is recommended to have a submarine with a good amount of empty space, or at least one Unit Load Device which can be swapped to install your kitchen.
+
+[*][b]Ingredients:[/b]
+A variety of ingredients can be used to cook food, but not all ingredients can be crafted. Some ingredients can only be bought from merchants or found in the world.
+
+[*][b]Meat Spoilage:[/b]
+Meat products will slowly spoil if not kept within either a refrigerator, or a battery-powered cooler crate.
+
+[*][b]Alcohol Rework:[/b]
+Become an alcoholic and stumble around your vessel. Get addicted. Discover new flavors and brew your own beers.
+
+[*][b]Gardening Rework:[/b]
+Discover new growable plants. Plants can be cross-bred in the research station, creating new varieties with unique fruits.
+Grow aquatic plants in hydroponic planters.
+
+[/list]
+
+[b]Also included are submarines with kitchens already built into them:[/b]
+- Bulker - Swordfish (Tier 1 | Starter)
+- Bulker - Abyss Scout (Tier 2)
+- Mule (Tier 1)
+- SKitter (Tier 2)
+- Volga (Tier 3)
+
+Looking for more submarines? See further below! [b](SUBMARINES MAY NEED UPDATING)[/b]
+Post or look for submarines with kitchens made for this mod in [url=https://steamcommunity.com/workshop/filedetails/discussion/2954998725/3823047940163331471/]Submarines for Hungry Europans[/url]
+Check out a selection of [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3132335774]Community Curated Subs Hungry Edition
+[/url] 
+
+[h1]Getting started:[/h1]
+- To obtain meat from corpses you'll need to use a meat cleaver.
+- For cooking, it is recommended to have the following items installed on your submarine: Kitchen Counter, Cutting Board, Sink, Oven.
+- You can obtain some Cooking/Butchery skill by buying and reading the "The Europan Vol. 66" from the general goods merchant. Alternatively, enabling Hunger/Thirst gives you a bit of starter skill.
+
+[h1]Lore and Immersion:[/h1]
+The mod is as lore friendly as possible in regards of the included food and ingredients. Items are immersive in the way they are used: you need to unbottle bottles, eat with forks and spoons, or with your fingers...
+
+[h1]Creatures that can currently be butchered for meat:[/h1]
+- All vanilla creatures, including pets
+- Humans (May cause a craving for human meat...)
+- Husk (Food buff: Husk infected become neutral towards you)
+- Modded creatures that do not belong in the above groups will drop generic meat
+- Machines do not drop meat
+
+[h1]Compatibility:[/h1]
+Since [b]Hungry Europans[/b] doesn't override Human.xml, it is compatible with any character replacer mod.
+Mods that override the Research Station will conflict with plant cross-breeding
+
+[h1]Patches:[/h1]
+[list]
+[*][b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3018201543]Hungry Europans - Enforced[/url][/b]
+This patch uses lua to activate the "Hungry Europan" talent for all players to force everyone into having to eat and drink.
+
+[*][b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3222593240]Neurotrauma Compatibility Patch[/url][/b]
+Requires [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3190189044]Neurotrauma (Maintenance update)[/url] instead of the original Neurotrauma!
+[/list]
+
+[h1]Credits:[/h1]
+- Sound effects provided by [url=https://quicksounds.com/]quicksounds.com[/url] and further adjusted by me
+- Chef outfit by [url=https://steamcommunity.com/id/DarkWraiths]Laserman[/url]
+- Latin-American-Spanish Translation by [url=https://steamcommunity.com/id/EmmDeo]Deo[/url]
+- Simplified Chinese Translation by [url=https://steamcommunity.com/profiles/76561198431667769]HunterWill[/url] and [url=https://steamcommunity.com/id/esirprus]Loafer[/url].
+- Korean Translation by [url=https://steamcommunity.com/profiles/76561198002738342]tafaret[/url]
+- Russian Translation by [url=https://steamcommunity.com/id/akutoda]AkutoDa[/url] & [url=https://steamcommunity.com/id/EdemTheRealOne]Edem[/url]
+
+[h1]You made or are looking for a submarine?[/h1]
+Post or look for submarines with kitchens made for this mod in [url=https://steamcommunity.com/workshop/filedetails/discussion/2954998725/3823047940163331471/]Submarines for Hungry Europans[/url]
