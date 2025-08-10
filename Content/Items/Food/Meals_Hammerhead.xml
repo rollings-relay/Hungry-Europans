@@ -76,7 +76,7 @@
       <AiTarget sightrange="1000" static="true" />
     </Item>
 
-    <Item hideinmenus="false" name="Spareribs" identifier="he-cookedhammerheadspareribs" variantof="he-poisoneffectpreset_regular" health="25" category="Misc" subcategory="Food - Hammerhead" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+    <Item hideinmenus="false" name="Spareribs" identifier="he-cookedhammerheadspareribs" variantof="he-poisoneffectpreset_regular" health="25" category="Misc" subcategory="Food - Hammerhead" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="False" requireaimtouse="True">
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
@@ -111,10 +111,10 @@
         </StatusEffect>
         
         <!--////////// REGULAR EATING \\\\\\\\\\-->
-        <StatusEffect type="OnUse" target="This" Condition="-1">
+        <StatusEffect type="OnSecondaryUse" target="This" Condition="-1">
           <Conditional InWater="false" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And">
+        <StatusEffect type="OnSecondaryUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <Affliction identifier="he-proteinrich" amount="50.0" />
           <Affliction identifier="ate_roast" amount="1" />
@@ -241,10 +241,10 @@
         </StatusEffect>
         
         <!--////////// REGULAR EATING \\\\\\\\\\-->
-        <StatusEffect type="OnUse" target="This" Condition="-1">
+        <StatusEffect type="OnSecondaryUse" target="This" Condition="-1">
           <Conditional InWater="false" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And">
+        <StatusEffect type="OnSecondaryUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <Affliction identifier="he-proteinrich" amount="50.0" />
           <Affliction identifier="ate_friedfood" amount="1" />

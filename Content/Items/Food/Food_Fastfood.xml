@@ -3,7 +3,7 @@
   <Items>
   
     <!-- Nuggets can't be poisoned -->
-    <Item hideinmenus="false" name="Nugget" identifier="he-cookednugget" health="3" category="Misc" subcategory="Food" maxstacksize="20" maxstacksizecharacterinventory="20" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,allowinfryer,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+    <Item hideinmenus="false" name="Nugget" identifier="he-cookednugget" health="3" category="Misc" subcategory="Food" maxstacksize="20" maxstacksizecharacterinventory="20" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,allowinfryer,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="False" requireaimtouse="True">
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
@@ -33,10 +33,10 @@
         </StatusEffect>
         
         <!--////////// REGULAR EATING \\\\\\\\\\-->
-        <StatusEffect type="OnUse" target="This" Condition="-1">
+        <StatusEffect type="OnSecondaryUse" target="This" Condition="-1">
           <Conditional InWater="false" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And">
+        <StatusEffect type="OnSecondaryUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <Affliction identifier="ate_friedfood" amount="1" />
           <Affliction identifier="he-stuffed" amount="2.0" />
@@ -49,7 +49,7 @@
       </Holdable>
     </Item>
 
-    <Item hideinmenus="false" name="Burger" identifier="he-burger" variantof="he-poisoneffectpreset_regular" health="25" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+    <Item hideinmenus="false" name="Burger" identifier="he-burger" variantof="he-poisoneffectpreset_regular" health="26" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_softitem" isshootable="False" requireaimtouse="True">
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
@@ -84,23 +84,36 @@
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
-        
+
+        <!-- Unwrap -->
+        <StatusEffect type="OnUse" target="This" Condition="25" setvalue="true" oneshot="true" comparison="And">
+          <Conditional ConditionPercentage="gte 100" />
+          <Conditional HasTag="neq opened" />
+          <Sound file="%ModDir%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
+        </StatusEffect>
+        <!-- Apply "opened" tag after a delay to avoid accidentally taking a bite instantly after unwrapping -->
+        <StatusEffect type="OnUse" target="This" settags="opened" delay="0.5" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
+
         <!--////////// REGULAR EATING \\\\\\\\\\-->
-        <StatusEffect type="OnUse" target="This" comparison="And" oneshot="true">
+        <StatusEffect type="OnSecondaryUse" target="This" Condition="-1.0" comparison="And">
+          <Conditional InWater="false" />
+          <Conditional HasTag="opened" />
+        </StatusEffect>
+        <StatusEffect type="OnSecondaryUse" target="This" comparison="And" oneshot="true">
           <Conditional InWater="false" />
           <Conditional ConditionPercentage="equals 100" />
+          <Conditional HasTag="opened" />
           <Sound file="%ModDir%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnSecondaryUse" target="This" comparison="And" oneshot="true">
           <Conditional InWater="false" />
           <Conditional ConditionPercentage="equals 50" />
+          <Conditional HasTag="opened" />
           <Sound file="%ModDir%/Content/Sounds/Items/Food/Unwrap.ogg" loop="false" range="200" volume="5.0" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="This" Condition="-1.0">
+        <StatusEffect type="OnSecondaryUse" target="This,Character" comparison="And">
           <Conditional InWater="false" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And">
-          <Conditional InWater="false" />
+          <Conditional HasTag="opened" />
           <Affliction identifier="ate_burger" amount="1" />
           <Affliction identifier="he-stuffed" amount="1.25" />
           <ReduceAffliction type="hunger" amount="1.25" />
@@ -115,7 +128,7 @@
       <AiTarget sightrange="1000" static="true" />
     </Item>
 
-    <Item hideinmenus="false" name="Hotdog" identifier="he-hotdog" variantof="he-poisoneffectpreset_regular" health="20" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+    <Item hideinmenus="false" name="Hotdog" identifier="he-hotdog" variantof="he-poisoneffectpreset_regular" health="20" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_softitem" isshootable="False" requireaimtouse="True">
       <PreferredContainer secondary="abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="True"/>
@@ -148,10 +161,10 @@
         </StatusEffect>
         
         <!--////////// REGULAR EATING \\\\\\\\\\-->
-        <StatusEffect type="OnUse" target="This" Condition="-1">
+        <StatusEffect type="OnSecondaryUse" target="This" Condition="-1">
           <Conditional InWater="false" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And">
+        <StatusEffect type="OnSecondaryUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <Affliction identifier="ate_hotdog" amount="1" />
           <Affliction identifier="he-stuffed" amount="1.25" />
@@ -361,7 +374,7 @@
       <AiTarget sightrange="1000" static="true" />
     </Item>
 
-    <Item hideinmenus="false" name="Pizza Slice" identifier="he-pizzaslice" variantof="he-poisoneffectpreset_regular" health="20" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+    <Item hideinmenus="false" name="Pizza Slice" identifier="he-pizzaslice" variantof="he-poisoneffectpreset_regular" health="20" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_softitem" isshootable="False" requireaimtouse="True">
       <PreferredContainer primary="refrigerator,table" secondary="kitchen,crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,274,41,10" depth="0.6" origin="0.5,0.5" />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,274,21,10" depth="0.6" maxcondition="50" />
@@ -390,10 +403,10 @@
         </StatusEffect>
         
         <!--////////// REGULAR EATING \\\\\\\\\\-->
-        <StatusEffect type="OnUse" target="This" Condition="-1">
+        <StatusEffect type="OnSecondaryUse" target="This" Condition="-1">
           <Conditional InWater="false" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And">
+        <StatusEffect type="OnSecondaryUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <Affliction identifier="ate_pizza" amount="1" />
           <Affliction identifier="he-stuffed" amount="0.625" />

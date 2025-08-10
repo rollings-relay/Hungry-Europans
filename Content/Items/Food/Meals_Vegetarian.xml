@@ -71,7 +71,7 @@
       <AiTarget sightrange="1000" static="true" />
     </Item>
 
-    <Item hideinmenus="false" name="Bubble Berry Jam Sandwich" identifier="he-sandwichbbjam" variantof="he-poisoneffectpreset_regular" health="15" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="A tasty sandwich with bubble berry jam." Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+    <Item hideinmenus="false" name="Bubble Berry Jam Sandwich" identifier="he-sandwichbbjam" variantof="he-poisoneffectpreset_regular" health="15" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="A tasty sandwich with bubble berry jam." Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="False" requireaimtouse="True">
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
@@ -106,10 +106,10 @@
         </StatusEffect>
         
         <!--////////// REGULAR EATING \\\\\\\\\\-->
-        <StatusEffect type="OnUse" target="This" Condition="-1.0">
+        <StatusEffect type="OnSecondaryUse" target="This" Condition="-1.0">
           <Conditional InWater="false" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And">
+        <StatusEffect type="OnSecondaryUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <Affliction identifier="ate_sandwich" amount="1" />
           <Affliction identifier="he-stuffed" amount="1.0" />
@@ -126,7 +126,7 @@
       <AiTarget sightrange="1000" static="true" />
     </Item>
 
-    <Item hideinmenus="false" name="Pomegrenade Jam Sandwich" identifier="he-sandwichpgjam" variantof="he-poisoneffectpreset_regular" health="15" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="A tasty sandwich with pomegrenade jam." Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+    <Item hideinmenus="false" name="Pomegrenade Jam Sandwich" identifier="he-sandwichpgjam" variantof="he-poisoneffectpreset_regular" health="15" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="A tasty sandwich with pomegrenade jam." Tags="smallitem,fooditem,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="False" requireaimtouse="True">
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
@@ -161,10 +161,10 @@
         </StatusEffect>
         
         <!--////////// REGULAR EATING \\\\\\\\\\-->
-        <StatusEffect type="OnUse" target="This" Condition="-1.0">
+        <StatusEffect type="OnSecondaryUse" target="This" Condition="-1.0">
           <Conditional InWater="false" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And">
+        <StatusEffect type="OnSecondaryUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <Affliction identifier="ate_sandwich" amount="1" />
           <Affliction identifier="he-stuffed" amount="1.5" />
@@ -182,7 +182,7 @@
     </Item>
 
     <!--OMELETTE-->
-    <Item name="Omelette" identifier="he-omelette" variantof="he-poisoneffectpreset_regular" health="15" category="Misc" maxstacksize="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,omelette,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True">
+    <Item name="Omelette" identifier="he-omelette" variantof="he-poisoneffectpreset_regular" health="15" category="Misc" maxstacksize="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,omelette,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_soft" isshootable="False" requireaimtouse="True">
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
@@ -215,10 +215,10 @@
         </StatusEffect>
         
         <!--////////// REGULAR EATING \\\\\\\\\\-->
-        <StatusEffect type="OnUse" target="This" Condition="-1.0">
+        <StatusEffect type="OnSecondaryUse" target="This" Condition="-1.0">
           <Conditional InWater="false" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="Character" comparison="And">
+        <StatusEffect type="OnSecondaryUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <Affliction identifier="ate_omelette" amount="1" />
           <Affliction identifier="he-stuffed" amount="1.5" />
