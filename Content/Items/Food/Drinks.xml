@@ -35,7 +35,7 @@
       <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- When used in Health GUI -->
-        <StatusEffect type="OnSuccess" target="This" setvalue="true" oneshot="true" aimpos="28,24" aimangle="120" holdpos="30,-15" holdangle="0" /> 
+        <StatusEffect type="OnSuccess" target="This" setvalue="true" oneshot="true" aimpos="28,24" aimangle="120" settags="opened" holdpos="30,-15" holdangle="0" /> 
         <StatusEffect type="OnSuccess" target="This" Condition="-2.0" disabledeltatime="true" >
           <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
           <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
@@ -46,15 +46,20 @@
           <Affliction identifier="burn" amount="0.15" /> 
         </StatusEffect>        
         
-        <!-- Unbottle --> 
-        <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true">
+        <!-- Unbottle -->
+        <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
           <Conditional condition="gte 11" />
+          <Conditional HasTag="neq opened" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBottle.ogg" loop="false" range="200" volume="5.0" />
         </StatusEffect>
+        <!-- Apply new aimpos, aimangle and "opened" tag after a delay to avoid accidentally taking a sip instantly when opening the bottle -->
+        <StatusEffect type="OnUse" target="This" aimpos="26,24" aimangle="120" settags="opened" delay="0.5" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
                 
         <!-- Regular drinking RMB after unbottle --> 
-        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-2.0" aimpos="28,24" >
+        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
+          <Conditional InWater="false" />
           <Conditional condition="lt 11" />
+          <Conditional HasTag="opened" />
           <Affliction identifier="he-internalburn" amount="8" />
           <Affliction identifier="psychosisresistance" amount="80" />
           <Affliction identifier="drunk" amount="10.0" />
@@ -111,14 +116,19 @@
       <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         
         <!-- Unbottle --> 
-        <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true">
+        <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
           <Conditional condition="gte 11" />
+          <Conditional HasTag="neq opened" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenCan.ogg" loop="false" range="200" volume="1.5" />
         </StatusEffect>
+        <!-- Apply new aimpos, aimangle and "opened" tag after a delay to avoid accidentally taking a sip instantly when opening the bottle -->
+        <StatusEffect type="OnUse" target="This" aimpos="22,23" aimangle="120" settags="opened" delay="0.5" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
                 
         <!-- Regular drinking RMB after unbottle --> 
-        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" aimpos="22,23" >
+        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
+          <Conditional InWater="false" />
           <Conditional condition="lt 11" />
+          <Conditional HasTag="opened" />
           <Affliction identifier="durationincrease" amount="30" />
           <ReduceAffliction type="thirst" amount="2.0" />
           <Affliction identifier="fillbladder" amount="2.0" />
@@ -158,14 +168,19 @@
       <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Unbottle --> 
-        <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true">
+        <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
           <Conditional condition="gte 11" />
+          <Conditional HasTag="neq opened" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenCan.ogg" loop="false" range="200" volume="1.5" />
         </StatusEffect>
+        <!-- Apply new aimpos, aimangle and "opened" tag after a delay to avoid accidentally taking a sip instantly when opening the bottle -->
+        <StatusEffect type="OnUse" target="This" aimpos="22,23" aimangle="120" settags="opened" delay="0.5" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
                 
         <!-- Regular drinking RMB after unbottle --> 
-        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" aimpos="22,23" >
+        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
+          <Conditional InWater="false" />
           <Conditional condition="lt 11" />
+          <Conditional HasTag="opened" />
           <ReduceAffliction identifier="drunk" amount="1.5" />
           <ReduceAffliction identifier="drunknodebuffs" amount="1.5" />
           <ReduceAffliction identifier="hallucinating" amount="1.5" />
@@ -224,7 +239,7 @@
       <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- When used in Health GUI -->
-        <StatusEffect type="OnSuccess" target="This" setvalue="true" oneshot="true" aimpos="28,24" aimangle="120" holdpos="30,-15" holdangle="0" /> 
+        <StatusEffect type="OnSuccess" target="This" setvalue="true" oneshot="true" aimpos="26,26" aimangle="120" settags="opened" holdpos="30,-15" holdangle="0" /> 
         <StatusEffect type="OnSuccess" target="This" Condition="-2.0" disabledeltatime="true" >
           <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
           <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
@@ -239,15 +254,20 @@
           <Affliction identifier="burn" amount="0.15" /> 
         </StatusEffect>
         
-        <!-- Unbottle --> 
-        <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true">
+        <!-- Unbottle -->
+        <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
           <Conditional condition="gte 11" />
+          <Conditional HasTag="neq opened" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBottle.ogg" loop="false" range="200" volume="1.5" />
         </StatusEffect>
+        <!-- Apply new aimpos, aimangle and "opened" tag after a delay to avoid accidentally taking a sip instantly when opening the bottle -->
+        <StatusEffect type="OnUse" target="This" aimpos="26,26" aimangle="120" settags="opened" delay="0.5" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
                 
         <!-- Regular drinking RMB after unbottle --> 
-        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" aimpos="28,24" >
+        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
+          <Conditional InWater="false" />
           <Conditional condition="lt 11" />
+          <Conditional HasTag="opened" />
           <Affliction identifier="psychosisresistance" amount="7" />
           <ReduceAffliction identifier="psychosis" amount="1" />
           <ReduceAffliction identifier="nausea" amount="2" />
@@ -395,7 +415,7 @@
       <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- When used in Health GUI -->
-        <StatusEffect type="OnSuccess" target="This" setvalue="true" oneshot="true" aimpos="28,24" aimangle="120" holdpos="30,-15" holdangle="0" /> 
+        <StatusEffect type="OnSuccess" target="This" setvalue="true" oneshot="true" aimpos="26,26" aimangle="120" holdpos="30,-15" settags="opened" holdangle="0" /> 
         <StatusEffect type="OnSuccess" target="This" Condition="-2.0" disabledeltatime="true" >
           <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
           <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
@@ -410,15 +430,20 @@
           <Affliction identifier="burn" amount="0.15" /> 
         </StatusEffect>
         
-        <!-- Unbottle --> 
-        <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true">
+        <!-- Unbottle -->
+        <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
           <Conditional condition="gte 11" />
+          <Conditional HasTag="neq opened" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBottle.ogg" loop="false" range="200" volume="1.5" />
         </StatusEffect>
+        <!-- Apply new aimpos, aimangle and "opened" tag after a delay to avoid accidentally taking a sip instantly when opening the bottle -->
+        <StatusEffect type="OnUse" target="This" aimpos="26,26" aimangle="120" settags="opened" delay="0.5" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
                 
         <!-- Regular drinking RMB after unbottle --> 
-        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" aimpos="28,24" >
+        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
+          <Conditional InWater="false" />
           <Conditional condition="lt 11" />
+          <Conditional HasTag="opened" />
           <Affliction identifier="psychosisresistance" amount="7" />
           <ReduceAffliction identifier="psychosis" amount="1" />
           <ReduceAffliction identifier="nausea" amount="2" />
@@ -504,15 +529,20 @@
       <SuitableTreatment type="chemaddiction" suitability="50" />
       <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         
-        <!-- Unbottle --> 
-        <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true">
+        <!-- Unbottle -->
+        <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
           <Conditional condition="gte 11" />
+          <Conditional HasTag="neq opened" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBottle.ogg" loop="false" range="200" volume="1.5" />
         </StatusEffect>
+        <!-- Apply new aimpos, aimangle and "opened" tag after a delay to avoid accidentally taking a sip instantly when opening the bottle -->
+        <StatusEffect type="OnUse" target="This" aimpos="25,25" aimangle="120" settags="opened" delay="0.5" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
                 
         <!-- Regular drinking RMB after unbottle --> 
-        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" aimpos="28,24" >
+        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
+          <Conditional InWater="false" />
           <Conditional condition="lt 11" />
+          <Conditional HasTag="opened" />
           <Affliction identifier="psychosisresistance" amount="6" />
           <Affliction identifier="applydrunk" amount="2.5" />
           <ReduceAffliction identifier="hallucinating" amount="2.0" />
@@ -604,15 +634,20 @@
       <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         
         <!-- Unbottle --> 
-        <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true">
+        <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
           <Conditional condition="gte 11" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBeerBottle1.ogg" loop="false" selectionmode="Random" range="200" volume="3.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBeerBottle2.ogg" loop="false" selectionmode="Random" range="200" volume="3.0" />
+          <Conditional HasTag="neq opened" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBeerBottle1.ogg" loop="false" range="200" volume="1.5" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBeerBottle2.ogg" loop="false" range="200" volume="1.5" selectionmode="Random" />
         </StatusEffect>
+        <!-- Apply new aimpos, aimangle and "opened" tag after a delay to avoid accidentally taking a sip instantly when opening the bottle -->
+        <StatusEffect type="OnUse" target="This" aimpos="25,25" aimangle="120" settags="opened" delay="0.5" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
                 
         <!-- Regular drinking RMB after unbottle --> 
-        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" aimpos="28,24" >
+        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
+          <Conditional InWater="false" />
           <Conditional condition="lt 11" />
+          <Conditional HasTag="opened" />
           <Affliction identifier="drunk" amount="3.0" />
           <Affliction identifier="he-halucinova" amount="9.0" />
           <ReduceAffliction identifier="embarrassment" strength="10" />
@@ -697,15 +732,20 @@
       <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Unbottle --> 
-        <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true">
+        <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
           <Conditional condition="gte 11" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBeerBottle1.ogg" loop="false" selectionmode="Random" range="200" volume="3.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBeerBottle2.ogg" loop="false" selectionmode="Random" range="200" volume="3.0" />
+          <Conditional HasTag="neq opened" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBeerBottle1.ogg" loop="false" range="200" volume="1.5" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBeerBottle2.ogg" loop="false" range="200" volume="1.5" selectionmode="Random" />
         </StatusEffect>
+        <!-- Apply new aimpos, aimangle and "opened" tag after a delay to avoid accidentally taking a sip instantly when opening the bottle -->
+        <StatusEffect type="OnUse" target="This" aimpos="25,24" aimangle="120" settags="opened" delay="0.5" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
                 
         <!-- Regular drinking RMB after unbottle --> 
-        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" aimpos="28,24" >
+        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
+          <Conditional InWater="false" />
           <Conditional condition="lt 11" />
+          <Conditional HasTag="opened" />
           <Affliction identifier="psychosisresistance" amount="3" />
           <Affliction identifier="applydrunk" amount="1" />
           <ReduceAffliction identifier="nausea" amount="1" />
@@ -786,15 +826,20 @@
       <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Unbottle --> 
-        <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true">
+        <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
           <Conditional condition="gte 11" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBeerBottle1.ogg" loop="false" selectionmode="Random" range="200" volume="3.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBeerBottle2.ogg" loop="false" selectionmode="Random" range="200" volume="3.0" />
+          <Conditional HasTag="neq opened" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBeerBottle1.ogg" loop="false" range="200" volume="1.5" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBeerBottle2.ogg" loop="false" range="200" volume="1.5" selectionmode="Random" />
         </StatusEffect>
+        <!-- Apply new aimpos, aimangle and "opened" tag after a delay to avoid accidentally taking a sip instantly when opening the bottle -->
+        <StatusEffect type="OnUse" target="This" aimpos="25,24" aimangle="120" settags="opened" delay="0.5" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
                 
         <!-- Regular drinking RMB after unbottle --> 
-        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" aimpos="28,24" >
+        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
+          <Conditional InWater="false" />
           <Conditional condition="lt 11" />
+          <Conditional HasTag="opened" />
           <Affliction identifier="psychosisresistance" amount="3" />
           <Affliction identifier="applydrunk" amount="1" />
           <ReduceAffliction identifier="nausea" amount="1" />
@@ -878,15 +923,20 @@
       <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Unbottle --> 
-        <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true">
+        <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
           <Conditional condition="gte 11" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBeerBottle1.ogg" loop="false" selectionmode="Random" range="200" volume="3.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBeerBottle2.ogg" loop="false" selectionmode="Random" range="200" volume="3.0" />
+          <Conditional HasTag="neq opened" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBeerBottle1.ogg" loop="false" range="200" volume="1.5" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBeerBottle2.ogg" loop="false" range="200" volume="1.5" selectionmode="Random" />
         </StatusEffect>
+        <!-- Apply new aimpos, aimangle and "opened" tag after a delay to avoid accidentally taking a sip instantly when opening the bottle -->
+        <StatusEffect type="OnUse" target="This" aimpos="25,24" aimangle="120" settags="opened" delay="0.5" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
                 
         <!-- Regular drinking RMB after unbottle --> 
-        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" aimpos="28,24" >
+        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
+          <Conditional InWater="false" />
           <Conditional condition="lt 11" />
+          <Conditional HasTag="opened" />
           <Affliction identifier="psychosisresistance" amount="3" />
           <Affliction identifier="applydrunk" amount="1" />
           <Affliction identifier="huskinfectionresistance" amount="20" />
@@ -972,15 +1022,20 @@
       <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Unbottle --> 
-        <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true">
+        <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
           <Conditional condition="gte 11" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBeerBottle1.ogg" loop="false" selectionmode="Random" range="200" volume="3.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBeerBottle2.ogg" loop="false" selectionmode="Random" range="200" volume="3.0" />
+          <Conditional HasTag="neq opened" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBeerBottle1.ogg" loop="false" range="200" volume="1.5" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBeerBottle2.ogg" loop="false" range="200" volume="1.5" selectionmode="Random" />
         </StatusEffect>
+        <!-- Apply new aimpos, aimangle and "opened" tag after a delay to avoid accidentally taking a sip instantly when opening the bottle -->
+        <StatusEffect type="OnUse" target="This" aimpos="25,24" aimangle="120" settags="opened" delay="0.5" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
                 
         <!-- Regular drinking RMB after unbottle --> 
-        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" aimpos="28,24" >
+        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
+          <Conditional InWater="false" />
           <Conditional condition="lt 11" />
+          <Conditional HasTag="opened" />
           <Affliction identifier="psychosisresistance" amount="3" />
           <Affliction identifier="applydrunk" amount="1" />
           <Affliction identifier="he-clownjuice" amount="20" />
@@ -1062,15 +1117,20 @@
       <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Unbottle --> 
-        <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true">
+        <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
           <Conditional condition="gte 11" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBeerBottle1.ogg" loop="false" selectionmode="Random" range="200" volume="3.0" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBeerBottle2.ogg" loop="false" selectionmode="Random" range="200" volume="3.0" />
+          <Conditional HasTag="neq opened" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBeerBottle1.ogg" loop="false" range="200" volume="1.5" selectionmode="Random" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBeerBottle2.ogg" loop="false" range="200" volume="1.5" selectionmode="Random" />
         </StatusEffect>
+        <!-- Apply new aimpos, aimangle and "opened" tag after a delay to avoid accidentally taking a sip instantly when opening the bottle -->
+        <StatusEffect type="OnUse" target="This" aimpos="25,24" aimangle="120" settags="opened" delay="0.5" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
                 
         <!-- Regular drinking RMB after unbottle --> 
-        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" aimpos="28,24" >
+        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
+          <Conditional InWater="false" />
           <Conditional condition="lt 11" />
+          <Conditional HasTag="opened" />
           <Affliction identifier="psychosisresistance" amount="3" />
           <Affliction identifier="applydrunk" amount="1.5" />
           <Affliction identifier="he-reaperstribute" amount="10" />
@@ -1202,15 +1262,20 @@
       <SuitableTreatment type="thirst" suitability="100" />
       <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
-        <!-- Unbottle --> 
-        <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true">
+        <!-- Unbottle -->
+        <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
           <Conditional condition="gte 11" />
+          <Conditional HasTag="neq opened" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenCan.ogg" loop="false" range="200" volume="1.5" />
         </StatusEffect>
+        <!-- Apply new aimpos, aimangle and "opened" tag after a delay to avoid accidentally taking a sip instantly when opening the bottle -->
+        <StatusEffect type="OnUse" target="This" aimpos="22,23" aimangle="120" settags="opened" delay="0.5" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
                 
         <!-- Regular drinking RMB after unbottle --> 
-        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" aimpos="22,23" >
+        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
+          <Conditional InWater="false" />
           <Conditional condition="lt 11" />
+          <Conditional HasTag="opened" />
           <ReduceAffliction identifier="drunk" amount="1.5" />
           <ReduceAffliction identifier="drunknodebuffs" amount="1.5" />
           <ReduceAffliction identifier="hallucinating" amount="1.5" />
@@ -1251,15 +1316,20 @@
       <SuitableTreatment type="thirst" suitability="95" />
       <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
-        <!-- Unbottle --> 
-        <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true">
+        <!-- Unbottle -->
+        <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
           <Conditional condition="gte 11" />
+          <Conditional HasTag="neq opened" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenCan.ogg" loop="false" range="200" volume="1.5" />
         </StatusEffect>
+        <!-- Apply new aimpos, aimangle and "opened" tag after a delay to avoid accidentally taking a sip instantly when opening the bottle -->
+        <StatusEffect type="OnUse" target="This" aimpos="22,23" aimangle="120" settags="opened" delay="0.5" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
                 
         <!-- Regular drinking RMB after unbottle --> 
-        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" aimpos="22,23" >
+        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
+          <Conditional InWater="false" />
           <Conditional condition="lt 11" />
+          <Conditional HasTag="opened" />
           <ReduceAffliction identifier="drunk" amount="1.5" />
           <ReduceAffliction identifier="drunknodebuffs" amount="1.5" />
           <ReduceAffliction identifier="hallucinating" amount="1.5" />
@@ -1306,15 +1376,20 @@
       <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Unbottle --> 
-        <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true">
+        <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
           <Conditional condition="gte 11" />
+          <Conditional HasTag="neq opened" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBeerBottle1.ogg" loop="false" range="200" volume="1.5" selectionmode="Random" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBeerBottle2.ogg" loop="false" range="200" volume="1.5" selectionmode="Random" />
         </StatusEffect>
+        <!-- Apply new aimpos, aimangle and "opened" tag after a delay to avoid accidentally taking a sip instantly when opening the bottle -->
+        <StatusEffect type="OnUse" target="This" aimpos="25,24" aimangle="120" settags="opened" delay="0.5" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
                 
         <!-- Regular drinking RMB after unbottle --> 
-        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" aimpos="28,24" >
+        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
+          <Conditional InWater="false" />
           <Conditional condition="lt 11" />
+          <Conditional HasTag="opened" />
           <ReduceAffliction identifier="drunk" amount="1.5" />
           <ReduceAffliction identifier="drunknodebuffs" amount="1.5" />
           <ReduceAffliction identifier="hallucinating" amount="1.5" />
@@ -1391,15 +1466,20 @@
       <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- Unbottle --> 
-        <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true">
+        <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
           <Conditional condition="gte 11" />
+          <Conditional HasTag="neq opened" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBeerBottle1.ogg" loop="false" range="200" volume="1.5" selectionmode="Random" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBeerBottle2.ogg" loop="false" range="200" volume="1.5" selectionmode="Random" />
         </StatusEffect>
+        <!-- Apply new aimpos, aimangle and "opened" tag after a delay to avoid accidentally taking a sip instantly when opening the bottle -->
+        <StatusEffect type="OnUse" target="This" aimpos="25,24" aimangle="120" settags="opened" delay="0.5" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
                 
         <!-- Regular drinking RMB after unbottle --> 
-        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" aimpos="28,24" >
+        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
+          <Conditional InWater="false" />
           <Conditional condition="lt 11" />
+          <Conditional HasTag="opened" />
           <ReduceAffliction identifier="drunk" amount="1.5" />
           <ReduceAffliction identifier="drunknodebuffs" amount="1.5" />
           <ReduceAffliction identifier="hallucinating" amount="1.5" />
@@ -1482,22 +1562,27 @@
       <LightComponent range="70.0" lightcolor="255,37,92,150" IsOn="true" flicker="0.2" flickerspeed="0.3" castshadows="false" alphablend="false" allowingameediting="false" powerconsumption="0" />
       <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
-        <!-- Unbottle --> 
-        <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true">
+        <!-- Unbottle -->
+        <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
           <Conditional condition="gte 11" />
+          <Conditional HasTag="neq opened" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBeerBottle1.ogg" loop="false" range="200" volume="1.5" selectionmode="Random" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBeerBottle2.ogg" loop="false" range="200" volume="1.5" selectionmode="Random" />
         </StatusEffect>
+        <!-- Apply new aimpos, aimangle and "opened" tag after a delay to avoid accidentally taking a sip instantly when opening the bottle -->
+        <StatusEffect type="OnUse" target="This" aimpos="25,24" aimangle="120" settags="opened" delay="0.5" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
                 
         <!-- Regular drinking RMB after unbottle --> 
-        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" aimpos="28,24" >
+        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
+          <Conditional InWater="false" />
           <Conditional condition="lt 11" />
+          <Conditional HasTag="opened" />
           <Affliction identifier="applystomachache" strength="0.25" />
           <ReduceAffliction identifier="drunk" amount="2.0" />
           <ReduceAffliction identifier="drunknodebuffs" amount="2.0" />
           <Affliction identifier="haste" amount="20.0" />
           <Affliction identifier="radiationsickness" strength="0.2" />
-          <Affliction identifier="he-giveradianttalent" amount="8.0" />
+          <Affliction identifier="he-giveradianttalent" amount="9.9" />
           <ReduceAffliction type="thirst" amount="1.5" />
           <Affliction identifier="fillbladder" amount="2.0" />
           <Affliction identifier="drank_cola" amount="1" />
@@ -1727,7 +1812,7 @@
       <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" holdpos="0,0" holdangle="0" handle1="-5,-10" handle2="-5,-10" aimpos="30,-15" aimangle="0" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- When Used in Health GUI, heals minor burns -->
-        <StatusEffect type="OnSuccess" target="This" setvalue="true" oneshot="true" aimpos="28,26" aimangle="120" holdpos="30,-15" holdangle="0" /> 
+        <StatusEffect type="OnSuccess" target="This" setvalue="true" oneshot="true" aimpos="28,26" aimangle="120" settags="opened" holdpos="30,-15" holdangle="0" /> 
         <StatusEffect type="OnSuccess" target="This" Condition="-3.0" disabledeltatime="true" >            
           <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
           <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
@@ -1748,17 +1833,13 @@
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
         </StatusEffect>
 
-        <!-- Unbottle --> 
-        <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true">
-          <Conditional condition="gte 11" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBottle.ogg" loop="false" selectionmode="Random" range="200" volume="3.0" />
-        </StatusEffect>
-
-        <!-- Regular drinking - RMB --> 
-        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" aimpos="23,23" comparison="And">
-          <Conditional conditionpercentage="lt 100" />
+        <!-- Unbottle moved to ItemComponent to adjust aimpos per variant -->
+                
+        <!-- Regular drinking RMB after unbottle -->
+        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
           <Conditional InWater="false" />
           <Conditional condition="lt 11" />
+          <Conditional HasTag="opened" />
           <ReduceAffliction type="thirst" amount="3.0" />
           <ReduceAffliction identifier="he-stuffed" amount="0.25" />
           <ReduceAffliction identifier="drunk" amount="0.5" />
@@ -1806,7 +1887,16 @@
           </StatusEffect>
         </Button>
       </CustomInterface>
-      <ItemComponent>
+      <ItemComponent characterusable="true">
+        <!-- Unbottle -->
+        <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
+          <Conditional condition="gte 11" />
+          <Conditional HasTag="neq opened" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBottle.ogg" loop="false" selectionmode="Random" range="200" volume="3.0" />
+        </StatusEffect>
+        <!-- Apply new aimpos, aimangle and "opened" tag after a delay to avoid accidentally taking a sip instantly when opening the bottle -->
+        <StatusEffect type="OnUse" target="This" aimpos="25,24" aimangle="120" settags="opened" delay="0.5" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
+        <!-- Remove the item and spawn empty bottle variant when empty -->
         <StatusEffect type="OnBroken" target="This">
           <RemoveItem identifier="he-emptybottle" />
           <SpawnItem identifier="he-emptybottle" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
@@ -1854,7 +1944,16 @@
           </StatusEffect>
         </Button>
       </CustomInterface>    
-      <ItemComponent>
+      <ItemComponent characterusable="true">
+        <!-- Unbottle -->
+        <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
+          <Conditional condition="gte 11" />
+          <Conditional HasTag="neq opened" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBottle.ogg" loop="false" selectionmode="Random" range="200" volume="3.0" />
+        </StatusEffect>
+        <!-- Apply new aimpos, aimangle and "opened" tag after a delay to avoid accidentally taking a sip instantly when opening the bottle -->
+        <StatusEffect type="OnUse" target="This" aimpos="26,26" aimangle="120" settags="opened" delay="0.5" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
+        <!-- Remove the item and spawn empty bottle variant when empty -->
         <StatusEffect type="OnBroken" target="This">
           <RemoveItem identifier="he-emptybottlerum" />
           <SpawnItem identifier="he-emptybottlerum" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
@@ -1902,7 +2001,16 @@
           </StatusEffect>
         </Button>
       </CustomInterface> 
-      <ItemComponent>
+      <ItemComponent characterusable="true">
+        <!-- Unbottle -->
+        <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
+          <Conditional condition="gte 11" />
+          <Conditional HasTag="neq opened" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBottle.ogg" loop="false" selectionmode="Random" range="200" volume="3.0" />
+        </StatusEffect>
+        <!-- Apply new aimpos, aimangle and "opened" tag after a delay to avoid accidentally taking a sip instantly when opening the bottle -->
+        <StatusEffect type="OnUse" target="This" aimpos="25,24" aimangle="120" settags="opened" delay="0.5" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
+        <!-- Remove the item and spawn empty bottle variant when empty -->
         <StatusEffect type="OnBroken" target="This">
           <RemoveItem identifier="he-emptybottlewhiskey" />
           <SpawnItem identifier="he-emptybottlewhiskey" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
@@ -1950,7 +2058,16 @@
           </StatusEffect>
         </Button>
       </CustomInterface>
-      <ItemComponent>
+      <ItemComponent characterusable="true">
+        <!-- Unbottle -->
+        <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
+          <Conditional condition="gte 11" />
+          <Conditional HasTag="neq opened" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBottle.ogg" loop="false" selectionmode="Random" range="200" volume="3.0" />
+        </StatusEffect>
+        <!-- Apply new aimpos, aimangle and "opened" tag after a delay to avoid accidentally taking a sip instantly when opening the bottle -->
+        <StatusEffect type="OnUse" target="This" aimpos="25,25" aimangle="120" settags="opened" delay="0.5" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
+        <!-- Remove the item and spawn empty bottle variant when empty -->
         <StatusEffect type="OnBroken" target="This">
           <RemoveItem identifier="he-emptybottlehalucinova" />
           <SpawnItem identifier="he-emptybottlehalucinova" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
@@ -1998,7 +2115,16 @@
           </StatusEffect>
         </Button>
       </CustomInterface>
-      <ItemComponent>
+      <ItemComponent characterusable="true">
+        <!-- Unbottle -->
+        <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
+          <Conditional condition="gte 11" />
+          <Conditional HasTag="neq opened" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBottle.ogg" loop="false" selectionmode="Random" range="200" volume="3.0" />
+        </StatusEffect>
+        <!-- Apply new aimpos, aimangle and "opened" tag after a delay to avoid accidentally taking a sip instantly when opening the bottle -->
+        <StatusEffect type="OnUse" target="This" aimpos="25,24" aimangle="120" settags="opened" delay="0.5" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
+        <!-- Remove the item and spawn empty bottle variant when empty -->
         <StatusEffect type="OnBroken" target="This">
           <RemoveItem identifier="he-emptybottlebeer" />
           <SpawnItem identifier="he-emptybottlebeer" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
@@ -2034,7 +2160,7 @@
         </StatusEffect>   
 
         <!-- When Used in Health GUI, heals minor burns -->
-        <StatusEffect type="OnSuccess" target="This" setvalue="true" oneshot="true" aimpos="28,26" aimangle="120" holdpos="30,-15" holdangle="0" /> 
+        <StatusEffect type="OnSuccess" target="This" setvalue="true" oneshot="true" aimpos="28,26" aimangle="120" settags="opened" holdpos="30,-15" holdangle="0" /> 
         <StatusEffect type="OnSuccess" target="This" Condition="-3.0" disabledeltatime="true" >            
           <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
           <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
@@ -2055,18 +2181,12 @@
           <ReduceAffliction type="thirst" amount="3.0" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
         </StatusEffect>
-
-        <!-- Unbottle --> 
-        <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true">
-          <Conditional condition="gte 11" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBottle.ogg" loop="false" selectionmode="Random" range="200" volume="3.0" />
-        </StatusEffect>
                 
         <!-- Regular drinking - RMB --> 
-        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" aimpos="23,23" comparison="And">
-          <Conditional conditionpercentage="lt 100" />
+        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
           <Conditional InWater="false" />
           <Conditional condition="lt 11" />
+          <Conditional HasTag="opened" />
           <ReduceAffliction type="thirst" amount="2.0" />
           <Affliction identifier="deliriuminepoisoning" amount="1" probability="0.001"/>
           <Affliction identifier="applystomachache" amount="4" />
@@ -2112,7 +2232,16 @@
           </StatusEffect>
         </Button>
       </CustomInterface>
-      <ItemComponent>
+      <ItemComponent characterusable="true">
+        <!-- Unbottle -->
+        <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
+          <Conditional condition="gte 11" />
+          <Conditional HasTag="neq opened" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBottle.ogg" loop="false" selectionmode="Random" range="200" volume="3.0" />
+        </StatusEffect>
+        <!-- Apply new aimpos, aimangle and "opened" tag after a delay to avoid accidentally taking a sip instantly when opening the bottle -->
+        <StatusEffect type="OnUse" target="This" aimpos="25,24" aimangle="120" settags="opened" delay="0.5" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
+        <!-- Remove the item and spawn empty bottle variant when empty -->
         <StatusEffect type="OnBroken" target="This">
           <RemoveItem identifier="he-emptybottle" />
           <SpawnItem identifier="he-emptybottle" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
@@ -2148,7 +2277,16 @@
           </StatusEffect>
         </Button>
       </CustomInterface>   
-      <ItemComponent>
+      <ItemComponent characterusable="true">
+        <!-- Unbottle -->
+        <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
+          <Conditional condition="gte 11" />
+          <Conditional HasTag="neq opened" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBottle.ogg" loop="false" selectionmode="Random" range="200" volume="3.0" />
+        </StatusEffect>
+        <!-- Apply new aimpos, aimangle and "opened" tag after a delay to avoid accidentally taking a sip instantly when opening the bottle -->
+        <StatusEffect type="OnUse" target="This" aimpos="26,26" aimangle="120" settags="opened" delay="0.5" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
+        <!-- Remove the item and spawn empty bottle variant when empty -->
         <StatusEffect type="OnBroken" target="This">
           <RemoveItem identifier="he-emptybottlerum" />
           <SpawnItem identifier="he-emptybottlerum" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
@@ -2184,7 +2322,16 @@
           </StatusEffect>
         </Button>
       </CustomInterface> 
-      <ItemComponent>
+      <ItemComponent characterusable="true">
+        <!-- Unbottle -->
+        <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
+          <Conditional condition="gte 11" />
+          <Conditional HasTag="neq opened" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBottle.ogg" loop="false" selectionmode="Random" range="200" volume="3.0" />
+        </StatusEffect>
+        <!-- Apply new aimpos, aimangle and "opened" tag after a delay to avoid accidentally taking a sip instantly when opening the bottle -->
+        <StatusEffect type="OnUse" target="This" aimpos="25,25" aimangle="120" settags="opened" delay="0.5" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
+        <!-- Remove the item and spawn empty bottle variant when empty -->
         <StatusEffect type="OnBroken" target="This">
           <RemoveItem identifier="he-emptybottlewhiskey" />
           <SpawnItem identifier="he-emptybottlewhiskey" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
@@ -2220,7 +2367,16 @@
           </StatusEffect>
         </Button>
       </CustomInterface>
-      <ItemComponent>
+      <ItemComponent characterusable="true">
+        <!-- Unbottle -->
+        <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
+          <Conditional condition="gte 11" />
+          <Conditional HasTag="neq opened" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBottle.ogg" loop="false" selectionmode="Random" range="200" volume="3.0" />
+        </StatusEffect>
+        <!-- Apply new aimpos, aimangle and "opened" tag after a delay to avoid accidentally taking a sip instantly when opening the bottle -->
+        <StatusEffect type="OnUse" target="This" aimpos="25,25" aimangle="120" settags="opened" delay="0.5" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
+        <!-- Remove the item and spawn empty bottle variant when empty -->
         <StatusEffect type="OnBroken" target="This">
           <RemoveItem identifier="he-emptybottlehalucinova" />
           <SpawnItem identifier="he-emptybottlehalucinova" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
@@ -2256,7 +2412,16 @@
           </StatusEffect>
         </Button>
       </CustomInterface>
-      <ItemComponent>
+      <ItemComponent characterusable="true">
+        <!-- Unbottle -->
+        <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
+          <Conditional condition="gte 11" />
+          <Conditional HasTag="neq opened" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBottle.ogg" loop="false" selectionmode="Random" range="200" volume="3.0" />
+        </StatusEffect>
+        <!-- Apply new aimpos, aimangle and "opened" tag after a delay to avoid accidentally taking a sip instantly when opening the bottle -->
+        <StatusEffect type="OnUse" target="This" aimpos="25,27" aimangle="120" settags="opened" delay="0.5" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
+        <!-- Remove the item and spawn empty bottle variant when empty -->
         <StatusEffect type="OnBroken" target="This">
           <RemoveItem identifier="he-emptybottlebeer" />
           <SpawnItem identifier="he-emptybottlebeer" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
@@ -2283,7 +2448,7 @@
       <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" holdpos="0,0" holdangle="0" handle1="-5,-10" handle2="-5,-10" aimpos="30,-15" aimangle="0" aimable="false" swingwhenaiming="false" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!-- When Used in Health GUI, heals minor burns -->
-        <StatusEffect type="OnSuccess" target="This" setvalue="true" oneshot="true" aimpos="28,26" aimangle="120" holdpos="30,-15" holdangle="0" /> 
+        <StatusEffect type="OnSuccess" target="This" setvalue="true" oneshot="true" aimpos="28,26" aimangle="120" settags="opened" holdpos="30,-15" holdangle="0" /> 
         <StatusEffect type="OnSuccess" target="This" Condition="-3.0" disabledeltatime="true" >            
           <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
           <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
@@ -2304,18 +2469,12 @@
           <ReduceAffliction type="thirst" amount="3.0" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
         </StatusEffect>
-
-        <!-- Unbottle --> 
-        <StatusEffect type="OnUse" target="This" Condition="10" aimangle="120" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true">
-          <Conditional condition="gte 11" />
-          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBottle.ogg" loop="false" selectionmode="Random" range="200" volume="3.0" />
-        </StatusEffect>
                 
         <!-- Regular drinking - RMB --> 
-        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" aimpos="23,23" comparison="And">
-          <Conditional conditionpercentage="lt 100" />
+        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
           <Conditional InWater="false" />
           <Conditional condition="lt 11" />
+          <Conditional HasTag="opened" />
           <ReduceAffliction type="thirst" amount="2.0" />
           <Affliction identifier="deliriuminepoisoning" amount="1" probability="0.001"/>
           <Affliction identifier="applystomachache" amount="8" />
@@ -2361,7 +2520,16 @@
           </StatusEffect>
         </Button>
       </CustomInterface>
-      <ItemComponent>
+      <ItemComponent characterusable="true">
+        <!-- Unbottle -->
+        <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
+          <Conditional condition="gte 11" />
+          <Conditional HasTag="neq opened" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBottle.ogg" loop="false" selectionmode="Random" range="200" volume="3.0" />
+        </StatusEffect>
+        <!-- Apply new aimpos, aimangle and "opened" tag after a delay to avoid accidentally taking a sip instantly when opening the bottle -->
+        <StatusEffect type="OnUse" target="This" aimpos="25,24" aimangle="120" settags="opened" delay="0.5" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
+        <!-- Remove the item and spawn empty bottle variant when empty -->
         <StatusEffect type="OnBroken" target="This">
           <RemoveItem identifier="he-emptybottle" />
           <SpawnItem identifier="he-emptybottle" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
@@ -2393,7 +2561,16 @@
           </StatusEffect>
         </Button>
       </CustomInterface>   
-      <ItemComponent>
+      <ItemComponent characterusable="true">
+        <!-- Unbottle -->
+        <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
+          <Conditional condition="gte 11" />
+          <Conditional HasTag="neq opened" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBottle.ogg" loop="false" selectionmode="Random" range="200" volume="3.0" />
+        </StatusEffect>
+        <!-- Apply new aimpos, aimangle and "opened" tag after a delay to avoid accidentally taking a sip instantly when opening the bottle -->
+        <StatusEffect type="OnUse" target="This" aimpos="26,26" aimangle="120" settags="opened" delay="0.5" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
+        <!-- Remove the item and spawn empty bottle variant when empty -->
         <StatusEffect type="OnBroken" target="This">
           <RemoveItem identifier="he-emptybottlerum" />
           <SpawnItem identifier="he-emptybottlerum" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
@@ -2425,7 +2602,16 @@
           </StatusEffect>
         </Button>
       </CustomInterface> 
-      <ItemComponent>
+      <ItemComponent characterusable="true">
+        <!-- Unbottle -->
+        <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
+          <Conditional condition="gte 11" />
+          <Conditional HasTag="neq opened" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBottle.ogg" loop="false" selectionmode="Random" range="200" volume="3.0" />
+        </StatusEffect>
+        <!-- Apply new aimpos, aimangle and "opened" tag after a delay to avoid accidentally taking a sip instantly when opening the bottle -->
+        <StatusEffect type="OnUse" target="This" aimpos="25,25" aimangle="120" settags="opened" delay="0.5" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
+        <!-- Remove the item and spawn empty bottle variant when empty -->
         <StatusEffect type="OnBroken" target="This">
           <RemoveItem identifier="he-emptybottlewhiskey" />
           <SpawnItem identifier="he-emptybottlewhiskey" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
@@ -2457,7 +2643,16 @@
           </StatusEffect>
         </Button>
       </CustomInterface>
-      <ItemComponent>
+      <ItemComponent characterusable="true">
+        <!-- Unbottle -->
+        <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
+          <Conditional condition="gte 11" />
+          <Conditional HasTag="neq opened" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBottle.ogg" loop="false" selectionmode="Random" range="200" volume="3.0" />
+        </StatusEffect>
+        <!-- Apply new aimpos, aimangle and "opened" tag after a delay to avoid accidentally taking a sip instantly when opening the bottle -->
+        <StatusEffect type="OnUse" target="This" aimpos="25,25" aimangle="120" settags="opened" delay="0.5" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
+        <!-- Remove the item and spawn empty bottle variant when empty -->
         <StatusEffect type="OnBroken" target="This">
           <RemoveItem identifier="he-emptybottlehalucinova" />
           <SpawnItem identifier="he-emptybottlehalucinova" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
@@ -2489,7 +2684,16 @@
           </StatusEffect>
         </Button>
       </CustomInterface>     
-      <ItemComponent>
+      <ItemComponent characterusable="true">
+        <!-- Unbottle -->
+        <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
+          <Conditional condition="gte 11" />
+          <Conditional HasTag="neq opened" />
+          <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBottle.ogg" loop="false" selectionmode="Random" range="200" volume="3.0" />
+        </StatusEffect>
+        <!-- Apply new aimpos, aimangle and "opened" tag after a delay to avoid accidentally taking a sip instantly when opening the bottle -->
+        <StatusEffect type="OnUse" target="This" aimpos="25,27" aimangle="120" settags="opened" delay="0.5" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
+        <!-- Remove the item and spawn empty bottle variant when empty -->
         <StatusEffect type="OnBroken" target="This">
           <RemoveItem identifier="he-emptybottlebeer" />
           <SpawnItem identifier="he-emptybottlebeer" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
