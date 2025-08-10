@@ -59,7 +59,7 @@ Feeling overwhelmed by all the new content? There is a test kitchen you can load
 - Bulker - Swordfish (Tier 1 | Starter)
 - Bulker - Abyss Scout (Tier 2)
 - Mule (Tier 1)
-- SKitter (Tier 2)
+- Skitter (Tier 2)
 - Volga (Tier 3)
 
 Looking for more submarines? See further below! [b](SUBMARINES MAY NEED UPDATING)[/b]
@@ -97,6 +97,3 @@ Requires [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3190189044]
 - Simplified Chinese Translation by [url=https://steamcommunity.com/profiles/76561198431667769]HunterWill[/url] and [url=https://steamcommunity.com/id/esirprus]Loafer[/url].
 - Korean Translation by [url=https://steamcommunity.com/profiles/76561198002738342]tafaret[/url]
 - Russian Translation by [url=https://steamcommunity.com/id/akutoda]AkutoDa[/url] & [url=https://steamcommunity.com/id/EdemTheRealOne]Edem[/url]
-
-[h1]You made or are looking for a submarine?[/h1]
-Post or look for submarines with kitchens made for this mod in [url=https://steamcommunity.com/workshop/filedetails/discussion/2954998725/3823047940163331471/]Submarines for Hungry Europans[/url]
