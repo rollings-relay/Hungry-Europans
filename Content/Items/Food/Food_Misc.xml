@@ -3,7 +3,7 @@
   <Items>
     <!-- OVERRIDES -->
     <!-- MAKE ITEM EDIBLE -->
-    <Item name="Protein Bar" identifier="proteinbar" health="11" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="False" requireaimtouse="True">
+    <Item name="Protein Bar" identifier="proteinbar" health="11" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.04" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.04" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.08" />
@@ -15,7 +15,7 @@
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="47" radius="13" density="9" />
       <SuitableTreatment type="hunger" suitability="25" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="35,0" aimangle="-50" holdangle="270" holdpos="0,0" handle1="0,-8" handle2="0,-8" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="35,0" aimangle="-50" holdangle="270" holdpos="0,0" handle1="0,-8" handle2="0,-8" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
       
         <!--////////// BOT EATING \\\\\\\\\\-->
         <!-- Bots "eat" by holding the food in their hands -->
@@ -39,7 +39,7 @@
         <StatusEffect type="OnUse" target="This" aimpos="25,15" aimangle="0" settags="opened" delay="0.5" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
 
         <!--////////// REGULAR EATING \\\\\\\\\\-->
-        <StatusEffect type="OnSecondaryUse" target="This,Character" condition="-1" comparison="And">
+        <StatusEffect type="OnUse" target="This,Character" condition="-1" comparison="And">
           <Conditional InWater="false" />
           <Conditional HasTag="opened" />
           <Affliction identifier="he-proteinrich" amount="8.0" />
@@ -57,7 +57,7 @@
     
     <!-- END OF OVERRIDES -->
     <!-- MISC FOOD -->
-    <Item name="Protein Algae Cake" identifier="he-proteinalgaecake" health="16" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="False" requireaimtouse="True">
+    <Item name="Protein Algae Cake" identifier="he-proteinalgaecake" health="16" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.04" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.04" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.08" />
@@ -69,7 +69,7 @@
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="35" height="36" density="9.4" />
       <SuitableTreatment type="hunger" suitability="25" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="35,0" holdangle="270" handle1="10,-10" holdpos="0,0" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="35,0" holdangle="270" handle1="10,-10" holdpos="0,0" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
       
         <!--////////// BOT EATING \\\\\\\\\\-->
         <!-- Bots "eat" by holding the food in their hands -->
@@ -94,7 +94,7 @@
         <StatusEffect type="OnUse" target="This" aimpos="22,15" settags="opened" delay="0.5" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
 
         <!--////////// REGULAR EATING \\\\\\\\\\-->
-        <StatusEffect type="OnSecondaryUse" target="This,Character" condition="-1" comparison="And" >
+        <StatusEffect type="OnUse" target="This,Character" condition="-1" comparison="And" >
           <Conditional condition="lte 15" />
           <Conditional InWater="false" />
           <Conditional HasTag="opened" />
@@ -113,7 +113,7 @@
     </Item>
 
     <!-- CHIPS -->
-    <Item name="Bag of Pomegrenade Chips" identifier="he-chips1" health="11" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="Dried pomegrenade chips. A popular little snack to watch the annual 'DUNWICE FACE-OFF' to." Tags="smallitem,fooditem,fingerfood" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_soft" isshootable="false" requireaimtouse="True">
+    <Item name="Bag of Pomegrenade Chips" identifier="he-chips1" health="11" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="Dried pomegrenade chips. A popular little snack to watch the annual 'DUNWICE FACE-OFF' to." Tags="smallitem,fooditem,fingerfood" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.04" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.04" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.08" />
@@ -127,7 +127,7 @@
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="46" height="64" density="9" />
       <SuitableTreatment type="hunger" suitability="20" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand,Any" holdangle="20" holdpos="30,-30" handle1="-10,-20" handle2="0,20" aimable="false" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand,Any" holdangle="20" holdpos="30,-30" handle1="-10,-20" handle2="0,20" aimable="false" msg="ItemMsgPickUpSelect">
         <!-- EVERYTHING RELATED TO POISONING FOOD IS HANDLED VIA THE POISON EFFECT PRESET ITEMS DEFINED IN - variantof="" AND THEIR CODE IS LOCATED IN - "/Content/Items/#Presets/#ItemPresets.xml" -->
         <StatusEffect type="OnUse" target="This" Condition="14" aimangle="120" setvalue="true" oneshot="true">
           <Conditional condition="gte 15" />
@@ -204,7 +204,7 @@
       <AiTarget sightrange="1000" static="true" />
     </Item>
 
-    <Item name="Bag of Mutated Pomegrenade Chips" identifier="he-chips2" health="11" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="Dried mutated pomegrenade chips. A popular little snack. It is said to speed up the healing of burns a bit." Tags="smallitem,fooditem,fingerfood" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_soft" isshootable="false" requireaimtouse="True">
+    <Item name="Bag of Mutated Pomegrenade Chips" identifier="he-chips2" health="11" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="Dried mutated pomegrenade chips. A popular little snack. It is said to speed up the healing of burns a bit." Tags="smallitem,fooditem,fingerfood" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_soft" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" spawnprobability="0.04" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.04" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.08" />
@@ -218,7 +218,7 @@
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="46" height="64" density="9" />
       <SuitableTreatment type="hunger" suitability="20" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand,Any" holdangle="20" holdpos="30,-30" handle1="-10,-20" handle2="0,20" aimable="false" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand,Any" holdangle="20" holdpos="30,-30" handle1="-10,-20" handle2="0,20" aimable="false" msg="ItemMsgPickUpSelect">
         <!-- EVERYTHING RELATED TO POISONING FOOD IS HANDLED VIA THE POISON EFFECT PRESET ITEMS DEFINED IN - variantof="" AND THEIR CODE IS LOCATED IN - "/Content/Items/#Presets/#ItemPresets.xml" -->
         <StatusEffect type="OnUse" target="This" Condition="14" aimangle="120" setvalue="true" oneshot="true">
           <Conditional condition="gte 15" />
@@ -313,7 +313,7 @@
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="72" height="34" density="9" />
       <SuitableTreatment type="hunger" suitability="30" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <!--////////// BOT EATING \\\\\\\\\\-->
         <!-- Bots "eat" by holding the food in their hands -->
         <StatusEffect type="OnActive" target="This,Character" duration="1" condition="-1" stackable="false" comparison="And">
@@ -357,7 +357,7 @@
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="42" radius="10" density="6" />
       <SuitableTreatment type="hunger" suitability="20" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <!--////////// BOT EATING \\\\\\\\\\-->
         <!-- Bots "eat" by holding the food in their hands -->
         <StatusEffect type="OnActive" target="This,Character" duration="1" condition="-1" stackable="false" comparison="And">
@@ -401,7 +401,7 @@
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="53" radius="18" density="6" />
       <SuitableTreatment type="hunger" suitability="20" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <!--////////// BOT EATING \\\\\\\\\\-->
         <!-- Bots "eat" by holding the food in their hands -->
         <StatusEffect type="OnActive" target="This,Character" duration="1" condition="-1" stackable="false" comparison="And">
@@ -447,7 +447,7 @@
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="50" radius="8" density="5" />
       <SuitableTreatment type="hunger" suitability="20" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <!--////////// BOT EATING \\\\\\\\\\-->
         <!-- Bots "eat" by holding the food in their hands -->
         <StatusEffect type="OnActive" target="This,Character" duration="1" condition="-1" stackable="false" comparison="And">
@@ -518,7 +518,7 @@
           <Conditional timeframe="gte 50" />
         </StatusEffect>
       </GreaterComponent>
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnUse" target="This" Condition="-2.0"/>
         <StatusEffect type="OnUse" target="Character">
           <ReduceAffliction type="hunger" amount="1.5" />
@@ -550,7 +550,7 @@
       <Body width="40" height="7" density="12" />
       <SuitableTreatment type="hunger" suitability="15" />
       <SuitableTreatment type="thirst" suitability="-30" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="25,14" holdangle="270" holdpos="20,30" handle1="10,-10" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="25,14" holdangle="270" holdpos="20,30" handle1="10,-10" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <!--////////// BOT EATING \\\\\\\\\\-->
         <!-- Bots "eat" by holding the food in their hands -->
         <StatusEffect type="OnActive" target="This,Character" duration="1" condition="-1" stackable="false" comparison="And">
@@ -640,7 +640,7 @@
       </CustomInterface>
     </Item>
     
-    <Item name="MRE - Dehydrated Ration" identifier="he-mreration" health="21" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,dehydrated" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="False" requireaimtouse="True">
+    <Item name="MRE - Dehydrated Ration" identifier="he-mreration" health="21" category="Misc" subcategory="Food" maxstacksize="4" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,dehydrated" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="48,165,28,41" depth="0.6" origin="0.5,0.5" />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="77,168,31,38" depth="0.6" maxcondition="99" fadein="false" />
@@ -649,7 +649,7 @@
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="28" height="39" density="10.3" />
       <SuitableTreatment type="hunger" suitability="100" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand,Any" holdangle="20" holdpos="30,-30" handle1="-10,-20" handle2="0,10" aimable="false" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand,Any" holdangle="20" holdpos="30,-30" handle1="-10,-20" handle2="0,10" aimable="false" msg="ItemMsgPickUpSelect">
         <!--////////// BOT EATING \\\\\\\\\\-->
         <!-- Bots "eat" by holding the food in their hands -->
         <StatusEffect type="OnActive" target="This,Character" duration="1" condition="-1" stackable="false" comparison="And">
@@ -726,7 +726,7 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/InventoryIcons.Png" sourcerect="0,404,79,107" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="0,55,61,82" depth="0.525" origin="0.5,0.85"  />
       <Body width="60" height="72" density="14" />
-      <Holdable canbepicked="true" canBeCombined="false" slots="RightHand,LeftHand" holdpos="35,-40" handle1="0,30" holdangle="0" aimable="false" msg="ItemMsgPickUpSelect" />
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" slots="RightHand,LeftHand" holdpos="35,-40" handle1="0,30" holdangle="0" aimable="false" msg="ItemMsgPickUpSelect" />
       <CustomInterface canbeselected="false" drawhudwhenequipped="true">
         <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
         <Button text="interaction.open">
@@ -755,7 +755,7 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="123,109,49,28" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="123,109,49,28" depth="0.525" origin="0.5,0.6"  />
       <Body width="27" height="26" density="11" />
-      <Holdable canbepicked="true" canBeCombined="false" slots="Any,RightHand,LeftHand" holdpos="35,-40" handle1="0,0" holdangle="0" aimable="false" msg="ItemMsgPickUpSelect" />
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" slots="Any,RightHand,LeftHand" holdpos="35,-40" handle1="0,0" holdangle="0" aimable="false" msg="ItemMsgPickUpSelect" />
       <CustomInterface canbeselected="false" drawhudwhenequipped="true">
         <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08"/>
         <Button text="interaction.open">
@@ -784,7 +784,7 @@
       </Deconstruct>
       <Body width="60" radius="10" density="11" />
       <SuitableTreatment type="hunger" suitability="80" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="LeftHand,RightHand" holdangle="0" holdpos="36,-20" handle1="0,-18" handle2="0,-18" aimable="false" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="LeftHand,RightHand" holdangle="0" holdpos="36,-20" handle1="0,-18" handle2="0,-18" aimable="false" msg="ItemMsgPickUpSelect">
         <!-- EVERYTHING RELATED TO POISONING FOOD IS HANDLED VIA THE POISON EFFECT PRESET ITEMS DEFINED IN - variantof="" AND THEIR CODE IS LOCATED IN - "/Content/Items/#Presets/#ItemPresets.xml" -->
         
         <!--////////// BOT EATING \\\\\\\\\\-->

@@ -3,7 +3,7 @@
   <Items>
     <!-- MEAT -->
     <!--Spineling-->
-    <Item HideInMenus="false" name="Kebab" identifier="he-cookedspinelingkebab" variantof="he-poisoneffectpreset_regular" health="20" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="False" requireaimtouse="True">
+    <Item HideInMenus="false" name="Kebab" identifier="he-cookedspinelingkebab" variantof="he-poisoneffectpreset_regular" health="20" category="Misc" subcategory="Food" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
@@ -19,7 +19,7 @@
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="61" radius="18" density="12" />
       <SuitableTreatment type="hunger" suitability="95" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" handle1="-40,5" aimpos="30,2" holdangle="70" holdpos="-10,-36" aimangle="120" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" handle1="-40,5" aimpos="30,2" holdangle="70" holdpos="-10,-36" aimangle="120" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <!-- EVERYTHING RELATED TO POISONING FOOD IS HANDLED VIA THE POISON EFFECT PRESET ITEMS DEFINED IN - variantof="" AND THEIR CODE IS LOCATED IN - "/Content/Items/#Presets/#ItemPresets.xml" -->
 
         <!--////////// BOT EATING \\\\\\\\\\-->
@@ -38,10 +38,10 @@
         </StatusEffect>
         
         <!--////////// REGULAR EATING \\\\\\\\\\-->
-        <StatusEffect type="OnSecondaryUse" target="This" Condition="-1.0">
+        <StatusEffect type="OnUse" target="This" Condition="-1.0">
           <Conditional InWater="false" />
         </StatusEffect>
-        <StatusEffect type="OnSecondaryUse" target="Character" comparison="And">
+        <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <Affliction identifier="ate_filet" amount="1" />
           <Affliction identifier="he-fatrich" amount="50" />

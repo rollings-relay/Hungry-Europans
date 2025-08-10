@@ -21,7 +21,7 @@
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="60" radius="1" density="11" />
       <SuitableTreatment type="hunger" suitability="80" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="LeftHand,RightHand" holdangle="0" holdpos="36,-20" handle1="0,-4" handle2="0,-4" aimable="false" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="LeftHand,RightHand" holdangle="0" holdpos="36,-20" handle1="0,-4" handle2="0,-4" aimable="false" msg="ItemMsgPickUpSelect">
         <!-- EVERYTHING RELATED TO POISONING FOOD IS HANDLED VIA THE POISON EFFECT PRESET ITEMS DEFINED IN - variantof="" AND THEIR CODE IS LOCATED IN - "/Content/Items/#Presets/#ItemPresets.xml" -->
         
         <!--////////// BOT EATING \\\\\\\\\\-->
@@ -89,7 +89,7 @@
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="60" radius="1" density="11" />
       <SuitableTreatment type="hunger" suitability="80" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="LeftHand,RightHand" holdangle="0" holdpos="36,-20" handle1="0,-4" handle2="0,-4" aimable="false" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="LeftHand,RightHand" holdangle="0" holdpos="36,-20" handle1="0,-4" handle2="0,-4" aimable="false" msg="ItemMsgPickUpSelect">
         <!-- EVERYTHING RELATED TO POISONING FOOD IS HANDLED VIA THE POISON EFFECT PRESET ITEMS DEFINED IN - variantof="" AND THEIR CODE IS LOCATED IN - "/Content/Items/#Presets/#ItemPresets.xml" -->
         
         <!--////////// BOT EATING \\\\\\\\\\-->
