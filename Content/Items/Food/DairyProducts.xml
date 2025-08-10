@@ -30,7 +30,7 @@
           <Conditional timeframe="gte 50" />
         </StatusEffect>
       </GreaterComponent>
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <!--Increase condition when refrigerated-->
         <StatusEffect type="OnContained" target="This" condition="2.0" delay="5" stackable="false" CheckConditionalAlways="true" disabledeltatime="true" comparison="And" >
           <Conditional HasStatusTag="eq activecooling" targetcontainer="true" />
@@ -66,7 +66,7 @@
           <Conditional timeframe="gte 50" />
         </StatusEffect>
       </GreaterComponent>
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="RightHand+LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="RightHand+LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnBroken" target="This">
           <Remove />
         </StatusEffect>
@@ -99,7 +99,7 @@
           <Conditional timeframe="gte 50" />
         </StatusEffect>
       </GreaterComponent>
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         
         <!--////////// BOT EATING \\\\\\\\\\-->
         <!-- Bots "eat" by holding the food in their hands -->
@@ -165,7 +165,7 @@
           <Conditional timeframe="gte 50" />
         </StatusEffect>
       </GreaterComponent>
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <!--Increase condition when refrigerated-->
         <StatusEffect type="OnContained" target="This" condition="2.0" delay="5" stackable="false" CheckConditionalAlways="true" disabledeltatime="true" comparison="And" >
           <Conditional HasStatusTag="eq activecooling" targetcontainer="true" />
@@ -201,7 +201,7 @@
           <Conditional timeframe="gte 50" />
         </StatusEffect>
       </GreaterComponent>
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="RightHand+LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="RightHand+LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnBroken" target="This">
           <Remove />
         </StatusEffect>
@@ -234,7 +234,7 @@
           <Conditional timeframe="gte 50" />
         </StatusEffect>
       </GreaterComponent>
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         
         <!--////////// BOT EATING \\\\\\\\\\-->
         <!-- Bots "eat" by holding the food in their hands -->
@@ -299,7 +299,7 @@
           <Conditional timeframe="gte 50" />
         </StatusEffect>
       </GreaterComponent>
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <!--Increase condition when refrigerated-->
         <StatusEffect type="OnContained" target="This" condition="2.0" delay="5" stackable="false" CheckConditionalAlways="true" disabledeltatime="true" comparison="And" >
           <Conditional HasStatusTag="eq activecooling" targetcontainer="true" />
@@ -335,7 +335,7 @@
           <Conditional timeframe="gte 50" />
         </StatusEffect>
       </GreaterComponent>
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="RightHand+LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="RightHand+LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnBroken" target="This">
           <Remove />
         </StatusEffect>
@@ -368,7 +368,7 @@
           <Conditional timeframe="gte 50" />
         </StatusEffect>
       </GreaterComponent>
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         
         <!--////////// BOT EATING \\\\\\\\\\-->
         <!-- Bots "eat" by holding the food in their hands -->
@@ -433,7 +433,7 @@
           <Conditional timeframe="gte 50" />
         </StatusEffect>
       </GreaterComponent>
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="RightHand+LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <!--Increase condition when refrigerated-->
         <StatusEffect type="OnContained" target="This" condition="2.0" delay="5" stackable="false" CheckConditionalAlways="true" disabledeltatime="true" comparison="And" >
           <Conditional HasStatusTag="eq activecooling" targetcontainer="true" />
@@ -469,7 +469,7 @@
           <Conditional timeframe="gte 50" />
         </StatusEffect>
       </GreaterComponent>
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="RightHand+LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="RightHand+LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnBroken" target="This">
           <Remove />
         </StatusEffect>
@@ -502,7 +502,7 @@
           <Conditional timeframe="gte 50" />
         </StatusEffect>
       </GreaterComponent>
-      <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         
         <!--////////// BOT EATING \\\\\\\\\\-->
         <!-- Bots "eat" by holding the food in their hands -->
@@ -556,7 +556,7 @@
       </Fabricate>
       <Deconstruct time="1" />
       <Body width="39" radius="21" density="10.5" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <StatusEffect type="Always" target="This" condition="1.0" interval="10" stackable="false" disabledeltatime="true" AllowWhenBroken="true" />
         <StatusEffect type="OnContained" target="This" interval="1">
           <Conditional condition="eq 100" />
@@ -587,7 +587,7 @@
         <Price storeidentifier="merchantmine" sold="false" />
       </Price>
       <Deconstruct time="1" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
       
         <!--////////// BOT EATING \\\\\\\\\\-->
         <!-- Bots "eat" by holding the food in their hands -->
@@ -647,7 +647,7 @@
         <RequiredItem identifier="he-molochcheese" amount="3" />
         <RequiredItem identifier="slimebacteria" amount="1" MinCondition="0.0" UseCondition="True" />
       </Fabricate>
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!--////////// BOT EATING \\\\\\\\\\-->
         <!-- Bots "eat" by holding the food in their hands -->
@@ -702,7 +702,7 @@
       <Deconstruct time="1" />
       <Body width="38" height="3" density="10.2" />
       <SuitableTreatment type="hunger" suitability="20" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="0" holdpos="36,-20" aimangle="0" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
 
         <!--////////// BOT EATING \\\\\\\\\\-->
         <!-- Bots "eat" by holding the food in their hands -->
@@ -759,7 +759,7 @@
       </Fabricate>
       <Deconstruct time="1" />
       <Body radius="12" height="55" density="7" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="22,-5" aimangle="0" holdangle="0" handle1="-6,0" holdpos="36,-20" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="22,-5" aimangle="0" holdangle="0" handle1="-6,0" holdpos="36,-20" aimable="false" swingwhenaiming="true" swingamount="10,6" swingspeed="0.2" msg="ItemMsgPickUpSelect">
         <!--Reduce item condition while eating, only if no ice cream is contained-->
         <StatusEffect type="OnUse" target="This" condition="-20.0" comparison="And">
           <Conditional InWater="false" />

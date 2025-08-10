@@ -58,7 +58,7 @@
           <Conditional timeframe="gte 50" />
         </StatusEffect>
       </GreaterComponent>
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <!-- When using (eating) the item, reduce the condition by 4 per second -->
         <StatusEffect type="OnUse" target="This" Condition="-8.0"/>
         <!-- When using (eating) the item, apply the afflictions psychosis, nausea, craving for human meat and spill to the character and play an eating sound effect -->
@@ -118,7 +118,7 @@
       </ItemComponent>
       <!-- MemoryComponent hosts the MaxValueLength attribute which we use to track the time by adjusting its value via StatusEffects each second -->
       <MemoryComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" string="" MaxValueLength="0" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnUse" target="This" Condition="-8.0"/>
         <StatusEffect type="OnUse" target="Character">
           <ReduceAffliction type="hunger" amount="0.25" />
@@ -165,7 +165,7 @@
       </ItemComponent>
       <!-- MemoryComponent hosts the MaxValueLength attribute which we use to track the time by adjusting its value via StatusEffects each second -->
       <MemoryComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" string="" MaxValueLength="0" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnUse" target="This" Condition="-8.0"/>
         <StatusEffect type="OnUse" target="Character">
           <ReduceAffliction type="hunger" amount="0.20" />
@@ -232,7 +232,7 @@
           <Conditional timeframe="gte 50" />
         </StatusEffect>
       </GreaterComponent>
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnUse" target="This" Condition="-8.0"/>
         <StatusEffect type="OnUse" target="Character">
           <ReduceAffliction type="hunger" amount="0.25" />
@@ -283,7 +283,7 @@
         </StatusEffect>
       </ItemComponent>
       <MemoryComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" string="" MaxValueLength="0" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnUse" target="This" Condition="-8.0"/>
         <StatusEffect type="OnUse" target="Character">
           <ReduceAffliction type="hunger" amount="0.25" />
@@ -317,7 +317,7 @@
         </StatusEffect>
       </ItemComponent>
       <MemoryComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" string="" MaxValueLength="0" />
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnUse" target="This" Condition="-8.0"/>
         <StatusEffect type="OnUse" target="Character">
           <ReduceAffliction type="hunger" amount="0.20" />
@@ -390,7 +390,7 @@
           <Conditional timeframe="gte 50" />
         </StatusEffect>
       </GreaterComponent>
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <!-- When using (eating) the item, reduce the condition by 4 per second -->
         <StatusEffect type="OnUse" target="This" Condition="-8.0"/>
         <!-- When using (eating) the item, apply the afflictions deliriumine poisoning, nausea, and spill to the character and play an eating sound effect -->
@@ -453,7 +453,7 @@
           <Conditional timeframe="gte 50" />
         </StatusEffect>
       </GreaterComponent>
-      <Holdable canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+      <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnUse" target="This" Condition="-8.0"/>
         <StatusEffect type="OnUse" target="Character">
           <ReduceAffliction type="hunger" amount="0.25" />
