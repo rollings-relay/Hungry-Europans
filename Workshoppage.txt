@@ -44,7 +44,16 @@ Become an alcoholic and stumble around your vessel. Get addicted. Discover new f
 Discover new growable plants. Plants can be cross-bred in the research station, creating new varieties with unique fruits.
 Grow aquatic plants in hydroponic planters.
 
+[*][b]Tutorial kitchen:[/b]
+Feeling overwhelmed by all the new content? There is a test kitchen you can load in the submarine editor. You will be free to experiment and cook at your own pace to get familiar with Europan cuisine.
+
 [/list]
+
+
+[h1]Getting started:[/h1]
+- To obtain meat from corpses you'll need to use a meat cleaver.
+- For cooking, it is recommended to have the following items installed on your submarine: Kitchen Counter, Cutting Board, Sink, Oven.
+- You can obtain some Cooking/Butchery skill by buying and reading the "The Europan Vol. 66" from the general goods merchant. Alternatively, enabling Hunger/Thirst gives you a bit of starter skill.
 
 [b]Also included are submarines with kitchens already built into them:[/b]
 - Bulker - Swordfish (Tier 1 | Starter)
@@ -57,11 +66,6 @@ Looking for more submarines? See further below! [b](SUBMARINES MAY NEED UPDATING
 Post or look for submarines with kitchens made for this mod in [url=https://steamcommunity.com/workshop/filedetails/discussion/2954998725/3823047940163331471/]Submarines for Hungry Europans[/url]
 Check out a selection of [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3132335774]Community Curated Subs Hungry Edition
 [/url] 
-
-[h1]Getting started:[/h1]
-- To obtain meat from corpses you'll need to use a meat cleaver.
-- For cooking, it is recommended to have the following items installed on your submarine: Kitchen Counter, Cutting Board, Sink, Oven.
-- You can obtain some Cooking/Butchery skill by buying and reading the "The Europan Vol. 66" from the general goods merchant. Alternatively, enabling Hunger/Thirst gives you a bit of starter skill.
 
 [h1]Lore and Immersion:[/h1]
 The mod is as lore friendly as possible in regards of the included food and ingredients. Items are immersive in the way they are used: you need to unbottle bottles, eat with forks and spoons, or with your fingers...
