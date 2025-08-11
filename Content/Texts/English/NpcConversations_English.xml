@@ -85,7 +85,7 @@ AllOWEDJOBS include jobs
 	<Conversation line="A mutated fruit a day burns the submarine away." speaker="1" />
 </Conversation>
 
-<Conversation line="" speaker="0" flags="likeshotdogs" >
+<Conversation line="" speaker="0" >
 	<Conversation line="So, I got your blood work in, and I've got a couple questions... Just about how many hotdogs do you eat a day?" speaker="1" allowedjobs="medicaldoctor" >
 		<Conversation line="Well... I usually have a hotdog at breakfast. And if I walk by the cafeteria, I might grab one or two hotdogs." speaker="0">
       <Conversation line="Three. Hotdogs. I hope there's no more hotdogs in the day..." speaker="1" />
@@ -123,13 +123,13 @@ AllOWEDJOBS include jobs
 <Conversation line="I feel hungry..." speaker="0" flags="hungrymedium">
 	<Conversation line="" speaker="0"/>
 	<Conversation line="Don't worry, I'm not letting you starve." speaker="1" allowedjobs="medicaldoctor" />
-	<Conversation line="You're right, I'm craving some nuggets right now." speaker="1" flags="likesfriedfood">
+	<Conversation line="You're right, I'm craving some nuggets right now." speaker="1" >
 		<Conversation line="I only see you eating fast-food, at this rate, you'll get rounder than Jupiter." speaker="2"/>
 	</Conversation>
-	<Conversation line="A juicy burger, with thick moloch cheese slices..." speaker="1" flags="likesburger" >
+	<Conversation line="A juicy burger, with thick moloch cheese slices..." speaker="1" >
 		<Conversation line="The idea of milking a moloch scares me..." speaker="2"/>
 	</Conversation>
-	<Conversation line="I could gulp down a hotdog in one bite." speaker="1" flags="likeshotdog" />
+	<Conversation line="I could gulp down a hotdog in one bite." speaker="1" />
 </Conversation>
 
 <Conversation line="I'm so hungry, I could eat a barracuda..." speaker="0" flags="hungrymedium">
@@ -150,9 +150,9 @@ AllOWEDJOBS include jobs
 <Conversation line="I really want to grab a bite right now..." speaker="0" flags="hungrymedium">
 	<Conversation line="" speaker="0"/>
   <Conversation line="Why you want bite people?" speaker="1" speakertag="brokenenglish" />
-	<Conversation line="Have you tried a bubbleberry jam sandwich? They are delicious." speaker="1" flags="likessandwich" />
-	<Conversation line="A good omelette. Orange boy eggs have an unparalleled crunch." speaker="1" flags="likesomelette" />
-	<Conversation line="Thick, roasted mudraptor slices are my comfort food." speaker="1" flags="likesroast" >
+	<Conversation line="Have you tried a bubbleberry jam sandwich? They are delicious." speaker="1" />
+	<Conversation line="A good omelette. Orange boy eggs have an unparalleled crunch." speaker="1" />
+	<Conversation line="Thick, roasted mudraptor slices are my comfort food." speaker="1" >
     <Conversation line="It's certainly easier to be comfortable around roasted raptors..." speaker="0" />    
   </Conversation>
 </Conversation>
@@ -192,10 +192,10 @@ AllOWEDJOBS include jobs
 
 <Conversation line="A fresh drink would hit the spot." speaker="0" flags="thirstylight">
 	<Conversation line="" speaker="0"/>
-  <Conversation line="Beer is the answer, always!" speaker="1" flags="likesbeer"/>
-  <Conversation line="Vintage Whiskey goes down easy." speaker="1" flags="likeswhiskey"/>
-  <Conversation line="A glass of Rum for your woes, and mine." speaker="1" flags="likesrum"/>
-  <Conversation line="A sweet can of Cola!" speaker="1" flags="likescola"/>
+  <Conversation line="Beer is the answer, always!" speaker="1" />
+  <Conversation line="Vintage Whiskey goes down easy." speaker="1" />
+  <Conversation line="A glass of Rum for your woes, and mine." speaker="1" />
+  <Conversation line="A sweet can of Cola!" speaker="1" />
 </Conversation>
 
 <!-- Medium -->
