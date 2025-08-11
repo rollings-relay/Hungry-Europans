@@ -20,7 +20,7 @@
   </Affliction>  
   
   
-  <!-- WIP - not working -->
+  <!-- WIP - not working, trying to make chef lose stress ragdolled near plants -->
   <!-- <Affliction
     identifier="he-lazygardener"
     type="talentbuff"
