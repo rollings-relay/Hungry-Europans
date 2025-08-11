@@ -12,23 +12,20 @@ High:
 - Missing text
 - Missing item sprites
 - Make ingredients visible in the cooked items sprite
-- Finalize Traits
 
 Medium:
-- Declutter fabricator windows
-- Avoid dupe foods/afflictions...
-- Recipes that make use of the canned ingredients
-- Contained Sprites for table/grill (avoid floating items)
+- Optimize all the statuseffects
+- Declutter fabricator windows by removing dupe recipes
+- Add canned ingredients (how?)
+- Align Contained Sprites for table/grill (avoid floating items)
 - Containable icon sprites
-- Adjust food values with new foodbuffs
-- Balance food values
-- Expand existing food types (soups)
+- Balance food values / food buffs
+- Use more varied ingredients in new recipes
 
 Low: 
 - Adding new food types
-- Sell prices, shops, hydroponic shop multiplier...
-- Check and approve on fruits, seeds and tobacco addiction
-- Cake+Slice
+- Sell prices, shop
+- DE Hydroponics compatibility
 - More fryable food
 - More grillable food
 - Neurotrauma compatibility
@@ -39,79 +36,14 @@ Low:
 
 [hr]09/08/2025
 
-
-[b]MAJOR Changes:[/b]
-
-[List]
-[*] Rework of almost all meat related recipes to make use of all kitchen equipment. For example burgers and hotdogs will now be put together on the cutting board while the meat is cooked seperately in the oven or the stove with either a pan or cooking pot.
-[*] A lot more kitchen equipment added. The kitchen counter has a power outlet (like a junction box) to help power them.
-[*] Cutting board needs to be manually operated to function.
-[*] Burgers, Hotdogs, MREs and other fast foods no longer have a (species) attribute. This was done to reduce the amount of item bloat in fabricators and medical UI. Fast food no longer gives food buffs. Expect error messages when loading an old save as those items have been deleted
-[*] Food buffs reworked: buffs are no longer tied to species (example: mudraptor => damage resistance). Food buffs are more minor and depend on the recipe of the meal. More complex meals give more buffs.
-[*] Most foods no longer stack to avoid accidentally eating the 2nd item in the stack after finishing the first one. Use lunchboxes to carry extra food.
-[*] Integrated: "Tiredness" and "Mood" from NEEDS. These are optional and can each be toggled via an item at vending machines or forced via a separately available "Enforcer" patch
-[*] Added: New optional affliction "Hygiene" which is enabled with the "Filthy Europan" item (partially bugged, is removed too easily)
-[*] Added: Traits. You can select a preferred food and drink that will help improve your Mood when consumed
-[*] Food quality and parasites: eating food has a small chance of giving you intestinal parasites. Cooking skill increases food quality: the higher the quality, the less likely your food will make you sick.
-[*] Unit Load Devices can be swapped to make empty space for your kitchen.
-[*] A lot of new text requiring translation. The English file is a mess though, will work on making translation easier in the future
-
-[/List]
-
-[b]New:[/b]
-
-[List]
-[*] Added: New tableware items including: Fork, Spoon, Cups, Plates, Bowls and their dirty variants
-[*] Added: "Sink" kitchen item, now separated from the kitchen counter. Used to refill bottles and clean tableware
-[*] Added: "Pan" item. Required for cooking some recipes on the stove and can be used as a melee weapon
-[*] Added: "Pot" item. Required for cooking some recipes on the stove
-[*] Added: "Electric Grill". Used to cook multiple meats simultaneously
-[*] Added: "Flour". Crafted from seeds and sulphuric acid
-[*] Added: "Dough". Used to make Bread, Buns and Pizza
-[*] Added: "Pizza" + "Pizza Slice"
-[*] Added: "Omelette" 
-[*] Added: Soups and soup pots 
-[*] Added: Various meals 
-[*] Added: New distiller recipes for fermented foods, distiller should have more uses
-[*] Added: Plant genetics and crossbreeding. Cross two fruits at a research station to obtain special seeds! 
-[*] (WIP) Added: "Coffee". Reduces your tiredness if you have it enabled and helps to sober up. Can give you a caffeine rush
-[*] (WIP) Added: "Hot Chocolate". Increases your tiredness if you have it enabled, but also increases your mood and helps to sober up
-[*] Added Moloch Milking Tool
-[*] Added NPC conversations, some related to food traits, being hungry, thirsty...
-[*] Added 3 submarines with kitchen, courtesy of NotWendy
-[/List]
-
-
-[b]Other Changes:[/b]
-
-[List]
-[*] Some food and drink items need to be eaten in a specific way (opening bottles, opening jars, eating with fork/spoon...). Involves using RMB+E or RMB+E or tapping RMB, might not be intuitive though.
-[*] Kitchen equipment sprites were changed to align with the counter when placed in-game. Old equipment might be offset as a result. 
-[*] Machinery and planter pots use placement restrictions: cannot place these items in too close proximity to other items, can only be placed on the ground
-[*] Deconstructing meat no longer gives Alien blood
-[*] Plants are smaller and grow faster, but require more active watering and are more vulnerable to both flooding and fire
-[*] Watering can needs to be refilled in a sink or by inserting a bottle of water
-[*] Buffed some of the weaker Chef talents.
-[*] "Bladder", "Need to defecate", "Stomach Ache" and "Alcohol Withdrawal" can now cause your mood to worsen (Only with "Mood" enabled)
-[*] "Drunk" can now improve your mood (Only with "Mood" enabled)
-[*] "Drunk" can now make you tired (Only with "Tiredness" enabled)
-[*] "Cafeteria Cart" is no longer attachable. Its inventory is accessed by using the "Action" keybind (Default "E") to bring it more in line with other 
-[*] New output for "Hydroponic Planter" to calculate the seconds until the next produce.
-[*] Garden Sprinkler cycle rate can be set manually
-[*] Rescaled burgers and hotdogs. They felt a bit oversized previously
-[*] Made empty cans spawn in or nearby outpost trash cans
-[*] "Hungry Europan" syringe gives you a starter 5 Cooking 5 Butchery
-[*] Removed "Starvation Conciousness Regainer" since you can just feed someone unconcious or use adrenaline
-[*] Removed the override for "Adrenaline" since the vanilla game now cures stun with it by default
-[/List]
+Hotfix
 
 [b]Fixes:[/b] 
 
 [List]
-[*] Fixed "Pomegrenade Jam" recipe having a wrong identifier for pomegrenades, causing performance issues when trying to craft it
-[*] Fixed Refrigerators not being fireproof
-[*] Fixed: "Internal Burns" had wrong damage values and thus wouldn't actually cause any damage
-[*] Fixed: Puking from "Stomach Ache" didn't decrease the duration of some food buffs
+[*] Fixed Thresher filets using Crawler meat
+[*] Fixed some NPC conversations being way too hard to trigger
+[*] Fixed getting Stress/Mood affliction from Bladder/Defecate without Moody Europan enabled
 [/List]
 
 
@@ -119,10 +51,9 @@ Low:
 [*] Bot support is iffy. Bots can't heal hunger/thirst without losing health (vanilla issue), so it's not advised giving bots NEEDS
 [*] Errors for missing/deleted items. Just save once and the errors will go away.
 [*] Damage multipliers (like steroids) result in less meat being harvested on corpses
-[*] Not being able to wash off Hygiene affliction by going in the water without clothes
-[*] Cleaning stacked bowls/plates in the sink will delete any contained bowl/plate
+[*] Cleaning stacked bowls/plates in the sink will delete any contained bowl/plate, make sure to unstack your bowls
 [*] Sprites of items inside items inside tables break and do not match their real position in the inventory 	
-[*] Not being able to wash off Hygiene affliction by going in the water without clothes
+[*] Hygiene affliction washes with clothes on
 
 
 //////////////////////
