@@ -414,8 +414,9 @@ SEARCH FOR THE FOLLOWING:                                                       
 <!-- Tools -->
 <entityname.he-enableneeds>Enable Hungry Europan</entityname.he-enableneeds>
 <entitydescription.he-enableneeds>[RMB+E] Enables the hunger and thirst afflictions for the user, causing them to have to eat and drink regularly. This is completely optional and is NOT required to gain buffs from eating or drinking. Warning: Can't be disabled for your current character once it is enabled. DO NOT USE WHEN PLAYING WITH 'NEEDS' BY 'LeDoux'!</entitydescription.he-enableneeds>
-<entityname.he-enableextraneeds>Enable Filthy Europan</entityname.he-enableextraneeds><!--Patch 13-->
-<entitydescription.he-enableextraneeds>[RMB + E] Enables the bladder and defecate afflictions for the user, causing them to have to pee and poop depending on what or how much they eat and drink. This is completely optional and is NOT required to gain buffs from eating or drinking. Warning: Can't be disabled for your current character once it is enabled.</entitydescription.he-enableextraneeds><!--Patch 13-->
+<entityname.he-enableextraneeds>Enable Filthy Europan</entityname.he-enableextraneeds><!--Patch 18-->
+<entitydescription.he-enableextraneeds>[RMB + E] Enables the bladder and defecate afflictions for the user, causing them to have to pee and poop depending on what or how much they eat and drink. This is completely optional and is NOT required to gain buffs from eating or drinking. Warning: Can't be disabled for your current character once it is enabled.</entitydescription.he-enableextraneeds><!--Patch 18-->
+
 <entityname.he-cleaver>Meat Cleaver</entityname.he-cleaver>
 <entitydescription.he-cleaver>Time is up! Chop chop!\n\nCan harvest meat from the corpses of creatures.</entitydescription.he-cleaver>
 <entityname.he-skillbooktheeuropan>The Europan Volume 66</entityname.he-skillbooktheeuropan>
@@ -1295,6 +1296,11 @@ SEARCH FOR THE FOLLOWING:                                                       
 <eventtext.he-hirechef.nevermind>"Nevermind."</eventtext.he-hirechef.nevermind>
 
 
+
+<entityname.he-enablesleep>Enable Sleepy Europan</entityname.he-enablesleep>
+<entitydescription.he-enablesleep>[RMB + E] EXTRA OPTIONAL: Enables tiredness affliction for the user, causing them to have to sleep regularly. Warning: Can't be disabled for your current character once it is enabled.</entitydescription.he-enablesleep>
+<entityname.he-enablemood>Enable Moody Europan</entityname.he-enablemood><!--Patch 18-->
+<entitydescription.he-enablemood>[RMB + E] EXTRA OPTIONAL: Enables the mood affliction for the user, causing them to get stressed from working. Reduce your stress by eating food of choice, drinking, using drugs or relaxing. Warning: Can't be disabled for your current character once it is enabled.</entitydescription.he-enablemood><!--Patch 18-->
 
 <!-- HUBERT ADDITIONS ABOVE THIS --> 
 <!-- HUBERT ADDITIONS ABOVE THIS --> 
