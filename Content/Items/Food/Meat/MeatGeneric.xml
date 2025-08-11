@@ -61,7 +61,7 @@
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
         <!-- When using (eating) the item, reduce the condition by 4 per second -->
         <StatusEffect type="OnUse" target="This" Condition="-8.0"/>
-        <!-- When using (eating) the item, apply the afflictions psychosis, nausea, craving for human meat and spill to the character and play an eating sound effect -->
+        <!-- When using (eating) the item, apply the afflictions psychosis, nausea, and spill to the character and play an eating sound effect -->
         <StatusEffect type="OnUse" target="Character">
           <ReduceAffliction type="hunger" amount="0.25" />
           <Affliction identifier="nausea" amount="2" />
