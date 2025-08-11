@@ -44,6 +44,8 @@ Hotfix
 [*] Fixed Thresher filets using Crawler meat
 [*] Fixed some NPC conversations being way too hard to trigger
 [*] Fixed getting Stress/Mood affliction from Bladder/Defecate without Moody Europan enabled
+[*] Fixed NT compatibility, HE no longer overrides antibiotics (no longer needed to heal worm/tapeworm)
+[*] Fixed missing affliction text for worm/tapeworm
 [/List]
 
 
