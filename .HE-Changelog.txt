@@ -153,6 +153,7 @@ LIST OF FOODS IDEAS:
 - Grog! It'd be made of sea water and rum.
 - Homemade kvass from water, bread, yeast and sugar.
 - Gravy (water, flour, salt, pepper, broth?)
+- Cookie jar
 
 
 
@@ -177,6 +178,7 @@ LongTermPlans:
 	Diving Knife: 80% | 10% chance of lacerations	
 - "Constipated" affliction. Caused by eating elastin and prevents you from pooping which will result in constantly increasing organ damage (And/Or custom bowel rupture affliction) until death if not treated.
 - Kuru sickness
+- "Brain freeze" from eating ice cream too fast
 - Meat Chunks cookable and burnable in open fires.
 - More recipes and unlockable recipes by recipe items found or bought.
 - Abyssal meats?
