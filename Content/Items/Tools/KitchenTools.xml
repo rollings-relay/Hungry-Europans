@@ -592,6 +592,7 @@
       </ItemContainer>
     </Item>    
     
+    <!-- TODO: Fork inventoryicon -->
     <Item name="Fork" identifier="he-fork" Tags="smallitem,tableware,fork,forkspoonreturn" category="Equipment" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" isshootable="true" RequireAimToUse="True" maxstacksize="8" maxstacksizecharacterinventory="1">
       <Deconstruct time="3" requireddeconstructor="deconstructor" />
       <Fabricate suitablefabricators="fabricator" requiredtime="5" amount="1">
@@ -621,6 +622,7 @@
       </Holdable>
     </Item>
 
+    <!-- TODO: Spoon inventoryicon -->
     <Item name="Spoon" identifier="he-spoon" Tags="smallitem,tableware,spoon,forkspoonreturn" category="Equipment" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" isshootable="true" RequireAimToUse="True" maxstacksize="8" maxstacksizecharacterinventory="1">
       <Deconstruct time="3" requireddeconstructor="deconstructor" />
       <Fabricate suitablefabricators="fabricator" requiredtime="5" amount="1">
