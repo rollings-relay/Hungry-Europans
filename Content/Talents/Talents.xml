@@ -50,7 +50,7 @@
             <StatusEffects>
               <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
                 <Conditional IsBot="false" />
-                <Affliction identifier="mood" amount="0.03" />
+                <Affliction identifier="mood" probability="0.2" amount="0.03" />
               </StatusEffect>
             </StatusEffects>
           </CharacterAbilityApplyStatusEffects>
@@ -62,7 +62,7 @@
             <StatusEffects>
               <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
                 <Conditional IsBot="false" />
-                <Affliction identifier="mood" amount="3.0" />
+                <Affliction identifier="mood" probability="0.2" amount="3.0" />
               </StatusEffect>
             </StatusEffects>
           </CharacterAbilityApplyStatusEffects>
@@ -74,7 +74,7 @@
             <StatusEffects>
               <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
                 <Conditional IsBot="false" />
-                <Affliction identifier="mood" amount="1.0" />
+                <Affliction identifier="mood" probability="0.2" amount="1.0" />
               </StatusEffect>
             </StatusEffects>
           </CharacterAbilityApplyStatusEffects>
@@ -86,7 +86,7 @@
             <StatusEffects>
               <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
                 <Conditional IsBot="false" />
-                <Affliction identifier="mood" amount="0.25" />
+                <Affliction identifier="mood" probability="0.2" amount="0.25" />
               </StatusEffect>
             </StatusEffects>
           </CharacterAbilityApplyStatusEffects>
@@ -98,7 +98,7 @@
             <StatusEffects>
               <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
                 <Conditional IsBot="false" />
-                <Affliction identifier="mood" amount="0.25" />
+                <Affliction identifier="mood" probability="0.2" amount="0.25" />
               </StatusEffect>
             </StatusEffects>
           </CharacterAbilityApplyStatusEffects>
@@ -110,7 +110,7 @@
             <StatusEffects>
               <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
                 <Conditional IsBot="false" />
-                <Affliction identifier="mood" amount="1.0" />
+                <Affliction identifier="mood" probability="0.2" amount="1.0" />
               </StatusEffect>
             </StatusEffects>
           </CharacterAbilityApplyStatusEffects>
@@ -122,7 +122,7 @@
             <StatusEffects>
               <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
                 <Conditional IsBot="false" />
-                <Affliction identifier="mood" amount="0.5" />
+                <Affliction identifier="mood" probability="0.2" amount="0.5" />
               </StatusEffect>
             </StatusEffects>
           </CharacterAbilityApplyStatusEffects>
@@ -134,7 +134,7 @@
             <StatusEffects>
               <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
                 <Conditional IsBot="false" />
-                <Affliction identifier="mood" amount="3.0" />
+                <Affliction identifier="mood" probability="0.2" amount="3.0" />
               </StatusEffect>
             </StatusEffects>
           </CharacterAbilityApplyStatusEffects>
@@ -146,7 +146,7 @@
             <StatusEffects>
               <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
                 <Conditional IsBot="false" />
-                <Affliction identifier="mood" amount="0.25" />
+                <Affliction identifier="mood" probability="0.2" amount="0.25" />
               </StatusEffect>
             </StatusEffects>
           </CharacterAbilityApplyStatusEffects>
@@ -158,13 +158,14 @@
             <StatusEffects>
               <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
                 <Conditional IsBot="false" />
-                <Affliction identifier="mood" amount="5.0" />
+                <Affliction identifier="mood" probability="0.99" amount="5.0" />
               </StatusEffect>
             </StatusEffects>
           </CharacterAbilityApplyStatusEffects>
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
+    
     <Talent identifier="he-filthyeuropan">
       <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="119,385,119,119" origin="0.5,0.5"/>
       <Description tag="talentdescription.he-filthyeuropan" />
