@@ -211,7 +211,7 @@
         <Price storeidentifier="merchantbutcher" multiplier="2.0" minavailable="0" maxavailable="16" sold="true" />
       </Price>
       <Deconstruct time="5" requireddeconstructor="deconstructor" />
-      <Fabricate suitablefabricators="oven" requiredtime="20" requiresrecipe="false" amount="1">
+      <Fabricate suitablefabricators="oven" requiredtime="35" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="cooking" level="35" />
         <RequiredItem identifier="he-rawcrawlerfilets" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
       </Fabricate>

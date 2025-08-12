@@ -163,8 +163,8 @@
         <Price storeidentifier="merchantbutcher" multiplier="2.0" minavailable="0" maxavailable="16" sold="true" />
       </Price>
       <Deconstruct time="5" requireddeconstructor="deconstructor" />
-      <Fabricate suitablefabricators="oven" requiredtime="20" requiresrecipe="false" amount="1">
-        <RequiredSkill identifier="cooking" level="60" />
+      <Fabricate suitablefabricators="oven" requiredtime="35" requiresrecipe="false" amount="1">
+        <RequiredSkill identifier="cooking" level="50" />
         <RequiredItem identifier="he-rawthresherfilets" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
       </Fabricate>
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand+LeftHand" aimpos="26,20" holdangle="270" holdpos="32,28" aimangle="120" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
