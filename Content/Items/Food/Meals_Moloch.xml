@@ -34,7 +34,6 @@
           <Affliction identifier="he-calciumrich" amount="100.0" />
           <Affliction identifier="he-stuffed" amount="4.0" />
           <ReduceAffliction type="hunger" amount="4.0" />
-          <ReduceAffliction type="mood" amount="1.0" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         
@@ -61,7 +60,6 @@
           <Affliction identifier="he-calciumrich" amount="100.0" />
           <Affliction identifier="he-stuffed" amount="4.0" />
           <ReduceAffliction type="hunger" amount="4.0" />
-          <ReduceAffliction type="mood" amount="1.0" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="true" range="200" volume="5.0" selectionmode="Random" />
         </StatusEffect>
         <!-- Prevent using this item continuously by applying the tag "emptyhand" which prevents the StatusEffect that uses the item from triggering again, effectively only allowing it to trigger once per mouse-click -->
