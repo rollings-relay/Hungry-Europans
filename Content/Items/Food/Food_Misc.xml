@@ -306,7 +306,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="86,430,72,34" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="86,430,72,34" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="86,430,72,34" depth="0.525" origin="0.5,0.7"  />
-      <Fabricate suitablefabricators="oven" requiredtime="150" requiresrecipe="false" amount="1">
+      <Fabricate suitablefabricators="oven" requiredtime="120" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="cooking" level="40" />
         <RequiredItem identifier="he-dough" amount="1" />
       </Fabricate>
@@ -350,9 +350,9 @@
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="kitchen" secondary="table,crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="86,465,42,20" depth="0.6" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="oven" requiredtime="10" requiresrecipe="false" amount="1">
+      <Fabricate suitablefabricators="oven" requiredtime="80" requiresrecipe="false" amount="2">
         <RequiredSkill identifier="cooking" level="30" />
-        <RequiredItem identifier="he-dough" mincondition="0.2" />
+        <RequiredItem identifier="he-dough" mincondition="0.25" />
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="42" radius="10" density="6" />
@@ -394,9 +394,9 @@
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
       <PreferredContainer primary="kitchen" secondary="table,crewcab"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="147,467,53,18" depth="0.6" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="oven" requiredtime="10" requiresrecipe="false" amount="1">
+      <Fabricate suitablefabricators="oven" requiredtime="80" requiresrecipe="false" amount="2">
         <RequiredSkill identifier="cooking" level="30" />
-        <RequiredItem identifier="he-dough" mincondition="0.2" />
+        <RequiredItem identifier="he-dough" mincondition="0.25" />
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="53" radius="18" density="6" />
