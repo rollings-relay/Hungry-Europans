@@ -35,8 +35,8 @@
       <StatusEffect target="Character,NearbyItems" range="250" >
         <Conditional FullyGrown="true" targetitemcomponent="Growable" />
         <Sound file="%ModDir:2954998725%/Content/Sounds/Afflictions/Misc/SnoringMale.ogg" loop="true" range="200" volume="2" />
-        <ReduceAffliction identifier="mood" strength="25"/>
-        <ReduceAffliction identifier="fatigue" strength="25"/>
+        <ReduceAffliction identifier="mood" strength="27.7"/>
+        <ReduceAffliction identifier="fatigue" strength="27.7"/>
       </StatusEffect>    
     </Effect>
     <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="2,6" sheetelementsize="128,128" color="10,193,114,255" origin="0,0"/>
