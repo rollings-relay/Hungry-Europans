@@ -329,7 +329,6 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entityname.he-emptyshaker>Empty Shaker</entityname.he-emptyshaker><!--Patch 11-->
 <entitydescription.he-emptyshaker>An empty shaker ready to be filled with salt! Can be thrown.</entitydescription.he-emptyshaker><!--Patch 11-->
 <entityname.he-emptycup>Empty Cup</entityname.he-emptycup><!--Patch 13-->
-<entitydescription.he-emptycup>An empty cup for drinks. Can be thrown or filled with tea.</entitydescription.he-emptycup><!--Patch 13-->
 <entityname.he-emptybottlerum2>Empty Rum Bottle</entityname.he-emptybottlerum2><!--Patch 11-->
 <entitydescription.he-emptybottlerum2>An empty Rum bottle used for some recipes. Can be thrown or used in water to collect sea water.</entitydescription.he-emptybottlerum2><!--Patch 11-->
 <entityname.he-emptybottlewhiskey2>Empty Whiskey Bottle</entityname.he-emptybottlewhiskey2><!--Patch 11-->
@@ -1084,11 +1083,17 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-spoon>For scooping things.</entitydescription.he-spoon>
 <entityname.he-fork>Fork</entityname.he-fork>
 <entitydescription.he-fork>It's like a little trident.</entitydescription.he-fork>
+<entityname.he-dirtyspoon>Dirty Spoon</entityname.he-dirtyspoon>
+<entitydescription.he-dirtyspoon>Wash it in the sink.</entitydescription.he-dirtyspoon>
+<entityname.he-dirtyfork>Dirty Fork</entityname.he-dirtyfork>
+<entitydescription.he-dirtyfork>Wash it in the sink.</entitydescription.he-dirtyfork>
 
 <entityname.he-pot>Pot</entityname.he-pot>
 <entitydescription.he-pot>A stainless steel pot.</entitydescription.he-pot>
 <entityname.he-dirtypot>Dirty Pot</entityname.he-dirtypot>
 <entitydescription.he-dirtypot>This pot is stained with gunk. Clean it in a sink.</entitydescription.he-dirtypot>
+<entityname.he-potwithwater>Pot with water</entityname.he-potwithwater>
+<entitydescription.he-potwithwater>A pot, with water.</entitydescription.he-potwithwater>
 
 <entityname.he-emptybowl>Bowl</entityname.he-emptybowl>
 <entitydescription.he-emptybowl>A ceramic bowl. Don't drop it.</entitydescription.he-emptybowl>
@@ -1098,13 +1103,6 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-emptyplate>A ceramic plate. Don't throw it.</entitydescription.he-emptyplate>
 <entityname.he-dirtyplate>Dirty Plate</entityname.he-dirtyplate>
 <entitydescription.he-dirtyplate>This plate is stained with gunk. Clean it in a sink.</entitydescription.he-dirtyplate>
-
-<entityname.he-pot>Pot</entityname.he-pot>
-<entitydescription.he-pot>A stainless steel pot.</entitydescription.he-pot>
-<entityname.he-dirtypot>Dirty Pot</entityname.he-dirtypot>
-<entitydescription.he-dirtypot>This pot is stained with gunk. Clean it in a sink.</entitydescription.he-dirtypot>
-<entityname.he-potwithwater>Pot with water</entityname.he-potwithwater>
-<entitydescription.he-potwithwater>A pot, with water.</entitydescription.he-potwithwater>
 
 <entityname.he-pan>Cooking Pan</entityname.he-pan>
 <entitydescription.he-pan>Use on the stove to cook food, use on crewmates to discipline them.</entitydescription.he-pan>
@@ -1307,6 +1305,67 @@ SEARCH FOR THE FOLLOWING:                                                       
 
 <entityname.coffeemachine>Coffee Machine</entityname.coffeemachine><!--Patch 18-->
 <entitydescription.coffeemachine>Brews a nice cup of coffee.</entitydescription.coffeemachine><!--Patch 18-->
+
+<entitydescription.he-emptycup>An empty cup for drinks. Can be thrown or filled with a hot beverage.</entitydescription.he-emptycup><!--Patch 13-->
+<entityname.he-dirtycup>Dirty Cup</entityname.he-dirtycup>
+<entitydescription.dirtycup>Wash it in the sink.</entitydescription.dirtycup>
+
+<entityname.he-emptymug>Empty Mug</entityname.he-emptymug>
+<entitydescription.he-emptymug>An empty mug for drinks. Can be thrown or filled with a hot beverage.</entitydescription.he-emptymug>
+<entityname.he-dirtymug>Dirty Mug</entityname.he-dirtymug>
+<entitydescription.dirtymug>Wash it in the sink.</entitydescription.dirtymug>
+
+<entityname.he-emptycocktailglass>Empty Cocktail Glass</entityname.he-emptycocktailglass>
+<entitydescription.he-emptycocktailglass>Could use a drink.</entitydescription.he-emptycocktailglass>
+<entityname.he-dirtycocktailglass>Dirty Cocktail Glass</entityname.he-dirtycocktailglass>
+<entitydescription.dirtycocktailglass>Wash it in the sink.</entitydescription.dirtycocktailglass>
+
+
+
+<entityname.he-canopener>Can Opener</entityname.he-canopener>
+<entitydescription.he-canopener>Can open a can open.</entitydescription.he-canopener>
+
+<entityname.he-cannedcorn>Canned Corn</entityname.he-cannedcorn>
+<entitydescription.he-cannedcorn>A rare can of old Earthian vegetables, when supplies were still being delivered from outer space.</entitydescription.he-cannedcorn>
+<entityname.he-cannedcornopen>Canned Corn</entityname.he-cannedcornopen>
+<entitydescription.he-cannedcornopen>A rare can of old Earthian vegetables, when supplies were still being delivered from outer space.</entitydescription.he-cannedcornopen>
+<entityname.he-cannedmushrooms>Canned Mushrooms</entityname.he-cannedmushrooms>
+<entitydescription.he-cannedmushrooms>A rare can of old Earthian vegetables, when supplies were still being delivered from outer space.</entitydescription.he-cannedmushrooms>
+<entityname.he-cannedmushroomssopen>Canned Mushrooms</entityname.he-cannedmushroomssopen>
+<entitydescription.he-cannedmushroomssopen>A rare can of old Earthian vegetables, when supplies were still being delivered from outer space.</entitydescription.he-cannedmushroomssopen>
+<entityname.he-cannedpotatoes>Canned Potatoes</entityname.he-cannedpotatoes>
+<entitydescription.he-cannedpotatoes>A rare can of old Earthian vegetables, when supplies were still being delivered from outer space.</entitydescription.he-cannedpotatoes>
+<entityname.he-cannedpotatoesopen>Canned Potatoes</entityname.he-cannedpotatoesopen>
+<entitydescription.he-cannedpotatoesopen>A rare can of old Earthian vegetables, when supplies were still being delivered from outer space.</entitydescription.he-cannedpotatoesopen>
+<entityname.he-cannedtomatoes>Canned Tomatoes</entityname.he-cannedtomatoes>
+<entitydescription.he-cannedtomatoes>A rare can of old Earthian vegetables, when supplies were still being delivered from outer space.</entitydescription.he-cannedtomatoes>
+<entityname.he-cannedtomatoesopen>Canned Tomatoes</entityname.he-cannedtomatoesopen>
+<entitydescription.he-cannedtomatoesopen>A rare can of old Earthian vegetables, when supplies were still being delivered from outer space.</entitydescription.he-cannedtomatoesopen>
+
+<entityname.he-colaradiantbottle>Couwola Cola Radiant</entityname.he-colaradiantbottle>
+<entitydescription.he-colaradiantbottle>Feeling Overcharged! A special edition bottle of Couwola Cola, enriched with fulgurium.</entitydescription.he-colaradiantbottle>
+
+<entityname.he-dough>Dough</entityname.he-dough>
+<entitydescription.he-dough>A ball of dough, rolled by hopefully clean hands.</entitydescription.he-dough>
+
+<entityname.he-fishtailcocktail>Fishtail Cocktail</entityname.he-fishtailcocktail>
+<entitydescription.he-canopener>A festive alcoholic drink to forget your troubles.</entitydescription.he-canopener>
+
+<entityname.he-nuggetpack>Nugget Pack</entityname.he-nuggetpack>
+<entitydescription.he-nuggetpack>A box containing 8 nuggets.</entitydescription.he-nuggetpack>
+
+<entityname.he-seaweed>Sea Weed</entityname.he-seaweed>
+<entitydescription.he-seaweed>Common algae found around Europa.</entitydescription.he-seaweed>
+
+<entityname.he-shivcommon>Glass Shiv</entityname.he-shivcommon>
+<entitydescription.he-shivcommon>A sharp, broken bottle used as a weapon in bar fights.</entitydescription.he-shivcommon>
+
+<entityname.he-whoopeecushion>Whoope Cushion</entityname.he-whoopeecushion>
+<entitydescription.he-canopener>Embarass your friends!</entitydescription.he-canopener>
+
+
+
+
 
 
 
