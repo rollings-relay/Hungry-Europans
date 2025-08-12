@@ -41,6 +41,7 @@ Hotfix
 [List]
 [b]Changes:[/b] 
 [*] Reduced stress buildup from Moody Europan
+[*] Slightly increased stress healing from being Drunk
 [*] Jerky recipe can use lower condition meats (down to 20%+ when other recipes only accept meat at 50%+) 
 [*] Bread can stack
 [/List]
