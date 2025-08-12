@@ -146,7 +146,7 @@
         </StatusEffect>
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional mood="gt 1" />
-          <ReduceAffliction identifier="mood" strength="0.2" probability="0.25" />
+          <ReduceAffliction identifier="mood" strength="0.2" />
         </StatusEffect>
       </Effect>
       <!-- Low level of drunkenness decreases speed slightly -->
@@ -172,7 +172,7 @@
         </StatusEffect>
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional mood="gt 1" />
-          <ReduceAffliction identifier="mood" strength="0.2" />
+          <ReduceAffliction identifier="mood" strength="0.3" />
         </StatusEffect>
         <StatusEffect target="Character" interval="1" disabledeltatime="true" comparison="And">
           <Conditional he-alcoholism="lt 25" />
@@ -303,7 +303,7 @@
         </StatusEffect>
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional mood="gt 1" />
-          <ReduceAffliction identifier="mood" strength="0.2" probability="0.25" />
+          <ReduceAffliction identifier="mood" strength="0.2" />
         </StatusEffect>
       </Effect>
       <Effect minstrength="20" maxstrength="40"
@@ -323,7 +323,7 @@
         </StatusEffect>
         <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional mood="gt 1" />
-          <ReduceAffliction identifier="mood" strength="0.2" />
+          <ReduceAffliction identifier="mood" strength="0.3" />
         </StatusEffect>
         <!--<StatusEffect target="Character" interval="1" disabledeltatime="true" comparison="And">
           <Conditional he-alcoholism="lt 25" />
