@@ -34,9 +34,16 @@ Low:
 //////////////////////
 //////////////////////
 
-[hr]09/08/2025
+[hr]12/08/2025
 
 Hotfix
+
+[List]
+[b]Changes:[/b] 
+[*] Reduced stress buildup from Moody Europan
+[*] Jerky recipe can use lower condition meats (down to 20%+ when other recipes only accept meat at 50%+) 
+[*] Bread can stack
+[/List]
 
 [b]Fixes:[/b] 
 
@@ -44,10 +51,9 @@ Hotfix
 [*] Fixed Thresher filets using Crawler meat
 [*] Fixed some NPC conversations being way too hard to trigger
 [*] Fixed getting Stress/Mood affliction from Bladder/Defecate without Moody Europan enabled
-[*] Reduced stress buildup from Moody Europan
 [*] Fixed NT compatibility, HE no longer overrides antibiotics (no longer needed to heal worm/tapeworm)
-[*] Fixed missing affliction text for worm/tapeworm
-[*] Fixed missing text for Sleepy/Moody Europan item
+[*] Fixed/Updated missing text
+[*] Fixed oven crafting times being inconsistent
 [/List]
 
 
