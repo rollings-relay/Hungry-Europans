@@ -577,17 +577,17 @@ SEARCH FOR THE FOLLOWING:                                                       
 <talentdescription.he-piper>Playing the bagpipes near your crew grants them the following bonuses for the duration you're playing:\n‖color:gui.orange‖20 to Weapons\n20% Increased Walking Speed\n25% Increased Melee Damage\n25% Damage Resistance ‖end‖.</talentdescription.he-piper><!--Patch 13-->
 <talentname.he-lazygardener>Lazy Gardener</talentname.he-lazygardener><!--Patch 14-->
 <talentdescription.he-lazygardener>The time spent watering your plants was just too much for you.</talentdescription.he-lazygardener><!--Patch 14-->
-<talentname.he-farmersmarket>Farmers' market</talentname.he-farmersmarket><!--Patch 17-->
+<talentname.he-farmersmarket>Farmers' Market</talentname.he-farmersmarket><!--Patch 17-->
 <talentdescription.he-farmersmarket>You can sell prepared food for [amount]% more.</talentdescription.he-farmersmarket><!--Patch 17-->
 <talentdescription.fooditemscostless>‖color:gui.orange‖Food‖end‖ items can be bought [amount]% cheaper.</talentdescription.fooditemscostless>
 <talentname.he-anatomystudy>Anatomy Study</talentname.he-anatomystudy><!--Patch 17-->
-<talentname.he-thirstforknowledge>Thirst for Knowledge</talentname.he-thirstforknowledge><!--Patch 17-->
+<talentname.he-thirstforknowledge>Thirst For Knowledge</talentname.he-thirstforknowledge><!--Patch 17-->
 <talentname.he-steadyhands>Steady Hands</talentname.he-steadyhands><!--Patch 17-->
 <talentdescription.he-steadyhands>While aiming with a melee weapon, gain [amount]% stun resistance.</talentdescription.he-steadyhands><!--Patch 17-->
 <talentname.he-foodtrucking>Food Trucking</talentname.he-foodtrucking><!--Patch 17-->
 <talentdescription.he-foodtrucking>Gain a bonus of [helmbonus] ‖color:gui.orange‖Helm‖end‖ skill.\nWhen entering a friendly habitation outpost, gain [outpost]mk.</talentdescription.he-foodtrucking><!--Patch 17-->
 <talentname.he-smellslikeabrewery>Smells Like a Brewery</talentname.he-smellslikeabrewery><!--Patch 17-->
-<talentname.he-dietarypreference>Dietary preference</talentname.he-dietarypreference><!--Patch 17-->
+<talentname.he-dietarypreference>Dietary Preference</talentname.he-dietarypreference><!--Patch 17-->
 <talentdescription.he-dietarypreferencebase>Choose one type of enemy and gain a [amount]% damage boost against it. \nYou gain [percent]% more food buffs when eating.</talentdescription.he-dietarypreferencebase><!--Patch 17-->
 <talentdescription.he-dietarypreferencemudraptor>Choose ‖color:gui.orange‖Mudraptors‖end‖ as your preference and gain [amount]% increased damage dealt against them.</talentdescription.he-dietarypreferencemudraptor><!--Patch 17-->
 <talentdescription.he-dietarypreferencecrawler>Choose ‖color:gui.orange‖Crawlers‖end‖ as your preference and gain [amount]% increased damage dealt against them.</talentdescription.he-dietarypreferencecrawler><!--Patch 17-->
