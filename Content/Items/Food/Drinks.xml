@@ -62,7 +62,7 @@
           <Conditional HasTag="opened" />
           <Affliction identifier="he-internalburn" amount="8" />
           <Affliction identifier="psychosisresistance" amount="80" />
-          <Affliction identifier="drunk" amount="10.0" />
+          <Affliction identifier="applydrunk" amount="6.0" />
           <ReduceAffliction identifier="psychosis" amount="10.0" />
           <ReduceAffliction identifier="hallucinating" amount="10.0" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/Drinking.ogg" loop="true" range="200" volume="5.0" />
