@@ -9,7 +9,7 @@
     <!--OVERRIDES-->
     <!--OVERRIDES-->
     
-    <Ethanol name="" identifier="ethanol" category="Medical,Material" scale="0.5" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,chem,cleaningagent,distilleringredient,medical,petfood2" impactsoundtag="impact_metal_light" useinhealthinterface="true" requireaimtouse="true" isshootable="True" health="11">
+    <Ethanol name="" identifier="ethanol" category="Medical,Material" scale="0.5" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,chem,cleaningagent,distilleringredient,medical,petfood2" impactsoundtag="impact_metal_light" useinhealthinterface="true" requireaimtouse="true" isshootable="True" health="100">
       <PreferredContainer primary="sprayer" amount="1" spawnprobability="1"/>
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.2" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="2" spawnprobability="0.3" />
@@ -36,7 +36,7 @@
 
         <!-- When used in Health GUI -->
         <StatusEffect type="OnSuccess" target="This" setvalue="true" oneshot="true" aimpos="28,24" aimangle="120" settags="opened" holdpos="30,-15" holdangle="0" /> 
-        <StatusEffect type="OnSuccess" target="This" Condition="-2.0" disabledeltatime="true" >
+        <StatusEffect type="OnSuccess" target="This" Condition="-20.0" disabledeltatime="true" >
           <Sound file="Content/Sounds/Water/Splash1.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
           <Sound file="Content/Sounds/Water/Splash4.ogg" range="500" volume="0.5" frequencymultiplier="2" selectionmode="random" />
         </StatusEffect>
@@ -47,8 +47,8 @@
         </StatusEffect>        
         
         <!-- Unbottle -->
-        <StatusEffect type="OnUse" target="This" Condition="10" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
-          <Conditional condition="gte 11" />
+        <StatusEffect type="OnUse" target="This" Condition="99" holdpos="30,-15" holdangle="0" setvalue="true" oneshot="true" comparison="And">
+          <Conditional condition="gte 100" />
           <Conditional HasTag="neq opened" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/OpenBottle.ogg" loop="false" range="200" volume="5.0" />
         </StatusEffect>
@@ -56,9 +56,9 @@
         <StatusEffect type="OnUse" target="This" aimpos="26,24" aimangle="120" settags="opened" delay="0.5" disabledeltatime="true" setvalue="true" stackable="false" oneshot="true" />
                 
         <!-- Regular drinking RMB after unbottle --> 
-        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-1.0" comparison="And">
+        <StatusEffect type="OnSecondaryUse" target="This,Character" Condition="-10.0" comparison="And">
           <Conditional InWater="false" />
-          <Conditional condition="lt 11" />
+          <Conditional condition="lt 100" />
           <Conditional HasTag="opened" />
           <Affliction identifier="he-internalburn" amount="8" />
           <Affliction identifier="psychosisresistance" amount="80" />
