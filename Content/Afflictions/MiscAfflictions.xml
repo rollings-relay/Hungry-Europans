@@ -552,6 +552,7 @@
       <icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="640,256,128,128" color="255,255,2255,255" origin="0.5,0.5" />
     </Affliction>
     
+    <!-- Tried using dormantthreshold="60" causespeechimpediment="true" to make characters not speak but it doesnt work -->
     <Affliction name="Internal Burn"
       identifier="he-internalburn"
       description=""
@@ -563,7 +564,8 @@
       maxstrength="100"
       healcostmultiplier="2.25"
       healableinmedicalclinic="false"
-      MedicalSkillGain="0.0">
+      MedicalSkillGain="0.0"
+      activationthreshold="0">
       <Description
         textidentifier="afflictiondescription.self.he-internalburn.low"
         target="Self" 
