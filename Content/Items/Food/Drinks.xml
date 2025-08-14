@@ -8,7 +8,8 @@
     <!--OVERRIDES-->
     <!--OVERRIDES-->
     <!--OVERRIDES-->
-    
+
+        <!-- changed health to 100 to enable compatibility (example: sprayer) -->
     <Ethanol name="" identifier="ethanol" category="Medical,Material" scale="0.5" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,chem,cleaningagent,distilleringredient,medical,petfood2" impactsoundtag="impact_metal_light" useinhealthinterface="true" requireaimtouse="true" isshootable="True" health="100">
       <PreferredContainer primary="sprayer" amount="1" spawnprobability="1"/>
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.2" />
