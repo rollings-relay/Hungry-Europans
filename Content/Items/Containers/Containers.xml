@@ -123,7 +123,7 @@
           <sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/Cooler.ogg" type="OnActive" range="300" loop="true" volume="3" />
         </StatusEffect>
       </LightComponent>
-      <ItemContainer capacity="0" canbeselected="true" selectkey="Use" hideitems="true" containedstateindicatorstyle="battery" containedstateindicatorslot="0" keepopenwhenequipped="false" movableframe="true">
+      <ItemContainer capacity="0" canbeselected="true" selectkey="Use" hideitems="true" containedstateindicatorstyle="battery" containedstateindicatorslot="0" keepopenwhenequipped="false" movableframe="true" msg="itemmsgopenuse" >
         <SlotIcon slotindex="0" texture="Content/UI/ContainerIndicators.png" sourcerect="2,184,120,32" origin="0.5,0.5" />
         <SubContainer capacity="1" maxstacksize="1" spawnwithid="batterycell">
           <Containable items="mobilebattery">
