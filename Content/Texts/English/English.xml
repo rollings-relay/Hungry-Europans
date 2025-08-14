@@ -773,7 +773,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <afflictioncauseofdeathself.he-stomachache>You have choked on your own vomit.</afflictioncauseofdeathself.he-stomachache>
 <advancedafflictiondescription.self.he-stomachache>The stomach hurts and you feel slightly nauseous.</advancedafflictiondescription.self.he-stomachache>
 <advancedafflictiondescription.self.he-stomachache.2>The stomach hurts a lot and you're feeling very nauseous.</advancedafflictiondescription.self.he-stomachache.2>
-<advancedafflictiondescription.others.he-stomachache>The patient's stomach hurts from drinking too much dirty water.</advancedafflictiondescription.others.he-stomachache><!--Changed as of Patch 15 | previously referred to "sea water" instead of "dirty water"-->
+<advancedafflictiondescription.others.he-stomachache>The patient suffers from abdominal pain. They must have ingested something unsafe for consumption.</advancedafflictiondescription.others.he-stomachache>
 
 <afflictionname.he-geneticextraction>Genetic Extraction</afflictionname.he-geneticextraction>
 <afflictiondescription.he-geneticextraction>Genes are being extracted.</afflictiondescription.he-geneticextraction>
