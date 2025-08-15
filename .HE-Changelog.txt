@@ -34,28 +34,23 @@ Low:
 //////////////////////
 //////////////////////
 
-[hr]12/08/2025
+[hr]15/08/2025
 
 Hotfix
 
 [List]
 [b]Changes:[/b] 
-[*] Reduced stress buildup from Moody Europan
-[*] Slightly increased stress healing from being Drunk
-[*] Jerky recipe can use lower condition meats (down to 20%+ when other recipes only accept meat at 50%+) 
-[*] Bread can stack
+[*] Can open Cooler crate with E without picking it up
 [/List]
 
 [b]Fixes:[/b] 
 
 [List]
-[*] Fixed Thresher filets using Crawler meat
-[*] Fixed some NPC conversations being way too hard to trigger
-[*] Fixed getting Stress/Mood affliction from Bladder/Defecate without Moody Europan enabled
-[*] Fixed NT compatibility, HE no longer overrides antibiotics (no longer needed to heal worm/tapeworm)
-[*] Fixed/Updated missing text
-[*] Fixed oven crafting times being inconsistent
-[*] Fixed sauerkraut using sausage condition
+[*] Fixed "Head Chef" talent giving a skill boost of 2500% !!!!
+[*] Fixed Ethanol being consumed by sprayers way too fast
+[*] Fixed Ethanol applying "drunk" instantly instead of over time
+[*] Fixed infinite coffe mug glitch in kettle
+[*] Added missing text and corrected wrong text IDs
 [/List]
 
 
