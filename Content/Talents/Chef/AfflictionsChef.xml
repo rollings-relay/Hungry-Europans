@@ -14,7 +14,7 @@
     <Effect
       minstrength="0"
       maxstrength="600">
-      <StatValue stattype="SkillGainSpeed" value="25" />
+      <StatValue stattype="SkillGainSpeed" value="0.25" />
     </Effect>
     <Icon texture="%ModDir:2954998725%/Content/UI/HE-TalentsIcons.png" sheetindex="5,6" sheetelementsize="128,128" color="10,193,114,255" origin="0,0"/>
   </Affliction>  
