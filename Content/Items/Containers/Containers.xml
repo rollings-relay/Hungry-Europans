@@ -779,6 +779,12 @@
             <RequiredItem items="emptycup" targetslot="1" type="Contained" />
             <Remove />
           </StatusEffect>
+          <StatusEffect type="OnUse" target="Contained" targetcontainer="this" targettag="emptymug" targetslot="1" disabledeltatime="true" AllowWhenBroken="true">
+            <Conditional IsOn="true" targetitemcomponent="LightComponent" targetcontainer="true"/>
+            <RequiredItem items="mix" targetslot="0" type="Contained" />
+            <RequiredItem items="emptymug" targetslot="1" type="Contained" />
+            <Remove />
+          </StatusEffect>
           <!--Refill with bubbleberry tea-->
           <StatusEffect type="OnUse" target="This,Contained" targetslot="0" condition="-12.5" disabledeltatime="true" AllowWhenBroken="true">
             <Conditional IsOn="true" targetitemcomponent="LightComponent"/>
