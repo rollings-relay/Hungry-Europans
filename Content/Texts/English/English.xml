@@ -524,7 +524,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entityname.he-teakettle>Tea Kettle</entityname.he-teakettle><!--Patch 13-->
 <entitydescription.he-teakettle>Used to refill cups with tea. Requires to be brewed on a stove with a tea mix contained in it.</entitydescription.he-teakettle><!--Patch 13-->
 <entityname.he-sprinkler>Gardening Sprinkler</entityname.he-sprinkler><!--Patch 14-->
-<entitydescription.he-sprinkler>Automatically waters nearby plants within a 1m range horizontally below the sprinkler every 15 minutes. Needs power.</entitydescription.he-sprinkler><!--Patch 14-->
+<entitydescription.he-sprinkler>Automatically waters nearby plants with an adjustable timer. Needs power.</entitydescription.he-sprinkler><!--Patch 14-->
 
 <!-- Skills -->
 <skillname.cooking>Cooking</skillname.cooking>
@@ -1046,7 +1046,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-fermentedsaltbulb>Bacteria decomposes Salt Bulbs in the right environment, removing all its deadly saltiness and giving it a subtle touch of acidity.</entitydescription.he-fermentedsaltbulb>
 
 <entityname.he-molochefort>Molochefort</entityname.he-molochefort>
-<entitydescription.he-molochefort>Half-rotten Moloch cheese exposed to bacteria; the result is surprisingly not deadly. Boosts your immune system.</entitydescription.he-molochefort>
+<entitydescription.he-molochefort>Half-rotten Moloch blue cheese exposed to bacteria; the result is surprisingly not deadly. Boosts your immune system.</entitydescription.he-molochefort>
 
 <entityname.he-sauerkraut>Sauerkraut</entityname.he-sauerkraut>
 <entitydescription.he-sauerkraut>Sausages and fermented cabbage. Best enjoyed with a beer and some yodeling.</entitydescription.he-sauerkraut>
