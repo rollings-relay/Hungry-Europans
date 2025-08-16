@@ -46,10 +46,12 @@ Hotfix
 [b]Fixes:[/b] 
 
 [List]
+[*] Fixed Gardening Sprinkler not watering plant enoughs. The sprinkler now heals roughly 50% of plant health per cycle, to know how long a cycle must be THERE IS A PLANT GROWTH CALCULATOR IN THE MOD FILES. Plants will see another rework in about a month when DLC comes out (?)
 [*] Fixed "Head Chef" talent giving a skill boost of 2500% !!!!
 [*] Fixed Ethanol being consumed by sprayers way too fast
 [*] Fixed Ethanol applying "drunk" instantly instead of over time
 [*] Fixed infinite coffe mug glitch in kettle
+[*] Fixed odd stack sizes for buns and bread slices
 [*] Added missing text and corrected wrong text IDs
 [/List]
 
