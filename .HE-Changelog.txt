@@ -41,6 +41,7 @@ Hotfix
 [List]
 [b]Changes:[/b] 
 [*] Can open Cooler crate with E without picking it up
+[*] Updated test kitchen with tableware
 [/List]
 
 [b]Fixes:[/b] 
