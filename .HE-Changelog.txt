@@ -62,8 +62,9 @@ Hotfix
 [*] Errors for missing/deleted items. Just save once and the errors will go away.
 [*] Damage multipliers (like steroids) result in less meat being harvested on corpses
 [*] Cleaning stacked bowls/plates in the sink will delete any contained bowl/plate, make sure to unstack your bowls
-[*] Sprites of items inside items inside tables break and do not match their real position in the inventory 	
+[*] Sprites of items inside items inside tables break and do not match their real position in the inventory
 [*] Hygiene affliction washes with clothes on
+[*] Kitchen Counter cannot receive power from batteries/relays
 
 
 //////////////////////
