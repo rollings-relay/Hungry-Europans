@@ -24,14 +24,15 @@
         </StatusEffect>
       </PowerContainer>
       <!-- When active, water plants and reduce condition of keg. Reset charge to max after 10 seconds -->
+      <!-- PLANTS HAVE AROUND 400 HEALTH. 20 CONDITION FOR 10 SECONDS IS ABOUT HALF OF THEIR TOTAL HEALTH -->
       <ItemComponent IsOn="false" IsActive="false" >
         <StatusEffect type="OnUse" target="This" charge="9999" targetitemcomponent="PowerContainer" delay="10" interval="11" stackable="false" setvalue="true"/>
-        <StatusEffect type="OnUse" target="NearbyItems" targettags="sprinkler,seed" range="200.0" condition="1" offset="-5,-51" checkconditionalalways="true">
+        <StatusEffect type="OnUse" target="NearbyItems" targettags="sprinkler,seed" range="200.0" condition="20" offset="-5,-51" checkconditionalalways="true">
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="4" range="500" loop="true" />
           <ParticleEmitter particle="waterdrop" anglemin="0" anglemax="359" velocitymin="100.0" velocitymax="300.0" particlespersecond="50" />
           <RequiredItem items="he-kegwater" type="Contained" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="Contained" condition="-1.0">
+        <StatusEffect type="OnUse" target="Contained" condition="-2.0">
           <RequiredItem items="he-kegwater" type="Contained" />
         </StatusEffect>
       </ItemComponent>
