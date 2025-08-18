@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Override>
   <Items>
-    <Item name="Gardening Sprinkler" identifier="he-sprinkler" tags="talentitem,sprinkler" linkable="true" category="Misc" subcategory="Container" description="Automatically waters nearby plants within a 1m range horizontally below the sprinkler every 15 minutes. Needs power." canflipx="false" pickdistance="150" waterproof="false" isshootable="true" scale="0.5">
+    <Item name="Gardening Sprinkler" identifier="he-sprinkler" tags="talentitem,sprinkler" linkable="true" category="Misc" subcategory="Container" description="" canflipx="false" pickdistance="150" waterproof="false" isshootable="true" scale="0.5">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="0,1486,156,106" origin="0.5,0.5" />
       <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.591" sourcerect="0,1486,156,106" origin="0.5,0.5" />
       <ContainedSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" usewhenattached="true" decorativespritebehavior="HideWhenNotVisible" depth="0.805" sourcerect="0,1234,106,251" origin="0.5,0.5" />
@@ -20,22 +20,38 @@
       <PowerContainer capacity="600" charge="600" maxrechargespeed="0" rechargespeed="0" canbeselected="false">
         <StatusEffect type="OnNotContained" target="This" >
           <Conditional chargepercentage="0" />
-          <Use />
+          <UseItem />
         </StatusEffect>
       </PowerContainer>
+      
       <!-- When active, water plants and reduce condition of keg. Reset charge to max after 10 seconds -->
       <!-- PLANTS HAVE AROUND 400 HEALTH. 20 CONDITION FOR 10 SECONDS IS ABOUT HALF OF THEIR TOTAL HEALTH -->
-      <ItemComponent IsOn="false" IsActive="false" >
-        <StatusEffect type="OnUse" target="This" charge="9999" targetitemcomponent="PowerContainer" delay="10" interval="11" stackable="false" setvalue="true"/>
-        <StatusEffect type="OnUse" target="NearbyItems" targettags="sprinkler,seed" range="200.0" condition="20" offset="-5,-51" checkconditionalalways="true">
+      <RepairTool extinguishamount="50.0" range="300" spread="180" unskilledspread="180" barrelpos="0,0" repairthroughholes="true" characterusable="false" requireaimtouse="false" usablein="air" hititems="true" repairmultiple="true" wateramount="100" barrelrotation="0" >
+        <RequiredItem items="he-kegwater" type="Contained" />
+        <StatusEffect type="OnUse" target="This" charge="9999" targetitemcomponent="PowerContainer" delay="10" interval="11" stackable="false" setvalue="true" />     
+        <StatusEffect type="OnUse" target="Contained" condition="-2.0" offset="0,-50">
+          <RequiredItem items="he-kegwater" type="Contained" />
+          <ParticleEmitter particle="waterdrop" anglemin="0" anglemax="360" velocitymin="100.0" velocitymax="300.0" particlespersecond="50" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/DrainLiquid.ogg" volume="4" range="500" loop="true" />
-          <ParticleEmitter particle="waterdrop" anglemin="0" anglemax="359" velocitymin="100.0" velocitymax="300.0" particlespersecond="50" />
-          <RequiredItem items="he-kegwater" type="Contained" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="Contained" condition="-2.0">
-          <RequiredItem items="he-kegwater" type="Contained" />
+        <StatusEffect type="OnNotContained" target="This" setvalue="true" requireaimtouse="false" />
+        <StatusEffect type="OnContained" target="This" setvalue="true" requireaimtouse="true" />
+        <!-- Cursed channel switching to shift the sprinkler barrel position from left to right TODO: replace this with a better solution when possible, like rotating the barrel instead -->
+        <!-- <StatusEffect type="OnUse" target="This" barrelrotation="720" /> -->
+        <!-- <ParticleEmitter particle="plasma" particlespersecond="50" copyentityangle="true"/> -->
+        <StatusEffect type="OnUse" target="This" interval="1" barrelpos="-75,0" channel="1" setvalue="true" duration="1" stackable="false">
+          <Conditional channel="eq 0" />
         </StatusEffect>
-      </ItemComponent>
+        <StatusEffect type="OnUse" target="This" interval="1" barrelpos="0,0" channel="2" setvalue="true" duration="1" stackable="false">
+          <Conditional channel="eq 1" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" interval="1" barrelpos="75,0" channel="0" setvalue="true" duration="1" stackable="false">
+          <Conditional channel="eq 2" />
+        </StatusEffect>        
+      </RepairTool>      
+      <!--WifiComponent is used to trigger the StatusEffects that alter the barrelpos one after another and loop them back by keeping track of and adjusting the channel value-->
+      <WifiComponent canbeselected="false" allowingameediting="false" channel="0" range="0" linktochat="false" />
+      
       <ItemContainer selectkey="Select" capacity="0" canbeselected="true" hideitems="false" itempos="78,5" ShowContainedStateIndicator="false" slotsperrow="3" keepopenwhenequipped="false" movableframe="true">
         <GuiFrame relativesize="0.15,0.30" anchor="Center" relativeoffset="0,0" style="ItemUI" msg="ItemMsgInteractSelect" />
         <TextBox text="Set timer" targetitemcomponent="PowerContainer" propertyname="capacity" maxtextlength="3" ShouldSetProperty="true" />
