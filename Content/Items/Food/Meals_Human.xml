@@ -15,7 +15,7 @@
         <RequiredSkill identifier="cooking" level="50" />
         <RequiredItem identifier="he-preparedhumanfilets" amount="1" MinCondition="0.25" UseCondition="true" />
         <RequiredItem identifier="bubbleberryleaf" amount="1" />
-        <RequiredItem identifier="he-emptyplate" amount="1" />
+        <RequiredItem identifier="he-emptyplate" amount="1" usecondition="false" mincondition="0" />
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="60" radius="10" density="11" />
@@ -102,7 +102,7 @@
         <RequiredItem identifier="he-humanmeatchunk" amount="3" MinCondition="0.5" MaxCondition="1.0" UseCondition="False" />
         <RequiredItem identifier="he-cookingoil" UseCondition="True" MinCondition="0.1"/>
         <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.05"/>
-        <RequiredItem identifier="he-emptyplate" amount="1" />
+        <RequiredItem identifier="he-emptyplate" amount="1" usecondition="false" mincondition="0" />
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="60" radius="10" density="11" />

@@ -295,7 +295,7 @@
         <RequiredItem identifier="he-seaweedstrip" />
         <!-- TODO: replace ketchup with gravy once it's added -->
         <RequiredItem identifier="he-ketchup" UseCondition="True" MinCondition="0.2"/>
-        <RequiredItem identifier="he-emptyplate" amount="1" />
+        <RequiredItem identifier="he-emptyplate" amount="1" usecondition="false" mincondition="0" />
       </Fabricate>
       <Deconstruct time="4" requireddeconstructor="deconstructor">
         <Item identifier="he-dirtyplate" amount="1" />

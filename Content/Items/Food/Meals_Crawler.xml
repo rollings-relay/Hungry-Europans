@@ -15,7 +15,7 @@
         <RequiredSkill identifier="cooking" level="25" />
         <RequiredItem identifier="he-preparedcrawlerfilets" amount="1" MinCondition="0.25" UseCondition="true" />
         <RequiredItem identifier="he-seaweedstrip" amount="1" />
-        <RequiredItem identifier="he-emptyplate" amount="1" />
+        <RequiredItem identifier="he-emptyplate" amount="1" usecondition="false" mincondition="0" />
       </Fabricate>
       <Deconstruct time="4" requireddeconstructor="deconstructor">
         <Item identifier="he-dirtyplate" amount="1" />

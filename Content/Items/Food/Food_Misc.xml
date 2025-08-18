@@ -774,7 +774,7 @@
         <RequiredSkill identifier="cooking" level="25" />
         <RequiredItem identifier="he-sausage" amount="2" MinCondition="0.25" UseCondition="false" />
         <RequiredItem identifier="he-fermentedcabbage" amount="1" />
-        <RequiredItem identifier="he-emptyplate" amount="1" />
+        <RequiredItem identifier="he-emptyplate" amount="1" usecondition="false" mincondition="0" />
       </Fabricate>
       <Deconstruct time="4" requireddeconstructor="deconstructor">
         <Item identifier="he-dirtyplate" amount="1" />

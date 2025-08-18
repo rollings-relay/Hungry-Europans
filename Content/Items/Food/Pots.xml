@@ -254,7 +254,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="342,0,45,20" depth="0.6" origin="0.5,0.5" />
       <Fabricate suitablefabricators="stove" requiredtime="3" requiresrecipe="false" amount="1" >
         <RequiredSkill identifier="cooking" level="15" />
-        <RequiredItem identifier="he-emptybowl" amount="1" />
+        <RequiredItem identifier="he-emptybowl" amount="1" usecondition="false" mincondition="0" />
         <RequiredItem identifier="he-potcrawyum" UseCondition="True" MinCondition="0.20"/>
       </Fabricate>
       <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="49" fabricationlimitmin="0" fabricationlimitmax="7" />
@@ -326,7 +326,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="342,0,45,20" depth="0.6" origin="0.5,0.5" />
       <Fabricate suitablefabricators="stove" requiredtime="3" requiresrecipe="false" amount="1" >
         <RequiredSkill identifier="cooking" level="15" />
-        <RequiredItem identifier="he-emptybowl" amount="1" />
+        <RequiredItem identifier="he-emptybowl" amount="1" usecondition="false" mincondition="0" />
         <RequiredItem identifier="he-potbonebroth" UseCondition="True" MinCondition="0.20"/>
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
@@ -401,7 +401,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="342,0,45,20" depth="0.6" origin="0.5,0.5" />
       <Fabricate suitablefabricators="stove" requiredtime="3" requiresrecipe="false" amount="1" >
         <RequiredSkill identifier="cooking" level="15" />
-        <RequiredItem identifier="he-emptybowl" amount="1" />
+        <RequiredItem identifier="he-emptybowl" amount="1" usecondition="false" mincondition="0" />
         <RequiredItem identifier="he-potseaweedsoup" UseCondition="True" MinCondition="0.20"/>
       </Fabricate>
       <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="49" fabricationlimitmin="0" fabricationlimitmax="7" />
@@ -475,7 +475,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Tools/Tools.png" sourcerect="342,0,45,20" depth="0.6" origin="0.5,0.5" />
       <Fabricate suitablefabricators="stove" requiredtime="3" requiresrecipe="false" amount="1" >
         <RequiredSkill identifier="cooking" level="15" />
-        <RequiredItem identifier="he-emptybowl" amount="1" />
+        <RequiredItem identifier="he-emptybowl" amount="1" usecondition="false" mincondition="0" />
         <RequiredItem identifier="he-potfondue" UseCondition="True" MinCondition="0.20"/>
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>

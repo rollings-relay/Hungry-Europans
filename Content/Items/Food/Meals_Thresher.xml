@@ -17,7 +17,7 @@
         <RequiredItem identifier="he-preparedthresherfilets" amount="1" MinCondition="0.25" UseCondition="true" />
         <RequiredItem identifier="he-fries" amount="1" />
         <RequiredItem identifier="he-seaweedstrip" amount="1" />
-        <RequiredItem identifier="he-emptyplate" amount="1" />
+        <RequiredItem identifier="he-emptyplate" amount="1" usecondition="false" mincondition="0" />
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Fabricate suitablefabricators="cafeteria" requiredtime="20" requiredmoney="159" fabricationlimitmin="0" fabricationlimitmax="7" displayname="thresherfooditem"/>

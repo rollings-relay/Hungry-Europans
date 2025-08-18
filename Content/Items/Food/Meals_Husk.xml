@@ -15,7 +15,7 @@
         <RequiredSkill identifier="cooking" level="50" />
         <RequiredItem identifier="he-preparedhuskfilets" amount="1" MinCondition="0.25" UseCondition="true" />
         <RequiredItem identifier="he-seaweedstrip" amount="1" />
-        <RequiredItem identifier="he-emptyplate" amount="1" />
+        <RequiredItem identifier="he-emptyplate" amount="1" usecondition="false" mincondition="0" />
         <RequiredItem tag="omelette" UseCondition="True" mincondition="0.5" />
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
@@ -84,7 +84,7 @@
         <RequiredItem identifier="huskeggsbasic" amount="2" />
         <RequiredItem identifier="he-vinegar" UseCondition="True" MinCondition="0.1" />
         <RequiredItem identifier="he-nori" amount="3" />
-        <RequiredItem identifier="he-emptyplate" amount="1" />
+        <RequiredItem identifier="he-emptyplate" amount="1" usecondition="false" mincondition="0" />
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
       <Body width="60" radius="1" density="11" />
