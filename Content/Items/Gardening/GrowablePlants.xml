@@ -754,7 +754,7 @@ ProductSpawnChance
       <sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.2" sourcerect="866,706,28,29" origin="0.5,0.5" />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.2" sourcerect="1975,295,72,66" origin="0.5,0.20" maxcondition="99" fadein="true" />
       <Deconstruct time="2" requireddeconstructor="deconstructor"/> 
-      <Growable name="TESTSEED" GrowthSpeed="7777" pickingtime="1" maximumvines="4" Maxwater="100" WaterUsedPerSecond="20" FireVulnerability="10" ExtraWaterUsedPerSecondWhileFlooded="1.2" seedrate="0" ProductSpawnChance="1" flowerquantity="2" leafprobability="0.50" flowertint="170,100,120,255" leaftint="240,180,180,255" vinetint="90,152,50,255" baseflowerscale="0.40" vinescale="0.25" GrowthWeights="1,0,0,0" >      
+      <Growable name="TESTSEED" GrowthSpeed="7777" pickingtime="1" maximumvines="4" Maxwater="100" WaterUsedPerSecond="10" FireVulnerability="10" ExtraWaterUsedPerSecondWhileFlooded="1.2" seedrate="0" ProductSpawnChance="1" flowerquantity="2" leafprobability="0.50" flowertint="170,100,120,255" leaftint="240,180,180,255" vinetint="90,152,50,255" baseflowerscale="0.40" vinescale="0.25" GrowthWeights="1,0,0,0" >      
         <ProducedItem identifier="banana" probability="1"/>
         <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
           <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,256,256,256" />

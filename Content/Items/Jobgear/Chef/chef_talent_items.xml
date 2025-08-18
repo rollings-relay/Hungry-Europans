@@ -26,7 +26,7 @@
       
       <!-- When active, water plants and reduce condition of keg. Reset charge to max after 10 seconds -->
       <!-- PLANTS HAVE AROUND 400 HEALTH. 20 CONDITION FOR 10 SECONDS IS ABOUT HALF OF THEIR TOTAL HEALTH -->
-      <RepairTool extinguishamount="50.0" range="300" spread="180" unskilledspread="180" barrelpos="0,0" repairthroughholes="true" characterusable="false" requireaimtouse="false" usablein="air" hititems="true" repairmultiple="true" wateramount="100" barrelrotation="0" >
+      <RepairTool extinguishamount="50.0" range="300" spread="180" unskilledspread="180" barrelpos="0,0" repairthroughholes="true" characterusable="false" requireaimtouse="false" usablein="air" hititems="true" repairmultiple="true" wateramount="100" barrelrotation="270" >
         <RequiredItem items="he-kegwater" type="Contained" />
         <StatusEffect type="OnUse" target="This" charge="9999" targetitemcomponent="PowerContainer" delay="10" interval="11" stackable="false" setvalue="true" />     
         <StatusEffect type="OnUse" target="Contained" condition="-2.0" offset="0,-50">
@@ -38,14 +38,14 @@
         <StatusEffect type="OnContained" target="This" setvalue="true" requireaimtouse="true" />
         <!-- Cursed channel switching to shift the sprinkler barrel position from left to right TODO: replace this with a better solution when possible, like rotating the barrel instead -->
         <!-- <StatusEffect type="OnUse" target="This" barrelrotation="720" /> -->
-        <!-- <ParticleEmitter particle="plasma" particlespersecond="50" copyentityangle="true"/> -->
-        <StatusEffect type="OnUse" target="This" interval="1" barrelpos="-75,0" channel="1" setvalue="true" duration="1" stackable="false">
+        <ParticleEmitter particle="plasma" particlespersecond="50" copyentityangle="true"/>
+        <StatusEffect type="OnUse" target="This" interval="1" barrelpos="-70,0" channel="1" setvalue="true" duration="1" stackable="false">
           <Conditional channel="eq 0" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This" interval="1" barrelpos="0,0" channel="2" setvalue="true" duration="1" stackable="false">
           <Conditional channel="eq 1" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="This" interval="1" barrelpos="75,0" channel="0" setvalue="true" duration="1" stackable="false">
+        <StatusEffect type="OnUse" target="This" interval="1" barrelpos="70,0" channel="0" setvalue="true" duration="1" stackable="false">
           <Conditional channel="eq 2" />
         </StatusEffect>        
       </RepairTool>      
