@@ -744,5 +744,60 @@ ProductSpawnChance
       </Holdable>
     </Item>
   
+
+
+    <!-- TEST ITEMS FOR GARDENING  -->
+    <!-- TEST ITEMS FOR GARDENING  -->
+    <!-- TEST ITEMS FOR GARDENING  -->
+    
+    <Item name="TESTSEED" identifier="TESTSEED" description="seed for testing with accelerated growth. REPORT IF YOU SEE THIS" category="Misc" Tags="smallitem,seed,plantitem" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="1" impactsoundtag="impact_soft" spritecolor="255,100,255,255" isshootable="true" requireaimtouse="true">
+      <sprite texture="%ModDir:2954998725%/Content/Items/Gardening/GrowablePlants_crossed1.png" depth="0.2" sourcerect="866,706,28,29" origin="0.5,0.5" />
+      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.2" sourcerect="1975,295,72,66" origin="0.5,0.20" maxcondition="99" fadein="true" />
+      <Deconstruct time="2" requireddeconstructor="deconstructor"/> 
+      <Growable name="TESTSEED" GrowthSpeed="7777" pickingtime="1" maximumvines="4" Maxwater="100" WaterUsedPerSecond="20" FireVulnerability="10" ExtraWaterUsedPerSecondWhileFlooded="1.2" seedrate="0" ProductSpawnChance="1" flowerquantity="2" leafprobability="0.50" flowertint="170,100,120,255" leaftint="240,180,180,255" vinetint="90,152,50,255" baseflowerscale="0.40" vinescale="0.25" GrowthWeights="1,0,0,0" >      
+        <ProducedItem identifier="banana" probability="1"/>
+        <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
+          <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,256,256,256" />
+          <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,768,128,128" />
+          <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,256,256,256" />
+          <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="384,896,128,128" />
+          <VineSprite type="Stem" sourcerect="640,896,128,128" />
+          <VineSprite type="CrossJunction" sourcerect="512,896,128,128" />
+          <VineSprite type="HorizontalLine" sourcerect="512,768,128,128" />
+          <VineSprite type="VerticalLine" sourcerect="640,768,128,128" />
+          <VineSprite type="TurnTopRight" sourcerect="0,768,128,128" />
+          <VineSprite type="TurnTopLeft" sourcerect="384,768,128,128" />
+          <VineSprite type="TurnBottomLeft" sourcerect="256,768,128,128" />
+          <VineSprite type="TurnBottomRight" sourcerect="128,768,128,128" />
+          <VineSprite type="TSectionTop" sourcerect="128,896,128,128" />
+          <VineSprite type="TSectionLeft" sourcerect="256,896,128,128" />
+          <VineSprite type="TSectionBottom" sourcerect="384,896,128,128" />
+          <VineSprite type="TSectionRight" sourcerect="0,896,128,128" />
+          <VineSprite type="StumpTop" sourcerect="768,768,128,128" />
+          <VineSprite type="StumpLeft" sourcerect="896,768,128,128" />
+          <VineSprite type="StumpBottom" sourcerect="768,896,128,128" />
+          <VineSprite type="StumpRight" sourcerect="896,896,128,128" />
+        </VineSprites>
+      </Growable>
+      <Body radius="15" density="12" />
+      <Holdable canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="24,18" holdpos="25,-25" holdangle="0" aimangle="25" aimable="false" swingwhenusing="True" swingamount="7,7" swingspeed="0.5" msg="ItemMsgPickUpSelect">
+      </Holdable>
+    </Item>  
+
+    <Item name="smallplanterTEST" identifier="smallplanterTEST" description="planter for testing with accelerated growth. REPORT IF YOU SEE THIS" category="Misc" Tags="planter,mediumitem,dontsellitems" scale="0.5" isshootable="true" spritecolor="255,100,255,255">
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Gardening/Planter.png" sourcerect="0,0,128,128" depth="0.75" premultiplyalpha="false" origin="0.5,0.5" />
+      <Body width="95" height="106" density="25" />
+      <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetach" PickingTime="1.0" aimpos="85,-10" handle1="0,0" attachable="true" aimable="true" AttachesToFloor="true" DisallowAttachingOverTags="planter,hydroponicplanter,fabricator,deconstructor,engine,oxygengenerator,geneticresearchstation,reactor,kitchen,divingsuitcontainer,oxygentankrefiller,turretammosource,supercapacitor,medicalfabricator,navterminal,depthchargeammosource,ammoboxcontainer,cargocontainer"/>
+      <ItemContainer capacity="1" maxstacksize="1" hideitems="false" drawinventory="true" uilabel="" allowuioverlap="true" allowdraganddrop="false" showcontainedstateindicator="false">
+        <Containable items="seed" />
+      </ItemContainer>      
+      <Planter selectkey="Select" canbepicked="true" pickingtime="5.0" msg="ItemMsgPlantSeed">
+        <PlantSlot slot="0" offset="0,32" size="0.25" />
+        <SuitableFertilizer items="fertilizer" />
+        <SuitableSeed items="seed" />
+      </Planter>
+    </Item>
+    
+  
   </Items>
 </Override>
