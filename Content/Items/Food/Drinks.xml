@@ -3007,7 +3007,8 @@
         </Button>
       </CustomInterface>
     </Item>
-    
+        
+    <!-- TODO: Coffee Mug inventory icon -->
     <Item name="Mug of Coffee" identifier="he-mugcoffee" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeemug,coffeecup,mug" scale="0.4" impactsoundtag="impact_bottle_glass" impacttolerance="2" useinhealthinterface="false" requireaimtouse="true" isshootable="True" health="10" >
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
@@ -3309,6 +3310,7 @@
       </CustomInterface>
     </Item>
     
+    <!-- TODO: Chocolate Mug inventory icon -->
     <Item name="Mug of Hot Chocolate" identifier="he-mughotchocolate" category="Misc" subcategory="Drinks" maxstacksize="1" cargocontaineridentifier="metalcrate" description="Prevents you from getting thirsty for a longer period of time." Tags="smallitem,drinkitem,coffeemug,coffeecup,mug" scale="0.4" impactsoundtag="impact_bottle_glass" impacttolerance="2" useinhealthinterface="false" requireaimtouse="true" isshootable="True" health="10" >
       <PreferredContainer secondary="abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
