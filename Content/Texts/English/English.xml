@@ -1370,7 +1370,8 @@ SEARCH FOR THE FOLLOWING:                                                       
 <itemmsgopenuse>[[Use]] Open</itemmsgopenuse>
 
 <!-- DO NOT TRANSLATE THE COMMANDS THEMSELVES -->
-<eventtext.manualenforceinfo>List of enforce manual needs commands:
+<eventtext.manualenforceinfo>List of enforce manual needs commands
+(only applies to PLAYERS, not bots):
 
 ‖color:gui.yellow‖manualenforcehungry‖end‖ (Hunger and Thirst)
 
