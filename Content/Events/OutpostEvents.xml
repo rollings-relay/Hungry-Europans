@@ -94,7 +94,56 @@
       <!--end the event-->
       <Label name="end" />
     </ScriptedEvent>    
+    
+    <ScriptedEvent identifier="manualenforcehungry">
+      <TagAction criteria="player" tag="player" />
+      <StatusEffectAction targettag="player" >
+        <StatusEffect target="Character" oneshot="true">
+          <GiveTalentInfo giverandom="false" talentidentifiers="he-hungryeuropan" />
+        </StatusEffect>
+      </StatusEffectAction>
+    </ScriptedEvent>   
+    
+    <ScriptedEvent identifier="manualenforcefilthy">
+      <TagAction criteria="player" tag="player" />
+      <StatusEffectAction targettag="player" >
+        <StatusEffect target="Character" oneshot="true">
+          <GiveTalentInfo giverandom="false" talentidentifiers="he-filthyeuropan" />
+        </StatusEffect>
+      </StatusEffectAction>
+    </ScriptedEvent>   
+    
+    <ScriptedEvent identifier="manualenforcesleepy">
+      <TagAction criteria="player" tag="player" />
+      <StatusEffectAction targettag="player" >
+        <StatusEffect target="Character" oneshot="true">
+          <GiveTalentInfo giverandom="false" talentidentifiers="he-sleepyeuropan" />
+        </StatusEffect>
+      </StatusEffectAction>
+    </ScriptedEvent>  
+    
+    <ScriptedEvent identifier="manualenforcemoody">
+      <TagAction criteria="player" tag="player" />
+      <StatusEffectAction targettag="player" >
+        <StatusEffect target="Character" oneshot="true">
+          <GiveTalentInfo giverandom="false" talentidentifiers="he-moodyeuropan" />
+        </StatusEffect>
+      </StatusEffectAction>
+    </ScriptedEvent>      
+
+    <ScriptedEvent identifier="manualenforceallneeds">
+      <TagAction criteria="player" tag="player" />
+      <StatusEffectAction targettag="player" >
+        <StatusEffect target="Character" oneshot="true">
+          <GiveTalentInfo giverandom="false" talentidentifiers="he-hungryeuropan,he-moodyeuropan,he-filthyeuropan,he-sleepyeuropan" />
+        </StatusEffect>
+      </StatusEffectAction>
+    </ScriptedEvent>    
+    
   </EventPrefabs>
+  
+ 
+  
   
   <!-- EVENT TRIGGERS -->
   <!-- I added chef as hireable in DE locations, do we need to trigger the hireable chef event? Disable event if DE is enabled (how?) -->
