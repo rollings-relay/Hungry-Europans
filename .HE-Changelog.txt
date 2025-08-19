@@ -40,30 +40,29 @@ Hotfix
 
 [List]
 [b]Changes:[/b] 
-[*] Can open Cooler crate with E without picking it up
-[*] Updated test kitchen with tableware
+[*] More slots for sink
+[*] Added console commands to enforce needs without the mod. Open console with F3 and type [i]triggerevent manualenforceinfo[/i] for a list
 [/List]
 
 [b]Fixes:[/b] 
 
 [List]
-[*] Fixed Gardening Sprinkler not watering plant enoughs. The sprinkler now heals roughly 50% of plant health per cycle, to know how long a cycle must be THERE IS A PLANT GROWTH CALCULATOR IN THE MOD FILES. Plants will see another rework in about a month when DLC comes out (?)
-[*] Fixed "Head Chef" talent giving a skill boost of 2500% !!!!
-[*] Fixed Ethanol being consumed by sprayers way too fast
-[*] Fixed Ethanol applying "drunk" instantly instead of over time
-[*] Fixed infinite coffe mug glitch in kettle
-[*] Fixed odd stack sizes for buns and bread slices
-[*] Added missing text and corrected wrong text IDs
+[*] Fixed Gardening Sprinkler not working at all. It's super janky so there might be more problems, sorry guys.
+[*] Fixed damaged Bowls and Plates (from dropping them) not being valid ingredients for crafting
+[*] Minor bottle sprite fix
+[*] Fixed tea kettle deleting mugs
+[*] Fixed tea kettle not making coffee/chocolate mugs
+[*] Fixed bad text identifier for dirty mug / dirty cup
 [/List]
 
 
 [b]KNOWN BUGS/ISSUES:[/b] 
-[*] Bot support is iffy. Bots can't heal hunger/thirst without losing health (vanilla issue), so it's not advised giving bots NEEDS
+[*] Bad bot support. Bots cannot heal hunger/thirst without losing health first, so it's not advised giving bots NEEDS
 [*] Errors for missing/deleted items. Just save once and the errors will go away.
 [*] Damage multipliers (like steroids) result in less meat being harvested on corpses
-[*] Cleaning stacked bowls/plates in the sink will delete any contained bowl/plate, make sure to unstack your bowls
-[*] Sprites of items inside items inside tables break and do not match their real position in the inventory
-[*] Hygiene affliction washes with clothes on
+[*] Crafting using stacked bowls/plates will delete any contained bowl/plate, MAKE SURE TO UNSTACK YOUR BOWLS AND PLATES BEFORE CRAFTING
+[*] Sprites of items INSIDE items INSIDE tables break and do not match their real position in the inventory
+[*] Hygiene affliction washes with clothes on; you are supposed to take clothes off and go in water.
 [*] Kitchen Counter cannot receive power from batteries/relays
 
 
