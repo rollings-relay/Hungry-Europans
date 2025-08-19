@@ -94,6 +94,11 @@
       <!--end the event-->
       <Label name="end" />
     </ScriptedEvent>    
+        
+    <ScriptedEvent identifier="manualenforceinfo">
+      <TagAction criteria="player" tag="player" />
+      <ConversationAction targettag="player" invokertag="hc_player" text="eventtext.manualenforceinfo" endconversation="true" />
+    </ScriptedEvent>  
     
     <ScriptedEvent identifier="manualenforcehungry">
       <TagAction criteria="player" tag="player" />

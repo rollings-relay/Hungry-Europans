@@ -1367,9 +1367,21 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-bagpipes>An ancient instrument from earth consisting of an inflatable bladder, a mouthpiece and several metal pipes that produce haunting melodies.</entitydescription.he-bagpipes>
 
 
-
-
 <itemmsgopenuse>[[Use]] Open</itemmsgopenuse>
+
+<!-- DO NOT TRANSLATE THE COMMANDS THEMSELVES -->
+<eventtext.manualenforceinfo>List of enforce manual needs commands:
+
+‖color:gui.yellow‖manualenforcehungry‖end‖ (Hunger and Thirst)
+
+‖color:gui.yellow‖manualenforcefilthy‖end‖ (Bladder, Poop, Hygiene)
+
+‖color:gui.yellow‖manualenforcesleepy‖end‖ (Fatigue, Sleep)
+
+‖color:gui.yellow‖manualenforcemoody‖end‖ (Stress. NOT RECOMMENDED. Use syringe instead)
+
+‖color:gui.red‖manualenforceallneeds‖end‖ (all of the above)
+</eventtext.manualenforceinfo>
 
 
 
