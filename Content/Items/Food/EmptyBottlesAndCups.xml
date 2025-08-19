@@ -895,7 +895,7 @@
       </Projectile>
     </Item>
 
-    <Item name="Dirty Mug" identifier="he-dirtymug" category="Misc" subcategory="Ingredients" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="An empty mug for drinks. Can be thrown or filled with coffee." Tags="smallitem,ingredient,dirtymug,mug,coffeecup,dirtytableware,tableware" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
+    <Item name="Dirty Mug" identifier="he-dirtymug" category="Misc" subcategory="Ingredients" maxstacksize="8" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,ingredient,dirtymug,mug,coffeecup,dirtytableware,tableware" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_bottle_glass" impacttolerance="5.5">
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="1" spawnprobability="0.01" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.02" notcampaign="true"/>
