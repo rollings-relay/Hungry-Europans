@@ -11,9 +11,9 @@
         <StatusEffect target="This" noninteractable="false" setvalue="true" />
       </StatusEffectAction>
     </ScriptedEvent>
-    
+
     <ScriptedEvent identifier="he-hirechef">
-      <TagAction criteria="jobidentifier:chef" team="team1" tag="playerchef" ContinueIfNoTargetsFound="true" />
+      <TagAction criteria="jobidentifier:he-chef" team="team1" tag="playerchef" ContinueIfNoTargetsFound="true" />
       <!-- do not trigger the event if you already have a chef on your crew -->
       <CountTargetsAction targettag="playerchef" MinAmount="1" >
         <Success>
