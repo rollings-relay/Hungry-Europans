@@ -775,13 +775,13 @@
           <!--Remove empty cup from tea kettle-->
           <StatusEffect type="OnUse" target="Contained" targetcontainer="this" targettag="emptycup" targetslot="1" disabledeltatime="true" AllowWhenBroken="true">
             <Conditional IsOn="true" targetitemcomponent="LightComponent" targetcontainer="true"/>
-            <RequiredItem items="mix" targetslot="0" type="Contained" />
+            <RequiredItem items="cupmix" targetslot="0" type="Contained" />
             <RequiredItem items="emptycup" targetslot="1" type="Contained" />
             <Remove />
           </StatusEffect>
           <StatusEffect type="OnUse" target="Contained" targetcontainer="this" targettag="emptymug" targetslot="1" disabledeltatime="true" AllowWhenBroken="true">
             <Conditional IsOn="true" targetitemcomponent="LightComponent" targetcontainer="true"/>
-            <RequiredItem items="mix" targetslot="0" type="Contained" />
+            <RequiredItem items="mugmix" targetslot="0" type="Contained" />
             <RequiredItem items="emptymug" targetslot="1" type="Contained" />
             <Remove />
           </StatusEffect>
@@ -809,6 +809,14 @@
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/PourTea.ogg" type="OnUse" range="250.0" loop="false" volume="1.0" />
             <SpawnItem identifier="he-cupcoffee" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
           </StatusEffect>
+          <!--Refill with chocolate (cup)-->
+          <StatusEffect type="OnUse" target="This,Contained" targetslot="0" condition="-12.5" disabledeltatime="true" AllowWhenBroken="true">
+            <Conditional IsOn="true" targetitemcomponent="LightComponent"/>
+            <RequiredItem identifier="he-chocolatemix" targetslot="0" type="Contained" />
+            <RequiredItem items="emptycup" targetslot="1" type="Contained" />
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/PourTea.ogg" type="OnUse" range="250.0" loop="false" volume="1.0" />
+            <SpawnItem identifier="he-cuphotchocolate" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          </StatusEffect>
           <!--Refill with coffee (mug)-->
           <StatusEffect type="OnUse" target="This,Contained" targetslot="0" condition="-20" disabledeltatime="true" AllowWhenBroken="true">
             <Conditional IsOn="true" targetitemcomponent="LightComponent"/>
@@ -816,6 +824,14 @@
             <RequiredItem items="emptymug" targetslot="1" type="Contained" />
             <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/PourTea.ogg" type="OnUse" range="250.0" loop="false" volume="1.0" />
             <SpawnItem identifier="he-mugcoffee" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
+          </StatusEffect>
+          <!--Refill with chocolate (mug)-->
+          <StatusEffect type="OnUse" target="This,Contained" targetslot="0" condition="-20" disabledeltatime="true" AllowWhenBroken="true">
+            <Conditional IsOn="true" targetitemcomponent="LightComponent"/>
+            <RequiredItem identifier="he-chocolatemix" targetslot="0" type="Contained" />
+            <RequiredItem items="emptymug" targetslot="1" type="Contained" />
+            <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Drinks/PourTea.ogg" type="OnUse" range="250.0" loop="false" volume="1.0" />
+            <SpawnItem identifier="he-mughotchocolate" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
           </StatusEffect>
         </Button>
       </CustomInterface>
