@@ -818,9 +818,9 @@
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
       </Deconstruct>
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="476,67,16,65" origin="0.5,0.5" />
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="476,66,16,66" depth="0.6" origin="0.5,0.5" />
-      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="476,66,16,66" depth="0.525" origin="0.5,0.85"  />
-      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="494,66,16,66" depth="0.6" maxcondition="99" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="476,67,16,65" depth="0.6" origin="0.5,0.5" />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="476,67,16,65" depth="0.525" origin="0.5,0.85"  />
+      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="494,67,16,65" depth="0.6" maxcondition="99" />
       <Body width="17" height="63" density="15" />
       <SuitableTreatment type="thirst" suitability="30" />
       <SuitableTreatment type="embarrassment" suitability="50" />
@@ -1369,9 +1369,9 @@
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
       </Deconstruct>
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="440,67,16,65" origin="0.5,0.5" />
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="440,66,16,66" depth="0.6" origin="0.5,0.5" />
-      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="440,66,16,66" depth="0.525" origin="0.5,0.85"  />
-      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="458,66,16,66" depth="0.6" maxcondition="99" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="440,67,16,65" depth="0.6" origin="0.5,0.5" />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="440,67,16,65" depth="0.525" origin="0.5,0.85"  />
+      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="458,67,16,65" depth="0.6" maxcondition="99" />
       <Body width="16" height="62" density="15" />
       <SuitableTreatment type="thirst" suitability="100" />
       <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
@@ -1459,9 +1459,9 @@
         <Item identifier="he-glassfragments" amount="1" outcondition="1.0"/>
       </Deconstruct>
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="404,67,16,65" origin="0.5,0.5" />
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="404,66,16,66" depth="0.6" origin="0.5,0.5" />
-      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="404,66,16,66" depth="0.525" origin="0.5,0.85"  />
-      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="422,66,16,66" depth="0.6" maxcondition="99" />
+      <Sprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="404,67,16,65" depth="0.6" origin="0.5,0.5" />
+      <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="404,67,16,65" depth="0.525" origin="0.5,0.85"  />
+      <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Food/DrinksAndIngredients.png" sourcerect="422,67,16,65" depth="0.6" maxcondition="99" />
       <Body width="16" height="62" density="15" />
       <SuitableTreatment type="thirst" suitability="95" />
       <Holdable canbepicked="true" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-10" aimpos="35,-15" aimable="false" swingwhenaiming="true" swingamount="3,9" swingspeed="0.2" msg="ItemMsgPickUpSelect">
