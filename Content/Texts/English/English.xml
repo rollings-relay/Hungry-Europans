@@ -1308,12 +1308,12 @@ SEARCH FOR THE FOLLOWING:                                                       
 
 <entitydescription.he-emptycup>An empty cup for drinks. Can be thrown or filled with a hot beverage.</entitydescription.he-emptycup><!--Patch 13-->
 <entityname.he-dirtycup>Dirty Cup</entityname.he-dirtycup>
-<entitydescription.dirtycup>Wash it in the sink.</entitydescription.dirtycup>
+<entitydescription.he-dirtycup>Dirty. Wash it in the sink.</entitydescription.he-dirtycup>
 
 <entityname.he-emptymug>Empty Mug</entityname.he-emptymug>
 <entitydescription.he-emptymug>An empty mug for drinks. Can be thrown or filled with a hot beverage.</entitydescription.he-emptymug>
 <entityname.he-dirtymug>Dirty Mug</entityname.he-dirtymug>
-<entitydescription.dirtymug>Wash it in the sink.</entitydescription.dirtymug>
+<entitydescription.he-dirtymug>Dirty. Wash it in the sink.</entitydescription.he-dirtymug>
 
 <entityname.he-emptycocktailglass>Empty Cocktail Glass</entityname.he-emptycocktailglass>
 <entitydescription.he-emptycocktailglass>Could use a drink.</entitydescription.he-emptycocktailglass>
