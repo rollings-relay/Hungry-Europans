@@ -41,18 +41,19 @@ Hotfix
 [List]
 [b]Changes:[/b] 
 [*] More slots for sink
-[*] Added console commands to enforce needs without the mod. Open console with F3 and type [i]triggerevent manualenforceinfo[/i] for a list
+[*] Added console commands to manually enforce needs without the Enforced mod. Open console with F3 and type [i]triggerevent manualenforceinfo[/i] for a list
 [/List]
 
 [b]Fixes:[/b] 
 
 [List]
-[*] Fixed Gardening Sprinkler not working at all. It's super janky so there might be more problems, sorry guys.
+[*] Fixed Gardening Sprinkler not working at all. Still quite janky, might not 100% work.
 [*] Fixed damaged Bowls and Plates (from dropping them) not being valid ingredients for crafting
 [*] Minor bottle sprite fix
 [*] Fixed tea kettle deleting mugs
 [*] Fixed tea kettle not making coffee/chocolate mugs
 [*] Fixed bad text identifier for dirty mug / dirty cup
+[*] Fixed "Hire Chef" event triggering if you already have a Chef
 [/List]
 
 
