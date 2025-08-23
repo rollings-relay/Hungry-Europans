@@ -4,7 +4,7 @@
     <!-- MEAT -->
     <!--Crawler-->    
     
-    <Item hideinmenus="false" name="Crawler Brisket" identifier="he-cookedcrawlerfilet" variantof="he-poisoneffectpreset_fork" health="25" category="Misc" subcategory="Food - Crawler" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,forkfood,foodplate,gourmetfood,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="false" requireaimtouse="false">
+    <Item hideinmenus="false" name="Crawler Brisket" identifier="he-cookedcrawlerfilet" variantof="he-poisoneffectpreset_fork" health="16" category="Misc" subcategory="Food - Crawler" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,forkfood,foodplate,gourmetfood,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="false" requireaimtouse="false">
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
@@ -32,10 +32,10 @@
           <Conditional hunger="gt 1" targetcontainer="true" />
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
-          <Affliction identifier="he-fatrich" amount="20.0" />
+          <Affliction identifier="he-fatrich" amount="32.0" />
           <Affliction identifier="ate_filet" amount="1" />
-          <Affliction identifier="he-stuffed" amount="1.75" />
-          <ReduceAffliction type="hunger" amount="1.75" />
+          <Affliction identifier="he-stuffed" amount="2.5" />
+          <ReduceAffliction type="hunger" amount="2.5" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
 
@@ -50,10 +50,10 @@
           <Conditional HasStatusTag="usingfork" />
           <Conditional HasStatusTag="neq emptyfork"/>
           <Conditional InWater="false" />
-          <Affliction identifier="he-fatrich" amount="20.0" />
+          <Affliction identifier="he-fatrich" amount="32.0" />
           <Affliction identifier="ate_filet" amount="1" />
-          <Affliction identifier="he-stuffed" amount="1.75" />
-          <ReduceAffliction type="hunger" amount="1.75" />
+          <Affliction identifier="he-stuffed" amount="2.5" />
+          <ReduceAffliction type="hunger" amount="2.5" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork1.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork2.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />

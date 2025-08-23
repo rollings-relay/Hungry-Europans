@@ -32,8 +32,8 @@
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
           <Affliction identifier="he-calciumrich" amount="100.0" />
-          <Affliction identifier="he-stuffed" amount="4.0" />
-          <ReduceAffliction type="hunger" amount="4.0" />
+          <Affliction identifier="he-stuffed" amount="5.0" />
+          <ReduceAffliction type="hunger" amount="5.0" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         
@@ -58,8 +58,8 @@
           <Conditional HasStatusTag="neq emptyhand" />
           <Conditional InWater="false" />
           <Affliction identifier="he-calciumrich" amount="100.0" />
-          <Affliction identifier="he-stuffed" amount="4.0" />
-          <ReduceAffliction type="hunger" amount="4.0" />
+          <Affliction identifier="he-stuffed" amount="5.0" />
+          <ReduceAffliction type="hunger" amount="5.0" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="true" range="200" volume="5.0" selectionmode="Random" />
         </StatusEffect>
         <!-- Prevent using this item continuously by applying the tag "emptyhand" which prevents the StatusEffect that uses the item from triggering again, effectively only allowing it to trigger once per mouse-click -->
@@ -71,7 +71,7 @@
       <AiTarget sightrange="1000" static="true" />
     </Item>
 
-    <Item hideinmenus="false" name="Moloch Steak and Fries" identifier="he-cookedmolochsteak" variantof="he-poisoneffectpreset_fork" health="30" category="Misc" subcategory="Food - Moloch" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,gourmetfood,foodplate,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="True" requireaimtouse="True">
+    <Item hideinmenus="false" name="Moloch Steak and Fries" identifier="he-cookedmolochsteak" variantof="he-poisoneffectpreset_fork" health="20" category="Misc" subcategory="Food - Moloch" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,gourmetfood,foodplate,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
@@ -97,10 +97,10 @@
           <Conditional hunger="gt 1" targetcontainer="true" />
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
-          <Affliction identifier="he-proteinrich" amount="25.0" />
+          <Affliction identifier="he-proteinrich" amount="50.0" />
           <Affliction identifier="ate_filet" amount="1" />
-          <Affliction identifier="he-stuffed" amount="2.0" />
-          <ReduceAffliction type="hunger" amount="2.0" />
+          <Affliction identifier="he-stuffed" amount="2.5" />
+          <ReduceAffliction type="hunger" amount="2.5" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
 
@@ -115,10 +115,10 @@
           <Conditional HasStatusTag="usingfork" />
           <Conditional HasStatusTag="neq emptyfork"/>
           <Conditional InWater="false" />
-          <Affliction identifier="he-proteinrich" amount="25.0" />
+          <Affliction identifier="he-proteinrich" amount="50.0" />
           <Affliction identifier="ate_filet" amount="1" />
-          <Affliction identifier="he-stuffed" amount="2.0" />
-          <ReduceAffliction type="hunger" amount="2.0" />
+          <Affliction identifier="he-stuffed" amount="2.5" />
+          <ReduceAffliction type="hunger" amount="2.5" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork1.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork2.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
