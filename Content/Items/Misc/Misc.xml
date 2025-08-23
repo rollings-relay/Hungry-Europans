@@ -112,12 +112,12 @@
       </Price>
       <Fabricate suitablefabricators="fabricator" requiredtime="60" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="mechanical" level="55" />
-        <RequiredItem identifier="steel" amount="4" />
-        <RequiredItem identifier="titaniumaluminiumalloy" amount="3" />
+        <RequiredItem identifier="steel" amount="5" />
+        <RequiredItem identifier="titaniumaluminiumalloy" amount="2" />
       </Fabricate>
       <Deconstruct time="25">
         <Item identifier="steel" amount="2" />
-        <RequiredItem identifier="titaniumaluminiumalloy" amount="1" />
+        <Item identifier="titaniumaluminiumalloy" amount="1" />
       </Deconstruct>
       <Controller UserPos="-20,0" direction="Left" hidehud="false" AllowSelectingWhenSelectedByBot="true" AllowSelectingWhenSelectedByOther="false" canbeselected="true" drawuserbehind="false">
         <limbposition limb="Head" position="-5,-20" />
