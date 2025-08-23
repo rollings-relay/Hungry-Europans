@@ -49,7 +49,7 @@
       <AiTarget sightrange="1000" static="True" />
     </Item>
 
-    <Item name="Raw Spineling Slices" identifier="he-rawspinelingslices" aliases="he-rawspinelingkebab" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,allowongrill,ingredient,canspoil,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true" spritecolor="255,150,150,255" inventoryiconcolor="255,150,150,255" containercolor="255,150,150,255">
+    <Item name="Raw Spineling Slices" identifier="he-rawspinelingslices" aliases="he-rawspinelingkebab" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,allowongrill,ingredient,canspoil,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true" spritecolor="255,150,150,255" inventoryiconcolor="255,150,150,255" containercolor="255,150,150,255" health="10">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="464,1,47,25" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="464,1,47,25" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="464,1,47,25" depth="0.525" origin="0.5,0.65"  />
@@ -93,18 +93,18 @@
           <Conditional HasStatusTag="eq activecooling" targetcontainer="true" />
           <Conditional HasTag="eq kitchenfabricator" targetcontainer="true" />
         </StatusEffect>
-        <StatusEffect type="Always" target="This" Condition="-2.0" timeframe="-10" disabledeltatime="true" interval="0.9">
+        <StatusEffect type="Always" target="This" Condition="-0.5" timeframe="-10" disabledeltatime="true" interval="0.9">
           <Conditional timeframe="gte 50" />
         </StatusEffect>
       </GreaterComponent>
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
-        <!-- When using (eating) the item, reduce the condition by 4 per second -->
-        <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
-        <!-- When using (eating) the item, apply the afflictions deliriumine poisoning, nausea, and spill to the character and play an eating sound effect -->
+        <!-- When using (eating) the item, reduce the condition -->
+        <StatusEffect type="OnUse" target="This" Condition="-1.0"/>
+        <!-- When using (eating) the item -->
         <StatusEffect type="OnUse" target="Character">
-          <ReduceAffliction type="hunger" amount="0.25" />
+          <ReduceAffliction type="hunger" amount="0.5" />
+          <Affliction identifier="nausea" amount="2" probability="0.25" />
           <Affliction identifier="deliriuminepoisoning" probability="0.001" amount="8" />
-          <Affliction identifier="nausea" amount="2" />
           <Affliction identifier="worminfection" amount="1" probability="0.01" />
           <Affliction identifier="tapeworminfection" amount="1" probability="0.01" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
@@ -119,7 +119,7 @@
     </Item>
 
     <!-- Cooked Versions -->
-    <Item name="Spineling Slices" identifier="he-spinelingslices" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,allowongrill,ingredient,canspoil,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true" spritecolor="255,255,255,255" inventoryiconcolor="255,255,255,255" containercolor="255,255,255,255">
+    <Item name="Spineling Slices" identifier="he-spinelingslices" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,allowongrill,ingredient,canspoil,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true" spritecolor="255,255,255,255" inventoryiconcolor="255,255,255,255" containercolor="255,255,255,255" health="10">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="464,1,47,25" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="464,1,47,25" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="464,1,47,25" depth="0.525" origin="0.5,0.65"  />
@@ -165,18 +165,16 @@
           <Conditional HasStatusTag="eq activecooling" targetcontainer="true" />
           <Conditional HasTag="eq kitchenfabricator" targetcontainer="true" />
         </StatusEffect>
-        <StatusEffect type="Always" target="This" Condition="-2.0" timeframe="-10" disabledeltatime="true" interval="0.9">
+        <StatusEffect type="Always" target="This" Condition="-0.25" timeframe="-10" disabledeltatime="true" interval="0.9">
           <Conditional timeframe="gte 50" />
         </StatusEffect>
       </GreaterComponent>
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
-        <!-- When using (eating) the item, reduce the condition by 4 per second -->
-        <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
-        <!-- When using (eating) the item, apply the afflictions deliriumine poisoning, nausea, and spill to the character and play an eating sound effect -->
+        <!-- When using (eating) the item, reduce the condition -->
+        <StatusEffect type="OnUse" target="This" Condition="-1.0"/>
+        <!-- When using (eating) the item -->
         <StatusEffect type="OnUse" target="Character">
-          <ReduceAffliction type="hunger" amount="0.25" />
-          <Affliction identifier="nausea" amount="1" />
-          <Affliction identifier="he-hungryforhumanmeat" amount="0.075" />
+          <ReduceAffliction type="hunger" amount="0.5" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
@@ -189,7 +187,7 @@
     </Item>
 
     <!-- Burned Versions -->
-    <Item name="Burned Spineling Slices" identifier="he-burnedspinelingslices" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,allowongrill,ingredient,canspoil,petfood1,petfood2,petfood3,burnedfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true" spritecolor="41,41,41,255" inventoryiconcolor="41,41,41,255" containercolor="41,41,41,255">
+    <Item name="Burned Spineling Slices" identifier="he-burnedspinelingslices" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,allowongrill,ingredient,canspoil,petfood1,petfood2,petfood3,burnedfood" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true" spritecolor="41,41,41,255" inventoryiconcolor="41,41,41,255" containercolor="41,41,41,255" health="10" >
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="464,1,47,25" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="464,1,47,25" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="464,1,47,25" depth="0.525" origin="0.5,0.65"  />
@@ -223,9 +221,11 @@
       <!-- MemoryComponent hosts the MaxValueLength attribute which we use to track the time by adjusting its value via StatusEffects each second -->
       <MemoryComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" string="" MaxValueLength="0" />
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
+        <!-- When using (eating) the item, reduce the condition -->
+        <StatusEffect type="OnUse" target="This" Condition="-1.0"/>
+        <!-- When using (eating) the item -->
         <StatusEffect type="OnUse" target="Character">
-          <ReduceAffliction type="hunger" amount="0.20" />
+          <ReduceAffliction type="hunger" amount="0.5" />
           <Affliction identifier="nausea" amount="4" probability="0.25" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />

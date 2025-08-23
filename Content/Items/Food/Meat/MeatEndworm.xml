@@ -105,7 +105,7 @@
       <AiTarget sightrange="1000" static="True" />
     </Item>
 
-    <Item name="Raw Endworm Sausage" identifier="he-rawendwormsausage" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,allowongrill,canspoil,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true" spritecolor="255,150,150,255" inventoryiconcolor="255,150,150,255" containercolor="255,150,150,255">
+    <Item name="Raw Endworm Sausage" identifier="he-rawendwormsausage" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,allowongrill,canspoil,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true" spritecolor="255,150,150,255" inventoryiconcolor="255,150,150,255" containercolor="255,150,150,255" health="12">
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
@@ -148,17 +148,17 @@
           <Conditional HasStatusTag="eq activecooling" targetcontainer="true" />
           <Conditional HasTag="eq kitchenfabricator" targetcontainer="true" />
         </StatusEffect>
-        <StatusEffect type="Always" target="This" Condition="-2.0" timeframe="-10" disabledeltatime="true" interval="0.9">
+        <StatusEffect type="Always" target="This" Condition="-0.5" timeframe="-10" disabledeltatime="true" interval="0.9">
           <Conditional timeframe="gte 50" />
         </StatusEffect>
       </GreaterComponent>
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
+        <StatusEffect type="OnUse" target="This" Condition="-1.0"/>
         <StatusEffect type="OnUse" target="Character">
-          <ReduceAffliction type="hunger" amount="0.25" />
+          <ReduceAffliction type="hunger" amount="0.5" />
           <Affliction identifier="deliriuminepoisoning" probability="0.001" amount="5" />
           <Affliction identifier="hallucinating" amount="6" />
-          <Affliction identifier="nausea" amount="2" />
+          <Affliction identifier="nausea" amount="2" probability="0.25" />
           <Affliction identifier="worminfection" amount="1" probability="0.1" />
           <Affliction identifier="tapeworminfection" amount="1" probability="0.1" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
@@ -171,7 +171,7 @@
       <AiTarget sightrange="1000" static="True" />
     </Item>
 
-    <Item name="Endworm Sausage (Cooked)" identifier="he-endwormsausage" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,allowongrill,canspoil,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true" spritecolor="255,255,255,255" inventoryiconcolor="255,255,255,255" containercolor="255,255,255,255">
+    <Item name="Endworm Sausage (Cooked)" identifier="he-endwormsausage" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,allowongrill,canspoil,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true" spritecolor="255,255,255,255" inventoryiconcolor="255,255,255,255" containercolor="255,255,255,255" health="12">
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,444,67,14" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,444,67,14" origin="0.5,0.5" />
@@ -205,10 +205,21 @@
         </StatusEffect>
       </ItemComponent>
       <MemoryComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" string="" MaxValueLength="0" />
+      <!-- The meat gains 2 timeframe every 2 seconds. It loses condition when the timeframe reaches 50, and then goes back to 40, effectively losing condition every 10 seconds. When refrigerated, it resets the timeframe to 40. -->
+      <GreaterComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" timeframe="0">
+        <StatusEffect type="Always" target="This" timeframe="2" interval="2" disabledeltatime="true" />
+        <StatusEffect type="Always" target="This" timeframe="40" interval="2" disabledeltatime="true" setvalue="true">
+          <Conditional HasStatusTag="eq activecooling" targetcontainer="true" />
+          <Conditional HasTag="eq kitchenfabricator" targetcontainer="true" />
+        </StatusEffect>
+        <StatusEffect type="Always" target="This" Condition="-0.25" timeframe="-10" disabledeltatime="true" interval="0.9">
+          <Conditional timeframe="gte 50" />
+        </StatusEffect>
+      </GreaterComponent>
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
+        <StatusEffect type="OnUse" target="This" Condition="-1.0"/>
         <StatusEffect type="OnUse" target="Character">
-          <ReduceAffliction type="hunger" amount="0.25" />
+          <ReduceAffliction type="hunger" amount="0.5" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
@@ -219,7 +230,7 @@
       <AiTarget sightrange="1000" static="True" />
     </Item>
 
-    <Item name="Burned Endworm Sausage" identifier="he-burnedendwormsausage" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,allowongrill,burnedfood" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true" spritecolor="41,41,41,255" inventoryiconcolor="41,41,41,255" containercolor="41,41,41,255">
+    <Item name="Burned Endworm Sausage" identifier="he-burnedendwormsausage" category="Misc" subcategory="Ingredients" maxstacksize="8" cargocontaineridentifier="he-coolercrate" description="" Tags="smallitem,meat,ingredient,allowongrill,burnedfood" useinhealthinterface="false" scale="0.4" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true" spritecolor="41,41,41,255" inventoryiconcolor="41,41,41,255" containercolor="41,41,41,255" health="12">
       <PreferredContainer primary="refrigerator" secondary="refrigeratedcontainer"/>
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,444,67,14" depth="0.6" origin="0.5,0.5" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="243,444,67,14" origin="0.5,0.5" />
@@ -240,9 +251,9 @@
       </ItemComponent>
       <MemoryComponent canbepicked="false" canbeselected="false" allowingameediting="false" drawhudwhenequipped="false" string="" MaxValueLength="0" />
       <Holdable DisableWhenRangedWeaponEquipped="true" canbepicked="true" canBeCombined="false" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="28,18" holdangle="30" aimangle="0" aimable="false" swingwhenusing="true" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnUse" target="This" Condition="-4.0"/>
+        <StatusEffect type="OnUse" target="This" Condition="-1.0"/>
         <StatusEffect type="OnUse" target="Character">
-          <ReduceAffliction type="hunger" amount="0.20" />
+          <ReduceAffliction type="hunger" amount="0.25" />
           <Affliction identifier="nausea" amount="3" probability="0.25" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />

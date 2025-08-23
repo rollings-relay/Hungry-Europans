@@ -770,7 +770,7 @@
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="582,60,68,29" origin="0.5,0.5" />
       <Fabricate suitablefabricators="cuttingboard" requiredtime="10" requiresrecipe="false" amount="1" >
         <RequiredSkill identifier="cooking" level="25" />
-        <RequiredItem identifier="he-sausage" amount="2" MinCondition="0.25" UseCondition="false" />
+        <RequiredItem identifier="he-sausage" amount="2" MinCondition="0.5" UseCondition="False" />
         <RequiredItem identifier="he-fermentedcabbage" amount="1" />
         <RequiredItem identifier="he-emptyplate" amount="1" usecondition="false" mincondition="0" />
       </Fabricate>

@@ -61,9 +61,9 @@
       <Fabricate suitablefabricators="cafeteria" requiredtime="5" requiredmoney="45" fabricationlimitmin="0" fabricationlimitmax="7" />
       <Fabricate suitablefabricators="cuttingboard" requiredtime="15" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="cooking" level="20" />
-        <RequiredItem identifier="he-meatpatty" amount="1" />
         <RequiredItem identifier="he-burgerbun" amount="1"/>
         <RequiredItem identifier="he-molochcheeseslice" amount="1"/>
+        <RequiredItem identifier="he-meatpatty" amount="1" MinCondition="0.25" UseCondition="False" />
         <RequiredItem identifier="he-ketchup" UseCondition="True" MinCondition="0.125"/>
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
@@ -136,7 +136,7 @@
       <Fabricate suitablefabricators="cafeteria" requiredtime="5" requiredmoney="41" fabricationlimitmin="0" fabricationlimitmax="7" />
       <Fabricate suitablefabricators="cuttingboard" requiredtime="10" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="cooking" level="20" />
-        <RequiredItem identifier="he-sausage" amount="1" />
+        <RequiredItem identifier="he-sausage" amount="1" MinCondition="0.25" UseCondition="False"  />
         <RequiredItem identifier="he-ketchup" UseCondition="True" MinCondition="0.125"/>
         <RequiredItem identifier="he-hotdogbun" amount="1"/>
       </Fabricate>
