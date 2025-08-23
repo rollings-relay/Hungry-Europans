@@ -61,13 +61,13 @@
       </Price>
       <Deconstruct time="15">
         <Item identifier="steel" amount="1"/>
-        <Item identifier="titaniumaluminiumalloy" amount="3"/>
+        <Item identifier="titaniumaluminiumalloy" amount="1"/>
         <Item identifier="fpgacircuit" amount="1"/>
       </Deconstruct>
       <Fabricate suitablefabricators="fabricator" requiredtime="35" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="mechanical" level="55" />
-        <RequiredItem identifier="steel" amount="3"/>
-        <RequiredItem identifier="titaniumaluminiumalloy" amount="4"/>
+        <RequiredItem identifier="steel" amount="8"/>
+        <RequiredItem identifier="titaniumaluminiumalloy" amount="2"/>
         <RequiredItem identifier="fpgacircuit" amount="2"/>
       </Fabricate>
       <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.46" />
@@ -167,13 +167,13 @@
       </Price>
       <Deconstruct time="15">
         <Item identifier="steel" amount="1"/>
-        <Item identifier="titaniumaluminiumalloy" amount="3"/>
+        <Item identifier="titaniumaluminiumalloy" amount="1"/>
         <Item identifier="fpgacircuit" amount="2"/>
       </Deconstruct>
       <Fabricate suitablefabricators="fabricator" requiredtime="35" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="mechanical" level="55" />
-        <RequiredItem identifier="steel" amount="3"/>
-        <RequiredItem identifier="titaniumaluminiumalloy" amount="4"/>
+        <RequiredItem identifier="steel" amount="8"/>
+        <RequiredItem identifier="titaniumaluminiumalloy" amount="2"/>
         <RequiredItem identifier="fpgacircuit" amount="4"/>
       </Fabricate>
       <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.46" />
@@ -401,7 +401,7 @@
       </Price>
       <Deconstruct time="10">
         <Item identifier="steel" amount="1"/>
-        <RequiredItem identifier="plastic" amount="1"/>
+        <Item identifier="plastic" amount="1"/>
       </Deconstruct>
       <Fabricate suitablefabricators="fabricator" requiredtime="25" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="mechanical" level="55" />
@@ -699,13 +699,13 @@
       </Upgrade>
       <Deconstruct time="10">
         <Item identifier="steel" amount="4"/>
-        <Item identifier="titaniumaluminiumalloy" amount="3"/>
+        <Item identifier="titaniumaluminiumalloy" amount="2"/>
         <Item identifier="fpgacircuit" amount="1"/>
       </Deconstruct>
       <Fabricate suitablefabricators="fabricator" requiredtime="60" requiresrecipe="false" amount="1">
         <RequiredSkill identifier="mechanical" level="65" />
         <RequiredItem identifier="steel" amount="8"/>
-        <RequiredItem identifier="titaniumaluminiumalloy" amount="4"/>
+        <RequiredItem identifier="titaniumaluminiumalloy" amount="3"/>
         <RequiredItem identifier="fpgacircuit" amount="2"/>
       </Fabricate>
       <Price baseprice="1499" sold="true">
