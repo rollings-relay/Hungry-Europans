@@ -420,7 +420,6 @@
         <RequiredItem tag="cleanwater" mincondition="0.98" UseCondition="true" />
         <RequiredItem identifier="he-flour" mincondition="0.5" UseCondition="true" />
         <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.1"/>
-        <RequiredItem identifier="he-sugar" UseCondition="True" MinCondition="0.25"/>
         <RequiredItem identifier="yeastshroom" amount="1"/>
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor" />
