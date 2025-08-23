@@ -245,7 +245,7 @@
 
 
     <!--SOUP BOWLS-->
-    <Item hideinmenus="false" name="Craw Yum!" identifier="he-crawyumsoup" variantof="he-poisoneffectpreset_spoon" health="20" category="Misc" subcategory="Soups" Tags="smallitem,fooditem,foodbowl,spoonfood,soup" description="A soup." maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="false" requireaimtouse="false" impacttolerance="1">
+    <Item hideinmenus="false" name="Craw Yum!" identifier="he-crawyumsoup" variantof="he-poisoneffectpreset_spoon" health="16" category="Misc" subcategory="Soups" Tags="smallitem,fooditem,foodbowl,spoonfood,soup" description="A soup." maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="false" requireaimtouse="false" impacttolerance="1">
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
@@ -274,7 +274,8 @@
           <Affliction identifier="he-fatrich" amount="15.0" />
           <Affliction identifier="ate_soup" amount="1" />
           <Affliction identifier="he-stuffed" amount="1" />
-          <ReduceAffliction type="hunger" amount="1" />
+          <ReduceAffliction type="hunger" amount="1.25" />
+          <ReduceAffliction type="thirst" amount="1.25" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
 
@@ -292,7 +293,8 @@
           <Affliction identifier="he-fatrich" amount="15.0" />
           <Affliction identifier="ate_soup" amount="1" />
           <Affliction identifier="he-stuffed" amount="1" />
-          <ReduceAffliction type="hunger" amount="1" />
+          <ReduceAffliction type="hunger" amount="1.25" />
+          <ReduceAffliction type="thirst" amount="1.25" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork1.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork2.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork3.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
@@ -317,7 +319,7 @@
       <AiTarget sightrange="1000" static="true" />
     </Item>
     
-    <Item hideinmenus="false" name="Bone Broth" identifier="he-bonebroth" variantof="he-poisoneffectpreset_spoon" health="20" category="Misc" subcategory="Soups" Tags="smallitem,fooditem,foodbowl,spoonfood,soup" description="A soup." maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="false" requireaimtouse="false" impacttolerance="1">
+    <Item hideinmenus="false" name="Bone Broth" identifier="he-bonebroth" variantof="he-poisoneffectpreset_spoon" health="16" category="Misc" subcategory="Soups" Tags="smallitem,fooditem,foodbowl,spoonfood,soup" description="A soup." maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="false" requireaimtouse="false" impacttolerance="1">
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
@@ -345,7 +347,8 @@
           <Affliction identifier="he-fatrich" amount="20.0" />
           <Affliction identifier="ate_soup" amount="1" />
           <Affliction identifier="he-stuffed" amount="1.5" />
-          <ReduceAffliction type="hunger" amount="1.5" />
+          <ReduceAffliction type="hunger" amount="2" />
+          <ReduceAffliction type="thirst" amount="1" />
           <ReduceAffliction type="nausea" amount="2" />
           <ReduceAffliction type="drunk" amount="2" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
@@ -365,7 +368,8 @@
           <Affliction identifier="he-fatrich" amount="20.0" />
           <Affliction identifier="ate_soup" amount="1" />
           <Affliction identifier="he-stuffed" amount="1.5" />
-          <ReduceAffliction type="hunger" amount="1.5" />
+          <ReduceAffliction type="hunger" amount="2" />
+          <ReduceAffliction type="thirst" amount="1" />
           <ReduceAffliction type="nausea" amount="2" />
           <ReduceAffliction type="drunk" amount="2" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork1.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
@@ -392,7 +396,7 @@
       <AiTarget sightrange="1000" static="true" />
     </Item>
 
-    <Item hideinmenus="false" name="Seaweed Soup" identifier="he-seaweedsoup" variantof="he-poisoneffectpreset_spoon" health="20" category="Misc" subcategory="Soups" Tags="smallitem,fooditem,foodbowl,spoonfood,soup" description="A soup." maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="false" requireaimtouse="false" impacttolerance="1">
+    <Item hideinmenus="false" name="Seaweed Soup" identifier="he-seaweedsoup" variantof="he-poisoneffectpreset_spoon" health="16" category="Misc" subcategory="Soups" Tags="smallitem,fooditem,foodbowl,spoonfood,soup" description="A soup." maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_bottle_glass" isshootable="false" requireaimtouse="false" impacttolerance="1">
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
@@ -421,8 +425,8 @@
           <Affliction identifier="he-vitaminrich" amount="15.0" />
           <Affliction identifier="ate_soup" amount="1" />
           <Affliction identifier="he-stuffed" amount="1" />
-          <ReduceAffliction type="hunger" amount="1" />
-          <ReduceAffliction type="thirst" amount="1.5" />
+          <ReduceAffliction type="hunger" amount="1.25" />
+          <ReduceAffliction type="thirst" amount="2" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
 
@@ -440,8 +444,8 @@
           <Affliction identifier="he-vitaminrich" amount="15.0" />
           <Affliction identifier="ate_soup" amount="1" />
           <Affliction identifier="he-stuffed" amount="1" />
-          <ReduceAffliction type="hunger" amount="1" />
-          <ReduceAffliction type="thirst" amount="1.5" />
+          <ReduceAffliction type="hunger" amount="1.25" />
+          <ReduceAffliction type="thirst" amount="2" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork1.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork2.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/Fork3.ogg" loop="False" range="200" volume="5.0" selectionmode="Random" />
