@@ -653,9 +653,8 @@
           <Conditional hunger="gt 1" targetcontainer="true" />
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
-          <Affliction identifier="he-stuffed" amount="1.5" />
-          <ReduceAffliction type="hunger" amount="1.5" />
-          <ReduceAffliction type="burn" amount="0.2" />
+          <Affliction identifier="he-stuffed" amount="1" />
+          <ReduceAffliction type="hunger" amount="1" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
@@ -682,9 +681,8 @@
           <Conditional HasStatusTag="neq emptyhand" />
           <Conditional InWater="false" />
           <Conditional ConditionPercentage="lt 100" />
-          <Affliction identifier="he-stuffed" amount="1.5" />
-          <ReduceAffliction type="hunger" amount="1.5" />
-          <ReduceAffliction type="burn" amount="0.2" />
+          <Affliction identifier="he-stuffed" amount="1" />
+          <ReduceAffliction type="hunger" amount="1" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="true" range="200" volume="5.0" selectionmode="Random" />
         </StatusEffect>
