@@ -10,7 +10,7 @@
       <PreferredContainer primary="table" secondary="kitchen,crewcab"/>
       <Fabricate suitablefabricators="cuttingboard" requiredtime="10" requiresrecipe="true" hideifnorecipe="true" amount="1" displayname="endwormfooditem">
         <RequiredSkill identifier="cooking" level="20" />
-        <RequiredItem identifier="he-endwormsausage" amount="1" MinCondition="0.5" UseCondition="False" />
+        <RequiredItem identifier="he-endwormsausage" amount="1" MinCondition="0.25" UseCondition="False" />
         <RequiredItem identifier="he-ketchup" UseCondition="True" MinCondition="0.125"/>
         <RequiredItem identifier="he-hotdogbun" amount="1"/>
       </Fabricate>

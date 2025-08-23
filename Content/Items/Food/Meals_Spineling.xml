@@ -11,7 +11,7 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="364,1,99,25" depth="0.6" origin="0.5,0.5" />
       <Fabricate suitablefabricators="cuttingboard" requiredtime="15" requiresrecipe="false" amount="1" >
         <RequiredSkill identifier="cooking" level="25" />
-        <RequiredItem identifier="he-spinelingslices" amount="4" MinCondition="0.5" UseCondition="False" />
+        <RequiredItem identifier="he-spinelingslices" amount="4" MinCondition="0.25" UseCondition="False" />
         <RequiredItem identifier="spinelingspikeloot" amount="1" />
         <RequiredItem identifier="he-salt" UseCondition="True" MinCondition="0.05"/>
         <RequiredItem identifier="he-pepper" UseCondition="True" MinCondition="0.05"/>
