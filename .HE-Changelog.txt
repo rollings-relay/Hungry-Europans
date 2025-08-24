@@ -96,6 +96,9 @@ LIST OF FOODS IDEAS:
 - Homemade kvass from water, bread, yeast and sugar.
 - Gravy (water, flour, salt, pepper, broth?)
 - Cookie jar
+- Radioactive sausage cooked in reactor
+- Burger Double Deluxe (burger with 2x patties and cheese)
+- Box of fiber Plant cereals, bowl of cereals + milk
 
 
 
@@ -129,4 +132,3 @@ LongTermPlans:
 - Tier 4 talents for butcher (choice): 1. cannibalism buff with butcher saw. Can directly harvest abyssal meat. | 2. Meat tenderizer hammer (two handed blunt weapon). Will allow meat cleaver to harvest abyssal creature meat after hitting their corpse a few times.
 - Assistant "Tasty target" talent for Chef
 - Unique Couwola location with cola bottle plant and a locked, run down old part of the station and questline to obtain access to it and grab special bottles for the Couwola Cola collector to obtain his Limited Edition Exosuit.
-
