@@ -103,7 +103,7 @@
         <!-- When using (eating) the item -->
         <StatusEffect type="OnUse" target="Character">
           <ReduceAffliction type="hunger" amount="0.5" />
-          <Affliction identifier="nausea" amount="2" probability="0.25" />
+          <Affliction identifier="nausea" amount="6" probability="0.25" />
           <Affliction identifier="deliriuminepoisoning" probability="0.001" amount="8" />
           <Affliction identifier="worminfection" amount="1" probability="0.01" />
           <Affliction identifier="tapeworminfection" amount="1" probability="0.01" />
@@ -215,7 +215,7 @@
         <!-- When using (eating) the item -->
         <StatusEffect type="OnUse" target="Character">
           <ReduceAffliction type="hunger" amount="0.5" />
-          <Affliction identifier="nausea" amount="4" probability="0.25" />
+          <Affliction identifier="nausea" amount="6" probability="0.25" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
