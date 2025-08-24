@@ -34,26 +34,26 @@ Low:
 //////////////////////
 //////////////////////
 
-[hr]19/08/2025
+[hr]24/08/2025
 
-Hotfix
+Balance changes
 
 [List]
 [b]Changes:[/b] 
-[*] More slots for sink
-[*] Added console commands to manually enforce needs without the Enforced mod. Open console with F3 and type [i]triggerevent manualenforceinfo[/i] for a list
+[*] Crafting costs for kitchen appliances rebalanced. Uses less Titanium alloy.
+[*] Amount of fork/spoon uses required to eat meals reduced in general. It took too much time to eat those meals
+[*] MRE food value nerfed
+[*] Some cooked meals food value buffed
+[*] Bread/Slices/Buns food values adjusted to be equivalent per 1 unit of Dough
+[*] Bread food value reduced
+[*] Bread no longer uses Sugar in its recipe
+
 [/List]
 
 [b]Fixes:[/b] 
 
 [List]
-[*] Fixed Gardening Sprinkler not working at all. Still quite janky, might not 100% work.
-[*] Fixed damaged Bowls and Plates (from dropping them) not being valid ingredients for crafting
-[*] Minor bottle sprite fix
-[*] Fixed tea kettle deleting mugs
-[*] Fixed tea kettle not making coffee/chocolate mugs
-[*] Fixed bad text identifier for dirty mug / dirty cup
-[*] Fixed "Hire Chef" event triggering if you already have a Chef
+[*] Fixed Watcher meal having way too much health
 [/List]
 
 
