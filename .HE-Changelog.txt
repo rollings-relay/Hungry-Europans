@@ -87,7 +87,8 @@ Misc TODOs:
 
 LIST OF FOODS IDEAS:
 
-- Sauté with Mushrooms: meat + mushroom
+- Sauté with Mushrooms, mushroom recipes
+- Paté/Foie Gras. Made with Offal, can be spread on bread slices
 - Cake + Cake Slice
 - Pasta + pasta recipes
 - Chewing gum. Made from elastin. Reduces effects of hunger and prevents it from increasing.
@@ -98,7 +99,7 @@ LIST OF FOODS IDEAS:
 - Cookie jar
 - Radioactive sausage cooked in reactor
 - Burger Double Deluxe (burger with 2x patties and cheese)
-- Box of fiber Plant cereals, bowl of cereals + milk
+- Box of Fiber Plant cereals, bowl of cereals + milk
 
 
 
