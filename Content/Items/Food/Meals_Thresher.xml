@@ -12,11 +12,11 @@
       <Sprite texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="513,60,68,29" depth="0.6" origin="0.5,0.5" />
       <ContainedSprite allowedcontainertags="table" texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="513,60,68,29" depth="0.525" origin="0.5,0.65" />
       <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Food/FoodAndMeat.png" sourcerect="513,60,68,29" origin="0.5,0.5" />
-      <Fabricate suitablefabricators="cuttingboard" requiredtime="10" requiresrecipe="false" amount="1" displayname="thresherfooditem">
+      <Fabricate suitablefabricators="cuttingboard" requiredtime="10" requiresrecipe="false" amount="1" >
         <RequiredSkill identifier="cooking" level="50" />
         <RequiredItem identifier="he-preparedthresherfilets" amount="1" MinCondition="0.25" UseCondition="true" />
         <RequiredItem identifier="he-fries" amount="1" />
-        <RequiredItem identifier="he-seaweedstrip" amount="1" />
+        <RequiredItem identifier="he-seaweedstrip" amount="1" MinCondition="0" MaxCondition="0.99" usecondition="false" />
         <RequiredItem identifier="he-emptyplate" amount="1" usecondition="false" mincondition="0" />
       </Fabricate>
       <Deconstruct time="1" requireddeconstructor="deconstructor"/>
