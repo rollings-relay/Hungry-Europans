@@ -103,6 +103,7 @@
           <Conditional IsPlayer="false" targetcontainer="true" />
           <Conditional IsHuman="true" targetcontainer="true" />
           <Affliction identifier="he-proteinrich" amount="50.0" />
+          <Affliction identifier="he-sugarrich" amount="10.0" />
           <Affliction identifier="ate_roast" amount="1" />
           <Affliction identifier="he-stuffed" amount="1.75" />
           <ReduceAffliction type="hunger" amount="1.75" />
@@ -117,6 +118,7 @@
         <StatusEffect type="OnUse" target="Character" comparison="And">
           <Conditional InWater="false" />
           <Affliction identifier="he-proteinrich" amount="50.0" />
+          <Affliction identifier="he-sugarrich" amount="10.0" />
           <Affliction identifier="ate_roast" amount="1" />
           <Affliction identifier="he-stuffed" amount="1.75" />
           <ReduceAffliction type="hunger" amount="1.75" />
