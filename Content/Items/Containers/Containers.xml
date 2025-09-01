@@ -146,30 +146,11 @@
         </TickBox>
       </CustomInterface>
     </Item>
-    <!-- Attachable Liquor Crate Version
-    <Item name="Liquor Crate" identifier="he-liquorcrate" tags="container,kitchen,liquorcrate" linkable="true" pickdistance="150" waterproof="false" scale="0.5" isshootable="true">
-      <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.784" sourcerect="786,381,90,69" canflipx="false" origin="0.5,0.5" />
-      <Body width="90" height="69" density="14" />
-      <Deconstruct time="5">
-        <Item identifier="plastic" amount="2"/>
-      </Deconstruct>
-      <Fabricate suitablefabricators="fabricator" requiredtime="10" requiresrecipe="false" amount="1">
-        <RequiredSkill identifier="mechanical" level="15" />
-        <RequiredItem identifier="plastic" amount="4"/>
-      </Fabricate>
-      <ItemContainer capacity="20" maxstacksize="1" canbeselected="true" hideitems="false" itempos="15,-25" iteminterval="20,1" itemrotation="0" itemsperrow="4" slotsperrow="4" containedspritedepth="0.83" msg="ItemMsgInteractSelect" canflipx="false">
-        <GuiFrame relativesize="0.25,0.5" anchor="Center" style="ItemUI" />
-        <Containable items="bottle,emptybottle" />
-      </ItemContainer>
-      <Holdable canbepicked="true" selectkey="Select" canbepicked="true" pickkey="Action" slots="RightHand+LeftHand" holdpos="0,-50" handle1="0,18" handle2="-1,3" holdangle="45" msg="[E] Pick up" PickingTime="1.0" aimpos="65,-10" attachable="true" aimable="true">
-      </Holdable>
-    </Item>
-    -->
     
-    <Item name="Jar Crate" category="Equipment" subcategory="Container" description="A crate to store and carry your jars. Bottles don't fit." identifier="he-jarcrate" tags="crate,container,kitchen,jarcrate" linkable="true" pickdistance="150" waterproof="false" impacttolerance="0.1" scale="0.5" canflipx="false" isshootable="true" impactsoundtag="impact_plastic_crate">
+    <Item name="Jar Crate" category="Equipment" subcategory="Container" description="A crate to store and carry your jars. Bottles don't fit." identifier="he-jarcrate" tags="container,kitchen,jarcrate" linkable="true" pickdistance="150" waterproof="false" impacttolerance="0.1" scale="0.5" canflipx="false" isshootable="true" impactsoundtag="impact_plastic_crate">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.684" sourcerect="933,602,90,53" canflipx="false" origin="0.5,0.43" />
       <ContainedSprite allowedcontainertags="refillstation" texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="0,0,1,1" depth="0.55" origin="0.5,0.5" />
-      <PreferredContainer primary="crateshelf" />
+      <PreferredContainer primary="liquorcrateshelf" />
       <Body width="90" height="53" density="14" />
       <Deconstruct time="5">
         <Item identifier="plastic" amount="2" />
@@ -190,10 +171,10 @@
       <Holdable canbepicked="true" slots="RightHand+LeftHand" holdpos="0,-50" handle1="0,14" handle2="-1,3" holdangle="45" aimpos="65,-10" attachable="false" aimable="false"></Holdable>
     </Item>
     
-    <Item name="Liquor Crate" category="Equipment" subcategory="Container" description="A crate to store and carry your bottles. Jars don't fit." identifier="he-liquorcrate" tags="crate,container,kitchen,liquorcrate" linkable="true" pickdistance="150" waterproof="false" impacttolerance="0.1" scale="0.5" canflipx="false" isshootable="true" impactsoundtag="impact_plastic_crate">
+    <Item name="Liquor Crate" category="Equipment" subcategory="Container" description="A crate to store and carry your bottles. Jars don't fit." identifier="he-liquorcrate" tags="container,kitchen,liquorcrate" linkable="true" pickdistance="150" waterproof="false" impacttolerance="0.1" scale="0.5" canflipx="false" isshootable="true" impactsoundtag="impact_plastic_crate">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.684" sourcerect="933,548,90,53" canflipx="false" origin="0.5,0.43" />
       <ContainedSprite allowedcontainertags="refillstation" texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="0,0,1,1" depth="0.55" origin="0.5,0.5" />
-      <PreferredContainer primary="crateshelf" />
+      <PreferredContainer primary="liquorcrateshelf" />
       <Body width="90" height="53" density="14" />
       <Deconstruct time="5">
         <Item identifier="plastic" amount="2" />
@@ -213,10 +194,10 @@
       </ItemContainer>
       <Holdable canbepicked="true" slots="RightHand+LeftHand" holdpos="0,-50" handle1="0,14" handle2="-1,3" holdangle="45" aimpos="65,-10" attachable="false" aimable="false"></Holdable>
     </Item>
-    <Item name="Couwola Cola Crate" category="Equipment" subcategory="Container" description="A crate from Couwola Cola to store and carry your bottles. Jars don't fit." identifier="he-colacrate" tags="crate,container,kitchen,liquorcrate" linkable="true" pickdistance="150" waterproof="false" impacttolerance="0.1" scale="0.5" canflipx="false" isshootable="true" impactsoundtag="impact_plastic_crate">
+    <Item name="Couwola Cola Crate" category="Equipment" subcategory="Container" description="A crate from Couwola Cola to store and carry your bottles. Jars don't fit." identifier="he-colacrate" tags="container,kitchen,liquorcrate" linkable="true" pickdistance="150" waterproof="false" impacttolerance="0.1" scale="0.5" canflipx="false" isshootable="true" impactsoundtag="impact_plastic_crate">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.684" sourcerect="933,494,90,53" canflipx="false" origin="0.5,0.43" />
       <ContainedSprite allowedcontainertags="refillstation" texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="0,0,1,1" depth="0.55" origin="0.5,0.5" />
-      <PreferredContainer primary="crateshelf" />
+      <PreferredContainer primary="liquorcrateshelf" />
       <Body width="90" height="53" density="14" />
       <Deconstruct time="5">
         <Item identifier="plastic" amount="2" />
@@ -233,7 +214,7 @@
       <Holdable canbepicked="true" slots="RightHand+LeftHand" holdpos="0,-50" handle1="0,14" handle2="-1,3" holdangle="45" aimpos="65,-10" attachable="false" aimable="false"></Holdable>
     </Item>
     
-    <Item name="Liquor Crate Shelf" category="Misc" subcategory="Container" description="A shelf to store up to 4 of your liquor and jar crates." identifier="he-liquorcrateshelf" tags="container,crateshelf" linkable="true" allowedlinks="kitchen,kitchenfabricator" canflipx="false" pickdistance="150" scale="0.5" isshootable="true" requireaimtouse="true">
+    <Item name="Liquor Crate Shelf" category="Misc" subcategory="Container" description="A shelf to store up to 4 of your liquor and jar crates." identifier="he-liquorcrateshelf" tags="container,liquorcrateshelf" linkable="true" allowedlinks="kitchen,kitchenfabricator" canflipx="false" pickdistance="150" scale="0.5" isshootable="true" requireaimtouse="true">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.799" sourcerect="621,1,128,364" origin="0.5,0.47" />
       <Body width="128" height="364" density="18" />
       <Deconstruct time="5">
@@ -257,7 +238,7 @@
       </ItemContainer>
     </Item>
     
-    <Item name="Liquor Crate Shelf (Small)" category="Misc" subcategory="Container" description="A small shelf to store up to 2 of your liquor and jar crates." identifier="he-liquorcrateshelfsmall" tags="container,crateshelf" linkable="true" allowedlinks="kitchen,kitchenfabricator" canflipx="false" pickdistance="150" scale="0.5" isshootable="true" requireaimtouse="true">
+    <Item name="Liquor Crate Shelf (Small)" category="Misc" subcategory="Container" description="A small shelf to store up to 2 of your liquor and jar crates." identifier="he-liquorcrateshelfsmall" tags="container,liquorcrateshelf" linkable="true" allowedlinks="kitchen,kitchenfabricator" canflipx="false" pickdistance="150" scale="0.5" isshootable="true" requireaimtouse="true">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.799" sourcerect="621,1,128,181" origin="0.5,0.465" />
       <Body width="128" height="181" density="14" />
       <Deconstruct time="5">
