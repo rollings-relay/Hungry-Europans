@@ -76,7 +76,7 @@
       <AiTarget sightrange="1000" static="true" />
     </Item>
 
-    <Item hideinmenus="false" name="Spareribs" identifier="he-cookedhammerheadspareribs" variantof="he-poisoneffectpreset_regular" health="25" category="Misc" subcategory="Food - Hammerhead" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
+    <Item hideinmenus="false" name="Spareribs" identifier="he-cookedhammerheadspareribs" variantof="he-poisoneffectpreset_regular" health="15" category="Misc" subcategory="Food - Hammerhead" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,fooditem,fingerfood,petfood1,petfood2,petfood3" useinhealthinterface="false" scale="0.5" impactsoundtag="impact_softitem" isshootable="True" requireaimtouse="True">
       <PreferredContainer secondary="abandonedmedcab" spawnprobability="0.02" />
       <PreferredContainer secondary="abandonedcrewcab" minamount="0" maxamount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.0" notcampaign="True"/>
@@ -105,8 +105,8 @@
           <Affliction identifier="he-proteinrich" amount="50.0" />
           <Affliction identifier="he-sugarrich" amount="10.0" />
           <Affliction identifier="ate_roast" amount="1" />
-          <Affliction identifier="he-stuffed" amount="1.75" />
-          <ReduceAffliction type="hunger" amount="1.75" />
+          <Affliction identifier="he-stuffed" amount="2" />
+          <ReduceAffliction type="hunger" amount="2" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
@@ -120,8 +120,8 @@
           <Affliction identifier="he-proteinrich" amount="50.0" />
           <Affliction identifier="he-sugarrich" amount="10.0" />
           <Affliction identifier="ate_roast" amount="1" />
-          <Affliction identifier="he-stuffed" amount="1.75" />
-          <ReduceAffliction type="hunger" amount="1.75" />
+          <Affliction identifier="he-stuffed" amount="2" />
+          <ReduceAffliction type="hunger" amount="2" />
           <Affliction identifier="spill" amount="1000" probability="0.0005" />
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Food/EatingSoft.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
