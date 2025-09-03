@@ -59,6 +59,8 @@ Balance changes
 [*] Fixed Liquor/Jar crates fitting in big crate shelves
 [*] Fixed Liquor/Jar shelves being improperly tagged
 [*] Fixed Forks/Spoons being combinable
+[*] Fixed Hygiene affliction giving Stress to people without Moody Europans enabled.
+[*] Fixed Nausea not being up to date with Vanilla (vomiting too much, too early)
 [/List]
 
 
