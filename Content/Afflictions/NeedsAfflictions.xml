@@ -1250,9 +1250,9 @@
       limbspecific="false"
       indicatorlimb="Torso"
       hideiconafterdelay="false"
-      iconcolors="0,180,0,255;180,0,0,255"
+      iconcolors="0,180,0,255;190,160,0,255"
       activationthreshold="0"
-      showiconthreshold="50"
+      showiconthreshold="30"
       showinhealthscannerthreshold="0"
       maxstrength="100"
       healableinmedicalclinic="false"
@@ -1298,16 +1298,15 @@
         dialogflag="filthymedium"
         strengthchange="0"
         minspeedmultiplier="1.0"
-        maxspeedmultiplier="0.8">
+        maxspeedmultiplier="0.9">
         <!-- particles -->
         <StatusEffect target="Character" >
           <ParticleEmitter particle="acidmistgrenade" anglemin="80" anglemax="100" particlespersecond="3" distancemin="0" distancemax="30" velocitymin="0" velocitymax="30" scalemin="0.25" scalemax="0.5" scalemultiplier="1,0.5" lifetimemultiplier="0.25" colormultiplier="255,255,255,255"/>
         </StatusEffect>
-        <!-- Increase the bad mood for the character and any nearby characters whithin 3m by 1 every second -->
-        <StatusEffect target="Character,NearbyCharacters" range="300" interval="1" disabledeltatime="true" comparison="And">
-          <Conditional IsPlayer="true" />
+        <!-- Increase the mood -->
+        <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional mood="gt 0" />
-          <Affliction identifier="mood" amount="0.5" />
+          <Affliction identifier="mood" amount="0.15" />
         </StatusEffect>
         <!-- TODO: BUGGED, RequireEmpty="true" does not work if the inventory is... empty https://github.com/FakeFishGames/Barotrauma/discussions/16238 -->
         <!-- Reduce the hygiene each second if the character is in water -->
@@ -1321,19 +1320,24 @@
       <Effect minstrength="80" maxstrength="100"
         dialogflag="filthyheavy"
         strengthchange="0"
-        minspeedmultiplier="0.8"
-        maxspeedmultiplier="0.5">
+        minspeedmultiplier="0.9"
+        maxspeedmultiplier="0.8">
         <!-- particles -->
         <StatusEffect target="Character" >
           <ParticleEmitter particle="acidmistgrenade" anglemin="80" anglemax="100" particlespersecond="3" distancemin="0" distancemax="30" velocitymin="0" velocitymax="30" scalemin="0.25" scalemax="0.5" scalemultiplier="1,0.5" lifetimemultiplier="0.25" colormultiplier="255,255,255,255"/>
         </StatusEffect>
-        <!-- Increase the bad mood for the character and any nearby characters whithin 3m by 2 every second -->
-        <StatusEffect target="Character,NearbyCharacters" range="300" interval="1" disabledeltatime="true" comparison="And">
-          <Conditional IsPlayer="true" />
+        <!-- Increase the mood -->
+        <StatusEffect target="Character" interval="1" disabledeltatime="true">
           <Conditional mood="gt 0" />
-          <Affliction identifier="mood" amount="1.0" />
+          <Affliction identifier="mood" amount="0.25" />
         </StatusEffect>
-        <!-- TODO: BUGGED, RequireEmpty="true" does not work if the inventory is... empty https://github.com/FakeFishGames/Barotrauma/discussions/16238 -->
+        <!-- BUGGED, impossible to make the effect check for conditionals on individual targets. As a result it applies the effect on every target if one of the NearbyCharacters checks the conditional -->
+        <!-- makes nearby characters gain nausea in your presence up to a point -->
+        <!-- <StatusEffect target="Character,NearbyCharacters" range="150" interval="1" disabledeltatime="true" comparison="And">
+          <Conditional IsPlayer="true" />
+          <Conditional nausea="lt 20" />
+          <Affliction identifier="nausea" amount="2" />
+        </StatusEffect> -->
         <!-- Reduce the hygiene each second if the character is in water -->
         <StatusEffect target="Character" interval="1" disabledeltatime="true" comparison="And">
           <RequiredItem item="clothing" type="Equipped" requireempty="true" CharacterInventorySlotType="InnerClothes" />
