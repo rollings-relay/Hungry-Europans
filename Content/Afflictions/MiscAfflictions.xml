@@ -663,15 +663,13 @@
           <Conditional he-stomachache="gte 20" />
         </StatusEffect>
         <!-- only increase (worsen) the mood if it's enabled -->
-        <StatusEffect target="Character" interval="1" disabledeltatime="true" comparison="And">
+        <StatusEffect target="Character" interval="1" disabledeltatime="true" >
           <Conditional mood="gt 0" />
-          <Conditional he-stomachache="gte 20" />
           <Affliction identifier="mood" strength="5" />
         </StatusEffect>
         <StatusEffect target="Character" comparison="And">
           <Conditional ishuman="true" />
           <Conditional hasspecifiertag="male" />
-          <Conditional he-stomachache="gte 20" />
           <Sound file="Content/Sounds/HUMAN_chokeMale1.ogg" selectionmode="Random" />
           <Sound file="Content/Sounds/HUMAN_chokeMale2.ogg" />
           <Sound file="Content/Sounds/HUMAN_chokeMale3.ogg" />
@@ -679,22 +677,18 @@
         <StatusEffect target="Character" comparison="And">
           <Conditional ishuman="true" />
           <Conditional hasspecifiertag="female" />
-          <Conditional he-stomachache="gte 20" />
           <Sound file="Content/Sounds/HUMAN_chokeFemale1.ogg" selectionmode="Random" />
           <Sound file="Content/Sounds/HUMAN_chokeFemale2.ogg" />
           <Sound file="Content/Sounds/HUMAN_chokeFemale3.ogg" />
         </StatusEffect>
         <StatusEffect target="Character">
-          <Conditional he-stomachache="gte 20" />
           <Affliction identifier="organdamage" strength="0.5" />
           <ReduceAffliction identifier="he-stomachache" strength="10" />
           <ReduceAffliction identifier="he-stuffed" strength="10" />
           <ReduceAffliction type="foodbuff" strength="300" />
           <ReduceAffliction type="drinkbuff" strength="300" />
-          <!--<ReduceAffliction identifier="AnyFoodAffliction" strength="100" />-->
         </StatusEffect>
         <StatusEffect target="Character" targetlimbs="Head" duration="1" comparison="And">
-          <Conditional he-stomachache="gte 20" />
           <Conditional HideFace="eq False" />
           <ParticleEmitter particle="vomitsplash" copyentityangle="true" anglemin="-10" anglemax="10" particlespersecond="50" velocitymin="50" velocitymax="200" scalemin="0.1" scalemax="0.2" />
           <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="vomitsplatter" decalsize="1.25" shockwave="false" underwaterbubble="false" />
@@ -707,7 +701,6 @@
         <StatusEffect target="Character" comparison="And">
           <Conditional ishuman="true" />
           <Conditional hasspecifiertag="male" />
-          <Conditional he-stomachache="gte 60" />
           <Sound file="Content/Sounds/HUMAN_chokeMale1.ogg" selectionmode="Random" />
           <Sound file="Content/Sounds/HUMAN_chokeMale2.ogg" />
           <Sound file="Content/Sounds/HUMAN_chokeMale3.ogg" />
@@ -715,13 +708,11 @@
         <StatusEffect target="Character" comparison="And">
           <Conditional ishuman="true" />
           <Conditional hasspecifiertag="female" />
-          <Conditional he-stomachache="gte 60" />
           <Sound file="Content/Sounds/HUMAN_chokeFemale1.ogg" selectionmode="Random" />
           <Sound file="Content/Sounds/HUMAN_chokeFemale2.ogg" />
           <Sound file="Content/Sounds/HUMAN_chokeFemale3.ogg" />
         </StatusEffect>
         <StatusEffect target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
-          <Conditional he-stomachache="gte 60" />
           <Affliction identifier="organdamage" strength="0.5" />
           <ReduceAffliction identifier="he-stomachache" strength="10" />
           <ReduceAffliction identifier="he-stuffed" strength="10" />
@@ -730,7 +721,6 @@
           <!--<ReduceAffliction identifier="AnyFoodAffliction" strength="100" />-->
         </StatusEffect>
         <StatusEffect target="Character" targetlimbs="Head" duration="1" comparison="And">
-          <Conditional he-stomachache="gte 60" />
           <Conditional HideFace="eq False" />
           <ParticleEmitter particle="vomitsplash" copyentityangle="true" anglemin="-10" anglemax="10" particlespersecond="50" velocitymin="50" velocitymax="200" scalemin="0.1" scalemax="0.2" />
           <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="vomitsplatter" decalsize="1.25" shockwave="false" underwaterbubble="false" />
