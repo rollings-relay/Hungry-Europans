@@ -473,7 +473,7 @@
     </Item>
     
     <!-- cleans dirty tableware and fills water bottles -->
-    <Item name="Sink" identifier="sink" tags="kitchen,sink" category="Machines" description="" scale="0.5" isshootable="true" requireaimtouse="false" impactsoundtag="impact_metal_heavy">
+    <Item name="Sink" identifier="sink" tags="kitchen,sink" category="Machines" description="" scale="0.45" isshootable="true" requireaimtouse="false" impactsoundtag="impact_metal_heavy">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.786" sourcerect="612,366,135,95" origin="0.5,0.5" />
       <!-- DecorativeSprite to display the lower half of the sink behind objects -->
       <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="612,456,135,94" depth="0.801" origin="0.5,-0.45" />
