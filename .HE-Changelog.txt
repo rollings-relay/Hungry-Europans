@@ -38,37 +38,18 @@ Low:
 
 [b]Changes:[/b] 
 [List]
-[*] Crafting costs for kitchen appliances rebalanced. Uses less Titanium alloy.
-[*] Amount of fork/spoon uses required to eat meals reduced in general. It took too much time to eat those meals
-[*] MRE food value nerfed
-[*] Some cooked meals food value buffed/rebalanced
-[*] Bread/Slices/Buns food values adjusted to be equivalent per 1 unit of Dough
-[*] Bread food value reduced to match other bread products
-[*] Bread no longer uses Sugar in its recipe
-[*] Spare ribs use sugar instead of salt
-[*] Drinks can no longer be combined as you could not drink from a combined bottle with 100% condition
+[*] Added power distribution to the electrical grid of the Bulker Abyss Scout
+[*] Changed default size of the sink from 0.5 to 0.45
 [/List]
 
 [b]Fixes:[/b] 
 [List]
-[*] Fixed Dynamic Europa taking over Hungry Europans text. HE text now uses an override. 
-[*] Fixed Watcher meal having way too much health
-[*] Fixed Hammerhead/Thresher dishes using Sea Weed not being craftable
-[*] Fixed Liquor/Jar crates fitting in big crate shelves
-[*] Fixed Liquor/Jar shelves being improperly tagged
-[*] Fixed Forks/Spoons being combinable
-[*] Fixed Hygiene affliction giving Stress to people without Moody Europans enabled.
-[*] Fixed Nausea not being up to date with Vanilla (vomiting too much, too early)
+[*] Fixed kitchen item placements on all included submarines
 [/List]
 
 
 [b]KNOWN BUGS/ISSUES:[/b] 
-[*] Bad bot support. Bots cannot heal hunger/thirst without losing health first, so it's not advised giving bots NEEDS
-[*] Damage multipliers (like steroids) result in less meat being harvested on corpses
-[*] Crafting using stacked bowls/plates will delete any contained bowl/plate, MAKE SURE TO UNSTACK YOUR BOWLS AND PLATES BEFORE CRAFTING
-[*] Sprites of items INSIDE items INSIDE tables break and do not match their real position in the inventory
-[*] Hygiene affliction washes with clothes on; you are supposed to take clothes off and go in water.
-[*] Kitchen Counter cannot receive power from batteries/relays
+[*] 
 
 
 //////////////////////
