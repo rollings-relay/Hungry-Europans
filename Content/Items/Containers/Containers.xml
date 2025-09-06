@@ -320,7 +320,7 @@
       </Holdable>
     </Item>
     
-    <Item name="Kitchen Counter" identifier="he-kitchencounter" tags="kitchen,kitchencounter,locker,container" linkable="true" category="Misc" subcategory="Container" description="Can store up to 18 different small or medium items and refill empty bottles and kegs with sea water." pickdistance="150" waterproof="false" isshootable="true" scale="0.5">
+    <Item name="Kitchen Counter" identifier="he-kitchencounter" tags="kitchen,kitchencounter,locker,container" linkable="true" category="Misc" subcategory="Container" description="Can store up to 18 different small or medium items and refill empty bottles and kegs with sea water." pickdistance="150" GrabWhenSelected="true" waterproof="false" isshootable="true" scale="0.5">
       <Sprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" depth="0.798" sourcerect="0,0,507,299" origin="0.5,0.5" />
       <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="390,687,493,185" depth="0.81" scale="1" offset="0,-45" origin="0.5,0.5"/>
       <DecorativeSprite texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="0,868,318,149" depth="0.796" origin="0.049,-0.022">
@@ -373,6 +373,145 @@
         <SubContainer capacity="3" maxstacksize="1">
           <SlotIcon texture="Content/UI/CommandUIAtlas.png" sourcerect="639,926,128,80" origin="0.5,0.5" />
           <Containable items="mobilecontainer" />
+        </SubContainer>
+      </ItemContainer>
+      <ItemContainer capacity="0" canbeselected="true" selectkey="Select" hideitems="true" autofill="false">
+        <GuiFrame relativesize="0.25,0.2" anchor="Center" style="ItemUI" />
+        <RequiredItem items="wrench" type="Equipped" />
+        <!-- UPGRADES | TODO: replace sprite and sound effects - add particles? -->
+        <!-- oven -->
+        <SubContainer capacity="1" maxstacksize="1">
+          <Containable identifier="he-oven_installation">
+            <StatusEffect type="OnInserted" target="This" offset="-77,-27" disabledeltatime="true">
+              <Conditional flippedx="false" />
+              <SpawnItem identifier="he-oven" spawnposition="This" />
+              <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_open1.ogg" volume="2" range="250" frequencymultiplier="1.5" selectionmode="Random" />
+            </StatusEffect>
+            <StatusEffect type="OnInserted" target="This" offset="77,-27" disabledeltatime="true">
+              <Conditional flippedx="true" />
+              <SpawnItem identifier="he-oven" spawnposition="This" />
+              <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_open1.ogg" volume="2" range="250" frequencymultiplier="1.5" selectionmode="Random" />
+            </StatusEffect>
+            <StatusEffect type="OnRemoved" target="NearbyItems" targets="oven_installed" range="300" disabledeltatime="true">
+              <DropContainedItems />
+              <Remove />
+              <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_close2.ogg" volume="2" range="250" frequencymultiplier="1.5" selectionmode="Random" />
+            </StatusEffect>
+          </Containable>
+        </SubContainer>
+        <!-- stove/grill -->
+        <SubContainer capacity="1" maxstacksize="1">
+          <Containable identifier="he-stove_installation">
+            <StatusEffect type="OnInserted" target="This" offset="-79,29" disabledeltatime="true">
+              <Conditional flippedx="false" />
+              <SpawnItem identifier="he-stove" spawnposition="This" />
+              <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_open1.ogg" volume="2" range="250" frequencymultiplier="1.5" selectionmode="Random" />
+            </StatusEffect>
+            <StatusEffect type="OnInserted" target="This" offset="76,29" disabledeltatime="true">
+              <Conditional flippedx="true" />
+              <SpawnItem identifier="he-stove" spawnposition="This" />
+              <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_open1.ogg" volume="2" range="250" frequencymultiplier="1.5" selectionmode="Random" />
+            </StatusEffect>
+            <StatusEffect type="OnRemoved" target="NearbyItems" targets="stove_installed" range="300" disabledeltatime="true">
+              <DropContainedItems />
+              <Remove />
+              <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_close2.ogg" volume="2" range="250" frequencymultiplier="1.5" selectionmode="Random" />
+            </StatusEffect>
+          </Containable>
+          <Containable identifier="he-electricgrill_installation">
+            <StatusEffect type="OnInserted" target="This" offset="-79,43" disabledeltatime="true">
+              <Conditional flippedx="false" />
+              <SpawnItem identifier="he-electricgrill" spawnposition="This" />
+              <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_open1.ogg" volume="2" range="250" frequencymultiplier="1.5" selectionmode="Random" />
+            </StatusEffect>
+            <StatusEffect type="OnInserted" target="This" offset="79,43" disabledeltatime="true">
+              <Conditional flippedx="true" />
+              <SpawnItem identifier="he-electricgrill" spawnposition="This" />
+              <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_open1.ogg" volume="2" range="250" frequencymultiplier="1.5" selectionmode="Random" />
+            </StatusEffect>
+            <StatusEffect type="OnRemoved" target="NearbyItems" targets="electricgrill_installed" range="300" disabledeltatime="true">
+              <DropContainedItems />
+              <Remove />
+              <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_close2.ogg" volume="2" range="250" frequencymultiplier="1.5" selectionmode="Random" />
+            </StatusEffect>
+          </Containable>
+        </SubContainer>
+        <!-- sink -->
+        <SubContainer capacity="1" maxstacksize="1">
+          <Containable identifier="sink_installation">
+            <StatusEffect type="OnInserted" target="This" offset="-6,48" disabledeltatime="true">
+              <Conditional flippedx="false" />
+              <SpawnItem identifier="sink" spawnposition="This" />
+              <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_open1.ogg" volume="2" range="250" frequencymultiplier="1.5" selectionmode="Random" />
+            </StatusEffect>
+            <StatusEffect type="OnInserted" target="This" offset="6,48" disabledeltatime="true">
+              <Conditional flippedx="true" />
+              <SpawnItem identifier="sink" spawnposition="This" />
+              <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_open1.ogg" volume="2" range="250" frequencymultiplier="1.5" selectionmode="Random" />
+            </StatusEffect>
+            <StatusEffect type="OnRemoved" target="NearbyItems" targets="sink_installed" range="300" disabledeltatime="true">
+              <DropContainedItems />
+              <Remove />
+              <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_close2.ogg" volume="2" range="250" frequencymultiplier="1.5" selectionmode="Random" />
+            </StatusEffect>
+          </Containable>
+        </SubContainer>
+        <!-- cutting board -->
+        <SubContainer capacity="1" maxstacksize="1">
+          <Containable identifier="he-cuttingboard_installation">
+            <StatusEffect type="OnInserted" target="This" offset="56,45" disabledeltatime="true">
+              <Conditional flippedx="false" />
+              <SpawnItem identifier="he-cuttingboard" spawnposition="This" />
+              <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_open1.ogg" volume="2" range="250" frequencymultiplier="1.5" selectionmode="Random" />
+            </StatusEffect>
+            <StatusEffect type="OnInserted" target="This" offset="-56,45" disabledeltatime="true">
+              <Conditional flippedx="true" />
+              <SpawnItem identifier="he-cuttingboard" spawnposition="This" />
+              <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_open1.ogg" volume="2" range="250" frequencymultiplier="1.5" selectionmode="Random" />
+            </StatusEffect>
+            <StatusEffect type="OnRemoved" target="NearbyItems" targets="cuttingboard_installed" range="300" disabledeltatime="true">
+              <DropContainedItems />
+              <Remove />
+              <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_close2.ogg" volume="2" range="250" frequencymultiplier="1.5" selectionmode="Random" />
+            </StatusEffect>
+          </Containable>
+        </SubContainer>
+        <!-- fryer -->
+        <SubContainer capacity="1" maxstacksize="1">
+          <Containable identifier="he-fryer_installation">
+            <StatusEffect type="OnInserted" target="This" offset="105,53" disabledeltatime="true">
+              <Conditional flippedx="false" />
+              <SpawnItem identifier="he-fryer" spawnposition="This" />
+              <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_open1.ogg" volume="2" range="250" frequencymultiplier="1.5" selectionmode="Random" />
+            </StatusEffect>
+            <StatusEffect type="OnInserted" target="This" offset="-105,53" disabledeltatime="true">
+              <Conditional flippedx="true" />
+              <SpawnItem identifier="he-fryer" spawnposition="This" />
+              <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_open1.ogg" volume="2" range="250" frequencymultiplier="1.5" selectionmode="Random" />
+            </StatusEffect>
+            <StatusEffect type="OnRemoved" target="NearbyItems" targets="fryer_installed" range="300" disabledeltatime="true">
+              <DropContainedItems />
+              <Remove />
+              <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_close2.ogg" volume="2" range="250" frequencymultiplier="1.5" selectionmode="Random" />
+            </StatusEffect>
+          </Containable>
+          <Containable identifier="coffeemachine_installation">
+            <StatusEffect type="OnInserted" target="This" offset="105,69" disabledeltatime="true">
+              <Conditional flippedx="false" />
+              <SpawnItem identifier="coffeemachine" spawnposition="This" />
+              <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_open1.ogg" volume="2" range="250" frequencymultiplier="1.5" selectionmode="Random" />
+            </StatusEffect>
+            <StatusEffect type="OnInserted" target="This" offset="-105,69" disabledeltatime="true">
+              <Conditional flippedx="true" />
+              <SpawnItem identifier="coffeemachine" spawnposition="This" />
+              <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_open1.ogg" volume="2" range="250" frequencymultiplier="1.5" selectionmode="Random" />
+            </StatusEffect>
+            <StatusEffect type="OnRemoved" target="NearbyItems" targets="coffeemachine_installed" range="300" disabledeltatime="true">
+              <DropContainedItems />
+              <Remove />
+              <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/locker_close2.ogg" volume="2" range="250" frequencymultiplier="1.5" selectionmode="Random" />
+            </StatusEffect>
+          </Containable>
         </SubContainer>
       </ItemContainer>
       <Body width="507" height="300" density="30" />
