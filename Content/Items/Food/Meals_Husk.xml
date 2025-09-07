@@ -14,7 +14,7 @@
       <Fabricate suitablefabricators="cuttingboard" requiredtime="10" requiresrecipe="true" amount="1" >
         <RequiredSkill identifier="cooking" level="50" />
         <RequiredItem identifier="he-preparedhuskfilets" amount="1" MinCondition="0.25" UseCondition="true" />
-        <RequiredItem identifier="he-seaweedstrip" amount="1" />
+        <RequiredItem identifier="he-seaweedstrip" amount="1" MinCondition="0" MaxCondition="0.99" usecondition="false"/>
         <RequiredItem identifier="he-emptyplate" amount="1" usecondition="false" mincondition="0" />
         <RequiredItem tag="omelette" UseCondition="True" mincondition="0.5" />
       </Fabricate>
