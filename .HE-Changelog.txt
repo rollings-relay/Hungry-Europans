@@ -45,11 +45,20 @@ Low:
 [b]Fixes:[/b] 
 [List]
 [*] Fixed kitchen item placements on all included submarines
+[*] Fixed Moloch Steak recipe not using a pan
+[*] Fixed Fondue Pot not being craftable
+[*] Fixed many recipes using Sea Weed Strip not being craftable
 [/List]
 
 
-[b]KNOWN BUGS/ISSUES:[/b] 
-[*] 
+[b]KNOWN BUGS/ISSUES:[/b]
+[*] Bad bot support. Bots cannot heal hunger/thirst without losing health first, so it's not advised giving bots NEEDS
+[*] Damage multipliers (like steroids) result in less meat being harvested on corpses
+[*] Fabricators delete ingredient items instead of setting their condition to 0, preventing ingredients from turning empty/dirty 
+[*] Crafting using stacked bowls/plates will delete any contained bowl/plate, MAKE SURE TO UNSTACK YOUR BOWLS AND PLATES BEFORE CRAFTING
+[*] Sprites of items INSIDE items INSIDE tables break and do not match their real position in the inventory
+[*] Hygiene affliction washes with clothes on; you are supposed to take clothes off and go in water.
+[*] Kitchen Counter cannot receive power from batteries/relays
 
 
 //////////////////////
