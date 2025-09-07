@@ -473,10 +473,9 @@
     </Item>
     
     <!-- cleans dirty tableware and fills water bottles -->
-    <Item name="Sink (Installation)" identifier="sink_installation" tags="kitchen,sink" category="Machines" description="" scale="0.45" isshootable="true" requireaimtouse="false" impactsoundtag="impact_metal_heavy">
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="612,366,135,185"/>
-      <Sprite texture="Content/Items/Containers/containers.png" depth="0.54" sourcerect="800,788,95,78" origin="0.5,0.5" />
-      <Body width="80" height="164" density="15" />
+    <Item name="Sink (Installation)" identifier="sink_installation" tags="kitchen,sink" category="Machines" description="" scale="0.45" isshootable="true" requireaimtouse="false" impactsoundtag="impact_metal_heavy" canflipx="false" canflipy="false">
+      <Sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" depth="0.54" sourcerect="1,1968,95,78" origin="0.5,0.5" />
+      <Body width="90" height="72" density="15" />
       <Price baseprice="250" sold="true">
         <Price storeidentifier="merchantoutpost" multiplier="1.2" minavailable="1" maxavailable="1" />
         <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="1" />
@@ -548,11 +547,10 @@
     
     <!-- TODO: inventory icon w knife? -->
     <!-- chops ingredients as long as you interact with it  -->
-    <Item name="Cutting Board (Installation)" identifier="he-cuttingboard_installation" tags="cuttingboard,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="" isshootable="true" scale="0.5" damagedbyexplosions="false" GrabWhenSelected="false" canflipx="true" canflipy="false" impactsoundtag="impact_metal_light">
+    <Item name="Cutting Board (Installation)" identifier="he-cuttingboard_installation" tags="cuttingboard,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="" isshootable="true" scale="0.5" damagedbyexplosions="false" GrabWhenSelected="false" canflipx="false" canflipy="false" impactsoundtag="impact_metal_light">
+      <Sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" depth="0.54" sourcerect="385,1968,95,78" origin="0.5,0.5" />
+      <Body width="90" height="72" density="15" />
       <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.45" />
-      <Body width="123" height="66" density="30" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1924,0,124,66" />
-      <Sprite texture="Content/Items/Containers/containers.png" depth="0.54" sourcerect="800,788,95,78" origin="0.5,0.5" />
       <Price baseprice="99" sold="true">
         <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="1" maxavailable="1" />
         <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="2" maxavailable="2" />
@@ -590,10 +588,9 @@
     </Item>
     
     <!-- cooks things in a pot? -->
-    <Item name="Stove (Installation)" identifier="he-stove_installation" tags="stove,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="Used for cooking. Needs power." isshootable="true" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2" impactsoundtag="impact_metal_heavy">
-      <Upgrade gameversion="0.10.4.0">
-        <Repairable Msg="ItemMsgRepairWrench" />
-      </Upgrade>
+    <Item name="Stove (Installation)" identifier="he-stove_installation" tags="stove,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="Used for cooking. Needs power." isshootable="true" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2" impactsoundtag="impact_metal_heavy" canflipx="false" canflipy="false">
+      <Sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" depth="0.54" sourcerect="97,1968,95,78" origin="0.5,0.5" />
+      <Body width="90" height="72" density="15" />
       <Deconstruct time="10">
         <Item identifier="steel" amount="2"/>
         <Item identifier="titaniumaluminiumalloy" amount="2"/>
@@ -611,9 +608,6 @@
         <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="3" />
       </Price>
       <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.46" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1886,84,162,35" />
-      <Sprite texture="Content/Items/Containers/containers.png" depth="0.54" sourcerect="800,788,95,78" origin="0.5,0.5" />
-      <Body width="162" height="15" density="30" />
       <Holdable slots="LeftHand,RightHand" canbeselected="true" selectkey="Select" canbepicked="true" pickkey="Select" PickingTime="0" attachable="false" holdpos="0,-30" handle1="0,-30" aimable="false" msg="ItemMsgPickUpSelect" />
     </Item>
     <Item name="Stove" identifier="he-stove" tags="stove,stove_installed,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="Used for cooking. Needs power." isshootable="true" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2" impactsoundtag="impact_metal_heavy">
@@ -695,10 +689,9 @@
     </Item>
 
     <!-- cooks things  -->
-    <Item name="Oven (Installation)" identifier="he-oven_installation" tags="oven,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" isshootable="true" scale="0.5" description="Used for baking. Needs power." damagedbyexplosions="true" explosiondamagemultiplier="0.2" impactsoundtag="impact_metal_heavy">
-      <Upgrade gameversion="0.10.4.0">
-        <Repairable Msg="ItemMsgRepairWrench" />
-      </Upgrade>
+    <Item name="Oven (Installation)" identifier="he-oven_installation" tags="oven,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" isshootable="true" scale="0.5" description="Used for baking. Needs power." damagedbyexplosions="true" explosiondamagemultiplier="0.2" impactsoundtag="impact_metal_heavy" canflipx="false" canflipy="false">
+      <Sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" depth="0.54" sourcerect="193,1968,95,78" origin="0.5,0.5" />
+      <Body width="90" height="72" density="15" />
       <Deconstruct time="10">
         <Item identifier="steel" amount="4"/>
         <Item identifier="titaniumaluminiumalloy" amount="2"/>
@@ -715,9 +708,6 @@
         <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="3" />
       </Price>
       <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.45" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.797" sourcerect="1882,429,165,188" origin="0.5,0.5" />
-      <Sprite texture="Content/Items/Containers/containers.png" depth="0.54" sourcerect="800,788,95,78" origin="0.5,0.5" />
-      <Body width="165" height="188" density="30" />
       <Holdable slots="LeftHand,RightHand" canbeselected="true" selectkey="Select" canbepicked="true" pickkey="Select" PickingTime="0" attachable="false" holdpos="0,-30" handle1="0,-30" aimable="false" msg="ItemMsgPickUpSelect" />
     </Item>
     <Item name="Oven" identifier="he-oven" tags="oven,oven_installed,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" isshootable="true" scale="0.5" description="Used for baking. Needs power." damagedbyexplosions="true" explosiondamagemultiplier="0.2">
@@ -794,10 +784,9 @@
     </Item>
     
     <!-- fries things using oil, overfrying causes fire, water causes explosion -->
-    <Item name="Fryer (Installation)" identifier="he-fryer_installation" tags="fryer,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" isshootable="true" scale="0.5" description="Used for frying stuff. Needs power." damagedbyexplosions="true" explosiondamagemultiplier="0.2" impactsoundtag="impact_metal_light">
-      <Upgrade gameversion="0.10.4.0">
-        <Repairable Msg="ItemMsgRepairWrench" />
-      </Upgrade>
+    <Item name="Fryer (Installation)" identifier="he-fryer_installation" tags="fryer,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" isshootable="true" scale="0.5" description="Used for frying stuff. Needs power." damagedbyexplosions="true" explosiondamagemultiplier="0.2" impactsoundtag="impact_metal_light" canflipx="false" canflipy="false">
+      <Sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" depth="0.54" sourcerect="481,1968,95,78" origin="0.5,0.5" />
+      <Body width="90" height="72" density="15" />
       <Deconstruct time="10">
         <Item identifier="aluminium" amount="2"/>
         <Item identifier="fpgacircuit" amount="1"/>
@@ -814,9 +803,6 @@
         <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="3" />
       </Price>
       <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.45" />
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" sourcerect="1975,228,72,66" />
-      <Sprite texture="Content/Items/Containers/containers.png" depth="0.54" sourcerect="800,788,95,78" origin="0.5,0.5" />
-      <Body width="72" height="66" density="30" />
       <Holdable slots="LeftHand,RightHand" canbeselected="true" selectkey="Select" canbepicked="true" pickkey="Select" PickingTime="0" attachable="false" holdpos="0,-30" handle1="0,-30" aimable="false" msg="ItemMsgPickUpSelect" />
     </Item>
     <Item name="Fryer" identifier="he-fryer" tags="fryer,fryer_installed,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" isshootable="true" scale="0.5" description="Used for frying stuff. Needs power." damagedbyexplosions="true" explosiondamagemultiplier="0.2">
@@ -932,7 +918,9 @@
     </Item>
     
     <!-- grills things, overgrilling causes fire -->
-    <Item name="Electric Grill (Installation)" identifier="he-electricgrill_installation" tags="grill,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="Used for cooking. Needs power." isshootable="true" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2" canflipx="false" impactsoundtag="impact_metal_light">
+    <Item name="Electric Grill (Installation)" identifier="he-electricgrill_installation" tags="grill,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="Used for cooking. Needs power." isshootable="true" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2" impactsoundtag="impact_metal_light" canflipx="false" canflipy="false">
+      <Sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" depth="0.54" sourcerect="289,1968,95,78" origin="0.5,0.5" />
+      <Body width="90" height="72" density="15" />
       <Deconstruct time="10">
         <Item identifier="steel" amount="2"/>
         <Item identifier="aluminium" amount="2"/>
@@ -949,10 +937,7 @@
         <Price storeidentifier="merchantoutpost" multiplier="1.7" minavailable="0" maxavailable="1" />
         <Price storeidentifier="merchantcity" multiplier="1.0" minavailable="1" maxavailable="3" />
       </Price>
-      <Body width="158" height="53" density="30" />
       <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.46" />
-      <InventoryIcon texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" sourcerect="1887,1185,160,56" />
-      <Sprite texture="Content/Items/Containers/containers.png" depth="0.54" sourcerect="800,788,95,78" origin="0.5,0.5" />
       <Holdable slots="LeftHand,RightHand" canbeselected="true" selectkey="Select" canbepicked="true" pickkey="Select" PickingTime="0" attachable="false" holdpos="0,-30" handle1="0,-30" aimable="false" msg="ItemMsgPickUpSelect" />
     </Item>
     <Item name="Electric Grill" identifier="he-electricgrill" tags="grill,electricgrill_installed,kitchen,kitchenfabricator,donttakeitems,dontsellitems" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="Used for cooking. Needs power." isshootable="true" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2" canflipx="false">
@@ -1033,10 +1018,9 @@
     </Item>
     
     <!-- brews coffee -->
-    <Item name="Coffee Machine (Installation)" identifier="coffeemachine_installation" tags="container,coffeemachine" category="Machines" description="Brews a nice cup of coffee." scale="0.5" isshootable="true" requireaimtouse="false" impactsoundtag="impact_metal_heavy">
-      <InventoryIcon texture="%ModDir:2954998725%/Content/Items/Containers/Containers.png" sourcerect="406,301,85,168" />
-      <Sprite texture="Content/Items/Containers/containers.png" depth="0.54" sourcerect="800,788,95,78" origin="0.5,0.5" />
-      <Body width="80" height="164" density="15" />
+    <Item name="Coffee Machine (Installation)" identifier="coffeemachine_installation" tags="container,coffeemachine" category="Machines" description="Brews a nice cup of coffee." scale="0.5" isshootable="true" requireaimtouse="false" impactsoundtag="impact_metal_heavy" canflipx="false" canflipy="false">
+      <Sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" depth="0.54" sourcerect="577,1968,95,78" origin="0.5,0.5" />
+      <Body width="90" height="72" density="15" />
       <Deconstruct time="10">
         <Item identifier="aluminium" amount="2" />
       </Deconstruct>
