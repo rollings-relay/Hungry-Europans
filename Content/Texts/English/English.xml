@@ -885,6 +885,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <interaction.onoff>ON/OFF</interaction.onoff><!--Patch 13-->
 <interaction.refill>Refill</interaction.refill><!--Patch 13-->
 <interaction.open>Open</interaction.open><!--Patch 13-->
+<interaction.disassemble>Disassemble</interaction.disassemble><!--Patch 19-->
 <!-- ROOM NAMES -->
 <roomname.kitchen>Kitchen</roomname.kitchen><!--Patch 10-->
 <roomname.cafeteria>Cafeteria</roomname.cafeteria><!--Patch 10-->
