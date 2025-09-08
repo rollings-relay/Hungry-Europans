@@ -1052,8 +1052,8 @@
         <GuiFrame relativesize="0.35,0.55" anchor="Center" style="ItemUI" />
         <!-- Icon - Stove/Electric Grill -->
         <SlotIcon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" slotindex="30" sourcerect="1,853,85,85" origin="0.5,0.5" />
-        <!-- Icon - Coffee Machine -->
-        <SlotIcon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" slotindex="31" sourcerect="511,938,85,85" origin="0.5,0.5" />
+        <!-- Icon - Coffee Machine/Blender -->
+        <SlotIcon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" slotindex="31" sourcerect="341,853,85,85" origin="0.5,0.5" />
         <!-- Icon - Fryer/Cutting Board -->
         <SlotIcon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" slotindex="32" sourcerect="86,853,85,85" origin="0.5,0.5" />
         <Containable items="smallitem,mediumitem,peanutegg,psilotoadegg,orangeboyegg,balloonegg,mudraptoregg,crawleregg,petraptoregg,tigerthresheregg" excludedidentifiers="mobilecontainer" />
