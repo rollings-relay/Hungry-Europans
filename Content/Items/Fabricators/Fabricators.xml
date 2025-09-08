@@ -529,6 +529,9 @@
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/SinkDrain.ogg" loop="false" range="500" volume="2" selectionmode="All" />
         </StatusEffect>
       </ItemComponent>
+      <Holdable slots="RightHand+LeftHand" canbeselected="true" selectkey="Select" canbepicked="true" pickkey="Action" PickingTime="5" attachable="true" holdpos="70,-30" handle1="-60,-40" handle2="-20,-60">
+        <RequiredItem items="blockaccess" type="Equipped" />
+      </Holdable>
       <ItemContainer canbeselected="true" selectkey="Select" capacity="5" maxstacksize="8" hideitems="true" allowuioverlap="true">
         <Containable items="pot,emptybottle,bottle,tableware,cleaningagent,wateringtool" />
         <!-- TODO: adjust these icons for filter and hose, disabled for now-->
@@ -585,6 +588,9 @@
         <StatusEffect type="OnActive" target="this" voltage="1" setvalue="true" />
         <limbposition limb="RightHand" position="100,-40" allowusinglimb="false" />
       </Controller>
+      <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" attachable="true" aimable="true">
+        <RequiredItem items="blockaccess" type="Equipped" />
+      </Holdable>
       <ItemContainer selectkey="Select" capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="" allowuioverlap="true" />
       <ItemContainer selectkey="Select" capacity="4" canbeselected="true" hideitems="false" slotsperrow="2" uilabel="" allowuioverlap="true" itempos="62,-55" containedspritedepth="0.785"/>
     </Item>
@@ -657,6 +663,9 @@
         <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.792" sourcerect="1723,81,162,6" origin="0.47,0.85" />
         <IsActiveConditional isActive="true" targetitemcomponent="Fabricator" />
       </LightComponent>
+      <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" holdangle="45" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" attachable="true" aimable="true">
+        <RequiredItem items="blockaccess" type="Equipped" />
+      </Holdable>
       <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
         <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
         <RequiredSkill identifier="electrical" level="55" />
@@ -726,6 +735,7 @@
       </DecorativeSprite> -->
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.798" sourcerect="1882,618,165,188" origin="0.5,0.5" maxcondition="80" fadein="true" />
       <BrokenSprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.798" sourcerect="1882,807,165,188" origin="0.5,0.5" maxcondition="0" />
+      <Body width="165" height="188" density="30" bodytype="static" />
       <Fabricator canbeselected="true" selectkey="Select" powerconsumption="300.0" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
         <StatusEffect type="OnPicked" target="this">
@@ -753,6 +763,9 @@
           <SpawnItem identifier="effect_firestarter" spawnposition="ThisInventory" Probability="0.05"/>
         </StatusEffect>
       </Fabricator>
+      <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" handle1="0,0" attachable="true" aimable="true" AttachesToFloor="true" DisallowAttachingOverTags="oven" >
+        <RequiredItem items="blockaccess" type="Equipped" />
+      </Holdable>
       <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
         <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
         <RequiredSkill identifier="electrical" level="55" />
@@ -769,7 +782,6 @@
         <input name="power_in" displayname="connection.powerin" />
         <output name="condition_out" displayname="connection.conditionout" />
       </ConnectionPanel>
-      <Body width="165" height="188" density="30" bodytype="static" />
       <Repairable selectkey="Select" header="mechanicalrepairsheader" deteriorationspeed="0.00" mindeteriorationdelay="60" maxdeteriorationdelay="120" RepairThreshold="70" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairWrench" hudpriority="10">
         <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,280" anchor="Center" relativeoffset="0.1,0.27" style="ItemUI"/>
         <RequiredSkill identifier="mechanical" level="55" />
@@ -881,6 +893,9 @@
           <StatusEffect type="OnSecondaryUse" target="This" targetitemcomponent="LightComponent" IsOn="false" setvalue="true" />
         </TickBox>
       </CustomInterface>
+      <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" handle1="0,0" attachable="true" aimable="true">
+        <RequiredItem items="blockaccess" type="Equipped" />
+      </Holdable>
       <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
         <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
         <RequiredSkill identifier="electrical" level="55" />
@@ -986,6 +1001,9 @@
           <StatusEffect type="OnSecondaryUse" target="This" targetitemcomponent="ItemComponent" IsActive="false" setvalue="true" />
         </TickBox>
       </CustomInterface>
+      <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" attachable="true" aimable="true">
+        <RequiredItem items="blockaccess" type="Equipped" />
+      </Holdable>
       <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
         <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
         <RequiredSkill identifier="electrical" level="55" />
@@ -1095,6 +1113,9 @@
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/coffee_end.ogg" loop="false" range="500" volume="2" />
         </StatusEffect>
       </Pump>
+      <Holdable slots="RightHand+LeftHand" canbeselected="true" selectkey="Select" canbepicked="true" pickkey="Action" PickingTime="5" attachable="true" holdpos="70,-40" handle1="-60,30" handle2="-20,50">
+        <RequiredItem items="blockaccess" type="Equipped" />
+      </Holdable>
       <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
         <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
         <RequiredSkill identifier="electrical" level="55" />
@@ -1175,6 +1196,9 @@
       </Fabricator>
       <LightComponent LightColor="0,255,0,200" IsOn="true" powerconsumption="5" range="3" castshadows="false" alphablend="true" allowingameediting="false" canbeselected="false" comparison="And" LightOffset="0,-40">
       </LightComponent>
+      <Holdable slots="RightHand+LeftHand" canbeselected="true" selectkey="Select" canbepicked="true" pickkey="Action" PickingTime="5" attachable="true" holdpos="70,-40" handle1="-60,30" handle2="-20,50">
+        <RequiredItem items="blockaccess" type="Equipped" />
+      </Holdable>
       <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
         <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
         <RequiredSkill identifier="electrical" level="55" />
