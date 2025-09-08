@@ -498,6 +498,7 @@
               <ParticleEmitter particle="spark" particlespersecond="20" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" />
             </StatusEffect>
             <!--placement-->
+            <StatusEffect type="OnInserted" target="Contained" donttransferbetweensubs="true" setvalue="true" />
             <StatusEffect type="OnInserted" target="This" offset="-77,-27" disabledeltatime="true" comparison="And" delay="5" stackable="false" checkconditionalalways="true">
               <Conditional flippedx="false" />
               <Conditional HasStatusTag="neq has_oven" />
@@ -518,6 +519,7 @@
               <Sound file="Content/Sounds/Impact/MetalImpactHeavy3.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
               <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
             </StatusEffect>
+            <StatusEffect type="OnRemoved" target="Contained" donttransferbetweensubs="false" setvalue="true" />
             <StatusEffect type="OnRemoved" target="NearbyItems" targets="oven_installed" range="140" disabledeltatime="true">
               <DropContainedItems />
               <Remove />
@@ -551,6 +553,7 @@
               <ParticleEmitter particle="spark" particlespersecond="20" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" />
             </StatusEffect>
             <!--placement-->
+            <StatusEffect type="OnInserted" target="Contained" donttransferbetweensubs="true" setvalue="true" />
             <StatusEffect type="OnInserted" target="This" offset="-79,29" disabledeltatime="true" comparison="And" delay="5" stackable="false" checkconditionalalways="true">
               <Conditional flippedx="false" />
               <Conditional HasStatusTag="neq has_stove" />
@@ -571,6 +574,7 @@
               <Sound file="Content/Sounds/Impact/MetalImpactHeavy3.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
               <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
             </StatusEffect>
+            <StatusEffect type="OnRemoved" target="Contained" donttransferbetweensubs="false" setvalue="true" />
             <StatusEffect type="OnRemoved" target="NearbyItems" targets="stove_installed" range="140" disabledeltatime="true">
               <DropContainedItems />
               <Remove />
@@ -601,6 +605,7 @@
               <ParticleEmitter particle="spark" particlespersecond="20" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" />
             </StatusEffect>
             <!--placement-->
+            <StatusEffect type="OnInserted" target="Contained" donttransferbetweensubs="true" setvalue="true" />
             <StatusEffect type="OnInserted" target="This" offset="-79,43" disabledeltatime="true" comparison="And" delay="5" stackable="false" checkconditionalalways="true">
               <Conditional flippedx="false" />
               <Conditional HasStatusTag="neq has_electricgrill" />
@@ -621,6 +626,7 @@
               <Sound file="Content/Sounds/Impact/MetalImpactHeavy3.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
               <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
             </StatusEffect>
+            <StatusEffect type="OnRemoved" target="Contained" donttransferbetweensubs="false" setvalue="true" />
             <StatusEffect type="OnRemoved" target="NearbyItems" targets="electricgrill_installed" range="140" disabledeltatime="true">
               <DropContainedItems />
               <Remove />
@@ -654,6 +660,7 @@
               <ParticleEmitter particle="spark" particlespersecond="20" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" />
             </StatusEffect>
             <!--placement-->
+            <StatusEffect type="OnInserted" target="Contained" donttransferbetweensubs="true" setvalue="true" />
             <StatusEffect type="OnInserted" target="This" offset="-6,48" disabledeltatime="true" comparison="And" delay="5" stackable="false" checkconditionalalways="true">
               <Conditional flippedx="false" />
               <Conditional HasStatusTag="neq has_sink" />
@@ -674,6 +681,7 @@
               <Sound file="Content/Sounds/Impact/MetalImpactHeavy3.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
               <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
             </StatusEffect>
+            <StatusEffect type="OnRemoved" target="Contained" donttransferbetweensubs="false" setvalue="true" />
             <StatusEffect type="OnRemoved" target="NearbyItems" targets="sink_installed" range="140" disabledeltatime="true">
               <DropContainedItems />
               <Remove />
@@ -707,6 +715,7 @@
               <ParticleEmitter particle="spark" particlespersecond="20" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" />
             </StatusEffect>
             <!--placement-->
+            <StatusEffect type="OnInserted" target="Contained" donttransferbetweensubs="true" setvalue="true" />
             <StatusEffect type="OnInserted" target="This" offset="56,45" disabledeltatime="true" comparison="And" delay="5" stackable="false" checkconditionalalways="true">
               <Conditional flippedx="false" />
               <Conditional HasStatusTag="neq has_cuttingboard" />
@@ -727,6 +736,7 @@
               <Sound file="Content/Sounds/Impact/MetalImpactHeavy3.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
               <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
             </StatusEffect>
+            <StatusEffect type="OnRemoved" target="Contained" donttransferbetweensubs="false" setvalue="true" />
             <StatusEffect type="OnRemoved" target="NearbyItems" targets="cuttingboard_installed" range="140" disabledeltatime="true">
               <DropContainedItems />
               <Remove />
@@ -760,6 +770,7 @@
               <ParticleEmitter particle="spark" particlespersecond="20" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" />
             </StatusEffect>
             <!--placement-->
+            <StatusEffect type="OnInserted" target="Contained" donttransferbetweensubs="true" setvalue="true" />
             <StatusEffect type="OnInserted" target="This" offset="105,53" disabledeltatime="true" comparison="And" delay="5" stackable="false" checkconditionalalways="true">
               <Conditional flippedx="false" />
               <Conditional HasStatusTag="neq has_fryer" />
@@ -780,6 +791,7 @@
               <Sound file="Content/Sounds/Impact/MetalImpactHeavy3.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
               <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
             </StatusEffect>
+            <StatusEffect type="OnRemoved" target="Contained" donttransferbetweensubs="false" setvalue="true" />
             <StatusEffect type="OnRemoved" target="NearbyItems" targets="fryer_installed" range="140" disabledeltatime="true">
               <DropContainedItems />
               <Remove />
@@ -810,6 +822,7 @@
               <ParticleEmitter particle="spark" particlespersecond="20" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" />
             </StatusEffect>
             <!--placement-->
+            <StatusEffect type="OnInserted" target="Contained" donttransferbetweensubs="true" setvalue="true" />
             <StatusEffect type="OnInserted" target="This" offset="105,69" disabledeltatime="true" comparison="And" delay="5" stackable="false" checkconditionalalways="true">
               <Conditional flippedx="false" />
               <Conditional HasStatusTag="neq has_coffeemachine" />
@@ -830,6 +843,7 @@
               <Sound file="Content/Sounds/Impact/MetalImpactHeavy3.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
               <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
             </StatusEffect>
+            <StatusEffect type="OnRemoved" target="Contained" donttransferbetweensubs="false" setvalue="true" />
             <StatusEffect type="OnRemoved" target="NearbyItems" targets="coffeemachine_installed" range="140" disabledeltatime="true">
               <DropContainedItems />
               <Remove />
@@ -860,6 +874,7 @@
               <ParticleEmitter particle="spark" particlespersecond="20" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" />
             </StatusEffect>
             <!--placement-->
+            <StatusEffect type="OnInserted" target="Contained" donttransferbetweensubs="true" setvalue="true" />
             <StatusEffect type="OnInserted" target="This" offset="105,58" disabledeltatime="true" comparison="And" delay="5" stackable="false" checkconditionalalways="true">
               <Conditional flippedx="false" />
               <Conditional HasStatusTag="neq has_blender" />
@@ -880,6 +895,7 @@
               <Sound file="Content/Sounds/Impact/MetalImpactHeavy3.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
               <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
             </StatusEffect>
+            <StatusEffect type="OnRemoved" target="Contained" donttransferbetweensubs="false" setvalue="true" />
             <StatusEffect type="OnRemoved" target="NearbyItems" targets="blender_installed" range="140" disabledeltatime="true">
               <DropContainedItems />
               <Remove />
@@ -1079,6 +1095,7 @@
               <ParticleEmitter particle="spark" particlespersecond="20" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" />
             </StatusEffect>
             <!--placement-->
+            <StatusEffect type="OnInserted" target="Contained" donttransferbetweensubs="true" setvalue="true" />
             <StatusEffect type="OnInserted" target="This" offset="-55,53" disabledeltatime="true" comparison="And" delay="5" stackable="false" checkconditionalalways="true">
               <Conditional flippedx="false" />
               <Conditional HasStatusTag="neq has_stove" />
@@ -1099,6 +1116,7 @@
               <Sound file="Content/Sounds/Impact/MetalImpactHeavy3.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
               <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
             </StatusEffect>
+            <StatusEffect type="OnRemoved" target="Contained" donttransferbetweensubs="false" setvalue="true" />
             <StatusEffect type="OnRemoved" target="NearbyItems" targets="stove_installed" range="140" disabledeltatime="true">
               <DropContainedItems />
               <Remove />
@@ -1129,6 +1147,7 @@
               <ParticleEmitter particle="spark" particlespersecond="20" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" />
             </StatusEffect>
             <!--placement-->
+            <StatusEffect type="OnInserted" target="Contained" donttransferbetweensubs="true" setvalue="true" />
             <StatusEffect type="OnInserted" target="This" offset="-55,67" disabledeltatime="true" comparison="And" delay="5" stackable="false" checkconditionalalways="true">
               <Conditional flippedx="false" />
               <Conditional HasStatusTag="neq has_electricgrill" />
@@ -1149,6 +1168,7 @@
               <Sound file="Content/Sounds/Impact/MetalImpactHeavy3.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
               <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
             </StatusEffect>
+            <StatusEffect type="OnRemoved" target="Contained" donttransferbetweensubs="false" setvalue="true" />
             <StatusEffect type="OnRemoved" target="NearbyItems" targets="electricgrill_installed" range="140" disabledeltatime="true">
               <DropContainedItems />
               <Remove />
@@ -1182,6 +1202,7 @@
               <ParticleEmitter particle="spark" particlespersecond="20" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" />
             </StatusEffect>
             <!--placement-->
+            <StatusEffect type="OnInserted" target="Contained" donttransferbetweensubs="true" setvalue="true" />
             <StatusEffect type="OnInserted" target="This" offset="11,93" disabledeltatime="true" comparison="And" delay="5" stackable="false" checkconditionalalways="true">
               <Conditional flippedx="false" />
               <Conditional HasStatusTag="neq has_coffeemachine" />
@@ -1202,6 +1223,7 @@
               <Sound file="Content/Sounds/Impact/MetalImpactHeavy3.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
               <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
             </StatusEffect>
+            <StatusEffect type="OnRemoved" target="Contained" donttransferbetweensubs="false" setvalue="true" />
             <StatusEffect type="OnRemoved" target="NearbyItems" targets="coffeemachine_installed" range="140" disabledeltatime="true">
               <DropContainedItems />
               <Remove />
@@ -1232,6 +1254,7 @@
               <ParticleEmitter particle="spark" particlespersecond="20" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" />
             </StatusEffect>
             <!--placement-->
+            <StatusEffect type="OnInserted" target="Contained" donttransferbetweensubs="true" setvalue="true" />
             <StatusEffect type="OnInserted" target="This" offset="11,83" disabledeltatime="true" comparison="And" delay="5" stackable="false" checkconditionalalways="true">
               <Conditional flippedx="false" />
               <Conditional HasStatusTag="neq has_blender" />
@@ -1252,6 +1275,7 @@
               <Sound file="Content/Sounds/Impact/MetalImpactHeavy3.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
               <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
             </StatusEffect>
+            <StatusEffect type="OnRemoved" target="Contained" donttransferbetweensubs="false" setvalue="true" />
             <StatusEffect type="OnRemoved" target="NearbyItems" targets="blender_installed" range="140" disabledeltatime="true">
               <DropContainedItems />
               <Remove />
@@ -1285,6 +1309,7 @@
               <ParticleEmitter particle="spark" particlespersecond="20" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" />
             </StatusEffect>
             <!--placement-->
+            <StatusEffect type="OnInserted" target="Contained" donttransferbetweensubs="true" setvalue="true" />
             <StatusEffect type="OnInserted" target="This" offset="65,77" disabledeltatime="true" comparison="And" delay="5" stackable="false" checkconditionalalways="true">
               <Conditional flippedx="false" />
               <Conditional HasStatusTag="neq has_fryer" />
@@ -1305,6 +1330,7 @@
               <Sound file="Content/Sounds/Impact/MetalImpactHeavy3.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
               <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
             </StatusEffect>
+            <StatusEffect type="OnRemoved" target="Contained" donttransferbetweensubs="false" setvalue="true" />
             <StatusEffect type="OnRemoved" target="NearbyItems" targets="fryer_installed" range="140" disabledeltatime="true">
               <DropContainedItems />
               <Remove />
@@ -1335,6 +1361,7 @@
               <ParticleEmitter particle="spark" particlespersecond="20" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" />
             </StatusEffect>
             <!--placement-->
+            <StatusEffect type="OnInserted" target="Contained" donttransferbetweensubs="true" setvalue="true" />
             <StatusEffect type="OnInserted" target="This" offset="62,70" disabledeltatime="true" comparison="And" delay="5" stackable="false" checkconditionalalways="true">
               <Conditional flippedx="false" />
               <Conditional HasStatusTag="neq has_cuttingboard" />
@@ -1355,6 +1382,7 @@
               <Sound file="Content/Sounds/Impact/MetalImpactHeavy3.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />
               <Sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" volume="1" range="350" frequencymultiplier="1.5" selectionmode="Random" />     
             </StatusEffect>
+            <StatusEffect type="OnRemoved" target="Contained" donttransferbetweensubs="false" setvalue="true" />
             <StatusEffect type="OnRemoved" target="NearbyItems" targets="cuttingboard_installed" range="140" disabledeltatime="true">
               <DropContainedItems />
               <Remove />
