@@ -467,7 +467,7 @@
         <RequiredItem identifier="steel" amount="6" />
         <RequiredItem identifier="titaniumaluminiumalloy" amount="4" />
       </Fabricate>
-      <ItemContainer capacity="20" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
+      <ItemContainer capacity="20" canbeselected="true" hideitems="true" QuickUseMovesItemsInside="false" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.25,0.45" anchor="Center" style="ItemUI" />
         <!-- Icon - Oven -->
         <SlotIcon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" slotindex="20" sourcerect="171,938,85,85" origin="0.5,0.5" />
@@ -1116,7 +1116,7 @@
         <RequiredItem identifier="steel" amount="8" />
         <RequiredItem identifier="titaniumaluminiumalloy" amount="4" />
       </Fabricate>
-      <ItemContainer capacity="30" canbeselected="true" slotsperrow="6" hideitems="true" msg="ItemMsgInteractSelect">
+      <ItemContainer capacity="30" canbeselected="true" slotsperrow="6" hideitems="true" QuickUseMovesItemsInside="false" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.35,0.55" anchor="Center" style="ItemUI" />
         <!-- Icon - Stove/Electric Grill -->
         <SlotIcon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" slotindex="30" sourcerect="1,853,85,85" origin="0.5,0.5" />
