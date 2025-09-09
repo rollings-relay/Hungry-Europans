@@ -1239,5 +1239,15 @@
       </ItemContainer>
     </Item>
 
+    <Item name="Installation Blocker" identifier="installationblocker" tags="kitchenupgrade,donttakeitems,dontsellitems,crate,ammobox" category="Machine" subcategory="Kitchen" linkable="false" description="" scale="0.5" damagedbyexplosions="false" GrabWhenSelected="false" canflipx="false" canflipy="false" noninteractable="true" donttransferbetweensubs="true" impactsoundtag="impact_metal_light" InventoryIconColor="99,70,64,255">
+      <Sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" depth="0.54" sourcerect="1,1889,95,78" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir%/Content/UI/HE-IconsAtlas.png" sourcerect="1,768,85,85" />
+      <Body width="90" height="72" density="15" />
+      <Holdable slots="LeftHand,RightHand" canbeselected="true" selectkey="Select" canbepicked="true" pickkey="Select" PickingTime="0" attachable="false" holdpos="0,-30" handle1="0,-30" aimable="false" msg="ItemMsgPickUpSelect">
+        <StatusEffect type="OnNotContained" target="This">
+          <Remove />
+        </StatusEffect>
+      </Holdable>
+    </Item>
   </Items>
 </Override>

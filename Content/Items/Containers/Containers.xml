@@ -484,7 +484,7 @@
         <!-- UPGRADES SLOTS | TODO: replace placement sound effects -->
         <!-- oven -->
         <SubContainer capacity="1" maxstacksize="1">
-          <Containable identifier="he-oven_installation">
+          <Containable identifiers="he-oven_installation,installationblocker">
             <!--particles + sound loop-->
             <StatusEffect type="OnInserted" target="This" offset="-77,-27" disabledeltatime="true" comparison="And" duration="5" stackable="false" checkconditionalalways="true">
               <Conditional flippedx="false" />
@@ -539,7 +539,7 @@
         </SubContainer>
         <!-- stove/grill -->
         <SubContainer capacity="1" maxstacksize="1">
-          <Containable identifier="he-stove_installation">
+          <Containable identifiers="he-stove_installation,installationblocker">
             <!--particles + sound loop-->
             <StatusEffect type="OnInserted" target="This" offset="-79,29" disabledeltatime="true" comparison="And" duration="5" stackable="false" checkconditionalalways="true">
               <Conditional flippedx="false" />
@@ -591,7 +591,7 @@
               <Sound file="Content/Sounds/Damage/HitMetal6.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
             </StatusEffect>
           </Containable>
-          <Containable identifier="he-electricgrill_installation">
+          <Containable identifiers="he-electricgrill_installation,installationblocker">
             <!--particles + sound loop-->
             <StatusEffect type="OnInserted" target="This" offset="-79,43" disabledeltatime="true" comparison="And" duration="5" stackable="false" checkconditionalalways="true">
               <Conditional flippedx="false" />
@@ -646,7 +646,7 @@
         </SubContainer>
         <!-- sink -->
         <SubContainer capacity="1" maxstacksize="1">
-          <Containable identifier="sink_installation">
+          <Containable identifiers="sink_installation,installationblocker">
             <!--particles + sound loop-->
             <StatusEffect type="OnInserted" target="This" offset="-6,48" disabledeltatime="true" comparison="And" duration="5" stackable="false" checkconditionalalways="true">
               <Conditional flippedx="false" />
@@ -701,7 +701,7 @@
         </SubContainer>
         <!-- cutting board -->
         <SubContainer capacity="1" maxstacksize="1">
-          <Containable identifier="he-cuttingboard_installation">
+          <Containable identifiers="he-cuttingboard_installation,installationblocker">
             <!--particles + sound loop-->
             <StatusEffect type="OnInserted" target="This" offset="56,45" disabledeltatime="true" comparison="And" duration="5" stackable="false" checkconditionalalways="true">
               <Conditional flippedx="false" />
@@ -756,7 +756,7 @@
         </SubContainer>
         <!-- fryer/coffee machine/blender -->
         <SubContainer capacity="1" maxstacksize="1">
-          <Containable identifier="he-fryer_installation">
+          <Containable identifiers="he-fryer_installation,installationblocker">
             <!--particles + sound loop-->
             <StatusEffect type="OnInserted" target="This" offset="105,53" disabledeltatime="true" comparison="And" duration="5" stackable="false" checkconditionalalways="true">
               <Conditional flippedx="false" />
@@ -808,7 +808,7 @@
               <Sound file="Content/Sounds/Damage/HitMetal6.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
             </StatusEffect>
           </Containable>
-          <Containable identifier="coffeemachine_installation">
+          <Containable identifiers="coffeemachine_installation,installationblocker">
             <!--particles + sound loop-->
             <StatusEffect type="OnInserted" target="This" offset="105,53" disabledeltatime="true" comparison="And" duration="5" stackable="false" checkconditionalalways="true">
               <Conditional flippedx="false" />
@@ -860,7 +860,7 @@
               <Sound file="Content/Sounds/Damage/HitMetal6.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
             </StatusEffect>
           </Containable>
-          <Containable identifier="he-blender_installation">
+          <Containable identifiers="he-blender_installation,installationblocker">
             <!--particles + sound loop-->
             <StatusEffect type="OnInserted" target="This" offset="105,53" disabledeltatime="true" comparison="And" duration="5" stackable="false" checkconditionalalways="true">
               <Conditional flippedx="false" />
@@ -1128,7 +1128,7 @@
         <!-- UPGRADES SLOTS | TODO: replace placement sound effects -->
         <!-- stove/grill -->
         <SubContainer capacity="1" maxstacksize="1">
-          <Containable identifier="he-stove_installation">
+          <Containable identifiers="he-stove_installation,installationblocker">
             <!--particles + sound loop-->
             <StatusEffect type="OnInserted" target="This" offset="-55,53" disabledeltatime="true" comparison="And" duration="5" stackable="false" checkconditionalalways="true">
               <Conditional flippedx="false" />
@@ -1180,7 +1180,7 @@
               <Sound file="Content/Sounds/Damage/HitMetal6.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
             </StatusEffect>
           </Containable>
-          <Containable identifier="he-electricgrill_installation">
+          <Containable identifiers="he-electricgrill_installation,installationblocker">
             <!--particles + sound loop-->
             <StatusEffect type="OnInserted" target="This" offset="-55,67" disabledeltatime="true" comparison="And" duration="5" stackable="false" checkconditionalalways="true">
               <Conditional flippedx="false" />
@@ -1235,7 +1235,7 @@
         </SubContainer>
         <!-- coffee machine/blender -->
         <SubContainer capacity="1" maxstacksize="1">
-          <Containable identifier="coffeemachine_installation">
+          <Containable identifiers="coffeemachine_installation,installationblocker">
             <!--particles + sound loop-->
             <StatusEffect type="OnInserted" target="This" offset="11,93" disabledeltatime="true" comparison="And" duration="5" stackable="false" checkconditionalalways="true">
               <Conditional flippedx="false" />
@@ -1287,7 +1287,7 @@
               <Sound file="Content/Sounds/Damage/HitMetal6.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
             </StatusEffect>
           </Containable>
-          <Containable identifier="he-blender_installation">
+          <Containable identifiers="he-blender_installation,installationblocker">
             <!--particles + sound loop-->
             <StatusEffect type="OnInserted" target="This" offset="11,83" disabledeltatime="true" comparison="And" duration="5" stackable="false" checkconditionalalways="true">
               <Conditional flippedx="false" />
@@ -1342,7 +1342,7 @@
         </SubContainer>
         <!-- fryer/cutting board -->
         <SubContainer capacity="1" maxstacksize="1">
-          <Containable identifier="he-fryer_installation">
+          <Containable identifiers="he-fryer_installation,installationblocker">
             <!--particles + sound loop-->
             <StatusEffect type="OnInserted" target="This" offset="65,77" disabledeltatime="true" comparison="And" duration="5" stackable="false" checkconditionalalways="true">
               <Conditional flippedx="false" />
@@ -1394,7 +1394,7 @@
               <Sound file="Content/Sounds/Damage/HitMetal6.ogg" volume="1" range="350" frequencymultiplier="0.75" selectionmode="Random" />
             </StatusEffect>
           </Containable>
-          <Containable identifier="he-cuttingboard_installation">
+          <Containable identifiers="he-cuttingboard_installation,installationblocker">
             <!--particles + sound loop-->
             <StatusEffect type="OnInserted" target="This" offset="62,70" disabledeltatime="true" comparison="And" duration="5" stackable="false" checkconditionalalways="true">
               <Conditional flippedx="false" />
