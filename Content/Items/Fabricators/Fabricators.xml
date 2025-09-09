@@ -529,10 +529,11 @@
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/SinkDrain.ogg" loop="false" range="500" volume="2" selectionmode="All" />
         </StatusEffect>
       </ItemComponent>
-      <Holdable slots="RightHand+LeftHand" canbeselected="true" selectkey="Select" canbepicked="true" pickkey="Action" PickingTime="5" attachable="true" attachedbydefault="true" holdpos="70,-30" handle1="-60,-40" handle2="-20,-60">
+      <!-- Holdable Component was here in case we need to roll back the mod to a previous version, but since items that spawn attached are always attached to the level and not the submarine, this becomes useless until BaroDevs fix attaching to sub when spawning the item -->
+      <!--<Holdable slots="RightHand+LeftHand" canbeselected="true" selectkey="Select" canbepicked="true" pickkey="Action" PickingTime="5" attachable="true" attachedbydefault="true" holdpos="70,-30" handle1="-60,-40" handle2="-20,-60">
         <Upgrade gameversion="2.0.0.0" attachedbydefault="true" attached="true" />
         <RequiredItem items="blockaccess" type="Equipped" />
-      </Holdable>
+      </Holdable>-->
       <ItemContainer canbeselected="true" selectkey="Select" capacity="5" maxstacksize="8" hideitems="true" allowuioverlap="true">
         <Containable items="pot,emptybottle,bottle,tableware,cleaningagent,wateringtool" />
         <!-- TODO: adjust these icons for filter and hose, disabled for now-->
@@ -589,10 +590,11 @@
         <StatusEffect type="OnActive" target="this" voltage="1" setvalue="true" />
         <limbposition limb="RightHand" position="100,-40" allowusinglimb="false" />
       </Controller>
-      <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" attachable="true" attachedbydefault="true" aimable="true">
+      <!-- Holdable Component was here in case we need to roll back the mod to a previous version, but since items that spawn attached are always attached to the level and not the submarine, this becomes useless until BaroDevs fix attaching to sub when spawning the item -->
+      <!--<Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" attachable="true" attachedbydefault="true" aimable="true">
         <Upgrade gameversion="2.0.0.0" attachedbydefault="true" attached="true" />
         <RequiredItem items="blockaccess" type="Equipped" />
-      </Holdable>
+      </Holdable>-->
       <ItemContainer selectkey="Select" capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="" allowuioverlap="true" />
       <ItemContainer selectkey="Select" capacity="4" canbeselected="true" hideitems="false" slotsperrow="2" uilabel="" allowuioverlap="true" itempos="62,-55" containedspritedepth="0.785"/>
     </Item>
@@ -665,10 +667,11 @@
         <Sprite texture="%ModDir:2954998725%/Content/Items/Fabricators/Fabricators.png" depth="0.792" sourcerect="1723,81,162,6" origin="0.47,0.85" />
         <IsActiveConditional isActive="true" targetitemcomponent="Fabricator" />
       </LightComponent>
-      <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" holdangle="45" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" attachable="true" attachedbydefault="true" aimable="true">
+      <!-- Holdable Component was here in case we need to roll back the mod to a previous version, but since items that spawn attached are always attached to the level and not the submarine, this becomes useless until BaroDevs fix attaching to sub when spawning the item -->
+      <!--<Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" holdangle="45" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" attachable="true" attachedbydefault="true" aimable="true">
         <Upgrade gameversion="2.0.0.0" attachedbydefault="true" attached="true" />
         <RequiredItem items="blockaccess" type="Equipped" />
-      </Holdable>
+      </Holdable>-->
       <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
         <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
         <RequiredSkill identifier="electrical" level="55" />
@@ -766,10 +769,11 @@
           <SpawnItem identifier="effect_firestarter" spawnposition="ThisInventory" Probability="0.05"/>
         </StatusEffect>
       </Fabricator>
-      <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" handle1="0,0" attachable="true" attachedbydefault="true" aimable="true" AttachesToFloor="true" DisallowAttachingOverTags="oven" >
+      <!-- Holdable Component was here in case we need to roll back the mod to a previous version, but since items that spawn attached are always attached to the level and not the submarine, this becomes useless until BaroDevs fix attaching to sub when spawning the item -->
+      <!--<Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" handle1="0,0" attachable="true" attachedbydefault="true" aimable="true" AttachesToFloor="true" DisallowAttachingOverTags="oven" >
         <Upgrade gameversion="2.0.0.0" attachedbydefault="true" attached="true" />
         <RequiredItem items="blockaccess" type="Equipped" />
-      </Holdable>
+      </Holdable>-->
       <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
         <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
         <RequiredSkill identifier="electrical" level="55" />
@@ -897,10 +901,11 @@
           <StatusEffect type="OnSecondaryUse" target="This" targetitemcomponent="LightComponent" IsOn="false" setvalue="true" />
         </TickBox>
       </CustomInterface>
-      <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" handle1="0,0" attachable="true" attachedbydefault="true" aimable="true">
+      <!-- Holdable Component was here in case we need to roll back the mod to a previous version, but since items that spawn attached are always attached to the level and not the submarine, this becomes useless until BaroDevs fix attaching to sub when spawning the item -->
+      <!--<Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" handle1="0,0" attachable="true" attachedbydefault="true" aimable="true">
         <Upgrade gameversion="2.0.0.0" attachedbydefault="true" attached="true" />
         <RequiredItem items="blockaccess" type="Equipped" />
-      </Holdable>
+      </Holdable>-->
       <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
         <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
         <RequiredSkill identifier="electrical" level="55" />
@@ -1006,10 +1011,11 @@
           <StatusEffect type="OnSecondaryUse" target="This" targetitemcomponent="ItemComponent" IsActive="false" setvalue="true" />
         </TickBox>
       </CustomInterface>
-      <Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" attachable="true" attachedbydefault="true" aimable="true">
+      <!-- Holdable Component was here in case we need to roll back the mod to a previous version, but since items that spawn attached are always attached to the level and not the submarine, this becomes useless until BaroDevs fix attaching to sub when spawning the item -->
+      <!--<Holdable canbepicked="true" selectkey="Select" pickkey="Action" slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" attachable="true" attachedbydefault="true" aimable="true">
         <Upgrade gameversion="2.0.0.0" attachedbydefault="true" attached="true" />
         <RequiredItem items="blockaccess" type="Equipped" />
-      </Holdable>
+      </Holdable>-->
       <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
         <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
         <RequiredSkill identifier="electrical" level="55" />
@@ -1119,10 +1125,11 @@
           <Sound file="%ModDir:2954998725%/Content/Sounds/Items/Containers/coffee_end.ogg" loop="false" range="500" volume="2" />
         </StatusEffect>
       </Pump>
-      <Holdable slots="RightHand+LeftHand" canbeselected="true" selectkey="Select" canbepicked="true" pickkey="Action" PickingTime="5" attachable="true" attachedbydefault="true" holdpos="70,-40" handle1="-60,30" handle2="-20,50">
+      <!-- Holdable Component was here in case we need to roll back the mod to a previous version, but since items that spawn attached are always attached to the level and not the submarine, this becomes useless until BaroDevs fix attaching to sub when spawning the item -->
+      <!--<Holdable slots="RightHand+LeftHand" canbeselected="true" selectkey="Select" canbepicked="true" pickkey="Action" PickingTime="5" attachable="true" attachedbydefault="true" holdpos="70,-40" handle1="-60,30" handle2="-20,50">
         <Upgrade gameversion="2.0.0.0" attachedbydefault="true" attached="true" />
         <RequiredItem items="blockaccess" type="Equipped" />
-      </Holdable>
+      </Holdable>-->
       <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
         <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
         <RequiredSkill identifier="electrical" level="55" />
@@ -1203,10 +1210,11 @@
       </Fabricator>
       <LightComponent LightColor="0,255,0,200" IsOn="true" powerconsumption="5" range="3" castshadows="false" alphablend="true" allowingameediting="false" canbeselected="false" comparison="And" LightOffset="0,-40">
       </LightComponent>
-      <Holdable slots="RightHand+LeftHand" canbeselected="true" selectkey="Select" canbepicked="true" pickkey="Action" PickingTime="5" attachable="true" attachedbydefault="true" holdpos="70,-40" handle1="-60,30" handle2="-20,50">
+      <!-- Holdable Component was here in case we need to roll back the mod to a previous version, but since items that spawn attached are always attached to the level and not the submarine, this becomes useless until BaroDevs fix attaching to sub when spawning the item -->
+      <!--<Holdable slots="RightHand+LeftHand" canbeselected="true" selectkey="Select" canbepicked="true" pickkey="Action" PickingTime="5" attachable="true" attachedbydefault="true" holdpos="70,-40" handle1="-60,30" handle2="-20,50">
         <Upgrade gameversion="2.0.0.0" attachedbydefault="true" attached="true" />
         <RequiredItem items="blockaccess" type="Equipped" />
-      </Holdable>
+      </Holdable>-->
       <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
         <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
         <RequiredSkill identifier="electrical" level="55" />
