@@ -473,7 +473,7 @@
     </Item>
     
     <!-- cleans dirty tableware and fills water bottles -->
-    <Item name="Sink (Installation)" identifier="sink_installation" tags="sink,kitchen,kitchenupgrade,crate,ammobox" category="Machines" description="" scale="0.5" isshootable="true" requireaimtouse="false" impactsoundtag="impact_metal_heavy" canflipx="false" canflipy="false">
+    <Item name="Sink (Installation)" identifier="sink_installation" tags="sink,kitchen,kitchenupgrade,crate,ammobox" category="Machines" description="" scale="0.5" isshootable="true" requireaimtouse="false" impactsoundtag="impact_metal_heavy" canflipx="false" canflipy="false" DontCleanUp="true">
       <Sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" depth="0.54" sourcerect="1,1968,95,78" origin="0.5,0.5" />
       <Body width="90" height="72" density="15" />
       <PreferredContainer primary="cargocontainer" secondary="ammoboxcontainer" spawnprobability="0.0" />
@@ -553,7 +553,7 @@
     
     <!-- TODO: inventory icon w knife? -->
     <!-- chops ingredients as long as you interact with it  -->
-    <Item name="Cutting Board (Installation)" identifier="he-cuttingboard_installation" tags="cuttingboard,kitchen,kitchenupgrade,donttakeitems,dontsellitems,crate,ammobox" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="" isshootable="true" scale="0.5" damagedbyexplosions="false" GrabWhenSelected="false" canflipx="false" canflipy="false" impactsoundtag="impact_metal_light">
+    <Item name="Cutting Board (Installation)" identifier="he-cuttingboard_installation" tags="cuttingboard,kitchen,kitchenupgrade,donttakeitems,dontsellitems,crate,ammobox" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="" isshootable="true" scale="0.5" damagedbyexplosions="false" GrabWhenSelected="false" canflipx="false" canflipy="false" impactsoundtag="impact_metal_light" DontCleanUp="true">
       <Sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" depth="0.54" sourcerect="385,1968,95,78" origin="0.5,0.5" />
       <Body width="90" height="72" density="15" />
       <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.45" />
@@ -600,7 +600,7 @@
     </Item>
     
     <!-- cooks things in a pot? -->
-    <Item name="Stove (Installation)" identifier="he-stove_installation" tags="stove,kitchen,kitchenupgrade,donttakeitems,dontsellitems,crate,ammobox" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="Used for cooking. Needs power." isshootable="true" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2" impactsoundtag="impact_metal_heavy" canflipx="false" canflipy="false">
+    <Item name="Stove (Installation)" identifier="he-stove_installation" tags="stove,kitchen,kitchenupgrade,donttakeitems,dontsellitems,crate,ammobox" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="Used for cooking. Needs power." isshootable="true" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2" impactsoundtag="impact_metal_heavy" canflipx="false" canflipy="false" DontCleanUp="true">
       <Sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" depth="0.54" sourcerect="97,1968,95,78" origin="0.5,0.5" />
       <Body width="90" height="72" density="15" />
       <PreferredContainer primary="cargocontainer" secondary="ammoboxcontainer" spawnprobability="0.0" />
@@ -707,7 +707,7 @@
     </Item>
 
     <!-- cooks things  -->
-    <Item name="Oven (Installation)" identifier="he-oven_installation" tags="oven,kitchen,kitchenupgrade,donttakeitems,dontsellitems,crate,ammobox" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" isshootable="true" scale="0.5" description="Used for baking. Needs power." damagedbyexplosions="true" explosiondamagemultiplier="0.2" impactsoundtag="impact_metal_heavy" canflipx="false" canflipy="false">
+    <Item name="Oven (Installation)" identifier="he-oven_installation" tags="oven,kitchen,kitchenupgrade,donttakeitems,dontsellitems,crate,ammobox" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" isshootable="true" scale="0.5" description="Used for baking. Needs power." damagedbyexplosions="true" explosiondamagemultiplier="0.2" impactsoundtag="impact_metal_heavy" canflipx="false" canflipy="false" DontCleanUp="true">
       <Sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" depth="0.54" sourcerect="193,1968,95,78" origin="0.5,0.5" />
       <Body width="90" height="72" density="15" />
       <PreferredContainer primary="cargocontainer" secondary="ammoboxcontainer" spawnprobability="0.0" />
@@ -808,7 +808,7 @@
     </Item>
     
     <!-- fries things using oil, overfrying causes fire, water causes explosion -->
-    <Item name="Fryer (Installation)" identifier="he-fryer_installation" tags="fryer,kitchen,kitchenupgrade,donttakeitems,dontsellitems,crate,ammobox" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" isshootable="true" scale="0.5" description="Used for frying stuff. Needs power." damagedbyexplosions="true" explosiondamagemultiplier="0.2" impactsoundtag="impact_metal_light" canflipx="false" canflipy="false">
+    <Item name="Fryer (Installation)" identifier="he-fryer_installation" tags="fryer,kitchen,kitchenupgrade,donttakeitems,dontsellitems,crate,ammobox" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" isshootable="true" scale="0.5" description="Used for frying stuff. Needs power." damagedbyexplosions="true" explosiondamagemultiplier="0.2" impactsoundtag="impact_metal_light" canflipx="false" canflipy="false" DontCleanUp="true">
       <Sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" depth="0.54" sourcerect="481,1968,95,78" origin="0.5,0.5" />
       <Body width="90" height="72" density="15" />
       <PreferredContainer primary="cargocontainer" secondary="ammoboxcontainer" spawnprobability="0.0" />
@@ -948,7 +948,7 @@
     </Item>
     
     <!-- grills things, overgrilling causes fire -->
-    <Item name="Electric Grill (Installation)" identifier="he-electricgrill_installation" tags="grill,kitchen,kitchenupgrade,donttakeitems,dontsellitems,crate,ammobox" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="Used for cooking. Needs power." isshootable="true" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2" impactsoundtag="impact_metal_light" canflipx="false" canflipy="false">
+    <Item name="Electric Grill (Installation)" identifier="he-electricgrill_installation" tags="grill,kitchen,kitchenupgrade,donttakeitems,dontsellitems,crate,ammobox" category="Machine" subcategory="Kitchen" linkable="true" allowedlinks="medcabinet,locker,kitchen" description="Used for cooking. Needs power." isshootable="true" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2" impactsoundtag="impact_metal_light" canflipx="false" canflipy="false" DontCleanUp="true">
       <Sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" depth="0.54" sourcerect="289,1968,95,78" origin="0.5,0.5" />
       <Body width="90" height="72" density="15" />
       <PreferredContainer primary="cargocontainer" secondary="ammoboxcontainer" spawnprobability="0.0" />
@@ -1054,7 +1054,7 @@
     </Item>
     
     <!-- brews coffee -->
-    <Item name="Coffee Machine (Installation)" identifier="coffeemachine_installation" tags="container,coffeemachine,kitchenupgrade,crate,ammobox" category="Machines" description="Brews a nice cup of coffee." scale="0.5" isshootable="true" requireaimtouse="false" impactsoundtag="impact_metal_heavy" canflipx="false" canflipy="false">
+    <Item name="Coffee Machine (Installation)" identifier="coffeemachine_installation" tags="container,coffeemachine,kitchenupgrade,crate,ammobox" category="Machines" description="Brews a nice cup of coffee." scale="0.5" isshootable="true" requireaimtouse="false" impactsoundtag="impact_metal_heavy" canflipx="false" canflipy="false" DontCleanUp="true">
       <Sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" depth="0.54" sourcerect="577,1968,95,78" origin="0.5,0.5" />
       <Body width="90" height="72" density="15" />
       <PreferredContainer primary="cargocontainer" secondary="ammoboxcontainer" spawnprobability="0.0" />
@@ -1155,7 +1155,7 @@
     </Item>
     
     <!-- WIP Blender TODO: reenable fabrication recipe -->
-    <Item name="Blender (Installation)" identifier="he-blender_installation" tags="container,blender,kitchenupgrade,crate,ammobox" category="Machines" description="Brews a nice cup of coffee." scale="0.5" isshootable="true" requireaimtouse="false" impactsoundtag="impact_metal_heavy" canflipx="false" canflipy="false">
+    <Item name="Blender (Installation)" identifier="he-blender_installation" tags="container,blender,kitchenupgrade,crate,ammobox" category="Machines" description="Brews a nice cup of coffee." scale="0.5" isshootable="true" requireaimtouse="false" impactsoundtag="impact_metal_heavy" canflipx="false" canflipy="false" DontCleanUp="true">
       <Sprite texture="%ModDir%/Content/Items/Fabricators/Fabricators.png" depth="0.54" sourcerect="673,1968,95,78" origin="0.5,0.5" />
       <Body width="90" height="72" density="15" />
       <PreferredContainer primary="cargocontainer" secondary="ammoboxcontainer" spawnprobability="0.0" />
