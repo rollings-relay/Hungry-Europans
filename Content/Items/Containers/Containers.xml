@@ -1972,7 +1972,7 @@
     <UpgradePreviewSprite scale="2" texture="Content/UI/InventoryUIAtlas.png" sourcerect="447,280,44,44" origin="0.5,0.5" />
     <ItemContainer capacity="12" maxstacksize="1" canbeselected="true" hideitems="false" itempos="120,-364" iteminterval="150,80" itemsperrow="3" slotsperrow="4" msg="ItemMsgInteractSelect" containedspritedepths="0.81,0.82,0.81,0.82,0.81,0.82,0.81,0.82,0.81,0.82,0.81,0.82">
       <GuiFrame relativesize="0.25,0.3" anchor="Center" style="ItemUI" />
-      <Containable items="crate" />
+      <Containable items="crate" excludeditems="kitchenupgrade" />
     </ItemContainer>
     <SwappableItem price="3000" replacementonuninstall="emptylargedevice" origin="200,150" swapidentifier="largedevice">
       <SchematicSprite texture="Content/Items/Containers/UnitLoadDevice.png" sourcerect="0,0,567,446" />
