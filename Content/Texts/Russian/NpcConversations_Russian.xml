@@ -1,0 +1,309 @@
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿<?xml version="1.0" encoding="utf-8"?>
+<Conversations identifier="hungryeuropansconversations" Language="Russian" nowhitespace="True">
+
+<!-- 
+
+Flags can be defined inside affliction effects using     dialogflag="xxxxx"
+you can combine flags 
+
+Hardcoded flags:
+-Casual (intensity under 0.2)
+-Initial (30 seconds into new cave)
+-EnterOutpost
+-HighReputation (>60, revered)
+-LowReputation (<-60, hostile)
+-SubmarineDeep (crush depth, it's useless)
+-Underwater
+-Bandit (teamid="None")
+-Hostage
+-Escort
+-InRadiation
+-EndLevel
+
+Personality traits:
+-professional"       alloweddialogtags="professional,none"
+-laid-back"          alloweddialogtags="laid-back,none"
+-rude"               alloweddialogtags="rude,none"
+-tough"              alloweddialogtags="tough,none"
+-joker"              alloweddialogtags="joker,none" 
+-brokenenglish"      alloweddialogtags="brokenenglish" 
+-fearful"            alloweddialogtags="fearful,none" 
+-crazy"              alloweddialogtags="crazy,none" 
+
+FLAGS include affliction
+SPEAKERTAG includes personality
+AllOWEDJOBS include jobs
+
+<Conversation line="xxxxx" speaker="x" flags="xxxx" speakertag="xxxxx" allowedjobs="xxxx" maxintensity="0.2">
+
+ -->
+
+
+<!-- NPC IS - different levels -->
+<!-- Light -->
+<!-- medium -->
+<!-- heavy -->
+
+
+<!-- GENERAL CONVERSATIONS -->
+<Conversation line="Не могу дождаться, что мы поймаем сегодня!" speaker="0" flags="Initial" allowedjobs="chef">
+	<Conversation line="Инфекцию Хаска, вот что ты поймаешь, если пойдёшь туда." speaker="1">
+		<Conversation line="Не если тщательно проготовить." speaker="0"/>
+		<Conversation line="Обязательно принимай антибиотики" speaker="2" allowedjobs="medicaldoctor"/>
+	</Conversation>
+	<Conversation line="Всё весело, пока наш улов не окажется ВНУТРИ подлодки" speaker="1">
+		<Conversation line="Мне так даже легче." speaker="0"/>
+		<Conversation line="Ничего не проникнет под моим присмотром." speaker="2" allowedjobs="security"/>
+	</Conversation>
+	<Conversation line="Надеюсь, это Молотоглав!" speaker="1">
+		<Conversation line="Надеюсь, это НЕ Молотоглав!" speaker="2"/>
+	</Conversation>
+</Conversation>
+
+<Conversation line="Всё, что нужно для хорошей еды — это соль, перец и машинное масло." speaker="0" allowedjobs="chef">
+	<Conversation line="Неудивительно, что я не мог его найти!" speaker="1" allowedjobs="mechanic"/>
+	<Conversation line="Мне хватит обычных рационов." speaker="1" flags="Tough">
+		<Conversation line="У вас, сэр, деревянное нёбо. Может, мне лучше дать вам погрызть разделочную доску вместо того, чтобы подавать вам еду." speaker="0"/>
+	</Conversation>
+	<Conversation line="Обязательно следите за уровнем потребления соли. Большие дозы могут вызвать повышение давления и преждевременную смерть." speaker="1" allowedjobs="medicaldoctor">
+		<Conversation line="Мы не собираемся упоминать о масле?" speaker="2"/>
+		<Conversation line="Мне бы повезло, если бы меня убила соль." speaker="2" />
+	</Conversation>
+</Conversation>
+
+<Conversation line="Я слышал о рецепте, который пользуется огромной популярностью на Новом Япете." speaker="0" allowedjobs="chef">
+	<Conversation line="Вы привлекли моё внимание..." speaker="1" >
+		<Conversation line="Вы солите рыбу и кладёте в банку. Затем оставляете бродить в радиации несколько дней." speaker="0">
+      <Conversation line="Ты НЕ будешь класть консервированную рыбу в мой реактор." speaker="2" allowedjobs="engineer"/>
+      <Conversation line="Я видел это однажды. Половина комнаты потеряла сознание, но я не мог понять — от радиации или от запаха." speaker="2" allowedjobs="engineer"/>
+    </Conversation>
+	</Conversation>
+</Conversation>
+
+<Conversation line="Один взрывной гранат в день удерживает доктора подальше..." speaker="0" allowedjobs="chef">
+  <Conversation line="Это не является полноценной медицинской рекомендацией. Пожалуйста, регулярно консультируйтесь с квалифицированным специалистом." speaker="1" allowedjobs="medicaldoctor"/>
+	<Conversation line="Один мутированный фрукт в день сжигает подлодку до тла." speaker="1" />
+</Conversation>
+
+<Conversation line="" speaker="0" >
+	<Conversation line="Итак, я получил результаты твоих анализов крови, и у меня есть пару вопросов... Сколько хот-догов ты ешь в день?" speaker="1" allowedjobs="medicaldoctor" >
+		<Conversation line="Ну... обычно я ем хот-дог на завтрак. И если прохожу мимо столовой, могу взять один-два хот-дога." speaker="0">
+      <Conversation line="Три. Хот-дога. Надеюсь, больше хот-догов в течение дня нет..." speaker="1" />
+    </Conversation>
+	</Conversation>
+</Conversation>
+
+
+<!-- NPC IS HUNGRY - different levels -->
+<!-- Light -->
+<Conversation line="Я чувствую голод с тех пор, как мы покинули станцию" speaker="0" flags="hungrylight,initial">
+	<Conversation line="" speaker="1" />
+	<Conversation line="Терпи. Разум превыше желудка." speaker="1" speakertags="tough" />
+	<Conversation line="Я тоже. Но у нас есть работа. Сосредоточься." speaker="1" flags="hungrylight" speakertags="professional" />
+	<Conversation line="Мы что, умрём от голода? Я не хочу умирать от голода!" speaker="1" speakertags="fearful" >
+		<Conversation line="Я голосую за то, чтобы первым съесть капитана!" speakertags="joker" speaker="2" allowedjobs="security,medicaldoctor,engineer,mechanic,assistant,chef" />
+	</Conversation>
+</Conversation>
+
+<Conversation line="У нас есть какие-нибудь закуски?" speaker="0" flags="hungrylight">
+	<Conversation line="Возможно. Проверь кладовую." speaker="1" allowedjobs="chef"/>
+	<Conversation line="Попробуй чизбургары, они очен вкусны." speaker="1" speakertag="brokenenglish"/>
+</Conversation>
+
+<Conversation line="У меня приступ голода..." speaker="0" flags="hungrylight">
+	<Conversation line="А у меня приступ безумия." speaker="1" flags="crazy"/>
+	<Conversation line="Приступ голода? Это серьёзное состояние. Хочешь укол морфина?" speaker="1" allowedjobs="medicaldoctor">
+    <Conversation line="Ты не можешь лечить всё морфином..." speaker="2" >
+      <Conversation line="Этому учат в медицинском институте." speaker="1" allowedjobs="medicaldoctor"/>
+    </Conversation>
+  </Conversation>
+</Conversation>
+
+<!-- medium -->
+<Conversation line="Я чувствую голод..." speaker="0" flags="hungrymedium">
+	<Conversation line="" speaker="0"/>
+	<Conversation line="Не волнуйся, я не дам тебе умереть с голоду." speaker="1" allowedjobs="medicaldoctor" />
+	<Conversation line="Ты прав, я сейчас мечтаю о наггетсах." speaker="1" >
+		<Conversation line="Я вижу, что ты ешь только фаст-фуд, такими темпами ты станешь круглее Юпитера." speaker="2"/>
+	</Conversation>
+	<Conversation line="Сочный бургер с толстыми ломтиками сыра молоха..." speaker="1" >
+		<Conversation line="Мысль о доении молоха меня пугает..." speaker="2"/>
+	</Conversation>
+	<Conversation line="Я мог бы проглотить хот-дог одним куском." speaker="1" />
+</Conversation>
+
+<Conversation line="Я так голоден, что мог бы съесть барракуду..." speaker="0" flags="hungrymedium">
+	<Conversation line="Барраку-что?" speaker="1">
+		<Conversation line="Древний вид с Земли. Быстрые хищники с отвратительными зубами." speaker="0">
+      <Conversation line="Не может быть хуже Ползуна." speaker="1" >
+        <Conversation line="" speaker="0"/>
+        <Conversation line="Это Европа, Ползуны - это меньшая из моих проблем!" speaker="2" speakertags="fearful" />
+      </Conversation>
+    </Conversation>
+	</Conversation>
+  <Conversation line="Я так голоден, что мог бы съесть маната..." speaker="1" flags="hungrylight,hungrymedium,hungryheavy">
+    <Conversation line="Это выдуманные рыбы." speaker="2" />
+  </Conversation>
+  <Conversation line="Да, давай пойдём в бар!" speaker="1" flags="DrunkMedium,DrunkHigh"/>
+</Conversation>
+
+<Conversation line="Мне очень хочется перекусить прямо сейчас..." speaker="0" flags="hungrymedium">
+	<Conversation line="" speaker="0"/>
+  <Conversation line="Почему ты хочешь кусать людей?" speaker="1" speakertag="brokenenglish" />
+	<Conversation line="Пробовал ли ты сэндвич с пузырьковым вареньем? Они вкусные." speaker="1" />
+	<Conversation line="Хороший омлет. Яйца Оранжевого Мальчика имеют непревзойдённый хруст." speaker="1" />
+	<Conversation line="Толстые жареные ломтики Грязевого раптора - моя еда для успокоения." speaker="1" >
+    <Conversation line="Уж точно легче чувствовать себя спокойно вокруг жареных рапторов..." speaker="0" />    
+  </Conversation>
+</Conversation>
+
+<Conversation line="Мне голодно..." speaker="0" flags="hungrymedium" speakertag="brokenenglish">
+	<Conversation line="Не сердись. Будь счастлив." speaker="1" speakertags="laid-back"/>
+</Conversation>
+
+<!-- heavy -->
+<Conversation line="Я умираю с голоду!" speaker="0" flags="hungryheavy">
+	<Conversation line="" speaker="0"/>
+	<Conversation line="Пусть едят торты." speaker="1" allowedjobs="captain"/>
+	<Conversation line="Ты забыл поесть? Ты также забываешь дышать?" speaker="1" speakertag="rude" />
+	<Conversation line="Помогай себе сам!" speaker="1" allowedjobs="chef" />
+</Conversation>
+
+<Conversation line="Если я не поем, я потеряю сознание!" speaker="0" flags="hungryheavy">
+	<Conversation line="" speaker="0"/>
+	<Conversation line="Нужна срочная кулинарная помощь!" speaker="1" allowedjobs="medicaldoctor"/>
+</Conversation>
+
+<Conversation line="Мне нужно есть, есть, есть!" speaker="0" flags="hungryheavy" speakertags="crazy">
+	<Conversation line="" speaker="0"/>
+	<Conversation line="Не ешь меня!" speaker="1" flags="fearful"/>
+</Conversation>
+
+
+<!-- NPC IS Thirsty - different levels -->
+<!-- Light -->
+<Conversation line="Не помешал бы холодный напиток." speaker="0" flags="thirstylight">
+	<Conversation line="" speaker="0"/>
+  <Conversation line="Обычной воды будет достаточно." speaker="1" speakertags="professional"/>  
+  <Conversation line="Клоунский сок меня смешит!" speaker="1" speakertags="joker">  
+    <Conversation line="Это единственный способ, как ты когда-либо будешь смешным." speaker="2" speakertags="rude"/>
+  </Conversation>
+</Conversation>
+
+<Conversation line="Свежий напиток попал бы в точку." speaker="0" flags="thirstylight">
+	<Conversation line="" speaker="0"/>
+  <Conversation line="Пиво - вот ответ, всегда!" speaker="1" />
+  <Conversation line="Марочное виски пьётся легко." speaker="1" />
+  <Conversation line="Стакан рома от своих бед, и от моих." speaker="1" />
+  <Conversation line="Сладкая банка Колы!" speaker="1" />
+</Conversation>
+
+<!-- Medium -->
+<Conversation line="Мне кажется, мне нужно выпить..." speaker="0" flags="thirstymedium">
+  <Conversation line="Почти прав, мне чёрт побери нужно выпить!" speaker="1" flags="alcoholiclight,alcoholicmedium,alcoholicheavy"/>
+</Conversation>
+
+<Conversation line="Мой язык сухой..." speaker="0" flags="thirstymedium">
+	<Conversation line="" speaker="0"/>
+  <Conversation line="Тогда полизывай стены." speaker="1" />
+</Conversation>
+
+
+<!-- Heavy -->
+<Conversation line="Вода... Мне нужна вода!" speaker="0" flags="thirstyheavy">
+	<Conversation line="" speaker="0"/>
+	<Conversation line="Снаружи есть вода, если осмелишься!" speaker="1" speakertag="joker" />
+</Conversation>
+
+<Conversation line="Я умираю от жажды!" speaker="0" flags="thirstyheavy">
+	<Conversation line="" speaker="0"/>
+	<Conversation line="Это легко решить." speaker="1" speakertag="laid-back" />
+</Conversation>
+
+<!-- NPC is STUFFED -->
+<!-- Light -->
+<Conversation line="Ааах, кажется, я сыт, нужно немного переварить." speaker="0" flags="stuffedheavy" >
+	<Conversation line="Выполняй свои обязанности, и эти калории исчезнут." speaker="1" speakertag="professional" />
+	<Conversation line="Рад, что тебе понравилась еда." speaker="1" allowedjobs="Chef"/> 
+  <Conversation line="Бутылка алкоголя должна помочь!" speaker="1" flags="alcoholiclight,alcoholicmedium,alcoholicheavy">    
+    <Conversation line="Прекрати. Пить." speaker="2" /> 
+  </Conversation>
+</Conversation>
+
+<Conversation line="Это была довольно хорошая еда, но немного тяжеловато для желудка." speaker="0" flags="stuffedheavy" >
+	<Conversation line="Предпочёл бы салат в следующий раз?" speaker="1" allowedjobs="Chef"/> 
+</Conversation>
+
+<!-- Heavy -->
+<Conversation line="Я съел слишком много... Меня может стошнить." speaker="0" flags="stuffedheavy" >
+	<Conversation line="Сделай это на моём корабле, и я могу выкинуть тебя через шлюз." speaker="1" allowedjobs="captain"/>
+	<Conversation line="Держи это в себе, я всегда тот, кто вытирает!" speaker="1" allowedjobs="Assistant"/>
+	<Conversation line="Наверняка, у тебя всё ещё есть место для десерта?" speaker="1" allowedjobs="Chef"/>
+	<Conversation line="Перестань обжираться, отвратительная свинья." speaker="1" speakertags="rude"/>
+</Conversation>
+
+<!-- STOMACHACHE -->
+<Conversation line="У меня болит живот..." speaker="0" flags="stomachache" allowedjobs="captain">
+	<Conversation line="" speaker="0"/>
+</Conversation>
+
+
+<!-- NPC IS MOODY - different levels -->
+<!-- good -->
+<Conversation line="У меня хорошие предчувствия относительно всего этого приключения." speaker="0" flags="goodmood">
+	<Conversation line="Легко и просто." speaker="1" speakertags="laid-back" />
+	<Conversation line="У меня плохие предчувствия!" speaker="1" speakertags="fearful">
+		<Conversation line="У тебя всегда плохие предчувствия. Помнишь, как ты испугался погладить эту псиложабу?" speaker="2"/>  
+  </Conversation>  
+	<Conversation line="Да, пока всё довольно спокойно." speaker="1" flags="goodmood" />
+	<Conversation line="Надеюсь, эта ржавая лохань доедет до конца." speaker="1" allowedjobs="captain" />
+</Conversation>
+
+<Conversation line="Эта команда не так уж и плоха..." speaker="0" flags="goodmood">
+	<Conversation line="Признаки хорошо отлаженной машины." speaker="1" speakertag="professional" />
+	<Conversation line="Не привыкай." speaker="1" speakertags="rude" />
+	<Conversation line="О, так значит всё плохо? Хе-хе." speaker="1" speakertags="joker" />
+</Conversation>
+
+
+<!-- medium -->
+<Conversation line="Эта работа сложнее, чем я думал. Я начинаю чувствовать давление." speaker="0" flags="mediummood">
+	<Conversation line="Если бы ты действительно почувствовал давление, ты бы сжался!" speaker="1" />
+	<Conversation line="Это означает, что ты вкладываешь все силы в поставленную задачу." speaker="1" speakertag="professional" />
+	<Conversation line="Никакого давления. Хладнокровен, как огурец." speaker="1" speakertag="laid-back" flags="goodmood"/>
+</Conversation>
+
+<Conversation line="Этот старый хлам корабля - одни проблемы за проблемами. Мне это ни капли не нравится." speaker="0" flags="mediummood">
+	<Conversation line="Подожди, пока увидишь, как электрика загорится." speaker="1" allowedjobs="engineer"/>
+	<Conversation line="Пока насосы качают, я не жалуюсь." speaker="1" allowedjobs="engineer"/>
+	<Conversation line="Помни, что экипаж ломается раньше подлодки. Всегда." speaker="1" speakertag="Tough" />
+</Conversation>
+
+<!-- bad -->
+<Conversation line="Я хочу поскорее обсохнуть на станции. Вода холодная, сырая и повсюду..." speaker="0" flags="badmood">
+	<Conversation line="Подводник не должен жаловаться на мокроту." speaker="1" speakertag="tough" />
+	<Conversation line="Иногда она попадает мне в голову, а с ней и все голоса!" speaker="1" speakertag="Crazy" />
+	<Conversation line="Ты что, не знал об этом, когда подписывал контракт?" speaker="1" allowedjobs="captain"/>
+</Conversation>
+
+<Conversation line="Я не чувствую это место, не чувствую эту миссию, не чувствую свои пальцы на ногах." speaker="0" flags="badmood">
+	<Conversation line="Хватит жалоб на сегодня." speaker="1" />
+	<Conversation line="Нам может понадобиться их ампутировать. Где моя пила?" speaker="1" allowedjobs="medicaldoctor"/>
+	<Conversation line="По крайней мере, тебе платят. Тебе ведь платят, да?" speaker="1" allowedjobs="assistant"/>
+</Conversation>
+
+<!-- awful -->
+<Conversation line="К чёрту это место! Я не хочу больше работать!" speaker="0" flags="awfulmood">
+	<Conversation line="Делай свою проклятую работу и не подводи." speaker="1" speakertag="professional" />
+	<Conversation line="Ладно, у нас всех есть свои подъёмы и спады. Просто расслабься." speaker="1" speakertag="laid-back" />
+	<Conversation line="Я люблю это место! Я люблю смертельные подводные приключения!" speaker="1" speakertags="crazy" />
+</Conversation>
+
+<Conversation line="К чёрту это! Когда это закончится?" speaker="0" flags="awfulmood">
+	<Conversation line="" speaker="0"/>
+	<Conversation line="Эй, крепись, большой мальчик. Мы почти на месте." speaker="1" speakertag="tough" />
+	<Conversation line="Это никогда не кончается, никогда не кончается, никогда не кончается..." speaker="1" speakertags="crazy" />
+</Conversation>
+
+
+</Conversations>
