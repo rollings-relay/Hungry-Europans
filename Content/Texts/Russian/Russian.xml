@@ -413,9 +413,9 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-wafflecone>Вафля в форме рожка для мороженого. Мороженое растает, если не держать в охлаждаемом контейнере.</entitydescription.he-wafflecone><!--Patch 13-->
 
 <!-- Tools -->
-<entityname.he-enableneeds>Включить Голодного Европанца</entityname.he-enableneeds>
+<entityname.he-enableneeds>Включить «Голод и Жажда»</entityname.he-enableneeds>
 <entitydescription.he-enableneeds>[ПКМ+E] Включает голод и жажду для пользователя, заставляя есть и пить регулярно. Полностью опционально и НЕ требуется для получения баффов от еды и питья. Внимание: нельзя отключить для текущего персонажа после включения. НЕ ИСПОЛЬЗУЙТЕ ПРИ ИГРЕ С «NEEDS» от «LeDoux»!</entitydescription.he-enableneeds>
-<entityname.he-enableextraneeds>Включить Грязного Европанца</entityname.he-enableextraneeds><!--Patch 18-->
+<entityname.he-enableextraneeds>Включить «Мочеиспускание и Дефекация»</entityname.he-enableextraneeds><!--Patch 18-->
 <entitydescription.he-enableextraneeds>[ПКМ + E] Включает позывы к мочеиспусканию и дефекации, зависящие от того, что и сколько вы едите и пьёте. Полностью опционально и НЕ требуется для получения баффов от еды и питья. Внимание: нельзя отключить для текущего персонажа после включения.</entitydescription.he-enableextraneeds><!--Patch 18-->
 
 <entityname.he-cleaver>Мясной тесак</entityname.he-cleaver>
@@ -458,8 +458,8 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-emptycancola>Пустая алюминиевая банка. Можно разобрать на алюминий или бросать.</entitydescription.he-emptycancola><!--Patch 13-->
 <entityname.he-emptycancolazero>Пустая банка</entityname.he-emptycancolazero><!--Patch 13-->
 <entitydescription.he-emptycancolazero>Пустая алюминиевая банка. Можно разобрать на алюминий или бросать.</entitydescription.he-emptycancolazero><!--Patch 13-->
-<entityname.he-couwolaexosuit>Лимитированная серия экзоскелета Couwola Cola</entityname.he-couwolaexosuit><!--Patch 13-->
-<entitydescription.he-couwolaexosuit>Лимитированная серия экзоскелета, выпущенная Couwola Cola. Он более экономичен в расходе топлива и позволяет владельцу дышать кислородом из окружающей среды, используя кислородные баллоны только по необходимости.</entitydescription.he-couwolaexosuit><!--Patch 13-->
+<entityname.he-couwolaexosuit>Лимитированная серия экзоскелета «Добрый Кола»</entityname.he-couwolaexosuit><!--Patch 13-->
+<entitydescription.he-couwolaexosuit>Лимитированная серия экзоскелета, выпущенная «Добрый Кола». Он более экономичен в расходе топлива и позволяет владельцу дышать кислородом из окружающей среды, используя кислородные баллоны только по необходимости.</entitydescription.he-couwolaexosuit><!--Patch 13-->
 
 <!-- Gear -->
 <entityname.he-chefscap1>Колпак повара</entityname.he-chefscap1>
@@ -1301,9 +1301,9 @@ SEARCH FOR THE FOLLOWING:                                                       
 
 
 
-<entityname.he-enablesleep>Включить «Сонный европанец»</entityname.he-enablesleep>
+<entityname.he-enablesleep>Включить «Усталость и Сон»</entityname.he-enablesleep>
 <entitydescription.he-enablesleep>[RMB + E] ДОПОЛНИТЕЛЬНО: Включает состояние усталости для пользователя, требуя регулярного сна. Предупреждение: Нельзя отключить для текущего персонажа после включения.</entitydescription.he-enablesleep>
-<entityname.he-enablemood>Включить «Мугливый европанец»</entityname.he-enablemood><!--Patch 18-->
+<entityname.he-enablemood>Включить «Настроение и Стресс»</entityname.he-enablemood><!--Patch 18-->
 <entitydescription.he-enablemood>[RMB + E] ДОПОЛНИТЕЛЬНО: Включает состояние настроения для пользователя, вызывая стресс от работы. Снижайте стресс, употребляя любимую еду, напитки, наркотики или отдыхая. Предупреждение: Нельзя отключить для текущего персонажа после включения.</entitydescription.he-enablemood><!--Patch 18-->
 
 <entityname.sink>Раковина</entityname.sink><!--Patch 18-->
@@ -1349,7 +1349,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <entitydescription.he-cannedtomatoesopen>Редкая банка старых земных овощей, когда поставки ещё доставлялись из космоса.</entitydescription.he-cannedtomatoesopen>
 
 <entityname.he-colaradiantbottle>Добрый Кола Радиант</entityname.he-colaradiantbottle>
-<entitydescription.he-colaradiantbottle>Ощущай перезаряд! Специальная ограниченная серия Добрый Кола, обогащённая фульгурием.</entitydescription.he-colaradiantbottle>
+<entitydescription.he-colaradiantbottle>Ощущай перезаряд! Специальная ограниченная серия «Добрый Кола», обогащённая фульгурием.</entitydescription.he-colaradiantbottle>
 
 <entityname.he-dough>Тесто</entityname.he-dough>
 <entitydescription.he-dough>Комок теста, скатанный надеюсь чистыми руками.</entitydescription.he-dough>
