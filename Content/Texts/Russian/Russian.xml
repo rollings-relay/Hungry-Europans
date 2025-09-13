@@ -26,7 +26,7 @@ SEARCH FOR THE FOLLOWING:                                                       
 <displayname.crawlerfooditem>[itemname] (Ползун)</displayname.crawlerfooditem>
 <displayname.mudraptorfooditem>[itemname] (Грязевой раптор)</displayname.mudraptorfooditem>
 <displayname.hammerheadfooditem>[itemname] (Молотоглав)</displayname.hammerheadfooditem>
-<displayname.thresherfooditem>[itemname] (Акулий)</displayname.thresherfooditem>
+<displayname.thresherfooditem>[itemname] (Акулий Тигр)</displayname.thresherfooditem>
 <displayname.endwormfooditem>[itemname] (Червь Рока)</displayname.endwormfooditem>
 <displayname.spinelingfooditem>[itemname] (Шипостай)</displayname.spinelingfooditem><!--Patch 13-->
 <displayname.molochfooditem>[itemname] (Молох)</displayname.molochfooditem><!--Patch 13-->
@@ -487,6 +487,8 @@ SEARCH FOR THE FOLLOWING:                                                       
 
 <entityname.he-stove>Плита</entityname.he-stove>
 <entitydescription.he-stove>Используется для готовки. Требует питание.</entitydescription.he-stove>
+<entityname.he-brewteaitem>Заварник</entityname.he-brewteaitem>
+<entitydescription.he-brewteaitem>Начните заваривать то, что у вас в чайнике. Выключите плиту, как только услышите свист чайника.</entitydescription.he-brewteaitem>
 <entityname.he-oven>Духовка</entityname.he-oven>
 <entitydescription.he-oven>Используется для выпечки. Требует питание.</entitydescription.he-oven>
 <entityname.he-cuttingboard>Разделочная доска</entityname.he-cuttingboard>
